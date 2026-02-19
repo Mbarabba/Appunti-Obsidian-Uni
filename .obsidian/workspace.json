@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Primo Semestre/RSO/SO/API POSIX.md",
+                "file": "Secondo Anno/Primo Semestre/RSO/SO/Scheduling dei processi/Dispatcher.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "API POSIX"
+              "title": "Dispatcher"
             }
           }
         ]
@@ -186,8 +186,8 @@
   },
   "active": "f72fec9f79943a63",
   "lastOpenFiles": [
-    "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Processi.md",
     "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Thread.md",
+    "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Processi.md",
     "Secondo Anno/Primo Semestre/RSO/SO/API POSIX.md",
     "Primo Anno/GAL/Miei Appunti/Prova.md",
     "Primo Anno/Libro Algoritmi.pdf",
