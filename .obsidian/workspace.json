@@ -76,7 +76,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 328.5026054382324
+    "width": 328.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -194,6 +195,9 @@
   },
   "active": "f72fec9f79943a63",
   "lastOpenFiles": [
+    "autocommit.sh~",
+    "autocommit.sh",
+    "refresh.txt",
     "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
     "Primo Anno/Libro Algoritmi.pdf",
     "Pasted image 20260218131611.png",
@@ -210,10 +214,8 @@
     "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 1/Gemini 1.md",
     "Secondo Anno/Secondo Semestre/Mate 2/Libro.pdf",
     "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 5/Gemini 5.md",
-    "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Prova T1 2° parziale.pdf",
     "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Ɛ-NFA - Automa a stati finiti non deterministico con le Ɛ mosse.md",
     "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Grammatica.md",
-    "Secondo Anno/Primo Semestre/LC/Libro.pdf",
     "Pasted image 20260216113323.png",
     "Pasted image 20260216090806.png",
     "Secondo Anno/Primo Semestre/RSO/Reti/Livello 3 - Rete/Control Plane/Algoritmo di Dijkstra.md",
