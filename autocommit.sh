@@ -1,3 +1,4 @@
+#!/bin/bash
 cd /home/nicholas/Desktop/Uni || exit 
 
 # Controllo di modifiche
