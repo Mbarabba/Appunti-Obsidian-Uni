@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/GAL/Miei Appunti/Prova.md",
+                "file": "Secondo Anno/Primo Semestre/RSO/SO/API POSIX.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prova"
+              "title": "API POSIX"
             }
           }
         ]
@@ -166,7 +166,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,6 +186,9 @@
   },
   "active": "f72fec9f79943a63",
   "lastOpenFiles": [
+    "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Processi.md",
+    "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Thread.md",
+    "Secondo Anno/Primo Semestre/RSO/SO/API POSIX.md",
     "Primo Anno/GAL/Miei Appunti/Prova.md",
     "Primo Anno/Libro Algoritmi.pdf",
     "autocommit.sh~",
@@ -221,9 +225,6 @@
     "Secondo Anno/Secondo Semestre/Untitled.md",
     "Secondo Anno/Primo Semestre/RSO/Reti/Livello 3 - Rete/Data Plane/Protocollo DHCP - Dynamic Host Configuration Protocol.md",
     "Secondo Anno/Primo Semestre/RSO/Reti/Livello 3 - Rete/Control Plane/Routing.md",
-    "Primo Anno/Architettura/8 - Gerarchie di memoria/Tipi di memoria cache/Strategie di scrittura/Write-Back.md",
-    "Primo Anno/Architettura/7 - Interruzioni/Bus di sistema.md",
-    "Primo Anno/Architettura/Prove d'esame/Gemini 1.md",
     "IMG/Pasted image 20260207102144.png",
     "IMG/Pasted image 20260207105609.png",
     "IMG/Screenshot_20260209-173545-display-0.jpg.jpg",
