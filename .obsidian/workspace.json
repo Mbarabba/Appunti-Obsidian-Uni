@@ -11,12 +11,14 @@
             "id": "f72fec9f79943a63",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Primo Anno/Libro Algoritmi.pdf"
+                "file": "Primo Anno/GAL/Miei Appunti/Prova.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Libro Algoritmi"
+              "icon": "lucide-file",
+              "title": "Prova"
             }
           }
         ]
@@ -76,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 328.5026054382324,
-    "collapsed": true
+    "width": 328.5026054382324
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -159,24 +160,13 @@
               "icon": "spreadsheet",
               "title": "Advanced Tables"
             }
-          },
-          {
-            "id": "e6b84fe021d25f13",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,11 +185,12 @@
   },
   "active": "f72fec9f79943a63",
   "lastOpenFiles": [
+    "Primo Anno/GAL/Miei Appunti/Prova.md",
+    "Primo Anno/Libro Algoritmi.pdf",
     "autocommit.sh~",
     "autocommit.sh",
     "refresh.txt",
     "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
-    "Primo Anno/Libro Algoritmi.pdf",
     "Pasted image 20260218131611.png",
     "Primo Anno/GAL/Miei Appunti/Combinazioni Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
@@ -212,7 +203,6 @@
     "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
     "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 1/Gemini 1.pdf",
     "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 1/Gemini 1.md",
-    "Secondo Anno/Secondo Semestre/Mate 2/Libro.pdf",
     "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 5/Gemini 5.md",
     "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Ɛ-NFA - Automa a stati finiti non deterministico con le Ɛ mosse.md",
     "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Grammatica.md",
