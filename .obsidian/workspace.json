@@ -174,7 +174,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 723.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,7 +192,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a02c0f470c2f07f4",
+  "active": "f72fec9f79943a63",
   "lastOpenFiles": [
     "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
     "Primo Anno/Libro Algoritmi.pdf",
