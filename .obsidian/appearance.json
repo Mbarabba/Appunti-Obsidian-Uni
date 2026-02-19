@@ -1,0 +1,17 @@
+{
+  "accentColor": "#ff0000",
+  "cssTheme": "Minimal",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "h1Centrati",
+    "tabelle",
+    "Header",
+    "grassetto-rosso"
+  ],
+  "baseFontSize": 18,
+  "baseFontSizeAction": true,
+  "nativeMenus": false,
+  "textFontFamily": "Arial",
+  "interfaceFontFamily": "Arial",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font Mono"
+}

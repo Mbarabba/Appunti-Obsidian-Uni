@@ -1,0 +1,28 @@
+.markdown-rendered h1, 
+.markdown-source-view.mod-cm6 .cm-heading-1 {
+    color: crimson;
+    text-align: center;
+    text-decoration-line: underline;
+    display: block;
+    font-weight: 800;
+    font-size: 1.8em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.markdown-rendered h2, 
+.markdown-source-view.mod-cm6 .cm-heading-2 {
+    color: #2E8B57;
+    text-decoration-line: underline;
+    font-weight: 800;
+    font-size: 1.4em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.markdown-rendered h3, 
+.markdown-source-view.mod-cm6 .cm-heading-3 {
+    color: #DAA520;
+    text-decoration-line: underline;
+    font-weight: 800;
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+}

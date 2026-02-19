@@ -1,0 +1,243 @@
+{
+  "main": {
+    "id": "18825c0fd0106726",
+    "type": "split",
+    "children": [
+      {
+        "id": "0efdeabecfb1df1d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f72fec9f79943a63",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Primo Anno/Libro Algoritmi.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Libro Algoritmi"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "376d95dc5924e344",
+    "type": "split",
+    "children": [
+      {
+        "id": "66f6dc951ea1114a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a02c0f470c2f07f4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a5b1b251831f8706",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "0027ed8f6d33350c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 328.5026054382324
+  },
+  "right": {
+    "id": "0ee3d13955aacfdf",
+    "type": "split",
+    "children": [
+      {
+        "id": "eafe974d6d025a11",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a2ef682eb98bbfae",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Secondo Anno/RSO/SO/Processi e Thread/Processi.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Processi"
+            }
+          },
+          {
+            "id": "44a20b5e34286bad",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Libro.pdf",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Libro"
+            }
+          },
+          {
+            "id": "f635d0442c9131b2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d13394f983dc7348",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Appunti vari/Espressioni Regolari Daniele.pdf",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Espressioni Regolari Daniele"
+            }
+          },
+          {
+            "id": "a211015e95b2bf4e",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "e6b84fe021d25f13",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 723.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "callout-manager:Insert Callout": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "a02c0f470c2f07f4",
+  "lastOpenFiles": [
+    "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
+    "Primo Anno/Libro Algoritmi.pdf",
+    "Pasted image 20260218131611.png",
+    "Primo Anno/GAL/Miei Appunti/Combinazioni Lineari.md",
+    "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
+    "Primo Anno/GAL/Libro.pdf",
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-04-25.pdf",
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-20-25.pdf",
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-18-25.pdf",
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-13-25.pdf",
+    "Primo Anno/GAL/Miei Appunti/Matrici.md",
+    "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
+    "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 1/Gemini 1.pdf",
+    "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 1/Gemini 1.md",
+    "Secondo Anno/Secondo Semestre/Mate 2/Libro.pdf",
+    "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 5/Gemini 5.md",
+    "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Prova T1 2° parziale.pdf",
+    "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Ɛ-NFA - Automa a stati finiti non deterministico con le Ɛ mosse.md",
+    "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Grammatica.md",
+    "Secondo Anno/Primo Semestre/LC/Libro.pdf",
+    "Pasted image 20260216113323.png",
+    "Pasted image 20260216090806.png",
+    "Secondo Anno/Primo Semestre/RSO/Reti/Livello 3 - Rete/Control Plane/Algoritmo di Dijkstra.md",
+    "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Espressioni Regolari.md",
+    "Primo Anno/Architettura/5 - Datapath/Datapath Multiciclo.md",
+    "Excalidraw/Drawing 2026-02-17 10.32.50.excalidraw.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/MDT - Macchina di Turing.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/Proprietà non banale.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/NFA - Automi non deterministici a stati finiti.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/Linguaggi prefix-free.md",
+    "Primo Anno/GAL/Sistemi Lineari/Untitled.md",
+    "Primo Anno/Architettura/Prove d'esame/Gemini 2.md",
+    "Secondo Anno/Secondo Semestre/Untitled.md",
+    "Secondo Anno/Primo Semestre/RSO/Reti/Livello 3 - Rete/Data Plane/Protocollo DHCP - Dynamic Host Configuration Protocol.md",
+    "Secondo Anno/Primo Semestre/RSO/Reti/Livello 3 - Rete/Control Plane/Routing.md",
+    "Primo Anno/Architettura/8 - Gerarchie di memoria/Tipi di memoria cache/Strategie di scrittura/Write-Back.md",
+    "Primo Anno/Architettura/7 - Interruzioni/Bus di sistema.md",
+    "Primo Anno/Architettura/Prove d'esame/Gemini 1.md",
+    "IMG/Pasted image 20260207102144.png",
+    "IMG/Pasted image 20260207105609.png",
+    "IMG/Screenshot_20260209-173545-display-0.jpg.jpg",
+    "IMG/Pasted image 20260201175121.png",
+    "IMG/Pasted image 20260201124756.png",
+    "IMG/Pasted image 20260201124752.png",
+    "IMG/Pasted image 20260129123505.png",
+    "Untitled.canvas"
+  ]
+}
