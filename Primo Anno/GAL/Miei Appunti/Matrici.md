@@ -10,9 +10,7 @@ Dati $m,n\in \mathbb{N}$, si chiama matrice $m\times n$ a coefficienti reali una
 >Questa è una <mark style="background: #FF5582A6;">matrice $2 \times 3$</mark>
 >- $m$ (righe) = $2$
 >- $n$ (colonne) = $3$
-
----
- # Notazione
+## Notazione
  - Definiamo con $M_{m,n}(\mathbb{R})$ la <mark style="background: #BBFABBA6;">matrice con $m$ righe e $n$ colonne</mark>
  - Data $A \in M_{m,n}(\mathbb{R})$ e $i,j \in \mathbb{N}$ con :
 	 - $1 \leq i \leq m$
@@ -81,6 +79,20 @@ Data una matrice $A \in M_{m,n}(\mathbb{R})$ la matrice trosposta è la matrice 
 $$\LARGE
 (A^T)_{ij}=A_{ji}
 $$
+
+---
+# Spazi di una matrice
+## Spazio delle colonne
+Data $A \in M_{m,n}(\mathbb{R})$ lo **spazio delle colonne** è il [[Sottospazi Vettoriali|sottospazio vettoriale]] di $\mathbb{R}^m$ cosi' definito :
+$$\large
+Col(A)=Span(\text{Colonne di A})
+$$
+## Spazio delle righe
+Data $A \in M_{m,n}(\mathbb{R})$ lo **spazio delle righe** è il [[Sottospazi Vettoriali|sottospazio vettoriale]] di $\mathbb{R}^m$ cosi' definito :
+$$\large
+Row(A)=Col(A^T)
+$$
+
 
 ---
 # Operazioni tra matrici
