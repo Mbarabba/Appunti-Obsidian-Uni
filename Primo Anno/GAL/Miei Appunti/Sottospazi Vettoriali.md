@@ -9,12 +9,17 @@ Diremo che $W$ è un sottospazio vettoriale di $V$ se <mark style="background: #
 # Sottospazi Vettoriali in $\mathbb{R}^n$
 Si consideri una [[Matrici|matrice]] $A\in M_{m,n}(\mathbb{R})$
 
-Lo spazio $W=\{ x \times \mathbb{R}^n : Ax = 0\}=\{ \text{soluzioni del sistema omogeneo associato ad A} \}$
-Dato un sistema lineare $Ax=b$ con $A \in M_{m,n}(\mathbb{R})$
+Lo spazio $W=\{x \in \times \mathbb{R}^n : Ax = 0\}=\{ \text{soluzioni del sistema omogeneo associato ad A} \}$
 
 Se $r=r(A)$ e le soluzioni dipendono dai parametri $s_{1},\dots,s_{n-r}$, allora : 
 1. $dim(W)=n-r$
 2. Una **base** di $W$ si ottiene ponendo, uno alla volta, un parametro pari a $1$ e gli altri pari a 0
+
+Dato un sistema lineare $Ax=b$ con $A \in M_{m,n}(\mathbb{R})$ e $b \in \mathbb{R}^M$ 
+- Lo spazio $W = \{ x\in R^n:Ax=b \}$ non è un [[Sottospazi Vettoriali|sottospazio vettoriale]]
+- $W_{0}=\{ x \in R^n:Ax=0 \}$ è un [[Sottospazi Vettoriali|sottospazio vettoriale]]
+
+
 
 Inoltre, dato $Ax=b$ , sia $\overline{x}\in W$ una soluzione particolare 
 
