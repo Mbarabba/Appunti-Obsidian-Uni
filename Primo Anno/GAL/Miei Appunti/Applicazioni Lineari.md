@@ -24,4 +24,12 @@ $$
 # Iniettività e Suriettività
 Sia $f:V\to W$ un'applicazione lineare
 1. $f$ **inettiva** $\iff Kerf=\{ 0 \}\iff dim(Kerf)=0$
-2. $f$ **suriettiva** $\iff Imf=W \iff$
+2. $f$ **suriettiva** $\iff Imf=W \iff dim(Imf)=W$
+---
+# Estensione lineare
+Dati $V,W$ [[Spazi Vettoriali|spazi vettoriali]] sia $\{ v_{1},\dots,v_{n} \}=B$ una [[Base|base]] di $V$ e $\{ w_{1},\dots,w_{n} \}$ un insieme qualunque di vettori di $W$
+
+Allora <mark style="background: #FF5582A6;">esiste un'unica applicazione lineare</mark> $f:V\to W$ tale che 
+$$\LARGE
+f(v_{i})=w_{i} \quad \forall i=1,\dots,n
+$$
