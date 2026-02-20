@@ -56,7 +56,7 @@ $$ \LARGE
 \sum^k_{i=1} a_{i}v_{i}=0\implies a_{i}=\dots=a_{k}=0
 $$
 ## Vettori linearmente dipendenti 
-<mark style="background: #FFF3A3A6;">Se invece esistono $a_{i},\dots,a_{k}$ non nulli</mark>, $v_{1},\dots ,v_{k}$ si dicono **linearmente dipendenti**
+Sia $V$ uno spazio vettoriale, i vettori $v_{1},\dots,v_{n} \in V$ si dicono **linearmente dipendenti** se <mark style="background: #FFF3A3A6;">nessuno di essi può essere espresso come [[Combinazioni Lineari|combinazione lineare]] degli altri vettori dell'insieme $V$</mark>
 
 ## Esempi
 ### Vettori linearmente indipendenti
