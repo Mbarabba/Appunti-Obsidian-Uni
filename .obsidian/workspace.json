@@ -11,12 +11,14 @@
             "id": "f72fec9f79943a63",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Primo Anno/Libro Algoritmi.pdf"
+                "file": "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Libro Algoritmi"
+              "icon": "lucide-file",
+              "title": "Sottospazi Vettoriali"
             }
           }
         ]
@@ -183,27 +185,27 @@
   },
   "active": "f72fec9f79943a63",
   "lastOpenFiles": [
+    "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
+    "Primo Anno/GAL/Miei Appunti/Matrici.md",
+    "Primo Anno/GAL/Miei Appunti/Combinazioni Lineari.md",
+    "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
+    "Primo Anno/Libro Algoritmi.pdf",
     "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Pumping Lemma.md",
     "Secondo Anno/Primo Semestre/RSO/SO/Scheduling dei processi/Dispatcher.md",
     "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Thread.md",
     "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Processi.md",
     "Secondo Anno/Primo Semestre/RSO/SO/API POSIX.md",
     "Primo Anno/GAL/Miei Appunti/Prova.md",
-    "Primo Anno/Libro Algoritmi.pdf",
     "autocommit.sh~",
     "autocommit.sh",
     "refresh.txt",
     "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
     "Pasted image 20260218131611.png",
-    "Primo Anno/GAL/Miei Appunti/Combinazioni Lineari.md",
-    "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
     "Primo Anno/GAL/Libro.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-04-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-20-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-18-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-13-25.pdf",
-    "Primo Anno/GAL/Miei Appunti/Matrici.md",
-    "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
     "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 1/Gemini 1.pdf",
     "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 1/Gemini 1.md",
     "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 5/Gemini 5.md",
@@ -221,7 +223,6 @@
     "Secondo Anno/Primo Semestre/LC/MDT/Linguaggi prefix-free.md",
     "Primo Anno/GAL/Sistemi Lineari/Untitled.md",
     "Primo Anno/Architettura/Prove d'esame/Gemini 2.md",
-    "Secondo Anno/Secondo Semestre/Untitled.md",
     "IMG/Pasted image 20260207102144.png",
     "IMG/Pasted image 20260207105609.png",
     "IMG/Screenshot_20260209-173545-display-0.jpg.jpg",
