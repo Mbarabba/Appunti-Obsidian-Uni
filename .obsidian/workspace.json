@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/GAL/Miei Appunti/Base.md",
+                "file": "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Base"
+              "title": "Sottospazi Vettoriali"
             }
           }
         ],
@@ -201,8 +201,8 @@
   },
   "active": "d74c7299c4b66068",
   "lastOpenFiles": [
-    "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
     "Primo Anno/GAL/Miei Appunti/Base.md",
+    "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
     "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
     "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Matrici.md",

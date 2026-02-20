@@ -10,6 +10,6 @@ La cardinalità di una qualunque [[Base#Definizione|base]] di uno [[Spazi Vettor
 ---
 # Formula di Grassman : Dimensione di un [[Spazi Vettoriali#Operazioni con Spazi Vettoriali#Somma|somma tra 2 ]] [[Sottospazi Vettoriali|sottospazi vettoriali]]
 Dati 2 sottospazi vettoriali $W_{1},W_{2}$ di $V$ vale : 
-$$
-dim(W_{1}+W_{2})
+$$\LARGE
+dim(W_{1}+W_{2})=dim(W_{1})+dim(W_{2})-dim(W_{1} \cap W_{2})
 $$

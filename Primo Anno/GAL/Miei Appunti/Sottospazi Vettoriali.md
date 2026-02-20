@@ -5,6 +5,13 @@ Diremo che $W$ è un sottospazio vettoriale di $V$ se <mark style="background: #
 1. <mark style="background: #FFF3A3A6;">$W \not= \emptyset$</mark>
 2. $W$ è <mark style="background: #FFF3A3A6;">chiuso rispetto alla somma</mark>, cioè $\forall u,v\in W$ si ha che <mark style="background: #BBFABBA6;">$u+v\in W$</mark>
 3. $W$ è <mark style="background: #FFF3A3A6;">chiuso rispetto al prodotto</mark> per scalari, cioè $\forall u\in W$ e $\forall \gamma\in \mathbb{R}$ si ha ce <mark style="background: #BBFABBA6;">$\gamma u\in W$</mark>
+---
+# Sottospazi Vettoriali in $\mathbb{R}^n$
+Si consideri una [[Matrici|matrice]] $A\in M_{m,n}(\mathbb{R})$
+
+Lo spazio $W=\{ x \times \mathbb{R}^n : Ax = 0\}=\{ \text{soluzioni del sistema omogeneo associato ad A} \}$
+
+Se $r=r(A)$ e le soluzi 
 
 ---
 # Esempio di Sottospazio Vettoriale
