@@ -51,12 +51,14 @@ $$
 ---
 # Indipendenza lineare
 ## Vettori linearmente indipendenti
-Sia $V$ uno spazio vettoriale, i vettori $v_{1},\dots,v_{n} \in V$ si dicono **linearmente indipendenti** se <mark style="background: #FFF3A3A6;">nessuno di essi può essere espresso come [[Combinazioni Lineari|combinazione lineare]] degli altri vettori dell'insieme $V$</mark>
+Sia $V$ uno spazio vettoriale, i vettori $v_{1},\dots,v_{n} \in V$ si dicono **linearmente indipendenti** <mark style="background: #FFF3A3A6;">se nessuno di essi può essere espresso come [[Combinazioni Lineari|combinazione lineare]] degli altri vettori dell'insieme $\{ v_{1},\dots,v_{k} \}$</mark>
+
+Ovvero, se <mark style="background: #ABF7F7A6;">l'unica combinazione lineare che dà il vettore nullo è quella con tutti i coefficienti nulli</mark>
 $$ \LARGE
 \sum^k_{i=1} a_{i}v_{i}=0\implies a_{i}=\dots=a_{k}=0
 $$
 ## Vettori linearmente dipendenti 
-Sia $V$ uno spazio vettoriale, i vettori $v_{1},\dots,v_{n} \in V$ si dicono **linearmente dipendenti** se <mark style="background: #FFF3A3A6;">nessuno di essi può essere espresso come [[Combinazioni Lineari|combinazione lineare]] degli altri vettori dell'insieme $V$</mark>
+Sia $V$ uno spazio vettoriale, i vettori $v_{1},\dots,v_{n} \in V$ si dicono **linearmente dipendenti** <mark style="background: #FFF3A3A6;">se esiste almeno un vettore esprimibile come una combinazione lineare</mark>
 
 ## Esempi
 ### Vettori linearmente indipendenti
