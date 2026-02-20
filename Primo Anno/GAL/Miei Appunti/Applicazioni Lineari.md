@@ -33,3 +33,25 @@ Allora <mark style="background: #FF5582A6;">esiste un'unica applicazione lineare
 $$\LARGE
 f(v_{i})=w_{i} \quad \forall i=1,\dots,n
 $$
+---
+# Formula dimensionale
+Sia $f:V\to W$ un'applicazione lineare vale:
+$$\LARGE
+dim(v)=dim(Kerf)+dim(Imf)
+$$
+---
+# Composizione
+Siano :
+$$\begin{gather}f:V\to W \\
+g:W\to U
+\end{gather}
+$$
+<mark style="background: #ADCCFFA6;">due applicazioni lineari</mark>
+
+<mark style="background: #FF5582A6;">La coposizione</mark>
+$$g\cdot f:V\to U
+$$
+<mark style="background: #FF5582A6;">è lineare</mark>
+
+---
+# Invertibilità
