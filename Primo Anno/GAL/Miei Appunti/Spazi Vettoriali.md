@@ -30,7 +30,12 @@ Dati 2 sottospazi vettoriale $W_{1},W_{2}\in V$ lo spazio **somma** è definito 
 $$\LARGE
 W_{1}+W_{2}=Span(W_{1} \cup W_{2})
 $$
-La somma si dice **diretta** se $W_{1} \cap W_{2} = \{ 0 \}$, in tal caso scriviamo $W_{1} \oplus$
+$$\LARGE
+W_{1}+W_{2}=\{ u_{1}+u_{2}:u_{1}\in W_{1},u_{2}\in W_{2} \}
+$$
+La somma si dice **diretta** se $W_{1} \cap W_{2} = \{ 0 \}$, in tal caso scriviamo <mark style="background: #FF5582A6;">$W_{1} \oplus W_{2}$</mark>
+
+
 
 
 ---
