@@ -11,14 +11,12 @@
             "id": "f72fec9f79943a63",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Secondo Anno/Primo Semestre/RSO/SO/Scheduling dei processi/Dispatcher.md",
-                "mode": "source",
-                "source": false
+                "file": "Primo Anno/Libro Algoritmi.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Dispatcher"
+              "icon": "lucide-file-text",
+              "title": "Libro Algoritmi"
             }
           }
         ]
@@ -185,6 +183,8 @@
   },
   "active": "f72fec9f79943a63",
   "lastOpenFiles": [
+    "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Pumping Lemma.md",
+    "Secondo Anno/Primo Semestre/RSO/SO/Scheduling dei processi/Dispatcher.md",
     "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Thread.md",
     "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Processi.md",
     "Secondo Anno/Primo Semestre/RSO/SO/API POSIX.md",
@@ -222,8 +222,6 @@
     "Primo Anno/GAL/Sistemi Lineari/Untitled.md",
     "Primo Anno/Architettura/Prove d'esame/Gemini 2.md",
     "Secondo Anno/Secondo Semestre/Untitled.md",
-    "Secondo Anno/Primo Semestre/RSO/Reti/Livello 3 - Rete/Data Plane/Protocollo DHCP - Dynamic Host Configuration Protocol.md",
-    "Secondo Anno/Primo Semestre/RSO/Reti/Livello 3 - Rete/Control Plane/Routing.md",
     "IMG/Pasted image 20260207102144.png",
     "IMG/Pasted image 20260207105609.png",
     "IMG/Screenshot_20260209-173545-display-0.jpg.jpg",
