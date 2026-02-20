@@ -6,6 +6,23 @@ Diremo che $W$ è un sottospazio vettoriale di $V$ se <mark style="background: #
 2. $W$ è <mark style="background: #FFF3A3A6;">chiuso rispetto alla somma</mark>, cioè $\forall u,v\in W$ si ha che <mark style="background: #BBFABBA6;">$u+v\in W$</mark>
 3. $W$ è <mark style="background: #FFF3A3A6;">chiuso rispetto al prodotto</mark> per scalari, cioè $\forall u\in W$ e $\forall \gamma\in \mathbb{R}$ si ha ce <mark style="background: #BBFABBA6;">$\gamma u\in W$</mark>
 ---
+# Giacitura
+Dato il sottospazio $W=\{ Ax=b:x \in \mathbb{R}^n \}$ chiamiamo **giacitura** di $W$ il sottospazio vettoriale :
+$$ \LARGE
+W_{0}=\{ Ax=0:x\in R^n \}
+$$
+Le equazioni date dal [[Sistemi Lineari|sistema lineare]]
+$$\begin{cases}
+a_{11}+\dots+a_{1n}x_{n}=b_{1} \\
+\vdots \\
+a_{m1}+\dots+a_{mn}+x_{n}=b_{n}
+\end{cases}
+$$
+si chiamano <mark style="background: #FF5582A6;">equazioni cartesiane di $W$</mark>
+
+
+
+---
 # Sottospazi Vettoriali in $\mathbb{R}^n$
 Si consideri una [[Matrici|matrice]] $A\in M_{m,n}(\mathbb{R})$
 
@@ -23,16 +40,6 @@ Inoltre, dato $Ax=b$ , sia $\overline{x}\in W$ una soluzione particolare allora
 $$
 W=\overline{x}+W_{0}=\{ \overline{x}+x_{0}:x_{0}\in W_{0} \}
 $$
-
----
-# Giacitura
-Dato il sottospazio $W=\{ Ax=b:x \in \mathbb{R}^n \}$ chiamiamo **giacitura** di $W$ il sottospazio vettoriale :
-$$
-W_{0}=
-$$
-
-
-
 ---
 # Esempio di Sottospazio Vettoriale
 L'insieme $X = \{ (x,y)\in \mathbb{R}^2:y=0 \}$ è uno sottospazio vettoriale di $\mathbb{R}^2$
