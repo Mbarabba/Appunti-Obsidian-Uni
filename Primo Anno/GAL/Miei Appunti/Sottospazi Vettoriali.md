@@ -10,6 +10,7 @@ Diremo che $W$ è un sottospazio vettoriale di $V$ se <mark style="background: #
 Si consideri una [[Matrici|matrice]] $A\in M_{m,n}(\mathbb{R})$
 
 Lo spazio $W=\{ x \times \mathbb{R}^n : Ax = 0\}=\{ \text{soluzioni del sistema omogeneo associato ad A} \}$
+Dato un sistema lineare $Ax=b$ con $A \in M_{m,n}(\mathbb{R})$
 
 Se $r=r(A)$ e le soluzioni dipendono dai parametri $s_{1},\dots,s_{n-r}$, allora : 
 1. $dim(W)=n-r$
