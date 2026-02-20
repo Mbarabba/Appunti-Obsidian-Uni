@@ -57,6 +57,11 @@ Ovvero, se <mark style="background: #ABF7F7A6;">l'unica combinazione lineare che
 $$ \LARGE
 \sum^k_{i=1} a_{i}v_{i}=0\implies a_{i}=\dots=a_{k}=0
 $$
+
+Inoltre. dato $u \in V$ si ha che $u,v_{1},\dots,v_{k}$ sono linearmente dipe
+### Generatori
+Sia $S = \{ v_{1},\dots,v_{n} \}$ un insieme di **generatori** di $V$
+Se S è un <mark style="background: #BBFABBA6;">insieme linearmente indipendente</mark>, allora S <mark style="background: #FF5582A6;">contiene un sottoinsieme proprio di generatori</mark>
 ## Vettori linearmente dipendenti 
 Sia $V$ uno spazio vettoriale, i vettori $v_{1},\dots,v_{n} \in V$ si dicono **linearmente dipendenti** <mark style="background: #FFF3A3A6;">se esiste almeno un vettore esprimibile come una combinazione lineare</mark>
 

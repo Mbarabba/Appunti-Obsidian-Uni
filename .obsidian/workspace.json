@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 328.5026054382324
+    "width": 328.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "0ee3d13955aacfdf",
