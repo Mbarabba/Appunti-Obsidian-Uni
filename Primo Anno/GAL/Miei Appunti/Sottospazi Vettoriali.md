@@ -11,7 +11,11 @@ Si consideri una [[Matrici|matrice]] $A\in M_{m,n}(\mathbb{R})$
 
 Lo spazio $W=\{ x \times \mathbb{R}^n : Ax = 0\}=\{ \text{soluzioni del sistema omogeneo associato ad A} \}$
 
-Se $r=r(A)$ e le soluzi 
+Se $r=r(A)$ e le soluzioni dipendono dai parametri $s_{1},\dots,s_{n-r}$, allora : 
+1. $dim(W)=n-r$
+2. Una **base** di $W$ si ottiene ponendo, uno alla volta, un parametro pari a $1$ e gli altri pari a 0
+
+Inoltre, dato $Ax=b$ , sia $\overline{x}\in W$ una soluzione particolare 
 
 ---
 # Esempio di Sottospazio Vettoriale
