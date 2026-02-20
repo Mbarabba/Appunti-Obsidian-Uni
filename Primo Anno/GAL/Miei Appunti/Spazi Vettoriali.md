@@ -22,6 +22,11 @@ Gli elementi di uno spazio vettoriali si dicono **vettori** mentre i <mark style
 <mark style="background: #FF5582A6;">L'elemento neutro</mark> rispetto alla somma in $V$ si chiama **vettore nullo**
 
 ---
+# Operazioni con Spazi Vettoriali
+
+
+
+---
 # Spazi Vettoriali finitamente generati
 Uno spazio vettoriale $V$ si dice **finitamente generato** se $\exists v_{1},\dots,v_{n}:\forall v\in V$ si scrive come [[Combinazioni Lineari|combinazione lineare]] di $v_{1},\dots ,v_{n}$, ovvero $\exists a_{1},\dots ,a_{n}\in \mathbb{R}$ tale che 
 $$\LARGE
@@ -58,7 +63,10 @@ $$ \LARGE
 \sum^k_{i=1} a_{i}v_{i}=0\implies a_{i}=\dots=a_{k}=0
 $$
 
-Inoltre. dato $u \in V$ si ha che $u,v_{1},\dots,v_{k}$ sono linearmente dipe
+Inoltre, dato <mark style="background: #BBFABBA6;">$u \in V$</mark> si ha che $u,v_{1},\dots,v_{k}$ sono <mark style="background: #FF5582A6;">linearmente dipendenti se e solo se</mark>
+$$\LARGE
+u\not\in Span(v_{1},\dots ,v_{k})
+$$
 ### Generatori
 Sia $S = \{ v_{1},\dots,v_{n} \}$ un insieme di **generatori** di $V$
 Se S è un <mark style="background: #BBFABBA6;">insieme linearmente indipendente</mark>, allora S <mark style="background: #FF5582A6;">contiene un sottoinsieme proprio di generatori</mark>
