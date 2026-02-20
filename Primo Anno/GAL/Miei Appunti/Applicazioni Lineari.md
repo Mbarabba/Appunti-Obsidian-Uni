@@ -55,3 +55,18 @@ $$
 
 ---
 # Invertibilità
+Sia $f:V\to W$ un applicazione lineare diciamo che $f$ è **invertibile** se esiste una funzione lineare
+$$
+g:W\to V
+$$
+tale che
+$$\Large
+\begin{gather}
+g \circ f = id_{V}  \\
+f \circ g = id_{W}
+\end{gather}
+$$
+La funzione $g=f^{-1}$ si dice **inversa** se$f$ è invertibile, $V$ e $W$ su dicono **isomorfi** e $f$ si chiama **isomorfismo**
+
+## Teorema isomorfismo
+Siano $V,W$ [[Spazi Vettoriali|spazi vettoriali] ]
