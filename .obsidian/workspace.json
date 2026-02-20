@@ -28,7 +28,7 @@
               "type": "markdown",
               "state": {
                 "file": "Primo Anno/GAL/Miei Appunti/Applicazioni Lineari.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 328.5026054382324,
-    "collapsed": true
+    "width": 328.5026054382324
   },
   "right": {
     "id": "0ee3d13955aacfdf",
