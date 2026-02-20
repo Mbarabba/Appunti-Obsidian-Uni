@@ -9,7 +9,7 @@ KerF=\{ v\in V:F(v)=0 \}
 $$
 <mark style="background: #FF5582A6;">Esso è [[Sottospazi Vettoriali|sottospazio vettoriale]] di $V$</mark>
 
-<mark style="background: #ABF7F7A6;">$\{ f(v_{1}),\dots ,f(v_{k}) \}$ generano $Imf$</mark>
+
 
 ## Immagine
 L'immagine di $F$ è l'insieme :
@@ -18,3 +18,10 @@ ImF=\{ w\in W : \exists v\in V,f(u)=w\}
 $$
 <mark style="background: #FF5582A6;">Esso è [[Sottospazi Vettoriali|sottospazio vettoriale]] di $W$</mark>
 
+- <mark style="background: #ADCCFFA6;">$\{ f(v_{1}),\dots ,f(v_{k}) \}$ genera $Imf$</mark>
+- Se $\{ v_{1},\dots,v_{k} \}$ sono tali che $\{ f(v_{1}),\dots,f(v_{k}) \}$ è un sistema indipendente, allora $\{ v_{1},\dots,v_{k} \}$ è indipendente
+---
+# Iniettività e Suriettività
+Sia $f:V\to W$ un'applicazione lineare
+1. $f$ **inettiva** $\iff Kerf=\{ 0 \}\iff dim(Kerf)=0$
+2. $f$ **suriettiva** $\iff Imf=W \iff$
