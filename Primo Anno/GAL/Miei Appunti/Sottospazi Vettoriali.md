@@ -20,7 +20,8 @@ a_{m1}+\dots+a_{mn}+x_{n}=b_{n}
 \end{cases}
 $$
 si chiamano <mark style="background: #FF5582A6;">equazioni cartesiane di $W$</mark>
-
+### Da Equazioni cartesiane a Equazioni Parametriche
+Da le equazioni cartesiane $Ax=b$ per ottenere quelle parametriche basta risolvere il sistema
 ## Equazioni parametriche
 Se $\{ u_{1},\dots,u_{n-r} \}$ dove $r=r(A)$ è una [[Base|base]] della giacitura $W_{0}$ le equazioni associate a :
 $$\Large
@@ -30,7 +31,8 @@ x_{1} \\ \vdots \\ x_{n}
 =
 \overline x + s_{1}u_{1}+\dots+s_{n-r}u_{n-r}
 $$
-
+dove $A\overline x = b=$ e $s_{1},\dots,s_{n-r}\in \mathbb{R}$ si dicono <mark style="background: #FF5582A6;">equazioni parametriche di $W$
+</mark>
 ---
 # Sottospazi Vettoriali in $\mathbb{R}^n$
 Si consideri una [[Matrici|matrice]] $A\in M_{m,n}(\mathbb{R})$
@@ -45,17 +47,4 @@ Dato un sistema lineare $Ax=b$ con $A \in M_{m,n}(\mathbb{R})$ e $b \in \mathbb{
 - Lo spazio $W = \{ x\in R^n:Ax=b \}$ non è un [[Sottospazi Vettoriali|sottospazio vettoriale]]
 - $W_{0}=\{ x \in R^n:Ax=0 \}$ è un [[Sottospazi Vettoriali|sottospazio vettoriale]]
 
-Inoltre, dato $Ax=b$ , sia $\overline{x}\in W$ una soluzione particolare allora
-$$
-W=\overline{x}+W_{0}=\{ \overline{x}+x_{0}:x_{0}\in W_{0} \}
-$$
----
-# Esempio di Sottospazio Vettoriale
-L'insieme $X = \{ (x,y)\in \mathbb{R}^2:y=0 \}$ è uno sottospazio vettoriale di $\mathbb{R}^2$
-
-X è infatti : 
-1. **Non vuoto**, <mark style="background: #BBFABBA6;">contiene le infinite coppie di numeri reali $(x,0)$</mark>
-2. **Chiuso rispetto alla somma**
-   Presi due elementi $(x_{1},0),(x_{2},0)$ in $X$, la loro somma <mark style="background: #BBFABBA6;">$(x_{1},0)+(x_{2},0)=(x_{1}+x_{2},0)\in X$</mark>
-3. **Chiuso rispetto al prodotto** per scalari
-   Presi un qualsiasi $\alpha\in \mathbb{R}$ e un qualsiasi elemento $(x,0)\in X$, il prodotto <mark style="background: #BBFABBA6;">$\alpha(x,0)=(\alpha x,0)\in X$</mark>
+Inoltre, dato $Ax=b$ , sia $\overline{x}\in W$ una soluzione particolare 

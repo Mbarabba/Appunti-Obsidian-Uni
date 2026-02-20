@@ -76,6 +76,11 @@ Denotiamo il rango con $r(A)$
 
 Il rango della matrice precedente è pari a $3$
 
+## Matrice trasposta
+Data una matrice $A \in M_{m,n}(\mathbb{R})$ la matrice trosposta è la matrice : 
+$$\LARGE
+(A^T)_{ij}=A_{ji}
+$$
 
 ---
 # Operazioni tra matrici
