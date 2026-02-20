@@ -23,7 +23,14 @@ Gli elementi di uno spazio vettoriali si dicono **vettori** mentre i <mark style
 
 ---
 # Operazioni con Spazi Vettoriali
-
+## Intersezione
+Dati 2 sottospazi vettoriali $W_{1},W_{2}\in V$ si che <mark style="background: #FF5582A6;">$W_{1} \cap W_{2}$ è sottospazio vettoriale di $V$</mark>
+## Somma
+Dati 2 sottospazi vettoriale $W_{1},W_{2}\in V$ lo spazio **somma** è definito come
+$$\LARGE
+W_{1}+W_{2}=Span(W_{1} \cup W_{2})
+$$
+La somma si dice **diretta** se $W_{1} \cap W_{2} = \{ 0 \}$, in tal caso scriviamo $W_{1} \oplus$
 
 
 ---
