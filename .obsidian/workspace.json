@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/GAL/Miei Appunti/Matrici.md",
-                "mode": "preview",
+                "file": "Primo Anno/GAL/Miei Appunti/Applicazioni Lineari.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Matrici"
+              "title": "Applicazioni Lineari"
             }
           }
         ],
@@ -201,8 +201,9 @@
   },
   "active": "d74c7299c4b66068",
   "lastOpenFiles": [
-    "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
     "Primo Anno/GAL/Miei Appunti/Matrici.md",
+    "Primo Anno/GAL/Miei Appunti/Applicazioni Lineari.md",
+    "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
     "Primo Anno/GAL/Miei Appunti/Base.md",
     "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
     "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
@@ -239,7 +240,6 @@
     "Secondo Anno/Primo Semestre/LC/MDT/NFA - Automi non deterministici a stati finiti.md",
     "Secondo Anno/Primo Semestre/LC/MDT/Linguaggi prefix-free.md",
     "Primo Anno/GAL/Sistemi Lineari/Untitled.md",
-    "Primo Anno/Architettura/Prove d'esame/Gemini 2.md",
     "IMG/Pasted image 20260207102144.png",
     "IMG/Pasted image 20260207105609.png",
     "IMG/Screenshot_20260209-173545-display-0.jpg.jpg",
