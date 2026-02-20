@@ -19,9 +19,19 @@ Dato un sistema lineare $Ax=b$ con $A \in M_{m,n}(\mathbb{R})$ e $b \in \mathbb{
 - Lo spazio $W = \{ x\in R^n:Ax=b \}$ non è un [[Sottospazi Vettoriali|sottospazio vettoriale]]
 - $W_{0}=\{ x \in R^n:Ax=0 \}$ è un [[Sottospazi Vettoriali|sottospazio vettoriale]]
 
+Inoltre, dato $Ax=b$ , sia $\overline{x}\in W$ una soluzione particolare allora
+$$
+W=\overline{x}+W_{0}=\{ \overline{x}+x_{0}:x_{0}\in W_{0} \}
+$$
+
+---
+# Giacitura
+Dato il sottospazio $W=\{ Ax=b:x \in \mathbb{R}^n \}$ chiamiamo **giacitura** di $W$ il sottospazio vettoriale :
+$$
+W_{0}=
+$$
 
 
-Inoltre, dato $Ax=b$ , sia $\overline{x}\in W$ una soluzione particolare 
 
 ---
 # Esempio di Sottospazio Vettoriale
