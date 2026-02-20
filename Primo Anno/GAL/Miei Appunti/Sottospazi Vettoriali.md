@@ -11,6 +11,7 @@ Dato il sottospazio $W=\{ Ax=b:x \in \mathbb{R}^n \}$ chiamiamo **giacitura** di
 $$ \LARGE
 W_{0}=\{ Ax=0:x\in R^n \}
 $$
+## Equazioni Cartesiane
 Le equazioni date dal [[Sistemi Lineari|sistema lineare]]
 $$\begin{cases}
 a_{11}+\dots+a_{1n}x_{n}=b_{1} \\
@@ -20,7 +21,15 @@ a_{m1}+\dots+a_{mn}+x_{n}=b_{n}
 $$
 si chiamano <mark style="background: #FF5582A6;">equazioni cartesiane di $W$</mark>
 
-
+## Equazioni parametriche
+Se $\{ u_{1},\dots,u_{n-r} \}$ dove $r=r(A)$ è una [[Base|base]] della giacitura $W_{0}$ le equazioni associate a :
+$$\Large
+\begin{pmatrix}
+x_{1} \\ \vdots \\ x_{n}
+\end{pmatrix}
+=
+\overline x + s_{1}u_{1}+\dots+s_{n-r}u_{n-r}
+$$
 
 ---
 # Sottospazi Vettoriali in $\mathbb{R}^n$
