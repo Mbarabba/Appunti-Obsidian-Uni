@@ -8,10 +8,13 @@ $$\Large
 KerF=\{ v\in V:F(v)=0 \}
 $$
 <mark style="background: #FF5582A6;">Esso è [[Sottospazi Vettoriali|sottospazio vettoriale]] di $V$</mark>
+
+<mark style="background: #ABF7F7A6;">$\{ f(v_{1}),\dots ,f(v_{k}) \}$ generano $Imf$</mark>
+
 ## Immagine
 L'immagine di $F$ è l'insieme :
 $$\Large
-ImF=\{ w\in W \varepsilon \exists v\in V,f(u)=w\}
+ImF=\{ w\in W : \exists v\in V,f(u)=w\}
 $$
 <mark style="background: #FF5582A6;">Esso è [[Sottospazi Vettoriali|sottospazio vettoriale]] di $W$</mark>
 
