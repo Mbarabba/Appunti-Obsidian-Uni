@@ -69,4 +69,4 @@ $$
 La funzione $g=f^{-1}$ si dice **inversa** se$f$ è invertibile, $V$ e $W$ su dicono **isomorfi** e $f$ si chiama **isomorfismo**
 
 ## Teorema isomorfismo
-Siano $V,W$ [[Spazi Vettoriali|spazi vettoriali] ]
+Siano $V,W$ [[Spazi Vettoriali|spazi vettoriali]] $V,W \text{ sono isomorfi} \iff dim(V)=dim(W)$ 

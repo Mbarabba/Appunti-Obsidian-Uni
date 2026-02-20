@@ -25,14 +25,12 @@
             "id": "d74c7299c4b66068",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Primo Anno/GAL/Miei Appunti/Applicazioni Lineari.md",
-                "mode": "source",
-                "source": false
+                "file": "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-29-25.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Applicazioni Lineari"
+              "icon": "lucide-file-text",
+              "title": "Lezione 05-29-25"
             }
           }
         ],
@@ -93,8 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 255.5
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -201,9 +198,9 @@
   },
   "active": "d74c7299c4b66068",
   "lastOpenFiles": [
+    "Primo Anno/GAL/Miei Appunti/Applicazioni Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
     "Primo Anno/GAL/Miei Appunti/Matrici.md",
-    "Primo Anno/GAL/Miei Appunti/Applicazioni Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Combinazioni Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Base.md",
     "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
