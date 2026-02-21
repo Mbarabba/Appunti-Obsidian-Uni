@@ -24,12 +24,6 @@ Dati $m,n\in \mathbb{N}$, si chiama matrice $m\times n$ a coefficienti reali una
 Se <mark style="background: #FF5582A6;">$m=n$</mark> la matrice si dice **quadrata** di ordine $n$
 >[!example] Esempio di matrice Quadrata
 >$$m=n=2 \implies \begin{pmatrix}1 &0 \\ \frac{2}{3} & 3\end{pmatrix}$$
-
-### Proprietà delle Matrici Quadrate
-1. $A$ è **invertibile**
-2. $L_{A}$ è un **isomorfismo**
-3. $n=r(A)=dim(col(A))=dim(Row(A))$
-
 ## Matrici Uguali
 Date 2 matrici :
 $$
@@ -102,6 +96,10 @@ In questo caso scriviamo $B=A^{-1}$
 ### Come verificare che una matrice sia invertibile?
 #### Algoritmo di Gauss
 Supponiamo di avere $A \in M_{n}(\mathbb{R})$ invertibile
+1. Affianchiamo $A$ alla matrice identità $(A|I_{n})$
+2. Riduciamo a scala $A$, questo modifica $I_{n}$
+3. Con le operazioni concesse, si modifica la matrice $A$ in forma diagonale
+4. Si moltiplica ogni riga per $a^{-1}_{ii}$ ottenendo $(I_{n}|A^{-1})$ 
 
 ---
 # Spazi di una matrice
@@ -267,3 +265,7 @@ Permette di passare da una matrice $A$ a una matrice $A'$ [[#Matrici ridotte a s
 1. **Scambiare** 2 righe
 2. **Moltiplicare** una riga per $\alpha \not=0$
 3. **Sostituire** la i-esima riga $R_{i}$ con la somma <mark style="background: #ADCCFFA6;">$R_{i}+\alpha R_{j}$ con $\alpha \not=0$ </mark>
+---
+# Determinante : Sviluppo di Laplace
+Sia $A \in M_{n}(\mathbb{R})$, il<mark style="background: #FF5582A6;"> **determinante** è una funzione ricorsiva</mark> cosi' definita :
+1. S
