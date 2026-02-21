@@ -101,7 +101,7 @@ $$
 In questo caso scriviamo $B=A^{-1}$
 ### Come verificare che una matrice sia invertibile?
 #### Algoritmo di Gauss
-Supponiamo di avere $A \in M_{n}(\mathbb{R})$ ivertibile
+Supponiamo di avere $A \in M_{n}(\mathbb{R})$ invertibile
 
 ---
 # Spazi di una matrice
