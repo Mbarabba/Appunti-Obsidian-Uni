@@ -80,3 +80,19 @@ $$\LARGE
 M^D_{B}(f)\in M_{m,n}(\mathbb{R})
 $$
 il cui termine $(i,j)$ è il coefficiente di $f(v_{i})$ rispetto al vettore $w_{j}$
+
+---
+# Matrice del cambio base
+Data $id_{V}:V\to V$ con basi $B$ e $D$ la matrice :
+$$\LARGE M_{B}^D(id_{V})$$
+si chiama matrice del cambio di base da $B$ a $D$
+
+Siano $V,W$ [[Spazi Vettoriali|spazio vettoriale]] con base $B=\{ v_{1},\dots,v_{n} \},D=\{ w_{1},\dots,w_{m} \}$
+
+Ho una funzione :
+$$\Large
+M^D_{B}:Hom(V,W)\to M_{m,n}(\mathbb{R})
+$$
+$$\Large f\to M^D_{B}(f)$$
+1. $M^D_{B}$ è un **isomorfismo** di [[Spazi Vettoriali|spazi vettoriali]]
+2. $M^D_{B}(f)\cdot[v]_{B}=[]$
