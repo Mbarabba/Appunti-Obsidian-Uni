@@ -24,6 +24,10 @@ Dati $m,n\in \mathbb{N}$, si chiama matrice $m\times n$ a coefficienti reali una
 Se <mark style="background: #FF5582A6;">$m=n$</mark> la matrice si dice **quadrata** di ordine $n$
 >[!example] Esempio di matrice Quadrata
 >$$m=n=2 \implies \begin{pmatrix}1 &0 \\ \frac{2}{3} & 3\end{pmatrix}$$
+
+## Matrici coniugate
+Date 2 matrici quadrate $A,B\in M_{n}(\mathbb{R})$ queste sono **coniugate** se esiste $X$ invertibile :
+$$\Large A=XBX^{-1}$$
 ## Matrici Uguali
 Date 2 matrici :
 $$

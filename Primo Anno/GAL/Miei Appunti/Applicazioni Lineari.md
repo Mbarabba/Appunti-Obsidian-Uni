@@ -66,10 +66,19 @@ g \circ f = id_{V}  \\
 f \circ g = id_{W}
 \end{gather}
 $$
-La funzione $g=f^{-1}$ si dice **inversa** se$f$ è invertibile, $V$ e $W$ su dicono **isomorfi** e $f$ si chiama **isomorfismo**
+La funzione $g=f^{-1}$ si dice **inversa** se$f$ è invertibile, $V$ e $W$ si dicono **isomorfi** e $f$ si chiama **isomorfismo**
 
 ## Teorema isomorfismo
 Siano $V,W$ [[Spazi Vettoriali|spazi vettoriali]] $V,W \text{ sono isomorfi} \iff dim(V)=dim(W)$ 
+## Endomorfismo
+Un'applicazione lineare : 
+$$\Large f:V\to V$$
+si chiama **endomorfismo**
+$$\Large End(V)=Hom(V,V)$$
+1. $End(V)$ ha dimensione $dim(V)^2$
+2. Se fisso $B$ base di $V$ ho che : 
+   $$$$
+
 
 ---
 # Matrice associata
