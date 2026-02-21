@@ -271,4 +271,7 @@ Permette di passare da una matrice $A$ a una matrice $A'$ [[#Matrici ridotte a s
 Sia $A\in M_{n}(\mathbb{R})$ il <mark style="background: #FF5582A6;">**determinante** è una funzione ricorsiva</mark> cosi' definita :
 1. Se $A$ ha ordine $1$, cioè $A=(a_{11})$ poniamo
    $$\det(A)=a_{11}$$
-2. Su
+2. Supponiamo ora di saper calcolare il determinante delle matrici di ordine $n-1$ sia
+   $$\Gamma_{ij}=(-1)^{i+j}\det(A_{ij})$$
+   allora
+   $$\det(A)=\sum^n_{k=1}a_{1k}\Gamma_{1k}$$
