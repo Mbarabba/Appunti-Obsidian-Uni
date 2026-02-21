@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/GAL/Miei Appunti/Matrici.md",
-                "mode": "preview",
+                "file": "Primo Anno/GAL/Miei Appunti/Applicazioni Lineari.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Matrici"
+              "title": "Applicazioni Lineari"
             }
           }
         ],
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5
+    "width": 255.5,
+    "collapsed": true
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -200,8 +201,8 @@
   },
   "active": "d74c7299c4b66068",
   "lastOpenFiles": [
-    "Primo Anno/GAL/Libro.pdf",
     "Primo Anno/GAL/Miei Appunti/Matrici.md",
+    "Primo Anno/GAL/Libro.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-10-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-08-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-29-25.pdf",
@@ -223,7 +224,6 @@
     "Primo Anno/GAL/Miei Appunti/Prova.md",
     "autocommit.sh~",
     "autocommit.sh",
-    "refresh.txt",
     "Pasted image 20260218131611.png",
     "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 1/Gemini 1.md",
     "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 5/Gemini 5.md",

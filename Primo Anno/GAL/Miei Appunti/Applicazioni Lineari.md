@@ -70,3 +70,13 @@ La funzione $g=f^{-1}$ si dice **inversa** se$f$ è invertibile, $V$ e $W$ su di
 
 ## Teorema isomorfismo
 Siano $V,W$ [[Spazi Vettoriali|spazi vettoriali]] $V,W \text{ sono isomorfi} \iff dim(V)=dim(W)$ 
+
+---
+# Matrice associata
+Sia data $f:V\to W$ una applicazione lineare e siano $B = \{ v_{1},\dots,v_{n} \}$ base di $V$ e $D=\{ w_{1},\dots,w_{m} \}$ base di $W$
+
+La matrice associata a f rispetto alle basi $B$ e $D$ è la matrice
+$$\LARGE
+M^D_{B}(f)\in M_{m,n}(\mathbb{R})
+$$
+il cui termine $(i,j)$ è il coefficiente di $f(v_{i})$
