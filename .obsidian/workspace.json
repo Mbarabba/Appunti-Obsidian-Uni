@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Autovettori.md",
+                "file": "Primo Anno/GAL/Miei Appunti/Autovettori.md",
                 "mode": "source",
                 "source": false
               },
@@ -107,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5,
-    "collapsed": true
+    "width": 255.5
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -215,15 +214,15 @@
   },
   "active": "4198007e172fa45e",
   "lastOpenFiles": [
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-06-25.pdf",
+    "Primo Anno/GAL/Miei Appunti/Autovettori.md",
     "Primo Anno/GAL/Miei Appunti/Applicazioni Lineari.md",
-    "Autovettori.md",
     "Primo Anno/GAL/Miei Appunti/Combinazioni Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Matrici.md",
     "Primo Anno/GAL/Libro.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-10-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-08-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-29-25.pdf",
-    "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-06-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-08-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-29-25.pdf",
     "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
@@ -253,7 +252,6 @@
     "Secondo Anno/Primo Semestre/LC/MDT/MDT - Macchina di Turing.md",
     "Secondo Anno/Primo Semestre/LC/MDT/Proprietà non banale.md",
     "Secondo Anno/Primo Semestre/LC/MDT/NFA - Automi non deterministici a stati finiti.md",
-    "Secondo Anno/Primo Semestre/LC/MDT/Linguaggi prefix-free.md",
     "IMG/Pasted image 20260207102144.png",
     "IMG/Pasted image 20260207105609.png",
     "IMG/Screenshot_20260209-173545-display-0.jpg.jpg",
