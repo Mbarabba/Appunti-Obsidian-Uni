@@ -15,3 +15,11 @@ dim(W_{1}+W_{2})=dim(W_{1})+dim(W_{2})-dim(W_{1} \cap W_{2})
 $$
 ---
 # Base Spettrale
+Un **endomorfismo** $f\in End(V)$ si dice **diagonalizzabile** se esiste una base di $V$ composta da soli autovettori per $f$
+
+Tale base si chiama **base spettrale**
+
+Data una base spettrale $B=\{ v_{1},\dots,v_{n} \}$ per $f$ vale che $f(v_{i})=\lambda_{i}v_{i}$ con $\lambda_{i}$ **autovalore** opportuno
+
+Dunque : $$M^B_{B}(f)= \begin{pmatrix} \lambda_1 & & 0 \\ & \ddots & \\ 0 & & \lambda_n \end{pmatrix}$$ è **diagonale**
+
