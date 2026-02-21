@@ -79,6 +79,8 @@ Data una matrice $A \in M_{m,n}(\mathbb{R})$ la matrice trosposta è la matrice 
 $$\LARGE
 (A^T)_{ij}=A_{ji}
 $$
+# Matrice Identità
+
 
 ---
 # Spazi di una matrice
@@ -118,6 +120,11 @@ $$
 \large c_{ij}=\sum^s_{h=1}a_{ih}b_{hj}
 $$
 **In pratica** l'elemento $c_{i,j}$, ($i-$esima riga, $j-$esima colonna del risultato) è la <mark style="background: #FF5582A6;">somma dei prodotti tra tutta la  $i-$esima Riga della prima matrice e tutta la  $j-$esima colonna Colonna della seconda</mark>
+
+<mark style="background: #FF5582A6;">Il prodotto non è commutativo</mark>
+$$\LARGE AB\not=BA
+$$
+
 
 A questo punto definiamo il <u>prodotto di $A$ e $B$</u> come : <mark style="background: #FF5582A6;">$C=AB=(c_{ij})_{\substack{i=1,\dots m\\ j=1,\dots ,n}}$</mark>
 >[!example] Esempio di prodotto
