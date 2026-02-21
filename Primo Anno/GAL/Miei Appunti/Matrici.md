@@ -25,7 +25,10 @@ Se <mark style="background: #FF5582A6;">$m=n$</mark> la matrice si dice **quadra
 >[!example] Esempio di matrice Quadrata
 >$$m=n=2 \implies \begin{pmatrix}1 &0 \\ \frac{2}{3} & 3\end{pmatrix}$$
 
-## Proprietà delle Matrici Quadrate
+### Proprietà delle Matrici Quadrate
+1. $A$ è **invertibile**
+2. $L_{A}$ è un **isomorfismo**
+3. $n=r(A)=dim(col(A))=dim(Row(A))$
 
 ## Matrici Uguali
 Date 2 matrici :
@@ -96,6 +99,9 @@ $$\LARGE
 AB=BA=I_{n}
 $$
 In questo caso scriviamo $B=A^{-1}$
+### Come verificare che una matrice sia invertibile?
+#### Algoritmo di Gauss
+Supponiamo di avere $A $
 
 ---
 # Spazi di una matrice
