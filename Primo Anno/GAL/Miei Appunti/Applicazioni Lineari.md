@@ -77,7 +77,7 @@ si chiama **endomorfismo**
 $$\Large End(V)=Hom(V,V)$$
 1. $End(V)$ ha dimensione $dim(V)^2$
 2. Se fisso $B$ base di $V$ ho che : 
-   $$$$
+   $$M^B_{B}:End(V)\to M_{m}(\mathbb{R})$$ è un **isomorfismo**
 
 
 ---
