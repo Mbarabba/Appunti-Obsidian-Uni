@@ -20,3 +20,7 @@ Chiamiamo tale $v$ **autovettore** di $f$ relativo a $\lambda$
 ---
 # Caratterizzazione degli autovalori
 Sia $f:V\to V$ un endomorfismo allora $\lambda$ è un **autovalore** se e solo se : $$\LARGE P_{f}(\lambda)=0$$
+
+---
+# Molteplicità Geometrica
+Sia $f\in End(v)$ con [[Autovettori#Autovettore|autovettore]] $\lambda$ la **molteplicità geometrica** di $\lambda$ è : $$m_{a}(\lambda)=\text{ Il numero di volte che } p_{f} \text{ si annulla su }\lambda = m \text{ con } P_{A}(t)=(t-\lambda)^mq(t)$$

@@ -39,14 +39,12 @@
             "id": "4198007e172fa45e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Primo Anno/GAL/Miei Appunti/Base.md",
-                "mode": "source",
-                "source": false
+                "file": "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-08-25.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Base"
+              "icon": "lucide-file-text",
+              "title": "Lezione 05-08-25"
             }
           }
         ],
@@ -107,8 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5,
-    "collapsed": true
+    "width": 255.5
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -216,6 +213,7 @@
   "active": "4198007e172fa45e",
   "lastOpenFiles": [
     "Primo Anno/GAL/Miei Appunti/Autovettori.md",
+    "Primo Anno/GAL/Miei Appunti/Base.md",
     "Primo Anno/GAL/Miei Appunti/Matrici.md",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-29-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-27-25.pdf",
@@ -230,7 +228,6 @@
     "Primo Anno/GAL/Libro.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-10-25.pdf",
     "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
-    "Primo Anno/GAL/Miei Appunti/Base.md",
     "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
     "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
     "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Pumping Lemma.md",
