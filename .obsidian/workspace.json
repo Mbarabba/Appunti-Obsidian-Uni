@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/GAL/Miei Appunti/Matrici.md",
+                "file": "Primo Anno/GAL/Miei Appunti/Base.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Matrici"
+              "title": "Base"
             }
           }
         ],
@@ -216,6 +216,7 @@
   "active": "4198007e172fa45e",
   "lastOpenFiles": [
     "Primo Anno/GAL/Miei Appunti/Autovettori.md",
+    "Primo Anno/GAL/Miei Appunti/Matrici.md",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-29-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-27-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-22-25.pdf",
@@ -226,7 +227,6 @@
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-06-25.pdf",
     "Primo Anno/GAL/Miei Appunti/Applicazioni Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Combinazioni Lineari.md",
-    "Primo Anno/GAL/Miei Appunti/Matrici.md",
     "Primo Anno/GAL/Libro.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-10-25.pdf",
     "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",

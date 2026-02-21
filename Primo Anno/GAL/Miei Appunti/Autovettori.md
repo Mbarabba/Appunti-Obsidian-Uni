@@ -16,3 +16,7 @@ Chiamiamo tale $v$ **autovettore** di $f$ relativo a $\lambda$
 \end{gather}$$
 >
 >3 è un autovalore di $f$ e ogni polinomio è autovettore
+
+---
+# Caratterizzazione degli autovalori
+Sia $f:V\to V$ un endomorfismo allora $\lambda$ è un **autovalore** se e solo se : $$\LARGE P_{f}(\lambda)=0$$

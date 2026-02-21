@@ -28,6 +28,8 @@ Se <mark style="background: #FF5582A6;">$m=n$</mark> la matrice si dice **quadra
 ## Matrici coniugate
 Date 2 matrici quadrate $A,B\in M_{n}(\mathbb{R})$ queste sono **coniugate** se esiste $X$ invertibile :
 $$\Large A=XBX^{-1}$$
+### Polinomio Caratteristico
+Siano $A,B\in M_{n}(\mathbb{R})$ **coniugate** vale : $$\Large P_{A}(t)=P_{B}(t)$$
 ## Matrici Uguali
 Date 2 matrici :
 $$
@@ -280,4 +282,6 @@ Sia $A\in M_{n}(\mathbb{R})$ il <mark style="background: #FF5582A6;">**determina
    allora
    $$\det(A)=\sum^n_{k=1}a_{1k}\Gamma_{1k}$$
 ---
-# Polinomi
+# Polinomio Caratteristico
+Data $A\in M_{n}(\mathbb{R})$ il **polimorfismo caratteristico** è :
+$$\LARGE P_{A}(t)=\det(A-tI_{n})$$

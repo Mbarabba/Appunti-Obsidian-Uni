@@ -13,3 +13,5 @@ Dati 2 sottospazi vettoriali $W_{1},W_{2}$ di $V$ vale :
 $$\LARGE
 dim(W_{1}+W_{2})=dim(W_{1})+dim(W_{2})-dim(W_{1} \cap W_{2})
 $$
+---
+# Base Spettrale
