@@ -95,4 +95,4 @@ M^D_{B}:Hom(V,W)\to M_{m,n}(\mathbb{R})
 $$
 $$\Large f\to M^D_{B}(f)$$
 1. $M^D_{B}$ è un **isomorfismo** di [[Spazi Vettoriali|spazi vettoriali]]
-2. $M^D_{B}(f)\cdot[v]_{B}=[]$
+2. $M^D_{B}(f)\cdot[v]_{B}=[f(v)]_{D}$
