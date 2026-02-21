@@ -79,4 +79,4 @@ La matrice associata a f rispetto alle basi $B$ e $D$ è la matrice
 $$\LARGE
 M^D_{B}(f)\in M_{m,n}(\mathbb{R})
 $$
-il cui termine $(i,j)$ è il coefficiente di $f(v_{i})$
+il cui termine $(i,j)$ è il coefficiente di $f(v_{i})$ rispetto al vettore $w_{j}$
