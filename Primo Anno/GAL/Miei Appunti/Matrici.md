@@ -279,3 +279,5 @@ Sia $A\in M_{n}(\mathbb{R})$ il <mark style="background: #FF5582A6;">**determina
    $$\Gamma_{ij}=(-1)^{i+j}\det(A_{ij})$$
    allora
    $$\det(A)=\sum^n_{k=1}a_{1k}\Gamma_{1k}$$
+---
+# Polinomi
