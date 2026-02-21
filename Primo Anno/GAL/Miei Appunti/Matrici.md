@@ -268,4 +268,8 @@ Permette di passare da una matrice $A$ a una matrice $A'$ [[#Matrici ridotte a s
 ---
 # Determinante : Sviluppo di Laplace
 Sia $A \in M_{n}(\mathbb{R})$, il<mark style="background: #FF5582A6;"> **determinante** è una funzione ricorsiva</mark> cosi' definita :
-1. S
+- <mark style="background: #FFF3A3A6;">Caso Base</mark> 
+	- Se $n=1$ allora $A=(a_{11})$ e $\det(A)=a_{11}$
+	- Se $n=2$ allora $A = \begin{pmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{pmatrix}$ e $\det(A)=a_{11}a_{22}-a_{12}a_{21}$
+- <mark style="background: #ADCCFFA6;">Passo ricorsivo</mark>
+	- Per un qualunque $n$, se $A = \begin{pmatrix} a_{11} & a_{12} & \dots & a_{1n} \\ a_{21} & a_{22} & \dots & a_{2n} \\ \vdots & & & \end{pmatrix}$ lo sviluppo di Laplace rispetto alla $I^a$
