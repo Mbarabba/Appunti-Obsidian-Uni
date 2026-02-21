@@ -25,6 +25,8 @@ Se <mark style="background: #FF5582A6;">$m=n$</mark> la matrice si dice **quadra
 >[!example] Esempio di matrice Quadrata
 >$$m=n=2 \implies \begin{pmatrix}1 &0 \\ \frac{2}{3} & 3\end{pmatrix}$$
 
+## Proprietà delle Matrici Quadrate
+
 ## Matrici Uguali
 Date 2 matrici :
 $$
@@ -79,7 +81,7 @@ Data una matrice $A \in M_{m,n}(\mathbb{R})$ la matrice trosposta è la matrice 
 $$\LARGE
 (A^T)_{ij}=A_{ji}
 $$
-# Matrice Identità
+## Matrice Identità
 La matrice identità è la matrice $n \times n$ avente tutti gli elementi della <mark style="background: #FF5582A6;">diagonale principale uguali a $1$</mark>, mentre i <mark style="background: #FF5582A6;">restanti elementi sono uguali a $0$</mark>
 
 Viene indicata con **$I_{n}$**
@@ -88,6 +90,12 @@ Viene indicata con **$I_{n}$**
 >\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
 \end{pmatrix}
 >$$
+## Matrice Inversa
+Data $A \in M_{n}(\mathbb{R})$ diciamo che $A$ è **invertibile** se esiste $B \in M_{n}(\mathbb{R})$ tale che :
+$$\LARGE
+AB=BA=I_{n}
+$$
+In questo caso scriviamo $B=A^{-1}$
 
 ---
 # Spazi di una matrice
