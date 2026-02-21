@@ -80,7 +80,14 @@ $$\LARGE
 (A^T)_{ij}=A_{ji}
 $$
 # Matrice Identità
+La matrice identità è la matrice $n \times n$ avente tutti gli elementi della <mark style="background: #FF5582A6;">diagonale principale uguali a $1$</mark>, mentre i <mark style="background: #FF5582A6;">restanti elementi sono uguali a $0$</mark>
 
+Viene indicata con **$I_{n}$**
+>[!example] Esempio di matrice identità
+>$$I_{n}=
+>\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
+\end{pmatrix}
+>$$
 
 ---
 # Spazi di una matrice
