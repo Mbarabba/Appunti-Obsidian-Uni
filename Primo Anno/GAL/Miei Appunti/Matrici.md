@@ -253,5 +253,7 @@ A = \begin{pmatrix}
 ## Proprietà 
 ### $\det(A)=\det(A^t)$
   Questa proprietà afferma che<mark style="background: #ADCCFFA6;"> possiamo sviluppare il determinante di una matrice secondo le colonne invece che secondo le righe</mark>
-### Righe/colonne nulle
+### Righe/Colonne Nulle
 Se una matrice $A$ ha una <mark style="background: #ADCCFFA6;">colonna / riga nulla, allora $\det(A)=0$</mark>
+### Somma di righe/colonne
+Se a una colonna/riga $i$ di una [[#Matrice Quadrata|matrice quadrata]] $A$ si <mark style="background: #ADCCFFA6;">somma un altra riga/colonna $j$ tale che $i\not=j$ moltiplicata per $k\in \mathbb{R}$, il determinante non cambia</mark>
