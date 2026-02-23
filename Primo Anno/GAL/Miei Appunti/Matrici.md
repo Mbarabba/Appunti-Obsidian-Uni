@@ -168,6 +168,7 @@ AB=C \text{ di ordine } m \times n \text{ cosi' definita} \\
  \\ 1 \leq i\leq m \quad 1\leq j\leq n
 \end{gather}
 $$
+L'operazione può essere eseguite se e solo se 
 ### Esempio Pratico
 $$
 A = \begin{pmatrix}
@@ -180,5 +181,11 @@ A = \begin{pmatrix}
 \end{pmatrix}
 $$
 $$
-AB=
+AB=\begin{pmatrix}
+-1 \cdot3 + 4\cdot 5 & -1 \cdot 2+4 \cdot 0 & -1 \cdot -4 + 4 \cdot 2 \\
+6 \cdot 3 + 1 \cdot 5  & 6 \cdot 2 + 1 \cdot 0 & 6 \cdot 4 + 1\cdot 2
+\end{pmatrix} =\begin{pmatrix}
+17 & -2 & 12 \\
+23 & 12 & -22
+\end{pmatrix}
 $$
