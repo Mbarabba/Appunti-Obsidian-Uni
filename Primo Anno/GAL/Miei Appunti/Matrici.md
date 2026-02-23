@@ -155,7 +155,30 @@ $$kA=2A=\begin{pmatrix}
 -6 & 2 & -8
 \end{pmatrix}$$
 questa operazione viene definita come **prodotto per uno scalare**
-## Prodotto fra Matrici
+## Prodotto righe per colonne
 - Sia **$A=(a_{ik})$** una <mark style="background: #ADCCFFA6;">matrice di ordine $m \times p$</mark>
 - Sia $B=(b_{kj})$ una <mark style="background: #ADCCFFA6;">matrice di ordine $p \times n$</mark>
-Defini
+Definiamo come prodotto righe per colonne della matrice $A$ per la matrice $B$ la matrice
+$$
+\begin{gather}
+AB=C \text{ di ordine } m \times n \text{ cosi' definita} \\
+\\
+\large C=(c_{ij}) \text{ dove } c_{ij} = a_{i1}b_{1j}+\dots+a_{ip}b_{pj}
+ \\
+ \\ 1 \leq i\leq m \quad 1\leq j\leq n
+\end{gather}
+$$
+### Esempio Pratico
+$$
+A = \begin{pmatrix}
+-1 & 4 \\
+6 & 1
+\end{pmatrix}
+\quad B=\begin{pmatrix}
+3 & 2 & -4 \\
+5 & 0 & 2
+\end{pmatrix}
+$$
+$$
+AB=
+$$
