@@ -212,3 +212,5 @@ AB=\begin{pmatrix}
 23 & 12 & -22
 \end{pmatrix}
 $$
+---
+# Determinante
