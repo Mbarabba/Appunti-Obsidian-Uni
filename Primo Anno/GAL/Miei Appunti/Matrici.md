@@ -39,3 +39,6 @@ $$
 $$
 Gli elementi della diagonale sono : 
 $$\large a_{11} = 3 \quad a_{22}=4 \quad a_{33}=-2$$
+mentre il resto degli elementi sono pari a 0
+## Matrici Uguali
+Due matrici $A,B$ sono uguali se hanno le stesse dimensioni
