@@ -78,3 +78,23 @@ A^t = \begin{pmatrix}
 $$
 ## Matrice Simmetrica
 Una [[#Matrice Quadrata|matrice quadrata]] di ordine $n$ è detta **simmetrica** se $A=A^t$, ovvero se la sua generica riga $i$-esima è uguale alla sua colonna $i$-esima
+$$
+\begin{gather}
+A = \begin{pmatrix}
+1 & 1 & -2 \\
+1 & 3 & 5 \\
+-2 & 5 & -6
+\end{pmatrix} \\ \\
+A^t=\begin{pmatrix}
+1 & 1 & -2 \\
+1 & 3 & 5 \\
+-2 & 5 & -6
+\end{pmatrix}\\ \\ 
+\large A=A^t \implies A \text{ è simmetrica}
+\end{gather}
+$$
+## Matrice Riga
+Una matrice $A$ di ordine $1 \times n$, cioè una matrice del tipo 
+$$A = \begin{pmatrix}
+a_{1}
+\end{pmatrix}$$
