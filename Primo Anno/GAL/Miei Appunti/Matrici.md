@@ -110,6 +110,8 @@ a_{n_{1}}
 \end{pmatrix}
 $$
 è detta **matrice colonna**
+## Matrice Unità $I$
+Data una [[#Matrice Quadrata|matrice quadrata]], la **matrice diagonale $I$** è caratterizzata dal fatto che gli elem
 
 ---
 # Operazioni fra matrici
@@ -158,6 +160,13 @@ questa operazione viene definita come **prodotto per uno scalare**
 ## Prodotto righe per colonne
 - Sia **$A=(a_{ik})$** una <mark style="background: #ADCCFFA6;">matrice di ordine $m \times p$</mark>
 - Sia $B=(b_{kj})$ una <mark style="background: #ADCCFFA6;">matrice di ordine $p \times n$</mark>
+
+<mark style="background: #FF5582A6;">L'operazione può essere eseguite se e solo se il numero di colonne di $A$ equivale al numero di righe di $B$</mark> 
+
+Il prodotto tra matrici <mark style="background: #ADCCFFA6;">non gode della **proprietà commutativa**</mark>
+
+$$AB \not = BA$$
+
 Definiamo come prodotto righe per colonne della matrice $A$ per la matrice $B$ la matrice
 $$
 \begin{gather}
@@ -168,7 +177,6 @@ AB=C \text{ di ordine } m \times n \text{ cosi' definita} \\
  \\ 1 \leq i\leq m \quad 1\leq j\leq n
 \end{gather}
 $$
-L'operazione può essere eseguite se e solo se 
 ### Esempio Pratico
 $$
 A = \begin{pmatrix}
