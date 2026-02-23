@@ -227,3 +227,13 @@ Il **determinante** viene calcolato attraverso una <mark style="background: #ADC
 - **Caso Ricorsivo**
   Per una matrice di qualsiasi dimensione 
   $$\det(A)=\sum^n_{k=1}(-1)^{k+1}a_{1k}\det(A_{1k})$$
+### Esempi di calcolo
+1. $$
+   \begin{gather}
+A = \begin{pmatrix}
+5 & 4 \\
+-1 & 3
+\end{pmatrix} \\
+\det
+   \end{gather}
+   $$
