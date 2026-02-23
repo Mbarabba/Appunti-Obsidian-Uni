@@ -122,6 +122,7 @@ $$
 Inoltre, <mark style="background: #ADCCFFA6;">data una generica matrice $A$</mark>
 $$AI=IA=A$$
 ## Matrice Inversa $A^{-1}$
+### Qu
 
 ---
 # Operazioni fra matrici
