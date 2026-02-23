@@ -51,14 +51,12 @@
             "id": "60c0abdb7c5609da",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
+                "file": "Primo Anno/GAL/Libro.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Untitled"
+              "icon": "lucide-file-text",
+              "title": "Libro"
             }
           }
         ],
@@ -226,8 +224,8 @@
   },
   "active": "60c0abdb7c5609da",
   "lastOpenFiles": [
-    "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-08-25.pdf",
     "Untitled.md",
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-08-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-06-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-29-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-13-25.pdf",
