@@ -72,7 +72,9 @@ A = \begin{pmatrix}
 A^t = \begin{pmatrix}
 1  &  \pi  & 3  \\
 0 & 1 & -4 \\
-
+3 & -4 & -2
 \end{pmatrix}
 \end{gather}
 $$
+## Matrice Simmetrica
+Una [[#Matrice Quadrata|matrice quadrata]] di ordine $n$ è detta **simmetrica** se $A=A^t$, ovvero se la sua generica riga $i$-esima è uguale alla sua colonna $i$-esima
