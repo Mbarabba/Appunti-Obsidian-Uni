@@ -37,8 +37,28 @@ $$
 0 & 0 & -2
 \end{pmatrix}
 $$
-Gli elementi della diagonale sono : 
+<mark style="background: #BBFABBA6;">Gli elementi della diagonale sono</mark> : 
 $$\large a_{11} = 3 \quad a_{22}=4 \quad a_{33}=-2$$
-mentre il resto degli elementi sono pari a 0
+mentre il <mark style="background: #BBFABBA6;">resto degli elementi sono pari a 0</mark>
 ## Matrici Uguali
-Due matrici $A,B$ sono uguali se hanno le stesse dimensioni
+Due matrici $A,B$ sono **uguali** se <mark style="background: #ADCCFFA6;">hanno le stesse dimensioni</mark> e se <mark style="background: #ADCCFFA6;">$a_{ij}=b_{ij}$ per ogni $i,j$</mark>
+
+Le matrici
+$$
+A = \begin{pmatrix}
+1 & 0 & -2 \\ \pi & 1 & 3 \\ 3 & -4 & -2
+\end{pmatrix} \quad
+B = \begin{pmatrix}
+1 & 0 & -2 \\ \pi & 1 & 3 \\ 3 & -4 & -2
+\end{pmatrix}
+$$
+<mark style="background: #BBFABBA6;">sono uguali</mark>
+## Matrice Nulla
+Una matrice <mark style="background: #ADCCFFA6;">i cui elementi sono nulli</mark> è detta matrice **nulla**
+$$
+A = \begin{pmatrix}
+0 & 0 & 0  \\
+\vdots & \vdots & \vdots \\
+0 & 0 & 0
+\end{pmatrix}
+$$
