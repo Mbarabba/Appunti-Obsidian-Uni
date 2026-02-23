@@ -244,9 +244,6 @@ A = \begin{pmatrix}
 1 & 5 & -1 \\
 -2 & 3 & 6
 \end{pmatrix} \\ \\
-\det(A) =((-1)^2\cdot3 \cdot \begin{pmatrix}
-5 & -1 \\
-3 & 6
-\end{pmatrix})
+\det(A) = 
 \end{gather}
    $$
