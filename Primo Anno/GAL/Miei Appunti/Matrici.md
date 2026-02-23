@@ -126,4 +126,23 @@ B = \begin{pmatrix}
 6 & 7 & -2
 \end{pmatrix}
 $$
-Definiamo **somma** e la indichiamo con **$A+B$**, la matrice ottenuta so
+Definiamo **somma** e la indichiamo con **$A+B$**, la <mark style="background: #ADCCFFA6;">matrice ottenuta sommando ciascun elemento di $A$ col corrispondente elemento di $B$</mark>
+$$
+A+B = \begin{pmatrix}
+2 & 6 & 4 \\
+8 & 12 & -2
+\end{pmatrix}
+$$
+In generale
+$$
+\begin{gather}
+A+B=C  \\ \\
+
+\large C=(c_{ij})=(a_{ij}+b_{ij})
+\end{gather}
+$$
+## Prodotto per uno Scalare
+Data
+$$A=\begin{pmatrix}
+
+\end{pmatrix}$$
