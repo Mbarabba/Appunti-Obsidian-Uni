@@ -94,7 +94,36 @@ A^t=\begin{pmatrix}
 \end{gather}
 $$
 ## Matrice Riga
-Una matrice $A$ di ordine $1 \times n$, cioè una matrice del tipo 
+Una <mark style="background: #ADCCFFA6;">matrice $A$ di ordine $1 \times n$</mark>, cioè una matrice del tipo 
 $$A = \begin{pmatrix}
-a_{1}
+a_{11}  & a_{12}  & \dots  & a_{1n}
 \end{pmatrix}$$
+è detta **matrice riga**
+## Matrice Colonna
+Una <mark style="background: #ADCCFFA6;">matrice $A$ di ordine $n \times 1$</mark>, cioè una matrice del tipo 
+$$
+A = \begin{pmatrix}
+a_{11}  \\
+a_{12} \\
+\vdots \\
+a_{n_{1}}
+\end{pmatrix}
+$$
+è detta **matrice colonna**
+
+---
+# Operazioni fra matrici
+## Somma
+Date le matrici 
+$$
+A = \begin{pmatrix}
+3 & 4 & 1 \\
+2 & 5 & 0
+\end{pmatrix}
+\quad
+B = \begin{pmatrix}
+-1 & 2 & 3 \\
+6 & 7 & -2
+\end{pmatrix}
+$$
+Definiamo **somma** e la indichiamo con **$A+B$**, la matrice ottenuta so
