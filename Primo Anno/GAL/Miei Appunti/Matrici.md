@@ -144,5 +144,14 @@ $$
 ## Prodotto per uno Scalare
 Data
 $$A=\begin{pmatrix}
-
+-2 & 3 & 1 \\
+4 & 5 & 6 \\
+-3 & 1 & -4
 \end{pmatrix}$$
+e sia $k=2$, abbiamo che 
+$$kA=2A=\begin{pmatrix}
+-4 & 6 & 2 \\
+8 & 10 & 12 \\
+-6 & 2 & -8
+\end{pmatrix}$$
+questa operazione viene definita come **prodotto per uno scalare**
