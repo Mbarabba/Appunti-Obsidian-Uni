@@ -214,3 +214,5 @@ AB=\begin{pmatrix}
 $$
 ---
 # Determinante
+## Definizione
+Il **determinante** di una matrice $A$ è un numero, <mark style="background: #ADCCFFA6;">indicato come $\det(A)$</mark> (oppure come $|A|$) 
