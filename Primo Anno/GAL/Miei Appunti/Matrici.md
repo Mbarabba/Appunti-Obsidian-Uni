@@ -62,3 +62,17 @@ A = \begin{pmatrix}
 0 & 0 & 0
 \end{pmatrix}
 $$
+## Matrice Trasposta
+Data una matrice $A$, chiamiamo **trasposta** di $A$, e la <mark style="background: #BBFABBA6;">indichiamo con **$A^t$**</mark> la matrice le cui <mark style="background: #ADCCFFA6;">colonne sono ordinatamente le righe di $A$</mark>
+$$
+\begin{gather} 
+A = \begin{pmatrix}
+1 & 0 & -2 \\ \pi & 1 & 3 \\ 3 & -4 & -2
+\end{pmatrix}  \\ \\ 
+A^t = \begin{pmatrix}
+1  &  \pi  & 3  \\
+0 & 1 & -4 \\
+
+\end{pmatrix}
+\end{gather}
+$$
