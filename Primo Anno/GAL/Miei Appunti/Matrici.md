@@ -233,7 +233,20 @@ Il **determinante** viene calcolato attraverso una <mark style="background: #ADC
 A = \begin{pmatrix}
 5 & 4 \\
 -1 & 3
-\end{pmatrix} \\
-\det
-   \end{gather}
+\end{pmatrix} \\ \\
+\det(A)=a_{11}a_{22}-a_{12}a_{21} = (5\cdot3)-(4 \cdot -1)=15-(-4)=15+4=19 \\ \\
+\det(A)=19\end{gather}
+   $$
+2. 
+   $$
+\begin{gather}   A = \begin{pmatrix}
+3 & 4 & 2 \\
+1 & 5 & -1 \\
+-2 & 3 & 6
+\end{pmatrix} \\ \\
+\det(A) =((-1)^2\cdot3 \cdot \begin{pmatrix}
+5 & -1 \\
+3 & 6
+\end{pmatrix})
+\end{gather}
    $$
