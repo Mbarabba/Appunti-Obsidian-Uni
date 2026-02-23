@@ -26,13 +26,16 @@ $$
 \end{pmatrix}
 $$
 ## Matrice Diagonale
-Data la [[#Tipi di Matrice#Matrice Quadrata|matrice quadrata]] di ordine 3
+Data una [[#Tipi di Matrice#Matrice Quadrata|matrice quadrata]] essa si definisce **matrice diagonale** se :
+$$a_{ij}=0, \text{ per } i\not= j \quad \text{(gli elementi non appartenenti alla diagonale sono nulli)}$$
+
+Data la [[#Matrice Quadrata|matrice quadrata]]
 $$
 \begin{pmatrix}
-1 & 0 &2 \\
--6 & 4 & 5 \\
-3 & -4&-2
+3 & 0 & 0 \\
+0 & 4 & 0 \\
+0 & 0 & -2
 \end{pmatrix}
 $$
-gli elementi della diagonale sono :
-$$\large a_{11} = 1 \quad a_{22}=4 \quad a_{33}$$
+Gli elementi della diagonale sono : 
+$$\large a_{11} = 3 \quad a_{22}=4 \quad a_{33}=-2$$
