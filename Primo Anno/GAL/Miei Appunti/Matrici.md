@@ -111,7 +111,17 @@ a_{n_{1}}
 $$
 è detta **matrice colonna**
 ## Matrice Unità $I$
-Data una [[#Matrice Quadrata|matrice quadrata]], la **matrice diagonale $I$** è caratterizzata dal fatto che gli elem
+Data una [[#Matrice Quadrata|matrice quadrata]], la **matrice diagonale $I$** è caratterizzata dal fatto che gli elementi sulla diagonale sono pari a $1$, mentre il resto è pari a $0$
+$$
+I = \begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+Inoltre, <mark style="background: #ADCCFFA6;">data una generica matrice $A$</mark>
+$$AI=IA=A$$
+## Matrice Inversa $A^{-1}$
 
 ---
 # Operazioni fra matrici
