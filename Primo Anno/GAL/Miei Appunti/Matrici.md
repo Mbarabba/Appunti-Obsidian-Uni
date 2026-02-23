@@ -227,7 +227,7 @@ Il **determinante** viene calcolato attraverso una <mark style="background: #ADC
 - **Caso Ricorsivo**
   Per una matrice di qualsiasi dimensione 
   $$\det(A)=\sum^n_{k=1}(-1)^{k+1}a_{1k}\det(A_{1k})$$
-	- **$A_{1k}$** è la matrice che si ottiene rimuovendo
+	- **$A_{1k}$** è la matrice che si ottiene rimuovendo la <mark style="background: #BBFABBA6;">prima riga e la $k$-esima colonna</mark>
 ### Esempi di calcolo
 1. $$
    \begin{gather}
@@ -250,3 +250,5 @@ A = \begin{pmatrix}
 \end{aligned}
 \end{gather}
    $$
+## Proprietà 
+### $\det(A)=\det(A^t)$
