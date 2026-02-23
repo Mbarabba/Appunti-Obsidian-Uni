@@ -25,14 +25,12 @@
             "id": "d74c7299c4b66068",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Primo Anno/GAL/Miei Appunti/Matrici.md",
-                "mode": "source",
-                "source": false
+                "file": "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-10-25.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Matrici"
+              "icon": "lucide-file-text",
+              "title": "Lezione 04-10-25"
             }
           }
         ],
@@ -200,6 +198,11 @@
   },
   "active": "d74c7299c4b66068",
   "lastOpenFiles": [
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-01-25.pdf",
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-20-25.pdf",
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-13-25.pdf",
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-29-25.pdf",
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-03-25.pdf",
     "Primo Anno/GAL/Miei Appunti/Matrici.md",
     "Primo Anno/GAL/Libro.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-11-25.pdf",
@@ -213,12 +216,8 @@
     "Untitled.md",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-08-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-06-25.pdf",
-    "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-29-25.pdf",
-    "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-13-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-29-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-27-25.pdf",
-    "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-22-25.pdf",
-    "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-20-25.pdf",
     "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Pumping Lemma.md",
     "Secondo Anno/Primo Semestre/RSO/SO/Scheduling dei processi/Dispatcher.md",
     "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Thread.md",
