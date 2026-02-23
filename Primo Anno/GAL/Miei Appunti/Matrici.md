@@ -227,6 +227,7 @@ Il **determinante** viene calcolato attraverso una <mark style="background: #ADC
 - **Caso Ricorsivo**
   Per una matrice di qualsiasi dimensione 
   $$\det(A)=\sum^n_{k=1}(-1)^{k+1}a_{1k}\det(A_{1k})$$
+	- **$A_{1k}$** è la matrice che si ottiene rimuovendo
 ### Esempi di calcolo
 1. $$
    \begin{gather}
@@ -244,6 +245,8 @@ A = \begin{pmatrix}
 1 & 5 & -1 \\
 -2 & 3 & 6
 \end{pmatrix} \\ \\
-\det(A) = 
+\begin{aligned}
+\det(A) &= \begin{vmatrix} 3 & 4 & 2 \\ 1 & 5 & -1 \\ -2 & 3 & 6 \end{vmatrix} \\ &= 3 \cdot \begin{vmatrix} 5 & -1 \\ 3 & 6 \end{vmatrix} - 4 \cdot \begin{vmatrix} 1 & -1 \\ -2 & 6 \end{vmatrix} + 2 \cdot \begin{vmatrix} 1 & 5 \\ -2 & 3 \end{vmatrix} \\ &= 3 \cdot (30 - (-3)) - 4 \cdot (6 - 2) + 2 \cdot (3 - (-10)) \\ &= 3 \cdot (33) - 4 \cdot (4) + 2 \cdot (13) \\ &= 99 - 16 + 26 \\ &= 109
+\end{aligned}
 \end{gather}
    $$
