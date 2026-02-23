@@ -155,3 +155,7 @@ $$kA=2A=\begin{pmatrix}
 -6 & 2 & -8
 \end{pmatrix}$$
 questa operazione viene definita come **prodotto per uno scalare**
+## Prodotto fra Matrici
+- Sia **$A=(a_{ik})$** una <mark style="background: #ADCCFFA6;">matrice di ordine $m \times p$</mark>
+- Sia $B=(b_{kj})$ una <mark style="background: #ADCCFFA6;">matrice di ordine $p \times n$</mark>
+Defini
