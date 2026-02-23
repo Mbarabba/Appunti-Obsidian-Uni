@@ -122,7 +122,11 @@ $$
 Inoltre, <mark style="background: #ADCCFFA6;">data una generica matrice $A$</mark>
 $$AI=IA=A$$
 ## Matrice Inversa $A^{-1}$
-### Qu
+### Quando una matrice è invertibile?
+Una [[#Matrice Quadrata|matrice quadrata]] viene definita **invertibile** se esiste $A^{-1}$ tale che
+$$AA^{-1}=A^{-1}A=I$$
+dove <mark style="background: #ADCCFFA6;">$I$ è la [[#Matrice Unità $I$|matrice unità]]</mark>
+### Come invertire una matrice
 
 ---
 # Operazioni fra matrici
