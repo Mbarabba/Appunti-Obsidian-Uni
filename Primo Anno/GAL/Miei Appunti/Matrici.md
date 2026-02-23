@@ -252,3 +252,6 @@ A = \begin{pmatrix}
    $$
 ## Proprietà 
 ### $\det(A)=\det(A^t)$
+  Questa proprietà afferma che<mark style="background: #ADCCFFA6;"> possiamo sviluppare il determinante di una matrice secondo le colonne invece che secondo le righe</mark>
+### Righe/colonne nulle
+Se una matrice $A$ ha una <mark style="background: #ADCCFFA6;">colonna / riga nulla, allora $\det(A)=0$</mark>
