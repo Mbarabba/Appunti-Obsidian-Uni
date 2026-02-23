@@ -215,7 +215,7 @@ $$
 ---
 # Determinante
 ## Definizione
-Il **determinante** di una [[#Matrice Quadrata|matrice quadrata]] $A$ è un numero, <mark style="background: #ADCCFFA6;">indicato come $\det(A)$</mark> (oppure come $|A|$) 
+Il **determinante** di una [[#Matrice Quadrata|matrice quadrata]] $A$, è un numero, <mark style="background: #ADCCFFA6;">indicato come $\det(A)$</mark> (oppure come $|A|$) 
 ## Come calcolarlo?
 Il **determinante** viene calcolato attraverso una <mark style="background: #ADCCFFA6;">funzione ricorsiva</mark>
 
@@ -226,3 +226,4 @@ Il **determinante** viene calcolato attraverso una <mark style="background: #ADC
 	   $$\det(A)=a_{11}a_{22}-a_{21}a_{12}$$
 - **Caso Ricorsivo**
   Per una matrice di qualsiasi dimensione 
+  $$\det(A)=\sum^n_{k=1}(-1)^{k+1}a_{1k}\det(A_{1k})$$
