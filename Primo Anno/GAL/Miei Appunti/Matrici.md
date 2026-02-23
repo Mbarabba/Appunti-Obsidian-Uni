@@ -11,3 +11,6 @@ a_{m1} & \dots & \dots & a_{mn}
 $$
 ---
 # Notazione
+- **$A_{i}$** la <mark style="background: #ADCCFFA6;">$i$-esima riga</mark>
+- **$A_{j}$** la <mark style="background: #ADCCFFA6;">$j$-esima colonna</mark>
+- **$a_{ij}$** il numero reale alla <mark style="background: #ADCCFFA6;">$i$-esima riga della $j$-esima colonna</mark>
