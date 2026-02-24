@@ -126,6 +126,8 @@ $$AI=IA=A$$
 Una [[#Matrice Quadrata|matrice quadrata]] viene definita **invertibile** se esiste $A^{-1}$ tale che
 $$AA^{-1}=A^{-1}A=I$$
 dove <mark style="background: #ADCCFFA6;">$I$ è la [[#Matrice Unità $I$|matrice unità]]</mark>
+
+Inoltre, una matrice è **invertibile** se <mark style="background: #BBFABBA6;">$\det(A)\not=0\to \det (A^{-1})=\frac{1}{\det(A)}$</mark>
 ### Come invertire una matrice
 
 ---
