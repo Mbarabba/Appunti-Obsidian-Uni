@@ -69,7 +69,7 @@ $$
 # Teorema di Rouché Capelli : Risolubilità e numero di soluzioni
 Sia dato un **sistema lineare** <mark style="background: #ADCCFFA6;">trasposto a [[Matrici#Matrice ridotta a Scala|matrice ridotta a scala]] $AX=B$</mark> si ha che
 1. Se **$r(A)\not=r(A|b)$** il sistema <mark style="background: #ADCCFFA6;">non è risolubile</mark>
-2. Se **$r(A)=r(A|b)=b$** esiste un <mark style="background: #ADCCFFA6;">unica soluzione</mark>
+2. Se **$r(A)=r(A|b)=n$** esiste un <mark style="background: #ADCCFFA6;">unica soluzione</mark>
 3. Se **$r(A)=r(A|b)=r<n$** esistono <mark style="background: #ADCCFFA6;">infinite soluzioni</mark> dipedenti da <mark style="background: #BBFABBA6;">**$n-r$** parametri</mark>
 ---
 # Come risolvere un Sistema Lineare
