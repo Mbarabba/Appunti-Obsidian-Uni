@@ -259,3 +259,7 @@ A = \begin{pmatrix}
 Se una matrice $A$ ha una <mark style="background: #ADCCFFA6;">colonna / riga nulla, allora $\det(A)=0$</mark>
 ### Somma di righe/colonne
 Se a una colonna/riga $i$ di una [[#Matrice Quadrata|matrice quadrata]] $A$ si <mark style="background: #ADCCFFA6;">somma un altra riga/colonna $j$ tale che $i\not=j$ moltiplicata per $k\in \mathbb{R}$, il determinante non cambia</mark>
+### [[#Matrice Diagonale]]
+Sia $A$ una matrice diagonale di ordine $n$, allora <mark style="background: #ADCCFFA6;">$\det(A)=a_{11}\cdot a_{22}\cdot\dots \cdot a_{nn}$</mark>
+### Prodotto di 2 [[#Matrice Quadrata|matrici quadrate]]
+Siano $A$ e $B$ $2$ matrici quadrate, allora <mark style="background: #ADCCFFA6;">$\det(A\cdot B)=\det(A)\cdot \det(B)$</mark>
