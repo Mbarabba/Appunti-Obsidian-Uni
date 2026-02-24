@@ -71,3 +71,6 @@ Sia dato un **sistema lineare** <mark style="background: #ADCCFFA6;">trasposto a
 1. Se **$r(A)\not=r(A|b)$** il sistema <mark style="background: #ADCCFFA6;">non è risolubile</mark>
 2. Se **$r(A)=r(A|b)=b$** esiste un <mark style="background: #ADCCFFA6;">unica soluzione</mark>
 3. Se **$r(A)=r(A|b)=r<n$** esistono <mark style="background: #ADCCFFA6;">infinite soluzioni</mark> dipedenti da <mark style="background: #BBFABBA6;">**$n-r$** parametri</mark>
+---
+# Come risolvere un Sistema Lineare
+Un **sistema lineare** ha una ed una sola soluzione se e solo se il determinante della matrice incomple
