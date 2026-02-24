@@ -73,15 +73,14 @@ Sia dato un **sistema lineare** <mark style="background: #ADCCFFA6;">trasposto a
 3. Se **$r(A)=r(A|b)=r<n$** esistono <mark style="background: #ADCCFFA6;">infinite soluzioni</mark> dipedenti da <mark style="background: #BBFABBA6;">**$n-r$** parametri</mark>
 ---
 # Come risolvere un Sistema Lineare
-## Sistema Generico
-### Regola di Cramer (Termini $k$ e sistemi quadrati)
+## Regola di Cramer (sistemi quadrati)
 Un **sistema lineare quadrato ($m=n$)** ha una ed una sola soluzione se e solo se $\det(A)\not=0$
 
-Se ciò è vero, la componente $i$-esima dell'unica soluzione $(k_{1},k_{2},\dots,k_{n})$ di tale sistema è data da
+Se ciò è vero, la componente $i$-esima dell'unica soluzione $(x_{1},x_{2},\dots,x_{n})$ di tale sistema è data da
 $$
-k_{i}=\frac{\det(A^1,A^2,\dots,A^{i-1},B,A^{i+1},\dots,A^n)}{\det(A^1,A^2,\dots,A^{i-1},A^i,A^{i+1},\dots,A^n)}
+x_{i}=\frac{\det(A^1,A^2,\dots,A^{i-1},B,A^{i+1},\dots,A^n)}{\det(A^1,A^2,\dots,A^{i-1},A^i,A^{i+1},\dots,A^n)}
 $$
-### Metodo di Gauss (generico sistema)
+## Metodo di Gauss (generico sistema)
 La risoluzione di un **sistema lineare** si divide in 4 step
 1. Trasforma il sistema in matrice completa $AX=B$
 2. Riduci la matrice a scala
