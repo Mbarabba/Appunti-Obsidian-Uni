@@ -93,3 +93,4 @@ Un **sistema lineare omogeneo** <mark style="background: #ADCCFFA6;">ha soluzion
 # Inversa di una [[Matrici#Matrice Inversa $A {-1}$|matrice]]
 Sia $A$ una [[Matrici#Matrice Quadrata|matrice quadrata]] di ordine $n$, se $\det(A)\not=0$, allora esiste $A^{-1}=(x_{ij})$
 $$x_{ij}=\frac{(-1)^{i+j} \det(A_{ji})}{\det(A)}$$
+- **$A_{ji}$** è la matrice ottenuta<mark style="background: #ADCCFFA6;"> rimuovendo la $j$-esima riga e $i$-esima colonna</mark>
