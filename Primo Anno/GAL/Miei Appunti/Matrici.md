@@ -138,7 +138,12 @@ A = \begin{pmatrix}
 0 & 0 & -1
 \end{pmatrix}
 $$
-
+### Numero di pivot
+Si definisce come **pivot** il <mark style="background: #ADCCFFA6;">primo termine non nullo da sinistra di una riga
+</mark>
+### Rango per righe
+Si definisce **rango per righe** il numero di [[#Numero di pivot|pivot]], e lo si denota con $r(A)$
+### [[Riduzione a scala di una matrice]]
 
 ---
 # Operazioni fra matrici
