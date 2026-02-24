@@ -143,7 +143,10 @@ Si definisce come **pivot** il <mark style="background: #ADCCFFA6;">primo termin
 </mark>
 ### Rango per righe
 Si definisce **rango per righe** il numero di [[#Numero di pivot|pivot]], e lo si denota con $r(A)$
-### [[Riduzione a scala di una matrice]]
+### Operazioni concesse per ridurre a scala
+1. Scambio di righe/colonne
+2. Moltiplicare una riga/colonna per $k\in \mathbb{R}$ diverso da $0$
+3. Sommare ad una riga/colonna un'altra riga/colonna moltiplicata per $k \in \mathbb{R}$
 
 ---
 # Operazioni fra matrici
