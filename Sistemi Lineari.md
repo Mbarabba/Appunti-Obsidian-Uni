@@ -60,7 +60,8 @@ $$
 x_{1}+3x_{2}-4x_{3}=1 \\
 -x_{1}+5x_{2}+6x_{3}=0
 \end{cases} \to
-A = \left(\begin{array}{ccc|c}
-
-\end{array}{ccc|c})
+A = \left(\begin{array}{ccc|c} 2 & -1 & 1 & 4 \\
+1 & 3 & -4 & 1 \\
+-1 & 5 & 6 & 0
+\end{array}\right)
 $$
