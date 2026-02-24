@@ -81,7 +81,7 @@ Se ciò è vero, la componente $i$-esima dell'unica soluzione $(k_{1},k_{2},\dot
 $$
 k_{i}=\frac{\det(A^1,A^2,\dots,A^{i-1},B,A^{i+1},\dots,A^n)}{\det(A^1,A^2,\dots,A^{i-1},A^i,A^{i+1},\dots,A^n)}
 $$
-### Metodo di Gauss
+### Metodo di Gauss (generico sistema)
 La risoluzione di un **sistema lineare** si divide in 4 step
 1. Trasforma il sistema in matrice completa $AX=B$
 2. Riduci la matrice a scala
