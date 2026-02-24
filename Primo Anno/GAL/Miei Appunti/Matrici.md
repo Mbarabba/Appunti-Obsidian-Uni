@@ -215,6 +215,8 @@ AB=\begin{pmatrix}
 \end{pmatrix}
 $$
 ---
+# Caratteristica e rango di una matrice
+---
 # Determinante
 ## Definizione
 Il **determinante** di una [[#Matrice Quadrata|matrice quadrata]] $A$, è un numero, <mark style="background: #ADCCFFA6;">indicato come $\det(A)$</mark> (oppure come $|A|$) 
@@ -290,3 +292,6 @@ Sia $A$ una [[#Matrice Quadrata|matrice quadrata]] di ordine $n$, allora <mark s
 
 ## Definizione di combinazione lineare
 Si dice che una riga (o colonna) $A_{i}$ della matrice $A$ sia una **combinazione lineare** delle altre righe se <mark style="background: #ADCCFFA6;">esistono $a_{1},a_{2},\dots,a_{i-1},a_{i+1},\dots,a_{n}\in \mathbb{R}$ tali che $A_{i}=a_{1}A_{1}+\dots+a_{i-1}A_{i-1}+a_{i+1}A_{i+1}+\dots+a_{n}A_{m}$</mark>
+### Appunto sulle matrici
+Sia $A$ una matrice $m \times n$ allora le righe di $A$ sono <mark style="background: #ADCCFFA6;">[[#Definizione dipendenza lineare|linearmente dipendenti]] se e solo se almeno una riga di $A$ è [[#Definizione di combinazione lineare|combinazione lineare]] 
+</mark>
