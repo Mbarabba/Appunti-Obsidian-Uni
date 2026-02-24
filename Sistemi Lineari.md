@@ -6,10 +6,13 @@ $$a_{1}x_{1}+a_{2}x_{2}+\dots+a_{n}x_{n}=b$$
 - **$b_{i}$** viene chiamato <mark style="background: #ADCCFFA6;">termine noto</mark>
 ---
 # Definizione Sistema Lineare
-Consideriamo ora $m$ equazioni lineari in $n$ incognite, cioè
+Consideriamo ora <mark style="background: #BBFABBA6;">$m$ equazioni lineari in $n$ incognite</mark>, cioè
 $$
 \begin{cases}
-a_{11}x_{1}+a_{12}+\dots+a_{1n}x_{n}=b_{1} \\
-a_{21}x_{1}+a_{22}+\dots+a_{2n}x_{n}=b_{2}
+a_{11}x_{1}+a_{12}x_{2}+\dots+a_{1n}x_{n}=b_{1} \\
+a_{21}x_{1}+a_{22}x_{2}+\dots+a_{2n}x_{n}=b_{2} \\
+\vdots  \\
+a_{m1}x_{1}+a_{m 2}x_{2}+\dots+a_{mn}x_{n}=b_{m}
 \end{cases}
 $$
+Siamo davanti ad un **sistema lineare** di <mark style="background: #ADCCFFA6;">$m$ equazioni ed $n$ incognite</mark>
