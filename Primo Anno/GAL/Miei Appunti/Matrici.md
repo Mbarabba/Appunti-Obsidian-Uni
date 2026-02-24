@@ -215,7 +215,8 @@ AB=\begin{pmatrix}
 \end{pmatrix}
 $$
 ---
-# Caratteristica e rango di una matrice
+# Rango di una matrice 
+
 ---
 # Determinante
 ## Definizione

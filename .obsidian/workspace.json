@@ -25,12 +25,14 @@
             "id": "d74c7299c4b66068",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-11-25.pdf"
+                "file": "Primo Anno/GAL/Miei Appunti/Matrici.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Lezione 03-11-25"
+              "icon": "lucide-file",
+              "title": "Matrici"
             }
           }
         ],
@@ -91,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5
+    "width": 255.5,
+    "collapsed": true
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -198,6 +201,7 @@
   },
   "active": "d74c7299c4b66068",
   "lastOpenFiles": [
+    "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-11-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-04-25.pdf",
     "Primo Anno/GAL/Miei Appunti/Matrici.md",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-10-25.pdf",
@@ -208,7 +212,6 @@
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-13-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-29-25.pdf",
     "Primo Anno/GAL/Libro.pdf",
-    "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-11-25.pdf",
     "Primo Anno/GAL/Miei Appunti/Combinazioni Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
