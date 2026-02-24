@@ -129,6 +129,16 @@ dove <mark style="background: #ADCCFFA6;">$I$ è la [[#Matrice Unità $I$|matric
 
 Inoltre, una matrice è **invertibile** se <mark style="background: #BBFABBA6;">$\det(A)\not=0\to \det (A^{-1})=\frac{1}{\det(A)}$</mark>
 ### Come invertire una matrice
+## Matrice ridotta a Scala
+Una matrice $A$ si dice **ridotta a scala** se<mark style="background: #ABF7F7A6;"> il numero degli zeri, che precede il primo elemento  diverso da zero di ogni riga aumenta procedendo dalla prima riga verso l'ultima</mark>
+$$
+A = \begin{pmatrix}
+2 & 1 & 3 \\
+0 & 4 & 2 \\
+0 & 0 & -1
+\end{pmatrix}
+$$
+
 
 ---
 # Operazioni fra matrici
@@ -214,9 +224,6 @@ AB=\begin{pmatrix}
 23 & 12 & -22
 \end{pmatrix}
 $$
----
-# Rango di una matrice 
-
 ---
 # Determinante
 ## Definizione
