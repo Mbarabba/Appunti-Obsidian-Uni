@@ -73,6 +73,8 @@ Sia dato un **sistema lineare** <mark style="background: #ADCCFFA6;">trasposto a
 3. Se **$r(A)=r(A|b)=r<n$** esistono <mark style="background: #ADCCFFA6;">infinite soluzioni</mark> dipedenti da <mark style="background: #BBFABBA6;">**$n-r$** parametri</mark>
 ---
 # Come risolvere un Sistema Lineare
+## Sistema Generico
+### Regola di Cramer ()
 Un **sistema lineare** ha una ed una sola soluzione se e solo se $\det(A)\not=0$
 
 Se ciò è vero, la componente $i$-esima dell'unica soluzione $(k_{1},k_{2},\dots,k_{n})$ di tale sistema è data da
