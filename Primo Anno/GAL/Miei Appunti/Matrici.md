@@ -263,3 +263,8 @@ Se a una colonna/riga $i$ di una [[#Matrice Quadrata|matrice quadrata]] $A$ si <
 Sia $A$ una matrice diagonale di ordine $n$, allora <mark style="background: #ADCCFFA6;">$\det(A)=a_{11}\cdot a_{22}\cdot\dots \cdot a_{nn}$</mark>
 ### Prodotto di 2 [[#Matrice Quadrata|matrici quadrate]]
 Siano $A$ e $B$ $2$ matrici quadrate, allora <mark style="background: #ADCCFFA6;">$\det(A\cdot B)=\det(A)\cdot \det(B)$</mark>
+
+### Moltiplicazione di righe/colonne
+**Moltiplicando** una riga/colonna di $A$ per $k\in \mathbb{R}$ si avrà che <mark style="background: #ADCCFFA6;">$\det(A^1,A^2,\dots,k\cdot A^i,\dots,A^n)=k\cdot \det(A)$</mark>
+### Scambio di colonne
+<mark style="background: #ADCCFFA6;">Scambiando due colonne</mark> di una matrice $A$, il suo <mark style="background: #ADCCFFA6;">determinante cambia segno</mark>
