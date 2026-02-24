@@ -29,3 +29,28 @@ L'insieme di tutte le soluzioni particolari è detto **soluzione generale**
 
 ---
 # Trasformare un Sistema lineare in [[Matrici|Matrice]]
+Dato un qualsiasi **sistema lineare** <mark style="background: #ADCCFFA6;">possiamo trasformalo nella matrice **$AX=B$</mark>**
+$$
+\begin{gather}
+A \text{ (Matrice incompleta) } = \begin{pmatrix}
+a_{11}  & a_{12}  & \dots & a_{1n} \\
+a_{21} & a_{22} & \dots & a_{2n} \\
+\dots & \dots & \dots & \dots \\
+a_{m 1} & a_{m 2} & \dots  & a_{mn}
+\end{pmatrix} \\
+X \text{ (Matrice colonna delle incognite) } = \begin{pmatrix}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{n}
+\end{pmatrix} \\
+B = \begin{pmatrix}
+b1 \\
+b_{2} \\
+\vdots \\
+b_{m}
+\end{pmatrix} \\
+ \\
+AX
+\end{gather}
+$$
