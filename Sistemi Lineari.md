@@ -16,3 +16,10 @@ a_{m1}x_{1}+a_{m 2}x_{2}+\dots+a_{mn}x_{n}=b_{m}
 \end{cases}
 $$
 Siamo davanti ad un **sistema lineare** di <mark style="background: #ADCCFFA6;">$m$ equazioni ed $n$ incognite</mark>
+
+---
+# Definizione Soluzione di un Sistema Lineare
+Una $n$-pla ordinata di reali è detta **soluzione** del sistema lineare se essa <mark style="background: #ADCCFFA6;">soddisfa tutte le $m$ equazioni del sistema</mark>
+## Soluzione Particolare
+Ciascuna soluzione del sistema è detta anche **soluzione particolare**
+## 
