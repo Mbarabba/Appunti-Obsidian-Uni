@@ -281,4 +281,8 @@ a_{21} & a_{22} & \dots & a_{2n} \\
 a_{m1}  & \dots & \dots  & a_{mn}
 \end{pmatrix}
 $$
-Le righe $A_{1},A_{2},\dots,A_{m}$ della matrice $A$ si dicono **linearmente dipendenti** se <mark style="background: #ADCCFFA6;">esistono $k_{1},k_{2},\dots,k_{m}\in \mathbb{R}$ tali che $k_{1}A_{1}+k_{2}A_{2}+\dots+k_{m}A_{m}=0$</mark>
+Le righe $A_{1},A_{2},\dots,A_{m}$ della matrice $A$ si dicono **linearmente dipendenti** se <mark style="background: #ADCCFFA6;">esistono $k_{1},k_{2},\dots,k_{m}\in \mathbb{R}$ **non tutti nulli**, tali che $k_{1}A_{1}+k_{2}A_{2}+\dots+k_{m}A_{m}=0$</mark>
+
+>[!tip]
+## Collegamento con il [[#Determinante|determinante]] di una matrice
+Sia $A$ una [[#Matrice Quadrata|matrice quadrata]] di ordine $n$, allora <mark style="background: #ADCCFFA6;">$\det(A)=0$ se e solo se le righe di $A$ sono [[#Combinazioni Lineari|linearmente dipendenti]]</mark>
