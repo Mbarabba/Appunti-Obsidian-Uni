@@ -87,7 +87,8 @@ La risoluzione di un **sistema lineare** si divide in 4 step
 3. Ritorna al sistema
 4. Risolvi il sistema per sostituzione
 ## Sistema Omogeneo
-Un **sistema lineare omogeneo** <mark style="background: #ADCCFFA6;">ha soluzioni aggiuntive alla soluzione nulla se e solo se $r(A)<n$</mark>
+Un **sistema lineare omogeneo** <mark style="background: #ADCCFFA6;">ha soluzioni aggiuntive alla soluzione nulla se e solo se </mark>**$r(A)<n$**
 
 ---
 # Inversa di una [[Matrici#Matrice Inversa $A {-1}$|matrice]]
+Sia $A$ u
