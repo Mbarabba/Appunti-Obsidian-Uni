@@ -26,3 +26,6 @@ Una $n$-pla ordinata di reali è detta **soluzione** del sistema lineare se essa
 Ciascuna soluzione del sistema è detta anche **soluzione particolare**
 ### Soluzione Generale
 L'insieme di tutte le soluzioni particolari è detto **soluzione generale**
+
+---
+# Trasformare un Sistema lineare in [[Matrici|Matrice]]
