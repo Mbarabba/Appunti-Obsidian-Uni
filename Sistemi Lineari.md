@@ -65,3 +65,6 @@ A = \left(\begin{array}{ccc|c} 2 & -1 & 1 & 4 \\
 -1 & 5 & 6 & 0
 \end{array}\right)
 $$
+---
+# Teorema di Rouché Capelli
+Sia dato un **sistema lineare** trasposto a matrice $AX=B$
