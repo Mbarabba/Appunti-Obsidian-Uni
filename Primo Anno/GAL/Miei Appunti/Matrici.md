@@ -268,3 +268,17 @@ Siano $A$ e $B$ $2$ matrici quadrate, allora <mark style="background: #ADCCFFA6;
 **Moltiplicando** una riga/colonna di $A$ per $k\in \mathbb{R}$ si avrà che <mark style="background: #ADCCFFA6;">$\det(A^1,A^2,\dots,k\cdot A^i,\dots,A^n)=k\cdot \det(A)$</mark>
 ### Scambio di colonne
 <mark style="background: #ADCCFFA6;">Scambiando due colonne</mark> di una matrice $A$, il suo <mark style="background: #ADCCFFA6;">determinante cambia segno</mark>
+
+---
+# Combinazioni Lineari
+## Definizione
+Sia data una matrice $A$ di ordine $m \times n$
+$$
+A = \begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1n} \\
+a_{21} & a_{22} & \dots & a_{2n} \\
+\vdots & \vdots &\vdots & \vdots \\
+a_{m1}  & \dots & \dots  & a_{mn}
+\end{pmatrix}
+$$
+Le righe $A_{1},A_{2},\dots,A_{m}$ della matrice $A$ si dicono **linearmente dipendenti** se <mark style="background: #ADCCFFA6;">esistono $k_{1},k_{2},\dots,k_{m}\in \mathbb{R}$ tali che $k_{1}A_{1}+k_{2}A_{2}+\dots+k_{m}A_{m}=0$</mark>
