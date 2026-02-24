@@ -271,7 +271,7 @@ Siano $A$ e $B$ $2$ matrici quadrate, allora <mark style="background: #ADCCFFA6;
 
 ---
 # Combinazioni Lineari
-## Definizione
+## Definizione dipendenza lineare
 Sia data una matrice $A$ di ordine $m \times n$
 $$
 A = \begin{pmatrix}
@@ -283,6 +283,10 @@ a_{m1}  & \dots & \dots  & a_{mn}
 $$
 Le righe $A_{1},A_{2},\dots,A_{m}$ della matrice $A$ si dicono **linearmente dipendenti** se <mark style="background: #ADCCFFA6;">esistono $k_{1},k_{2},\dots,k_{m}\in \mathbb{R}$ **non tutti nulli**, tali che $k_{1}A_{1}+k_{2}A_{2}+\dots+k_{m}A_{m}=0$</mark>
 
->[!tip]
+>[!tip] Precisazione
+>Si ricorda che, tutto ciò che vale per le righe di una generica matrice<mark style="background: #BBFABBA6;"> vale anche per le colonne di una generica matrice</mark>
 ## Collegamento con il [[#Determinante|determinante]] di una matrice
 Sia $A$ una [[#Matrice Quadrata|matrice quadrata]] di ordine $n$, allora <mark style="background: #ADCCFFA6;">$\det(A)=0$ se e solo se le righe di $A$ sono [[#Combinazioni Lineari|linearmente dipendenti]]</mark>
+
+## Definizione di combinazione lineare
+Si dice che una riga (o colonna) $A_{i}$ della matrice $A$ sia una **combinazione lineare** delle altre righe se <mark style="background: #ADCCFFA6;">esistono $a_{1},a_{2},\dots,a_{i-1},a_{i+1},\dots,a_{n}\in \mathbb{R}$ tali che $A_{i}=a_{1}A_{1}+\dots+a_{i-1}A_{i-1}+a_{i+1}A_{i+1}+\dots+a_{n}A_{m}$</mark>
