@@ -186,6 +186,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "xournalpp:Create new Xournal++ note": false,
       "callout-manager:Insert Callout": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "switcher:Open quick switcher": false,
@@ -200,6 +201,8 @@
   },
   "active": "d74c7299c4b66068",
   "lastOpenFiles": [
+    "Primo Anno/GAL/Esercitazioni/Es1.xopp",
+    "Primo Anno/GAL/Esercitazioni",
     "Primo Anno/GAL/Miei Appunti/Matrici.md",
     "Untitled.md",
     "Riduzione a scala di una matrice.md",
@@ -213,7 +216,6 @@
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-20-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 05-13-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 04-29-25.pdf",
-    "Primo Anno/GAL/Libro.pdf",
     "Primo Anno/GAL/Miei Appunti/Combinazioni Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
@@ -238,7 +240,6 @@
     "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Espressioni Regolari.md",
     "Primo Anno/Architettura/5 - Datapath/Datapath Multiciclo.md",
     "Excalidraw/Drawing 2026-02-17 10.32.50.excalidraw.md",
-    "Secondo Anno/Primo Semestre/LC/MDT/MDT - Macchina di Turing.md",
     "IMG/Pasted image 20260207102144.png",
     "IMG/Pasted image 20260207105609.png",
     "IMG/Screenshot_20260209-173545-display-0.jpg.jpg",
