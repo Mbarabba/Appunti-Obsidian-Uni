@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/GAL/Miei Appunti/Matrici.md",
+                "file": "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Matrici"
+              "title": "Sistemi Lineari"
             }
           }
         ],
@@ -200,9 +200,9 @@
   },
   "active": "d74c7299c4b66068",
   "lastOpenFiles": [
+    "Primo Anno/GAL/Miei Appunti/Matrici.md",
     "Untitled.md",
     "Riduzione a scala di una matrice.md",
-    "Primo Anno/GAL/Miei Appunti/Matrici.md",
     "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-11-25.pdf",
     "Primo Anno/GAL/Appunti prof. Savini/Lezione 03-04-25.pdf",
