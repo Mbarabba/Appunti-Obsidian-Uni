@@ -41,6 +41,17 @@ b_{2}
 \text{ Se } \vec{a} \cdot  \vec{b} = 0 \qquad \vec{a},\vec{b} \text{ si dicono ortogonali}
 \end{gather}$$
 ## Definizione Prodotto Scalare (Coordinate Polari)
+$$
+\begin{gather}\text{Dati 2 vettori}  \\
+ \\
+\vec{a} = \begin{pmatrix}
+||\vec{a}||\cos(\theta) \\
+||\vec{a}||\sin(\theta)
+\end{pmatrix}, \vec{b}=\begin{pmatrix}
+||\vec{b}||\cos()
+\end{pmatrix}
+\end{gather}
+$$
 ### Cosa significa ortogonalità?
 **L'ortogonalità** è una relazione tra 2 vettori che indica una <mark style="background: #ADCCFFA6;">totale mancanza di "sovrapposizione" nelle loro direzioni</mark>.
 
