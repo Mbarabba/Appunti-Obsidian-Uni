@@ -103,7 +103,13 @@ Possiamo definire una **retta** all'interno della struttura lineare in <mark sty
    $$
    a_{1}x_{1}+a_{2}x_{2}=c
    $$
-   Dove 
+   Dove :
 	- **$\vec{a}$** : è il <mark style="background: #ADCCFFA6;">vettore perpendicolare alla retta</mark>, cambiando il valore di $a_{1},a_{2}$ si <mark style="background: #BBFABBA6;">cambia la l'**inclinazione** della retta</mark>
 	- **$\vec{x}$** : è il <mark style="background: #ADCCFFA6;">vettore delle coordinate variabili</mark>, rappresentano un punto generico.
-	  Un punto appartiene alla retta se sostituendo i suoi valori ad $\vec{x}$
+	  <mark style="background: #BBFABBA6;">Un punto appartiene alla retta se sostituendo i suoi valori ad $\vec{x}$ rendono vera l'uguaglianza</mark>
+	- **$c$** : è il <mark style="background: #ADCCFFA6;">termine noto</mark>, determina la <mark style="background: #BBFABBA6;">distanza dall'origine</mark>
+2. Forma Esplicita
+   $$x_{2}=-\frac{{a_{1}}}{a_{2}}x_{1}+\frac{{c}}{a_{2}}$$
+   Dove : 
+	- **$-\frac{{a_{1}}}{a_{2}}(m)$** : è il <mark style="background: #ABF7F7A6;">coefficiente angolare</mark>, rappresenta la <mark style="background: #BBFABBA6;">pendenza della retta</mark>
+	- **$\frac{c}{a_{2}}(q)$** 
