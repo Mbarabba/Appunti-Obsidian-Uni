@@ -63,3 +63,8 @@ Non è altro che la <mark style="background: #BBFABBA6;">lunghezza del vettore d
 ## Come calcolarla
 $$\Large d(a_{1},a_{2})=||\vec{b} - \vec{a}||$$
 ## Rappresentazione Grafica
+![[Drawing 2026-03-03 14.13.24.excalidraw]]
+
+---
+# Prodotto scalare attraverso l'angolo dei vettori
+## Perchè lo esprimiamo attraverso l'angolo dei vettori
