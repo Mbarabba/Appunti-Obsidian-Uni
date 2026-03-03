@@ -104,4 +104,6 @@ Possiamo definire una **retta** all'interno della struttura lineare in <mark sty
    a_{1}x_{1}+a_{2}x_{2}=c
    $$
    Dove 
-	- $a_{i}$ 
+	- **$\vec{a}$** : è il <mark style="background: #ADCCFFA6;">vettore perpendicolare alla retta</mark>, cambiando il valore di $a_{1},a_{2}$ si <mark style="background: #BBFABBA6;">cambia la l'**inclinazione** della retta</mark>
+	- **$\vec{x}$** : è il <mark style="background: #ADCCFFA6;">vettore delle coordinate variabili</mark>, rappresentano un punto generico.
+	  Un punto appartiene alla retta se sostituendo i suoi valori ad $\vec{x}$
