@@ -48,8 +48,11 @@ $$
 ||\vec{a}||\cos(\theta) \\
 ||\vec{a}||\sin(\theta)
 \end{pmatrix}, \vec{b}=\begin{pmatrix}
-||\vec{b}||\cos()
-\end{pmatrix}
+||\vec{b}||\cos(\rho) \\
+||\vec{b}||\sin(\rho)
+\end{pmatrix} \\
+ \\
+\vec{a}  \cdot   \vec{b} = ||\vec{a}||||\vec{b}||\cos(\theta)\cos(\rho)+||\vec{a}||||\vec{b}|| \sin(\theta)\sin(\rho)=
 \end{gather}
 $$
 ### Cosa significa ortogonalità?
