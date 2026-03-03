@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Struttura euclidea"
             }
+          },
+          {
+            "id": "6177f9ff368197dc",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2026-03-03 14.54.20.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-03-03 14.54.20.excalidraw"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -185,10 +198,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7dc0684df5e3f426",
+  "active": "6177f9ff368197dc",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2026-03-03 14.13.24.excalidraw.md",
     "Secondo Anno/Secondo Semestre/Mate 2/Appunti digitali/Struttura euclidea.md",
+    "Excalidraw/Drawing 2026-03-03 14.54.20.excalidraw.md",
+    "Excalidraw/Drawing 2026-03-03 14.13.24.excalidraw.md",
     "Excalidraw/Drawing 2026-03-03 11.55.17.excalidraw.md",
     "Secondo Anno/Secondo Semestre/Mate 2/Appunti Scritti/PDF/2.pdf",
     "Excalidraw/Drawing 2026-03-03 11.49.05.excalidraw.md",
@@ -224,7 +238,6 @@
     "Secondo Anno/Primo Semestre/RSO/SO/API POSIX.md",
     "Primo Anno/GAL/Miei Appunti/Prova.md",
     "Pasted image 20260218131611.png",
-    "Secondo Anno/Primo Semestre/LC/Prove 2° Parziale/Gemini 1/Gemini 1.md",
     "Pasted image 20260216113323.png",
     "Pasted image 20260216090806.png",
     "IMG/Pasted image 20260207102144.png",
