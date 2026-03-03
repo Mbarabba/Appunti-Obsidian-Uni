@@ -62,4 +62,4 @@ La distanza tra due punti $a_{1}$ e $a_{2}$ è la **lunghezza** del segmento pi�
 Non è altro che la <mark style="background: #BBFABBA6;">lunghezza del vettore differenza tra i 2 punti</mark>
 ## Come calcolarla
 $$\Large d(a_{1},a_{2})=||\vec{b} - \vec{a}||$$
-## Rappresentazione
+## Rappresentazione Grafica
