@@ -115,6 +115,9 @@ Possiamo definire una **retta** all'interno della struttura lineare in <mark sty
 	- **$\frac{c}{a_{2}}(q)$** : è il <mark style="background: #BBFABBA6;">punto di intersezione con l'asse verticale</mark> 
 	- **$x_{1}$** : Funge da variabile indipendente (input)
 	- **$x_{2}$** : È la variabile dipendente (output), cioè il valore  che calcoli una volta scelto un punto sull'asse orizzontale
+## Rappresentazioni di una retta
+### Rappresentazione parametrica
+La rappresentazione parametrica descrive
 ## Possibili casi dell'equazione di una retta
 ### $c=0$
 In questo caso abbiamo una <mark style="background: #ADCCFFA6;">retta passante per l'origine </mark>
@@ -125,4 +128,4 @@ a_{1}x_{1}+a_{2}x_{2}=0
 $$
 come [[#Definizione Prodotto Scalare (Coordinate Polari)|prodotto scalare]] 
 $$\Large \vec{a} \cdot \vec{x}=0$$
-La retta è composta da tutti i vettori [[#Cosa significa ortogonalità?|ortogonali]] ad $\vec{a}$
+La retta è <mark style="background: #BBFABBA6;">composta da tutti i vettori [[#Cosa significa ortogonalità?|ortogonali]] ad $\vec{a}$</mark>
