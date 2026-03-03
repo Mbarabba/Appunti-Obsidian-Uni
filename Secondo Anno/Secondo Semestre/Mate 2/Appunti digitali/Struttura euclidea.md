@@ -38,7 +38,8 @@ b_{2}
 \vec{a} \cdot \vec{b} = a_{1}b_{1} + a_{2}b_{2}
  \\
  \\
-\text{ Se } \vec{a} \cdot  \vec{b} = 0 \qquad \vec{a},\vec{b} \text{ si dicono ortogonali}
+\text{ Se } \vec{a} \cdot  \vec{b} = 0 \qquad \vec{a},\vec{b} \text{ si dicono ortogonali} \\
+ \\
 \end{gather}$$
 ## Definizione Prodotto Scalare (Coordinate Polari)
 $$
@@ -52,7 +53,12 @@ $$
 ||\vec{b}||\sin(\rho)
 \end{pmatrix} \\
  \\
-\vec{a}  \cdot   \vec{b} = ||\vec{a}||||\vec{b}||\cos(\theta)\cos(\rho)+||\vec{a}||||\vec{b}|| \sin(\theta)\sin(\rho)=
+\vec{a}  \cdot   \vec{b} = ||\vec{a}||||\vec{b}||\cos(\theta)\cos(\rho)+||\vec{a}||||\vec{b}|| \sin(\theta)\sin(\rho) =  \\
+||\vec{a}||||\vec{b}||(\cos(\theta)\cos(\rho)+\sin(\theta)\sin(\rho)) \\
+ \\
+\text{Inoltre, } \theta-\rho=\alpha = \text{L'angolo compreso tra }\vec{a} \text{ e } \vec{b} \\
+ \\
+\text{ Se } \vec{a} \cdot  \vec{b} = 0 \qquad \vec{a},\vec{b} \text{ si dicono ortogonali}
 \end{gather}
 $$
 ### Cosa significa ortogonalità?
