@@ -117,7 +117,7 @@ Possiamo definire una **retta** all'interno della struttura lineare in <mark sty
 	- **$x_{2}$** : È la variabile dipendente (output), cioè il valore  che calcoli una volta scelto un punto sull'asse orizzontale
 ## Rappresentazioni di una retta
 ### Rappresentazione parametrica
-La rappresentazione parametrica descrive
+La rappresentazione parametrica descrive la retta come l'insieme di tutti i punti $\vec{x}$ che si ottengono partendo da un insieme di punti $\vec{x_{0}}$
 ## Possibili casi dell'equazione di una retta
 ### $c=0$
 In questo caso abbiamo una <mark style="background: #ADCCFFA6;">retta passante per l'origine </mark>
