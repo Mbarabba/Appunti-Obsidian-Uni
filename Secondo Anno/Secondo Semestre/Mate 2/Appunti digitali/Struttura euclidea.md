@@ -173,3 +173,16 @@ $$
 come [[#Definizione Prodotto Scalare (Coordinate Polari)|prodotto scalare]] 
 $$\Large \vec{a} \cdot \vec{x}=0$$
 La retta è <mark style="background: #BBFABBA6;">composta da tutti i vettori [[#Cosa significa ortogonalità?|ortogonali]] ad $\vec{a}$</mark>
+
+### $c \not = 0$
+In questo caso traslo la mia retta in modo tale che passi per l'origine
+
+1. **Ipotizzo** che ${\vec{x_{0}}=\begin{pmatrix}x^0_{1}  \\ x^0_{2}\end{pmatrix}}$ sia un 
+2. **Avrò**
+   $$\begin{gather} a_{1}x^0_{1}+a_{2}x^0_{2}=c \\
+   a_{1}x_{1}+a_{2}x_{2}=a_{1}x^0_{1}+a_{2}x^0_{2} \\
+   a_{1}(x_{1}-x^0_{1})+a_{2}(x_{2}-x^0_{2})=0 \quad \text{Questo è un prodotto scalare}
+ \\ \\
+ 
+\vec{a} cd
+\end{gather}$$
