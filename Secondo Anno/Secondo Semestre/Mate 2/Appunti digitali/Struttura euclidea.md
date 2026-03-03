@@ -52,22 +52,14 @@ La lunghezza è un numero scalare $\in \mathbb{R}$
 ## Come calcolarla
 $$\Large||\vec{a}||=\sqrt{ \vec{a} \cdot  \vec{a} }$$
 ## Rappresentazione Grafica
-```tikz
-\begin{tikzpicture}
-  % Assi
-  \draw[->] (0,0) -- (4,0) node[right] {$x$};
-  \draw[->] (0,0) -- (0,4) node[above] {$y$};
-  
-  % Vettore (blu, spesso)
-  \draw[thick,->,blue] (0,0) -- (3,2) node[anchor=south west] {$\vec{a}$};
-  
-  % Proiezioni tratteggiate
-  \draw[dashed] (3,0) -- (3,2) -- (0,2);
-  
-  % Etichette assi
-  \node[below] at (3,0) {$a_2$};
-  \node[left] at (0,2) {$a_1$};
-\end{tikzpicture}
-```
+![[Drawing 2026-03-03 11.49.05.excalidraw]]
+
 ---
 # Distanza tra 2 punti
+## Cos'è?
+La distanza tra due punti $a_{1}$ e $a_{2}$ è la **lunghezza** del segmento più breve che li congiunge.
+
+Non è altro che la <mark style="background: #BBFABBA6;">lunghezza del vettore differenza tra i 2 punti</mark>
+## Come calcolarla
+$$\Large d(a_{1},a_{2})=||\vec{b} - \vec{a}||$$
+## Rappresentazione
