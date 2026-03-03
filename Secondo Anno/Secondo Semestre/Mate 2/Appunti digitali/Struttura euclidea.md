@@ -47,6 +47,27 @@ b_{2}
 # Lunghezza di un vettore 
 ## Definizione
 È la misura di intensità di un vettore, rappresenta la distanza geometrica tra il punto di partenza e la punta della freccia
+
+La lunghezza è un numero scalare $\in \mathbb{R}$
 ## Come calcolarla
 $$\Large||\vec{a}||=\sqrt{ \vec{a} \cdot  \vec{a} }$$
 ## Rappresentazione Grafica
+```tikz
+\begin{tikzpicture}
+  % Assi
+  \draw[->] (0,0) -- (4,0) node[right] {$x$};
+  \draw[->] (0,0) -- (0,4) node[above] {$y$};
+  
+  % Vettore (blu, spesso)
+  \draw[thick,->,blue] (0,0) -- (3,2) node[anchor=south west] {$\vec{a}$};
+  
+  % Proiezioni tratteggiate
+  \draw[dashed] (3,0) -- (3,2) -- (0,2);
+  
+  % Etichette assi
+  \node[below] at (3,0) {$a_2$};
+  \node[left] at (0,2) {$a_1$};
+\end{tikzpicture}
+```
+---
+# Distanza tra 2 punti

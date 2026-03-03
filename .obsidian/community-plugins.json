@@ -12,5 +12,6 @@
   "open-gate",
   "obsidian-pandoc",
   "obsidian-tasks-plugin",
-  "xournalpp"
+  "xournalpp",
+  "obsidian-tikzjax"
 ]

@@ -34,9 +34,21 @@
               "icon": "lucide-file",
               "title": "Struttura euclidea"
             }
+          },
+          {
+            "id": "b6dd2cde2ef7e4ef",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2026-03-03 11.49.05.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-03-03 11.49.05.excalidraw"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -93,7 +105,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5
+    "width": 255.5,
+    "collapsed": true
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -199,10 +212,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0228ab67b8db1673",
+  "active": "b6dd2cde2ef7e4ef",
   "lastOpenFiles": [
-    "Secondo Anno/Secondo Semestre/Mate 2/Appunti Scritti/PDF/Mate - 1_annotated.pdf",
     "Secondo Anno/Secondo Semestre/Mate 2/Appunti digitali/Struttura euclidea.md",
+    "Excalidraw/Drawing 2026-03-03 11.49.05.excalidraw.md",
+    "Pasted image 20260303114729.png",
+    "Secondo Anno/Secondo Semestre/Mate 2/Appunti Scritti/PDF/Mate - 1_annotated.pdf",
     "Secondo Anno/Secondo Semestre/Mate 2/Appunti Scritti/PDF/2.pdf",
     "Secondo Anno/Secondo Semestre/Mate 2/Appunti Scritti/2.pdf",
     "Secondo Anno/Secondo Semestre/Mate 2/Appunti Scritti/PDF",
@@ -245,7 +260,6 @@
     "IMG/Pasted image 20260201175121.png",
     "IMG/Pasted image 20260201124756.png",
     "IMG/Pasted image 20260201124752.png",
-    "IMG/Pasted image 20260129123505.png",
     "Untitled.canvas"
   ]
 }
