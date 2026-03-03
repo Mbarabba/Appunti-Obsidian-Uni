@@ -67,6 +67,14 @@ $$
 \cos(\alpha)=\frac{{\vec{a}  \cdot  \vec{b}}}{||\vec{a}||||\vec{b}||}
 $$
 ![[Drawing 2026-03-03 15.06.05.excalidraw]]
+## Come passare da una definizione all'altra
+### Cartesiana $\to$ Polare
+$$
+\begin{gather}\vec{a} \cdot  \vec{b} = a_{1}b_{1}+a_{2}b_{2} \quad \text{ diventa} \\
+\vec{a}  \cdot  \vec{b} = 
+\end{gather}
+$$
+### Polare $\to$ Cartesiana
 ### Cosa significa ortogonalità?
 **L'ortogonalità** è una relazione tra 2 vettori che indica una <mark style="background: #ADCCFFA6;">totale mancanza di "sovrapposizione" nelle loro direzioni</mark>.
 
@@ -93,10 +101,3 @@ $$\Large d(a_{1},a_{2})=||\vec{b} - \vec{a}||$$
 ![[Drawing 2026-03-03 14.13.24.excalidraw]]
 
 ---
-# Prodotto scalare attraverso l'angolo dei vettori
-## Come si calcola?
-$$
-\Large \vec{a} \cdot   \vec{b} = (||\vec{a}||\cdot ||\vec{b}||)\cdot \cos(\alpha)
-$$
-- **$\alpha$** è <mark style="background: #BBFABBA6;">l'angolo compreso</mark> tra $\vec{a}$ e $\vec{b}$
-## Rappresentazione Grafica
