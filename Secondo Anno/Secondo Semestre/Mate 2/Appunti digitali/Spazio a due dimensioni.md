@@ -23,5 +23,6 @@ a_{2}+b_{2}
 \end{pmatrix}$$
 Questa è anche chiamata <mark style="background: #ADCCFFA6;">regola del parallelogramma</mark>
 ---
-# Come scrivere un vettore in $\mathbb{R}^2$
->[!def] Coordinate Cartesiane
+# Struttura Euclidea
+## Definizione
+Si definisce struttura euclidea una [[#Struttura Lineare|struttura lineare]] (nel nostro caso $\mathbb{R}^2$)
