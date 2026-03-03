@@ -71,9 +71,13 @@ $$
 ### Cartesiana $\to$ Polare
 $$
 \begin{gather}\vec{a} \cdot  \vec{b} = a_{1}b_{1}+a_{2}b_{2} \quad \text{ diventa} \\
-\vec{a}  \cdot  \vec{b} = 
+\vec{a}  \cdot  \vec{b} = ||\vec{a}||||\vec{b}||(\cos(\theta)\cos(\rho)+\sin(\theta)\sin(\rho))
 \end{gather}
 $$
+- $||\vec{a}||=\sqrt{ (a_{1})^2+(a_{2})^2 }$
+- $||\vec{b}||=\sqrt{ (b_{1})^2+(b_{2})^2 }$ 
+
+
 ### Polare $\to$ Cartesiana
 ### Cosa significa ortogonalità?
 **L'ortogonalità** è una relazione tra 2 vettori che indica una <mark style="background: #ADCCFFA6;">totale mancanza di "sovrapposizione" nelle loro direzioni</mark>.
