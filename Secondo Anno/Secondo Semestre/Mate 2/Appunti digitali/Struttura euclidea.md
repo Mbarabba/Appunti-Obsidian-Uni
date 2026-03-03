@@ -130,7 +130,17 @@ Composta da :
 - **$\vec{v}$** : È il vettore direzione, indica <mark style="background: #BBFABBA6;">dove "punta" la retta</mark>
 - **$t\in \mathbb{R}$** : È il parametro
 
-## Parametrica $
+## Rappresentazione Parametrica $\iff$ Rappresentazione Cartesiana
+### Rappresentazione Parametrica $\to$ Rappresentazione Cartesiana 
+Partiamo dal sistema
+$$
+\begin{cases}
+x_{1}=x^0_{1}+tv_{1} \\
+x_{2}=x^0_{2}+tv_{2}
+\end{cases}
+$$
+1. Isoliamo $t$ dalla prima equazione (assumendo $v_{1}\not=0$)
+   $$t=\frac{{x_{1}-x^0_{1}}}{v_{1}}$$
 ## Possibili casi dell'equazione di una retta
 ### $c=0$
 In questo caso abbiamo una <mark style="background: #ADCCFFA6;">retta passante per l'origine </mark>
