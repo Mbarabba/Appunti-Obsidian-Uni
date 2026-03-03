@@ -69,15 +69,6 @@ $$
 ![[Drawing 2026-03-03 15.06.05.excalidraw]]
 ## Come passare da una definizione all'altra
 ### Cartesiana $\to$ Polare
-$$
-\begin{gather}\vec{a} \cdot  \vec{b} = a_{1}b_{1}+a_{2}b_{2} \quad \text{ diventa} \\
-\vec{a}  \cdot  \vec{b} = ||\vec{a}||||\vec{b}||(\cos(\theta)\cos(\rho)+\sin(\theta)\sin(\rho))
-\end{gather}
-$$
-- $||\vec{a}||=\sqrt{ (a_{1})^2+(a_{2})^2 }$
-- $||\vec{b}||=\sqrt{ (b_{1})^2+(b_{2})^2 }$ 
-
-
 ### Polare $\to$ Cartesiana
 ### Cosa significa ortogonalità?
 **L'ortogonalità** è una relazione tra 2 vettori che indica una <mark style="background: #ADCCFFA6;">totale mancanza di "sovrapposizione" nelle loro direzioni</mark>.
@@ -105,3 +96,12 @@ $$\Large d(a_{1},a_{2})=||\vec{b} - \vec{a}||$$
 ![[Drawing 2026-03-03 14.13.24.excalidraw]]
 
 ---
+# Retta nel piano
+## Definizione
+Possiamo definire una **retta** all'interno della struttura lineare in <mark style="background: #BBFABBA6;">2 forme distinte</mark>
+1. Forma Implicita
+   $$
+   a_{1}x_{1}+a_{2}x_{2}=c
+   $$
+   Dove 
+	- $a_{i}$ 
