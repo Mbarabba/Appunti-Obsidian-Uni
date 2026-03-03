@@ -26,7 +26,7 @@ Questa è anche chiamata <mark style="background: #ADCCFFA6;">regola del paralle
 # Definizione
 Si definisce struttura euclidea uno [[#Struttura Lineare|struttura lineare]] (nel nostro caso $\mathbb{R}^2$) dotata del **prodotto scalare**
 
-## Definizione Prodotto Scalare
+## Definizione Prodotto Scalare (Coordinate Cartesiane)
 $$\begin{gather} \text{Dati 2 vettori} \\ \\
 \vec{a} = \begin{pmatrix}
 a_{1} \\
@@ -40,6 +40,7 @@ b_{2}
  \\
 \text{ Se } \vec{a} \cdot  \vec{b} = 0 \qquad \vec{a},\vec{b} \text{ si dicono ortogonali}
 \end{gather}$$
+## Definizione Prodotto Scalare (Coordinate Polari)
 ### Cosa significa ortogonalità?
 **L'ortogonalità** è una relazione tra 2 vettori che indica una <mark style="background: #ADCCFFA6;">totale mancanza di "sovrapposizione" nelle loro direzioni</mark>.
 
