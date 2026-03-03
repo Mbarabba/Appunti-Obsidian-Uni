@@ -146,7 +146,21 @@ $$
 3. **Riordiniamo** i termini per portarli in forma cartesiana
    $$-v_{2}x_{1}+v_{1}x_{2}=v_{1}x^0_{2}-v_{2}x^0_{2}$$
 ### Rappresentazione Cartesiana $\to$ Rappresentazione Parametrica
-1. **Trovare** $\vec{}$
+1. **Trovare** $\vec{v}$
+   $$\vec{v}=\begin{pmatrix}
+-a_{2} \\
+a_{1}
+\end{pmatrix}$$
+2. **Trovare** $\vec{x_{0}}$
+	1. Poni una variabile a zero (esempio $x_{1}=0$)
+	2. Risolvi l'equazione per trovare l'altra variabile ($x_{2}=\frac{c}{a_{2}}$)
+	3. $\vec{x_{0}}=\begin{pmatrix}0 \\ \frac{c}{a_{2}}\end{pmatrix}$
+3. **Riscrivi** il sistema
+   $$
+   \begin{cases}
+x_{1} = 0 + t \cdot(/-a_{2})
+\end{cases}
+   $$
 ## Possibili casi dell'equazione di una retta
 ### $c=0$
 In questo caso abbiamo una <mark style="background: #ADCCFFA6;">retta passante per l'origine </mark>
