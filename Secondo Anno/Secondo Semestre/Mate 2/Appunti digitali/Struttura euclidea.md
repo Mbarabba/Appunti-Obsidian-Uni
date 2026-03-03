@@ -23,6 +23,17 @@ a_{2}+b_{2}
 \end{pmatrix}$$
 Questa è anche chiamata <mark style="background: #ADCCFFA6;">regola del parallelogramma</mark>
 ---
-# Struttura Euclidea
-## Definizione
-Si definisce struttura euclidea una [[#Struttura Lineare|struttura lineare]] (nel nostro caso $\mathbb{R}^2$)
+# Definizione
+Si definisce struttura euclidea uno [[#Struttura Lineare|struttura lineare]] (nel nostro caso $\mathbb{R}^2$) dotata del **prodotto scalare**
+
+$$\begin{gather} \text{Dati 2 vettori} \\ \\
+\vec{a} = \begin{pmatrix}
+a_{1} \\
+a_{2}
+\end{pmatrix}, \vec{b}=\begin{pmatrix}
+b_{1} \\
+b_{2}
+\end{pmatrix}\\  \\
+
+
+\end{gather}$$
