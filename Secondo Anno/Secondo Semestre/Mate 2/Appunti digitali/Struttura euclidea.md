@@ -67,4 +67,9 @@ $$\Large d(a_{1},a_{2})=||\vec{b} - \vec{a}||$$
 
 ---
 # Prodotto scalare attraverso l'angolo dei vettori
-## Perchè lo esprimiamo attraverso l'angolo dei vettori
+## Come si calcola?
+$$
+\Large \vec{a} \cdot   \vec{b} = (||\vec{a}||\cdot ||\vec{b}||)\cdot \cos(\alpha)
+$$
+- **$\alpha$** è <mark style="background: #BBFABBA6;">l'angolo compreso</mark> tra $\vec{a}$ e $\vec{b}$
+## Rappresentazione Grafica
