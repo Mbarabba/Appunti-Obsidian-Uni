@@ -158,7 +158,8 @@ a_{1}
 3. **Riscrivi** il sistema
    $$
    \begin{cases}
-x_{1} = 0 + t \cdot(/-a_{2})
+x_{1} = 0 + t \cdot t(-a_{2}) \\
+x_{2} = \frac{c}{a_{2}} + ta_{1}
 \end{cases}
    $$
 ## Possibili casi dell'equazione di una retta
