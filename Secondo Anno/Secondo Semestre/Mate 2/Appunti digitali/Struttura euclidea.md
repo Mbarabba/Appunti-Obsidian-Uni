@@ -61,6 +61,12 @@ $$
 \text{ Se } \vec{a} \cdot  \vec{b} = 0 \qquad \vec{a},\vec{b} \text{ si dicono ortogonali}
 \end{gather}
 $$
+
+Se leggo questa formula al contrario ho che 
+$$
+\cos(\alpha)=\frac{{\vec{a}  \cdot  \vec{b}}}{||\vec{a}||||\vec{b}||}
+$$
+![[Drawing 2026-03-03 15.06.05.excalidraw]]
 ### Cosa significa ortogonalità?
 **L'ortogonalità** è una relazione tra 2 vettori che indica una <mark style="background: #ADCCFFA6;">totale mancanza di "sovrapposizione" nelle loro direzioni</mark>.
 
