@@ -139,8 +139,14 @@ x_{1}=x^0_{1}+tv_{1} \\
 x_{2}=x^0_{2}+tv_{2}
 \end{cases}
 $$
-1. Isoliamo $t$ dalla prima equazione (assumendo $v_{1}\not=0$)
+1. **Isoliamo $t$** dalla prima equazione (assumendo $v_{1}\not=0$)
    $$t=\frac{{x_{1}-x^0_{1}}}{v_{1}}$$
+2. **Sostituiamo** il valore di $t$ nella seconda equazione
+   $$x_{2}=x^0_{2}+v_{2}\left( \frac{{x_{1}-x^0_{1}}}{v_{1}} \right)$$
+3. **Riordiniamo** i termini per portarli in forma cartesiana
+   $$-v_{2}x_{1}+v_{1}x_{2}=v_{1}x^0_{2}-v_{2}x^0_{2}$$
+### Rappresentazione Cartesiana $\to$ Rappresentazione Parametrica
+1. **Trovare** $\vec{}$
 ## Possibili casi dell'equazione di una retta
 ### $c=0$
 In questo caso abbiamo una <mark style="background: #ADCCFFA6;">retta passante per l'origine </mark>
