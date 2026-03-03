@@ -23,6 +23,5 @@ a_{2}+b_{2}
 \end{pmatrix}$$
 Questa è anche chiamata <mark style="background: #ADCCFFA6;">regola del parallelogramma</mark>
 ---
-# Notazione vettoriale
->[!def] Notazione Oratagonale
-># Cos'è?
+# Come scrivere un vettore in $\mathbb{R}^2$
+>[!def] Coordinate Cartesiane
