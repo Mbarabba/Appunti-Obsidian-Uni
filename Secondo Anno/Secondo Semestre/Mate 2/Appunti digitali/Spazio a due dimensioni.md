@@ -10,8 +10,19 @@ ca_{1} \\
 ca_{2}
 \end{pmatrix}$$
 se $c=-1 \to -1 \overrightarrow{a}=\begin{pmatrix}-a_{1} \\ -a_{2}\end{pmatrix} = -\overrightarrow{a}$
-2. Somma di vettori
+2. <mark style="background: #BBFABBA6;">Somma di vettori</mark>
    $$\overrightarrow{a}+\overrightarrow{b}=\begin{pmatrix}
 a_{1} \\
 a_{2}
+\end{pmatrix} + \begin{pmatrix}
+b1 \\
+b_{2}
+\end{pmatrix}=\begin{pmatrix}
+a_{1}+b_{1} \\
+a_{2}+b_{2}
 \end{pmatrix}$$
+Questa è anche chiamata <mark style="background: #ADCCFFA6;">regola del parallelogramma</mark>
+---
+# Notazione vettoriale
+>[!def] Notazione Oratagonale
+># Cos'è?
