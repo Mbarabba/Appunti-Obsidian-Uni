@@ -45,3 +45,8 @@ b_{2}
 
 ---
 # Lunghezza di un vettore 
+## Definizione
+È la misura di intensità di un vettore, rappresenta la distanza geometrica tra il punto di partenza e la punta della freccia
+## Come calcolarla
+$$\Large||\vec{a}||=\sqrt{ \vec{a} \cdot  \vec{a} }$$
+## Rappresentazione Grafica
