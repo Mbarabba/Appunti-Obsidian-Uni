@@ -97,7 +97,7 @@ $$\Large d(a_{1},a_{2})=||\vec{b} - \vec{a}||$$
 
 ---
 # Retta nel piano
-## Definizione
+## Rappresentazione Cartesiana di una retta
 Possiamo definire una **retta** all'interno della struttura lineare in <mark style="background: #BBFABBA6;">2 forme distinte</mark>
 1. Forma Implicita
    $$
@@ -115,8 +115,7 @@ Possiamo definire una **retta** all'interno della struttura lineare in <mark sty
 	- **$\frac{c}{a_{2}}(q)$** : è il <mark style="background: #BBFABBA6;">punto di intersezione con l'asse verticale</mark> 
 	- **$x_{1}$** : Funge da variabile indipendente (input)
 	- **$x_{2}$** : È la variabile dipendente (output), cioè il valore  che calcoli una volta scelto un punto sull'asse orizzontale
-## Rappresentazioni di una retta
-### Rappresentazione parametrica
+##  Rappresentazione parametrica
 La rappresentazione parametrica descrive la retta come l'insieme di tutti i punti $\vec{x}$ che si ottengono partendo da un insieme di punti $\vec{x_{0}}$ e muovendosi lungo la direzione di $\vec{v}$
 
 Si scrive in forma :
@@ -127,7 +126,11 @@ x_{2}=x^0_{2}+v_{2}t
 \end{cases}
 $$
 Composta da : 
+- **$\vec{x_{0}}$** : È un punto qualsiasi <mark style="background: #BBFABBA6;">appartenente alla retta</mark>
+- **$\vec{v}$** : È il vettore direzione, indica <mark style="background: #BBFABBA6;">dove "punta" la retta</mark>
+- **$t\in \mathbb{R}$** : È il parametro
 
+## Parametrica $
 ## Possibili casi dell'equazione di una retta
 ### $c=0$
 In questo caso abbiamo una <mark style="background: #ADCCFFA6;">retta passante per l'origine </mark>
