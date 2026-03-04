@@ -16,7 +16,8 @@ Se un [[#Insieme di Dati|insieme di dati]] contiene un <mark style="background: 
 
 La tabella è formata da :
 - **Valori** : I diversi <mark style="background: #BBFABBA6;">valori distinti che il dato può assumere</mark>
-- **$f_{i}$ Frequenza Assoluta** : Il numero di volte che un dato valore appare all'interno dell'insieme 
+- **$f_{i}$ Frequenza Assoluta** : Il <mark style="background: #BBFABBA6;">numero di volte</mark> che un dato valore appare all'interno dell'insieme di dati $N$ 
+- **$p_{i}=f_{i}/N$ Frequenza Relativa** : È la <mark style="background: #BBFABBA6;">frazione di volte</mark> in cui un determinato valore compare nell'insieme di dati $n$
 
 >[!example] Esempio
 >Marta intervista i suo $N=20$ compagni di classe e chiede la squadra di calcio preferita, ottenendo la risposta
@@ -33,4 +34,5 @@ La tabella è formata da :
 >|Ata|5|$\frac{5}{20}=0.25=25\%$|
 >|Int|2|$\frac{2}{20}=0,1=10\%$|
 >|Nes|7|$\frac{7}{20}=0.35=35\%$|
->
+
+## Istogramma
