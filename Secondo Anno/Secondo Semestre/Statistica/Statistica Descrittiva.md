@@ -58,7 +58,11 @@ La tabella è formata da :
 Serve a mostrare visivamente la distribuzione dei dati suddivisi in intervalli, detti **classi**, allo scopo di rendere i dati più leggibili
 ## Come costruire un istogramma da un insieme di dati
 1. **Disporre** i dati in ordine crescente
-2. **Scegliere
+2. **Scegliere** le classi in modo da coprire tutti i punti
+3. **Costruire** una [[#Tabella delle frequenze|tabella della frequenza]]
+4. **Costruire** delle barre adiacenti che abbiano altezze determinate dalle frequenze del punto 3
+
+>[!Example] Esempio di costruzione di un istogramma
 
 
 ---
