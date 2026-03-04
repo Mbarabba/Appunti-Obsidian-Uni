@@ -14,9 +14,11 @@ $$
 Talvolta è utile misurare poter mettere in relazione 
  variabili
 
-Per far ciò, <mark style="background: #ADCCFFA6;">dato un insieme $N$ di dati</mark>, utilizziamo delle <mark style="background: #BBFABBA6;">relazioni $N$-uple</mark> per raggruppare i dati
-
-$$R=\{<x,y>:x,y \in N\}$$
+Per fare ciò, dato un insieme di $N$ dati, li mettiamo a coppie
+$$\large(x_{1},y_{1}),(x_{2},y_{2}),\dots,(x_{i},y_{i}),\dots,(x_{N},y_{N})$$
+- **$x_{i} / y_{i}$** indicano l'i-esimo elemento dell'insieme 
+>[!Example] Esempio
+>Rileviamo il numero di anni di scuola e le pulasizioni a riposo in un campione di $N=10$
 
 ---
 # Tabella delle frequenze
