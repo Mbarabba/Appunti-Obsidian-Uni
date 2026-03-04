@@ -63,6 +63,28 @@ Serve a mostrare visivamente la distribuzione dei dati suddivisi in intervalli, 
 4. **Costruire** delle barre adiacenti che abbiano altezze determinate dalle frequenze del punto 3
 
 >[!Example] Esempio di costruzione di un istogramma
+>Vengano rilevati i giorni di assenza per malattia di $N=50$ lavoratori di un azienda negli ultimi 2 mesi
+>
+>$$\begin{gather}2,2,0,0,5,8,3,4,1,0,0,7,1,7,1,5 \\
+ 4,0,4,0,1,8,9,7,0,1,7,2,5,5,4,3 \\
+ 3,0,0,2,5,1,3,0,1,0,2,4,5,0,5,7,5,1
+\end{gather}$$
+>
+>La [[#Tabella delle frequenze|tabella della frequenza risultante sarà]]
+>
+>|valori|$f_{i}$|$p_{i}$|
+>|:---:|:---:|:---:|
+>|0|
+>|1|
+>|2|
+>|3|
+>|4|
+>|5|
+>|6|
+>|7|
+>|8|
+>|9|
+
 
 
 ---
@@ -73,3 +95,6 @@ Serve a mostrare visivamente la distribuzione dei dati suddivisi in intervalli, 
 
 
 ## Come rappresentarlo
+
+
+
