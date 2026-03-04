@@ -39,14 +39,12 @@
             "id": "860bee85eb0fe40f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/Mate 2/Appunti digitali/Struttura euclidea.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo Anno/Secondo Semestre/Statistica/Slide Prof/PSI-2026-03-03.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Struttura euclidea"
+              "icon": "lucide-file-text",
+              "title": "PSI-2026-03-03"
             }
           }
         ],
@@ -215,9 +213,10 @@
   },
   "active": "860bee85eb0fe40f",
   "lastOpenFiles": [
+    "Secondo Anno/Secondo Semestre/Statistica/Slide Prof/PSI-2026-03-02.pdf",
+    "Secondo Anno/Secondo Semestre/Mate 2/Appunti digitali/Struttura euclidea.md",
     "Pasted image 20260303185811.png",
     "Excalidraw/Drawing 2026-03-03 15.06.05.excalidraw.md",
-    "Secondo Anno/Secondo Semestre/Mate 2/Appunti digitali/Struttura euclidea.md",
     "Excalidraw/Drawing 2026-03-03 14.54.20.excalidraw.md",
     "Excalidraw/Drawing 2026-03-03 14.13.24.excalidraw.md",
     "Excalidraw/Drawing 2026-03-03 11.55.17.excalidraw.md",
@@ -260,7 +259,6 @@
     "IMG/Screenshot_20260209-173545-display-0.jpg.jpg",
     "IMG/Pasted image 20260201175121.png",
     "IMG/Pasted image 20260201124756.png",
-    "IMG/Pasted image 20260201124752.png",
     "Untitled.canvas"
   ]
 }
