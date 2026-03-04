@@ -10,4 +10,8 @@ $$\Large
 \overline{x}={\frac{\sum^n_{i=1}x_{i}}{N}}
 $$
 >[!example] Esempio
->$N=\{ 1,0,7,4,4 \}$
+>- Insieme di dati = $\{ 1,0,7,4,4 \}$
+>- $N=50$
+>$$
+>
+>$$
