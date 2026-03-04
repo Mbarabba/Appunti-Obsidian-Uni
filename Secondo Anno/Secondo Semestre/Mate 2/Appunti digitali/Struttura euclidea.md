@@ -183,6 +183,5 @@ In questo caso traslo la mia retta in modo tale che passi per l'origine
    a_{1}x_{1}+a_{2}x_{2}=a_{1}x^0_{1}+a_{2}x^0_{2} \\
    a_{1}(x_{1}-x^0_{1})+a_{2}(x_{2}-x^0_{2})=0 \quad \text{Questo è un prodotto scalare}
  \\ \\
- 
-\vec{a} cd
+\vec{a} \cdot(\vec{x}-\vec{x_{0}})=0
 \end{gather}$$
