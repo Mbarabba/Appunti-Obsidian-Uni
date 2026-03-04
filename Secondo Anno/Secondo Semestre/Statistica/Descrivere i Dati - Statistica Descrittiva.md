@@ -86,9 +86,23 @@ Serve a mostrare visivamente la distribuzione dei dati suddivisi in intervalli, 
 >|9|1|$\frac{1}{50}=0.02=2\%$|
 >
 >E con questa costruisco l'istogramma
-
-
-
+>
+```chart
+type: bar
+labels: [0,1,2,3,4,5,6,7,8,9]
+series:
+  - title: 
+    data: [12,8,5,4,5,8,0,5,2,1]
+tension: 0.2
+width: 80%
+labelColors: false
+fill: false
+beginAtZero: false
+>bestFit: false
+>bestFitTitle: undefined
+>bestFitNumber: 0
+>```
+>
 
 
 ---
