@@ -18,7 +18,12 @@ Per fare ciò, dato un insieme di $N$ dati, li mettiamo a coppie
 $$\large(x_{1},y_{1}),(x_{2},y_{2}),\dots,(x_{i},y_{i}),\dots,(x_{N},y_{N})$$
 - **$x_{i} / y_{i}$** indicano l'i-esimo elemento dell'insieme 
 >[!Example] Esempio
->Rileviamo il numero di anni di scuola e le pulasizioni a riposo in un campione di $N=10$
+>Rileviamo il numero di anni di scuola e le pulsazioni a riposo in un campione di $N=10$ individui
+>$$
+>\begin{gather}(12,73) & (16,67) & (13,74) & (18,63) & (19,73) \\
+>(12,84) & (18,60) & (19,62) & (12,76) & (14,71)
+\end{gather}
+>$$
 
 ---
 # Tabella delle frequenze
@@ -44,3 +49,20 @@ La tabella è formata da :
 >|Ata|5|$\frac{5}{20}=0.25=25\%$|
 >|Int|2|$\frac{2}{20}=0,1=10\%$|
 >|Nes|7|$\frac{7}{20}=0.35=35\%$|
+
+---
+# Istogramma
+## Cosa è?
+
+## A cosa serve?
+## Come rappresentarlo
+
+
+---
+# Diagramma di dispersione
+## Cosa è?
+È una rappresentazione equivalente della [[#Tabella delle frequenze|tabella delle frequenze]]
+
+
+## A cosa serve?
+## Come rappresentarlo
