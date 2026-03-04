@@ -185,3 +185,13 @@ In questo caso traslo la mia retta in modo tale che passi per l'origine
  \\ \\
 \vec{a} \cdot(\vec{x}-\vec{x_{0}})=0
 \end{gather}$$
+---
+# Sistemi Lineari di Rette
+Dato
+$$
+\begin{cases}
+a_{11}x_{1}+a_{12}x_{2}=b_{1} \\
+a_{21}x_{1}+a_{22}x_{2}=b_{2}
+\end{cases}
+$$
+Questo sistema composto da 2 [[#Retta nel piano|rette nel piano]] ha <mark style="background: #BBFABBA6;">3 possibili soluzioni</mark> che <mark style="background: #ADCCFFA6;">dipendo dalla presenza di **parallelità**</mark> tra le rette o meno
