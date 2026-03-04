@@ -28,3 +28,11 @@ $$
 \overline{x}=\frac{{z_{1}\cdot f_{1}+z_{2}\cdot f_{2}+\dots+z_{M}f_{M}}}{N}
 $$
 $$N=f_{1}+f_{2}+\dots+f_{M}$$
+
+>[!example] Esempio
+
+## Trasformazioni lineari affini
+
+
+---
+# Mediana Campionaria
