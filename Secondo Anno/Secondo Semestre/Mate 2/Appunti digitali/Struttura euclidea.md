@@ -195,3 +195,14 @@ a_{21}x_{1}+a_{22}x_{2}=b_{2}
 \end{cases}
 $$
 Questo sistema composto da 2 [[#Retta nel piano|rette nel piano]] ha <mark style="background: #BBFABBA6;">3 possibili soluzioni</mark> che <mark style="background: #ADCCFFA6;">dipendo dalla presenza di **parallelità**</mark> tra le rette o meno
+## Quando 2 rette sono parallele?
+### Rappresentazione Parametrica
+Posso dire che 2 rette sono parallele se i loro vettori direzione ($\vec{v}$) sono proporzionali
+$$
+\begin{cases}
+x_{1} = x^0_{1}+tv_{1} \\
+x_{2}=x^0_{2}+sv_{2}
+\end{cases}
+$$
+sono parallele se :
+$$\exists k\in \mathbb{R} $$
