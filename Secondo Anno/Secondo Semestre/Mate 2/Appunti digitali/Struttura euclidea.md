@@ -196,14 +196,38 @@ a_{21}x_{1}+a_{22}x_{2}=b_{2}
 $$
 Questo sistema composto da 2 [[#Retta nel piano|rette nel piano]] ha <mark style="background: #BBFABBA6;">3 possibili soluzioni</mark> che <mark style="background: #ADCCFFA6;">dipendo dalla presenza di **parallelità**</mark> tra le rette o meno
 ## Quando 2 rette sono parallele?
+### Metodo del determinante
+Associo al sistema la matrice
+$$
+A = \begin{pmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{pmatrix}
+$$
+dove 
+$$
+\begin{gather}\begin{pmatrix}
+a_{11} & a_{12}
+\end{pmatrix} = \text{ vettore riga} \\
+\begin{pmatrix}
+a_{11} \\
+a_{12}
+\end{pmatrix} = \text{ vettore colonna}
+\end{gather}
+$$
+e calcolo il suo **determinante**
+$$
+\det(A)=a_{11}a_{22}
+$$
 ### Parallelismo nella rappresentazione Cartesiana
-Posso dire che due rette sono parallele quando $\vec{a_{1}},\vec{a_{2}}$ sono proporzionali, ossia :
+Posso dire che due rette sono parallele quando $\vec{a_{1}},\vec{a_{2}}$ sono **proporzionali**, ossia :
 $$
 \exists k\in \mathbb{R} \setminus \{ 0 \} \text{ tale che}
 $$
 $$
-
+\vec{a}=k \vec{b} \implies \frac{a_{1}}{b_{1}}=\frac{a_{2}}{b_{2}}
 $$
+Questo si traduce anche nel fatto che <mark style="background: #BBFABBA6;">il coefficiente angolare delle 2 rette $m=-\frac{a_{1}}{a_{2}}$ deve essere lo stesso</mark>
 
 ### Parallelismo nella Rappresentazione Parametrica
 Posso dire che 2 rette sono parallele se i loro vettori direzione ($\vec{v}$) sono proporzionali
