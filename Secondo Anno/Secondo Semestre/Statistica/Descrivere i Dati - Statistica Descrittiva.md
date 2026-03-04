@@ -126,4 +126,22 @@ Serve a evidenziare visivamente se esiste una **correlazione** tra le due variab
 \end{gather}
 >$$
 >Vogliamo vedere se esiste una tendenza, quindi disegnamo il diagramma di dispersione
-
+>
+> ```chart
+> type: scatter
+> labels: [12, 13, 14, 15, 16, 17, 18, 19]
+> series:
+>   - title: Individui
+>     data: 
+>       - { x: 12, y: 73 }
+>       - { x: 12, y: 76 }
+>       - { x: 12, y: 84 }
+>       - { x: 13, y: 74 }
+>       - { x: 14, y: 71 }
+>       - { x: 16, y: 67 }
+>       - { x: 18, y: 60 }
+>       - { x: 18, y: 63 }
+>       - { x: 19, y: 62 }
+>       - { x: 19, y: 73 }
+> ```
+> Da qua si evince una correlazione negativa
