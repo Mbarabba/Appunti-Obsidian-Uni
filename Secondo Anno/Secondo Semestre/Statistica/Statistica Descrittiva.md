@@ -10,7 +10,13 @@ $$\begin{gather}
 N = \text{Numero di dati} 
 \end{gather}
 $$
-## Dati a Coppie/Bivarti
+## Dati a Coppie/Bivariati
+Talvolta è utile misurare poter mettere in relazione 
+ variabili
+
+Per far ciò, <mark style="background: #ADCCFFA6;">dato un insieme $N$ di dati</mark>, utilizziamo delle <mark style="background: #BBFABBA6;">relazioni $N$-uple</mark> per raggruppare i dati
+
+$$R=\{<x,y>:x,y \in N\}$$
 
 ---
 # Tabella delle frequenze
