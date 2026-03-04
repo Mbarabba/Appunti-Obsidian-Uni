@@ -108,11 +108,14 @@ Serve a mostrare visivamente la distribuzione dei dati suddivisi in intervalli, 
 ---
 # Diagramma di dispersione
 ## Cosa è?
-
+È la rappresentazione grafica di un insieme di $N$ [[#Dati a Coppie/Bivariati|dati bivariati]]
+Ogni dato bivariato$(x_{i},y_{i})$ viene visualizzato come un <mark style="background: #BBFABBA6;">punto isolato in un piano cartesiano
+</mark>
 ## A cosa serve?
-
-
+Serve a evidenziare visivamente se esiste una **correlazione** tra le due variabili
 ## Come rappresentarlo
-
+1. **Raccolgo** $N$ [[#Dati a Coppie/Bivariati|dati bivariati]]
+2. **Dispongo** i valori della prima variabile sull'asse delle ascisse e quelli della seconda sull'asse delle ordinate
+3. **Traccio** un punto per ogni dato bivario 
 
 
