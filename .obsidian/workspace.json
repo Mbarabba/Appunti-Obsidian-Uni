@@ -39,12 +39,14 @@
             "id": "860bee85eb0fe40f",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/Statistica/Slide Prof/PSI-2026-03-03.pdf"
+                "file": "Secondo Anno/Secondo Semestre/Statistica/Statistica Descrittiva.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "PSI-2026-03-03"
+              "icon": "lucide-file",
+              "title": "Statistica Descrittiva"
             }
           }
         ],
@@ -105,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5
+    "width": 255.5,
+    "collapsed": true
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -213,6 +216,8 @@
   },
   "active": "860bee85eb0fe40f",
   "lastOpenFiles": [
+    "Secondo Anno/Secondo Semestre/Statistica/Slide Prof/PSI-2026-03-03.pdf",
+    "Secondo Anno/Secondo Semestre/Statistica/Statistica Descrittiva.md",
     "Secondo Anno/Secondo Semestre/Statistica/Slide Prof/PSI-2026-03-02.pdf",
     "Secondo Anno/Secondo Semestre/Mate 2/Appunti digitali/Struttura euclidea.md",
     "Pasted image 20260303185811.png",
@@ -239,7 +244,6 @@
     "Secondo Anno/Secondo Semestre/Mate 2/Argomenti fondamentali Analisi/Integrali.md",
     "Secondo Anno/Secondo Semestre/Mate 2/Argomenti fondamentali Analisi/Derivate.md",
     "Secondo Anno/Secondo Semestre/Mate 2/Argomenti fondamentali Analisi",
-    "Primo Anno/GAL/Esercitazioni/Es1.xopp",
     "Untitled.md",
     "Riduzione a scala di una matrice.md",
     "Primo Anno/GAL/Miei Appunti/Combinazioni Lineari.md",
@@ -250,7 +254,6 @@
     "Primo Anno/GAL/Miei Appunti/Autovettori.md",
     "Secondo Anno/Primo Semestre/RSO/SO/Scheduling dei processi/Dispatcher.md",
     "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Thread.md",
-    "Secondo Anno/Primo Semestre/RSO/SO/Processi e Thread/Processi.md",
     "Pasted image 20260218131611.png",
     "Pasted image 20260216113323.png",
     "Pasted image 20260216090806.png",
