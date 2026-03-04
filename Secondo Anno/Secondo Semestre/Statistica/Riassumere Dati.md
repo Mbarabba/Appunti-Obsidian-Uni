@@ -13,5 +13,18 @@ $$
 >- Insieme di dati = $\{ 1,0,7,4,4 \}$
 >- $N=50$
 >$$
->
+>\overline{x}=\frac{{\sum^5_{i=1}x_{i}}}{5}=\frac{{1+0+7+4+4}}{5}=\frac{16}{5}=3.2
 >$$
+
+Data una tabella di frequenza
+
+|  valori  | $f_{i}$  |
+| :------: | :------: |
+| $z_{1}$  | $f_{1}$  |
+| $z_{2}$  | $f_{2}$  |
+| $\vdots$ | $\vdots$ |
+| $z_{M}$  | $f_{M}$  |
+$$
+\overline{x}=\frac{{z_{1}\cdot f_{1}+z_{2}\cdot f_{2}+\dots+z_{M}f_{M}}}{N}
+$$
+$$N=f_{1}+f_{2}+\dots+f_{M}$$
