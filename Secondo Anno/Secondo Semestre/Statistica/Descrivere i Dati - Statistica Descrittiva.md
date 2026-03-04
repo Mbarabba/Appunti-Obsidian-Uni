@@ -121,6 +121,9 @@ Serve a evidenziare visivamente se esiste una **correlazione** tra le due variab
 >[!example]
 >Rileviamo il numero di anni di scuola e la pulsazione a riposo in un campione di $N=10$ individui
 >$$
->\begin{gather} (12,73) & (16,67) & 
+>\begin{gather} (12,73) & (16,67) & (13,74) & (18,63) & (19,73) \\
+>(12,84) & (18,60) & (19,62) & (12,76) & (14,71)
 \end{gather}
 >$$
+>Vogliamo vedere se esiste una tendenza, quindi disegnamo il diagramma di dispersione
+
