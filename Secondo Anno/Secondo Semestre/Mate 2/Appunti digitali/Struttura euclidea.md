@@ -195,8 +195,7 @@ a_{21}x_{1}+a_{22}x_{2}=b_{2}
 \end{cases}
 $$
 Questo sistema composto da 2 [[#Retta nel piano|rette nel piano]] ha <mark style="background: #BBFABBA6;">3 possibili soluzioni</mark> che <mark style="background: #ADCCFFA6;">dipendo dalla presenza di **parallelità**</mark> tra le rette o meno
-## Quando 2 rette sono parallele?
-### Metodo del determinante
+## Numero di soluzioni del sistema ($\det(A)$)
 Associo al sistema la matrice
 $$
 A = \begin{pmatrix}
@@ -221,6 +220,8 @@ $$
 $$
 1. Se $\det(A)=0 \implies \text{rette parallele }\implies0 \text{ oppure }\infty \text{ soluzioni}$ 
 2. Se $\det(A)\not=0 \implies \text{rette incidenti}\implies 1 \text{ soluzione}$
+
+## Quando 2 rette sono parallele?
 ### Parallelismo nella rappresentazione Cartesiana
 Posso dire che due rette sono parallele quando $\vec{a_{1}},\vec{a_{2}}$ sono **proporzionali**, ossia :
 $$
