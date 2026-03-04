@@ -118,4 +118,9 @@ Serve a evidenziare visivamente se esiste una **correlazione** tra le due variab
 2. **Dispongo** i valori della prima variabile sull'asse delle ascisse e quelli della seconda sull'asse delle ordinate
 3. **Traccio** un punto per ogni dato bivario 
 
-
+>[!example]
+>Rileviamo il numero di anni di scuola e la pulsazione a riposo in un campione di $N=10$ individui
+>$$
+>\begin{gather} (12,73) & (16,67) & 
+\end{gather}
+>$$
