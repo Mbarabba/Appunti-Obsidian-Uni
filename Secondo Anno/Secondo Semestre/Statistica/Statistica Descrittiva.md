@@ -2,8 +2,7 @@
 È la branca della statistica dedita a <mark style="background: #BBFABBA6;">descrivere e riassumere i dati raccolti</mark>
 
 ---
-# Descrivere i Dati
-## Insieme di Dati
+# Insieme di Dati
 Misuriamo una certa **variabile** in un campione, ottenendo un <mark style="background: #ADCCFFA6;">insieme di dati</mark>
 $$\begin{gather}
 \large x_{1},x_{2},x_{3},\dots,x_{N} \\
@@ -11,7 +10,10 @@ $$\begin{gather}
 N = \text{Numero di dati} 
 \end{gather}
 $$
-## Tabella delle frequenze
+## Dati a Coppie/Bivarti
+
+---
+# Tabella delle frequenze
 Se un [[#Insieme di Dati|insieme di dati]] contiene un <mark style="background: #BBFABBA6;">numero ridotto di valori distinti</mark>, i dati possono essere riassunti in una <mark style="background: #ADCCFFA6;">tabella delle frequenze</mark>
 
 La tabella è formata da :
@@ -34,5 +36,3 @@ La tabella è formata da :
 >|Ata|5|$\frac{5}{20}=0.25=25\%$|
 >|Int|2|$\frac{2}{20}=0,1=10\%$|
 >|Nes|7|$\frac{7}{20}=0.35=35\%$|
-
-## Istogramma
