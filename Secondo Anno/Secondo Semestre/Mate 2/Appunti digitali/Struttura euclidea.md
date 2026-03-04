@@ -217,8 +217,10 @@ a_{12}
 $$
 e calcolo il suo **determinante**
 $$
-\det(A)=a_{11}a_{22}
+\det(A)=a_{11}a_{22}-a_{21}a_{12}
 $$
+1. Se $\det(A)=0 \implies \text{rette parallele }\implies0 \text{ oppure }\infty \text{ soluzioni}$ 
+2. Se $\det(A)\not=0 \implies \text{rette incidenti}\implies 1 \text{ soluzione}$
 ### Parallelismo nella rappresentazione Cartesiana
 Posso dire che due rette sono parallele quando $\vec{a_{1}},\vec{a_{2}}$ sono **proporzionali**, ossia :
 $$
