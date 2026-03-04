@@ -31,6 +31,10 @@ $$N=f_{1}+f_{2}+\dots+f_{M}$$
 
 >[!example] Esempio
 
+## Scarti
+Supponiamo che l'insieme dei dati sia costituito dagli $N$ valori $x_{1},\dots,x_{i},\dots,x_{N}$ e che $\overline{x}$ sia la media campionaria
+
+Le differenze tra ciascun valore
 ## Trasformazioni lineari affini
 
 
