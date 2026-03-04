@@ -53,16 +53,19 @@ La tabella è formata da :
 ---
 # Istogramma
 ## Cosa è?
-
+È una rappresentazione equivalente della [[#Tabella delle frequenze|tabella delle frequenze]]
 ## A cosa serve?
-## Come rappresentarlo
+Serve a mostrare visivamente la distribuzione dei dati suddivisi in intervalli, detti **classi**, allo scopo di rendere i dati più leggibili
+## Come costruire un istogramma da un insieme di dati
+1. **Disporre** i dati in ordine crescente
+2. **Scegliere
 
 
 ---
 # Diagramma di dispersione
 ## Cosa è?
-È una rappresentazione equivalente della [[#Tabella delle frequenze|tabella delle frequenze]]
-
 
 ## A cosa serve?
+
+
 ## Come rappresentarlo
