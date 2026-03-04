@@ -13,5 +13,6 @@
   "obsidian-pandoc",
   "obsidian-tasks-plugin",
   "xournalpp",
-  "obsidian-tikzjax"
+  "obsidian-tikzjax",
+  "obsidian-charts"
 ]
