@@ -69,4 +69,12 @@ K=100p
 \end{cases}
 $$
 1. **Ordiniamo** l'insieme di dati : $x_{1}\leq x_{2}\leq\dots\leq x_{N}$
-2. Se $N\cdot$
+2. Se $N\cdot p$ non è intera, $t=x_{i}$ è il dato la cui posizione $i$ è l'intero successo a $N \cdot p$
+3. Se $N \cdot p$ è intera, $r=\frac{{x_{Np}+x_{Np+1}}}{2}$ è la media aritmetica del dato in posizione $N \cdot p$ e del dato successivo
+
+>[!example] Esempio
+>Consideriamo l'insieme di dati $N=10$ dati già ordinati
+>$$-6,-3,-3,0,0,1,10,10,10,17$$
+>- $p=\frac{1}{2}:\left( N\cdot  \frac{1}{2} = 5 \right)\text{ mediana } m=\frac{{0+1}}{2}=0.5 = \text{2° quartile }q_{2}$
+>- $p=\frac{1}{4}:\left( N \cdot \frac{1}{4}=2.5 \right)\text{ 1° quartile } q_{1}=-3=25°\text{ percentile}$
+>- $p=\frac{3}{4} (N \cdot \frac{3}{4}=7.5) 3° \text{ qu}$
