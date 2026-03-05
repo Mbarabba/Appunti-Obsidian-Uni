@@ -93,5 +93,7 @@ $$
 Si può mostrare che $-1 \leq r \leq 1$
 - $r=1\iff y_{i}=ax_{i}+b\quad \text{con }a>0$
   (È una retta crescente)
+	- $|r|\geq 0.7$ correlazione significativa
 - $r=-1\iff y_{i}=ax_{i}+b \quad \text{con } a<0$
-  ()
+  (È una retta decrescente)
+	- $|r|\leq 0.3$ correlazione debole
