@@ -32,3 +32,10 @@ N = 4
  \\ S^2 = \frac{1}{13}\sum^4_{i=1}(x_{i}-\overline{x})=\frac{110}{3} \simeq 36.7
 \end{gather}
 $$
+---
+# Deviazione Campionaria
+## Cosa è? 
+La quantità $S$ definita come 
+$$
+S = \sqrt{ \frac{{{\sum^N_{i=1}}(x_{i}-\overline{x})^2}}{N-1} }
+$$
