@@ -3,6 +3,7 @@ La <mark style="background: #ADCCFFA6;">quantità numerica calcolata</mark> part
 
 ---
 # Cosa sono gli indici di posizione? 
+Gli **indici di posizione** sono dei numeri riassuntivi che servono a<mark style="background: #BBFABBA6;"> trovare e descrivere il "centro"</mark> di un insieme di dati
 
 ---
 # Media Campionaria
