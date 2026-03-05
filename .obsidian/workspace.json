@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Indici di dispersione.md",
+                "file": "Secondo Anno/Secondo Semestre/Statistica/Riassumere Dati.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Indici di dispersione"
+              "title": "Riassumere Dati"
             }
           }
         ],
@@ -107,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5,
-    "collapsed": true
+    "width": 255.5
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -216,8 +215,8 @@
   },
   "active": "6fc42a470fa1b155",
   "lastOpenFiles": [
-    "Secondo Anno/Secondo Semestre/Statistica/Riassumere Dati.md",
     "Indici di dispersione.md",
+    "Secondo Anno/Secondo Semestre/Statistica/Riassumere Dati.md",
     "Pasted image 20260305111937.png",
     "Secondo Anno/Secondo Semestre/Statistica/Slide Prof/PSI-2026-03-03.pdf",
     "Secondo Anno/Secondo Semestre/Statistica/Descrivere i Dati - Statistica Descrittiva.md",

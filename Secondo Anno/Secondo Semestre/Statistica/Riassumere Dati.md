@@ -95,3 +95,6 @@ Serve a dare un'idea di come e in che modo sono distribuiti i dati
 >[!example] Esempio
 >$$12,5,18,7,12,3,22,12,9,15$$
 >$$\text{Moda = } 12$$
+
+---
+# Indici di Dispersione
