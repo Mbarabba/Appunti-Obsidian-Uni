@@ -59,8 +59,26 @@ Essi rappresentano misurazioni di due variabili in un campione di $N$ individui
 ## Esempio
 $$
 \begin{gather}x = \text{ numero anni di scuola} \\
-y = \text{ pulsazioni} \\
+y = \text{ pulsazioni} \\ \\
+(12,73)  (16,67)  (13,74)  (18,63)  (19,73) \\
+(12,84)  (18,60)  (19,62)  (12,76)  (14,71)  \\
+ \\
 
-(12,73) & (16,67) & (13,74) & (18,63) & (19,73) \\
-(12,84) & (18,60) & (19,62) & (12,76) & (14,71) 
 \end{gather}$$
+```chart
+type: scatter
+series:
+  - title: Diagramma di Dispersione
+    data:
+      - {x: 12, y: 83.5}
+      - {x: 12, y: 76}
+      - {x: 12, y: 73}
+      - {x: 13, y: 74}
+      - {x: 14, y: 71}
+      - {x: 16, y: 67}
+      - {x: 18, y: 63.5}
+      - {x: 18, y: 60}
+      - {x: 19, y: 73}
+      - {x: 19, y: 62}
+beginAtZero: true
+```
