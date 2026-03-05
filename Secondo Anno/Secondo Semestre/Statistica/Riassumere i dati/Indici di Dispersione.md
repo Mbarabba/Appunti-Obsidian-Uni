@@ -67,6 +67,7 @@ y = \text{ pulsazioni} \\ \\
 \end{gather}$$
 ```chart
 type: scatter
+labels: []
 series:
   - title: Diagramma di Dispersione
     data:
@@ -82,3 +83,6 @@ series:
       - {x: 19, y: 62}
 beginAtZero: true
 ```
+---
+# Coefficiente di correlazione campionario
+Vogliamo quantificare la correlazione tra le 2 variabili $x$
