@@ -48,3 +48,4 @@ Si dispongano i valori dei dati in ordine crescente
   $$\Large m=x_{(\frac{{N+1}}{2})}$$
 - Se $N$ è **pari** :
   $$\Large m=\frac{{x_{\left( \frac{N}{2} \right)}+x_{\left( \frac{N}{2}+1 \right)}}}{2}$$
+## Percentili Campionari
