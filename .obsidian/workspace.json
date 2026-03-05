@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5
+    "width": 255.5,
+    "collapsed": true
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -201,6 +202,7 @@
   },
   "active": "6177f9ff368197dc",
   "lastOpenFiles": [
+    "Pasted image 20260305111937.png",
     "Secondo Anno/Secondo Semestre/Statistica/Slide Prof/PSI-2026-03-03.pdf",
     "Secondo Anno/Secondo Semestre/Statistica/Riassumere Dati.md",
     "Secondo Anno/Secondo Semestre/Statistica/Descrivere i Dati - Statistica Descrittiva.md",

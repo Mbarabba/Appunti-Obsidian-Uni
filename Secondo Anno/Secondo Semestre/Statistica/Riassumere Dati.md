@@ -81,3 +81,9 @@ $$
 
 ---
 # Box Plot
+## Cosa è?
+È una <mark style="background: #ADCCFFA6;">rappresentazione grafica</mark> della [[#Mediana Campionaria|mediana]]e dei [[#Mediana Campionaria#Percentili Campionari|quartili]]  di un insieme di dati
+## Cosa fa? 
+Serve a dare un'idea di come e in che modo sono distribuiti i dati
+## Rappresentazione grafica
+![[Pasted image 20260305111937.png]]
