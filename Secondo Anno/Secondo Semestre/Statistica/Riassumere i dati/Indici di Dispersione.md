@@ -17,6 +17,8 @@ Ora consideriamo $(x_{i}-\overline{x})^2$, facendone la media otteniamo :
 $$
 \text{Varianza Campionaria }= S^2=\frac{1}{N-1}\sum^N_{i=1}(x_{i}-\overline{x})^2
 $$
+## Difetto
+L'unità di **misura** usata è <mark style="background: #BBFABBA6;">diversa rispetto ai dati originali</mark>
 ## Cosa indica?
 Data la [[Indici di posizione#Media Campionaria|media campionaria]] di un insieme di dati, la varianza campionaria <mark style="background: #BBFABBA6;">indica quanto i dati si allontanino / avvicinino ad essa</mark>
 ## Esempio
@@ -27,6 +29,6 @@ N = 4
    
 \overline{x} =\frac{{0+3+7+14}}{4}=\frac{24}{4}=6 
  \\
- \\
+ \\ S^2 = \frac{1}{13}\sum^4_{i=1}(x_{i}-\overline{x})=\frac{110}{3} \simeq 36.7
 \end{gather}
 $$
