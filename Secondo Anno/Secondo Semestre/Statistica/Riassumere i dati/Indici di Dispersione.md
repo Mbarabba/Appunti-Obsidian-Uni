@@ -111,10 +111,16 @@ y = \text{ pulsazioni } \\
 \overline{x} = 15.3 \\
 S^2_{x}=9.12 \\
 S_{x}=\sqrt{ S^2_{x} }=3.02
-\end{cases} \\
+\end{cases} \\ \\
+ 
 \begin{cases}
 \overline{y}=70.3 \\
-S^2_{y}=54.23
-\end{cases}
+S^2_{y}=54.23 \\
+S_{y}=\sqrt{ S^2_{y} }=7.36
+\end{cases} \\
+ \\ \sum^n_{i=1}x_{i}y_{i}=10603 \\
+  \\
+ 
+\text{Troviamo infine } r = \frac{{10603-10 \cdot 15.3 \cdot 70.3}}{9 \cdot 3.02 \cdot 7.36} = -0.76 = \text{ correlazione negativa}
 \end{gather}
 $$
