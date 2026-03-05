@@ -35,7 +35,8 @@ $$
 ---
 # Deviazione Campionaria
 ## Cosa è? 
-La quantità $S$ definita come 
 $$
 S = \sqrt{ \frac{{{\sum^N_{i=1}}(x_{i}-\overline{x})^2}}{N-1} }
 $$
+è la radice quadrata della [[#Varianza Campionaria]], a differenza di essa però utilizza la stessa unità di misura dell'insieme dei dati 
+## Disuguaglianza di Chebyshev
