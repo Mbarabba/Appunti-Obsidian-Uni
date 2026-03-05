@@ -97,3 +97,24 @@ Si può mostrare che $-1 \leq r \leq 1$
 - $r=-1\iff y_{i}=ax_{i}+b \quad \text{con } a<0$
   (È una retta decrescente)
 	- $|r|\leq 0.3$ correlazione debole
+## Esempio
+$$
+\begin{gather} x = \text{ numero di anni di scuola} \\
+y = \text{ pulsazioni } \\
+ \\
+\begin{matrix}
+(12, 73) & \quad (16, 67) & \quad (13, 74) & \quad (18, 63) & \quad (19, 73) \\[2ex]
+(12, 84) & \quad (18, 60) & \quad (19, 62) & \quad (12, 76) & \quad (14, 71)
+\end{matrix} \\
+ \\
+\begin{cases}
+\overline{x} = 15.3 \\
+S^2_{x}=9.12 \\
+S_{x}=\sqrt{ S^2_{x} }=3.02
+\end{cases} \\
+\begin{cases}
+\overline{y}=70.3 \\
+S^2_{y}=54.23
+\end{cases}
+\end{gather}
+$$
