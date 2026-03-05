@@ -49,3 +49,10 @@ Si dispongano i valori dei dati in ordine crescente
 - Se $N$ è **pari** :
   $$\Large m=\frac{{x_{\left( \frac{N}{2} \right)}+x_{\left( \frac{N}{2}+1 \right)}}}{2}$$
 ## Percentili Campionari
+Fissato un numero $K\in[0,100]$ , $K$-esimo percentile è definito come quel valore $t$ tale che :
+- Almeno il $K\%$ dei dati è $\leq t$
+- Almeno il $(100-K)\%$ dei dati è $\geq t$
+### Casi più importanti
+$$k= 25, 50, 75$$
+Scriviamo $p=\frac{K}{100}\in[0,1]\iff K=100p$
+- **$p$** è la percentuale di $K$ in proporzione matematica
