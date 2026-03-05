@@ -77,4 +77,7 @@ $$
 >$$-6,-3,-3,0,0,1,10,10,10,17$$
 >- $p=\frac{1}{2}:\left( N\cdot  \frac{1}{2} = 5 \right)\text{ mediana } m=\frac{{0+1}}{2}=0.5 = \text{2° quartile }q_{2}$
 >- $p=\frac{1}{4}:\left( N \cdot \frac{1}{4}=2.5 \right)\text{ 1° quartile } q_{1}=-3=25°\text{ percentile}$
->- $p=\frac{3}{4} (N \cdot \frac{3}{4}=7.5) 3° \text{ qu}$
+>- $p=\frac{3}{4} :(N \cdot \frac{3}{4}=7.5)  \text{  3° quartile } q_{3}=10=75° \text{ percentile}$
+
+---
+# Box Plot
