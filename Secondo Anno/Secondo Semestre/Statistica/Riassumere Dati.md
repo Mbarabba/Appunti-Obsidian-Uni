@@ -55,4 +55,18 @@ Fissato un numero $K\in[0,100]$ , $K$-esimo percentile è definito come quel val
 ### Casi più importanti
 $$k= 25, 50, 75$$
 Scriviamo $p=\frac{K}{100}\in[0,1]\iff K=100p$
-- **$p$** è la percentuale di $K$ in proporzione matematica
+- **$p$** è la percentuale di $K$ in <mark style="background: #BBFABBA6;">proporzione matematica</mark>
+
+Da qui otteniamo che :
+- $p=\frac{1}{4}:k=25\text{-esimo percentile}=\text{primo quartile }q_{1}$
+- $p=\frac{1}{2}:K=50\text{-esimo percentile}=\text{secondo quartile} q_{2} =\text{mediana }$
+- $p=\frac{3}{4}:K=75\text{-esimo percentile}=\text{terzo quartile }q_{3}$
+### Come si calcola il $K$-esimo percentile $t$?
+$$
+\text{Scriviamo } \begin{cases}
+p=\frac{K}{100} \\
+K=100p
+\end{cases}
+$$
+1. **Ordiniamo** l'insieme di dati : $x_{1}\leq x_{2}\leq\dots\leq x_{N}$
+2. Se $N\cdot$
