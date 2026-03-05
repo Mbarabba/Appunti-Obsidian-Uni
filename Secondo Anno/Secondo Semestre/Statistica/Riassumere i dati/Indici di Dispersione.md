@@ -15,5 +15,8 @@ $$
 $$\text{gli scarti positivi e negativi si compensano}$$
 Ora consideriamo $(x_{i}-\overline{x})^2$, facendone la media otteniamo :
 $$
-\text{Varianza Campionaria }= S^2=\frac{1}{N-1}\sum^N_{i=1}(x_{i})
+\text{Varianza Campionaria }= S^2=\frac{1}{N-1}\sum^N_{i=1}(x_{i}-\overline{x})^2
 $$
+## Cosa indica?
+Data la [[Indici di posizione#Media Campionaria|media campionaria]] di un insieme di dati, la varianza campionaria <mark style="background: #BBFABBA6;">indica quanto i dati si allontanino / avvicinino ad essa</mark>
+## Esempio
