@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati/Indici di posizione.md",
-                "mode": "source",
+                "file": "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati/Indici di Dispersione.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Indici di posizione"
+              "title": "Indici di Dispersione"
             }
           }
         ],
@@ -107,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5
+    "width": 255.5,
+    "collapsed": true
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -215,8 +216,9 @@
   },
   "active": "6fc42a470fa1b155",
   "lastOpenFiles": [
-    "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati/Indici di Dispersione.md",
+    "Pasted image 20260305123942.png",
     "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati/Indici di posizione.md",
+    "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati/Indici di Dispersione.md",
     "Secondo Anno/Secondo Semestre/Statistica/Descrivere i Dati - Statistica Descrittiva.md",
     "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati",
     "Indici di dispersione.md",
@@ -253,7 +255,6 @@
     "Primo Anno/GAL/Miei Appunti/Base.md",
     "Primo Anno/GAL/Miei Appunti/Applicazioni Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Autovettori.md",
-    "Secondo Anno/Primo Semestre/RSO/SO/Scheduling dei processi/Dispatcher.md",
     "Pasted image 20260218131611.png",
     "Pasted image 20260216113323.png",
     "Pasted image 20260216090806.png",

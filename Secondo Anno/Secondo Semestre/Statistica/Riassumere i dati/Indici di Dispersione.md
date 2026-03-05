@@ -43,3 +43,8 @@ $$
 Dato un insieme di dati e la sua [[Indici di posizione#Media Campionaria|Media Campionaria]] $\overline{x}$ insieme alla sua Deviazione Campionaria $S$
 
 $\forall c\in \mathbb{R}:c>1$ la frazione di dati $\alpha$ che appartiene all'intervallo $(\overline{x}-c \cdot S,\overline{x} + c \cdot S)$ soddisfa la seguente disuguaglianza
+
+---
+# Scarto Interquartile
+Per costruzione, l'intervallo $[q_{1},q_{3}]$ <mark style="background: #BBFABBA6;">contiene almeno il $50\%$ dei dati</mark>
+![[Pasted image 20260305123942.png]]
