@@ -87,3 +87,11 @@ $$
 Serve a dare un'idea di come e in che modo sono distribuiti i dati
 ## Rappresentazione grafica
 ![[Pasted image 20260305111937.png]]
+
+---
+# Moda
+È il **valore** che <mark style="background: #BBFABBA6;">si verifica con maggior frequenza</mark> nell'insieme dei dati
+
+>[!example] Esempio
+>$$12,5,18,7,12,3,22,12,9,15$$
+>$$\text{Moda = } 12$$
