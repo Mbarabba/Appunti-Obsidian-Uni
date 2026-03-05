@@ -21,8 +21,12 @@ $$
 Data la [[Indici di posizione#Media Campionaria|media campionaria]] di un insieme di dati, la varianza campionaria <mark style="background: #BBFABBA6;">indica quanto i dati si allontanino / avvicinino ad essa</mark>
 ## Esempio
 $$
-\begin{gather}x_{1}=0, x_{2}=3,x_{3}=7,x_{4}=14 \\
- \\ 
-\overline{x} = 
+\begin{gather}x_{1}=0, x_{2}=3,x_{3}=7,x_{4}=14 \\  \\
+N = 4 
+  \\ \\
+   
+\overline{x} =\frac{{0+3+7+14}}{4}=\frac{24}{4}=6 
+ \\
+ \\
 \end{gather}
 $$
