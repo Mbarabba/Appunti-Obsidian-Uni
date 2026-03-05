@@ -40,3 +40,6 @@ S = \sqrt{ \frac{{{\sum^N_{i=1}}(x_{i}-\overline{x})^2}}{N-1} }
 $$
 è la radice quadrata della [[#Varianza Campionaria]], a differenza di essa però utilizza la stessa unità di misura dell'insieme dei dati 
 ## Disuguaglianza di Chebyshev
+Dato un insieme di dati e la sua [[Indici di posizione#Media Campionaria|Media Campionaria]] $\overline{x}$ insieme alla sua Deviazione Campionaria $S$
+
+$\forall c\in \mathbb{R}:c>1$ la frazione di dati $\alpha$ che appartiene all'intervallo $(\overline{x}-c \cdot S,\overline{x} + c \cdot S)$ soddisfa la seguente disuguaglianza
