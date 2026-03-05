@@ -2,6 +2,9 @@
 La <mark style="background: #ADCCFFA6;">quantità numerica calcolata</mark> partendo da un insieme di dati $N$ si chiama **statistica**
 
 ---
+# Cosa sono gli indici di posizione? 
+
+---
 # Media Campionaria
 Supponiamo di avere un campione di $N$ dati i cui valori sono 
 $$\large x_{1},x_{2},\dots,x_{i},\dots,x_{n}$$
