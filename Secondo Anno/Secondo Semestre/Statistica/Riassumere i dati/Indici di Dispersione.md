@@ -3,5 +3,17 @@ gli **indici di dispersione** (o indici di variabilità) sono grandezze matemati
 
 ---
 # Varianza Campionaria
-
 ## Cosa è?
+Fissiamo un insieme di dati 
+$$x_{1},x_{2},\dots,x_{N}$$
+e ne calcoliamo la [[Indici di posizione#Media Campionaria|media campionaria]]
+$$\overline{x}=\frac{{x_{1}+x_{0}+\dots+x_{N}}}{N}$$
+ora consideriamo gli [[Indici di posizione#Scarti|scarti]] $x_{i}-\overline{x}$ rispetto alla media, la somma di tutti gli scarti è nulla
+$$
+\sum^N_{i=1}(x_{i}-\overline{x})=0
+$$
+$$\text{gli scarti positivi e negativi si compensano}$$
+Ora consideriamo $(x_{i}-\overline{x})^2$, facendone la media otteniamo :
+$$
+\text{Varianza Campionaria }= S^2=\frac{1}{N-1}\sum^N_{i=1}(x_{i})
+$$
