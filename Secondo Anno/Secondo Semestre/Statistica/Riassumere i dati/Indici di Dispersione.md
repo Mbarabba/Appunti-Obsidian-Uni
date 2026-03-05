@@ -48,3 +48,19 @@ $\forall c\in \mathbb{R}:c>1$ la frazione di dati $\alpha$ che appartiene all'in
 # Scarto Interquartile
 Per costruzione, l'intervallo $[q_{1},q_{3}]$ <mark style="background: #BBFABBA6;">contiene almeno il $50\%$ dei dati</mark>
 ![[Pasted image 20260305123942.png]]
+
+---
+# Correlazione
+Consideriamo un insieme di $N$ dati a coppie
+$$
+(x_{1},y_{1}) \quad (x_{2},y_{2}) \quad (x_{3},y_{3}) \quad \dots \quad (x_{N},y_{N})
+$$
+Essi rappresentano misurazioni di due variabili in un campione di $N$ individui
+## Esempio
+$$
+\begin{gather}x = \text{ numero anni di scuola} \\
+y = \text{ pulsazioni} \\
+
+(12,73) & (16,67) & (13,74) & (18,63) & (19,73) \\
+(12,84) & (18,60) & (19,62) & (12,76) & (14,71) 
+\end{gather}$$
