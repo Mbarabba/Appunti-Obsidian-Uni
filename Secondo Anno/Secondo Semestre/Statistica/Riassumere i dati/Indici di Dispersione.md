@@ -85,4 +85,13 @@ beginAtZero: true
 ```
 ---
 # Coefficiente di correlazione campionario
-Vogliamo quantificare la correlazione tra le 2 variabili $x$
+Vogliamo quantificare la correlazione tra le 2 variabili $x$ e $y$, ossia la tendenza per cui a valori di $x$ grandi corrispondono valori di $y$ grandi o piccoli
+
+$$\large
+r = \frac{{\sum^N_{i=1}(x_{i-\overline{x}})(y_{i}-\overline{y})}}{(N-1)S_{x}S_{y}}
+$$
+Si può mostrare che $-1 \leq r \leq 1$
+- $r=1\iff y_{i}=ax_{i}+b\quad \text{con }a>0$
+  (È una retta crescente)
+- $r=-1\iff y_{i}=ax_{i}+b \quad \text{con } a<0$
+  ()
