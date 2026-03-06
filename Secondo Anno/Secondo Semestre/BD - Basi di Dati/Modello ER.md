@@ -37,3 +37,11 @@
 ---
 # Generalizzazioni
 Rappresentano legami logici tra un entità $E$ detta **genitore**, e una o più entità $E_{1},\dots,E_{n}$ dette entità figlie, di cui $E$ è più generale 
+
+Uno generalizzazione può essere di due tipi 
+1. **Completa**
+   L'unione delle istanze delle sottoentità è uguale all'insieme delle istanze dell'entità padre
+   
+2. **Incompleta**
+   mette in relazione una o più entità $E_{1},E_{2},\dots ,E_{N}$ con un entità $E$, che le comprende come un caso particolare 
+   ![[Pasted image 20260306183834.png]]
