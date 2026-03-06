@@ -10,5 +10,11 @@
 - **Attributi**
   Descrivono le <mark style="background: #BBFABBA6;">proprietà elementari</mark> di entità o relazioni
   ![[Pasted image 20260306180307.png]]
+- **Attributi Composti**
+  Si ottengono raggruppando attributi di una medesima entità o relazione che presentano affinità nel loro significato o uso
+  ![[Pasted image 20260306180720.png]]
+- **Relazione / Associazione**
+  Rappresentano i legami logici tra 2 o più entità 
+  ![[Pasted image 20260306180900.png]]
 
  
