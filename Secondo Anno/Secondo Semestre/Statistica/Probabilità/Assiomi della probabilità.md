@@ -24,6 +24,9 @@ Uni <mark style="background: #BBFABBA6;">insieme di esiti $A \subseteq \Omega$</
 Diciamo che un evento $A$ si verifica se <mark style="background: #BBFABBA6;">l'esito dell'esperimento è contenuto in $A$</mark>
 
 ## Operazioni insiemistiche sugli eventi
+- **Unione** $A \cup B \iff \text{ Si verifica A o B (o entrambi)}$
+- **Intersezione** $A \cap B\iff \text{Si verificano A e B}$
+- **Complementare** $A^c \iff \text{Non si verifica A}$
 ## Esempio
 1. $\Omega=\{ 1,2,3,4,5,6 \}$
 	1. $A=\text{"Esce un numero pari"}=\{ 2,4,6 \}$  
@@ -31,4 +34,8 @@ Diciamo che un evento $A$ si verifica se <mark style="background: #BBFABBA6;">l'
 	3. $C=\text{"Esce un numero pari o multiplo di 3"}=A \cup B = \{ 2,3,4,6 \}$
 	4. $D=\text{"Esce un numero pari e multiplo di 3"}=A \cap B= \{ 6 \}$
 2. $\Omega=\{ 0,1,2,\dots,999,1000 \}$
-	1. $E=\text{"Almeno 550 intervistati votano A"}=s$
+	1. $E=\text{"Almeno 550 intervistati votano A"}=\{ 550,551,\dots,1000 \}$
+	2. $F=\text{"Meno di 550 intervistati votano A"}=E^c=\{ 0,1,2,\dots,549 \}$
+	3. $G=\text{"2000 intervistati votano A"}=\emptyset$
+3. $\Omega=[0,\infty)$
+	1. $H=\text{"La particella è emessa dopo più di 3600 sec"}=(3600,\infty)=\{ x \in \mathbb{R} : x>3600 \}$
