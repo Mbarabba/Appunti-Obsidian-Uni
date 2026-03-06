@@ -13,8 +13,12 @@
 - **Attributi Composti**
   Si ottengono raggruppando attributi di una medesima entità o relazione che presentano affinità nel loro significato o uso
   ![[Pasted image 20260306180720.png]]
+- 
 - **Relazione / Associazione**
   Rappresentano i legami logici tra 2 o più entità 
   ![[Pasted image 20260306180900.png]]
+	- **Cardinalità**
+	  Dicono quante volte in una relazione tra entità, un'occorrenza di una di queste entità può essere legata a occorrenze delle altre entità coinvolte
+		- **1 a 1**
 
  
