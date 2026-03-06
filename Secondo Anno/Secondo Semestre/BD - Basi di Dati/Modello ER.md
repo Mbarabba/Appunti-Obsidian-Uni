@@ -9,7 +9,11 @@
 	- **Identificatore Identità**
 	  Strumento per l'identificazione univoca delle occorrenze di un'entità
 		- **Identificatore interno**
-	  
+			  Formato da soli attributi interni all'entità
+			  ![[Pasted image 20260306183107.png]]
+		- **Identificatore Esterno**
+		  Formato da uno o più attributi dell'entità oltre a entità esterne attraverso relazioni
+		  ![[Pasted image 20260306183216.png]]	  
 
 - **Attributi**
   Descrivono le <mark style="background: #BBFABBA6;">proprietà elementari</mark> di entità o relazioni
@@ -30,3 +34,6 @@
   Coppia di valori che si associa a ogni entità che partecipa a una relazione
   Specifica il numero minimo e massimo di occorrenze della relazione cui ciascuna occorrenza di una entità può partecipare
   ![[Pasted image 20260306182324.png]] 
+---
+# Generalizzazioni
+Rappresentano legami logici tra un entità $E$ detta **genitore**, e una o più entità $E_{1},\dots,E_{n}$ dette entità figlie, di cui $E$ è più generale 
