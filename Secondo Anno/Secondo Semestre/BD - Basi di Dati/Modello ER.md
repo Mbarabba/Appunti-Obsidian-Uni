@@ -6,6 +6,10 @@
 - **Entità**
   Rappresentano classi di oggetti che hanno proprietà comuni ed esistenza "autonoma" ai fini dell'applicazione d'interesse
   ![[Pasted image 20260306180210.png]]
+	- **Identificatore Identità**
+	  Strumento per l'identificazione univoca delle occorrenze di un'entità
+		- **Identificatore interno**
+	  
 
 - **Attributi**
   Descrivono le <mark style="background: #BBFABBA6;">proprietà elementari</mark> di entità o relazioni
@@ -14,6 +18,8 @@
 	  È possibile associare ad un attributo una cardinalità per indicarne :
 		- L'opzionalità
 		- Atributi multivalore
+		  ![[Pasted image 20260306182521.png]]
+		  
 - **Attributi Composti**
   Si ottengono raggruppando attributi di una medesima entità o relazione che presentano affinità nel loro significato o uso
   ![[Pasted image 20260306180720.png]] 
