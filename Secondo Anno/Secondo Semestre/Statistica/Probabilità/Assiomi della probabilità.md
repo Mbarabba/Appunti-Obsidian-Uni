@@ -42,4 +42,15 @@ Diciamo che un evento $A$ si verifica se <mark style="background: #BBFABBA6;">l'
 ---
 # Probabilità
 ## Cosa è?
-Funzione che assegna, in modo **coerente** (rispetta gli assiomi), a ogni evento $A \subseteq \Omega$ un **grado di fiducia** $P(A)$
+Funzione che assegna, in modo **coerente** (rispetta gli assiomi), a ogni evento $A \subseteq \Omega$ un **grado di fiducia** $P(A)$ (tra 0 e 1) che contribuiscono al verificarsi di $A$
+
+$$P:P(\{ A \subseteq \Omega \})\to[0,1]=[0\%,100\%]$$
+## Interpretazioni
+Sono possibili <mark style="background: #BBFABBA6;">diverse interpretazioni della probabilità</mark>
+### Soggettivista
+$$P(A)=\text{prezzo "equo" di una scommessa
+che paga 1 se si verifica A (altrimenti 0)}$$
+
+>[!example] Esempio
+>$$A=\text{L'italia vince i prossimi Europei di calcio}$$
+>$P(A)=0.4 : \text{Vendo a 0.41}$
