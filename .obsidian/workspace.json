@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Progettazione di una BD.md",
+                "file": "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Modello ER.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Progettazione di una BD"
+              "title": "Modello ER"
             }
           }
         ],
@@ -216,8 +216,9 @@
   },
   "active": "6fc42a470fa1b155",
   "lastOpenFiles": [
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/SQL.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Progettazione di una BD.md",
+    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Modello ER.md",
+    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/SQL.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/DBMS.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L01 - Introduzione alle basi di dati - thumbs WPS (2026).pdf",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L00 - Introduzione al corso - thumbs WPS (2026).pdf",
@@ -258,7 +259,6 @@
     "Riduzione a scala di una matrice.md",
     "Primo Anno/GAL/Miei Appunti/Combinazioni Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Sottospazi Vettoriali.md",
-    "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
     "Pasted image 20260218131611.png",
     "Pasted image 20260216113323.png",
     "Pasted image 20260216090806.png",
