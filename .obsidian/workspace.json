@@ -39,14 +39,12 @@
             "id": "6fc42a470fa1b155",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/Statistica/Probabilità/Assiomi della probabilità.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/01_IntroCorso(1.5ore)-2026-Turno M-Z-- Audio.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Assiomi della probabilità"
+              "icon": "lucide-file-text",
+              "title": "01_IntroCorso(1.5ore)-2026-Turno M-Z-- Audio"
             }
           }
         ],
@@ -107,8 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5,
-    "collapsed": true
+    "width": 255.5
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -216,8 +213,13 @@
   },
   "active": "6fc42a470fa1b155",
   "lastOpenFiles": [
-    "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati/Indici di Dispersione.md",
+    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/03_a SistemiSocioTecniciECritici(1ora)-2023.pdf",
+    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/02_c_Studi di Caso (2).pdf",
+    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/02_b-Intro OOA-OOD cap 1 Larman.pdf",
+    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/02__a-Modelli di processo-2025.pdf",
+    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/01_IntroCorso(1.5ore)-2026-Turno M-Z-- Audio.pdf",
     "Secondo Anno/Secondo Semestre/Statistica/Probabilità/Assiomi della probabilità.md",
+    "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati/Indici di Dispersione.md",
     "Secondo Anno/Secondo Semestre/Statistica/Probabilità",
     "Secondo Anno/Secondo Semestre/Statistica/Untitled.canvas",
     "Pasted image 20260305131228.png",
@@ -240,10 +242,6 @@
     "Excalidraw/Drawing 2026-03-03 11.55.17.excalidraw.md",
     "Secondo Anno/Secondo Semestre/Mate 2/Appunti Scritti/PDF/2.pdf",
     "Excalidraw/Drawing 2026-03-03 11.49.05.excalidraw.md",
-    "Secondo Anno/Secondo Semestre/Mate 2/Appunti Scritti/PDF/Mate - 1_annotated.pdf",
-    "Secondo Anno/Secondo Semestre/Mate 2/Appunti Scritti/2.pdf",
-    "Secondo Anno/Secondo Semestre/Mate 2/Appunti Scritti/PDF",
-    "Secondo Anno/Secondo Semestre/Mate 2/Appunti Scritti/Mate - 1_annotated.pdf",
     "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Pumping Lemma.md",
     "Primo Anno/Architettura/5 - Datapath/Datapath Multiciclo.md",
     "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
@@ -258,7 +256,6 @@
     "Primo Anno/GAL/Miei Appunti/Spazi Vettoriali.md",
     "Primo Anno/GAL/Miei Appunti/Base.md",
     "Primo Anno/GAL/Miei Appunti/Applicazioni Lineari.md",
-    "Primo Anno/GAL/Miei Appunti/Autovettori.md",
     "Pasted image 20260218131611.png",
     "Pasted image 20260216113323.png",
     "Pasted image 20260216090806.png",
