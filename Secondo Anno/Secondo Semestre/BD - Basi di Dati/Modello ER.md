@@ -4,5 +4,4 @@
 ---
 # Costrutti
 - **Entità**
-  ```erDiagram
-  ```
+  Rappresentano classidi oggetti che hanno proprietà comuni ed esistenza "autonoma "
