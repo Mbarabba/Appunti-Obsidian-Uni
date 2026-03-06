@@ -39,3 +39,7 @@ Diciamo che un evento $A$ si verifica se <mark style="background: #BBFABBA6;">l'
 	3. $G=\text{"2000 intervistati votano A"}=\emptyset$
 3. $\Omega=[0,\infty)$
 	1. $H=\text{"La particella è emessa dopo più di 3600 sec"}=(3600,\infty)=\{ x \in \mathbb{R} : x>3600 \}$
+---
+# Probabilità
+## Cosa è?
+Funzione che assegna, in modo **coerente** (rispetta gli assiomi), a ogni evento $A \subseteq \Omega$ un **grado di fiducia** $P(A)$
