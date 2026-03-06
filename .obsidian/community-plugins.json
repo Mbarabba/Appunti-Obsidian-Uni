@@ -3,7 +3,6 @@
   "better-export-pdf",
   "better-word-count",
   "callout-manager",
-  "code-styler",
   "obsidian-excalidraw-plugin",
   "execute-code",
   "highlightr-plugin",
@@ -14,5 +13,6 @@
   "obsidian-tasks-plugin",
   "xournalpp",
   "obsidian-tikzjax",
-  "obsidian-charts"
+  "obsidian-charts",
+  "code-styler"
 ]

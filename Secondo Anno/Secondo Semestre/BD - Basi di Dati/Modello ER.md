@@ -4,4 +4,15 @@
 ---
 # Costrutti
 - **Entità**
-  Rappresentano classidi oggetti che hanno proprietà comuni ed esistenza "autonoma "
+  Rappresentano classi di oggetti che hanno proprietà comuni ed esistenza "autonoma" ai fini dell'applicazione d'interesse
+    ```mermaid
+	  erDiagram
+    NOME_ENTITA {
+        tipo_dato nome_attributo_chiave PK
+        tipo_dato nome_attributo_1
+        tipo_dato nome_attributo_2
+    }
+    ```
+
+- **Relazioni / Associazioni**
+ 
