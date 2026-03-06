@@ -10,15 +10,17 @@
 - **Attributi**
   Descrivono le <mark style="background: #BBFABBA6;">proprietà elementari</mark> di entità o relazioni
   ![[Pasted image 20260306180307.png]]
+	- **Cardinalità di un attributo**
+	  È possibile associare ad un attributo una cardinalità per indicarne :
+		- L'opzionalità
+		- Atributi multivalore
 - **Attributi Composti**
   Si ottengono raggruppando attributi di una medesima entità o relazione che presentano affinità nel loro significato o uso
-  ![[Pasted image 20260306180720.png]]
-- 
+  ![[Pasted image 20260306180720.png]] 
 - **Relazione / Associazione**
   Rappresentano i legami logici tra 2 o più entità 
   ![[Pasted image 20260306180900.png]]
-	- **Cardinalità**
-	  Dicono quante volte in una relazione tra entità, un'occorrenza di una di queste entità può essere legata a occorrenze delle altre entità coinvolte
-		- **1 a 1**
-
- 
+- **Cardinalità**
+  Coppia di valori che si associa a ogni entità che partecipa a una relazione
+  Specifica il numero minimo e massimo di occorrenze della relazione cui ciascuna occorrenza di una entità può partecipare
+  ![[Pasted image 20260306182324.png]] 
