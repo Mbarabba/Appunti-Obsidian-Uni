@@ -5,14 +5,10 @@
 # Costrutti
 - **Entità**
   Rappresentano classi di oggetti che hanno proprietà comuni ed esistenza "autonoma" ai fini dell'applicazione d'interesse
-    ```mermaid
-	  erDiagram
-    NOME_ENTITA {
-        tipo_dato nome_attributo_chiave PK
-        tipo_dato nome_attributo_1
-        tipo_dato nome_attributo_2
-    }
-    ```
+  ![[Pasted image 20260306180210.png]]
 
-- **Relazioni / Associazioni**
+- **Attributi**
+  Descrivono le <mark style="background: #BBFABBA6;">proprietà elementari</mark> di entità o relazioni
+  ![[Pasted image 20260306180307.png]]
+
  
