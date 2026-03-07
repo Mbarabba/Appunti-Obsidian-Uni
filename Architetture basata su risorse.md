@@ -16,4 +16,13 @@ Le risorse possono essere :
 |    POST    | Crea una nuova risorsa           |
 |    GET     | Recupera lo stato di una risorsa |
 |   DELETE   | Elimina una risorsa              |
-I messaggi in REST sono completamente **auto-descrittivi**, contenono tutti i metadati necessa
+- I messaggi in REST sono completamente **auto-descrittivi**, contenono tutti i metadati necessari per la loro implementazione 
+- L'esecuzione è **stateless**, dopo ogni operazione il componente dimentica tutto del chiamante, rendendo le operazioni idempotenti e semplificando la scalabilità del sistema
+---
+# Vantaggi e Svantaggi
+## Vantaggi
+- Semplicità
+## Svantaggi
+- Complessità di comunicazione
+---
+# Confronto con le altre architetture
