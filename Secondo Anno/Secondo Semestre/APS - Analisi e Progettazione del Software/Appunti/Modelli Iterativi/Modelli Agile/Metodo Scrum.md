@@ -4,6 +4,8 @@
 Ciascuna iterazione, chiamata **sprint**, ha una durata fissa
 
 ---
+# Caratteristiche
+---
 # Principi
 - **Visibilità**
   Gli aspetti significativi del progetto devono essere visibili a tutti
@@ -29,5 +31,16 @@ Ciascuna iterazione, chiamata **sprint**, ha una durata fissa
   Chiude il progetto, completa la documentazione richiesta, i manuali d'uso e valuta i benefici tratti dal progetto
 ---
 # Termini 
+
+| Termini                                | Definizione                                                                                             |
+| :------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Scrum                                  | Un meeting giornaliero che esami i progressi e definisce le priorità del lavoro da svolgere quel giorno |
+| Sprint                                 | Un'iterazione di sviluppo                                                                               |
+| Incremento potenzialmente rilasciabile | L'incremento software fornito da uno sprint                                                             |
+| Velocity                               | Una stima di quanto lavoro il team può fare in un singolo sprint                                        |
+| Product Backlog                        | Elenco di elementi da fare                                                                              |
+| Sprint Backlog                         | Insieme delle attività necessarie per realizzare le varie voci del Product Backlog                      |
+
+
 ---
 # Ciclo di uno Scrum Sprint
