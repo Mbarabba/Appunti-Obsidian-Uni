@@ -13,6 +13,8 @@ Ciascuna iterazione, chiamata **sprint**, ha una durata fissa
   Responsabile che lo Scrum venga applicato correttamente
 ---
 # Fasi
+- **Fase iniziale** 
+  Fasi di pianificazione schematica in cui sis
 ---
 # Termini 
 ---
