@@ -187,4 +187,36 @@ erDiagram
 ```
 ---
 # Cardinalità
-Vengono specificate per ciascuna partecipazione di [[]]
+Vengono specificate per ciascuna partecipazione di [[Entità]] a una relazione
+
+Dicono quante volte, in una relazione tra [[Entità]], un'occorrenza di una di queste entià può essere legata a occorrenze delle altre entità coinvolte
+```mermaid
+graph TD
+    %% Entità
+    P[Persona]
+    A[Attività lavorativa]
+    C[Città]
+
+    %% Relazioni
+    L{Lavoro}
+    N{Nascita}
+
+    %% Collegamenti con cardinalità
+    P ---|"(0,n)"| L
+    L ---|"(1,n)"| A
+    
+    P ---|"(1,1)"| N
+    N ---|"(1,n)"| C
+
+    %% Stili
+    style P fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style A fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style L fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style N fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+
+```
+
+## Cardinalità 1 a 1
+## Cardinalità 1 a molti
+## Cardinalità molti a molti
