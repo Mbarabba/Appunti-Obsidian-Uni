@@ -16,4 +16,4 @@ Le risorse possono essere :
 |    POST    | Crea una nuova risorsa           |
 |    GET     | Recupera lo stato di una risorsa |
 |   DELETE   | Elimina una risorsa              |
-I messaggi in REST sono completamente **auto-descrittivi**, conten
+I messaggi in REST sono completamente **auto-descrittivi**, contenono tutti i metadati necessa
