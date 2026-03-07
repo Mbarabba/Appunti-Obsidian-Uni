@@ -43,7 +43,17 @@ erDiagram
 
 ---
 # Tipi di relazione
+## Relazioni Ricorsive
+Sono relazioni tra un [[Entità]] e se stessa, nelle relazioni di questo tipo è necessario aggiungere la specifica dei ruoli
+```mermaid
+graph TD
+    S[Sovrano] --- R{Successione}
+    R ---|Successore| S
+    R ---|Predecessore| S
 
+    style S fill:#cce8f4,stroke:#004a7c,stroke-width:2px,color:#004a7c
+    style R fill:#cce8f4,stroke:#004a7c,stroke-width:2px,color:#004a7c
+```
 
 ---
 # Attributi
