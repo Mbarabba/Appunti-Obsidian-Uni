@@ -1,7 +1,5 @@
 # Cosa sono?
 Sono dei costrutti del [[Introduzione Modello ER|Modello ER]] che hanno lo scopo di rappresentare classi di oggetti che hanno proprietà comuni ed esistenza autonoma
->[!tip] Precisazione
->Tutti i grafici che vedrete da ora in poi sono grafici di **modelli concettuali** disegnati secondo la notazione di **Chen**
 
 ```mermaid
 flowchart LR
@@ -26,6 +24,15 @@ graph LR
     style A fill:#ffffff,stroke:#333,stroke-width:1px
     style S fill:#ffffff,stroke:#333,stroke-width:1px
 ```
+
+```mermaid
+erDiagram
+    IMPIEGATO {
+        string Cognome
+        int Eta
+        float Stipendio
+    }
+```
 ## Attributi Composti
 Può risultare comodo raggruppare attributi di una medesima entità che presentano affinità nel loro significato o uso
 
@@ -38,6 +45,14 @@ graph TD
     
     style E fill:#f9f9f9,stroke:#333,stroke-width:2px
     style A fill:#fff,stroke:#333,stroke-width:1px
+```
+
+```mermaid
+erDiagram
+    STUDENTE {
+        string Nome
+        string Cognome
+    }
 ```
 ---
 # Identificatori
@@ -71,6 +86,20 @@ graph LR
     %% Stili Attributi normali (Grigio chiaro)
     style M fill:#b3b3b3,stroke:#333,stroke-width:1px,color:#000
     style I fill:#b3b3b3,stroke:#333,stroke-width:1px,color:#000
+```
+```mermaid
+erDiagram
+    AUTOMOBILE {
+        string targa PK
+        string modello
+    }
+
+    PERSONA {
+        date data_nascita PK
+        string cognome PK
+        string nome PK
+        string indirizzo
+    }
 ```
 ## Identificatori Esterni
 Se l'identificatore è formato da attributi e [[Relazioni]]
