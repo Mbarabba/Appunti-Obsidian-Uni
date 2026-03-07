@@ -24,5 +24,6 @@ Per gestire la complessità, separiamo l'organizzazione dei componenti software 
 # Stili Architetturali
 - [[Architettura a Strati]]
 - [[Architettura orientata ai servizi]]
+- [[Architettura a Oggetti]]
 - [[Architettura publish subscribe]]
 - [[Architettura P2P]]
