@@ -54,6 +54,7 @@ erDiagram
         string Cognome
     }
 ```
+## Cardinalità degli attributi 
 ---
 # Identificatori
 Sono degli [[#Attributi di una Entità|attributi]] univoci definiti per ogni entità dediti alla identificazione di un entità

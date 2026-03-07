@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Concettuale ER/Relazioni.md",
+                "file": "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Concettuale ER/Entità.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Relazioni"
+              "title": "Entità"
             }
           }
         ]
@@ -187,8 +187,8 @@
   },
   "active": "6177f9ff368197dc",
   "lastOpenFiles": [
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Concettuale ER/Introduzione Modello ER.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Concettuale ER/Relazioni.md",
+    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Concettuale ER/Introduzione Modello ER.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Concettuale ER/Entità.md",
     "Pasted image 20260307092005.png",
     "IMG/Pasted image 20260305111937.png",
