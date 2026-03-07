@@ -47,12 +47,85 @@ erDiagram
 Sono relazioni tra un [[Entità]] e se stessa, nelle relazioni di questo tipo è necessario aggiungere la specifica dei ruoli
 ```mermaid
 graph TD
-    S[Sovrano] --- R{Successione}
-    R ---|Successore| S
-    R ---|Predecessore| S
+    S[Sovrano] ---|Successore| R{Successione}
+    R{Successione} ---|Predecessore| S
+```
+ ```mermaid
+ erDiagram
+    SOVRANO {
+        int ID_Sovrano PK
+        string Nome
+        int ID_Predecessore FK
+    }
+    
+    SOVRANO ||--o| SOVRANO : "e' succeduto da"
+ ```
+## Relazioni $n$-arie
+Sono relazioni che coinvolgono dalle 2 alle $n$ entità
+```mermaid
+graph TD
+    %% Entità
+    D[Docente]
+    C[CorsoDiLaurea]
+    F[Facoltà]
 
-    style S fill:#cce8f4,stroke:#004a7c,stroke-width:2px,color:#004a7c
-    style R fill:#cce8f4,stroke:#004a7c,stroke-width:2px,color:#004a7c
+    %% Relazioni
+    Aff{Afferenza}
+    App{Appartenenza}
+
+    %% Attributi Docente
+    D --- CF((<u>CodiceFiscale</u>))
+    D --- E((Età))
+
+    %% Attributi CorsoDiLaurea
+    C --- N_C((Nome))
+    C --- Cod((<u>Codice</u>))
+
+    %% Attributi Facoltà
+    F --- N_F((<u>Nome</u>))
+
+    %% Attributo Relazione
+    Aff --- Dat((Data))
+
+    %% Collegamenti
+    D --- Aff
+    Aff --- C
+    C --- App
+    App --- F
+
+    %% Stili
+    style D fill:#cce8f4,stroke:#004a7c,stroke-width:1px
+    style C fill:#cce8f4,stroke:#004a7c,stroke-width:1px
+    style F fill:#cce8f4,stroke:#004a7c,stroke-width:1px
+    style Aff fill:#cce8f4,stroke:#004a7c,stroke-width:1px
+    style App fill:#cce8f4,stroke:#004a7c,stroke-width:1px
+```
+```mermaid
+erDiagram
+    DOCENTE {
+        string CodiceFiscale PK
+        int Eta
+    }
+
+    FACOLTA {
+        string Nome PK
+    }
+
+    CORSO_DI_LAUREA {
+        string Codice PK
+        string Nome
+        string Nome_Facolta FK
+    }
+
+    AFFERENZA {
+        string CF_Docente PK, FK
+        string Codice_Corso PK, FK
+        date Data
+    }
+
+    FACOLTA ||--o{ CORSO_DI_LAUREA : "ha"
+    DOCENTE ||--o{ AFFERENZA : "partecipa"
+    CORSO_DI_LAUREA ||--o{ AFFERENZA : "riceve"
 ```
 
 ---
