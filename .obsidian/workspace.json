@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Processo UP.md",
+                "file": "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Modelli Iterativi/Modello UP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Processo UP"
+              "title": "Modello UP"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 364.5
+    "width": 364.5,
+    "collapsed": true
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -187,9 +188,9 @@
   "active": "6177f9ff368197dc",
   "lastOpenFiles": [
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Processo a cascata.md",
-    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Processo UP.md",
+    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Modelli Iterativi/Modello UP.md",
+    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Modelli Iterativi",
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Analisi e progettazione orientata agli oggetti.md",
-    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Untitled",
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/_TOC_.md",
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti",
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/02__a-Modelli di processo-2025.pdf",
@@ -232,7 +233,6 @@
     "Excalidraw/Drawing 2026-03-03 11.49.05.excalidraw.md",
     "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Pumping Lemma.md",
     "Primo Anno/Architettura/5 - Datapath/Datapath Multiciclo.md",
-    "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
     "Untitled.canvas"
   ]
 }
