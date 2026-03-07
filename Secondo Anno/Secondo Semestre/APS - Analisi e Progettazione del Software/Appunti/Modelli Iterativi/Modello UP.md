@@ -17,4 +17,6 @@ Facendo crescere il sistema in modo **incrementale** nel tempo
 # Fasi
 Un progetto UP organizza il lavoro e le iterazioni in quattro fasi temporali principali successive
 1. **Ideazione / Avviamento**
-   Visione approssimativa,
+   Visione approssimativa, viene effettuata una visione approssimativa, studio economi , portata e stime approssimative di costi / tempistiche
+2. **Elaborazione**
+   Visione più raffinata, implementazione iterativa del nucleo dell'architettura, risoluzione dei rischi maggiori, identificazione della maggior parte dei requisiti e della portata, stime più realistiche
