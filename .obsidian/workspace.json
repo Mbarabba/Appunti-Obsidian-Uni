@@ -11,12 +11,14 @@
             "id": "6177f9ff368197dc",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/02__a-Modelli di processo-2025.pdf"
+                "file": "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Analisi e progettazione orientata agli oggetti.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "02__a-Modelli di processo-2025"
+              "icon": "lucide-file",
+              "title": "Analisi e progettazione orientata agli oggetti"
             }
           }
         ]
@@ -76,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 364.5
+    "width": 364.5,
+    "collapsed": true
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -184,9 +187,10 @@
   },
   "active": "6177f9ff368197dc",
   "lastOpenFiles": [
+    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/02__a-Modelli di processo-2025.pdf",
+    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Analisi e progettazione orientata agli oggetti.md",
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/02_b-Intro OOA-OOD cap 1 Larman.pdf",
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/01_IntroCorso(1.5ore)-2026-Turno M-Z-- Audio.pdf",
-    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/02__a-Modelli di processo-2025.pdf",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L03 - Progettazione concettuale - thumbs (2023).pdf",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/Modello Relazionale - MR.pdf",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Generalizzazioni.md",
@@ -215,7 +219,6 @@
     "Pasted image 20260306183834.png",
     "Pasted image 20260306183216.png",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L01 - Introduzione alle basi di dati - thumbs WPS (2026).pdf",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L00 - Introduzione al corso - thumbs WPS (2026).pdf",
     "Secondo Anno/Secondo Semestre/Statistica/Probabilità/Assiomi della probabilità.md",
     "Secondo Anno/Secondo Semestre/Statistica/Untitled.canvas",
     "Secondo Anno/Secondo Semestre/Statistica/Descrivere i Dati - Statistica Descrittiva.md",
@@ -230,7 +233,6 @@
     "Primo Anno/GAL/Miei Appunti/Sistemi Lineari.md",
     "Primo Anno/GAL/Miei Appunti/Matrici.md",
     "Secondo Anno/Secondo Semestre/Mate 2/Argomenti fondamentali Analisi/Trigonometria e Coordinate Polari.md",
-    "Secondo Anno/Secondo Semestre/Mate 2/Argomenti fondamentali Analisi/Taylor e Limiti.md",
     "Untitled.canvas"
   ]
 }
