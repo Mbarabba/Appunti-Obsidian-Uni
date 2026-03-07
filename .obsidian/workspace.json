@@ -28,7 +28,7 @@
               "type": "markdown",
               "state": {
                 "file": "Architettura Publish-Subscribe.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -202,6 +202,7 @@
   },
   "active": "9d5adc12510e57e8",
   "lastOpenFiles": [
+    "Pasted image 20260307180336.png",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Cos'è un Architettura Software?.md",
     "Architettura Publish-Subscribe.md",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Architettura a Oggetti.md",
@@ -247,7 +248,6 @@
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/SQL.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Progettazione di una BD.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/DBMS.md",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Modello ER.md",
     "Secondo Anno/Secondo Semestre/Statistica/Untitled.canvas",
     "Untitled.canvas"
   ]
