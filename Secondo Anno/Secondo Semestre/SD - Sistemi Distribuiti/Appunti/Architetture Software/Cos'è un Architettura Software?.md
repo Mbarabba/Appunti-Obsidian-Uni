@@ -22,4 +22,7 @@ Per gestire la complessità, separiamo l'organizzazione dei componenti software 
   Riguarda l'istanziazione finale, devo vengono posizionati i componenti software sulle macchine fisiche
 ---
 # Stili Architetturali
-- [[Arch]]
+- [[Architettura a Strati]]
+- [[Architettura orientata ai servizi]]
+- [[Architettura publish subscribe]]
+- [[Architettura P2P]]
