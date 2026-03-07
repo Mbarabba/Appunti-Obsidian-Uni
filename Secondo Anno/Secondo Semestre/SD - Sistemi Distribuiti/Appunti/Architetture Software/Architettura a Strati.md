@@ -30,7 +30,14 @@ Ogni livello offre un'interfaccia specifica al livello superiore nascondendo i d
 ---
 # Vantaggi e Svantaggi
 ## Vantaggi
+- Separazione delle responsabilità
+- Modularità 
+- Sostituibilità
+- Manutenibilità
+- Comprensibilità
 ## Svantaggi
-- Possibile presenza di forti **dipendenze** tra layer
+- Forti dipendenze tra layer
+- Rigidità
+- Overhead
 ---
 # Confronto con le altre architetture
