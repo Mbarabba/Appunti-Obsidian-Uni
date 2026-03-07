@@ -2,6 +2,16 @@
 È un architettura software organizzata in $L_{N}$ livelli
 
 ---
+# Vantaggi
+## Vantaggi
+- Favorisce la separazione delle responsabilità
+- Manutenibilità
+- Comprensibilità
+- Sostituibilità dei componenti
+## Svantaggi
+- Possibile presenza di forti dipendenze tra layer
+
+---
 # Componenti
 Un architettura è costituita da 3 componenti :
 1. **Servizio** : Cosa viene offerto
@@ -19,4 +29,8 @@ Esistono 3 varianti di organizzazione a livelli
 Sono permesso solo downcalls 
 ![[Pasted image 20260307161916.png]]
 ## Mista
-Da un determinato livello $L_{i}$ posso raggiungere più di un livello
+ Le downcalls che partono da un determinato livello $L_{i}$ posso raggiungere più di un livello
+ ![[Pasted image 20260307162036.png]]
+## Organizzazione
+Sono permesse **callbacks**
+![[Pasted image 20260307162109.png]]
