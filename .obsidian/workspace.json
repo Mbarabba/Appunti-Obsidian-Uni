@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Modelli Iterativi/Modelli Agile/Metodo Scrum.md",
-                "mode": "preview",
+                "file": "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Cos'è un Architettura Software.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Metodo Scrum"
+              "title": "Cos'è un Architettura Software"
             }
           }
         ],
@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 364.5,
-    "collapsed": true
+    "width": 364.5
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -203,6 +202,12 @@
   "active": "9d5adc12510e57e8",
   "lastOpenFiles": [
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Modelli Iterativi/Modelli Agile/Metodo Scrum.md",
+    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Cos'è un Architettura Software.md",
+    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti.md",
+    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software",
+    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti",
+    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Slide Annotate/Argomento 01-Architetture_annotated.pdf",
+    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Slide Annotate",
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Domande Orale.md",
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Modelli Iterativi/Modello UP.md",
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Analisi e progettazione orientata agli oggetti.md",
@@ -217,8 +222,6 @@
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti",
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/02__a-Modelli di processo-2025.pdf",
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Slide/02_b-Intro OOA-OOD cap 1 Larman.pdf",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L03 - Progettazione concettuale - thumbs (2023).pdf",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/Modello Relazionale - MR.pdf",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Generalizzazioni.md",
     "IMG/Pasted image 20260307100953.png",
     "IMG/Pasted image 20260307100753.png",
@@ -229,12 +232,10 @@
     "IMG/Pasted image 20260306182517.png",
     "IMG/Pasted image 20260306183819.png",
     "IMG/Pasted image 20260307084610.png",
-    "Secondo Anno/Secondo Semestre/Statistica/Libro.pdf",
     "IMG/Pasted image 20260305123942.png",
     "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati/Indici di posizione.md",
     "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati/Indici di Dispersione.md",
     "Indici di dispersione.md",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L02 - Modello ER - thumbs (2023).pdf",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/SQL.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Progettazione di una BD.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/DBMS.md",
@@ -247,7 +248,6 @@
     "Excalidraw/Drawing 2026-03-03 14.54.20.excalidraw.md",
     "Excalidraw/Drawing 2026-03-03 14.13.24.excalidraw.md",
     "Excalidraw/Drawing 2026-03-03 11.55.17.excalidraw.md",
-    "Excalidraw/Drawing 2026-03-03 11.49.05.excalidraw.md",
     "Untitled.canvas"
   ]
 }
