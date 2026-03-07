@@ -14,6 +14,11 @@ Il risultato di ciascuna iterazione è un <mark style="background: #ADCCFFA6;">s
 Facendo crescere il sistema in modo **incrementale** nel tempo
 ![[Pasted image 20260307111946.png]]
 ## Vantaggi dello Sviluppo Iterativo
+- Minore probabilità di fallimento del progetto
+- Riduzione precoce dei rischi
+- Progresso visibile
+- Feedback precoce e coinvolgimento dell'utente
+- Gestione del cambiamento
 
 ----
 # Fasi
@@ -26,3 +31,8 @@ Un progetto UP organizza il lavoro e le iterazioni in quattro fasi temporali pri
    Implementazione iterativa degli elementi rimanenti, più facili e a rischio minore, e preparazione al rilascio
 4. **Transizione**
    Beta Test, rilascio
+
+![[Pasted image 20260307113550.png]]
+
+---
+# Caratteristiche
