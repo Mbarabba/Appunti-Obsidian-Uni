@@ -14,14 +14,27 @@ Descrivono le proprietà elementari di una entità
 
 Un attributo associa a ciascuna occorrenza di un entità un valore appartenente ad un insieme detto dominio
 ```mermaid
-erDiagram
-    Impiegato {
-        string Cognome
-        int Eta
-        float Stipendio
-    }
+graph LR
+    E[Impiegato] --- C([Cognome])
+    E --- A([Eta])
+    E --- S([Stipendio])
+
+    %% Stili grafici
+    style E fill:#cce8f4,stroke:#333,stroke-width:1px
+    style C fill:#ffffff,stroke:#333,stroke-width:1px
+    style A fill:#ffffff,stroke:#333,stroke-width:1px
+    style S fill:#ffffff,stroke:#333,stroke-width:1px
 ```
 ## Attributi Composti
 Può risultare comodo raggruppare attributi di una medesima entità che presentano affinità nel loro significato o uso
 
 L'insieme di attributi che si ottiene in questa maniera viene detto attributo composto
+```mermaid
+graph TD
+    E[Studente] --- A([Nome_Completo])
+    A --- N((Nome))
+    A --- C((Cognome))
+    
+    style E fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style A fill:#fff,stroke:#333,stroke-width:1px
+```
