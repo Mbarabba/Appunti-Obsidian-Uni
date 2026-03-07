@@ -15,9 +15,13 @@ Descrivono le proprietà elementari di una entità
 Un attributo associa a ciascuna occorrenza di un entità un valore appartenente ad un insieme detto dominio
 ```mermaid
 erDiagram
-    IMPIEGATO {
+    Impiegato {
         string Cognome
         int Eta
         float Stipendio
     }
-``
+```
+## Attributi Composti
+Può risultare comodo raggruppare attributi di una medesima entità che presentano affinità nel loro significato o uso
+
+L'insieme di attributi che si ottiene in questa maniera viene detto attributo composto
