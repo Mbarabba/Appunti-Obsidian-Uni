@@ -8,7 +8,12 @@ Ciascuna iterazione, chiamata **sprint**, ha una durata fissa
 - **Product Owner**
   Definisce le caratteristiche del prodotto software da realizzare e specifica le priorità tra queste caratteristiche
 - **Development Team**
-  Coloro che sviluppano il software
-- 
+  Dedicato allo sviluppo e rilascio del prodotto attraverso incrementi successivi
+- **Scrum Master**
+  Responsabile che lo Scrum venga applicato correttamente
 ---
 # Fasi
+---
+# Termini 
+---
+# Ciclo di uno Scrum Sprint
