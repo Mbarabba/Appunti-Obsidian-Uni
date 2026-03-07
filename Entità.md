@@ -1,6 +1,7 @@
 # Cosa sono?
 Sono dei costrutti del [[Introduzione Modello ER|Modello ER]] che hanno lo scopo di rappresentare classi di oggetti che hanno proprietà comuni ed esistenza autonoma
-## Rappresentazione Grafica
+>[!tip] Precisazione
+>Tutti i grafici che vedrete da ora in poi sono grafici di **modelli concettuali** disegnati secondo la notazione di **Chen**
 
 ```mermaid
 flowchart LR
@@ -38,3 +39,6 @@ graph TD
     style E fill:#f9f9f9,stroke:#333,stroke-width:2px
     style A fill:#fff,stroke:#333,stroke-width:1px
 ```
+---
+# Identificatori
+Sono degli [[#Attributi di una Entità|attributi]] univoci deti
