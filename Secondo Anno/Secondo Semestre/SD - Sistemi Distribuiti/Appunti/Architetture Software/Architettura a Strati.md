@@ -20,4 +20,17 @@ Ogni livello offre un'interfaccia specifica al livello superiore nascondendo i d
 # Modelli Comuni
 1. **Pura**
    Sono presenti solo downcall al livello immediatamente inferiore
-   
+   ![[Pasted image 20260307171510.png]]
+2. **Mista**
+   Le downcalls possono raggiungere diversi livelli "saltandone" altri
+   ![[Pasted image 20260307171620.png]]
+3. Con **Upcall**
+   Sono permesse callbacks
+   ![[Pasted image 20260307171656.png]]
+---
+# Vantaggi e Svantaggi
+## Vantaggi
+## Svantaggi
+- Possibile presenza di forti **dipendenze** tra layer
+---
+# Confronto con le altre architetture
