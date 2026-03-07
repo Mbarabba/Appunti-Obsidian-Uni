@@ -13,3 +13,8 @@ Il risultato di ciascuna iterazione è un <mark style="background: #ADCCFFA6;">s
 
 Facendo crescere il sistema in modo **incrementale** nel tempo
 ![[Pasted image 20260307111946.png]]
+----
+# Fasi
+Un progetto UP organizza il lavoro e le iterazioni in quattro fasi temporali principali successive
+1. **Ideazione / Avviamento**
+   Visione approssimativa,
