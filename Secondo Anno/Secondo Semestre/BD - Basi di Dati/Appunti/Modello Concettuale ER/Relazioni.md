@@ -218,5 +218,63 @@ graph TD
 ```
 
 ## Cardinalità 1 a 1
+```mermaid
+graph LR
+    %% Scenario 1: Ordine - Fattura
+    O1[Ordine] ---|"(0,1)"| V1{Vendita}
+    V1 ---|"(1,1)"| F1[Fattura]
+
+    %% Scenario 2: Professore - Corso
+    P2[Professore] ---|"(1,1)"| D2{Docenza}
+    D2 ---|"(0,1)"| C2[Corso]
+
+    %% Scenario 3: Impiegato - Progetto
+    I3[Impiegato] ---|"(0,1)"| Dir3{Direzione}
+    Dir3 ---|"(1,1)"| P3[Progetto]
+
+    %% Stili
+    style O1 fill:#7f7f7f,stroke:#333,color:#fff
+    style F1 fill:#7f7f7f,stroke:#333,color:#fff
+    style V1 fill:#7f7f7f,stroke:#333,color:#fff
+    
+    style P2 fill:#7f7f7f,stroke:#333,color:#fff
+    style C2 fill:#7f7f7f,stroke:#333,color:#fff
+    style D2 fill:#7f7f7f,stroke:#333,color:#fff
+    
+    style I3 fill:#7f7f7f,stroke:#333,color:#fff
+    style P3 fill:#7f7f7f,stroke:#333,color:#fff
+    style Dir3 fill:#7f7f7f,stroke:#333,color:#fff
+```
 ## Cardinalità 1 a molti
+```mermaid
+graph LR
+    %% Scenario 1: Impiego
+    P1[Persona] --- I1{Impiego}
+    I1 --- A1[Azienda]
+    P1 ---|"(0,1)"| I1
+    I1 ---|"(1,N)"| A1
+
+    %% Scenario 2: Nascita
+    P2[Persona] --- N2{Nascita}
+    N2 --- C2[Città]
+    P2 ---|"(1,1)"| N2
+    N2 ---|"(1,N)"| C2
+
+    %% Scenario 3: Ubicazione
+    Com3[Comune] --- U3{Ubicazione}
+    U3 --- Pro3[Provincia]
+    Com3 ---|"(1,1)"| U3
+    U3 ---|"(1,N)"| Pro3
+
+    %% Stili per coerenza con i tuoi appunti
+    style P1 fill:#7f7f7f,stroke:#333,color:#fff
+    style A1 fill:#7f7f7f,stroke:#333,color:#fff
+    style I1 fill:#7f7f7f,stroke:#333,color:#fff
+    style P2 fill:#7f7f7f,stroke:#333,color:#fff
+    style C2 fill:#7f7f7f,stroke:#333,color:#fff
+    style N2 fill:#7f7f7f,stroke:#333,color:#fff
+    style Com3 fill:#7f7f7f,stroke:#333,color:#fff
+    style Pro3 fill:#7f7f7f,stroke:#333,color:#fff
+    style U3 fill:#7f7f7f,stroke:#333,color:#fff
+```
 ## Cardinalità molti a molti

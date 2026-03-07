@@ -57,31 +57,31 @@ erDiagram
 ## Cardinalità degli attributi
 È il numero minimo e massimo di valori dell'attributo associai a ogni occorrenza di entità o relazione 
 ```mermaid
-graph TD
-    %% Entità
-    P[Persona]
-    A[Attività lavorativa]
-    C[Città]
+graph LR
+    I[Impiegato] --- N((Nome))
+    I ---|"(0,N)"| T((Targa auto))
+    I ---|"(0,1)"| P((Numero patente))
 
-    %% Relazioni
-    L{Lavoro}
-    N{Nascita}
-
-    %% Collegamenti con cardinalità
-    P ---|"(0,n)"| L
-    L ---|"(1,n)"| A
-    
-    P ---|"(1,1)"| N
-    N ---|"(1,n)"| C
-
-    %% Stili
-    style P fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
-    style A fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
-    style C fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
-    style L fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
-    style N fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style I fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style N fill:#b3b3b3,stroke:#333,stroke-width:1px
+    style T fill:#b3b3b3,stroke:#333,stroke-width:1px
+    style P fill:#b3b3b3,stroke:#333,stroke-width:1px
 ```
+```mermaid
+erDiagram
+    IMPIEGATO {
+        int ID_Impiegato PK
+        string Nome
+        string Numero_Patente "NULLable"
+    }
 
+    AUTO_IMPIEGATO {
+        int ID_Impiegato FK
+        string Targa_Auto PK
+    }
+
+    IMPIEGATO ||--o{ AUTO_IMPIEGATO : "possiede"
+```
 
 ---
 # Identificatori
