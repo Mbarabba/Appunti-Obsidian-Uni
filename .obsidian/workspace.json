@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Architetture basata su risorse.md",
+                "file": "Architettura Publish-Subscribe.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Architetture basata su risorse"
+              "title": "Architettura Publish-Subscribe"
             }
           }
         ],
@@ -203,8 +203,9 @@
   "active": "9d5adc12510e57e8",
   "lastOpenFiles": [
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Cos'è un Architettura Software?.md",
-    "Architetture basata su risorse.md",
-    "Architettura a Oggetti.md",
+    "Architettura Publish-Subscribe.md",
+    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Architettura a Oggetti.md",
+    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Architetture basata su risorse.md",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Architettura orientata ai servizi.md",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Architettura a Strati.md",
     "IMG/Pasted image 20260307162109.png",
@@ -247,7 +248,6 @@
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Progettazione di una BD.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/DBMS.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Modello ER.md",
-    "Secondo Anno/Secondo Semestre/Statistica/Probabilità/Assiomi della probabilità.md",
     "Secondo Anno/Secondo Semestre/Statistica/Untitled.canvas",
     "Untitled.canvas"
   ]

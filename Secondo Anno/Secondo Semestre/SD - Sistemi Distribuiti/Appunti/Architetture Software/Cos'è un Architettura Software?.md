@@ -26,5 +26,5 @@ Per gestire la complessità, separiamo l'organizzazione dei componenti software 
 - [[Architettura orientata ai servizi]]
 - [[Architettura a Oggetti]]
 - [[Architetture basata su risorse]]
-- [[Architettura publish subscribe]]
+- [[Architettura Publish-Subscribe]]
 - [[Architettura P2P]]

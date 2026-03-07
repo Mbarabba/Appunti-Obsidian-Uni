@@ -22,7 +22,12 @@ Le risorse possono essere :
 # Vantaggi e Svantaggi
 ## Vantaggi
 - Semplicità
+- Scalabilità
+- Messaggi Auto-descrittivi
+- Idempotenza
 ## Svantaggi
 - Complessità di comunicazione
+- Efficienza messaggi
+- Mancanza di stato sul server
 ---
 # Confronto con le altre architetture
