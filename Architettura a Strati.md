@@ -18,3 +18,6 @@ Ogni livello offre un'interfaccia specifica al livello superiore nascondendo i d
   Eccezionalmente, un livello inferiore invoca quello superiore
 ---
 # Modelli Comuni
+1. **Pura**
+   Sono presenti solo downcall al livello immediatamente inferiore
+   
