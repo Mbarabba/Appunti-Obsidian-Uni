@@ -134,3 +134,20 @@ graph LR
     style M fill:#b3b3b3,stroke:#3498db,stroke-width:3px,color:#000
     style N fill:#f39c12,stroke:#3498db,stroke-width:3px,color:#fff
 ```
+
+```mermaid
+erDiagram
+    UNIVERSITA {
+        string Nome PK
+        string Indirizzo
+    }
+
+    STUDENTE {
+        string Nome_Universita PK, FK
+        string Matricola PK
+        string Cognome
+        int Anno_di_corso
+    }
+
+    UNIVERSITA ||--o{ STUDENTE : "ha iscritti"
+```
