@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/Modello Relazionale - MR.pdf"
+                "file": "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L03 - Progettazione concettuale - thumbs (2023).pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Modello Relazionale - MR"
+              "title": "L03 - Progettazione concettuale - thumbs (2023)"
             }
           }
         ]
@@ -76,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291.5
+    "width": 364.5
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -182,8 +182,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6177f9ff368197dc",
+  "active": "a02c0f470c2f07f4",
   "lastOpenFiles": [
+    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/Modello Relazionale - MR.pdf",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L03 - Progettazione concettuale - thumbs (2023).pdf",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Generalizzazioni.md",
     "Pasted image 20260307100953.png",
@@ -215,7 +216,6 @@
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Slide/Modello Relazionale - MR.pdf",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Slide/L02 - Modello ER - thumbs (2023).pdf",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Slide/L03 - Progettazione concettuale - thumbs (2023).pdf",
-    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Slide/Argomento 01-Introduzione.pdf",
     "Secondo Anno/Secondo Semestre/Statistica/Probabilità/Assiomi della probabilità.md",
     "Secondo Anno/Secondo Semestre/Statistica/Untitled.canvas",
     "Secondo Anno/Secondo Semestre/Statistica/Descrivere i Dati - Statistica Descrittiva.md",
