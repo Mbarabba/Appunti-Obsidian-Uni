@@ -14,23 +14,10 @@ Descrivono le proprietà elementari di una entità
 
 Un attributo associa a ciascuna occorrenza di un entità un valore appartenente ad un insieme detto dominio
 ```mermaid
-flowchart LR
-    %% Entità
-    I[Impiegato]
-    
-    %% Attributo principale e sotto-attributi
-    Ind((Indirizzo))
-    V((Via))
-    N((Numero))
-    C((CAP))
-
-    %% Collegamenti
-    I --- Ind
-    Ind --- V
-    Ind --- N
-    Ind --- C
-
-    %% Stili
-    classDef entita fill:#888,stroke:#333,color:#fff;
-    class I entita;
-```
+erDiagram
+    IMPIEGATO {
+        string Cognome
+        int Eta
+        float Stipendio
+    }
+``
