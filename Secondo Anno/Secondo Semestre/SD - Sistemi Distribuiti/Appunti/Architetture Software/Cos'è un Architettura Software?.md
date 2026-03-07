@@ -1,9 +1,11 @@
 # Cos'è?
-È un organizzazione logica delle componenti di un sistema che poi sarà implementata come un sistema distribuito
-
-Essa definisce :
-- La **struttura** del sistema : 
-- Le **interfacce** :
-- I **pattern** di interazione :
+È un organizzazione logica che definisce come i vari componenti interagiscono, le interfacce e lo scambio dati
+- La **struttura** del sistema : come sono organizzati internamente i vari moduli
+- Le **interfacce** : come i pezzi comunicano tra loro
+- I **pattern** di interazione : Le regole precise dello scambio dati
 
 ---
+# Da cosa sono formate?
+Una architettura software è basata su 2 pilastri 
+1. **Componenti**
+   Sono unità modulari con 
