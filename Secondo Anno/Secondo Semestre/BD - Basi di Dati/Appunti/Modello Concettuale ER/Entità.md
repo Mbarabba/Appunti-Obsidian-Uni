@@ -54,7 +54,35 @@ erDiagram
         string Cognome
     }
 ```
-## Cardinalità degli attributi 
+## Cardinalità degli attributi
+È il numero minimo e massimo di valori dell'attributo associai a ogni occorrenza di entità o relazione 
+```mermaid
+graph TD
+    %% Entità
+    P[Persona]
+    A[Attività lavorativa]
+    C[Città]
+
+    %% Relazioni
+    L{Lavoro}
+    N{Nascita}
+
+    %% Collegamenti con cardinalità
+    P ---|"(0,n)"| L
+    L ---|"(1,n)"| A
+    
+    P ---|"(1,1)"| N
+    N ---|"(1,n)"| C
+
+    %% Stili
+    style P fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style A fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style L fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style N fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+```
+
+
 ---
 # Identificatori
 Sono degli [[#Attributi di una Entità|attributi]] univoci definiti per ogni entità dediti alla identificazione di un entità
