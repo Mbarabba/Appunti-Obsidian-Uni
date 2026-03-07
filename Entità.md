@@ -1,0 +1,2 @@
+# Cosa sono?
+Sono dei costrutti del [[Introduzione Modello ER|Modello ER]] che hanno lo scopo di rappresentare classi di oggetti che hanno proprietà comuni ed esistenza autonoma ai fini dell'applicazione 
