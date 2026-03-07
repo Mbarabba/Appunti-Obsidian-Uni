@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Architettura a Oggetti.md",
+                "file": "Architetture basata su risorse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Architettura a Oggetti"
+              "title": "Architetture basata su risorse"
             }
           }
         ],
@@ -203,6 +203,7 @@
   "active": "9d5adc12510e57e8",
   "lastOpenFiles": [
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Cos'è un Architettura Software?.md",
+    "Architetture basata su risorse.md",
     "Architettura a Oggetti.md",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Architettura orientata ai servizi.md",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Architetture Software/Architettura a Strati.md",
@@ -248,7 +249,6 @@
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Modello ER.md",
     "Secondo Anno/Secondo Semestre/Statistica/Probabilità/Assiomi della probabilità.md",
     "Secondo Anno/Secondo Semestre/Statistica/Untitled.canvas",
-    "Secondo Anno/Secondo Semestre/Statistica/Descrivere i Dati - Statistica Descrittiva.md",
     "Untitled.canvas"
   ]
 }
