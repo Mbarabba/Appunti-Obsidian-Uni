@@ -247,26 +247,20 @@ graph LR
 ```
 ## Cardinalità 1 a molti
 ```mermaid
-graph LR
+graph TD
     %% Scenario 1: Impiego
-    P1[Persona] --- I1{Impiego}
-    I1 --- A1[Azienda]
-    P1 ---|"(0,1)"| I1
-    I1 ---|"(1,N)"| A1
+    P1[Persona] -- "(0,1)" --> I1{Impiego}
+    I1 -- "(1,N)" --> A1[Azienda]
 
     %% Scenario 2: Nascita
-    P2[Persona] --- N2{Nascita}
-    N2 --- C2[Città]
-    P2 ---|"(1,1)"| N2
-    N2 ---|"(1,N)"| C2
+    P2[Persona] -- "(1,1)" --> N2{Nascita}
+    N2 -- "(1,N)" --> C2[Città]
 
     %% Scenario 3: Ubicazione
-    Com3[Comune] --- U3{Ubicazione}
-    U3 --- Pro3[Provincia]
-    Com3 ---|"(1,1)"| U3
-    U3 ---|"(1,N)"| Pro3
+    Com3[Comune] -- "(1,1)" --> U3{Ubicazione}
+    U3 -- "(1,N)" --> Pro3[Provincia]
 
-    %% Stili per coerenza con i tuoi appunti
+    %% Stili
     style P1 fill:#7f7f7f,stroke:#333,color:#fff
     style A1 fill:#7f7f7f,stroke:#333,color:#fff
     style I1 fill:#7f7f7f,stroke:#333,color:#fff
@@ -278,3 +272,30 @@ graph LR
     style U3 fill:#7f7f7f,stroke:#333,color:#fff
 ```
 ## Cardinalità molti a molti
+```mermaid
+graph TD
+    %% Scenario 1: Studente - Corso
+    S1[Studente] -- "(0,N)" --> E1{Esame}
+    E1 -- "(0,N)" --> C1[Corso]
+
+    %% Scenario 2: Montagna - Alpinista
+    M2[Montagna] -- "(0,N)" --> Sc2{Scalata}
+    Sc2 -- "(1,N)" --> A2[Alpinista]
+
+    %% Scenario 3: Macchinista - Locomotore
+    Ma3[Macchinista] -- "(1,N)" --> Ab3{Abilitazione}
+    Ab3 -- "(1,N)" --> L3[Locomotore]
+
+    %% Stili
+    style S1 fill:#7f7f7f,stroke:#333,color:#fff
+    style C1 fill:#7f7f7f,stroke:#333,color:#fff
+    style E1 fill:#7f7f7f,stroke:#333,color:#fff
+    
+    style M2 fill:#7f7f7f,stroke:#333,color:#fff
+    style A2 fill:#7f7f7f,stroke:#333,color:#fff
+    style Sc2 fill:#7f7f7f,stroke:#333,color:#fff
+    
+    style Ma3 fill:#7f7f7f,stroke:#333,color:#fff
+    style L3 fill:#7f7f7f,stroke:#333,color:#fff
+    style Ab3 fill:#7f7f7f,stroke:#333,color:#fff
+```
