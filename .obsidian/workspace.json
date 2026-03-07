@@ -11,14 +11,12 @@
             "id": "6177f9ff368197dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Generalizzazioni.md",
-                "mode": "preview",
-                "source": false
+                "file": "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/Modello Relazionale - MR.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Generalizzazioni"
+              "icon": "lucide-file-text",
+              "title": "Modello Relazionale - MR"
             }
           }
         ]
@@ -78,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 291.5
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -187,11 +184,12 @@
   },
   "active": "6177f9ff368197dc",
   "lastOpenFiles": [
+    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L03 - Progettazione concettuale - thumbs (2023).pdf",
+    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Generalizzazioni.md",
     "Pasted image 20260307100953.png",
     "Pasted image 20260307100753.png",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Modello ER.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Entità.md",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Generalizzazioni.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Relazioni.md",
     "Pasted image 20260307092005.png",
     "IMG/Pasted image 20260305111937.png",
@@ -212,7 +210,6 @@
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Modello ER.md",
     "Pasted image 20260306183834.png",
     "Pasted image 20260306183216.png",
-    "Pasted image 20260306183107.png",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L01 - Introduzione alle basi di dati - thumbs WPS (2026).pdf",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L00 - Introduzione al corso - thumbs WPS (2026).pdf",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Slide/Modello Relazionale - MR.pdf",
