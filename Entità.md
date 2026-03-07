@@ -41,4 +41,67 @@ graph TD
 ```
 ---
 # Identificatori
-Sono degli [[#Attributi di una Entità|attributi]] univoci deti
+Sono degli [[#Attributi di una Entità|attributi]] univoci definiti per ogni entità dediti alla identificazione di un entità
+
+Essi possono essere
+## Identificatori interni
+Identificatore formato da uno o più attributi di una sola entità
+```mermaid
+graph LR
+    %% Entità Automobile
+    A[Automobile] --- T((<u>Targa</u>))
+    A --- M((Modello))
+
+    %% Entità Persona
+    P[Persona] --- DN((<u>Data Nascita</u>))
+    P --- C((<u>Cognome</u>))
+    P --- N((<u>Nome</u>))
+    P --- I((Indirizzo))
+
+    %% Stili Entità (Grigio scuro)
+    style A fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style P fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+
+    %% Stili Identificatori (Azzurro per Targa, Arancione per l'identificatore composto)
+    style T fill:#3498db,stroke:#333,stroke-width:2px,color:#000
+    style DN fill:#f39c12,stroke:#333,stroke-width:2px,color:#000
+    style C fill:#f39c12,stroke:#333,stroke-width:2px,color:#000
+    style N fill:#f39c12,stroke:#333,stroke-width:2px,color:#000
+
+    %% Stili Attributi normali (Grigio chiaro)
+    style M fill:#b3b3b3,stroke:#333,stroke-width:1px,color:#000
+    style I fill:#b3b3b3,stroke:#333,stroke-width:1px,color:#000
+```
+## Identificatori Esterni
+Se l'identificatore è formato da attributi e [[Relazioni]]
+
+```mermaid
+graph LR
+    %% Attributi Studente
+    C((Cognome)) --- S
+    M((<u>Matricola</u>)) --- S
+    AC((Anno di corso)) --- S
+
+    %% Entità e Relazione (con cardinalità)
+    S[Studente] ---|"(1,1)"| I{Iscrizione}
+    I ---|"(0,N)"| U[Università]
+
+    %% Attributi Università
+    U --- N((<u>Nome</u>))
+    U --- Ind((Indirizzo))
+
+    %% Stili Entità e Relazioni (Grigio scuro)
+    style S fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style U fill:#7f7f7f,stroke:#333,stroke-width:2px,color:#fff
+    style I fill:#7f7f7f,stroke:#3498db,stroke-width:3px,color:#fff
+    
+    %% Stili Attributi Base
+    style C fill:#b3b3b3,stroke:#333,stroke-width:1px,color:#000
+    style AC fill:#b3b3b3,stroke:#333,stroke-width:1px,color:#000
+    style Ind fill:#b3b3b3,stroke:#333,stroke-width:1px,color:#000
+
+    %% Stili Identificatori (Azzurro/Arancione come nell'immagine)
+    %% Il bordo azzurro su Matricola e Iscrizione indica l'identificatore esterno
+    style M fill:#b3b3b3,stroke:#3498db,stroke-width:3px,color:#000
+    style N fill:#f39c12,stroke:#3498db,stroke-width:3px,color:#fff
+```
