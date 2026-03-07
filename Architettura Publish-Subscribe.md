@@ -31,4 +31,4 @@ I processi pubblicano notifiche su **event bus** (middleware), che le consegna i
 - Accoppiamento Temporale Residuo
 - Costo di Elaborazione Elevato
 ---
-# Confronto con le altre Architettur
+# Confronto con le altre Architetture
