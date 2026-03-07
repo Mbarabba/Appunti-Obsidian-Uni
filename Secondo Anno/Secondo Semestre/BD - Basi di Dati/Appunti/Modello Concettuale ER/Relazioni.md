@@ -130,3 +130,61 @@ erDiagram
 
 ---
 # Attributi
+Un attributo su una relazione associa a ogni occorrenza del legame un valore appartenente a un dominio specifico. Descrive una proprietà che ha senso **solo se il legame esiste**
+```mermaid
+graph TD
+    %% Entità
+    S[squadra]
+    G[giocatore]
+
+    %% Relazione
+    C{composizione}
+
+    %% Attributi Squadra
+    S --- n1((<u>nome</u>))
+    S --- a((allenatore))
+    S --- p((presidente))
+
+    %% Attributi Giocatore
+    G --- n2((<u>nome</u>))
+    G --- i((indirizzo))
+
+    %% Attributi Relazione
+    C --- r((ruolo))
+    C --- an((anno))
+
+    %% Collegamenti
+    S --- C
+    C --- G
+
+    %% Stili (basati sull'immagine originale)
+    style S fill:#003366,stroke:#333,stroke-width:1px,color:#fff
+    style G fill:#003366,stroke:#333,stroke-width:1px,color:#fff
+    style C fill:#003366,stroke:#333,stroke-width:1px,color:#fff
+```
+```mermaid
+erDiagram
+    SQUADRA {
+        string nome PK
+        string allenatore
+        string presidente
+    }
+
+    GIOCATORE {
+        string nome PK
+        string indirizzo
+    }
+
+    COMPOSIZIONE {
+        string nome_squadra PK, FK
+        string nome_giocatore PK, FK
+        string ruolo
+        int anno
+    }
+
+    SQUADRA ||--o{ COMPOSIZIONE : "ha"
+    GIOCATORE ||--o{ COMPOSIZIONE : "milita in"
+```
+---
+# Cardinalità
+Vengono specificate per ciascuna partecipazione di [[]]

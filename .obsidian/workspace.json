@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello ER/Relazioni.md",
-                "mode": "preview",
+                "file": "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Concettuale ER/Relazioni.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -187,9 +187,11 @@
   },
   "active": "6177f9ff368197dc",
   "lastOpenFiles": [
+    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Concettuale ER/Introduzione Modello ER.md",
+    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Concettuale ER/Relazioni.md",
+    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Concettuale ER/Entità.md",
     "Pasted image 20260307092005.png",
     "IMG/Pasted image 20260305111937.png",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello ER/Relazioni.md",
     "IMG/Pasted image 20260306182517.png",
     "IMG/Pasted image 20260306183819.png",
     "IMG/Pasted image 20260307084610.png",
@@ -198,10 +200,8 @@
     "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati/Indici di posizione.md",
     "Secondo Anno/Secondo Semestre/Statistica/Riassumere i dati/Indici di Dispersione.md",
     "Indici di dispersione.md",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello ER/Entità.md",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello ER/Introduzione Modello ER.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L02 - Modello ER - thumbs (2023).pdf",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello ER",
+    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Concettuale ER",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/SQL.md",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Progettazione di una BD.md",
@@ -211,7 +211,6 @@
     "Pasted image 20260306183216.png",
     "Pasted image 20260306183107.png",
     "Pasted image 20260306182521.png",
-    "Pasted image 20260306182324.png",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L01 - Introduzione alle basi di dati - thumbs WPS (2026).pdf",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Slide/L00 - Introduzione al corso - thumbs WPS (2026).pdf",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Slide/Modello Relazionale - MR.pdf",
