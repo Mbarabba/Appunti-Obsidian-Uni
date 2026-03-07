@@ -1,6 +1,12 @@
 # Cos'è?
 Il processo **UP** - Unified Process è un processo **iterativo** per lo sviluppo del software per la costruzione di sistemi orientati agli oggetti
-
+## Caratteristiche
+- Iterativo e incrementale
+- Enfasi sul modello invece del linguaggio naturale
+- Guidato dal rischio e dal cliente
+- Feedback dell'utente
+- Sviluppo centrato sull'architettura, le prime interazioni sono focalizzate sulla costruzione e la stabilizzazione dell'architettura
+- Verificare spesso la qualità del software attraverso i tedst
 ---
 # Cos'è lo sviluppo iterativo ed evolutivo?
 È un approccio al ciclo di vita / sviluppo del software organizzato in una serie di progetti brevi di lunghezza fissa chiamati **iterazioni**
@@ -33,6 +39,3 @@ Un progetto UP organizza il lavoro e le iterazioni in quattro fasi temporali pri
    Beta Test, rilascio
 
 ![[Pasted image 20260307113550.png]]
-
----
-# Caratteristiche
