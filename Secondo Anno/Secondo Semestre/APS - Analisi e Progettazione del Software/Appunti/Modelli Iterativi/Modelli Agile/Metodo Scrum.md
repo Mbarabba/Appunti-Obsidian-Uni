@@ -5,6 +5,14 @@ Ciascuna iterazione, chiamata **sprint**, ha una durata fissa
 
 ---
 # Caratteristiche
+- Release Brevi
+- Progetto semplice
+- Refactoring
+- Testing first
+- Pair Programming
+- Collective Ownership
+- Continuous Integration
+- Cliente sul campo
 ---
 # Principi
 - **Visibilità**
@@ -42,5 +50,3 @@ Ciascuna iterazione, chiamata **sprint**, ha una durata fissa
 | Sprint Backlog                         | Insieme delle attività necessarie per realizzare le varie voci del Product Backlog                      |
 
 
----
-# Ciclo di uno Scrum Sprint
