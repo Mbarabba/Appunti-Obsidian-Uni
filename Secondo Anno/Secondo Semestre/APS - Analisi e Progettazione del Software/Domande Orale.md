@@ -1,0 +1,2 @@
+- Descrivere UP
+- Descrivere Scrum
