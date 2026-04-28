@@ -1,14 +1,17 @@
 #!/bin/bash
-cd /home/nicholas/Desktop/Uni || exit 
 
-# Controllo di modifiche
-if [[ -z $(git status -s) ]]; then
-  echo "Nessuna modifica"
-  exit 0
-fi
+# Vai nella cartella dello script (dove ci sono gli appunti)
+cd "$(dirname "$0")"
 
-# Faccio il commit
+# Aggiunge tutti i nuovi file o modifiche
 git add .
-timestamp=$(date +"%d-%m-%Y %H:%M")
-git commit -m "Backup automatico . $timestamp"
-git push origin master
+
+# Crea il messaggio di commit con data e ora corrente
+timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+git commit -m "Appunti Uni: Backup automatico del $timestamp"
+
+# Carica su GitHub
+# Sostituisci 'main' con il nome del tuo branch se diverso
+git push origin main
+
+echo "✅ Backup completato con successo alle $timestamp!"

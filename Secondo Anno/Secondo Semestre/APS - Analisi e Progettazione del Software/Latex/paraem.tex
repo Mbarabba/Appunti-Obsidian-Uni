@@ -1,0 +1,68 @@
+% --- 1. GEOMETRIA DELLA PAGINA ---
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=15mm,
+    right=15mm,
+    top=20mm,
+    bottom=20mm
+}
+\usepackage{float}
+
+% --- 2. FONT E LEGGIBILITÀ ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[sfdefault]{inter} 
+\renewcommand{\familydefault}{\sfdefault}
+
+% --- 3. DIAGRAMMI UML E GRAFICA ---
+\usepackage{tikz}
+\usepackage{pgf-umlsd} % Per i diagrammi di sequenza (SSD)
+% NOTA: Se tikz-uml non è installato nel tuo sistema, questo pacchetto darà errore.
+% Se lo usi, assicurati di avere il file tikz-uml.sty nella cartella del progetto.
+\usepackage{tikz-uml} 
+
+\usetikzlibrary{
+    arrows.meta,
+    shapes.symbols, % Fondamentale per la forma "note" (il foglietto)
+    positioning,    % Per posizionare gli elementi "a destra di"
+    calc
+}
+
+% DEFINIZIONE STILE NOTA (Così non devi scriverlo ogni volta)
+\tikzset{
+    note/.style={
+        draw, 
+        fill=yellow!10, % Un giallino leggero per farla sembrare una nota
+        shape=note, 
+        text width=4cm, 
+        font=\scriptsize, 
+        inner sep=7pt,
+        shadow={opacity=0.2}
+    }
+}
+
+% --- 4. CODICE SORGENTE ---
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{codegreen},
+    breaklines=true,
+    frame=single
+}
+
+% --- 5. ALTRI ESSENZIALI ---
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\graphicspath{ {./figures/} {../figures/} }
+\usepackage{enumitem}
+\usepackage{tabularx}
+\setlist{nosep}
+
+% Caricare hyperref SEMPRE per ultimo
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}

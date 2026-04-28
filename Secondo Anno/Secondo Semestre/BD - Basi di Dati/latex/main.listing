@@ -1,0 +1,5 @@
+REATE TABLE Insegnante (
+        CF CHAR(16) PRIMARY KEY, -- Identificatore univoco
+        Nome VARCHAR(50) NOT NULL,
+        Cognome VARCHAR(50) NOT NULL
+    );
