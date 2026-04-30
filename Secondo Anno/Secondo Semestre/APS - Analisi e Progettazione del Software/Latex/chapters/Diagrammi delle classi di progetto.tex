@@ -1,0 +1,70 @@
+\section{Cosa è il Modello delle classi di progetto?}
+Il diagramma delle classi di progetto (DCD - Design Class Diagram)  è un modello utilizzato per la modellazione statica degli oggetti, e sserve a illustrare le classi, le interfacce e le relative associazioni adottando uno specifico punto di vista software
+\subsection{Differenza col Modello di Dominio}
+A differenza del \textbf{Modello di Dominio}, \uline{che rappresenta gli elementi da un punto di vista concettuale e slegato dal codice}, il \textbf{Modello delle Classi di Progetto} \uline{definisce come il sistema sarà realmente implementato}
+\section{Parole Chiave}
+\begin{tabularx}{\linewidth}{|l|X|X|}
+\hline \textbf{Parola Chiave} & \textbf{Significato} & \textbf{Esempio di suo} \\ \hline
+\texttt{<<actor>>} & il classificatore è un attore & Nei diagrammi delle classi, sopra al nome di un classificatore \\ \hline
+\texttt{<<interface>>} & Il classificatore è un'interfaccia & Nei diagrammi delle classi, sopra al nome di un classificatore \\ \hline
+\texttt{\{abstract\}} & l'elemento è astratto, non può essere instanziato & Nei diagrammi delle classi, dopo il nome di un classificatore o il nome di un'operazione \\ \hline
+\texttt{\{ordered\}} & Un insieme di oggetti ha un ordine predefinito & Nei diagrammi delle classi, a un'estremità di associazione \\ \hline
+\end{tabularx}
+\section{Componenti del DCD}
+\subsection{Classificato (Classi e interfacce)}
+\subsubsection{Classi}
+Rappresentano la struttura portante e modellano un insieme di oggetti con attributi e operazioni comuni
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{Schermata_20260429_113757.png}
+    \label{Rappresentazione grafica di una classe}
+\end{figure}
+\subsection{Interfacce}
+Definiscono un "contratto" (un insieme di operazioni pubbliche senza implementazione) che le classi devono rispettare.
+\subsection{Attributi}
+Gli attributi modella le proprietà locali e interne di una classe
+
+In un DCD, a differenza del modello di dominio concettuale, presentano dettagli tecnici specifici
+\subsubsection{Sintassi}
+Includono il nome, il tipo di dato e l'eventuale molteplicità o valore iniziale
+\subsubsection{Visibilità}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Simbolo} & \textbf{Nome} & \textbf{Semantica} \\ \hline
++ & Pubblico & Visibile a tutti \\ \hline
+- & Privato & Visibile solo alla classe \\ \hline
+\# & Protetta & Visibile alla classe e ai suoi "discendenti" \\ \hline
+\textasciitilde & Package & Visibile ad ogni elemento dello stesso package \\ \hline
+\end{tabularx}
+\subsection{Operazioni e Metodi}
+\subsubsection{Operazioni}
+Sono le dichiarazioni della firma
+\subsubsection{Metodi}
+Sono l'implementazione pratica dell'operazione
+\subsection{Associazioni}
+Le associazioni vengono disegnate come linee che uniscono le classi e si definiscono attraverso diversse proprietà 
+\subsubsection{Nome e verso}
+Si può assegnare un nome descrittivo all'asociazione.
+
+Talvolta si accompagna a un fraccia (il verso) che aiuta solo a leggere l'associazione nel senso corretto
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.65]{Schermata_20260429_121526.png}
+\end{figure}
+
+\subsubsection{Ruoli}
+Si indicano scrivendo un nome all'estremità della linea per specificare quale ruola gioca quella classe nell'associazione.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.65]{Schermata_20260429_121155.png}
+\end{figure}
+\subsubsection{Molteplicità}
+Sono dei limiti numerici posti vicino alla destinazione che indicano quanti oggetti di quela classe possono partecipare alla relazione in un dato istante
+\begin{figure}[H]
+    \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.65]{Schermata_20260429_121919.png}
+\end{figure}
+\end{figure}
+\subsection{Associazioni n-arie}

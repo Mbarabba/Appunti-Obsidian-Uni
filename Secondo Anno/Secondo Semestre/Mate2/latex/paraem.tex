@@ -1,0 +1,68 @@
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=15mm,
+    right=15mm,
+    top=20mm,
+    bottom=20mm
+}
+% --- PACCHETTI BASE ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath, amsfonts, amssymb, amsthm} % Il "must-have" per la matematica
+\usepackage{mathtools} % Estensioni per amsmath
+\usepackage{xcolor} % Per l'uso dei colori
+\usepackage{hyperref} % Per i link cliccabili nell'indice e nel testo
+\usepackage{enumitem} % Per liste personalizzate
+
+% --- DEFINIZIONE TEOREMI ---
+% Stile con testo in corsivo
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{proposition}[theorem]{Proposizione}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollario}
+
+% Stile con testo normale
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definizione}
+\newtheorem{example}[theorem]{Esempio}
+\newtheorem{remark}[theorem]{Osservazione}
+
+% --- SCORCIATOIE (COMMANDS) ---
+% Insiemi numerici classici
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+
+% Operatori comuni
+\DeclareMathOperator{\dx}{d\!} % Per il differenziale negli integrali
+\newcommand{\abs}[1]{\left| #1 \right|} % Valore assoluto automatico
+\newcommand{\norm}[1]{\left\| #1 \right\|} % Norma automatica
+
+% --- ESTETICA ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\usepackage[most]{tcolorbox}
+
+% Definiamo uno stile per le definizioni
+\newtcolorbox{definizione}[1]{
+    colback=blue!5!white,    % Sfondo azzurro chiarissimo
+    colframe=blue!75!black,  % Bordo blu scuro
+    fonttitle=\bfseries,     % Titolo in grassetto
+    title=#1,                % Il titolo è il primo argomento
+    arc=4mm,                 % Angoli arrotondati
+    enhanced,
+    attach boxed title to top left={xshift=3mm, yshift=-2mm},
+    boxed title style={colback=blue!75!black}
+}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} % Assicura la compatibilità con le versioni recenti
+\usepackage{tikz}

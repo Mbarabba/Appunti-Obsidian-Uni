@@ -81,12 +81,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/Mate 2/Appunti digitali/Derivazione di funzioni a 2 variabili.md",
+                "file": "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Casi d'uso.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Derivazione di funzioni a 2 variabili"
+              "title": "Casi d'uso"
             }
           }
         ],
@@ -147,7 +147,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -251,6 +252,7 @@
   },
   "active": "f1ab5f18a178f8eb",
   "lastOpenFiles": [
+    "Secondo Anno/Secondo Semestre/Mate 2/Appunti digitali/Derivazione di funzioni a 2 variabili.md",
     "Secondo Anno/Secondo Semestre/Mate 2/Argomenti fondamentali Analisi/Integrali.md",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Argomento 4/Cookies.md",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Argomento 4/Protocollo HTTP - Hyper Text Transfer Protocol.md",
@@ -291,7 +293,6 @@
     "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Casi d'uso.md",
     "Secondo Anno/Secondo Semestre/Statistica/Formulari/Formulario Variabili Aleatorie/Formulario Variabili Aleatorie Discrete.md",
     "Secondo Anno/Secondo Semestre/Statistica/Formulari/Formulario Probabilità.md",
-    "Secondo Anno/Secondo Semestre/Mate 2/Appunti digitali/Funzioni a più variabili.md",
     "IMG/desmos-graph.png",
     "IMG/Pasted image 20260312094747.png",
     "IMG/Pasted image 20260307180336.png",
