@@ -89,6 +89,7 @@ $$
 \newpage
 
 \section{Integrali di linea di 1ª specie}
+\subsection{Definizione}
 Data una funizione $f$ e una cruva regolare $C$ in $\R^n$, si inizia suddividendo la curva in piccoli archi di lunghezza $\Delta l$ e si sceglie un punto $P_i$ all'interno di ciascun arco.
 \begin{center}
     \begin{definizione}{Formula integrale di linea di 1ª specie}
@@ -105,8 +106,6 @@ Data una funizione $f$ e una cruva regolare $C$ in $\R^n$, si inizia suddividend
     \end{definizione}
 \end{center}
 \subsection{Come calcolarli?}
-Per caloclare un integrale di linea di 1ª specie il metodo varia in base alla parametrizzazione della curva utilizzata
-\subsubsection{Calcolo con parametri arbitrari}
 Questa è la procedura pratica utilizzata quando la curva è descritta da un parametro generico $t$, basata sull'applicazione della formula di cambiamento di variabili
 
 \vspace{\baselineskip}
@@ -131,8 +130,70 @@ Prendiamo come esempio l'integrale $\int_C xy^4 \, dl$ dove la curva $C$ è la s
         \end{itemize}
 
     \item \textbf{Restrizione della funzione alla curva}
+        \begin{itemize}
+            \item \textbf{Procedura}
 
-    Prendi la funzione integranda di partenza 
+            Prendi la funzione integranda di originaria $f(x,y)$ e sostituire al posto di $x$ e $y$ le equqzioni parametriche appena trovate, ottenendo una funzione dipendente solo da t
+            \item \textbf{Calcolo}
+
+            La nostra funzione di partenza è $f(x,y)=xy^4$
+
+            Sostituendo le equazioni parametriche otteniamo 
+            $f(x(t),y(t))=(4\cos(t))\cdot(4\sin(t))=4^5\cos(t)\sin^4(t)$
+        \end{itemize}
+    \item \textbf{Calcolo dell'elemento differenziale (d$\ell$)}
+        \begin{itemize}
+            \item \textbf{Procedura}
+
+            Calcolare le derivate delle equazioni parametriche rispetto a $t$ ($\frac{dx}{dt}$ e $\frac{dy}{dt}$), farne i quadrati, sommarli e mettere il tutto sotto radice quadrata per trovare la norma del vettore derivata.
+
+            Infine, moltiplicare per $dt$
+            \item \textbf{Calcolo}
+
+            Le derivate sono $\frac{dx}{dt}=-4\sin(t)$ e $\frac{dy}{dt}=4\cos(t)$
+
+            L'elemento differenziale diventa : 
+            \begin{gather}
+                d\ell = \sqrt{(-4\sin(t))^2+(4\cos(t))^2} dtdl \\  
+                d\ell=\sqrt{16\sin^2(t)+16\cos^2(t)}dt \\
+                d\ell=\sqrt{16(sin^2(t)+cos^2(t))}dt \\
+                d\ell=\sqrt{16} = 4dt
+            \end{gather}
+        \end{itemize}
+        \item \textbf{Risoluzione dell'integrale}
+            \begin{itemize}
+                \item \textbf{Procedura}
+
+                Moltiplicare il risultato del Passo 2 per il risultato del Passo 3, e integrare rispetto a $t$ tra gli estremi definiti al Passo 1
+                \item \textbf{Calcolo}
+
+                Mettendo tutto insieme, l'integrale diventa :
+                \begin{gather}
+                    \int^{\frac{\pi}{2}}_{-\frac{\pi}{2}}(4^5\cos(t)\sin^4(t)) \cdot 4dt\\
+                    4^6 \int^{\frac{\pi}{2}}_{-\frac{\pi}{2}} \cos(t)\sin^4(t) dt \\
+                    u = \sin(t) \\
+                    4^6 \int^1_1 u^4 du \\
+                    4^6[\frac{1}{5}-(-\frac{1}{5})] = 4^6(\frac{2}{5})
+                \end{gather}
+            \end{itemize}
 \end{enumerate}
-\subsection{Esempio di calcolo con rappresentazione grafica}
+\subsection{Interpretazione Geometrica}
+L'Interpretazione geometrica dell'integrale di linea di 1ª specie si basa fondamentalmente sul calcolo di un'area
+
+Per visualizzare questo concetto, possiamo fare un parallelo con l'integrale definito classico :
+\begin{itemize}
+    \item In un normale integrale in una singola variabile, calcoliamo l'area piana compresa tra il grafico della funzione $f(x)$ e un segmento dritto sull'asse orizzontale $x$
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{figures/integrale-come-area.jpg}
+        \label{Rappresentazione grafica integrale definito}
+    \end{figure}
+    \item Nel caso dell'integrale di linea, la "base" su cui si integra non è più un segmento rettilineo, ma una curva $C$ vera e propria, che possiamo immaginare tracciata sul piano orizzontale formato dagli assi $x$ e $y$
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.44]{figures/4.png}
+        \label{Rappresentazione grafica integrale di linea 1ª specie}
+    \end{figure}
+\end{itemize}
+In corrispondenza di ogni singolo punto lungo questa curva $C$, la funzione integranda assume un determinato valore, geometricamente, questo valore funge da altezza lungo il terzo asse (rappresentato graficamente come $f(x(l),y(l))$)
 
