@@ -1,0 +1,41 @@
+\documentclass[12pt,a4paper]{report}
+
+% Carica tutte le tue impostazioni (font, colori, grassetto rosso, codice)
+\input{paraem.tex}
+
+% --- DATI DEL DOCUMENTO ---
+\title{
+    \vspace{-2cm} % Sposta il titolo un po' più in alto
+    \Huge \textbf{Appunti di Sistemi Distribuiti} \\ 
+    \Large \textit{Corso di Laurea in Informatica A.A 25/26}
+}
+\author{
+    \textbf{Nicholas Scorrano} \\
+}
+\date{Anno Accademico 2025/2026}
+
+\begin{document}
+
+% --- FRONTESPIZIO ---
+\maketitle
+
+% --- INDICE (Cliccabile grazie a hyperref in paraem.tex) ---
+\pagenumbering{roman} % Numerazione romana per l'indice
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic} % Torna alla numerazione araba per i contenuti
+\setcounter{page}{1}
+
+% --- STRUTTURA APPUNTI ---
+% Suggerimento: crea una cartella "capitoli" e inserisci lì i file .tex
+% per tenere il progetto ordinato.
+\setcounter{chapter}{3}
+\include{chapters/Protocollo_HTTP}
+\include{chapters/Rappresentazione dei dati}
+% Se preferisci scrivere tutto qui sotto (sconsigliato per appunti lunghi), 
+% puoi cancellare gli \include e iniziare a scrivere:
+% \chapter{Introduzione}
+% ...
+
+\end{document}

@@ -51,4 +51,140 @@ Se si calcola il lavoro svolto per andare da punto A a un punto B, e poi si calc
 \subsection{Come calcolarli}
 Per gli integrali di 2ª specie esistono 2 approcci principali
 \subsubsection{Calcolo diretto tramite parametrizzazione (Metodo Standard)}
-\subsection{Rappresentazione grafica}
+Questo metodo è la procedura bruta e generale, valida per calcolare l'integrale lungo qualsiasi curva e con qualsiasi campo vettoriale
+
+\vspace{\baselineskip}
+
+Calcoliamo l'integrale della forma differenziale $\int_
+{C}3x^2y dx + (x^3+1)dy$
+\newpage
+\begin{enumerate}
+        \item \textbf{Individuazione degli estremi}
+
+            \begin{itemize}
+                \item \textbf{Procedura}
+
+                Definire le equazioni parametriche della curva $x(t),y(t)$ l'intevallo di integrazione $t \in [a,b]$ e verificare l'orientazione
+                
+                \item \textbf{Calcolo}
+
+                Per un segmento rettilineo che va dall'origine $(0,0)$ al punto $(1,1)$, la parametrizzazione più semplice è $x(t)=t$ e $y(t)=t$, con $t\in[0,1]$
+            \end{itemize}
+
+        \item \textbf{Restrizione del campo alla curva}
+
+            \begin{itemize}
+                \item \textbf{Procedura}
+
+                Prendere le singole componenti del campo vettoriale e sostituire al posto di $x$ e $y$ le equazioni parametriche trovate esprimendo tuto in funzione di $t$
+
+                \item \textbf{Calcolo}
+                
+                Le due componenti del nostro campo sono 
+                    \begin{gather}
+                        \text{Sostituiamo } x(t)=t,y(t)=t \text{ ottenendo} \\
+                        F_{1}(x,y)=3x^2y \to F_{1}(t)=3t^3\\
+                        F_{2}(x,y)=x^3+1 \to F_{2}(t)=t^3+1
+                    \end{gather}
+            \end{itemize}
+
+        \item \textbf{Calcolo delle derivate}
+            \begin{itemize}
+                \item \textbf{Procedura}
+
+                Calcolare semplicemente le derivate delle equazioni parametriche rispetto a $t$(cioè $\frac{dx}{dt}$ e $\frac{dy}{dt}$)
+                \item \textbf{Calcolo}
+                    \begin{gather}
+                        x(t)=t \to \frac{dx}{dt} = 1 \\
+                        y(t)=t \to \frac{dy}{dt} = 1
+                    \end{gather}
+            \end{itemize}
+        
+        \item \textbf{Prodotto e Risoluzione dell'integrale}
+            \begin{itemize}
+                \item \textbf{Procedura}
+
+                Moltiplicare ogni componente del campo calcolata al Passo 2 per la rispettiva derivata calcolata al Passo 3, sommare i risultati e integrare rispetto a $dt$ tra gli estremi individuati
+                
+                \item \textbf{Calcolo}
+                
+                Sostituend tutti i valori nella formula esplicata otteniamo l'integrale 
+                    \begin{gather}
+                        \int_{0}^{1} [(3t^3)\cdot 1 + (t^3+1)\cdot 1] dt \\
+                        \int_{0}^{1}(3t^3+t^3+1)dt \\
+                        \int_{0}^{1}(4t^3+1)dt \\
+                        [t^4+t]^{1}_{0}=(1^4+1)-(0^4-0)=2
+                    \end{gather}
+            \end{itemize}
+    \end{enumerate}
+
+\section{Definizione di Gradiente}
+Data una funzione a più variabili $U:\R^n \to \R$, ad essa si può associare uno specifico campo vettoriale chiamato gradiente, che viene indicato con il simbolo $\nabla U$
+
+\vspace{\baselineskip}
+
+In un sistemama di coordinate cartesiane $(x_1, \dots , x_n)$, le componenti di questo campo vettoriale sono date dalle derivate parziali della funzione rispetto a ciascuna coordinata
+
+\begin{definizione}{Formula Gradiente}
+    $$\LARGE
+        \nabla U = \begin{bmatrix}
+            \frac{\partial U}{\partial x_1} \\
+            \vdots \\
+            \frac{\partial U}{\partial x_n}
+        \end{bmatrix}
+    $$
+\end{definizione}
+
+\section{Definizione Campo Vettoriale Conservativo}
+Un campo vettoriale $F$ si definisce conservativo se può essere ottenuto esattamente come il gradiente di una funzione.
+
+\vspace{\baselineskip}
+
+Ciò significa che deve esistere una funzione scalare 
+\begin{definizione}{Condizione per Campo Vettoriale Scalare}
+    $$
+        U:\R^n \to \R \text{ tale che } F = \nabla U
+    $$
+    \begin{itemize}
+        \item $F$ : \textbf{Campo vettoriale}
+        \item $U$ : \textbf{Potenziale} del campo vettoriale $F$
+    \end{itemize}
+\end{definizione}
+
+\newpage
+
+\section{Teorema dell'indipendenza dal cammino}
+\subsection{Enunciato}
+Sia F un campo vettoriale conservativo e continuo in un dominio $D$ e $C$ una curva regolare orientata contenuta in $D$ vale la formula
+\begin{definizione}{Teorema fondamentale del calcolo per gli integrali di linea}
+    $$
+        \int_{C} F \cdot t d\ell = U(P_{1}) - U(P_{0})
+    $$
+    \begin{itemize}
+        \item $F$ : Rappresenta il \textbf{campo vettoriale} oggetto dell'integrazione, il quale deve essere \uline{continuo e rigorosamente conservativo} all'interno del dominio considerato
+        \item $C$ : È la \textbf{curva regolare orientata} lungo la quale viene effettuato il calcolo integrale
+        \item $t$ : È il \textbf{versore tangente} alla curva, diretto seguendo la specifica orientazione stabilita per $C$
+        \item $d\ell$ : Costituisce \textbf{l'elemento differenziale} della curva
+        \item $U$ : È la \textbf{funzione potenziale} associata al campo vettoriale.
+
+        Affinchè il teorema sia valido, il campo $F$ deve derivare proprio dal gradiente di questa funzione scalare $(F=\nabla U)$
+        \item $P_0$ e $P_1$ : Sono i \textbf{punti estremi della curva} $C$, dove $P_0$ corrisponde al punto di partenza e $P_1$ al punto di arrivo
+    \end{itemize}
+\end{definizione}
+\subsection{A cosa serve?}
+\subsection{Come usare l'enunciato}
+\subsection{Dimostrazione}
+\begin{enumerate}
+    \item \textbf{Definizione degli estremi e della parametrizzazione}
+        \begin{itemize}
+            \item \textbf{Procedura}
+
+            Si parte considerando una parametrizzazione regolare del cammino di integrazione $(x_{1}(t),\dots,x_{n}(t))$ che sia concorde con l'orientazione della curva.
+
+            Il parametro varia tra un tempo $t_{0}$(associato al punto iniziale $P_0$) e un tempo $t_1$(associato al punto finale $P_1$)
+
+            \item \textbf{Esempio}
+
+            Si deve ca
+        \end{itemize}
+\end{enumerate}

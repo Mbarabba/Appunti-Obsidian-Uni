@@ -1,0 +1,60 @@
+% --- FONT E CODIFICA ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+% Libertinus: Leggibile, moderno e perfetto per la matematica
+\usepackage{libertinus} 
+% Fira Mono: Il font per il codice (scalato leggermente per matchare il testo)
+\usepackage[scaled=0.85]{beramono}
+% --- MATEMATICA AVANZATA ---
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools} % Estensione di amsmath
+\usepackage{float}
+\usepackage{ulem}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+
+% --- COLORI ---
+\usepackage{xcolor}
+\definecolor{NoteRed}{RGB}{180, 0, 0}
+\definecolor{CodeBack}{RGB}{245, 245, 245} % Grigio chiarissimo per lo sfondo del codice
+\definecolor{CodeGreen}{RGB}{0, 120, 0}
+\definecolor{CodeGray}{RGB}{128, 128, 128}
+
+% --- CONFIGURAZIONE CODICE (Listings) ---
+\usepackage{listings}
+\lstset{
+    backgroundcolor=\color{CodeBack},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    commentstyle=\color{CodeGreen},
+    keywordstyle=\color{NoteRed}\bfseries, % Parole chiave in rosso come il tuo tema
+    stringstyle=\color{orange},
+    numbers=left,
+    numberstyle=\tiny\color{CodeGray},
+    numbersep=8pt,
+    frame=single,
+    rulecolor=\color{lightgray},
+    showstringspaces=false,
+    language=C++, % Linguaggio di default (puoi cambiarlo nel main)
+}
+
+% --- RESTO DELLE TUE CONFIGURAZIONI ---
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+% Hack Grassetto Rosso
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\textcolor{NoteRed}{\oldtextbf{#1}}}
+
+% Titoli Rossi
+\titleformat{\chapter}[display]{\normalfont\Huge\bfseries\color{NoteRed}}{\chaptertitlename\ \thechapter}{10pt}{\Huge}
+\titleformat{\section}{\normalfont\Large\bfseries\color{NoteRed}}{\thesection\quad}{0pt}{}
+\titleformat{\subsection}{\normalfont\large\bfseries\color{NoteRed}}{\thesubsection\quad}{5pt}{}
+
+\usepackage[colorlinks=true, allcolors=NoteRed]{hyperref}

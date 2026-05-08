@@ -1,0 +1,108 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {4}Struttura del Web}{1}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Ipertesti}{1}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Pagine Web e file HTML}{1}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Meccanismi di Identificazione Univoca}{2}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}URL - Uniform Resource Locator}{2}{subsection.4.3.1}%
+\contentsline {subsubsection}{Struttura dell'URL}{2}{subsubsection*.2}%
+\contentsline {subsection}{\numberline {4.3.2}URN - Uniform Resource Name}{3}{subsection.4.3.2}%
+\contentsline {subsubsection}{Struttura dell'URN}{3}{subsubsection*.3}%
+\contentsline {section}{\numberline {4.4}I linguaggi del Web}{4}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Struttura, Stile e Dati}{4}{subsection.4.4.1}%
+\contentsline {subsubsection}{HTML - HyperText Markup Language}{4}{subsubsection*.4}%
+\contentsline {subsubsection}{CSS - Cascade Style Sheets}{4}{subsubsection*.5}%
+\contentsline {subsubsection}{XML e JSON}{4}{subsubsection*.6}%
+\contentsline {subsection}{\numberline {4.4.2}Dati Multimediali e Non Testuali}{4}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Linguaggi di scripting}{4}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Protocollo HTTP - HyperText Transfer Protocol}{5}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Modello Client-Server}{5}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Client}{5}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Server}{5}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Fase di Connessione}{5}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Natura "Stateless"}{6}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Vantaggi}{6}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Svantaggi}{6}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Gestione delle Connessioni}{6}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}HTTP non persistente}{6}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}HTTP persistente}{6}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Struttura e Formato dei Messaggi}{7}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Formato delle Richieste}{7}{subsection.5.5.1}%
+\contentsline {subsubsection}{Caratteri speciali}{7}{subsubsection*.7}%
+\contentsline {subsubsection}{Riga di richiesta}{7}{subsubsection*.8}%
+\contentsline {subsubsection}{Righe di intestazione}{7}{subsubsection*.9}%
+\contentsline {subsection}{\numberline {5.5.2}Formato delle Risposte}{8}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.6}Metodi HTTP}{9}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Le proprietà dei metodi}{9}{subsection.5.6.1}%
+\contentsline {subsubsection}{Metodi Sicuri}{9}{subsubsection*.10}%
+\contentsline {subsubsection}{Metodi Idempotenti}{9}{subsubsection*.11}%
+\contentsline {subsection}{\numberline {5.6.2}Metodo GET}{9}{subsection.5.6.2}%
+\contentsline {subsubsection}{Proprietà}{9}{subsubsection*.12}%
+\contentsline {subsection}{\numberline {5.6.3}Metodo HEAD}{9}{subsection.5.6.3}%
+\contentsline {subsubsection}{Proprietà}{9}{subsubsection*.13}%
+\contentsline {subsection}{\numberline {5.6.4}Metodo OPTIONS}{10}{subsection.5.6.4}%
+\contentsline {subsubsection}{Proprietà}{10}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {5.6.5}Metodo TRACE}{10}{subsection.5.6.5}%
+\contentsline {subsubsection}{Proprietà}{10}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {5.6.6}Metodo POST}{10}{subsection.5.6.6}%
+\contentsline {subsubsection}{Proprietà}{10}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {5.6.7}Metodo PUT}{10}{subsection.5.6.7}%
+\contentsline {subsubsection}{Proprietà}{10}{subsubsection*.17}%
+\contentsline {subsection}{\numberline {5.6.8}Metodo DELETE}{11}{subsection.5.6.8}%
+\contentsline {subsubsection}{Proprietà}{11}{subsubsection*.18}%
+\contentsline {section}{\numberline {5.7}Codici di stato}{11}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Le 5 classi dei codici di stato}{11}{subsection.5.7.1}%
+\contentsline {subsubsection}{\texttt {1xx} (Informational)}{11}{subsubsection*.19}%
+\contentsline {subsubsection}{\texttt {2xx} (Success)}{11}{subsubsection*.20}%
+\contentsline {subsubsection}{\texttt {3xx} (Redirection)}{11}{subsubsection*.21}%
+\contentsline {subsubsection}{\texttt {4xx} (Client Error)}{11}{subsubsection*.22}%
+\contentsline {subsubsection}{\texttt {5xx} (Server Error)}{12}{subsubsection*.23}%
+\contentsline {section}{\numberline {5.8}I Cookie e il mantenimento dello stato}{12}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}L'architettura dei Cookie}{12}{subsection.5.8.1}%
+\contentsline {section}{\numberline {5.9}Web Caching}{12}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Il ruolo del Server Proxy}{12}{subsection.5.9.1}%
+\contentsline {section}{\numberline {5.10}GET condizionale}{13}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}L'intestazione "\texttt {if-modified-since"}}{13}{subsection.5.10.1}%
+\contentsline {subsubsection}{Possibili risposte del Server}{13}{subsubsection*.24}%
+\contentsline {section}{\numberline {5.11}Message vs Streaming communication}{14}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Livello di Applicazione (Comunicazione a Messaggi)}{14}{subsection.5.11.1}%
+\contentsline {subsection}{\numberline {5.11.2}Livello di Trasporto (Comunicazione a Stream e Segmenti)}{14}{subsection.5.11.2}%
+\contentsline {section}{\numberline {5.12}Tipi di comunicazione Message-oriented communication}{15}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Comunicazione Persistente Asincrona}{15}{subsection.5.12.1}%
+\contentsline {subsection}{\numberline {5.12.2}Comunicazione persistente sincrona}{15}{subsection.5.12.2}%
+\contentsline {subsection}{\numberline {5.12.3}Comunicazione transiente sincrona basata sulla consegna (Delivery based)}{15}{subsection.5.12.3}%
+\contentsline {subsection}{\numberline {5.12.4}Comunicazione transiente sincrona basata sulla risposta (Response based)}{15}{subsection.5.12.4}%
+\contentsline {section}{\numberline {5.13}Modello a Code di Messaggi (Message Queuing)}{16}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Operazioni per interagire con la coda}{16}{subsection.5.13.1}%
+\contentsline {section}{\numberline {5.14}Message Broker e Pattern Publish/Subscribe}{17}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}Funzionalità speciali per i sistemi critici (es. protocollo \texttt {MQTT})}{17}{subsection.5.14.1}%
+\contentsline {chapter}{\numberline {6}Formati di scambio}{18}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Perchè usarli?}{18}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Come usarli?}{18}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Marshaling (o Serializzazione)}{18}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Unmarshaling (o Deserializzazione)}{18}{subsection.6.2.2}%
+\contentsline {chapter}{\numberline {7}Linguaggi di Markup}{19}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Definizione}{19}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Tipi di marcatura}{19}{section.7.2}%
+\contentsline {chapter}{\numberline {8}\texttt {HTML} - HyperText Markup Language}{20}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Definizione}{20}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Cosa fa?}{20}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Uso dei Tag e la semantica}{21}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Interazione con l'utente: Forum}{22}{section.8.4}%
+\contentsline {section}{\numberline {8.5}\texttt {DOM} - Document Object Model}{23}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Struttura ad Albero}{23}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}Navigazione dei nodi}{23}{subsection.8.5.2}%
+\contentsline {subsection}{\numberline {8.5.3}Identificazione dei Nodi}{23}{subsection.8.5.3}%
+\contentsline {subsection}{\numberline {8.5.4}Funzioni di ricerca per i nodi}{24}{subsection.8.5.4}%
+\contentsline {subsection}{\numberline {8.5.5}Eventi e Listener}{24}{subsection.8.5.5}%
+\contentsline {chapter}{\numberline {9}\texttt {CSS} - Cascade Style Sheet}{25}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Definizione}{25}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Modalità di inclusione}{25}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Struttura Base}{26}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Selettori}{26}{subsection.9.3.1}%
+\contentsline {subsubsection}{Selettori fondamentali}{26}{subsubsection*.25}%
+\contentsline {subsection}{\numberline {9.3.2}Combinatori}{26}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Pseudo-classi}{27}{subsection.9.3.3}%
+\contentsline {section}{\numberline {9.4}Algoritmo "a Cascata"}{27}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Media Query}{27}{section.9.5}%
+\contentsline {chapter}{\numberline {10}XML - eXtensible Markup Language}{28}{chapter.10}%
