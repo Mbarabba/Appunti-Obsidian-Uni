@@ -106,3 +106,103 @@
 \contentsline {section}{\numberline {9.4}Algoritmo "a Cascata"}{27}{section.9.4}%
 \contentsline {section}{\numberline {9.5}Media Query}{27}{section.9.5}%
 \contentsline {chapter}{\numberline {10}XML - eXtensible Markup Language}{28}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Caratteristiche dei Documenti \texttt {XML}}{28}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Documenti "Well-formed" (Ben Formati)}{28}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Esempio di documento XML}{29}{subsection.10.2.1}%
+\contentsline {section}{\numberline {10.3}DTD (Document Type Definition)}{29}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Struttura DTD}{29}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}Esempio di DTD}{30}{subsection.10.3.2}%
+\contentsline {subsection}{\numberline {10.3.3}I Limiti delle DTD}{30}{subsection.10.3.3}%
+\contentsline {section}{\numberline {10.4}XML Schema}{30}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Definizione}{30}{subsection.10.4.1}%
+\contentsline {chapter}{\numberline {11}JSON - Javascript Object Notation}{32}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Definizione}{32}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Strutture dati universali}{32}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Oggetti}{32}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Array}{33}{subsection.11.2.2}%
+\contentsline {section}{\numberline {11.3}Tipi di valore supportati}{33}{section.11.3}%
+\contentsline {section}{\numberline {11.4}JSON Schema}{33}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Definizione}{33}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Esempio}{34}{subsection.11.4.2}%
+\contentsline {chapter}{\numberline {12}Applicazioni Web}{35}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Web statico}{35}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Comunciazione attraverso HTTP}{35}{section.12.2}%
+\contentsline {chapter}{\numberline {13}Sviluppo lato Client - HTML}{36}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Interazione con il server basate su link}{36}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Interazioni basata su form}{36}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Form con GET}{37}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Form con POST}{37}{subsection.13.2.2}%
+\contentsline {subsection}{\numberline {13.2.3}Limiti dei Form}{38}{subsection.13.2.3}%
+\contentsline {chapter}{\numberline {14}Sviluppo lato Server - Servlet Java}{39}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Definizione}{39}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Configurazione di una servlet}{39}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Metodi}{39}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}Metodi del ciclo di vita}{39}{subsection.14.3.1}%
+\contentsline {subsection}{\numberline {14.3.2}Metodi classe \texttt {HTTPServlet}}{41}{subsection.14.3.2}%
+\contentsline {subsection}{\numberline {14.3.3}Metodi per gestire Richieste (\texttt {HttpServletRequest})}{42}{subsection.14.3.3}%
+\contentsline {subsection}{\numberline {14.3.4}Metodi per gestire le Risposte (\texttt {HttpServletResponse})}{43}{subsection.14.3.4}%
+\contentsline {section}{\numberline {14.4}MultiThreadding - Modello a Thread Pool e l'esecuzione}{43}{section.14.4}%
+\contentsline {subsection}{\numberline {14.4.1}Vantaggi}{43}{subsection.14.4.1}%
+\contentsline {chapter}{\numberline {15}Sviluppo lato Server - Java Server Pages}{45}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Definizione}{45}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Elementi di una pagina JSP}{45}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Esempio}{47}{section.15.3}%
+\contentsline {section}{\numberline {15.4}Oggetti impliciti}{47}{section.15.4}%
+\contentsline {subsection}{\numberline {15.4.1}Scope (visibilità)}{48}{subsection.15.4.1}%
+\contentsline {section}{\numberline {15.5}JavaBean}{48}{section.15.5}%
+\contentsline {section}{\numberline {15.6}Declino}{49}{section.15.6}%
+\contentsline {chapter}{\numberline {16}SOA - Software Oriented Architecture}{50}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Definizione}{50}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Elementi fondamentali di SOA}{50}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}Componenti}{50}{subsection.16.2.1}%
+\contentsline {subsection}{\numberline {16.2.2}Ruoli}{50}{subsection.16.2.2}%
+\contentsline {section}{\numberline {16.3}Servizi}{51}{section.16.3}%
+\contentsline {subsection}{\numberline {16.3.1}Definizione Informale}{51}{subsection.16.3.1}%
+\contentsline {subsection}{\numberline {16.3.2}Definizione Formale}{51}{subsection.16.3.2}%
+\contentsline {subsection}{\numberline {16.3.3}Cosa fa un servizio?}{51}{subsection.16.3.3}%
+\contentsline {subsection}{\numberline {16.3.4}Composizione dei servi}{51}{subsection.16.3.4}%
+\contentsline {section}{\numberline {16.4}Business Process}{52}{section.16.4}%
+\contentsline {subsection}{\numberline {16.4.1}Definizione}{52}{subsection.16.4.1}%
+\contentsline {subsection}{\numberline {16.4.2}Caratteristiche}{52}{subsection.16.4.2}%
+\contentsline {subsection}{\numberline {16.4.3}Esempio}{52}{subsection.16.4.3}%
+\contentsline {subsection}{\numberline {16.4.4}Orchestrazione}{53}{subsection.16.4.4}%
+\contentsline {subsubsection}{Definizione}{53}{subsubsection*.26}%
+\contentsline {subsubsection}{Caratteristiche principali}{53}{subsubsection*.27}%
+\contentsline {subsubsection}{Vantaggi}{53}{subsubsection*.28}%
+\contentsline {subsubsection}{Svantaggi}{53}{subsubsection*.29}%
+\contentsline {subsubsection}{Schema}{53}{subsubsection*.30}%
+\contentsline {subsection}{\numberline {16.4.5}Coreografia}{54}{subsection.16.4.5}%
+\contentsline {subsubsection}{Definizione}{54}{subsubsection*.31}%
+\contentsline {subsubsection}{Caratteristiche principali}{54}{subsubsection*.32}%
+\contentsline {subsubsection}{Vantaggi}{54}{subsubsection*.33}%
+\contentsline {subsubsection}{Svantaggi}{54}{subsubsection*.34}%
+\contentsline {subsubsection}{Schema}{54}{subsubsection*.35}%
+\contentsline {section}{\numberline {16.5}Web API}{55}{section.16.5}%
+\contentsline {subsection}{\numberline {16.5.1}Definizione}{55}{subsection.16.5.1}%
+\contentsline {subsection}{\numberline {16.5.2}Caratteristiche}{55}{subsection.16.5.2}%
+\contentsline {subsection}{\numberline {16.5.3}Esempio: openweathermaps}{55}{subsection.16.5.3}%
+\contentsline {section}{\numberline {16.6}Operazioni di base in SOA}{56}{section.16.6}%
+\contentsline {section}{\numberline {16.7}Comunicazione basata su broker}{57}{section.16.7}%
+\contentsline {subsection}{\numberline {16.7.1}Definizione}{57}{subsection.16.7.1}%
+\contentsline {subsection}{\numberline {16.7.2}Cosa cambio rispetto al registry?}{57}{subsection.16.7.2}%
+\contentsline {subsection}{\numberline {16.7.3}Vantaggi}{57}{subsection.16.7.3}%
+\contentsline {section}{\numberline {16.8}SLA - Service Level Agreement}{58}{section.16.8}%
+\contentsline {subsection}{\numberline {16.8.1}Definizione informale}{58}{subsection.16.8.1}%
+\contentsline {subsection}{\numberline {16.8.2}Definizione formale}{58}{subsection.16.8.2}%
+\contentsline {subsection}{\numberline {16.8.3}Esempi di metriche SLA}{58}{subsection.16.8.3}%
+\contentsline {section}{\numberline {16.9}Vantaggi e Svantaggi}{58}{section.16.9}%
+\contentsline {subsection}{\numberline {16.9.1}Vantaggi}{58}{subsection.16.9.1}%
+\contentsline {subsection}{\numberline {16.9.2}Svantaggi}{59}{subsection.16.9.2}%
+\contentsline {chapter}{\numberline {17}SOAP - Simple Object Access Protocol}{60}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Definizione}{60}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Componenti di un messaggio SOAP}{60}{section.17.2}%
+\contentsline {section}{\numberline {17.3}SOAP con HTTP}{61}{section.17.3}%
+\contentsline {subsection}{\numberline {17.3.1}Modelli di scambio messaggi via HTTP}{61}{subsection.17.3.1}%
+\contentsline {section}{\numberline {17.4}WSDL}{62}{section.17.4}%
+\contentsline {subsection}{\numberline {17.4.1}Definizione}{62}{subsection.17.4.1}%
+\contentsline {subsection}{\numberline {17.4.2}Cosa descrive un documento WSDL}{62}{subsection.17.4.2}%
+\contentsline {subsection}{\numberline {17.4.3}Modello concettuale}{63}{subsection.17.4.3}%
+\contentsline {subsection}{\numberline {17.4.4}Definizione del binding}{63}{subsection.17.4.4}%
+\contentsline {subsection}{\numberline {17.4.5}Definizione di service/endpoint}{64}{subsection.17.4.5}%
+\contentsline {subsection}{\numberline {17.4.6}Declino di SOAP}{65}{subsection.17.4.6}%
+\contentsline {subsubsection}{Fattori di declino}{65}{subsubsection*.36}%

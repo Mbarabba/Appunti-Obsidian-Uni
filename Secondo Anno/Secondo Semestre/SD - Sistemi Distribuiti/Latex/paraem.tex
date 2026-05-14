@@ -7,18 +7,24 @@
 \usepackage{libertinus} 
 % Fira Mono: Il font per il codice (scalato leggermente per matchare il testo)
 \usepackage[scaled=0.85]{beramono}
+
 % --- MATEMATICA AVANZATA ---
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{mathtools} % Estensione di amsmath
 \usepackage{float}
 \usepackage{ulem}
-\usepackage{tcolorbox}
 \usepackage{tabularx}
+\usepackage{url}
+
+
+% --- TCOLORBOX ---
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable, skins, listings} % Corretto "breakable" (senza la 'e' di troppo) e aggiunte skins
 
 % --- COLORI ---
 \usepackage{xcolor}
 \definecolor{NoteRed}{RGB}{180, 0, 0}
-\definecolor{CodeBack}{RGB}{245, 245, 245} % Grigio chiarissimo per lo sfondo del codice
+\definecolor{CodeBack}{RGB}{245, 245, 245} 
 \definecolor{CodeGreen}{RGB}{0, 120, 0}
 \definecolor{CodeGray}{RGB}{128, 128, 128}
 
@@ -31,7 +37,7 @@
     breaklines=true,
     captionpos=b,
     commentstyle=\color{CodeGreen},
-    keywordstyle=\color{NoteRed}\bfseries, % Parole chiave in rosso come il tuo tema
+    keywordstyle=\color{NoteRed}\bfseries,
     stringstyle=\color{orange},
     numbers=left,
     numberstyle=\tiny\color{CodeGray},
@@ -39,16 +45,18 @@
     frame=single,
     rulecolor=\color{lightgray},
     showstringspaces=false,
-    language=C++, % Linguaggio di default (puoi cambiarlo nel main)
+    language=Java, % Cambiato a Java visto i tuoi esempi precedenti
+    % Mappatura caratteri accentati per evitare errori UTF-8
+    literate={à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1 {È}{{\`E}}1
 }
 
-% --- RESTO DELLE TUE CONFIGURAZIONI ---
+% --- GEOMETRIA E LAYOUT ---
 \usepackage{geometry}
 \geometry{a4paper, margin=2cm}
 \usepackage{parskip}
 \usepackage{titlesec}
 
-% Hack Grassetto Rosso
+% Hack Grassetto Rosso (Attenzione: questo cambierà TUTTI i bold in rosso)
 \let\oldtextbf\textbf
 \renewcommand{\textbf}[1]{\textcolor{NoteRed}{\oldtextbf{#1}}}
 

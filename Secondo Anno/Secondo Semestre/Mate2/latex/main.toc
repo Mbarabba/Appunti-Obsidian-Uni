@@ -1,0 +1,47 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Integrali di linea di 1ª specie}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Lunghezza di un arco di curva}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Come la rappresento?}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Esempio di calcolo}{4}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Integrali di linea di 1ª specie}{6}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Definizione}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Come calcolarli?}{6}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Interpretazione Geometrica}{7}{subsection.1.2.3}%
+\contentsline {chapter}{\numberline {2}Campi vettoriali}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Definizione}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Come rappresentarli graficamente nel piano?}{9}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Integrali di linea di 2ª specie}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Definizione}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Forme differenziali e orientazione}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Come calcolarli}{11}{section.3.3}%
+\contentsline {subsubsection}{Calcolo diretto tramite parametrizzazione (Metodo Standard)}{11}{section*.2}%
+\contentsline {section}{\numberline {3.4}Definizione di Gradiente}{13}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Campi Vettoriali Conservativi}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Definizione Campo Vettoriale Conservativo}{14}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Teorema dell'indipendenza dal cammino}{15}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Ipotesi sul dominio e sul campo}{15}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Applicazione pratica}{15}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Dimostrazione}{15}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Cicruitazione di un campo vettoriale conservativo}{17}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Definizione}{17}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Come usarlo}{17}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Esempio di calcolo}{18}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Condizioni di irrotazionalità di un campo vettoriale}{18}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Definizione}{18}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}chiusura ad esattezza in 1-forma}{19}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Definizione}{19}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Forma Chiusa}{19}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Forma esatta}{19}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}Regioni (o domini) semplicemente connesse}{19}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Definizione}{19}{subsection.4.6.1}%
+\contentsline {subsubsection}{Nel piano $(\mathbb {R}^2)$}{19}{section*.3}%
+\contentsline {subsubsection}{Nello spazio $(\mathbb {R}^3)$}{19}{section*.4}%
+\contentsline {subsubsection}{Generalizzazione in $\mathbb {R}^n$}{20}{section*.5}%
+\contentsline {section}{\numberline {4.7}Lemma di poincaré}{20}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Enunciato}{20}{subsection.4.7.1}%
+\contentsline {section}{\numberline {4.8}Formula di green}{20}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Definizione}{20}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Ipotesi e Condizioni di Validità}{20}{subsection.4.8.2}%
+\contentsline {subsection}{\numberline {4.8.3}Dimostrazione}{21}{subsection.4.8.3}%
+\contentsline {subsection}{\numberline {4.8.4}Esempio di calcolo}{22}{subsection.4.8.4}%

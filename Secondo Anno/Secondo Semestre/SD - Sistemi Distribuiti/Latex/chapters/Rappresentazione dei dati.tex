@@ -327,3 +327,239 @@ Questi costrutti \texttt{CSS} applicano stili in modo condizionale verificando l
 Ad esempio, \texttt{@media screen and (min-width: 480px)}
 
 \chapter{XML - eXtensible Markup Language}
+L'\texttt{XML} si è imposto come standard de facto per lo \uline{scambio di informazioni semi-strutturate}.
+
+Inizialmente pensato come potenziale successore dell'\texttt{HTML} per il Web, è diventato un linguaggio generico e universale.
+
+\section{Caratteristiche dei Documenti \texttt{XML}}
+\begin{itemize}
+    \item \textbf{Marcatura descrittiva} e non procedurale (descrive la struttura logica).
+    \item Marcatura definisce la \textbf{struttura logica} del documento.
+    \item \textbf{Flessibilità}: le etichette possono cambiare in base all'applicazione.
+    \item Il \textbf{tipo di documento} specifica la struttura della marcatura ammessa.
+\end{itemize}
+
+\section{Documenti "Well-formed" (Ben Formati)}
+Un documento testuale che rispetta rigorosamente le regole sintattiche di base della specifica \texttt{XML} è definito \textbf{well-formed}.
+
+Affinchè un documento ottenga questo status, deve soddisfare determinati requisiti:
+
+\begin{itemize}
+    \item \textbf{Presenza di elementi}: Il documento deve sempre contenere \uline{almeno un elemento}.
+    \item \textbf{Singolo Elemento Radice (Root)}: Deve esistere \uline{esattamente un solo elemento radice} che fa da "contenitore" generale, includendo al suo interno tutti gli altri elementi del documento.
+
+    Nessuna parte di questo elemento radice può apparire come contenuto di un altro elemento.
+    \item \textbf{Etichette di apertura e chiusura}: Ogni elemento deve essere perfettamente delimitato.
+
+    È costituito da una \uline{coppia di etichette} e da tutto il contenuto che queste racchiudono.
+    \item \textbf{Annidamento corretto}: Gli elementi che costituiscono il documento devono essere \uline{correttamente annidati} l'uno dentro l'altro.
+
+    Questo significa che i tag non possono accavallarsi: un elemento figlio deve essere chiuso prima che venga chiuso il suo elemento padre.
+    \item \textbf{Validità delle entità}: Ogni singola entità referenziata nel documento, sia direttamente che indirettamente, deve essere a sua volta well formed.
+\end{itemize}
+
+\subsection{Esempio di documento XML}
+
+\begin{tcolorbox}[title=Esempio di documento XML Well-formed]
+\begin{lstlisting}[language=XML]
+<?xml version="1.0" encoding="UTF-8"?>
+<libreria>
+    <libro categoria="romanzo">
+        <titolo>Il Signore degli Anelli</titolo>
+        <autore>J.R.R. Tolkien</autore>
+        <anno>1954</anno>
+        <prezzo valuta="EUR">25.50</prezzo>
+    </libro>
+    
+    <libro categoria="informatica">
+        <titolo>Imparare XML</titolo>
+        <autore>Mario Rossi</autore>
+        <anno>2023</anno>
+        <prezzo valuta="EUR">15.00</prezzo>
+    </libro>
+</libreria>
+\end{lstlisting}  
+\end{tcolorbox}
+
+\section{DTD (Document Type Definition)}
+Un documento well-formed possiede una struttura arbitraria: i nomi dei tag e gli attributi sono liberi.
+
+Per definire quali strutture sono ammesse per una specifica classe di documenti, si utilizza una grammatica chiamata \texttt{DTD}.
+
+A livello di posizionamento, una \texttt{DTD} può essere interna al documento \texttt{XML} oppure esterna
+
+\subsection{Struttura DTD}
+La struttura di una \texttt{DTD} si basa principalmente sue 3 tipi di dichiarazione che stabiliscono le regole del documento
+
+\begin{itemize}
+    \item \textbf{Tipi di Elemento}
+
+    Definisce quali tag possono esistere come possono essere annidati gli uni dentro agli altri.
+
+    Per definire le regole di annidamento e molteplicitò, la \texttt{DTD} utilizza dei simboli che funzionano in modo del tutto simile alle espressioni regolari:
+    \begin{itemize}
+        \item \texttt{,}(virgola): Indica una sequenza ordinata
+        \item \texttt{|}(pipe): Indica un'alternativa
+        \item \texttt{?}: L'elemento è opzionale
+        \item \texttt{+}: L'elemento deve apparire una o più volte.
+        \item \texttt{*}: L'elemento può apparire 0 o infinite volte.
+        \item Se un elemento \uline{non contiene altri tag ma solo del testo libero} con la parola chiave speciale \texttt{\#PCDATA}
+    \end{itemize}
+
+    \item \textbf{Attributi \texttt{<!ATTLIST ...>}}
+    
+    Dichiara quali attributi sono consentiti per un determinato elemento, di che tipo sono
+
+    \item \textbf{Entità e Notazioni}
+
+    Definiscono abbreviazioni utilizzabili nel documento e a formati esterni
+\end{itemize}
+
+\subsection{Esempio di DTD}
+
+\begin{tcolorbox}[title=Esempio di DTD]
+    \begin{lstlisting}
+<!ELEMENT media (cds | books)>
+<!ELEMENT cds (cd*)>
+<!ELEMENT cd (title, artist, album+)>
+<!ATTLIST cd quantity CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT artist (#PCDATA)>
+<!ELEMENT album (#PCDATA)>
+    \end{lstlisting}
+\end{tcolorbox}
+
+\subsection{I Limiti delle DTD}
+Sebbene le DTD vengano utilizzate per definire la "grammatica" di un filme XML, esse descrivono solo regole strutturali di base e non permettono di definire la struttura dettagliata o i tipi di dato.
+
+Queste impostazione porta ad alcune evidenti limitazioni:
+\begin{itemize}
+    \item \textbf{Assenza di vincoli sui tipi di dato}
+    \item \textbf{Mancanza di vincoli di co-occorrenza}
+
+    Non si possono creare regole condizionali legate alla presenza di altri elementi. Ad esempio, non è possibile specificare che l'elemento "unit" debba essere ammesso solo quando è presente anche l'elemento "amount".
+    \item \textbf{Flessibilità dello schema limitata}
+    \item \textbf{Assenza di architettura avanzate}
+
+    Le DTD non supportano l'ereditarietà (subtyping), impedendo di fatto il riuso delle definizioni.
+    \item \textbf{Mancanza di chiavi composite}
+\end{itemize}
+
+\section{XML Schema}
+\subsection{Definizione}
+Per affrontare e superare le pesanti limitazioni delle DTD, è stato introdotto l'\textbf{XML Schema}, un linguaggio di schema decisamente più sofisticato.
+
+Le sue caratteristiche principali includono:
+\begin{itemize}
+    \item \textbf{Tipizzazione forte}
+
+    A differenza delle DTD, supporta nativamente la tipizzazione dei valori.
+
+    Permette inoltre di applicare vincoli restrittivi, potendo definire un minimo e un massimo per i valori inseriti.
+    \item \textbf{Strutture complesse e chiavi esterne}
+
+    Consente agli sviluppatori di definire tipi di dato completti e supporta molte funzionalità avanzate, tra cui l'uso di vincoli di unicità, chiavi e il supporto all'ereditarietà.
+    \item \textbf{Standardizzazione e sintassi}
+
+    Mentre le DTD utilizzano una propria grammatica a simboli, XML Schema è scritto utilizzando la normale sintassi XML.
+
+    Questo gli garantisce una rappresentazione più standard e una perfetta integrazione con i namespace.
+    \item \textbf{Elevata complessità}
+    
+    Il compromesso per avere uno strumento così potente è che l'XML Schema risulta molto più verboso e significativamente più complesso rispetto a una DTD. Per definire la struttura, richiede infatti l'uso di numerosi tag annidati e costrutti formali.
+\end{itemize}
+
+\chapter{JSON - Javascript Object Notation}
+\section{Definizione}
+Il JSON è un \uline{formato testuale leggero impiegato per lo scambio di dati.}
+
+Le sue caratteristiche lo rengono universalmente diffuso perchè è facile da leggere e scrivere per gli esseri umani, e al contempo facile da analizzare e generare per i computer.
+
+\section{Strutture dati universali}
+Praticamente tutti i moderni linguaggi di programmazione supportano il formato JSON perchè esso si fonda su sole due strutture dati universali:
+\subsection{Oggetti}
+Sono insiemi non ordinati di coppie nome/valore.
+\begin{itemize}
+    \item Si utilizzano tipicamente quando i nomi delle chiavi sono stringhearbitrarie
+    \item Sintatticamente, un oggetto iniza e finisce con parentesi graffe (\texttt{\{\} })
+    \item Ogni nome di chiave è seguita dai punti (\texttt{:}) e separato dal suo valore, mentre le varie coppie sono separate da virgole (\texttt{,}) 
+\end{itemize}
+
+\begin{tcolorbox}{Esempio di oggetto JSON}
+    \begin{lstlisting}
+{
+  "nome": "Mario",
+  "eta": 30,
+  "attivo": true,
+  "eliminato": false,
+  "note": null,
+  "indirizzo": {
+    "citta": "Milano"
+  },
+  "tag": ["web", "json"]
+}
+    \end{lstlisting}
+\end{tcolorbox}
+
+\subsection{Array}
+Sono collezioni ordinate di valori
+\begin{itemize}
+    \item Vengono preferiti quando i nomi delle chiavi sono considerati interi sequenziali.
+    \item Iniziano e finiscono con le parentesi quadre (\texttt{[]}) e i valori al loro interno sono separati da virgole
+\end{itemize}
+\begin{tcolorbox}{Esempio di oggetto contenente array}
+\begin{lstlisting}
+[
+  {
+    "nome": "Mario Rossi",
+    "eta": 30
+  },
+  {
+    "nome": "Anna Bianchi",
+    "eta": 25
+  }
+]
+\end{lstlisting}
+\end{tcolorbox}
+
+\section{Tipi di valore supportati}
+Il "valore" associato a una chiave all'interno di un JSON può assumere solo forme molto specifiche:
+\begin{itemize}
+    \item \textbf{String}: Testo UNICODE racchiuso rigorosamente tra doppie virogolette (\texttt{"string"}).
+    \item \textbf{Number}: sia interi che reali a virgola mobile.
+    \item \textbf{Boolean}: \texttt{true} o \texttt{false}.
+    \item \textbf{null}: valore nullo.
+    \item Un altro \textbf{Oggetto} o un altro \textbf{Array} permettendo cosi' di creare strutture complesse e fortemente annidate.
+\end{itemize}
+
+\section{JSON Schema}
+\subsection{Definizione}
+Il JSON Schema è un vero e proprio vocabolario, scritto anch'esso in formato JSON, il cui scopo è descrivere e validare la struttura di altri documenti JSON.
+
+Nel contesto dei sistemi distribuiti e dello sviluppo software, viene impiegato principalemnte per 3 scopi principali:
+\begin{itemize}
+    \item \textbf{Validare i dati in ingresso}
+
+    COntrollare che le informazioni in arrivo rispettino i formati attesi prima di farli processare dalla logica applicativa.
+    \item \textbf{Documentare}
+
+    Formalizzare e chiarire i "contratti" di comunicazione e di scambio dati tra sistemi differenti.
+    \item \textbf{Generare codice}
+
+    Aiutare a generare automaticamente interfacce o porzioni di codice basandosi sulla precisa struttura descritta.
+\end{itemize}
+\begin{tcolorbox}{Esempio di JSON Schema}
+\subsection{Esempio}
+\begin{lstlisting}
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "nome": { "type": "string" },
+    "eta": { "type": "number", "minimum": 0 },
+    "attivo": { "type": "boolean" }
+  },
+  "required": ["nome", "eta"]
+}
+\end{lstlisting}
+\end{tcolorbox}
