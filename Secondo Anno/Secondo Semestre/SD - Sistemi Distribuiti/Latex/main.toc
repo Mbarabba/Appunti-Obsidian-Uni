@@ -206,3 +206,58 @@
 \contentsline {subsection}{\numberline {17.4.5}Definizione di service/endpoint}{64}{subsection.17.4.5}%
 \contentsline {subsection}{\numberline {17.4.6}Declino di SOAP}{65}{subsection.17.4.6}%
 \contentsline {subsubsection}{Fattori di declino}{65}{subsubsection*.36}%
+\contentsline {chapter}{\numberline {18}REST - Representational State Transfer}{66}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Definizione}{66}{section.18.1}%
+\contentsline {section}{\numberline {18.2}Risorse e Interfaccia unifome}{66}{section.18.2}%
+\contentsline {subsection}{\numberline {18.2.1}Risorse}{66}{subsection.18.2.1}%
+\contentsline {subsection}{\numberline {18.2.2}Interfaccia uniforme}{66}{subsection.18.2.2}%
+\contentsline {section}{\numberline {18.3}Statelessness}{67}{section.18.3}%
+\contentsline {section}{\numberline {18.4}Cacheability}{67}{section.18.4}%
+\contentsline {subsection}{\numberline {18.4.1}Header utilizzati per il cache-controll}{68}{subsection.18.4.1}%
+\contentsline {section}{\numberline {18.5}Stato dell'applicazone}{68}{section.18.5}%
+\contentsline {subsection}{\numberline {18.5.1}Hypermedia control}{68}{subsection.18.5.1}%
+\contentsline {subsection}{\numberline {18.5.2}Esempio : Gestione del curriculm universitario}{69}{subsection.18.5.2}%
+\contentsline {chapter}{\numberline {19}RPC - Remote Procedure Call}{70}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Definizione}{70}{section.19.1}%
+\contentsline {section}{\numberline {19.2}Architettura RPC}{70}{section.19.2}%
+\contentsline {subsection}{\numberline {19.2.1}Client stub (o proxy)}{70}{subsection.19.2.1}%
+\contentsline {subsection}{\numberline {19.2.2}Server Stub (o skeleton)}{71}{subsection.19.2.2}%
+\contentsline {section}{\numberline {19.3}Procedura generale e il ruolo del Middleware}{71}{section.19.3}%
+\contentsline {subsection}{\numberline {19.3.1}Vantaggi e Svantaggi}{71}{subsection.19.3.1}%
+\contentsline {subsubsection}{Vantaggi}{71}{subsubsection*.37}%
+\contentsline {subsubsection}{Svantaggi}{71}{subsubsection*.38}%
+\contentsline {section}{\numberline {19.4}Passaggio dei parametri}{71}{section.19.4}%
+\contentsline {subsection}{\numberline {19.4.1}Meccanismo call-by-copy/restore}{72}{subsection.19.4.1}%
+\contentsline {section}{\numberline {19.5}Passaggio dei dati}{73}{section.19.5}%
+\contentsline {subsection}{\numberline {19.5.1}Serializzazione/Deserializzazione}{73}{subsection.19.5.1}%
+\contentsline {subsection}{\numberline {19.5.2}Marshalling / Unmarshalling}{73}{subsection.19.5.2}%
+\contentsline {chapter}{\numberline {20}gRPC}{74}{chapter.20}%
+\contentsline {section}{\numberline {20.1}Definizione}{74}{section.20.1}%
+\contentsline {section}{\numberline {20.2}Funzionalità di gRPC}{74}{section.20.2}%
+\contentsline {subsection}{\numberline {20.2.1}Modelli di comunicazione}{74}{subsection.20.2.1}%
+\contentsline {subsection}{\numberline {20.2.2}File \texttt {.proto}}{75}{subsection.20.2.2}%
+\contentsline {subsection}{\numberline {20.2.3}Timeout}{75}{subsection.20.2.3}%
+\contentsline {subsection}{\numberline {20.2.4}Cancellazione della chiamata}{76}{subsection.20.2.4}%
+\contentsline {subsection}{\numberline {20.2.5}Autenticazione}{76}{subsection.20.2.5}%
+\contentsline {chapter}{\numberline {21}\texttt {Java RMI}}{77}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Definizione}{77}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Architettura di un'applicazione RMI}{77}{section.21.2}%
+\contentsline {subsection}{\numberline {21.2.1}Procedura}{77}{subsection.21.2.1}%
+\contentsline {subsection}{\numberline {21.2.2}Problematiche fondamentali}{77}{subsection.21.2.2}%
+\contentsline {section}{\numberline {21.3}Ricostruzione dell'oggetto - \texttt {Java Runtime Enviroment}}{77}{section.21.3}%
+\contentsline {section}{\numberline {21.4}Passaggio dei parametri}{78}{section.21.4}%
+\contentsline {subsection}{\numberline {21.4.1}Passaggio per valore}{78}{subsection.21.4.1}%
+\contentsline {subsection}{\numberline {21.4.2}Passaggio per riferimento}{78}{subsection.21.4.2}%
+\contentsline {subsubsection}{\texttt {Java.io.Serializable}}{78}{subsubsection*.39}%
+\contentsline {subsubsection}{\texttt {java.rmi.Remote}}{78}{subsubsection*.40}%
+\contentsline {section}{\numberline {21.5}Passaggio dello stato - Serializzazione dell'oggetto}{79}{section.21.5}%
+\contentsline {section}{\numberline {21.6}Passaggio dei riferimenti}{80}{section.21.6}%
+\contentsline {subsection}{\numberline {21.6.1}La classe \texttt {java.rmi.Naming}}{80}{subsection.21.6.1}%
+\contentsline {subsubsection}{Parametri}{80}{subsubsection*.41}%
+\contentsline {subsubsection}{Metodi}{80}{subsubsection*.42}%
+\contentsline {subsubsection}{Eccezioni}{81}{subsubsection*.43}%
+\contentsline {subsection}{\numberline {21.6.2}Workflow in dettaglio}{81}{subsection.21.6.2}%
+\contentsline {section}{\numberline {21.7}Problematiche fondamentali dei sistemi distribuiti e Java RMI}{81}{section.21.7}%
+\contentsline {section}{\numberline {21.8}Vantaggi e Svantaggi}{82}{section.21.8}%
+\contentsline {subsection}{\numberline {21.8.1}Vantaggi (rispetto a implementazioni \texttt {RPC} generali)}{82}{subsection.21.8.1}%
+\contentsline {subsection}{\numberline {21.8.2}Svantaggi (rispetto a implementazioni \texttt {RPC} generali)}{82}{subsection.21.8.2}%
