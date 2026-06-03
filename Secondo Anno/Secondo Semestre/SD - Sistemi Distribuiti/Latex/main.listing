@@ -1,0 +1,10 @@
+async function load() {
+    try {
+        const res = await fetch("/api/data");
+        if (!res.ok) throw new Error(res.status);
+        const data = await res.json();
+        use(data);
+    } catch (err) {
+        console.error(err);
+    }
+}

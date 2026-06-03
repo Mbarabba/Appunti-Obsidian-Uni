@@ -261,3 +261,96 @@
 \contentsline {section}{\numberline {21.8}Vantaggi e Svantaggi}{82}{section.21.8}%
 \contentsline {subsection}{\numberline {21.8.1}Vantaggi (rispetto a implementazioni \texttt {RPC} generali)}{82}{subsection.21.8.1}%
 \contentsline {subsection}{\numberline {21.8.2}Svantaggi (rispetto a implementazioni \texttt {RPC} generali)}{82}{subsection.21.8.2}%
+\contentsline {chapter}{\numberline {22}Javascript}{83}{chapter.22}%
+\contentsline {section}{\numberline {22.1}Variabili}{83}{section.22.1}%
+\contentsline {subsection}{\numberline {22.1.1}var}{83}{subsection.22.1.1}%
+\contentsline {subsection}{\numberline {22.1.2}let}{83}{subsection.22.1.2}%
+\contentsline {subsection}{\numberline {22.1.3}const}{83}{subsection.22.1.3}%
+\contentsline {section}{\numberline {22.2}Controllo di flusso}{84}{section.22.2}%
+\contentsline {subsection}{\numberline {22.2.1}Strutture standard}{84}{subsection.22.2.1}%
+\contentsline {subsection}{\numberline {22.2.2}Iteratori specifici di JS}{84}{subsection.22.2.2}%
+\contentsline {section}{\numberline {22.3}Funzioni}{85}{section.22.3}%
+\contentsline {subsection}{\numberline {22.3.1}Sintassi di una funzione}{85}{subsection.22.3.1}%
+\contentsline {section}{\numberline {22.4}Stringhe}{85}{section.22.4}%
+\contentsline {subsection}{\numberline {22.4.1}Definizione}{85}{subsection.22.4.1}%
+\contentsline {subsection}{\numberline {22.4.2}Lunghezza di una strigna}{85}{subsection.22.4.2}%
+\contentsline {subsection}{\numberline {22.4.3}Concatenazione di stringhe}{85}{subsection.22.4.3}%
+\contentsline {subsection}{\numberline {22.4.4}Metodi}{86}{subsection.22.4.4}%
+\contentsline {section}{\numberline {22.5}Metodi per manipolare Array}{87}{section.22.5}%
+\contentsline {section}{\numberline {22.6}Classi}{88}{section.22.6}%
+\contentsline {subsection}{\numberline {22.6.1}Definizione}{88}{subsection.22.6.1}%
+\contentsline {subsection}{\numberline {22.6.2}Anatomia di una classe}{88}{subsection.22.6.2}%
+\contentsline {subsubsection}{Elementi di una classe}{88}{subsubsection*.44}%
+\contentsline {subsubsection}{Differenze da Java}{88}{subsubsection*.45}%
+\contentsline {subsection}{\numberline {22.6.3}Iterazioni su variabili multivalore}{89}{subsection.22.6.3}%
+\contentsline {subsubsection}{\texttt {for/of}}{89}{subsubsection*.46}%
+\contentsline {subsubsection}{\texttt {for/in}}{89}{subsubsection*.47}%
+\contentsline {section}{\numberline {22.7}Programmazione funzionale}{90}{section.22.7}%
+\contentsline {subsection}{\numberline {22.7.1}\texttt {forEach}}{90}{subsection.22.7.1}%
+\contentsline {subsection}{\numberline {22.7.2}\texttt {map}}{90}{subsection.22.7.2}%
+\contentsline {subsection}{\numberline {22.7.3}\texttt {filter}}{90}{subsection.22.7.3}%
+\contentsline {subsection}{\numberline {22.7.4}\texttt {reduce}}{91}{subsection.22.7.4}%
+\contentsline {section}{\numberline {22.8}Visualizzare i dati}{91}{section.22.8}%
+\contentsline {subsection}{\numberline {22.8.1}Scrivere nel DOM (modo principale)}{91}{subsection.22.8.1}%
+\contentsline {subsection}{\numberline {22.8.2}Console del browser (debug)}{91}{subsection.22.8.2}%
+\contentsline {subsection}{\numberline {22.8.3}Finiestre di dialogo (uso limitato)}{91}{subsection.22.8.3}%
+\contentsline {section}{\numberline {22.9}Gestione eventi}{92}{section.22.9}%
+\contentsline {subsection}{\numberline {22.9.1}Cos'è un evento?}{92}{subsection.22.9.1}%
+\contentsline {subsection}{\numberline {22.9.2}Come aggiungere un Listener}{92}{subsection.22.9.2}%
+\contentsline {chapter}{\numberline {23}DHTML}{93}{chapter.23}%
+\contentsline {section}{\numberline {23.1}Definizione}{93}{section.23.1}%
+\contentsline {section}{\numberline {23.2}Componenti principali}{93}{section.23.2}%
+\contentsline {section}{\numberline {23.3}Struttura di una pagina HTML5}{94}{section.23.3}%
+\contentsline {subsection}{\numberline {23.3.1}Best practice}{94}{subsection.23.3.1}%
+\contentsline {chapter}{\numberline {24}AJAX}{95}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Limite di DHTML}{95}{section.24.1}%
+\contentsline {section}{\numberline {24.2}Definizione}{95}{section.24.2}%
+\contentsline {section}{\numberline {24.3}Componenti}{95}{section.24.3}%
+\contentsline {subsection}{\numberline {24.3.1}AJAX come estensione di DHTML}{95}{subsection.24.3.1}%
+\contentsline {subsection}{\numberline {24.3.2}Cosa abilita?}{96}{subsection.24.3.2}%
+\contentsline {section}{\numberline {24.4}WEB 2.0}{96}{section.24.4}%
+\contentsline {subsection}{\numberline {24.4.1}I 6 principi del Web 2.0}{96}{subsection.24.4.1}%
+\contentsline {section}{\numberline {24.5}Utilizzi di AJAX}{96}{section.24.5}%
+\contentsline {section}{\numberline {24.6}Archiettura Web con AJAX}{97}{section.24.6}%
+\contentsline {subsection}{\numberline {24.6.1}Architettura Web Classica}{97}{subsection.24.6.1}%
+\contentsline {subsection}{\numberline {24.6.2}Architettura Web con AJAX}{98}{subsection.24.6.2}%
+\contentsline {section}{\numberline {24.7}Trasmissione dei dati}{98}{section.24.7}%
+\contentsline {section}{\numberline {24.8}Confronto modelli di esecuizione}{99}{section.24.8}%
+\contentsline {subsection}{\numberline {24.8.1}Sequenziale}{99}{subsection.24.8.1}%
+\contentsline {subsubsection}{Flusso}{99}{subsubsection*.48}%
+\contentsline {subsubsection}{Caratteristiche}{99}{subsubsection*.49}%
+\contentsline {subsubsection}{Esempi}{99}{subsubsection*.50}%
+\contentsline {subsection}{\numberline {24.8.2}Interattivo}{99}{subsection.24.8.2}%
+\contentsline {subsubsection}{Flusso}{99}{subsubsection*.51}%
+\contentsline {subsubsection}{Caratteristiche}{99}{subsubsection*.52}%
+\contentsline {subsubsection}{Esempi}{99}{subsubsection*.53}%
+\contentsline {subsection}{\numberline {24.8.3}Reattivo (event-driven)}{99}{subsection.24.8.3}%
+\contentsline {subsubsection}{Flusso}{99}{subsubsection*.54}%
+\contentsline {subsubsection}{Caratteristiche}{100}{subsubsection*.55}%
+\contentsline {subsubsection}{Esempi}{100}{subsubsection*.56}%
+\contentsline {section}{\numberline {24.9}Sistemi reattivi}{101}{section.24.9}%
+\contentsline {subsection}{\numberline {24.9.1}Definizione}{101}{subsection.24.9.1}%
+\contentsline {subsection}{\numberline {24.9.2}Caratteristiche}{101}{subsection.24.9.2}%
+\contentsline {subsection}{\numberline {24.9.3}Modello di esecuzione}{101}{subsection.24.9.3}%
+\contentsline {section}{\numberline {24.10}Formati e protocolli AJAX}{102}{section.24.10}%
+\contentsline {section}{\numberline {24.11}Criticità di AJAX}{102}{section.24.11}%
+\contentsline {subsection}{\numberline {24.11.1}Navigazione e bookmark}{102}{subsection.24.11.1}%
+\contentsline {subsection}{\numberline {24.11.2}Indicizzazione e SEO}{102}{subsection.24.11.2}%
+\contentsline {subsection}{\numberline {24.11.3}Complessità del client}{102}{subsection.24.11.3}%
+\contentsline {subsection}{\numberline {24.11.4}Pressione sul server}{102}{subsection.24.11.4}%
+\contentsline {chapter}{\numberline {25}XMLHttpRequest - Interazione server AJAX}{103}{chapter.25}%
+\contentsline {section}{\numberline {25.1}Cos'è?}{103}{section.25.1}%
+\contentsline {section}{\numberline {25.2}Cosa offre?}{103}{section.25.2}%
+\contentsline {section}{\numberline {25.3}Metodi principali}{103}{section.25.3}%
+\contentsline {subsection}{\numberline {25.3.1}Schema d'uso}{103}{subsection.25.3.1}%
+\contentsline {section}{\numberline {25.4}Proprieà di interesse}{104}{section.25.4}%
+\contentsline {subsection}{\numberline {25.4.1}Sincorno o asincrono}{104}{subsection.25.4.1}%
+\contentsline {subsubsection}{async = true (raccomandato)}{104}{subsubsection*.57}%
+\contentsline {subsubsection}{async = false (sconsigliato)}{104}{subsubsection*.58}%
+\contentsline {section}{\numberline {25.5}Ciclo di vita}{105}{section.25.5}%
+\contentsline {subsection}{\numberline {25.5.1}Cos'è readyState?}{105}{subsection.25.5.1}%
+\contentsline {subsection}{\numberline {25.5.2}L'evento readystatechange}{105}{subsection.25.5.2}%
+\contentsline {subsection}{\numberline {25.5.3}Risposta del server}{105}{subsection.25.5.3}%
+\contentsline {subsubsection}{Proprietà responseText}{105}{subsubsection*.59}%
+\contentsline {subsubsection}{Proprietà responseXML}{105}{subsubsection*.60}%
+\contentsline {section}{\numberline {25.6}Richieste con fetch() - alternatva moderna e più semplice}{106}{section.25.6}%

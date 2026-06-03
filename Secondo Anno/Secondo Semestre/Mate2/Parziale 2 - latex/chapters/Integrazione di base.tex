@@ -1,0 +1,30 @@
+\chapter{Calcolo degli Integrali Singoli}
+
+Il calcolo integrale rappresenta l'operazione inversa della derivazione. In questo capitolo esploreremo le tecniche fondamentali per il calcolo degli integrali definiti e indefiniti.
+
+\section{Integrali Notevoli}
+Per procedere al calcolo di integrali complessi, è indispensabile conoscere le primitive delle funzioni elementari. Ecco un elenco delle più comuni:
+
+\begin{itemize}
+    \item \textbf{Potenza:} $\int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)$
+    \item \textbf{Reciproco:} $\int \frac{f'(x)}{f(x)} \, dx = \ln|f(x)| + C$
+    \item \textbf{Esponenziale:} $\int e^x \, dx = e^x + C$
+    \item \textbf{Seno:} $\int \sin(x) \, dx = -\cos(x) + C$
+    \item \textbf{Coseno:} $\int \cos(x) \, dx = \sin(x) + C$
+\end{itemize}
+
+\section{Tecniche di Integrazione}
+Quando la funzione non è immediata, si utilizzano tecniche algebriche per ricondurla a forme note.
+
+\subsection{Integrazione per Parti}
+Si basa sulla formula della derivata del prodotto. La regola è:
+\begin{equation}
+    \int f(x)g'(x) \, dx = f(x)g(x) - \int f'(x)g(x) \, dx
+\end{equation}
+Questa tecnica è particolarmente utile quando l'integranda è il prodotto di funzioni di diversa natura (es. $x e^x$ o $x \ln(x)$).
+
+\subsection{Integrazione per Sostituzione}
+Questa tecnica permette di cambiare la variabile di integrazione per semplificare l'espressione:
+\begin{equation}
+    \int f(g(x))g'(x) \, dx = \int f(u) \, du \quad \text{con } u = g(x)
+\end{equation}

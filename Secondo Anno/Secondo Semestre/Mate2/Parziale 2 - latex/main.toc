@@ -1,0 +1,29 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Calcolo degli Integrali Singoli}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Integrali Notevoli}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Tecniche di Integrazione}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Integrazione per Parti}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Integrazione per Sostituzione}{3}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}Campi Vettoriali Conservativi}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Cosa devo fare in questo Esercizio?}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Metodo di integrazione indefinita successiva}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Procedura}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Quando usarlo?}{5}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Pro e Contro}{5}{subsection.2.2.3}%
+\contentsline {subsubsection}{Pro}{5}{section*.2}%
+\contentsline {subsubsection}{Contro}{5}{section*.3}%
+\contentsline {subsection}{\numberline {2.2.4}Esempio 1}{5}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Metodo Integrale di Linea lungo i Segmenti Paralleli agli Assi}{6}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Procedura}{6}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Quando usarlo}{6}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Pro e Contro}{7}{subsection.2.3.3}%
+\contentsline {subsubsection}{Pro}{7}{section*.4}%
+\contentsline {subsubsection}{Contro}{7}{section*.5}%
+\contentsline {subsection}{\numberline {2.3.4}Esempio}{7}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Esempio 2}{8}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Esempio 3}{9}{subsection.2.3.6}%
+\contentsline {chapter}{\numberline {3}Formula di Greene}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Cosa devo fare in questo esercizio}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Procedura}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Esempio}{10}{section.3.3}%

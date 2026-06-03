@@ -1,0 +1,208 @@
+\chapter{Campi Vettoriali Conservativi}
+\section{Cosa devo fare in questo Esercizio?}
+\begin{enumerate}
+    \item Verificare che il campo sia conservativo 
+    \begin{enumerate}
+        \item Verificare condizioni necessarie
+        \item Verificare condizioni sufficienti
+    \end{enumerate}
+    \item Calcolare il potenziale
+\end{enumerate}
+
+\section{Metodo di integrazione indefinita successiva}
+\subsection{Procedura}
+\begin{enumerate}
+    \item Verificare le condizioni necessarie
+    \begin{itemize} 
+        \item{\LARGE $\R^{2}$ : $\frac{\partial F_{1}}{\partial y} = \frac{\partial F_{2}}{\partial x}$}
+        \item {\LARGE $\R^{3}: \frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x}, \quad 
+        \frac{\partial F_1}{\partial z} = \frac{\partial F_3}{\partial x}, \quad 
+        \frac{\partial F_2}{\partial z} = \frac{\partial F_3}{\partial y}$} 
+    \end{itemize}
+    \item Verificare le condizioni sufficienti
+    \begin{itemize}
+        \item Le componenti di $F$ sono di classe $C^{1}$ su un dominio D
+        \item Il campo è irritazionale in $D$
+        \item Il dominio $D$ è semplicemente connesso
+    \end{itemize}
+    \item Porre :
+    {\large
+    $$
+    \vec{\nabla}U=\vec{F}= 
+    \begin{cases}
+    \frac{\partial U}{\partial x} = \vec{F_{1}} \\
+    \frac{\partial U}{\partial y} = \vec{F_{2}} \\
+    \frac{\partial U}{\partial z} = \vec{F_{3}} \quad \text{Se siamo in $\R^3$}  \\
+    \end{cases}
+    $$
+    }
+    \item Scegliere una componente del campo e calcolarne l'integrale indefinito rispetto alla sua variabile, aggiungere una funzione incognita che dipenda dalle restanti variabili  :  $$U(x, y, z) = \int F_1(x, y, z) \, dx + f(y, z)$$
+    \item Si deriva la $U$ appena trovata  rispetto a $y$ e la si uguaglia a $F_{2}$ , si determinerà la forma di $f(y,z)$, la quale conterrà una nuova funzione incognita $g(z)$ dipendente solo dall'ultima variabile
+    \item  Si aggiorna l'espressione di $U$, la si deriva rispetto a $z$ e la si uguaglia a $F_3$, semplificando i termini residui e integrando rispetto a $z$, si ricava infine $g(z)$ a meno di una costante numerica reale $C$.
+\end{enumerate}
+
+\subsection{Quando usarlo?}
+\begin{itemize}
+    \item Quando il campo vettoriale ha componenti formate da molti prodotti tra variabili
+    \item Quando le funzioni componenti sono facili da derivare parzialmente
+    \item Quando il dominio del campo ha "buchi" o esclusioni vicino all'origine degli assi, poiché questo metodo lavora con integrali indefiniti e non richiede di fissare un punto di partenza numerico
+\end{itemize}
+\subsection{Pro e Contro}
+\subsubsection{Pro}
+\begin{itemize}
+    \item \textbf{Procedimento meccanico}
+    \item \textbf{Semplificazione automatica} 
+    
+    Se il campo è davvero conservativo, durante i passaggi di derivazione i termini misti devono elidersi. Se non succede, ti accorgi immediatamente di aver fatto un errore di calcolo.
+\end{itemize}
+\subsubsection{Contro}
+\begin{itemize}
+    \item \textbf{Procedimento lungo}
+    \item Richiede molti passaggi algebrici intermedi di derivazione parziale, basta sbagliare un esponente per trascinarsi l'errore fino alla fine
+\end{itemize}
+
+\subsection{Esempio 1}
+\begin{gather}
+\intertext{Calcolare (se esiste) il potenziale di $\vec{F} = (2x y^2 z^2)\vec{e}_1 + (2y x^2 z^2)\vec{e}_2 + (2z x^2 y^2)\vec{e}_3$}
+\intertext{Verifichiamo la condizione necessaria:}
+\frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x} = 4x y z^2 \\
+\frac{\partial F_1}{\partial z} = \frac{\partial F_3}{\partial x} = 4x y^2 z \\ 
+\frac{\partial F_2}{\partial z} = \frac{\partial F_3}{\partial y} = 4x^2 y z \\
+\intertext{Essendo che le condizioni necessarie sono soddisfatte passiamo a quelle sufficienti} 
+F_1 = 2xy^2z^2 \implies D = \{\mathbb{R}^3\} \\
+F_2 = 2yx^2z^2 \implies D = \{\mathbb{R}^3\} \\
+F_3 = 2zx^2y^2 \implies D = \{\mathbb{R}^3\} \\
+D = \{\R^3\}
+\intertext{Ora mettiamo tutto a sistema e calcoliamo U}
+\vec{\nabla}U = \vec{F} = 
+\begin{cases}
+    \frac{\partial U}{\partial x} = 2x y^2 z^2 \\
+    \frac{\partial U}{\partial y} = 2y x^2 z^2 \\
+    \frac{\partial U}{\partial z} = 2z x^2 y^2
+\end{cases}
+\intertext{Integriamo la prima funzione}
+U = \int 2xy^2z^2 \, dx \implies U = x^2y^2z^2 + f(y,z) \\
+\intertext{Ora deriviamo U e troviamo f(y,z)}
+2x^2yz^2 + \frac{\partial f(y,z)}{\partial y} = 2yx^2z^2 \implies \frac{\partial f(y,z)}{\partial y} = 0 \implies f(y,z) = g(z)\\
+2x^2y^2z + g'(z) = 2zx^2y^2 \implies g'(z) = 0 \\
+g(z) = c \quad (\text{con } c \in \mathbb{R})
+\intertext{Il risultato finale è: } U(x,y,z) = x^2y^2z^2 + c
+\end{gather}
+
+
+
+\section{Metodo Integrale di Linea lungo i Segmenti Paralleli agli Assi}
+\subsection{Procedura}
+\begin{gather}
+\intertext{Verifichiamo le condizioni necessarie}
+\frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x}, \quad 
+    \frac{\partial F_1}{\partial z} = \frac{\partial F_3}{\partial x}, \quad 
+    \frac{\partial F_2}{\partial z} = \frac{\partial F_3}{\partial y} \\
+\intertext{Si fissa un punto appartenente al dominio e si calcola l'integrale tra il punto fisso e un punto generale}
+P_{0}(x_{0},y_{0},z_{0}) \quad P(x,y,z) \\
+\intertext{Si parametrizza il percorso tra i 2 punti}
+\begin{cases}
+    x(t) = x_{0} + t(x_{1} - x_{0}) \\
+    y(t) = y_{0} + t(y_{1} - y_{0}) \\
+    z(t) = z_{0} + t(z_{1} - z_{0})
+\end{cases} \quad t \in [0,1] 
+\intertext{Calcoliamo il potenziale via integrale di linea di 2ª specie}
+U(x,y,z) = \int_{\gamma} \vec{F}(x(t),y(t),z(t  )) \cdot \vec{t} \, dt
+\end{gather}
+
+\subsection{Quando usarlo}
+\begin{enumerate}
+    \item \textbf{Componenti del campo formate da somme isolate}
+    \item \textbf{L'origine degli assi fa parte del dominio}
+\end{enumerate}
+\subsection{Pro e Contro}
+\subsubsection{Pro}
+\begin{itemize}
+    \item \textbf{Veloce}
+    \item \textbf{Meno passaggi algrebrici rischiosi}
+\end{itemize}
+\subsubsection{Contro}
+\begin{itemize}
+    \item \textbf{Difficile se l'origine non fa parte del dominio}
+\end{itemize}
+
+\subsection{Esempio}
+\begin{gather}
+\intertext{Calcolare (se esiste) il potenziale di $\vec{F} = (2x y^2 z^2)\vec{e}_1 + (2y x^2 z^2)\vec{e}_2 + (2z x^2 y^2)\vec{e}_3$}
+\intertext{Verifichiamo la condizione necessaria:}
+\frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x} = 4x y z^2 \\
+\frac{\partial F_1}{\partial z} = \frac{\partial F_3}{\partial x} = 4x y^2 z \\ 
+\frac{\partial F_2}{\partial z} = \frac{\partial F_3}{\partial y} = 4x^2 y z \\
+\intertext{Essendo che le condizioni necessarie sono soddisfatte passiamo a quelle sufficienti} 
+F_1 = 2xy^2z^2 \implies D = \{\mathbb{R}^3\} \\
+F_2 = 2yx^2z^2 \implies D = \{\mathbb{R}^3\} \\
+F_3 = 2zx^2y^2 \implies D = \{\mathbb{R}^3\} \\
+D = \{\R^3\}
+\intertext{Fissiamo un punto }
+P_{0} (0,0,0) \quad P(x,y,z) \\
+\intertext{Troviamo una parametrizzazione che giugne i 2 punti}
+\begin{cases}
+    x(t) = x_{0} + t(x_{1} - x_{0}) = xt \\
+    y(t) = y_{0} + t(y_{1} - y_{0}) = yt \\
+    z(t) = z_{0} + t(z_{1} - z_{0}) = zt
+\end{cases} \quad t \in [0,1] 
+\intertext{Calcoliamo l'integrale di linea di 2ª specie}
+U = \int_{0}^{1}  2x^2 y^2 z^2 t^5 + 2y^2 x^2 z^2 t^5 + 2z^2 x^2 y^2 t^5 \, dt \\
+\int_{0}^{1} 6 x^2 y^2 z^2 t^5 \, dt \\
+6 x^2 y^2 z^2 \int_{0}^{1} t^5 \, dt \\
+6 x^2 y^2 z^2 \cdot [\frac{t^6}{6}]^1_0 \\
+U = 6 x^2 y^2 z^2 \cdot \frac{1}{6} = x^2y^2z^2 + c
+\end{gather}
+
+\subsection{Esempio 2}
+\begin{gather}
+    \intertext{Sia } \gamma \intertext{la curva di equazioni parametriche}
+    \begin{cases}
+        x(t) = t \\
+        y(t) = \frac{2t^5}{1-t^5} \\
+        z(t) = \frac{4t^10}{1+t^4}
+    \end{cases} \quad t \in [0,1]
+    \intertext{determinare (se esiste) il valore di  $\lambda$ tale che}  
+    \int_{\gamma} [ (\lambda x + 2xy^2z^3)\cdot\frac{dx}{dt} + (\lambda y + 2x^2yz^3)\cdot\frac{dy}{dt} + (\lambda z + 3x^2y^2z^2)\cdot\frac{dz}{dt} ]\, dt = 0
+    \intertext{Controlliamo le condizioni necessarie}
+    \frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x}, \quad 
+    \frac{\partial F_1}{\partial z} = \frac{\partial F_3}{\partial x}, \quad 
+    \frac{\partial F_2}{\partial z} = \frac{\partial F_3}{\partial y} \\
+    \intertext{Fissiamo il percorso da percorrere}
+    P_0{0,0,0} \quad P_{1}(1,1,2) \intertext{$P_{1}$ ottenuto sostituendo $t=1$ nelle funzioni di parametrizzazione}
+    \intertext{Parametrizziamo il percorso}
+    \begin{cases}
+        x(t)= 0 + t (1 - 0) = t \\
+        y(t) = 0 + t(1 - 0) = t \\
+        z(t) = 0 + t(2 - 0) = 2t
+    \end{cases} \quad t \in [0,1]
+    \intertext{Ora calcoliamo l'integrale}
+    U = \int_{0}^{1} \left[ (\lambda t + 16t^6) + (\lambda t + 16t^6) + (2\lambda t + 12t^6) \right] \, dt \\
+\intertext{Sommiamo i termini simili all'interno delle parentesi prima di integrare:}
+U = \int_{0}^{1} (6\lambda t + 56t^6) \, dt \\
+\intertext{Calcoliamo la primitiva e valutiamo tra gli estremi 0 e 1:}
+U = \left[ 3\lambda t^2 + \frac{56}{7}t^7 \right]_0^1 = 3\lambda + 8 \\
+\intertext{Poiché il lavoro lungo una curva chiusa (o tra due punti in cui il potenziale si annulla) deve eguagliare la condizione iniziale del problema, imponiamo l'equazione per trovare $\lambda$:}
+3\lambda + 8 = 0 \implies \lambda = -\frac{3}{8}
+\end{gather}
+
+\subsection{Esempio 3}
+\begin{gather}
+    \intertext{Calcolare (se esiste) il potenziale del campo vettoriale $\vec{F}=\frac{2x}{x^2+y^2}\vec{e_1}+\frac{2y}{x^2y^2}\vec{e_2}$}
+    \intertext{Verificare le condizioni necessarie}
+    \frac{\partial F_{1}}{\partial y} = \frac{\partial F_{2}}{\partial x}
+    \intertext{Verificare condizioni sufficienti}
+    \vec{F_1}:D=\R^2 \backslash \{0,0\} \\
+    \vec{F_1}:D=\R^2 \backslash \{0,0\} \\
+    D \text{ non è un dominio semplicemente connesso}
+    \intertext{Risolvendo otteniamo}
+    U = \ln(x^2+y^2)+c
+    \intertext{Essendo che il dominio non è semplicemente conesso abbiamo bisgno di conferme aggiuntive, quindi veriifichiamo che}
+    \oint_{\gamma} \vec{F} \cdot \vec{t} \, dl = 0 \\ 
+    \gamma = 
+    \begin{cases}
+        x(t)= \cos(t) \\ 
+        y(t)= \sin(t) \\
+    \end{cases} \quad t \in [0,2\pi] \\ 
+    \int^{2\pi}_0 \cos^2(t) + \sin^2(t) = \int^{2\pi}_0 1 \not = 0 \implies \text{Il campo vettoriale non è conservativo} 
+\end{gather}

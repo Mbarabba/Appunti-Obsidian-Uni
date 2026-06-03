@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.6)  15 MAY 2026 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.2)  3 JUN 2026 12:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -665,7 +665,9 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count357
-) (./main.aux (./chapters/Protocollo_HTTP.aux) (./chapters/Rappresentazione dei dati.aux) (./chapters/Applicazioni Web.aux) (./chapters/Servizi SOAP.aux) (./chapters/Servizi REST.aux) (./chapters/RPC - Remote Procedure Call.aux))
+) (./main.aux (./chapters/Protocollo_HTTP.aux) (./chapters/Rappresentazione dei dati.aux) (./chapters/Applicazioni Web.aux) (./chapters/Servizi SOAP.aux) (./chapters/Servizi REST.aux) (./chapters/RPC - Remote Procedure Call.aux) (./chapters/Javascript.aux) (./chapters/AJAX-JS.aux)
+No file chapters/.aux.
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -770,25 +772,13 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 20.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}] (./main.toc
-LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 3.
- [1
-
-]
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 65.
- (/usr/share/texmf-dist/tex/latex/bera/t1fvm.fd
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
-)
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 10.20007pt on input line 65.
-LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
-(Font)              scaled to size 10.20007pt on input line 87.
- [2{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}] [3] [4])
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}] (./main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [5]
+ [1
+
+]
 \openout2 = `chapters/Protocollo_HTTP.aux'.
 
  (./chapters/Protocollo_HTTP.tex
@@ -797,7 +787,7 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
 (Font)              scaled to size 17.28pt on input line 4.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
 (Font)              scaled to size 17.28pt on input line 4.
-<figures/Schermata_20260507_103509.png, id=1138, 601.4972pt x 221.32687pt>
+<figures/Schermata_20260507_103509.png, id=1204, 601.4972pt x 221.32687pt>
 File: figures/Schermata_20260507_103509.png Graphic file (type png)
 <use figures/Schermata_20260507_103509.png>
 Package pdftex.def Info: figures/Schermata_20260507_103509.png  used on input line 17.
@@ -811,7 +801,9 @@ l.30 \newpage
 
 
  <./figures/Schermata_20260507_103509.png>]
-<figures/Schermata_20260507_105712.png, id=1145, 663.22781pt x 55.70813pt>
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 36.
+<figures/Schermata_20260507_105712.png, id=1211, 663.22781pt x 55.70813pt>
 File: figures/Schermata_20260507_105712.png Graphic file (type png)
 <use figures/Schermata_20260507_105712.png>
 Package pdftex.def Info: figures/Schermata_20260507_105712.png  used on input line 65.
@@ -823,17 +815,23 @@ File: TS1LibertinusSerif-TLF.fd 2024/09/22 (autoinst) Font definitions for TS1/L
 )
 LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 76.
-<figures/Schermata_20260507_110928.png, id=1158, 313.17pt x 35.38219pt>
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 89.
+ (/usr/share/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
+(Font)              scaled to size 10.20007pt on input line 89.
+<figures/Schermata_20260507_110928.png, id=1224, 313.17pt x 35.38219pt>
 File: figures/Schermata_20260507_110928.png Graphic file (type png)
 <use figures/Schermata_20260507_110928.png>
 Package pdftex.def Info: figures/Schermata_20260507_110928.png  used on input line 104.
 (pdftex.def)             Requested size: 313.16922pt x 35.3821pt.
-<figures/Schermata_20260507_111047.png, id=1159, 411.03563pt x 49.68562pt>
+<figures/Schermata_20260507_111047.png, id=1225, 411.03563pt x 49.68562pt>
 File: figures/Schermata_20260507_111047.png Graphic file (type png)
 <use figures/Schermata_20260507_111047.png>
 Package pdftex.def Info: figures/Schermata_20260507_111047.png  used on input line 108.
 (pdftex.def)             Requested size: 411.03462pt x 49.6855pt.
- [3{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_rlktsf.enc} <./figures/Schermata_20260507_110928.png> <./figures/Schermata_20260507_111047.png>] [4]
+ [3{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_rlktsf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc} <./figures/Schermata_20260507_110928.png> <./figures/Schermata_20260507_111047.png>] [4]
 Capitolo 5.
 
 Overfull \hbox (5.87808pt too wide) in paragraph at lines 168--169
@@ -842,7 +840,10 @@ Overfull \hbox (5.87808pt too wide) in paragraph at lines 168--169
 
 [5
 
-] [6]
+]
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 10.20007pt on input line 191.
+ [6]
 Underfull \hbox (badness 10000) in paragraph at lines 216--223
 \T1/fvm/m/n/12 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0)
  []
@@ -852,7 +853,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 276--282
 \T1/fvm/m/n/12 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0)
  []
 
-<figures/Schermata_20260507_160135.png, id=1201, 382.42876pt x 173.14688pt>
+<figures/Schermata_20260507_160135.png, id=1268, 382.42876pt x 173.14688pt>
 File: figures/Schermata_20260507_160135.png Graphic file (type png)
 <use figures/Schermata_20260507_160135.png>
 Package pdftex.def Info: figures/Schermata_20260507_160135.png  used on input line 291.
@@ -875,7 +876,7 @@ Overfull \hbox (2.76587pt too wide) in paragraph at lines 539--539
 
  (./chapters/Rappresentazione dei dati.tex
 Capitolo 6.
-<figures/Schermata_20260508_111212.png, id=1277, 899.61093pt x 127.97812pt>
+<figures/Schermata_20260508_111212.png, id=1345, 899.61093pt x 127.97812pt>
 File: figures/Schermata_20260508_111212.png Graphic file (type png)
 <use figures/Schermata_20260508_111212.png>
 Package pdftex.def Info: figures/Schermata_20260508_111212.png  used on input line 9.
@@ -893,7 +894,7 @@ Capitolo 7.
 Capitolo 8.
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 21.14815pt on input line 46.
-<figures/Schermata_20260508_115751.png, id=1289, 729.47531pt x 315.42844pt>
+<figures/Schermata_20260508_115751.png, id=1356, 729.47531pt x 315.42844pt>
 File: figures/Schermata_20260508_115751.png Graphic file (type png)
 <use figures/Schermata_20260508_115751.png>
 Package pdftex.def Info: figures/Schermata_20260508_115751.png  used on input line 57.
@@ -911,7 +912,7 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 122.
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 9.30756pt on input line 122.
-<figures/Schermata_20260508_121814.png, id=1300, 252.945pt x 177.66376pt>
+<figures/Schermata_20260508_121814.png, id=1367, 252.945pt x 177.66376pt>
 File: figures/Schermata_20260508_121814.png Graphic file (type png)
 <use figures/Schermata_20260508_121814.png>
 Package pdftex.def Info: figures/Schermata_20260508_121814.png  used on input line 149.
@@ -919,7 +920,7 @@ Package pdftex.def Info: figures/Schermata_20260508_121814.png  used on input li
  [22 <./figures/Schermata_20260508_121814.png>]
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 14.6881pt on input line 154.
-<figures/Albero Dom.png, id=1325, 271.0125pt x 161.85469pt>
+<figures/Albero Dom.png, id=1393, 271.0125pt x 161.85469pt>
 File: figures/Albero Dom.png Graphic file (type png)
 <use figures/Albero Dom.png>
 Package pdftex.def Info: figures/Albero Dom.png  used on input line 164.
@@ -955,12 +956,12 @@ Capitolo 12.
 
 ]
 Capitolo 13.
-<figures/Schermata_20260512_124943.png, id=1460, 450.18187pt x 173.14688pt>
+<figures/Schermata_20260512_124943.png, id=1528, 450.18187pt x 173.14688pt>
 File: figures/Schermata_20260512_124943.png Graphic file (type png)
 <use figures/Schermata_20260512_124943.png>
 Package pdftex.def Info: figures/Schermata_20260512_124943.png  used on input line 29.
 (pdftex.def)             Requested size: 450.18077pt x 173.14645pt.
-<figures/Schermata_20260512_150719.png, id=1461, 467.49657pt x 185.19188pt>
+<figures/Schermata_20260512_150719.png, id=1529, 467.49657pt x 185.19188pt>
 File: figures/Schermata_20260512_150719.png Graphic file (type png)
 <use figures/Schermata_20260512_150719.png>
 Package pdftex.def Info: figures/Schermata_20260512_150719.png  used on input line 50.
@@ -968,7 +969,7 @@ Package pdftex.def Info: figures/Schermata_20260512_150719.png  used on input li
 [36
 
  <./figures/Schermata_20260512_124943.png>]
-<figures/Schermata_20260512_151336.png, id=1473, 467.49657pt x 280.79906pt>
+<figures/Schermata_20260512_151336.png, id=1541, 467.49657pt x 280.79906pt>
 File: figures/Schermata_20260512_151336.png Graphic file (type png)
 <use figures/Schermata_20260512_151336.png>
 Package pdftex.def Info: figures/Schermata_20260512_151336.png  used on input line 71.
@@ -992,7 +993,7 @@ Capitolo 15.
 [45
 
 ] [46]
-<figures/Schermata_20260512_173654.png, id=1675, 267.24844pt x 201.75375pt>
+<figures/Schermata_20260512_173654.png, id=1742, 267.24844pt x 201.75375pt>
 File: figures/Schermata_20260512_173654.png Graphic file (type png)
 <use figures/Schermata_20260512_173654.png>
 Package pdftex.def Info: figures/Schermata_20260512_173654.png  used on input line 420.
@@ -1005,7 +1006,7 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
 
  (./chapters/Servizi SOAP.tex
 Capitolo 16.
-<figures/Schermata_20260513_102839.png, id=1715, 562.35094pt x 379.4175pt>
+<figures/Schermata_20260513_102839.png, id=1783, 562.35094pt x 379.4175pt>
 File: figures/Schermata_20260513_102839.png Graphic file (type png)
 <use figures/Schermata_20260513_102839.png>
 Package pdftex.def Info: figures/Schermata_20260513_102839.png  used on input line 6.
@@ -1016,18 +1017,18 @@ Package pdftex.def Info: figures/Schermata_20260513_102839.png  used on input li
 
 
  <./figures/Schermata_20260513_102839.png>] [51]
-<figures/Schermata_20260513_121514.png, id=1726, 310.15875pt x 122.70844pt>
+<figures/Schermata_20260513_121514.png, id=1793, 310.15875pt x 122.70844pt>
 File: figures/Schermata_20260513_121514.png Graphic file (type png)
 <use figures/Schermata_20260513_121514.png>
 Package pdftex.def Info: figures/Schermata_20260513_121514.png  used on input line 65.
 (pdftex.def)             Requested size: 310.15799pt x 122.70813pt.
-<figures/Schermata_20260513_121721.png, id=1727, 652.68843pt x 285.31593pt>
+<figures/Schermata_20260513_121721.png, id=1794, 652.68843pt x 285.31593pt>
 File: figures/Schermata_20260513_121721.png Graphic file (type png)
 <use figures/Schermata_20260513_121721.png>
 Package pdftex.def Info: figures/Schermata_20260513_121721.png  used on input line 83.
 (pdftex.def)             Requested size: 443.82227pt x 194.01225pt.
  [52 <./figures/Schermata_20260513_121514.png> <./figures/Schermata_20260513_121721.png>]
-<figures/Schermata_20260513_122906.png, id=1734, 811.53188pt x 412.54124pt>
+<figures/Schermata_20260513_122906.png, id=1801, 811.53188pt x 412.54124pt>
 File: figures/Schermata_20260513_122906.png Graphic file (type png)
 <use figures/Schermata_20260513_122906.png>
 Package pdftex.def Info: figures/Schermata_20260513_122906.png  used on input line 108.
@@ -1038,7 +1039,7 @@ Overfull \hbox (3.22601pt too wide) in paragraph at lines 108--109
  []
 
 [53 <./figures/Schermata_20260513_122906.png>]
-<figures/Schermata_20260513_134558.png, id=1745, 776.14969pt x 437.38406pt>
+<figures/Schermata_20260513_134558.png, id=1813, 776.14969pt x 437.38406pt>
 File: figures/Schermata_20260513_134558.png Graphic file (type png)
 <use figures/Schermata_20260513_134558.png>
 Package pdftex.def Info: figures/Schermata_20260513_134558.png  used on input line 142.
@@ -1048,26 +1049,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--202
 [][]\T1/LibertinusSerif-TLF/b/n/12 Client Re-que-st[]\T1/LibertinusSerif-TLF/m/n/12 : [][]$\T1/fvm/m/n/12 https : / / api . openweathermap . org / data / 2 . 5 / weather ? q =
  []
 
-<figures/Schermata_20260513_112300.png, id=1772, 404.26031pt x 204.01219pt>
+<figures/Schermata_20260513_112300.png, id=1839, 404.26031pt x 204.01219pt>
 File: figures/Schermata_20260513_112300.png Graphic file (type png)
 <use figures/Schermata_20260513_112300.png>
 Package pdftex.def Info: figures/Schermata_20260513_112300.png  used on input line 228.
 (pdftex.def)             Requested size: 291.0672pt x 146.88866pt.
 [56 <./figures/Schermata_20260513_112300.png>]
-<figures/Schermata_20260513_113944.png, id=1785, 265.74281pt x 190.46156pt>
+<figures/Schermata_20260513_113944.png, id=1852, 265.74281pt x 190.46156pt>
 File: figures/Schermata_20260513_113944.png Graphic file (type png)
 <use figures/Schermata_20260513_113944.png>
 Package pdftex.def Info: figures/Schermata_20260513_113944.png  used on input line 244.
 (pdftex.def)             Requested size: 265.74216pt x 190.46107pt.
  [57 <./figures/Schermata_20260513_113944.png>]
-<figures/Schermata_20260513_120011.png, id=1791, 329.73187pt x 146.04562pt>
+<figures/Schermata_20260513_120011.png, id=1858, 329.73187pt x 146.04562pt>
 File: figures/Schermata_20260513_120011.png Graphic file (type png)
 <use figures/Schermata_20260513_120011.png>
 Package pdftex.def Info: figures/Schermata_20260513_120011.png  used on input line 278.
 (pdftex.def)             Requested size: 329.73105pt x 146.04524pt.
  [58 <./figures/Schermata_20260513_120011.png>] [59]
 Capitolo 17.
-<figures/Schermata_20260513_135423.png, id=1801, 446.41782pt x 289.83281pt>
+<figures/Schermata_20260513_135423.png, id=1870, 446.41782pt x 289.83281pt>
 File: figures/Schermata_20260513_135423.png Graphic file (type png)
 <use figures/Schermata_20260513_135423.png>
 Package pdftex.def Info: figures/Schermata_20260513_135423.png  used on input line 326.
@@ -1077,7 +1078,7 @@ Package pdftex.def Info: figures/Schermata_20260513_135423.png  used on input li
  <./figures/Schermata_20260513_135423.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 368.
  [61] [62]
-<figures/Schermata_20260514_092647.png, id=1852, 330.48468pt x 249.18094pt>
+<figures/Schermata_20260514_092647.png, id=1919, 330.48468pt x 249.18094pt>
 File: figures/Schermata_20260514_092647.png Graphic file (type png)
 <use figures/Schermata_20260514_092647.png>
 Package pdftex.def Info: figures/Schermata_20260514_092647.png  used on input line 434.
@@ -1093,13 +1094,13 @@ Capitolo 18.
 
 
 ]
-<figures/Schermata_20260514_104115.png, id=1886, 471.26062pt x 194.97844pt>
+<figures/Schermata_20260514_104115.png, id=1954, 471.26062pt x 194.97844pt>
 File: figures/Schermata_20260514_104115.png Graphic file (type png)
 <use figures/Schermata_20260514_104115.png>
 Package pdftex.def Info: figures/Schermata_20260514_104115.png  used on input line 62.
 (pdftex.def)             Requested size: 471.25948pt x 194.97795pt.
  [67 <./figures/Schermata_20260514_104115.png>]
-<figures/Schermata_20260514_105231.png, id=1893, 465.23813pt x 298.86656pt>
+<figures/Schermata_20260514_105231.png, id=1960, 465.23813pt x 298.86656pt>
 File: figures/Schermata_20260514_105231.png Graphic file (type png)
 <use figures/Schermata_20260514_105231.png>
 Package pdftex.def Info: figures/Schermata_20260514_105231.png  used on input line 93.
@@ -1109,7 +1110,7 @@ Package pdftex.def Info: figures/Schermata_20260514_105231.png  used on input li
 
  (./chapters/RPC - Remote Procedure Call.tex
 Capitolo 19.
-<figures/Schermata_20260514_112551.png, id=1932, 466.74374pt x 230.36063pt>
+<figures/Schermata_20260514_112551.png, id=1999, 466.74374pt x 230.36063pt>
 File: figures/Schermata_20260514_112551.png Graphic file (type png)
 <use figures/Schermata_20260514_112551.png>
 Package pdftex.def Info: figures/Schermata_20260514_112551.png  used on input line 9.
@@ -1129,20 +1130,20 @@ Overfull \hbox (10.41765pt too wide) in paragraph at lines 71--72
 []\T1/LibertinusSerif-TLF/m/n/12 Terminata l'e-la-bo-ra-zio-ne, il da-to mo-di-fi-ca-to dal ser-ver |   []   |   []   |   []   |   []   |   []
  []
 
-<figures/Schermata_20260514_141634.png, id=1944, 395.22656pt x 185.94469pt>
+<figures/Schermata_20260514_141634.png, id=2012, 395.22656pt x 185.94469pt>
 File: figures/Schermata_20260514_141634.png Graphic file (type png)
 <use figures/Schermata_20260514_141634.png>
 Package pdftex.def Info: figures/Schermata_20260514_141634.png  used on input line 79.
 (pdftex.def)             Requested size: 395.22559pt x 185.94421pt.
 [72 <./figures/Schermata_20260514_141634.png>]
-<figures/Schermata_20260515_103330.png, id=1954, 435.12563pt x 252.19218pt>
+<figures/Schermata_20260515_103330.png, id=2022, 435.12563pt x 252.19218pt>
 File: figures/Schermata_20260515_103330.png Graphic file (type png)
 <use figures/Schermata_20260515_103330.png>
 Package pdftex.def Info: figures/Schermata_20260515_103330.png  used on input line 103.
 (pdftex.def)             Requested size: 435.12456pt x 252.19156pt.
  [73 <./figures/Schermata_20260515_103330.png>]
 Capitolo 20.
-<figures/Schermata_20260515_104815.png, id=1962, 779.91376pt x 405.76593pt>
+<figures/Schermata_20260515_104815.png, id=2029, 779.91376pt x 405.76593pt>
 File: figures/Schermata_20260515_104815.png Graphic file (type png)
 <use figures/Schermata_20260515_104815.png>
 Package pdftex.def Info: figures/Schermata_20260515_104815.png  used on input line 125.
@@ -1150,7 +1151,7 @@ Package pdftex.def Info: figures/Schermata_20260515_104815.png  used on input li
 [74
 
  <./figures/Schermata_20260515_104815.png>]
-<figures/Schermata_20260515_105241.png, id=1972, 961.34157pt x 231.86626pt>
+<figures/Schermata_20260515_105241.png, id=2039, 961.34157pt x 231.86626pt>
 File: figures/Schermata_20260515_105241.png Graphic file (type png)
 <use figures/Schermata_20260515_105241.png>
 Package pdftex.def Info: figures/Schermata_20260515_105241.png  used on input line 138.
@@ -1160,7 +1161,7 @@ Capitolo 21.
 [77
 
 ]
-<figures/Schermata_20260515_114139.png, id=2012, 712.16063pt x 205.5178pt>
+<figures/Schermata_20260515_114139.png, id=2081, 712.16063pt x 205.5178pt>
 File: figures/Schermata_20260515_114139.png Graphic file (type png)
 <use figures/Schermata_20260515_114139.png>
 Package pdftex.def Info: figures/Schermata_20260515_114139.png  used on input line 225.
@@ -1176,7 +1177,7 @@ Overfull \hbox (8.45099pt too wide) in paragraph at lines 268--269
  []
 
 [79]
-<figures/Schermata_20260515_115647.png, id=2039, 768.62157pt x 240.9pt>
+<figures/Schermata_20260515_115647.png, id=2106, 768.62157pt x 240.9pt>
 File: figures/Schermata_20260515_115647.png Graphic file (type png)
 <use figures/Schermata_20260515_115647.png>
 Package pdftex.def Info: figures/Schermata_20260515_115647.png  used on input line 309.
@@ -1202,32 +1203,108 @@ Overfull \hbox (43.05362pt too wide) in paragraph at lines 339--340
  []
 
 [80 <./figures/Schermata_20260515_115647.png>]
-<figures/Schermata_20260515_121237.png, id=2047, 755.82375pt x 269.50688pt>
+<figures/Schermata_20260515_121237.png, id=2114, 755.82375pt x 269.50688pt>
 File: figures/Schermata_20260515_121237.png Graphic file (type png)
 <use figures/Schermata_20260515_121237.png>
 Package pdftex.def Info: figures/Schermata_20260515_121237.png  used on input line 362.
 (pdftex.def)             Requested size: 377.91095pt x 134.7531pt.
- [81 <./figures/Schermata_20260515_121237.png>]) [82] (./main.aux (./chapters/Protocollo_HTTP.aux) (./chapters/Rappresentazione dei dati.aux) (./chapters/Applicazioni Web.aux) (./chapters/Servizi SOAP.aux) (./chapters/Servizi REST.aux) (./chapters/RPC - Remote Procedure Call.aux))
+ [81 <./figures/Schermata_20260515_121237.png>]) [82]
+\openout2 = `chapters/Javascript.aux'.
+
+ (./chapters/Javascript.tex
+Capitolo 22.
+[83
+
+
+
+
+] [84] [85] [86] [87] [88] [89] [90] [91]) [92]
+\openout2 = `chapters/AJAX-JS.aux'.
+
+ (./chapters/AJAX-JS.tex
+Capitolo 23.
+<figures/file incollato.png, id=2390, 554.82281pt x 176.91093pt>
+File: figures/file incollato.png Graphic file (type png)
+<use figures/file incollato.png>
+Package pdftex.def Info: figures/file incollato.png  used on input line 7.
+(pdftex.def)             Requested size: 443.85886pt x 141.52893pt.
+[93
+
+
+
+
+ <./figures/file incollato.png>] [94]
+Capitolo 24.
+<figures/Schermata_20260601_121706.png, id=2412, 551.81157pt x 171.64125pt>
+File: figures/Schermata_20260601_121706.png Graphic file (type png)
+<use figures/Schermata_20260601_121706.png>
+Package pdftex.def Info: figures/Schermata_20260601_121706.png  used on input line 53.
+(pdftex.def)             Requested size: 441.44986pt x 137.31316pt.
+[95
+
+ <./figures/Schermata_20260601_121706.png>] [96]
+<figures/Schermata_20260601_123931.png, id=2423, 456.20438pt x 396.7322pt>
+File: figures/Schermata_20260601_123931.png Graphic file (type png)
+<use figures/Schermata_20260601_123931.png>
+Package pdftex.def Info: figures/Schermata_20260601_123931.png  used on input line 95.
+(pdftex.def)             Requested size: 296.52931pt x 257.87286pt.
+<figures/Schermata_20260601_124615.png, id=2424, 609.02531pt x 383.93437pt>
+File: figures/Schermata_20260601_124615.png Graphic file (type png)
+<use figures/Schermata_20260601_124615.png>
+Package pdftex.def Info: figures/Schermata_20260601_124615.png  used on input line 118.
+(pdftex.def)             Requested size: 395.86176pt x 249.55438pt.
+ [97 <./figures/Schermata_20260601_123931.png>] [98 <./figures/Schermata_20260601_124615.png>] [99] [100]
+<figures/Schermata_20260603_103043.png, id=2459, 336.50719pt x 308.65312pt>
+File: figures/Schermata_20260603_103043.png Graphic file (type png)
+<use figures/Schermata_20260603_103043.png>
+Package pdftex.def Info: figures/Schermata_20260603_103043.png  used on input line 199.
+(pdftex.def)             Requested size: 269.2061pt x 246.92282pt.
+ [101 <./figures/Schermata_20260603_103043.png>] [102]
+Capitolo 25.
+
+Overfull \hbox (2.75179pt too wide) in paragraph at lines 250--250
+|\T1/LibertinusSerif-TLF/b/n/24.88 XMLHttpRequest - In-te-ra-zio-ne ser-ver AJAX| 
+ []
+
+[103
+
+] [104]
+<figures/Schermata_20260603_112617.png, id=2485, 803.25093pt x 184.43906pt>
+File: figures/Schermata_20260603_112617.png Graphic file (type png)
+<use figures/Schermata_20260603_112617.png>
+Package pdftex.def Info: figures/Schermata_20260603_112617.png  used on input line 326.
+(pdftex.def)             Requested size: 481.95427pt x 110.66428pt.
+ [105 <./figures/Schermata_20260603_112617.png>]
+\g__tcobox_out_iow=\write6
+\openout6 = `main.listing'.
+
+ (./main.listing)
+\openout6 = `main.listing'.
+
+ (./main.listing)) [106]
+\openout2 = `"chapters/Code Migration.aux"'.
+
+ (./chapters/Code Migration.tex) (./main.aux (./chapters/Protocollo_HTTP.aux) (./chapters/Rappresentazione dei dati.aux) (./chapters/Applicazioni Web.aux) (./chapters/Servizi SOAP.aux) (./chapters/Servizi REST.aux) (./chapters/RPC - Remote Procedure Call.aux) (./chapters/Javascript.aux) (./chapters/AJAX-JS.aux) (./chapters/Code Migration.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EE63D14AEC87622147A27E68DE23CBF0;39095.
+(rerunfilecheck)             Checksum: B033FB14ABBE3827CF25BD4CC12D0EC7;50909.
  ) 
 Here is how much of TeX's memory you used:
- 31567 strings out of 468824
- 608005 string characters out of 5452438
- 1442588 words of memory out of 5000000
- 58890 multiletter control sequences out of 15000+600000
+ 32227 strings out of 468824
+ 620177 string characters out of 5452438
+ 1443616 words of memory out of 5000000
+ 59162 multiletter control sequences out of 15000+600000
  712556 words of font info for 112 fonts, out of 8000000 for 9000
  395 hyphenation exceptions out of 8191
- 121i,11n,124p,1286b,1724s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,11n,124p,1286b,2048s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb>
-Output written on main.pdf (88 pages, 2668796 bytes).
+Output written on main.pdf (108 pages, 3776966 bytes).
 PDF statistics:
- 2274 PDF objects out of 2487 (max. 8388607)
- 2084 compressed objects within 21 object streams
- 814 named destinations out of 1000 (max. 500000)
- 1930 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2800 PDF objects out of 2984 (max. 8388607)
+ 2573 compressed objects within 26 object streams
+ 1178 named destinations out of 1200 (max. 500000)
+ 2568 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,481 @@
+\chapter{Javascript}
+\section{Variabili}
+\subsection{var}
+Sono variabili che hanno \textbf{function scope}, sono visibili in tutta la funzione che le contiene e \uline{non rispettano lo scope di blocco}.
+
+\begin{lstlisting}
+var x = 10; // qui x vale 10
+{
+  let x = 2; // qui x vale 2
+  let y = 5; // qui y vale 5
+  var z = 8; // qui z vale 8
+}
+
+// qui x vale 10
+// y NON è accessibile qui
+// z può essere usata qui (var ignora il blocco)
+\end{lstlisting}
+
+Si usano per le variabili globali.
+\subsection{let}
+Sono variabili con \textbf{block scope}, esistono solo nel blocco \texttt{\{\dots\}} in cui è dichiarata.
+
+\subsection{const}
+Sono variabili con \textbf{block scope}, esistono solo nel blocco \texttt{\{\dots\}} in cui è dichiarata.
+
+\uline{Non possono essere riassegnate dopo l'inizializzazione.}
+
+Sono contenitori costanti, ma i valori contenuti possono cambiare:
+\begin{itemize}
+    \item Le variabili semplici sono modificabili.
+    \begin{lstlisting}
+var x = 10;
+// Here x is 10
+{
+  const x = 2; // Here x is 2
+  x = 4;       // ERROR!
+}
+// Here x is 10
+    \end{lstlisting}
+    \item I valori delle variabili composte possono cambiare
+    \begin{lstlisting}
+const ages = [15, 35, 28, 18];
+// Here ages is 15, 35, 28, 18
+
+for (let i = 0; i < ages.length; i++) {
+  ages[i] = ages[i] + 1;
+}
+// Here ages is 16,36,29,19
+ages[4] = 56;                           
+// Here ages is 16,36,29,19,56
+ages = [43, 26];
+    \end{lstlisting}
+\end{itemize}
+
+\section{Controllo di flusso}
+\subsection{Strutture standard}
+\texttt{if/else, switch, for, while, do while} identici a java
+\subsection{Iteratori specifici di JS}
+\begin{itemize}
+    \item \textbf{for of}: Itera sui valori (array, strignhe, ecc).
+    \item \textbf{for in}: Itera sualla chiave di un oggetto.
+\end{itemize}
+
+
+\begin{lstlisting}
+const arr = [10, 20, 30];
+
+// for classico
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+// itera sui valori
+for (const v of arr) {
+  console.log(v); // 10, 20, 30
+}
+
+// itera sugli indici/chiavi
+for (const k in arr) {
+  console.log(k); // 0, 1, 2
+}
+\end{lstlisting}
+
+\newpage
+
+\section{Funzioni}
+\subsection{Sintassi di una funzione}
+Esistono 3 modi per dichiarare una funzione:
+\begin{enumerate}
+    \item \textbf{Metodologia classica}
+    \begin{lstlisting}
+function f(x, y){
+    return x * y;
+}
+    \end{lstlisting}
+    \item \textbf{Assegnazione ad una variabile}
+    \begin{lstlisting}
+var f = function(x,y){
+    return x * y;
+}
+    \end{lstlisting}
+    \item \textbf{Arrow function}
+    \begin{lstlisting}
+const f = (x,y) => {return x*y;}
+    \end{lstlisting}
+
+    In questo caso la parola chiave \textbf{\texttt{return}} e le parentesi graffe possono essere omesso solo quando la funzione ha una sola istruazione, per questa ragione è buona abitudine usarle sempre
+\end{enumerate}
+
+\section{Stringhe}
+\subsection{Definizione}
+Una strigna in JS è \uline{una sequenza di 0 o più caratteri racchiusi tra virgolette}
+\begin{lstlisting}
+let carName1 = "Panda"; // doppie virgolette
+let carName2 = 'Punto'; // virgolette singole
+\end{lstlisting}
+
+\subsection{Lunghezza di una strigna}
+Per ottenere la lunghezza di una strigna, si usa la proprietà length integrata.
+\begin{lstlisting}
+let sln = carName1.length: //= 5
+\end{lstlisting}
+
+\subsection{Concatenazione di stringhe}
+L'operatore \texttt{+} può essere usato per concatenare le stringhe.
+
+\begin{lstlisting}
+let txt1 = "John";
+let txt2 = 'Doe';
+let txt3 = txt1 + " " + txt2; // John Doe
+\end{lstlisting}
+
+Sommando un numero a una stringa si ottiene una stringa
+\begin{lstlisting}
+let txt = Ciao;
+txt += 35; // Ciao35
+\end{lstlisting}
+
+\subsection{Metodi}
+\begin{itemize}
+    \item Il metodo \textbf{\texttt{indexOf()}} restituisce l'indice (la posizione) della prima occorrenza di un testo specifico in una stringa.
+
+    \begin{lstlisting}
+const str = "Please locate where 'locate' occurs!";
+let pos = str.indexOf("locate"); // 7
+    \end{lstlisting}
+
+    Restituisce -1 se il testo non viene trovato.
+    
+    Accetta un secondo parametro che indica la posizione di partenza per la ricerca.
+
+    \item Il metodo \textbf{\texttt{lastIndexOf()}} restituisce l'indice dell'\textbf{ultima} occorrenza di un testo specifico in una stringa
+    \begin{lstlisting}
+let pos = str.lastIndexOf("locate"); // 21
+    \end{lstlisting}
+
+    Restituisce -1 se il testo non viene trovato.
+    
+    Accetta un secondo parametro che indica la posizione di partenza per la ricerca.
+
+    \item Il metodo \textbf{\texttt{startsWith() [endsWith()]}} restituisce \textbf{\texttt{true}} se una strigna inizia [termina] con un valore specificato, altrimenti \textbf{\texttt{false}} (case sensitive).
+    \begin{lstlisting}
+const str = "Please locate where 'locate' occurs!";
+let pos = str.indexOf("locate");
+    \end{lstlisting}
+
+    Un secondo parametro opzionale indica una posizione da cui iniziare [a cui terminare]
+    \begin{lstlisting}
+text.startsWith("world", 6); // controlla dalla posizione 6, restituisce true
+text.endsWith("world", 11);  // controlla i primi 11 caratteri, restituisce true
+    \end{lstlisting}
+
+    \item Il metodo \textbf{\texttt{slice()}} estrae una porzione di una stringa e restituisce la parte estratta in una nuova stringa.
+
+    Accetta 1 o 2 parametri: la posizione inziiale e la posizione finale (esclusa) [opzionale]
+    \begin{lstlisting}
+const str = "Apple, Banana, Kiwi";
+let pos = str.slice(7, 13); // // Banana
+pos = str.slice(7);         // // Banana, Kiwi
+    \end{lstlisting}
+\end{itemize}
+
+\newpage
+\section{Metodi per manipolare Array}
+\begin{itemize}
+    \item \textbf{Aggiungere elementi}
+
+    Il modo più semplice per aggiungere un nuovo elemento a un array è usare il metodo \textbf{\texttt{push()}}
+    \begin{lstlisting}
+const fruits = ["Banana","Orange","Apple","Mango"];
+fruits.push("Lemon"); // aggiunge un nuovo elemento ("Lemon")
+let x = fruits.push(); // restituisce length: il valore di x è 5
+    \end{lstlisting}
+
+    \item \textbf{Rimuovere l'ultimo elemento}
+
+    Il metodo \textbf{\texttt{pop()}} rimuove l'ultimo elemento da un array
+    \begin{lstlisting}
+fruits.pop(); // rimuove l'ultimo elemento ("Lemon")
+let y = fruits.pop(); // il valore di y è "Lemon"
+    \end{lstlisting}
+
+    \item \textbf{Rimuovere il primo elemento}
+    
+    Il metodo \texttt{shift()} rimuove il primo elemento dell'array e fa scorrere tutti gli altri elementi a un indice inferiore.
+    \begin{lstlisting}
+fruits.shift(); // rimuove il primo elemento ("Banana")
+let z = fruits.shift(); // il valore di z è "Banana"
+    \end{lstlisting}
+    \item \textbf{Aggiungere in testa}
+    
+    Il metodo \texttt{unshift()} rimuove il primo elemento dell'array e fa scorrere tutti gli altri elementi a un indice superiore
+    \begin{lstlisting}
+fruits.unshift("Banana"); // aggiunge "Banana" in prima posizione
+    \end{lstlisting}
+    \item \textbf{Splice di un array}
+
+    Il metodo \texttt{splice()} può essere usato per inserire nuovi elementi in un array
+    \begin{lstlisting}
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+// fruits = ["Banana", "Orange", "Lemon", "Kiwi", "Apple", "Mango"]
+    \end{lstlisting}
+    \begin{itemize}
+        \item Il primo parametro indica la posizione in cui i nuovi elementi devono essere aggiunti (inseriti).
+        \item Il secondo parametro definisce quanti elementi devono essere rimossi.
+        \item I parametri successioni definiscono i nuovi elementi da aggiungere
+    \end{itemize}
+
+    Restituisce un array con gli elementi rimossi
+    \begin{lstlisting}
+let removed = fruits.splice(2, 2, "Lemon", "Kiwi");
+// fruits = ["Banana", "Orange", "Lemon", "Kiwi"]
+// removed = ["Apple", "Mango"]
+    \end{lstlisting}
+\end{itemize}
+
+\section{Classi}
+\subsection{Definizione}
+Permettono di definire dei tipi do oggetti e creare istanze.
+
+In JS tutti i valori sono oggetti, tranne i tipi primitivi.
+
+Quando scriviamo un letterale stiamo creando l'istanza di una classe predefinita
+\begin{lstlisting}
+// Utilizzo del literal di array (scelta consigliata)
+const names = ["Anna", "Diana"];
+
+// Equivalente utilizzando il costruttore Array
+const names = new Array("Anna", "Diana");
+\end{lstlisting}
+
+\subsection{Anatomia di una classe}
+\subsubsection{Elementi di una classe}
+\begin{itemize}
+    \item \textbf{\texttt{constructor}}: Viene eseguito da new e inizializza i campi tramite this.
+    \item \textbf{\texttt{Metodi}}: Si scrivono direttamente nel corpo della classe, senza la parola function.
+    \item \textbf{\texttt{Campi}}: Non si dichiararono a priori, nascono assengando \texttt{this.x = \dots} nel constructor
+\end{itemize}
+
+\subsubsection{Differenze da Java}
+\begin{itemize}
+    \item Niente tipi nelle firme
+    \item Niente \texttt{public/private} 
+    \item Niente overloading: una sola firma per nome
+\end{itemize}
+
+\begin{tcolorbox}[title={Esempio di classe}, breakable]
+\begin{lstlisting}
+class Car {
+  // Il costruttore viene chiamato automaticamente quando crei un nuovo oggetto
+  constructor(brand, year) {
+    this.brand = brand; // Assegna il valore all'istanza dell'oggetto
+    this.year = year;
+  }
+
+  // Metodo per calcolare l'età dell'auto
+  age(currentYear) {
+    return currentYear - this.year;
+  }
+
+  // Metodo per restituire una stringa descrittiva
+  toString() {
+    return `${this.brand} (${this.year})`;
+  }
+}
+
+// Esempio di utilizzo:
+// 'new' crea una nuova istanza (oggetto) della classe Car
+const c = new Car("Fiat", 2020);
+
+console.log(c.toString()); // Output: "Fiat (2020)"
+console.log(c.age(2026));  // Output: 6
+\end{lstlisting}    
+\end{tcolorbox}
+
+\subsection{Iterazioni su variabili multivalore}
+\subsubsection{\texttt{for/of}}
+Considera tutti i valori di una struttura iterativa
+\begin{lstlisting}
+const numbers = [1, 2, 3, 4, 5, 6];
+let sum = 0; // Inizializziamo la variabile che conterrà la somma
+
+// Il ciclo for...of scorre ogni elemento dell'array
+for (let x of numbers) {
+  sum = sum + x; // Aggiunge il valore corrente (x) alla somma totale
+}
+
+// Dopo il ciclo, sum vale 21 (1+2+3+4+5+6 = 21)
+console.log(sum);
+\end{lstlisting}
+
+\subsubsection{\texttt{for/in}}
+Considera tutte le proprietà di un oggetto
+\begin{lstlisting}
+const person = {fname:"John", lname:"Doe", age:25};
+let str = "";
+
+// Il ciclo for...in scorre le chiavi dell'oggetto
+for (let x in person) {
+  // Concatena la chiave (x), il separatore, il valore (person[x]) e un tag HTML
+  str += x + ": " + person[x] + "<br>";
+}
+\end{lstlisting}
+
+\newpage
+\section{Programmazione funzionale}
+\subsection{\texttt{forEach}}
+Il metodo \textbf{\texttt{forEach()}} invoca una funzione (una funzione di callback) una volta per ciascun elemento dell'array 
+\begin{lstlisting}
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+numbers.forEach(myFunction);
+
+function myFunction(value, index, array) { // index e array sono opzionali
+  txt += value + "<br>";
+}
+\end{lstlisting}
+
+La funzione accetta 3 argomenti:
+\begin{itemize}
+    \item Il valore dell'elemento
+    \item L'indice dell'elemento
+    \item L'array stesso
+\end{itemize}
+
+\subsection{\texttt{map}}
+Il metodo \textbf{\texttt{map()}} crea un nuovo array applicando una funzione a ciascun elemento dell'array.
+
+\begin{itemize}
+    \item Non esegue la funzione sugli elementi privi di valore.
+    \item Non modifica l'array originale
+\end{itemize}
+
+\begin{lstlisting}
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+function myFunction(value, index, array) { // moltiplica ogni valore per 2
+  return value * 2;
+} // array risultante: [90, 8, 18, 32, 50]
+\end{lstlisting}
+
+La funzione accetta 3 argomenti:
+\begin{itemize}
+    \item Il valore dell'elemento.
+    \item L'indice dell'elemento.
+    \item L'array stesso.
+\end{itemize}
+
+\subsection{\texttt{filter}}
+Il metodo \textbf{\texttt{filter()}} crea un nuovo array contente gli elementi che superano un test
+\begin{itemize}
+    \item Non esegue la funzione sugli elementi senza valore.
+    \item Non modifica l'array originale.
+\end{itemize}
+\begin{lstlisting}
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+function myFunction(value, index, array) {
+  // crea un nuovo array con gli elementi maggiori di 18
+  return value > 18;
+} // array risultante: [45, 25]
+\end{lstlisting}
+
+
+La funzione accetta 3 argomenti:
+\begin{itemize}
+    \item Il valore dell'elemento.
+    \item L'indice dell'elemento.
+    \item L'array stesso.
+\end{itemize}
+
+\subsection{\texttt{reduce}}
+Il metodo \textbf{\texttt{reduce()}} esegue una funzione su ogni elemento dell'array per produrre un singolo valore.
+\begin{itemize}
+    \item Lavora da sinistra a destra sull'array
+    \item Non modifica l'array originale
+\end{itemize}
+\begin{lstlisting}
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+function myFunction(total, value, index, array) { // somma tutti i numeri di un array
+  return total + value;
+} // valore risultante: 99
+\end{lstlisting}
+
+La funzione accetta 4 argomenti:
+\begin{itemize}
+    \item L'accumulatore (il valore iniziale o il valore restituito in precedenza)
+    \item Il valore corrente
+    \item L'indice corrente
+    \item L'array stesso
+\end{itemize}
+
+\section{Visualizzare i dati}
+JS non ha funzioni native di stampa, per "mostrare" qualcosa si scrive nel DOM, in una finiestra di dialogo o nella console
+
+\subsection{Scrivere nel DOM (modo principale)}
+\begin{itemize}
+    \item \texttt{element.textContent}: Inserisce solo testo, sicuro contro XSS
+    \item \texttt{element.innerHTML}: Interpreta markup HTML, usare solo con contenuto fidato
+\end{itemize}
+\subsection{Console del browser (debug)}
+\begin{itemize}
+    \item \texttt{console.log()}: stampa nella DevTools console
+\end{itemize}
+\subsection{Finiestre di dialogo (uso limitato)}
+\begin{itemize}
+    \item \texttt{alert(), confirm(), prompt()}: Bloccano l'interfaccia, usare solo per i prototipi o casi eccezionali  
+\end{itemize}
+
+\section{Gestione eventi}
+Javascript collega una funzione (handler) all'evento, e quel codice viene eseguito quando l'evento si verifica
+
+\subsection{Cos'è un evento?}
+Click, input da tastiera, submit di un form, caricamento pagina, scroll, mouseover, ...
+
+\subsection{Come aggiungere un Listener}
+Si usa il metodo \texttt{element.addEventListener(event, handler, options)}
+\begin{itemize}
+    \item \textbf{tipo di evento}
+    \begin{itemize}
+        \item Stringa: "click", "mousedown", "keyup", ...
+        \item Senza prefisso "on": "click", non "onclick"
+    \end{itemize}
+    \item \textbf{handler}
+    \begin{itemize}
+        \item Funzione anonima oppure nome di funzione (senza parametri)
+        \item Riceve l'oggetto Event come argomento
+    \end{itemize}
+    \item \textbf{(opzionale) - options}
+    \begin{itemize}
+        \item \{once: true\}, \{capture: true\}
+    \end{itemize}
+\end{itemize}
+
+\begin{tcolorbox}[title={Esempio}]
+\begin{lstlisting}[language=html]
+<!DOCTYPE html>
+<html>
+<body>
+    <button id="saveBtn">Salva</button>
+    <script>
+        const btn = document.getElementById("saveBtn");
+
+        // Handler con funzione anonima
+        btn.addEventListener("click", function (e) {
+            console.log("Cliccato!", e.target);
+        });
+
+        // Handler nominato + options
+        function onSave(e) { /* .. */ }
+        btn.addEventListener("click", onSave, { once: true });
+    </script>
+</body>
+</html>
+\end{lstlisting}
+\end{tcolorbox}
