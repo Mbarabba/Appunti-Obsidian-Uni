@@ -354,3 +354,112 @@
 \contentsline {subsubsection}{Proprietà responseText}{105}{subsubsection*.59}%
 \contentsline {subsubsection}{Proprietà responseXML}{105}{subsubsection*.60}%
 \contentsline {section}{\numberline {25.6}Richieste con fetch() - alternatva moderna e più semplice}{106}{section.25.6}%
+\contentsline {chapter}{\numberline {26}Code Migration}{107}{chapter.26}%
+\contentsline {section}{\numberline {26.1}Cosa è?}{107}{section.26.1}%
+\contentsline {section}{\numberline {26.2}Flessibilità}{107}{section.26.2}%
+\contentsline {section}{\numberline {26.3}Sicurezza}{108}{section.26.3}%
+\contentsline {section}{\numberline {26.4}Tipi di mobilità}{108}{section.26.4}%
+\contentsline {subsection}{\numberline {26.4.1}Modalità debole}{108}{subsection.26.4.1}%
+\contentsline {subsection}{\numberline {26.4.2}Strong mobility}{109}{subsection.26.4.2}%
+\contentsline {section}{\numberline {26.5}Problema dell'eterogeneità}{109}{section.26.5}%
+\contentsline {subsection}{\numberline {26.5.1}Remote Evaluation (REV)}{109}{subsection.26.5.1}%
+\contentsline {subsection}{\numberline {26.5.2}Code on Demand (CoD)}{109}{subsection.26.5.2}%
+\contentsline {chapter}{\numberline {27}Applicazioni Data-Intensive}{110}{chapter.27}%
+\contentsline {section}{\numberline {27.1}Cosa sono?}{110}{section.27.1}%
+\contentsline {section}{\numberline {27.2}L'idea: portare la computazione vicino ai dati}{111}{section.27.2}%
+\contentsline {section}{\numberline {27.3}Le 3 dimensioni della scalabilità}{112}{section.27.3}%
+\contentsline {subsection}{\numberline {27.3.1}Scale Cube}{112}{subsection.27.3.1}%
+\contentsline {chapter}{\numberline {28}Apache Hadoop}{113}{chapter.28}%
+\contentsline {section}{\numberline {28.1}Cos'è?}{113}{section.28.1}%
+\contentsline {section}{\numberline {28.2}Architetura core di Hadoop}{113}{section.28.2}%
+\contentsline {section}{\numberline {28.3}HDFS - Hadoop Distributed FIle System}{113}{section.28.3}%
+\contentsline {subsection}{\numberline {28.3.1}Rapporto Manager Worker}{114}{subsection.28.3.1}%
+\contentsline {subsection}{\numberline {28.3.2}Architetura hdfs}{114}{subsection.28.3.2}%
+\contentsline {subsection}{\numberline {28.3.3}Creazione del file}{115}{subsection.28.3.3}%
+\contentsline {subsection}{\numberline {28.3.4}Accesso al file}{115}{subsection.28.3.4}%
+\contentsline {subsection}{\numberline {28.3.5}Replica dei dati}{116}{subsection.28.3.5}%
+\contentsline {subsection}{\numberline {28.3.6}Forme della trasparenza}{116}{subsection.28.3.6}%
+\contentsline {section}{\numberline {28.4}YARN - Yet Another Resource Negotiator}{117}{section.28.4}%
+\contentsline {subsection}{\numberline {28.4.1}Cosa è?}{117}{subsection.28.4.1}%
+\contentsline {subsection}{\numberline {28.4.2}Cosa fa?}{117}{subsection.28.4.2}%
+\contentsline {subsection}{\numberline {28.4.3}Architetura}{117}{subsection.28.4.3}%
+\contentsline {subsection}{\numberline {28.4.4}Container}{118}{subsection.28.4.4}%
+\contentsline {subsection}{\numberline {28.4.5}Forme di trasparenza}{118}{subsection.28.4.5}%
+\contentsline {subsection}{\numberline {28.4.6}Esecuzione di un'applicazione}{119}{subsection.28.4.6}%
+\contentsline {section}{\numberline {28.5}Data locality in YARN + HDF}{121}{section.28.5}%
+\contentsline {chapter}{\numberline {29}Virtualizzazione}{125}{chapter.29}%
+\contentsline {section}{\numberline {29.1}Cosa è?}{125}{section.29.1}%
+\contentsline {section}{\numberline {29.2}Perchè virtualizzare?}{125}{section.29.2}%
+\contentsline {subsection}{\numberline {29.2.1}Consolidamento e multi-tenacy}{126}{subsection.29.2.1}%
+\contentsline {subsection}{\numberline {29.2.2}Isolamento dei carichi di lavoro}{126}{subsection.29.2.2}%
+\contentsline {subsection}{\numberline {29.2.3}Gestione della "sessione"}{126}{subsection.29.2.3}%
+\contentsline {section}{\numberline {29.3}Migrazione dei carichi di lavoro}{127}{section.29.3}%
+\contentsline {section}{\numberline {29.4}Strategie di migrazione}{127}{section.29.4}%
+\contentsline {subsection}{\numberline {29.4.1}Strategia Pre-copy}{127}{subsection.29.4.1}%
+\contentsline {subsubsection}{Migrazione delle risorse locali}{127}{subsubsection*.61}%
+\contentsline {subsection}{\numberline {29.4.2}Strategia Post-copy}{128}{subsection.29.4.2}%
+\contentsline {subsubsection}{Migrazione delle risorse locali}{128}{subsubsection*.62}%
+\contentsline {subsection}{\numberline {29.4.3}Consolidamento dinamico}{128}{subsection.29.4.3}%
+\contentsline {section}{\numberline {29.5}Cos'è un hypervisor?}{128}{section.29.5}%
+\contentsline {section}{\numberline {29.6}Tassonomia degli hypervisor}{129}{section.29.6}%
+\contentsline {subsection}{\numberline {29.6.1}Architettura bare-metal}{129}{subsection.29.6.1}%
+\contentsline {subsection}{\numberline {29.6.2}Architettura hosted}{129}{subsection.29.6.2}%
+\contentsline {section}{\numberline {29.7}Cosa fa una macchina virtuale?}{129}{section.29.7}%
+\contentsline {subsection}{\numberline {29.7.1}Proprietà}{130}{subsection.29.7.1}%
+\contentsline {section}{\numberline {29.8}Process Virtual Machine}{130}{section.29.8}%
+\contentsline {subsection}{\numberline {29.8.1}Proprietà}{130}{subsection.29.8.1}%
+\contentsline {section}{\numberline {29.9}Classificazione delle istruzioni}{130}{section.29.9}%
+\contentsline {section}{\numberline {29.10}CPU protection ring}{131}{section.29.10}%
+\contentsline {subsection}{\numberline {29.10.1}Applicazione alle VM}{131}{subsection.29.10.1}%
+\contentsline {subsection}{\numberline {29.10.2}Modalità di esecuzione}{131}{subsection.29.10.2}%
+\contentsline {subsection}{\numberline {29.10.3}VM-exit}{132}{subsection.29.10.3}%
+\contentsline {section}{\numberline {29.11}Trap-and-emulate}{132}{section.29.11}%
+\contentsline {subsection}{\numberline {29.11.1}Obiettivo}{132}{subsection.29.11.1}%
+\contentsline {subsection}{\numberline {29.11.2}Esecuzione normale}{132}{subsection.29.11.2}%
+\contentsline {subsection}{\numberline {29.11.3}Trap}{132}{subsection.29.11.3}%
+\contentsline {subsection}{\numberline {29.11.4}Emulate}{133}{subsection.29.11.4}%
+\contentsline {section}{\numberline {29.12}Traduzione binaria dinamica}{133}{section.29.12}%
+\contentsline {subsection}{\numberline {29.12.1}Cosa è?}{133}{subsection.29.12.1}%
+\contentsline {subsection}{\numberline {29.12.2}Obiettivo}{133}{subsection.29.12.2}%
+\contentsline {subsection}{\numberline {29.12.3}Idea base}{133}{subsection.29.12.3}%
+\contentsline {subsection}{\numberline {29.12.4}Flusso}{133}{subsection.29.12.4}%
+\contentsline {subsection}{\numberline {29.12.5}Vantaggio}{133}{subsection.29.12.5}%
+\contentsline {subsection}{\numberline {29.12.6}Costo}{134}{subsection.29.12.6}%
+\contentsline {section}{\numberline {29.13}Paravirtualizzazione}{134}{section.29.13}%
+\contentsline {subsection}{\numberline {29.13.1}Idea}{134}{subsection.29.13.1}%
+\contentsline {subsection}{\numberline {29.13.2}Hypercall}{134}{subsection.29.13.2}%
+\contentsline {subsection}{\numberline {29.13.3}Come procede il guest?}{134}{subsection.29.13.3}%
+\contentsline {chapter}{\numberline {30}Cloud Computing}{135}{chapter.30}%
+\contentsline {section}{\numberline {30.1}Definizione}{135}{section.30.1}%
+\contentsline {section}{\numberline {30.2}Caratteristiche essenziali}{135}{section.30.2}%
+\contentsline {section}{\numberline {30.3}Infrastructure as a Service (IaaS)}{136}{section.30.3}%
+\contentsline {subsection}{\numberline {30.3.1}Architettura di sistema}{136}{subsection.30.3.1}%
+\contentsline {subsubsection}{RMI - Resource Monitor Interface}{136}{subsubsection*.63}%
+\contentsline {subsubsection}{SMI - System Monitoring Interface}{136}{subsubsection*.64}%
+\contentsline {subsubsection}{Utenti Target}{136}{subsubsection*.65}%
+\contentsline {section}{\numberline {30.4}Platform as a Service (PaaS)}{137}{section.30.4}%
+\contentsline {subsection}{\numberline {30.4.1}Architettura di sistema}{137}{subsection.30.4.1}%
+\contentsline {subsubsection}{Ambiente di esecuzione}{137}{subsubsection*.66}%
+\contentsline {subsubsection}{API di programmazione}{137}{subsubsection*.67}%
+\contentsline {subsubsection}{Interfaccia di controllo di sistema}{137}{subsubsection*.68}%
+\contentsline {section}{\numberline {30.5}Software as a Service (SaaS)}{138}{section.30.5}%
+\contentsline {subsection}{\numberline {30.5.1}Architettura di sistema}{138}{subsection.30.5.1}%
+\contentsline {section}{\numberline {30.6}Cloud Pubblico}{138}{section.30.6}%
+\contentsline {subsection}{\numberline {30.6.1}Caratteristiche di base}{138}{subsection.30.6.1}%
+\contentsline {section}{\numberline {30.7}Cloud Privato}{139}{section.30.7}%
+\contentsline {subsection}{\numberline {30.7.1}Caratteristiche di base}{139}{subsection.30.7.1}%
+\contentsline {section}{\numberline {30.8}Cloud di Comunità}{139}{section.30.8}%
+\contentsline {section}{\numberline {30.9}Container}{139}{section.30.9}%
+\contentsline {subsection}{\numberline {30.9.1}Cosa sono?}{139}{subsection.30.9.1}%
+\contentsline {subsection}{\numberline {30.9.2}Caratteristiche principali}{139}{subsection.30.9.2}%
+\contentsline {subsection}{\numberline {30.9.3}Immagini}{139}{subsection.30.9.3}%
+\contentsline {subsubsection}{Immagine}{140}{subsubsection*.69}%
+\contentsline {subsubsection}{Container}{140}{subsubsection*.70}%
+\contentsline {section}{\numberline {30.10}Container as a Service}{140}{section.30.10}%
+\contentsline {subsection}{\numberline {30.10.1}Divisione delle responsabilità}{140}{subsection.30.10.1}%
+\contentsline {subsection}{\numberline {30.10.2}Vantaggi principali}{140}{subsection.30.10.2}%
+\contentsline {section}{\numberline {30.11}I limiti del Cloud Computing}{140}{section.30.11}%
+\contentsline {subsection}{\numberline {30.11.1}Problematiche principali}{140}{subsection.30.11.1}%
+\contentsline {section}{\numberline {30.12}Edge Computing}{141}{section.30.12}%
+\contentsline {subsection}{\numberline {30.12.1}Modello a tre livelli}{141}{subsection.30.12.1}%
+\contentsline {section}{\numberline {30.13}Fog Computing}{141}{section.30.13}%

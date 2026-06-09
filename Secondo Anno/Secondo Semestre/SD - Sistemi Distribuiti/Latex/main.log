@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.2)  3 JUN 2026 12:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.2)  8 JUN 2026 17:49
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -56,6 +56,25 @@ Language: italian 2026/01/13 v.1.5.02 Italian support for the babel system
 )) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count289
+) (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen150
+\lightrulewidth=\dimen151
+\cmidrulewidth=\dimen152
+\belowrulesep=\dimen153
+\belowbottomsep=\dimen154
+\aboverulesep=\dimen155
+\abovetopsep=\dimen156
+\cmidrulesep=\dimen157
+\cmidrulekern=\dimen158
+\defaultaddspace=\dimen159
+\@cmidla=\count290
+\@cmidlb=\count291
+\@aboverulesep=\dimen160
+\@belowrulesep=\dimen161
+\@thisruleclass=\count292
+\@lastruleclass=\count293
+\@thisrulewidth=\dimen162
 ) (/usr/share/texmf-dist/tex/latex/libertinus/libertinus.sty
 Package: libertinus 2020/05/06 v. 0.02 (Herbert Voss) Supports libertinus fonts for pdflatex/lualatex/xelatex
  (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
@@ -67,7 +86,7 @@ Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
 \XKV@tempa@toks=\toks20
 \XKV@tempb@toks=\toks21
  (/usr/share/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count290
+\XKV@depth=\count294
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/share/texmf-dist/tex/latex/libertinus-type1/libertinus-type1.sty
 Package: libertinus-type1 2025/11/17 (Bob Tennent) Supports libertinus fonts for latex/pdflatex.
@@ -98,21 +117,21 @@ Package: amstext 2024/11/17 v2.01 AMS text
  (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks22
-\ex@=\dimen150
+\ex@=\dimen163
 )) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen151
+\pmbraise@=\dimen164
 ) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count291
+\inf@bad=\count295
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count292
-\leftroot@=\count293
+\uproot@=\count296
+\leftroot@=\count297
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count294
-\DOTSCASE@=\count295
+\classnum@=\count298
+\DOTSCASE@=\count299
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -122,30 +141,30 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen152
+\big@size=\dimen165
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count296
+\macc@depth=\count300
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count297
+\c@MaxMatrixCols=\count301
 \dotsspace@=\muskip17
-\c@parentequation=\count298
-\dspbrk@lvl=\count299
+\c@parentequation=\count302
+\dspbrk@lvl=\count303
 \tag@help=\toks23
-\row@=\count300
-\column@=\count301
-\maxfields@=\count302
+\row@=\count304
+\column@=\count305
+\maxfields@=\count306
 \andhelp@=\toks24
-\eqnshift@=\dimen153
-\alignsep@=\dimen154
-\tagshift@=\dimen155
-\tagwidth@=\dimen156
-\totwidth@=\dimen157
-\lineht@=\dimen158
+\eqnshift@=\dimen166
+\alignsep@=\dimen167
+\tagshift@=\dimen168
+\tagwidth@=\dimen169
+\totwidth@=\dimen170
+\lineht@=\dimen171
 \@envbody=\toks25
 \multlinegap=\skip52
 \multlinetaggap=\skip53
@@ -176,33 +195,33 @@ Package: amsthm 2020/05/29 v2.20.6
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
  (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count303
-\calc@Bcount=\count304
-\calc@Adimen=\dimen159
-\calc@Bdimen=\dimen160
+\calc@Acount=\count307
+\calc@Bcount=\count308
+\calc@Adimen=\dimen172
+\calc@Bdimen=\dimen173
 \calc@Askip=\skip57
 \calc@Bskip=\skip58
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count305
+\calc@Ccount=\count309
 \calc@Cskip=\skip59
 ) (/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count306
-\l_MT_multwidth_dim=\dimen161
+\g_MT_multlinerow_int=\count310
+\l_MT_multwidth_dim=\dimen174
 \origjot=\skip60
-\l_MT_shortvdotswithinadjustabove_dim=\dimen162
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen163
-\l_MT_above_intertext_sep=\dimen164
-\l_MT_below_intertext_sep=\dimen165
-\l_MT_above_shortintertext_sep=\dimen166
-\l_MT_below_shortintertext_sep=\dimen167
+\l_MT_shortvdotswithinadjustabove_dim=\dimen175
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen176
+\l_MT_above_intertext_sep=\dimen177
+\l_MT_below_intertext_sep=\dimen178
+\l_MT_above_shortintertext_sep=\dimen179
+\l_MT_below_shortintertext_sep=\dimen180
 \xmathstrut@box=\box55
-\xmathstrut@dim=\dimen168
+\xmathstrut@dim=\dimen181
 ) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count307
+\c@float@type=\count311
 \float@exts=\toks33
 \float@box=\box56
 \@float@everytoks=\toks34
@@ -212,30 +231,30 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \UL@hyphenbox=\box59
 \UL@skip=\skip61
 \UL@hook=\toks35
-\UL@height=\dimen169
-\UL@pe=\count308
-\UL@pixel=\dimen170
+\UL@height=\dimen182
+\UL@pe=\count312
+\UL@pixel=\dimen183
 \ULC@box=\box60
 Package: ulem 2019/11/18
-\ULdepth=\dimen171
+\ULdepth=\dimen184
 ) (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
  (/usr/share/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen172
+\col@sep=\dimen185
 \ar@mcellbox=\box61
-\extrarowheight=\dimen173
+\extrarowheight=\dimen186
 \NC@list=\toks36
 \extratabsurround=\skip62
 \backup@length=\skip63
 \ar@cellbox=\box62
 )
-\TX@col@width=\dimen174
-\TX@old@table=\dimen175
-\TX@old@col=\dimen176
-\TX@target=\dimen177
-\TX@delta=\dimen178
-\TX@cols=\count309
+\TX@col@width=\dimen187
+\TX@old@table=\dimen188
+\TX@old@col=\dimen189
+\TX@target=\dimen190
+\TX@delta=\dimen191
+\TX@cols=\count313
 \TX@ftn=\toks37
 ) (/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
@@ -244,8 +263,8 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
  (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks38
-\pgfutil@tempdima=\dimen179
-\pgfutil@tempdimb=\dimen180
+\pgfutil@tempdima=\dimen192
+\pgfutil@tempdimb=\dimen193
 ) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box63
 ) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
@@ -265,8 +284,8 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
  (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen181
-\Gin@req@width=\dimen182
+\Gin@req@height=\dimen194
+\Gin@req@width=\dimen195
 ) (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
@@ -275,26 +294,26 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks41
 ))
-\pgf@x=\dimen183
-\pgf@y=\dimen184
-\pgf@xa=\dimen185
-\pgf@ya=\dimen186
-\pgf@xb=\dimen187
-\pgf@yb=\dimen188
-\pgf@xc=\dimen189
-\pgf@yc=\dimen190
-\pgf@xd=\dimen191
-\pgf@yd=\dimen192
+\pgf@x=\dimen196
+\pgf@y=\dimen197
+\pgf@xa=\dimen198
+\pgf@ya=\dimen199
+\pgf@xb=\dimen256
+\pgf@yb=\dimen257
+\pgf@xc=\dimen258
+\pgf@yc=\dimen259
+\pgf@xd=\dimen260
+\pgf@yd=\dimen261
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count310
-\c@pgf@countb=\count311
-\c@pgf@countc=\count312
-\c@pgf@countd=\count313
+\c@pgf@counta=\count314
+\c@pgf@countb=\count315
+\c@pgf@countc=\count316
+\c@pgf@countd=\count317
 \t@pgf@toka=\toks42
 \t@pgf@tokb=\toks43
 \t@pgf@tokc=\toks44
-\pgf@sys@id@count=\count314
+\pgf@sys@id@count=\count318
  (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -305,8 +324,8 @@ File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 ))) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count315
-\pgfsyssoftpath@bigbuffer@items=\count316
+\pgfsyssoftpath@smallbuffer@items=\count319
+\pgfsyssoftpath@bigbuffer@items=\count320
 ) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -328,52 +347,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen193
-\pgfmath@count=\count317
+\pgfmath@dimen=\dimen262
+\pgfmath@count=\count321
 \pgfmath@box=\box64
 \pgfmath@toks=\toks45
 \pgfmath@stack@operand=\toks46
 \pgfmath@stack@operation=\toks47
 ) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count318
+\c@pgfmathroundto@lastzeros=\count322
 )) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen194
-\pgf@picmaxx=\dimen195
-\pgf@picminy=\dimen196
-\pgf@picmaxy=\dimen197
-\pgf@pathminx=\dimen198
-\pgf@pathmaxx=\dimen199
-\pgf@pathminy=\dimen256
-\pgf@pathmaxy=\dimen257
-\pgf@xx=\dimen258
-\pgf@xy=\dimen259
-\pgf@yx=\dimen260
-\pgf@yy=\dimen261
-\pgf@zx=\dimen262
-\pgf@zy=\dimen263
+\pgf@picminx=\dimen263
+\pgf@picmaxx=\dimen264
+\pgf@picminy=\dimen265
+\pgf@picmaxy=\dimen266
+\pgf@pathminx=\dimen267
+\pgf@pathmaxx=\dimen268
+\pgf@pathminy=\dimen269
+\pgf@pathmaxy=\dimen270
+\pgf@xx=\dimen271
+\pgf@xy=\dimen272
+\pgf@yx=\dimen273
+\pgf@yy=\dimen274
+\pgf@zx=\dimen275
+\pgf@zy=\dimen276
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen264
-\pgf@path@lasty=\dimen265
+\pgf@path@lastx=\dimen277
+\pgf@path@lasty=\dimen278
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen266
-\pgf@shorten@start@additional=\dimen267
+\pgf@shorten@end@additional=\dimen279
+\pgf@shorten@start@additional=\dimen280
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box65
 \pgf@hbox=\box66
 \pgf@layerbox@main=\box67
-\pgf@picture@serial@count=\count319
+\pgf@picture@serial@count=\count323
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen268
+\pgflinewidth=\dimen281
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen269
-\pgf@pt@y=\dimen270
-\pgf@pt@temp=\dimen271
+\pgf@pt@x=\dimen282
+\pgf@pt@y=\dimen283
+\pgf@pt@temp=\dimen284
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
@@ -382,12 +401,12 @@ File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen272
+\pgfarrowsep=\dimen285
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen273
-\pgf@sys@shading@range@num=\count320
-\pgf@shadingcount=\count321
+\pgf@max=\dimen286
+\pgf@sys@shading@range@num=\count324
+\pgf@shadingcount=\count325
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
@@ -408,46 +427,46 @@ File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen274
-\pgf@nodesepend=\dimen275
+\pgf@nodesepstart=\dimen287
+\pgf@nodesepend=\dimen288
 ) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 )) (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen276
-\pgffor@skip=\dimen277
+\pgffor@iter=\dimen289
+\pgffor@skip=\dimen290
 \pgffor@stack=\toks48
 \pgffor@toks=\toks49
 )) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count322
-\pgfplotmarksize=\dimen278
+\pgf@plot@mark@count=\count326
+\pgfplotmarksize=\dimen291
 )
-\tikz@lastx=\dimen279
-\tikz@lasty=\dimen280
-\tikz@lastxsaved=\dimen281
-\tikz@lastysaved=\dimen282
-\tikz@lastmovetox=\dimen283
-\tikz@lastmovetoy=\dimen284
-\tikzleveldistance=\dimen285
-\tikzsiblingdistance=\dimen286
+\tikz@lastx=\dimen292
+\tikz@lasty=\dimen293
+\tikz@lastxsaved=\dimen294
+\tikz@lastysaved=\dimen295
+\tikz@lastmovetox=\dimen296
+\tikz@lastmovetoy=\dimen297
+\tikzleveldistance=\dimen298
+\tikzsiblingdistance=\dimen299
 \tikz@figbox=\box70
 \tikz@figbox@bg=\box71
 \tikz@tempbox=\box72
 \tikz@tempbox@bg=\box73
-\tikztreelevel=\count323
-\tikznumberofchildren=\count324
-\tikznumberofcurrentchild=\count325
-\tikz@fig@count=\count326
+\tikztreelevel=\count327
+\tikznumberofchildren=\count328
+\tikznumberofcurrentchild=\count329
+\tikz@fig@count=\count330
  (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count327
-\pgfmatrixcurrentcolumn=\count328
-\pgf@matrix@numberofcolumns=\count329
+\pgfmatrixcurrentrow=\count331
+\pgfmatrixcurrentcolumn=\count332
+\pgf@matrix@numberofcolumns=\count333
 )
-\tikz@expandcount=\count330
+\tikz@expandcount=\count334
  (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
@@ -464,11 +483,11 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@upperbox=\box75
 \tcb@lowerbox=\box76
 \tcb@phantombox=\box77
-\c@tcbbreakpart=\count331
-\c@tcblayer=\count332
-\c@tcolorbox@number=\count333
+\c@tcbbreakpart=\count335
+\c@tcblayer=\count336
+\c@tcolorbox@number=\count337
 \l__tcobox_tmpa_box=\box78
-\l__tcobox_tmpa_dim=\dimen287
+\l__tcobox_tmpa_dim=\dimen300
 \tcb@temp=\box79
 \tcb@temp=\box80
 \tcb@temp=\box81
@@ -500,24 +519,24 @@ Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
 )) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.9.0'
 (/usr/share/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count334
+\lst@mode=\count338
 \lst@gtempboxa=\box87
 \lst@token=\toks52
-\lst@length=\count335
-\lst@currlwidth=\dimen288
-\lst@column=\count336
-\lst@pos=\count337
-\lst@lostspace=\dimen289
-\lst@width=\dimen290
-\lst@newlines=\count338
-\lst@lineno=\count339
-\lst@maxwidth=\dimen291
+\lst@length=\count339
+\lst@currlwidth=\dimen301
+\lst@column=\count340
+\lst@pos=\count341
+\lst@lostspace=\dimen302
+\lst@width=\dimen303
+\lst@newlines=\count342
+\lst@lineno=\count343
+\lst@maxwidth=\dimen304
  (/usr/share/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 ) (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count340
-\lst@skipnumbers=\count341
+\c@lstnumber=\count344
+\lst@skipnumbers=\count345
 \lst@framebox=\box88
 ) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
@@ -535,7 +554,7 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '6.9.0'
 (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.9.0'
 )
-\c@tcblisting=\count342
+\c@tcblisting=\count346
 )) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 ) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
@@ -543,17 +562,17 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count343
-\Gm@cntv=\count344
-\c@Gm@tempcnt=\count345
-\Gm@bindingoffset=\dimen292
-\Gm@wd@mp=\dimen293
-\Gm@odd@mp=\dimen294
-\Gm@even@mp=\dimen295
-\Gm@layoutwidth=\dimen296
-\Gm@layoutheight=\dimen297
-\Gm@layouthoffset=\dimen298
-\Gm@layoutvoffset=\dimen299
+\Gm@cnth=\count347
+\Gm@cntv=\count348
+\c@Gm@tempcnt=\count349
+\Gm@bindingoffset=\dimen305
+\Gm@wd@mp=\dimen306
+\Gm@odd@mp=\dimen307
+\Gm@even@mp=\dimen308
+\Gm@layoutwidth=\dimen309
+\Gm@layoutheight=\dimen310
+\Gm@layouthoffset=\dimen311
+\Gm@layoutvoffset=\dimen312
 \Gm@dimlist=\toks53
 ) (/usr/share/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
@@ -566,12 +585,12 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box89
 \beforetitleunit=\skip64
 \aftertitleunit=\skip65
-\ttl@plus=\dimen300
-\ttl@minus=\dimen301
+\ttl@plus=\dimen313
+\ttl@minus=\dimen314
 \ttl@toksa=\toks54
-\titlewidth=\dimen302
-\titlewidthlast=\dimen303
-\titlewidthfirst=\dimen304
+\titlewidth=\dimen315
+\titlewidthlast=\dimen316
+\titlewidthfirst=\dimen317
 )) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
  (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
@@ -592,13 +611,13 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count346
+\c@section@level=\count350
 ) (/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen305
-\Hy@linkcounter=\count347
-\Hy@pagecounter=\count348
+\@linkdim=\dimen318
+\Hy@linkcounter=\count351
+\Hy@pagecounter=\count352
  (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -606,7 +625,7 @@ Now handling font encoding PD1 ...
 ) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count349
+\Hy@SavedSpaceFactor=\count353
  (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -620,17 +639,17 @@ Package hyperref Info: Plain pages OFF on input line 4216.
 Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
-\c@Hy@tempcnt=\count350
+\c@Hy@tempcnt=\count354
 LaTeX Info: Redefining \url on input line 4807.
-\XeTeXLinkMargin=\dimen306
+\XeTeXLinkMargin=\dimen319
  (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count351
-\Field@Width=\dimen307
-\Fld@charsize=\dimen308
+\Fld@menulength=\count355
+\Field@Width=\dimen320
+\Fld@charsize=\dimen321
 Package hyperref Info: Hyper figures OFF on input line 6084.
 Package hyperref Info: Link nesting OFF on input line 6089.
 Package hyperref Info: Hyper index ON on input line 6092.
@@ -638,15 +657,15 @@ Package hyperref Info: backreferencing OFF on input line 6099.
 Package hyperref Info: Link coloring ON on input line 6102.
 Package hyperref Info: Link coloring with OCG OFF on input line 6109.
 Package hyperref Info: PDF/A mode OFF on input line 6114.
-\Hy@abspage=\count352
-\c@Item=\count353
-\c@Hfootnote=\count354
+\Hy@abspage=\count356
+\c@Item=\count357
+\c@Hfootnote=\count358
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
-\Fld@listcount=\count355
-\c@bookmark@seq@number=\count356
+\Fld@listcount=\count359
+\c@bookmark@seq@number=\count360
  (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
  (/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -664,10 +683,8 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 16.
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count357
-) (./main.aux (./chapters/Protocollo_HTTP.aux) (./chapters/Rappresentazione dei dati.aux) (./chapters/Applicazioni Web.aux) (./chapters/Servizi SOAP.aux) (./chapters/Servizi REST.aux) (./chapters/RPC - Remote Procedure Call.aux) (./chapters/Javascript.aux) (./chapters/AJAX-JS.aux)
-No file chapters/.aux.
-)
+\l__color_backend_stack_int=\count361
+) (./main.aux (./chapters/Protocollo_HTTP.aux) (./chapters/Rappresentazione dei dati.aux) (./chapters/Applicazioni Web.aux) (./chapters/Servizi SOAP.aux) (./chapters/Servizi REST.aux) (./chapters/RPC - Remote Procedure Call.aux) (./chapters/Javascript.aux) (./chapters/AJAX-JS.aux) (./chapters/Code Migration.aux) (./chapters/Apache Hadoop.aux) (./chapters/Virtualizzazione.aux) (./chapters/Cloud Computing.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -690,20 +707,20 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Info: Redefining \it@ocap on input line 16.
 LaTeX Info: Redefining \it@ccap on input line 16.
-\c@mv@tabular=\count358
-\c@mv@boldtabular=\count359
+\c@mv@tabular=\count362
+\c@mv@boldtabular=\count363
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count360
-\scratchdimen=\dimen309
+\scratchcounter=\count364
+\scratchdimen=\dimen322
 \scratchbox=\box90
-\nofMPsegments=\count361
-\nofMParguments=\count362
+\nofMPsegments=\count365
+\nofMParguments=\count366
 \everyMPshowfont=\toks55
-\MPscratchCnt=\count363
-\MPscratchDim=\dimen310
-\MPnumerator=\count364
-\makeMPintoPDFobject=\count365
+\MPscratchCnt=\count367
+\MPscratchDim=\dimen323
+\MPnumerator=\count368
+\makeMPintoPDFobject=\count369
 \everyMPtoPDFconversion=\toks56
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -711,7 +728,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count366
+\c@lstlisting=\count370
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -772,13 +789,25 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 20.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}] (./main.toc)
-\tf@toc=\write5
-\openout5 = `main.toc'.
-
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}] (./main.toc
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 3.
  [1
 
 ]
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 65.
+ (/usr/share/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 10.20007pt on input line 65.
+LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
+(Font)              scaled to size 10.20007pt on input line 87.
+ [2{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}] [3] [4] [5] [6] [7] [8])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ [9]
 \openout2 = `chapters/Protocollo_HTTP.aux'.
 
  (./chapters/Protocollo_HTTP.tex
@@ -787,7 +816,7 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
 (Font)              scaled to size 17.28pt on input line 4.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
 (Font)              scaled to size 17.28pt on input line 4.
-<figures/Schermata_20260507_103509.png, id=1204, 601.4972pt x 221.32687pt>
+<figures/Schermata_20260507_103509.png, id=2036, 601.4972pt x 221.32687pt>
 File: figures/Schermata_20260507_103509.png Graphic file (type png)
 <use figures/Schermata_20260507_103509.png>
 Package pdftex.def Info: figures/Schermata_20260507_103509.png  used on input line 17.
@@ -801,9 +830,7 @@ l.30 \newpage
 
 
  <./figures/Schermata_20260507_103509.png>]
-LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 36.
-<figures/Schermata_20260507_105712.png, id=1211, 663.22781pt x 55.70813pt>
+<figures/Schermata_20260507_105712.png, id=2042, 663.22781pt x 55.70813pt>
 File: figures/Schermata_20260507_105712.png Graphic file (type png)
 <use figures/Schermata_20260507_105712.png>
 Package pdftex.def Info: figures/Schermata_20260507_105712.png  used on input line 65.
@@ -815,23 +842,17 @@ File: TS1LibertinusSerif-TLF.fd 2024/09/22 (autoinst) Font definitions for TS1/L
 )
 LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 76.
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 89.
- (/usr/share/texmf-dist/tex/latex/bera/t1fvm.fd
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
-)
-LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
-(Font)              scaled to size 10.20007pt on input line 89.
-<figures/Schermata_20260507_110928.png, id=1224, 313.17pt x 35.38219pt>
+<figures/Schermata_20260507_110928.png, id=2055, 313.17pt x 35.38219pt>
 File: figures/Schermata_20260507_110928.png Graphic file (type png)
 <use figures/Schermata_20260507_110928.png>
 Package pdftex.def Info: figures/Schermata_20260507_110928.png  used on input line 104.
 (pdftex.def)             Requested size: 313.16922pt x 35.3821pt.
-<figures/Schermata_20260507_111047.png, id=1225, 411.03563pt x 49.68562pt>
+<figures/Schermata_20260507_111047.png, id=2056, 411.03563pt x 49.68562pt>
 File: figures/Schermata_20260507_111047.png Graphic file (type png)
 <use figures/Schermata_20260507_111047.png>
 Package pdftex.def Info: figures/Schermata_20260507_111047.png  used on input line 108.
 (pdftex.def)             Requested size: 411.03462pt x 49.6855pt.
- [3{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_rlktsf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc} <./figures/Schermata_20260507_110928.png> <./figures/Schermata_20260507_111047.png>] [4]
+ [3{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_rlktsf.enc} <./figures/Schermata_20260507_110928.png> <./figures/Schermata_20260507_111047.png>] [4]
 Capitolo 5.
 
 Overfull \hbox (5.87808pt too wide) in paragraph at lines 168--169
@@ -840,10 +861,7 @@ Overfull \hbox (5.87808pt too wide) in paragraph at lines 168--169
 
 [5
 
-]
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 10.20007pt on input line 191.
- [6]
+] [6]
 Underfull \hbox (badness 10000) in paragraph at lines 216--223
 \T1/fvm/m/n/12 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0)
  []
@@ -853,7 +871,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 276--282
 \T1/fvm/m/n/12 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0)
  []
 
-<figures/Schermata_20260507_160135.png, id=1268, 382.42876pt x 173.14688pt>
+<figures/Schermata_20260507_160135.png, id=2097, 382.42876pt x 173.14688pt>
 File: figures/Schermata_20260507_160135.png Graphic file (type png)
 <use figures/Schermata_20260507_160135.png>
 Package pdftex.def Info: figures/Schermata_20260507_160135.png  used on input line 291.
@@ -876,7 +894,7 @@ Overfull \hbox (2.76587pt too wide) in paragraph at lines 539--539
 
  (./chapters/Rappresentazione dei dati.tex
 Capitolo 6.
-<figures/Schermata_20260508_111212.png, id=1345, 899.61093pt x 127.97812pt>
+<figures/Schermata_20260508_111212.png, id=2174, 899.61093pt x 127.97812pt>
 File: figures/Schermata_20260508_111212.png Graphic file (type png)
 <use figures/Schermata_20260508_111212.png>
 Package pdftex.def Info: figures/Schermata_20260508_111212.png  used on input line 9.
@@ -894,7 +912,7 @@ Capitolo 7.
 Capitolo 8.
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 21.14815pt on input line 46.
-<figures/Schermata_20260508_115751.png, id=1356, 729.47531pt x 315.42844pt>
+<figures/Schermata_20260508_115751.png, id=2185, 729.47531pt x 315.42844pt>
 File: figures/Schermata_20260508_115751.png Graphic file (type png)
 <use figures/Schermata_20260508_115751.png>
 Package pdftex.def Info: figures/Schermata_20260508_115751.png  used on input line 57.
@@ -912,7 +930,7 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 122.
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 9.30756pt on input line 122.
-<figures/Schermata_20260508_121814.png, id=1367, 252.945pt x 177.66376pt>
+<figures/Schermata_20260508_121814.png, id=2197, 252.945pt x 177.66376pt>
 File: figures/Schermata_20260508_121814.png Graphic file (type png)
 <use figures/Schermata_20260508_121814.png>
 Package pdftex.def Info: figures/Schermata_20260508_121814.png  used on input line 149.
@@ -920,7 +938,7 @@ Package pdftex.def Info: figures/Schermata_20260508_121814.png  used on input li
  [22 <./figures/Schermata_20260508_121814.png>]
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 14.6881pt on input line 154.
-<figures/Albero Dom.png, id=1393, 271.0125pt x 161.85469pt>
+<figures/Albero Dom.png, id=2223, 271.0125pt x 161.85469pt>
 File: figures/Albero Dom.png Graphic file (type png)
 <use figures/Albero Dom.png>
 Package pdftex.def Info: figures/Albero Dom.png  used on input line 164.
@@ -956,12 +974,12 @@ Capitolo 12.
 
 ]
 Capitolo 13.
-<figures/Schermata_20260512_124943.png, id=1528, 450.18187pt x 173.14688pt>
+<figures/Schermata_20260512_124943.png, id=2357, 450.18187pt x 173.14688pt>
 File: figures/Schermata_20260512_124943.png Graphic file (type png)
 <use figures/Schermata_20260512_124943.png>
 Package pdftex.def Info: figures/Schermata_20260512_124943.png  used on input line 29.
 (pdftex.def)             Requested size: 450.18077pt x 173.14645pt.
-<figures/Schermata_20260512_150719.png, id=1529, 467.49657pt x 185.19188pt>
+<figures/Schermata_20260512_150719.png, id=2358, 467.49657pt x 185.19188pt>
 File: figures/Schermata_20260512_150719.png Graphic file (type png)
 <use figures/Schermata_20260512_150719.png>
 Package pdftex.def Info: figures/Schermata_20260512_150719.png  used on input line 50.
@@ -969,7 +987,7 @@ Package pdftex.def Info: figures/Schermata_20260512_150719.png  used on input li
 [36
 
  <./figures/Schermata_20260512_124943.png>]
-<figures/Schermata_20260512_151336.png, id=1541, 467.49657pt x 280.79906pt>
+<figures/Schermata_20260512_151336.png, id=2370, 467.49657pt x 280.79906pt>
 File: figures/Schermata_20260512_151336.png Graphic file (type png)
 <use figures/Schermata_20260512_151336.png>
 Package pdftex.def Info: figures/Schermata_20260512_151336.png  used on input line 71.
@@ -993,7 +1011,7 @@ Capitolo 15.
 [45
 
 ] [46]
-<figures/Schermata_20260512_173654.png, id=1742, 267.24844pt x 201.75375pt>
+<figures/Schermata_20260512_173654.png, id=2572, 267.24844pt x 201.75375pt>
 File: figures/Schermata_20260512_173654.png Graphic file (type png)
 <use figures/Schermata_20260512_173654.png>
 Package pdftex.def Info: figures/Schermata_20260512_173654.png  used on input line 420.
@@ -1006,7 +1024,7 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
 
  (./chapters/Servizi SOAP.tex
 Capitolo 16.
-<figures/Schermata_20260513_102839.png, id=1783, 562.35094pt x 379.4175pt>
+<figures/Schermata_20260513_102839.png, id=2612, 562.35094pt x 379.4175pt>
 File: figures/Schermata_20260513_102839.png Graphic file (type png)
 <use figures/Schermata_20260513_102839.png>
 Package pdftex.def Info: figures/Schermata_20260513_102839.png  used on input line 6.
@@ -1017,18 +1035,18 @@ Package pdftex.def Info: figures/Schermata_20260513_102839.png  used on input li
 
 
  <./figures/Schermata_20260513_102839.png>] [51]
-<figures/Schermata_20260513_121514.png, id=1793, 310.15875pt x 122.70844pt>
+<figures/Schermata_20260513_121514.png, id=2623, 310.15875pt x 122.70844pt>
 File: figures/Schermata_20260513_121514.png Graphic file (type png)
 <use figures/Schermata_20260513_121514.png>
 Package pdftex.def Info: figures/Schermata_20260513_121514.png  used on input line 65.
 (pdftex.def)             Requested size: 310.15799pt x 122.70813pt.
-<figures/Schermata_20260513_121721.png, id=1794, 652.68843pt x 285.31593pt>
+<figures/Schermata_20260513_121721.png, id=2624, 652.68843pt x 285.31593pt>
 File: figures/Schermata_20260513_121721.png Graphic file (type png)
 <use figures/Schermata_20260513_121721.png>
 Package pdftex.def Info: figures/Schermata_20260513_121721.png  used on input line 83.
 (pdftex.def)             Requested size: 443.82227pt x 194.01225pt.
  [52 <./figures/Schermata_20260513_121514.png> <./figures/Schermata_20260513_121721.png>]
-<figures/Schermata_20260513_122906.png, id=1801, 811.53188pt x 412.54124pt>
+<figures/Schermata_20260513_122906.png, id=2631, 811.53188pt x 412.54124pt>
 File: figures/Schermata_20260513_122906.png Graphic file (type png)
 <use figures/Schermata_20260513_122906.png>
 Package pdftex.def Info: figures/Schermata_20260513_122906.png  used on input line 108.
@@ -1039,7 +1057,7 @@ Overfull \hbox (3.22601pt too wide) in paragraph at lines 108--109
  []
 
 [53 <./figures/Schermata_20260513_122906.png>]
-<figures/Schermata_20260513_134558.png, id=1813, 776.14969pt x 437.38406pt>
+<figures/Schermata_20260513_134558.png, id=2642, 776.14969pt x 437.38406pt>
 File: figures/Schermata_20260513_134558.png Graphic file (type png)
 <use figures/Schermata_20260513_134558.png>
 Package pdftex.def Info: figures/Schermata_20260513_134558.png  used on input line 142.
@@ -1049,26 +1067,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--202
 [][]\T1/LibertinusSerif-TLF/b/n/12 Client Re-que-st[]\T1/LibertinusSerif-TLF/m/n/12 : [][]$\T1/fvm/m/n/12 https : / / api . openweathermap . org / data / 2 . 5 / weather ? q =
  []
 
-<figures/Schermata_20260513_112300.png, id=1839, 404.26031pt x 204.01219pt>
+<figures/Schermata_20260513_112300.png, id=2668, 404.26031pt x 204.01219pt>
 File: figures/Schermata_20260513_112300.png Graphic file (type png)
 <use figures/Schermata_20260513_112300.png>
 Package pdftex.def Info: figures/Schermata_20260513_112300.png  used on input line 228.
 (pdftex.def)             Requested size: 291.0672pt x 146.88866pt.
 [56 <./figures/Schermata_20260513_112300.png>]
-<figures/Schermata_20260513_113944.png, id=1852, 265.74281pt x 190.46156pt>
+<figures/Schermata_20260513_113944.png, id=2681, 265.74281pt x 190.46156pt>
 File: figures/Schermata_20260513_113944.png Graphic file (type png)
 <use figures/Schermata_20260513_113944.png>
 Package pdftex.def Info: figures/Schermata_20260513_113944.png  used on input line 244.
 (pdftex.def)             Requested size: 265.74216pt x 190.46107pt.
  [57 <./figures/Schermata_20260513_113944.png>]
-<figures/Schermata_20260513_120011.png, id=1858, 329.73187pt x 146.04562pt>
+<figures/Schermata_20260513_120011.png, id=2689, 329.73187pt x 146.04562pt>
 File: figures/Schermata_20260513_120011.png Graphic file (type png)
 <use figures/Schermata_20260513_120011.png>
 Package pdftex.def Info: figures/Schermata_20260513_120011.png  used on input line 278.
 (pdftex.def)             Requested size: 329.73105pt x 146.04524pt.
  [58 <./figures/Schermata_20260513_120011.png>] [59]
 Capitolo 17.
-<figures/Schermata_20260513_135423.png, id=1870, 446.41782pt x 289.83281pt>
+<figures/Schermata_20260513_135423.png, id=2699, 446.41782pt x 289.83281pt>
 File: figures/Schermata_20260513_135423.png Graphic file (type png)
 <use figures/Schermata_20260513_135423.png>
 Package pdftex.def Info: figures/Schermata_20260513_135423.png  used on input line 326.
@@ -1078,7 +1096,7 @@ Package pdftex.def Info: figures/Schermata_20260513_135423.png  used on input li
  <./figures/Schermata_20260513_135423.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 368.
  [61] [62]
-<figures/Schermata_20260514_092647.png, id=1919, 330.48468pt x 249.18094pt>
+<figures/Schermata_20260514_092647.png, id=2748, 330.48468pt x 249.18094pt>
 File: figures/Schermata_20260514_092647.png Graphic file (type png)
 <use figures/Schermata_20260514_092647.png>
 Package pdftex.def Info: figures/Schermata_20260514_092647.png  used on input line 434.
@@ -1094,13 +1112,13 @@ Capitolo 18.
 
 
 ]
-<figures/Schermata_20260514_104115.png, id=1954, 471.26062pt x 194.97844pt>
+<figures/Schermata_20260514_104115.png, id=2784, 471.26062pt x 194.97844pt>
 File: figures/Schermata_20260514_104115.png Graphic file (type png)
 <use figures/Schermata_20260514_104115.png>
 Package pdftex.def Info: figures/Schermata_20260514_104115.png  used on input line 62.
 (pdftex.def)             Requested size: 471.25948pt x 194.97795pt.
  [67 <./figures/Schermata_20260514_104115.png>]
-<figures/Schermata_20260514_105231.png, id=1960, 465.23813pt x 298.86656pt>
+<figures/Schermata_20260514_105231.png, id=2790, 465.23813pt x 298.86656pt>
 File: figures/Schermata_20260514_105231.png Graphic file (type png)
 <use figures/Schermata_20260514_105231.png>
 Package pdftex.def Info: figures/Schermata_20260514_105231.png  used on input line 93.
@@ -1110,7 +1128,7 @@ Package pdftex.def Info: figures/Schermata_20260514_105231.png  used on input li
 
  (./chapters/RPC - Remote Procedure Call.tex
 Capitolo 19.
-<figures/Schermata_20260514_112551.png, id=1999, 466.74374pt x 230.36063pt>
+<figures/Schermata_20260514_112551.png, id=2829, 466.74374pt x 230.36063pt>
 File: figures/Schermata_20260514_112551.png Graphic file (type png)
 <use figures/Schermata_20260514_112551.png>
 Package pdftex.def Info: figures/Schermata_20260514_112551.png  used on input line 9.
@@ -1130,20 +1148,20 @@ Overfull \hbox (10.41765pt too wide) in paragraph at lines 71--72
 []\T1/LibertinusSerif-TLF/m/n/12 Terminata l'e-la-bo-ra-zio-ne, il da-to mo-di-fi-ca-to dal ser-ver |   []   |   []   |   []   |   []   |   []
  []
 
-<figures/Schermata_20260514_141634.png, id=2012, 395.22656pt x 185.94469pt>
+<figures/Schermata_20260514_141634.png, id=2841, 395.22656pt x 185.94469pt>
 File: figures/Schermata_20260514_141634.png Graphic file (type png)
 <use figures/Schermata_20260514_141634.png>
 Package pdftex.def Info: figures/Schermata_20260514_141634.png  used on input line 79.
 (pdftex.def)             Requested size: 395.22559pt x 185.94421pt.
 [72 <./figures/Schermata_20260514_141634.png>]
-<figures/Schermata_20260515_103330.png, id=2022, 435.12563pt x 252.19218pt>
+<figures/Schermata_20260515_103330.png, id=2851, 435.12563pt x 252.19218pt>
 File: figures/Schermata_20260515_103330.png Graphic file (type png)
 <use figures/Schermata_20260515_103330.png>
 Package pdftex.def Info: figures/Schermata_20260515_103330.png  used on input line 103.
 (pdftex.def)             Requested size: 435.12456pt x 252.19156pt.
  [73 <./figures/Schermata_20260515_103330.png>]
 Capitolo 20.
-<figures/Schermata_20260515_104815.png, id=2029, 779.91376pt x 405.76593pt>
+<figures/Schermata_20260515_104815.png, id=2858, 779.91376pt x 405.76593pt>
 File: figures/Schermata_20260515_104815.png Graphic file (type png)
 <use figures/Schermata_20260515_104815.png>
 Package pdftex.def Info: figures/Schermata_20260515_104815.png  used on input line 125.
@@ -1151,7 +1169,7 @@ Package pdftex.def Info: figures/Schermata_20260515_104815.png  used on input li
 [74
 
  <./figures/Schermata_20260515_104815.png>]
-<figures/Schermata_20260515_105241.png, id=2039, 961.34157pt x 231.86626pt>
+<figures/Schermata_20260515_105241.png, id=2868, 961.34157pt x 231.86626pt>
 File: figures/Schermata_20260515_105241.png Graphic file (type png)
 <use figures/Schermata_20260515_105241.png>
 Package pdftex.def Info: figures/Schermata_20260515_105241.png  used on input line 138.
@@ -1161,7 +1179,7 @@ Capitolo 21.
 [77
 
 ]
-<figures/Schermata_20260515_114139.png, id=2081, 712.16063pt x 205.5178pt>
+<figures/Schermata_20260515_114139.png, id=2910, 712.16063pt x 205.5178pt>
 File: figures/Schermata_20260515_114139.png Graphic file (type png)
 <use figures/Schermata_20260515_114139.png>
 Package pdftex.def Info: figures/Schermata_20260515_114139.png  used on input line 225.
@@ -1177,7 +1195,7 @@ Overfull \hbox (8.45099pt too wide) in paragraph at lines 268--269
  []
 
 [79]
-<figures/Schermata_20260515_115647.png, id=2106, 768.62157pt x 240.9pt>
+<figures/Schermata_20260515_115647.png, id=2935, 768.62157pt x 240.9pt>
 File: figures/Schermata_20260515_115647.png Graphic file (type png)
 <use figures/Schermata_20260515_115647.png>
 Package pdftex.def Info: figures/Schermata_20260515_115647.png  used on input line 309.
@@ -1203,7 +1221,7 @@ Overfull \hbox (43.05362pt too wide) in paragraph at lines 339--340
  []
 
 [80 <./figures/Schermata_20260515_115647.png>]
-<figures/Schermata_20260515_121237.png, id=2114, 755.82375pt x 269.50688pt>
+<figures/Schermata_20260515_121237.png, id=2943, 755.82375pt x 269.50688pt>
 File: figures/Schermata_20260515_121237.png Graphic file (type png)
 <use figures/Schermata_20260515_121237.png>
 Package pdftex.def Info: figures/Schermata_20260515_121237.png  used on input line 362.
@@ -1223,7 +1241,7 @@ Capitolo 22.
 
  (./chapters/AJAX-JS.tex
 Capitolo 23.
-<figures/file incollato.png, id=2390, 554.82281pt x 176.91093pt>
+<figures/file incollato.png, id=3219, 554.82281pt x 176.91093pt>
 File: figures/file incollato.png Graphic file (type png)
 <use figures/file incollato.png>
 Package pdftex.def Info: figures/file incollato.png  used on input line 7.
@@ -1235,7 +1253,7 @@ Package pdftex.def Info: figures/file incollato.png  used on input line 7.
 
  <./figures/file incollato.png>] [94]
 Capitolo 24.
-<figures/Schermata_20260601_121706.png, id=2412, 551.81157pt x 171.64125pt>
+<figures/Schermata_20260601_121706.png, id=3242, 551.81157pt x 171.64125pt>
 File: figures/Schermata_20260601_121706.png Graphic file (type png)
 <use figures/Schermata_20260601_121706.png>
 Package pdftex.def Info: figures/Schermata_20260601_121706.png  used on input line 53.
@@ -1243,18 +1261,18 @@ Package pdftex.def Info: figures/Schermata_20260601_121706.png  used on input li
 [95
 
  <./figures/Schermata_20260601_121706.png>] [96]
-<figures/Schermata_20260601_123931.png, id=2423, 456.20438pt x 396.7322pt>
+<figures/Schermata_20260601_123931.png, id=3252, 456.20438pt x 396.7322pt>
 File: figures/Schermata_20260601_123931.png Graphic file (type png)
 <use figures/Schermata_20260601_123931.png>
 Package pdftex.def Info: figures/Schermata_20260601_123931.png  used on input line 95.
 (pdftex.def)             Requested size: 296.52931pt x 257.87286pt.
-<figures/Schermata_20260601_124615.png, id=2424, 609.02531pt x 383.93437pt>
+<figures/Schermata_20260601_124615.png, id=3253, 609.02531pt x 383.93437pt>
 File: figures/Schermata_20260601_124615.png Graphic file (type png)
 <use figures/Schermata_20260601_124615.png>
 Package pdftex.def Info: figures/Schermata_20260601_124615.png  used on input line 118.
 (pdftex.def)             Requested size: 395.86176pt x 249.55438pt.
  [97 <./figures/Schermata_20260601_123931.png>] [98 <./figures/Schermata_20260601_124615.png>] [99] [100]
-<figures/Schermata_20260603_103043.png, id=2459, 336.50719pt x 308.65312pt>
+<figures/Schermata_20260603_103043.png, id=3289, 336.50719pt x 308.65312pt>
 File: figures/Schermata_20260603_103043.png Graphic file (type png)
 <use figures/Schermata_20260603_103043.png>
 Package pdftex.def Info: figures/Schermata_20260603_103043.png  used on input line 199.
@@ -1269,7 +1287,7 @@ Overfull \hbox (2.75179pt too wide) in paragraph at lines 250--250
 [103
 
 ] [104]
-<figures/Schermata_20260603_112617.png, id=2485, 803.25093pt x 184.43906pt>
+<figures/Schermata_20260603_112617.png, id=3314, 803.25093pt x 184.43906pt>
 File: figures/Schermata_20260603_112617.png Graphic file (type png)
 <use figures/Schermata_20260603_112617.png>
 Package pdftex.def Info: figures/Schermata_20260603_112617.png  used on input line 326.
@@ -1284,27 +1302,476 @@ Package pdftex.def Info: figures/Schermata_20260603_112617.png  used on input li
  (./main.listing)) [106]
 \openout2 = `"chapters/Code Migration.aux"'.
 
- (./chapters/Code Migration.tex) (./main.aux (./chapters/Protocollo_HTTP.aux) (./chapters/Rappresentazione dei dati.aux) (./chapters/Applicazioni Web.aux) (./chapters/Servizi SOAP.aux) (./chapters/Servizi REST.aux) (./chapters/RPC - Remote Procedure Call.aux) (./chapters/Javascript.aux) (./chapters/AJAX-JS.aux) (./chapters/Code Migration.aux))
+ (./chapters/Code Migration.tex
+Capitolo 26.
+<figures/Schermata_20260603_122616.png, id=3349, 365.11406pt x 222.8325pt>
+File: figures/Schermata_20260603_122616.png Graphic file (type png)
+<use figures/Schermata_20260603_122616.png>
+Package pdftex.def Info: figures/Schermata_20260603_122616.png  used on input line 30.
+(pdftex.def)             Requested size: 182.55658pt x 111.41597pt.
+[107
+
+
+
+
+ <./figures/Schermata_20260603_122616.png>]
+<figures/Schermata_20260603_123107.png, id=3355, 438.8897pt x 137.01187pt>
+File: figures/Schermata_20260603_123107.png Graphic file (type png)
+<use figures/Schermata_20260603_123107.png>
+Package pdftex.def Info: figures/Schermata_20260603_123107.png  used on input line 47.
+(pdftex.def)             Requested size: 285.27492pt x 89.05666pt.
+<figures/Schermata_20260603_123322.png, id=3356, 611.28375pt x 158.09062pt>
+File: figures/Schermata_20260603_123322.png Graphic file (type png)
+<use figures/Schermata_20260603_123322.png>
+Package pdftex.def Info: figures/Schermata_20260603_123322.png  used on input line 58.
+(pdftex.def)             Requested size: 366.77307pt x 94.85509pt.
+<figures/Schermata_20260603_123441.png, id=3357, 611.28375pt x 101.62968pt>
+File: figures/Schermata_20260603_123441.png Graphic file (type png)
+<use figures/Schermata_20260603_123441.png>
+Package pdftex.def Info: figures/Schermata_20260603_123441.png  used on input line 67.
+(pdftex.def)             Requested size: 366.77307pt x 60.97827pt.
+ [108 <./figures/Schermata_20260603_123107.png> <./figures/Schermata_20260603_123322.png> <./figures/Schermata_20260603_123441.png>]
+<figures/Schermata_20260603_125239.png, id=3365, 438.8897pt x 181.42781pt>
+File: figures/Schermata_20260603_125239.png Graphic file (type png)
+<use figures/Schermata_20260603_125239.png>
+Package pdftex.def Info: figures/Schermata_20260603_125239.png  used on input line 77.
+(pdftex.def)             Requested size: 285.27492pt x 117.92668pt.
+<figures/Schermata_20260603_125619.png, id=3366, 365.11406pt x 327.47343pt>
+File: figures/Schermata_20260603_125619.png Graphic file (type png)
+<use figures/Schermata_20260603_125619.png>
+Package pdftex.def Info: figures/Schermata_20260603_125619.png  used on input line 83.
+(pdftex.def)             Requested size: 237.32132pt x 212.85521pt.
+ [109 <./figures/Schermata_20260603_125239.png> <./figures/Schermata_20260603_125619.png>]
+Capitolo 27.
+<figures/Schermata_20260603_130906.png, id=3373, 336.50719pt x 466.74374pt>
+File: figures/Schermata_20260603_130906.png Graphic file (type png)
+<use figures/Schermata_20260603_130906.png>
+Package pdftex.def Info: figures/Schermata_20260603_130906.png  used on input line 112.
+(pdftex.def)             Requested size: 259.11131pt x 359.39378pt.
+[110
+
+ <./figures/Schermata_20260603_130906.png>]
+<figures/Schermata_20260603_131229.png, id=3379, 555.57562pt x 377.15906pt>
+File: figures/Schermata_20260603_131229.png Graphic file (type png)
+<use figures/Schermata_20260603_131229.png>
+Package pdftex.def Info: figures/Schermata_20260603_131229.png  used on input line 124.
+(pdftex.def)             Requested size: 444.46109pt x 301.72766pt.
+ [111 <./figures/Schermata_20260603_131229.png>]
+<figures/Schermata_20260603_131608.png, id=3386, 563.10374pt x 261.22594pt>
+File: figures/Schermata_20260603_131608.png Graphic file (type png)
+<use figures/Schermata_20260603_131608.png>
+Package pdftex.def Info: figures/Schermata_20260603_131608.png  used on input line 137.
+(pdftex.def)             Requested size: 366.01309pt x 169.79483pt.
+<figures/Schermata_20260603_152206.png, id=3387, 431.36156pt x 319.1925pt>
+File: figures/Schermata_20260603_152206.png Graphic file (type png)
+<use figures/Schermata_20260603_152206.png>
+Package pdftex.def Info: figures/Schermata_20260603_152206.png  used on input line 143.
+(pdftex.def)             Requested size: 284.69951pt x 210.6677pt.
+) [112 <./figures/Schermata_20260603_131608.png> <./figures/Schermata_20260603_152206.png>]
+\openout2 = `"chapters/Apache Hadoop.aux"'.
+
+ (./chapters/Apache Hadoop.tex
+Capitolo 28.
+<figures/Schermata_20260603_153438.png, id=3394, 393.72093pt x 386.94562pt>
+File: figures/Schermata_20260603_153438.png Graphic file (type png)
+<use figures/Schermata_20260603_153438.png>
+Package pdftex.def Info: figures/Schermata_20260603_153438.png  used on input line 27.
+(pdftex.def)             Requested size: 137.80438pt x 135.43298pt.
+[113
+
+
+
+
+ <./figures/Schermata_20260603_153438.png>]
+<figures/Schermata_20260603_153933.png, id=3400, 344.03531pt x 190.46156pt>
+File: figures/Schermata_20260603_153933.png Graphic file (type png)
+<use figures/Schermata_20260603_153933.png>
+Package pdftex.def Info: figures/Schermata_20260603_153933.png  used on input line 37.
+(pdftex.def)             Requested size: 258.02585pt x 142.8458pt.
+<figures/Schermata_20260603_154424.png, id=3401, 379.4175pt x 422.32782pt>
+File: figures/Schermata_20260603_154424.png Graphic file (type png)
+<use figures/Schermata_20260603_154424.png>
+Package pdftex.def Info: figures/Schermata_20260603_154424.png  used on input line 54.
+(pdftex.def)             Requested size: 227.65225pt x 253.39864pt.
+ [114 <./figures/Schermata_20260603_153933.png> <./figures/Schermata_20260603_154424.png>] [115]
+<figures/Schermata_20260604_105537.png, id=3412, 488.57532pt x 247.67531pt>
+File: figures/Schermata_20260604_105537.png Graphic file (type png)
+<use figures/Schermata_20260604_105537.png>
+Package pdftex.def Info: figures/Schermata_20260604_105537.png  used on input line 111.
+(pdftex.def)             Requested size: 293.14745pt x 148.60632pt.
+
+Underfull \hbox (badness 1509) in paragraph at lines 141--141
+[]|\T1/LibertinusSerif-TLF/m/n/12 Path lo-gi-ci (\T1/fvm/m/n/12 /user/...\T1/LibertinusSerif-TLF/m/n/12 ); il \T1/fvm/m/n/12 NameNode \T1/LibertinusSerif-TLF/m/n/12 map-pa ogni fi-le ai
+ []
+
+[116 <./figures/Schermata_20260604_105537.png>] [117]
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
+[]|\T1/LibertinusSerif-TLF/m/n/12 Repliche so-lo dei com-po-nen-ti di si-ste-ma (HA del
+ []
+
+
+Underfull \hbox (badness 6625) in paragraph at lines 234--234
+\T1/fvm/m/n/12 ResourceManager \T1/LibertinusSerif-TLF/m/n/12 con stand-by); i con-tai-ner ap-pli-ca-ti-vi
+ []
+
+[118]
+<figures/Schermata_20260604_112322.png, id=3428, 492.33937pt x 338.01282pt>
+File: figures/Schermata_20260604_112322.png Graphic file (type png)
+<use figures/Schermata_20260604_112322.png>
+Package pdftex.def Info: figures/Schermata_20260604_112322.png  used on input line 247.
+(pdftex.def)             Requested size: 246.16907pt x 169.00598pt.
+<figures/Schermata_20260604_112646.png, id=3429, 458.46281pt x 298.86656pt>
+File: figures/Schermata_20260604_112646.png Graphic file (type png)
+<use figures/Schermata_20260604_112646.png>
+Package pdftex.def Info: figures/Schermata_20260604_112646.png  used on input line 256.
+(pdftex.def)             Requested size: 229.23083pt x 149.4329pt.
+ [119 <./figures/Schermata_20260604_112322.png> <./figures/Schermata_20260604_112646.png>]
+<figures/Schermata_20260604_112838.png, id=3438, 687.31781pt x 448.67625pt>
+File: figures/Schermata_20260604_112838.png Graphic file (type png)
+<use figures/Schermata_20260604_112838.png>
+Package pdftex.def Info: figures/Schermata_20260604_112838.png  used on input line 270.
+(pdftex.def)             Requested size: 274.92226pt x 179.46732pt.
+<figures/Schermata_20260604_113040.png, id=3439, 618.05907pt x 405.76593pt>
+File: figures/Schermata_20260604_113040.png Graphic file (type png)
+<use figures/Schermata_20260604_113040.png>
+Package pdftex.def Info: figures/Schermata_20260604_113040.png  used on input line 276.
+(pdftex.def)             Requested size: 247.21924pt x 162.3035pt.
+<figures/Schermata_20260604_113332.png, id=3440, 618.81187pt x 408.02437pt>
+File: figures/Schermata_20260604_113332.png Graphic file (type png)
+<use figures/Schermata_20260604_113332.png>
+Package pdftex.def Info: figures/Schermata_20260604_113332.png  used on input line 285.
+(pdftex.def)             Requested size: 309.40518pt x 204.01169pt.
+ [120 <./figures/Schermata_20260604_112838.png> <./figures/Schermata_20260604_113040.png> <./figures/Schermata_20260604_113332.png>]
+<figures/Schermata_20260604_114513.png, id=3451, 622.57594pt x 408.02437pt>
+File: figures/Schermata_20260604_114513.png Graphic file (type png)
+<use figures/Schermata_20260604_114513.png>
+Package pdftex.def Info: figures/Schermata_20260604_114513.png  used on input line 291.
+(pdftex.def)             Requested size: 311.2872pt x 204.01169pt.
+
+Underfull \hbox (badness 2111) in paragraph at lines 297--298
+[]\T1/LibertinusSerif-TLF/m/n/12 Quando un ap-pli-ca-zio-ne YARN (per esem-pio crea-ta con la li-bre-ria Ma-pRe-du-ce) vie-
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 297--298
+\T1/LibertinusSerif-TLF/m/n/12 ne sot-to-mes-sa, vie-ne av-via-to un []\T1/LibertinusSerif-TLF/b/n/12 Ap-pli-ca-tion Ma-ster[] \T1/LibertinusSerif-TLF/m/n/12 per su-per-vi-sio-na-re l'e-se-cu-zio-ne
+ []
+
+<figures/Schermata_20260604_115352.png, id=3452, 712.16063pt x 404.26031pt>
+File: figures/Schermata_20260604_115352.png Graphic file (type png)
+<use figures/Schermata_20260604_115352.png>
+Package pdftex.def Info: figures/Schermata_20260604_115352.png  used on input line 306.
+(pdftex.def)             Requested size: 356.07944pt x 202.12965pt.
+[121 <./figures/Schermata_20260604_114513.png> <./figures/Schermata_20260604_115352.png>]
+<figures/Schermata_20260604_115452.png, id=3460, 554.82281pt x 309.40594pt>
+File: figures/Schermata_20260604_115452.png Graphic file (type png)
+<use figures/Schermata_20260604_115452.png>
+Package pdftex.def Info: figures/Schermata_20260604_115452.png  used on input line 313.
+(pdftex.def)             Requested size: 332.89626pt x 185.64499pt.
+<figures/Schermata_20260604_115627.png, id=3461, 663.98062pt x 372.64218pt>
+File: figures/Schermata_20260604_115627.png Graphic file (type png)
+<use figures/Schermata_20260604_115627.png>
+Package pdftex.def Info: figures/Schermata_20260604_115627.png  used on input line 320.
+(pdftex.def)             Requested size: 398.39143pt x 223.58702pt.
+<figures/Schermata_20260604_115810.png, id=3462, 553.31718pt x 310.91156pt>
+File: figures/Schermata_20260604_115810.png Graphic file (type png)
+<use figures/Schermata_20260604_115810.png>
+Package pdftex.def Info: figures/Schermata_20260604_115810.png  used on input line 326.
+(pdftex.def)             Requested size: 276.65791pt x 155.45538pt.
+<figures/Schermata_20260604_115919.png, id=3463, 555.57562pt x 308.65312pt>
+File: figures/Schermata_20260604_115919.png Graphic file (type png)
+<use figures/Schermata_20260604_115919.png>
+Package pdftex.def Info: figures/Schermata_20260604_115919.png  used on input line 332.
+(pdftex.def)             Requested size: 277.78712pt x 154.32617pt.
+ [122 <./figures/Schermata_20260604_115452.png> <./figures/Schermata_20260604_115627.png> <./figures/Schermata_20260604_115810.png>]
+<figures/Schermata_20260604_120117.png, id=3475, 736.25063pt x 411.78844pt>
+File: figures/Schermata_20260604_120117.png Graphic file (type png)
+<use figures/Schermata_20260604_120117.png>
+Package pdftex.def Info: figures/Schermata_20260604_120117.png  used on input line 340.
+(pdftex.def)             Requested size: 368.1244pt x 205.8937pt.
+<figures/Schermata_20260604_120253.png, id=3476, 737.00343pt x 410.2828pt>
+File: figures/Schermata_20260604_120253.png Graphic file (type png)
+<use figures/Schermata_20260604_120253.png>
+Package pdftex.def Info: figures/Schermata_20260604_120253.png  used on input line 347.
+(pdftex.def)             Requested size: 368.50081pt x 205.1409pt.
+ [123 <./figures/Schermata_20260604_115919.png> <./figures/Schermata_20260604_120117.png> <./figures/Schermata_20260604_120253.png>]
+<figures/Schermata_20260604_120455.png, id=3487, 663.22781pt x 370.38374pt>
+File: figures/Schermata_20260604_120455.png Graphic file (type png)
+<use figures/Schermata_20260604_120455.png>
+Package pdftex.def Info: figures/Schermata_20260604_120455.png  used on input line 356.
+(pdftex.def)             Requested size: 331.6131pt x 185.1914pt.
+<figures/Schermata_20260604_120613.png, id=3488, 735.49782pt x 410.2828pt>
+File: figures/Schermata_20260604_120613.png Graphic file (type png)
+<use figures/Schermata_20260604_120613.png>
+Package pdftex.def Info: figures/Schermata_20260604_120613.png  used on input line 363.
+(pdftex.def)             Requested size: 367.74802pt x 205.1409pt.
+) [124 <./figures/Schermata_20260604_120455.png> <./figures/Schermata_20260604_120613.png>]
+\openout2 = `chapters/Virtualizzazione.aux'.
+
+ (./chapters/Virtualizzazione.tex
+Capitolo 29.
+
+Overfull \hbox (128.87848pt too wide) in paragraph at lines 5--6
+[]\T1/LibertinusSerif-TLF/m/n/12 Si av-va-le di un []\T1/LibertinusSerif-TLF/b/n/12 hy-per-vi-sor[] \T1/LibertinusSerif-TLF/m/n/12 (o Vir-tual Ma-chi-ne Mo-ni-tor) per $[]$,
+ []
+
+<figures/Schermata_20260608_122606.png, id=3498, 330.48468pt x 161.85469pt>
+File: figures/Schermata_20260608_122606.png Graphic file (type png)
+<use figures/Schermata_20260608_122606.png>
+Package pdftex.def Info: figures/Schermata_20260608_122606.png  used on input line 39.
+(pdftex.def)             Requested size: 247.8629pt x 121.3907pt.
+
+Overfull \hbox (6.01447pt too wide) in paragraph at lines 39--40
+ [][] 
+ []
+
+
+Overfull \hbox (2.00041pt too wide) in paragraph at lines 30--41
+$[]$  $[]$ 
+ []
+
+[125
+
+
+
+
+]
+Underfull \hbox (badness 6396) in paragraph at lines 45--46
+\T1/LibertinusSerif-TLF/m/n/12 so-la-men-to del ca-ri-co di la-vo-ro: |   []
+ []
+
+
+Underfull \hbox (badness 4531) in paragraph at lines 45--46
+|   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 2401) in paragraph at lines 47--48
+\T1/LibertinusSerif-TLF/m/n/12 ne di una VM non de-ve in-ci-de-re sul-le
+ []
+
+<figures/Schermata_20260608_123244.png, id=3503, 318.43968pt x 159.59625pt>
+File: figures/Schermata_20260608_123244.png Graphic file (type png)
+<use figures/Schermata_20260608_123244.png>
+Package pdftex.def Info: figures/Schermata_20260608_123244.png  used on input line 53.
+(pdftex.def)             Requested size: 238.82918pt x 119.69687pt.
+
+Overfull \hbox (2.00041pt too wide) in paragraph at lines 43--56
+$[]$  $[]$ 
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 81--82
+[]\T1/LibertinusSerif-TLF/m/n/12 La mi-gra-zio-ne del ca-ri-co di la-vo-ro
+ []
+
+<figures/Schermata_20260608_124411.png, id=3504, 494.59781pt x 242.40562pt>
+File: figures/Schermata_20260608_124411.png Graphic file (type png)
+<use figures/Schermata_20260608_124411.png>
+Package pdftex.def Info: figures/Schermata_20260608_124411.png  used on input line 91.
+(pdftex.def)             Requested size: 321.48476pt x 157.56177pt.
+
+Overfull \hbox (31.26369pt too wide) in paragraph at lines 91--92
+ [][] 
+ []
+
+
+Overfull \hbox (2.0004pt too wide) in paragraph at lines 80--94
+$[]$  $[]$
+ []
+
+[126 <./figures/Schermata_20260608_122606.png> <./figures/Schermata_20260608_123244.png>]
+Underfull \hbox (badness 1412) in paragraph at lines 99--101
+\T1/LibertinusSerif-TLF/m/n/12 Copia del-le pa-gi-ne di me-mo-ria ver-so la
+ []
+
+<figures/Schermata_20260608_153424.png, id=3511, 355.3275pt x 361.35pt>
+File: figures/Schermata_20260608_153424.png Graphic file (type png)
+<use figures/Schermata_20260608_153424.png>
+Package pdftex.def Info: figures/Schermata_20260608_153424.png  used on input line 121.
+(pdftex.def)             Requested size: 284.26237pt x 289.0804pt.
+
+Overfull \hbox (42.41394pt too wide) in paragraph at lines 121--122
+ [][] 
+ []
+
+
+Overfull \hbox (2.00041pt too wide) in paragraph at lines 97--123
+$[]$  $[]$ 
+ []
+
+[127 <./figures/Schermata_20260608_124411.png> <./figures/Schermata_20260608_153424.png>]
+<figures/Schermata_20260608_154419.png, id=3523, 420.82219pt x 429.10312pt>
+File: figures/Schermata_20260608_154419.png Graphic file (type png)
+<use figures/Schermata_20260608_154419.png>
+Package pdftex.def Info: figures/Schermata_20260608_154419.png  used on input line 150.
+(pdftex.def)             Requested size: 294.57352pt x 300.37013pt.
+
+Overfull \hbox (52.72508pt too wide) in paragraph at lines 150--151
+ [][] 
+ []
+
+
+Overfull \hbox (2.00041pt too wide) in paragraph at lines 126--152
+$[]$  $[]$ 
+ []
+
+
+Overfull \hbox (45.93819pt too wide) in paragraph at lines 166--167
+\T1/LibertinusSerif-TLF/m/n/12 Un hy-per-vi-sor (o Vir-tual Ma-chi-ne Mo-ni-tor) è un com-po-nen-te $[]$
+ []
+
+[128 <./figures/Schermata_20260608_154419.png>]
+Underfull \hbox (badness 1122) in paragraph at lines 175--176
+[]\T1/LibertinusSerif-TLF/m/n/12 In que-sta ar-chi-tet-tu-ra l'hy-per-vi-sor è |   []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+|   []   |   []   |   []   |   []   |   []
+ []
+
+<figures/Schermata_20260608_115837.png, id=3534, 371.13657pt x 201.75375pt>
+File: figures/Schermata_20260608_115837.png Graphic file (type png)
+<use figures/Schermata_20260608_115837.png>
+Package pdftex.def Info: figures/Schermata_20260608_115837.png  used on input line 181.
+(pdftex.def)             Requested size: 185.56783pt x 100.87662pt.
+
+Overfull \hbox (2.00041pt too wide) in paragraph at lines 174--184
+$[]$  $[]$ 
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 200--201
+[]\T1/LibertinusSerif-TLF/m/n/12 Si in-stal-la per il pri-mo si-ste-ma ope-ra-ti-vo ho-
+ []
+
+<figures/Schermata_20260608_120709.png, id=3535, 356.0803pt x 164.11313pt>
+File: figures/Schermata_20260608_120709.png Graphic file (type png)
+<use figures/Schermata_20260608_120709.png>
+Package pdftex.def Info: figures/Schermata_20260608_120709.png  used on input line 208.
+(pdftex.def)             Requested size: 178.03972pt x 82.05635pt.
+
+Overfull \hbox (2.00041pt too wide) in paragraph at lines 199--211
+$[]$  $[]$ 
+ []
+
+[129 <./figures/Schermata_20260608_115837.png> <./figures/Schermata_20260608_120709.png>]
+<figures/Schermata_20260608_110233.png, id=3543, 412.54124pt x 153.57375pt>
+File: figures/Schermata_20260608_110233.png Graphic file (type png)
+<use figures/Schermata_20260608_110233.png>
+Package pdftex.def Info: figures/Schermata_20260608_110233.png  used on input line 265.
+(pdftex.def)             Requested size: 483.69687pt x 180.06485pt.
+ [130] [131 <./figures/Schermata_20260608_110233.png>]
+<figures/Schermata_20260608_111337.png, id=3553, 362.85562pt x 312.41719pt>
+File: figures/Schermata_20260608_111337.png Graphic file (type png)
+<use figures/Schermata_20260608_111337.png>
+Package pdftex.def Info: figures/Schermata_20260608_111337.png  used on input line 326.
+(pdftex.def)             Requested size: 217.71504pt x 187.45175pt.
+ [132 <./figures/Schermata_20260608_111337.png>]
+<figures/Schermata_20260608_112010.png, id=3559, 369.63094pt x 279.29344pt>
+File: figures/Schermata_20260608_112010.png Graphic file (type png)
+<use figures/Schermata_20260608_112010.png>
+Package pdftex.def Info: figures/Schermata_20260608_112010.png  used on input line 347.
+(pdftex.def)             Requested size: 277.2225pt x 209.46956pt.
+ [133 <./figures/Schermata_20260608_112010.png>]) [134]
+\openout2 = `"chapters/Cloud Computing.aux"'.
+
+ (./chapters/Cloud Computing.tex
+Capitolo 30.
+<figures/Schermata_20260608_162747.png, id=3569, 137.01187pt x 231.86626pt>
+File: figures/Schermata_20260608_162747.png Graphic file (type png)
+<use figures/Schermata_20260608_162747.png>
+Package pdftex.def Info: figures/Schermata_20260608_162747.png  used on input line 34.
+(pdftex.def)             Requested size: 137.01154pt x 231.86568pt.
+
+Overfull \hbox (40.27365pt too wide) in paragraph at lines 34--35
+ [][] 
+ []
+
+
+Overfull \hbox (2.0004pt too wide) in paragraph at lines 20--36
+$[]$  $[]$ 
+ []
+
+[135
+
+
+
+
+]
+<figures/Schermata_20260608_163044.png, id=3575, 250.68657pt x 232.61906pt>
+File: figures/Schermata_20260608_163044.png Graphic file (type png)
+<use figures/Schermata_20260608_163044.png>
+Package pdftex.def Info: figures/Schermata_20260608_163044.png  used on input line 40.
+(pdftex.def)             Requested size: 250.68594pt x 232.61848pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+<figures/Schermata_20260608_163547.png, id=3576, 120.45pt x 213.04594pt>
+File: figures/Schermata_20260608_163547.png Graphic file (type png)
+<use figures/Schermata_20260608_163547.png>
+Package pdftex.def Info: figures/Schermata_20260608_163547.png  used on input line 60.
+(pdftex.def)             Requested size: 120.44969pt x 213.04541pt.
+
+Overfull \hbox (23.7118pt too wide) in paragraph at lines 60--61
+ [][] 
+ []
+
+
+Overfull \hbox (2.0004pt too wide) in paragraph at lines 52--62
+$[]$  $[]$ 
+ []
+
+[136 <./figures/Schermata_20260608_162747.png> <./figures/Schermata_20260608_163044.png>]
+<figures/Schermata_20260608_164020.png, id=3586, 472.01344pt x 436.63126pt>
+File: figures/Schermata_20260608_164020.png Graphic file (type png)
+<use figures/Schermata_20260608_164020.png>
+Package pdftex.def Info: figures/Schermata_20260608_164020.png  used on input line 66.
+(pdftex.def)             Requested size: 188.80202pt x 174.6494pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+<figures/Schermata_20260608_164410.png, id=3587, 160.34906pt x 325.96782pt>
+File: figures/Schermata_20260608_164410.png Graphic file (type png)
+<use figures/Schermata_20260608_164410.png>
+Package pdftex.def Info: figures/Schermata_20260608_164410.png  used on input line 92.
+(pdftex.def)             Requested size: 128.27942pt x 260.7746pt.
+
+Overfull \hbox (31.54153pt too wide) in paragraph at lines 92--93
+ [][] 
+ []
+
+
+Overfull \hbox (2.0004pt too wide) in paragraph at lines 84--94
+$[]$  $[]$ 
+ []
+
+[137 <./figures/Schermata_20260608_163547.png> <./figures/Schermata_20260608_164020.png>] [138 <./figures/Schermata_20260608_164410.png>] [139] [140]) [141] (./main.aux (./chapters/Protocollo_HTTP.aux) (./chapters/Rappresentazione dei dati.aux) (./chapters/Applicazioni Web.aux) (./chapters/Servizi SOAP.aux) (./chapters/Servizi REST.aux) (./chapters/RPC - Remote Procedure Call.aux) (./chapters/Javascript.aux) (./chapters/AJAX-JS.aux) (./chapters/Code Migration.aux) (./chapters/Apache Hadoop.aux) (./chapters/Virtualizzazione.aux) (./chapters/Cloud Computing.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B033FB14ABBE3827CF25BD4CC12D0EC7;50909.
+(rerunfilecheck)             Checksum: CF373F324ACB48CDF91896304419710A;66747.
  ) 
 Here is how much of TeX's memory you used:
- 32227 strings out of 468824
- 620177 string characters out of 5452438
- 1443616 words of memory out of 5000000
- 59162 multiletter control sequences out of 15000+600000
+ 32962 strings out of 468824
+ 641770 string characters out of 5452438
+ 1446419 words of memory out of 5000000
+ 59696 multiletter control sequences out of 15000+600000
  712556 words of font info for 112 fonts, out of 8000000 for 9000
  395 hyphenation exceptions out of 8191
  121i,11n,124p,1286b,2048s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb>
-Output written on main.pdf (108 pages, 3776966 bytes).
+</usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb>
+Output written on main.pdf (151 pages, 10605352 bytes).
 PDF statistics:
- 2800 PDF objects out of 2984 (max. 8388607)
- 2573 compressed objects within 26 object streams
- 1178 named destinations out of 1200 (max. 500000)
- 2568 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3944 PDF objects out of 4296 (max. 8388607)
+ 3574 compressed objects within 36 object streams
+ 1352 named destinations out of 1440 (max. 500000)
+ 3580 words of extra memory for PDF output out of 10000 (max. 10000000)
 

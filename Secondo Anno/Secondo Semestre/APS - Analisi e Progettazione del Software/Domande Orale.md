@@ -1,3 +1,0 @@
-- Descrivere UP
-- Descrivere Scrum
-- Principi e ruoli dello Scrum
