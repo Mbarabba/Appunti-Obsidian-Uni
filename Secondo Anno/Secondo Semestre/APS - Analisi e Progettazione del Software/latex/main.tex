@@ -1,0 +1,48 @@
+% ==========================================
+% MAIN.TEX - File Principale
+% ==========================================
+
+\documentclass[12pt,a4paper]{report}
+
+% Carica tutte le configurazioni, i pacchetti e i box personalizzati
+\input{paraem.tex}
+
+\begin{document}
+
+% --- FRONTESPIZIO ---
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\scshape\LARGE Università degli studi Milano-Bicocca \par}
+    \vspace{1.5cm}
+    
+    {\scshape\Large Appunti del Corso di\par}
+    \vspace{0.5cm}
+    
+    {\huge\bfseries Analisi e Progettazione del Software \par}
+    \vspace{1.5cm}
+    
+    
+    \vfill
+    
+    Scritto da:\par
+    {\Large \textbf{Nicholas Scorrano}\par}
+    
+    \vspace{1cm}
+    
+    {\large Anno Accademico 2025/2026 \par}
+\end{titlepage}
+
+% --- INDICE ---
+% --- INDICE ---
+{
+\hypersetup{linkcolor=black}
+\tableofcontents
+}
+\clearpage
+
+% --- CAPITOLI ---
+\include{Capitoli/Prova.tex}
+
+\end{document}
