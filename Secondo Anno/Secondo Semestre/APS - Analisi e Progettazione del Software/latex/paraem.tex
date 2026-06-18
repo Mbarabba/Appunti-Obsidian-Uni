@@ -12,6 +12,7 @@
 % --- 2. GEOMETRIA E IMPAGINAZIONE ---
 \usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
 \usepackage{titlesec}       % Personalizzazione dei titoli
+\setlength{\parindent}{0pt}
 
 % Rimuove la scritta "Capitolo X" e affianca il numero al titolo
 \titleformat{\chapter}[hang]
@@ -26,6 +27,11 @@
 \usepackage{float}          % Permette l'uso di [H] per forzare la posizione delle immagini
 \usepackage{caption}        % Personalizzazione delle didascalie
 \usepackage{subcaption}     % Per affiancare più immagini
+\usepackage{geometry}
+\geometry{a4paper, margin=1.25cm}
+\usepackage{parskip}
+\usepackage{titlesec}
+
 
 % --- 5. TIKZ E UML ---
 \usepackage{tikz}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.2)  18 JUN 2026 11:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.2)  18 JUN 2026 17:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -252,7 +252,15 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count309
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count310
-) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+) (/usr/share/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+ (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks30
 \pgfutil@tempdima=\dimen185
 \pgfutil@tempdimb=\dimen186
@@ -767,9 +775,7 @@ Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
 Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
 (/usr/share/texmf-dist/tex/latex/pdfcol/pdfcol.sty
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
- (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+ (/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 ))
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
@@ -817,9 +823,7 @@ Library (tcolorbox): 'tcbvignette.code.tex' version '6.9.0'
 Library (tcolorbox): 'tcbposter.code.tex' version '6.9.0'
 )) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
- (/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+ (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
@@ -829,9 +833,7 @@ Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-))
+)
 \c@section@level=\count403
 )
 \@linkdim=\dimen331
@@ -897,7 +899,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip86
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 113.
+Package hyperref Info: Option `colorlinks' set `true' on input line 119.
 ) (/usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (/usr/share/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
@@ -910,7 +912,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count415
-) (./main.aux (./Capitoli/Pattern GRASPt.aux) (./Capitoli/Design Pattern.aux))
+) (./main.aux (./Capitoli/Pattern GRASP.aux) (./Capitoli/Design Pattern.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -942,15 +944,15 @@ LaTeX Info: Redefining \it@ccap on input line 10.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* h-part:(L,W,R)=(35.56593pt, 526.376pt, 35.56593pt)
+* v-part:(T,H,B)=(35.56593pt, 773.91498pt, 35.56593pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
+* \textwidth=526.376pt
+* \textheight=773.91498pt
+* \oddsidemargin=-36.70406pt
+* \evensidemargin=-36.70406pt
+* \topmargin=-73.70406pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -995,7 +997,37 @@ Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 10.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] (./main.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] (./main.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4.
+ (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
+ (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
+ (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
+ (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -1007,31 +1039,76 @@ l.40 \clearpage
                 [1
 
 ]
-\openout2 = `"Capitoli/Pattern GRASPt.aux"'.
+\openout2 = `"Capitoli/Pattern GRASP.aux"'.
+
+ (./Capitoli/Pattern GRASP.tex
+Capitolo 1.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 10.
+(/usr/share/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [2
 
 
-No file Capitoli/Pattern GRASPt.tex.
+
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+<Immagini/Schermata_20260618_120508.png, id=144, 435.87843pt x 501.37312pt>
+File: Immagini/Schermata_20260618_120508.png Graphic file (type png)
+<use Immagini/Schermata_20260618_120508.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_120508.png  used on input line 32.
+(pdftex.def)             Requested size: 473.73518pt x 544.91754pt.
+ [3 <./Immagini/Schermata_20260618_120508.png>]
+Capitolo 2.
+[4
+
+]
+<Immagini/Schermata_20260618_152238.png, id=160, 504.38437pt x 338.76563pt>
+File: Immagini/Schermata_20260618_152238.png Graphic file (type png)
+<use Immagini/Schermata_20260618_152238.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_152238.png  used on input line 108.
+(pdftex.def)             Requested size: 378.28734pt x 254.07358pt.
+<Immagini/Schermata_20260618_152341.png, id=161, 518.6878pt x 255.20343pt>
+File: Immagini/Schermata_20260618_152341.png Graphic file (type png)
+<use Immagini/Schermata_20260618_152341.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_152341.png  used on input line 113.
+(pdftex.def)             Requested size: 389.0149pt x 191.4021pt.
+<Immagini/Schermata_20260618_152605.png, id=162, 464.4853pt x 177.66376pt>
+File: Immagini/Schermata_20260618_152605.png Graphic file (type png)
+<use Immagini/Schermata_20260618_152605.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_152605.png  used on input line 119.
+(pdftex.def)             Requested size: 348.36313pt x 133.24748pt.
+ [5 <./Immagini/Schermata_20260618_152238.png> <./Immagini/Schermata_20260618_152341.png>] [6 <./Immagini/Schermata_20260618_152605.png>]
+<Immagini/Schermata_20260618_153741.png, id=182, 441.90094pt x 155.07938pt>
+File: Immagini/Schermata_20260618_153741.png Graphic file (type png)
+<use Immagini/Schermata_20260618_153741.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_153741.png  used on input line 176.
+(pdftex.def)             Requested size: 441.89986pt x 155.07898pt.
+<Immagini/Schermata_20260618_153833.png, id=183, 230.36063pt x 122.70844pt>
+File: Immagini/Schermata_20260618_153833.png Graphic file (type png)
+<use Immagini/Schermata_20260618_153833.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_153833.png  used on input line 181.
+(pdftex.def)             Requested size: 230.36005pt x 122.70813pt.
+ [7 <./Immagini/Schermata_20260618_153741.png> <./Immagini/Schermata_20260618_153833.png>] [8] [9] [10]) [11]
 \openout2 = `"Capitoli/Design Pattern.aux"'.
 
-(./Capitoli/Design Pattern.tex) (./main.aux (./Capitoli/Pattern GRASPt.aux) (./Capitoli/Design Pattern.aux))
+ (./Capitoli/Design Pattern.tex) (./main.aux (./Capitoli/Pattern GRASP.aux) (./Capitoli/Design Pattern.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 35892 strings out of 468824
- 738745 string characters out of 5452438
- 1251309 words of memory out of 5000000
- 64024 multiletter control sequences out of 15000+600000
- 655298 words of font info for 52 fonts, out of 8000000 for 9000
+ 36268 strings out of 468824
+ 746512 string characters out of 5452438
+ 1267187 words of memory out of 5000000
+ 64276 multiletter control sequences out of 15000+600000
+ 673929 words of font info for 71 fonts, out of 8000000 for 9000
  395 hyphenation exceptions out of 8191
- 91i,5n,107p,599b,508s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,9n,107p,1304b,594s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb>
-Output written on main.pdf (2 pages, 78173 bytes).
+Output written on main.pdf (12 pages, 561274 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 523 words of extra memory for PDF output out of 10000 (max. 10000000)
 
