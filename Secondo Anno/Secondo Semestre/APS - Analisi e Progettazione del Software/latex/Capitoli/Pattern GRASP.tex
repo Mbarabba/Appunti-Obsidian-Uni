@@ -332,3 +332,135 @@ Il rischio più comune quando si implementa questo pattern è la creazione di un
     \item \textbf{Piazza il blocco nel diagramma di interazione:} Nei diagrammi di sequenza dettagliati, inserisci la linea di vita della UI alla sinistra e, come secondo oggetto subito a destra, inserisci l'oggetto Controller
     \item \textbf{Disegna la delega:} Fai partire la freccia dalla UI al Controller. Subito dopo, fai partire le frecce dal Controller verso le vere classi del Modello di Dominio applicando l'Information Expert.
 \end{enumerate}
+
+\chapter{Pattern GRASP avanzati}
+
+\section{Pure Fabrication}
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Nome del pattern:} & \textbf{Pure Fabrication}\\ \midrule
+\textbf{Problema:}         &  Come assegnare una responsabilità senza violare alta coesione e basso accoppiamento quando pattern come l'Information Expert falliscono?\\ \midrule
+\textbf{Soluzione:}        &  Creare una classe artificiale (che non esiste nel dominio) e assegnarle un set di responsabilità fortemente coeso\\ 
+\bottomrule
+\end{tabularx}
+
+\subsection{Problema}
+Sorge quando si cerca di assegnare una responsabilità utilizzando i pattern standard, ma facendolo si violerebbero obiettivi cruciali come mantenere un'alta coesione e un basso accoppiamento
+\subsection{Soluzione}
+Consiste nell'assegnare la responsabilità a una classe "artificiale" o di convenienza.
+
+Questa classe non rappresenta un concetto reale nel dominio del problema, ma viene inventata appositamente dal progettista per sostenere alta coesione, accoppiamento basso e riuso
+\subsection{Benefici}
+\begin{itemize}
+    \item Sostiene l'alta coesione
+    \item Aumenta significativame la potenzialità di riuso del codice
+\end{itemize}
+\subsection{Controindicazioni}
+\begin{itemize}
+    \item Un utilizzo eccessivo può portare a una "decomposizione del codice"
+    \item Rischio di creare un eccesso di oggetti puramente comportamentali che non possiedono le informazioni richieste per soddisfare i propri compiti
+\end{itemize}
+\subsection{Flusso di lavoro}
+\begin{enumerate}
+    \item Identificare che l'assegnazione di una responsabilità violerebbe l'alta coesione o il basso accoppiamento di una classe esistente
+    \item Inventare una classe "artificiale" che non fa parte del domionio del problema
+    \item Assegnare a questa nuova classe l'insieme di responsabilità altamente coese
+    \item Progettare un'opportuna interazione coordinata dalla Pure Favrication assicurandosi di passarle le infromazioni necessarie per operare
+\end{enumerate}
+
+
+\section{Polymorphism}
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Nome del pattern:} & \textbf{Polymorphism}\\ \midrule
+\textbf{Problema:}         &  Come gestire alternative basate sul tipo e creare componenti inseribili?\\ \midrule
+\textbf{Soluzione:}        & Assegnare la responsabilità del comportamento ai tipi per i quali varia, usando operazioni polimorfe \\ 
+\bottomrule
+\end{tabularx}
+\subsection{Problema}
+Come gestire alternative e comportamenti correlati che sono basate sul tipo? 
+Come creare? comportamente software "inseribili"?
+\subsection{Soluzione}
+Quando le alternative variano con il tipo, si assenga la responsabilità del comportamente direttamente ai tipi per i quali il comportamente varia, utilizzando operazioni polimorfe
+\subsection{Benefici}
+\begin{itemize}
+    \item Le estensioni richieste per gestire nuove variazioni sono facili da aggiungere
+    \item Si possono introdurre nuove implementazioni senza influire minimamente sui client che le utilizzano
+\end{itemize}
+\subsection{Controindicazioni}
+\begin{itemize}
+    \item Progettare interfacce e polimorfismi per una "adattabilità" speculativa porta spesso ala progettazione di variazioni imporbabili che, nella realtà, non si verificheranno mai
+\end{itemize}
+\subsection{Flusso di lavoro}
+\begin{enumerate}
+    \item Rilevare la presenza di un comportamente che necessita di alternative differenti basate sul tipo
+    \item Definire un'astrazione comune con un'operazione polimorfa
+    \item Assegnare la responsabilità di implementare lo specifico comportamento alle varie sottoclassi o tipi concreti
+\end{enumerate}
+
+\newpage
+\section{Indirection}
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Nome del pattern:} & \textbf{Indirection}\\ \midrule
+\textbf{Problema:}         &  Come disaccoppiare gli oggetti ed evitare l'accoppiamento diretto tra elementi? \\ \midrule
+\textbf{Soluzione:}        &  Assegnare la responsabilità a un oggetto intermediario che faccia da mediatore tra i componenti \\ 
+\bottomrule
+\end{tabularx}
+\subsection{Problema}
+Dove assegnare una responsabilità per evitare l'accoppiamento diretto tra più elementi?
+
+Come disaccoppiare gli oggetti in modo da sostenere un alto riuso e un accoppiamento basso?
+\subsection{Soluzione}
+Si assegna la responsabilità a un oggetto intermediario che ha il suo compito di mediare tra altri componenti o servizi, evitando cosi' che vi sia un accoppiamento diretto tra di essi
+\subsection{Benefici}
+\begin{itemize}
+    \item Crea una utilie indirezione tra le diversi componenti
+    \item Garantisce un accoppiamento notevolmente più bassp tra i componenti del sistema
+\end{itemize}
+\subsection{Controindicazioni}
+\begin{itemize}
+    \item L'aggiunta di intermediari aumenta fisiologicamente il numero di classi e la complessità strutturale del codice
+\end{itemize}
+\subsection{Flusso di lavoro}
+\begin{enumerate}
+    \item Individuare due o più componenti o servizi che rischiano di essere accoppiati direttamente in modo rigido
+    \item Creare un nuovo oggetto con la funzione di intermediario (come un Adapter)
+    \item Instradare le chiamate del client verso l'intermediario, in modo che sia quest'ultimo a comunicare con il servizio di destinazione disaccoppiando le due parti
+\end{enumerate}
+
+\newpage
+\section{Protected Variations}
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Nome del pattern:} & \textbf{Protected Variations}\\ \midrule
+\textbf{Problema:}         & Come evitare che variazioni o instabilità si riversino su altri elementi del sistema? \\ \midrule
+\textbf{Soluzione:}        & Identificare i punti di variazione e assegnare le responsabilità per creare un'interfacciastabile attorno ad essi \\ 
+\bottomrule
+\end{tabularx}
+\subsection{Problema}
+Come progettare oggetti, sottoinsieme e sistemi in modo tale che le variazioni o l'instabilità di questi elementi non si riversino in modo distruttivo su altri elementi
+\subsection{Soluzione}
+Si identificano i punti in cui sono previste delle variazioni, poi si assegnano le responsabilità in modo da creare una "interfaccia" stabile e inossidabile attorno a questi punti critici
+\subsection{Benefici}
+\begin{itemize}
+    \item Le estensioni richieste per gestire nuove variazioni sono facili da aggiungere
+    \item È possibile introdurre nuove implementazioni senza influire sui client
+    \item Favorisce un basso accoppiamento
+    \item È possibile ridurre drasticamente l'impatto o il costo dei cambiamenti futuri
+\end{itemize}
+\subsection{Controindicazioni}
+\begin{itemize}
+    \item È un'operazione inutile e costosa utilizzare questo pattern per proteggersi da variazioni che non si verificheranno main
+    \item In alcune circostanze, risulta più conveniente e meno complesso riprogettare il software solo quando la variazione si presenta, piuttosto che tentare di realizzare preventivamente scudi contro ogni potenziale variazione immaginabile
+\end{itemize}
+\subsection{Flusso di lavoro}
+\begin{enumerate}
+    \item Analizzare il sistema per identificare con precisione i punti di instabilità o le aree in cui si prevedono variazioni future
+    \item Assegnare le responsabilità in modo da isolare quegli specifici punti dal resto del sistema 
+    \item "Avvolgere" l'elemento instabile fornendo una stabile interfaccia di comunicazione, bloccando cosi' la propagazione a cascata dei futuri cambiamenti
+\end{enumerate}

@@ -1,0 +1,40 @@
+\chapter{Formula di Stokes}
+
+\section{Rotore}
+
+Dato il campo vettoriale $\vec{F} = F_1\vec{e}_1 + F_2\vec{e}_2 + F_3\vec{e}_3$ in $\mathbb{R}^3$:
+
+\[
+\text{rot}(\vec{F}) = \left( (F_3)_y - (F_2)_z \right)\vec{e}_1 + \left( (F_1)_z - (F_3)_x \right)\vec{e}_2 + \left( (F_2)_x - (F_1)_y \right)\vec{e}_3
+\]
+
+oppure
+
+\[
+\text{rot}(\vec{F}) = \nabla \times \vec{F} = 
+\begin{vmatrix}
+\vec{e}_1 & \vec{e}_2 & \vec{e}_3 \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+F_1 & F_2 & F_3
+\end{vmatrix}
+\]
+\[
+= \left( (F_3)_y - (F_2)_z \right)\vec{e}_1 - \left( (F_3)_x - (F_1)_z \right)\vec{e}_2 + \left( (F_2)_x - (F_1)_y \right)\vec{e}_3
+\]
+
+\begin{itemize}
+    \item Se $\text{rot}(\vec{F}) = \vec{0}$ il campo è \textbf{irrotazionale}.
+    \item Se il dominio è \textbf{semplicemente connesso} allora il campo è \textbf{conservativo}.
+\end{itemize}
+
+\section{Divergenza}
+
+\[
+\text{div}(\vec{F}) = (F_1)_x + (F_2)_y + (F_3)_z
+\]
+
+\section{Definizione formula di Stokes}
+
+\[
+\oint_{C} \vec{F} \cdot \vec{t} \, dl = \iint_{\Sigma} \text{rot}(\vec{F}) \cdot \vec{n} \, dS
+\]

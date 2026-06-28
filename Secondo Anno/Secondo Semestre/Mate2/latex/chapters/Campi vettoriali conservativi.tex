@@ -1,0 +1,83 @@
+\chapter{Campi Vettoriali Conservativi}
+
+\section{Definizione}
+Un campo vettoriale si dice \textbf{conservativo} se esiste una funzione $U$ detta \textbf{potenziale} del campo vettoriale tale che:
+$$\vec{F} = \vec{\nabla}U$$
+
+\section{Teorema}
+Sia $\vec{F}$ un campo vettoriale conservativo continuo, allora data una curva $\gamma$ che congiunge i punti $P_1$ e $P_2$:
+$$\int_{\gamma} \vec{F} \cdot \vec{t} \, ds = U(P_1) - U(P_2)$$
+
+\section{Teorema}
+Sia $\vec{F} = F_1 \vec{e}_1 + \dots + F_n \vec{e}_n$ un campo vettoriale continuo definito su un dominio $D$ aperto e connesso per archi.
+Allora l'indipendenza dell'integrale dal cammino implica che $\vec{F}$ è conservativo.
+
+\subsection{Cosa vuol dire che il dominio è aperto?}
+Un dominio $D$ si dice aperto se, per ogni singolo punto $P$ appartenente a $D$, è possibile disegnare un "intorno" centrato in $P$ che sia completamente contenuto all'interno di $D$
+
+\subsection{Cosa vuol dire connesso per archi?}
+Dati $P_0, P_1 \in D$ esiste una curva $\gamma$ continua in $D$ che li congiunge
+
+\subsection{Dimostrazione (Attraverso la definizione del potenziale)}
+\begin{gather}
+    \intertext{Da un dominio D si fissa un punto $P_0 \in D$} 
+    \intertext{Dato $P \in D$ si definisce} U(P)=\int_\gamma \vec{F} \cdot \vec{t} \, dl
+    \intertext{Dove $\gamma$ è una qualsiasi curva contenuta in $D$ che congiunge $P_0$ e $P$} \\
+    \intertext{Voglio far vedere che} U_x = F_1 \quad U_y = F_2 \\
+    U_x = \lim_{\Delta x \to 0} \frac{U(x+\Delta_{x,y}) - U(x,y)}{\Delta x}\\
+    U(x + \Delta_{x,y}) - U(x,y) = \int_\gamma \vec{F} \cdot \vec{t} \, dl \\
+    U(x,y) = \int_{(x_0,y_0)}^{(x,y)} \vec{F} \cdot \vec{t} \, dl \\
+    \int_{\gamma}\vec{F} \cdot \vec{t} \, dl = \int_0^1 F_1dx_1 + F_2dx_2 \, dt = \Delta x \int_0^1 F_1(x+ \Delta_{x,y}) \, dt \\
+    \begin{array}{ccc}
+    \displaystyle \frac{U(x+\Delta x, y) - U(x, y)}{\Delta x} & = & \displaystyle F_1(x + \bar{t}\Delta x, y) \\[15pt]
+    \Big\downarrow \scriptstyle \Delta x \to 0 & & \Big\downarrow \scriptstyle \Delta x \to 0 \\[15pt]
+    U_x & = & F_1(x,y)
+    \end{array} 
+    \intertext{In modo analogo si dimostra che $U_y = F_2(x,y)$}
+\end{gather}
+
+\section{Teorema}
+Se $\vec{F}$ è conservativo allora 
+$$
+\oint_\gamma \vec{F} \cdot \vec{t} \, dl = 0
+$$
+\begin{itemize}
+    \item $\oint$ indica che $\gamma$ è chiusa
+\end{itemize}
+
+\subsection{Dimostrazione sulle curve chiuse}
+\begin{gather}
+\intertext{Indico con $-\gamma_2$ la curva con verso di percorrenza opposto a $\gamma_2$.}
+\intertext{L'integrale sulla curva chiusa $\gamma = \gamma_1 \cup \gamma_2$ è:}
+\oint_{\gamma} \vec{F} \cdot \vec{t} \, dl = \int_{\gamma_1} \vec{F} \cdot \vec{t} \, dl + \int_{\gamma_2} \vec{F} \cdot \vec{t} \, dl \\
+\intertext{Essendo il campo conservativo (indipendenza dal cammino), l'integrale su $\gamma_1$ è uguale all'integrale su $-\gamma_2$:}
+\int_{\gamma_1} \vec{F} \cdot \vec{t} \, dl = \int_{-\gamma_2} \vec{F} \cdot \vec{t} \, dl = -\int_{\gamma_2} \vec{F} \cdot \vec{t} \, dl \\
+\intertext{Sostituendo, otteniamo:}
+\oint_{\gamma} \vec{F} \cdot \vec{t} \, dl = \int_{\gamma_1} \vec{F} \cdot \vec{t} \, dl - \int_{\gamma_1} \vec{F} \cdot \vec{t} \, dl = 0
+\end{gather}\section{Condizioni necessarie affinché un campo vettoriale sia conservativo}
+Se $\vec{F}$ è conservativo su un dominio $D$, allora $\vec{F} = \vec{\nabla}U$, ovvero:
+$$F_i = U_{x_i}$$
+Applicando il teorema di Schwarz sulle derivate miste ($U_{x_i x_j} = U_{x_j x_i}$):
+$$(F_i)_{x_j} = U_{x_i x_j} = U_{x_j x_i} = (F_j)_{x_i}$$
+con $i \neq j$.
+
+Quante condizioni sono?
+\subsection{Per $n=2$}
+Nel caso bidimensionale abbiamo una sola condizione:
+\begin{gather*}
+(F_1)_y = (F_2)_x
+\end{gather*}
+
+\subsection{Per $n=3$}
+Nel caso tridimensionale le condizioni diventano tre:
+\begin{gather*}
+(F_1)_y = (F_2)_x \\
+(F_1)_z = (F_3)_x \\
+(F_2)_z = (F_3)_y
+\end{gather*}
+
+\section{Lemma di Poincaré}
+Sia $\vec{F}$ un campo vettoriale di classe $C_1$ (le componenti di $\vec{F}$ sono continue e le loro derivate parziali prime sono anche esse continue) e il dominio di definizione di $\vec{F}$ è semplicemente connesso allora le condizioni $(F_1)_y = (F_2)_x$ sono anche sufficienti per l'esistenza di un potenziale $U$ ($\vec{F} = \vec{\nabla} U$).
+
+\subsection{Dominio di un Campo Vettoriale}
+Il dominio di un campo vettoriale $\vec{F}$ è definito dall'intersezione dei domini delle sue componenti

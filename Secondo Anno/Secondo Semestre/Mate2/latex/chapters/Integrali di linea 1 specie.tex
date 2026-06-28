@@ -1,0 +1,39 @@
+\chapter{Integrali di linea di $1^\circ$ specie}
+
+\section{Arco di curva regolare}
+Le curve sono definite da funzioni a valori vettoriali. Un \textbf{arco di curva} si dice \textbf{regolare} se ammette una parametrizzazione $\mathbf{x}(t)$ con $t \in [a,b]$ che soddisfa le seguenti condizioni:
+\begin{itemize}
+    \item è iniettiva;
+    \item è derivabile (con derivata continua e mai nulla).
+\end{itemize}
+
+La \textbf{lunghezza dell'arco di curva} è data dalla formula:
+\[
+l = \int_{a}^{b} \sqrt{\left(\frac{dx_1}{dt}\right)^2 + \dots + \left(\frac{dx_n}{dt}\right)^2} \, dt = \int_{a}^{b} \left\| \frac{d\vec{r}}{dt} \right\| \, dt
+\]
+
+\section{Ascissa curvilinea}
+Per parametrizzare una curva ci sono infiniti modi, ossia si possono scegliere infiniti parametri arbitrari che soddisfano le condizioni di regolarità. Di fatto, esiste un parametro privilegiato chiamato \textbf{ascissa curvilinea} (o parametro naturale) $s$.
+
+Data una curva parametrizzata, fissando un punto iniziale su di essa $\vec{r}(t_0)=P_0$, l'ascissa curvilinea rappresenta la lunghezza percorsa lungo la curva a partire da $P_0$:
+\[
+l(P_0) = \int_{t_0}^{t} \left\| \frac{d\vec{r}}{dt} \right\| \, dt
+\]
+Possiamo quindi sostituire $\vec{r}(t)$ e riparametrizzare la curva in funzione dell'ascissa curvilinea, ottenendo $\vec{l}$.
+
+\section{Definizione di Integrale di linea di $1^\circ$ specie}
+Sia $\gamma$ una curva regolare (definita in un intervallo $[a,b]$) e sia $f: \mathbb{R}^n \rightarrow \mathbb{R}$ una funzione continua. 
+L'integrale di linea di $1^\circ$ specie valuta la restrizione della funzione $f$ lungo la curva $\gamma$.
+
+Considerando la funzione composta lungo la curva $F(l) = f(x_1(l), \dots, x_n(l))$, l'integrale si definisce formalmente rispetto all'ascissa curvilinea $s$ (con lunghezza totale $L$) come:
+\[
+\int_{\gamma} f \, ds = \int_{0}^{L} f(\mathbf{x}(s)) \, ds
+\]
+Nella pratica, passando a una parametrizzazione generica $t \in [a,b]$ e ricordando che 
+\[
+dl = \frac{d\vec{r}}{dt} dt
+\]
+la formula per il calcolo diventa:
+\[
+\int_{\gamma} f \, dl = \int_a^b F(t) \, \frac{dl}{dt}dt = \int_a^b F(l(t)) \, ||\frac{d\vec{r}}{dt}dt|| = \int_a^b F(t) \, dt
+\]

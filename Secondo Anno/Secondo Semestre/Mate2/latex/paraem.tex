@@ -1,12 +1,13 @@
+% --- 2. GEOMETRIA E IMPAGINAZIONE ---
 \usepackage{geometry}
-\geometry{
-    a4paper,
-    total={170mm,257mm},
-    left=15mm,
-    right=15mm,
-    top=20mm,
-    bottom=20mm
-}
+\geometry{a4paper, margin=1.25cm}\usepackage{titlesec}       % Personalizzazione dei titoli
+\setlength{\parindent}{0pt}
+
+% Rimuove la scritta "Capitolo X" e affianca il numero al titolo
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries}{\thechapter.}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
 % --- PACCHETTI BASE ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}

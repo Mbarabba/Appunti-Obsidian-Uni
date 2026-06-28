@@ -1,0 +1,38 @@
+\chapter{Integrali di linea di $2^\circ$ specie}
+
+\section{Definizione di Campo Vettoriale}
+Un \textbf{campo vettoriale} è una funzione:
+$$\vec{F}: D \subset \mathbb{R}^n \rightarrow \mathbb{R}^n$$
+che associa a ogni punto del dominio $D$ un vettore di $\mathbb{R}^n$.
+
+Si può scrivere nella forma:
+$$\vec{F} = F_1 \vec{e}_1 + \dots + F_n \vec{e}_n$$
+dove $\hat{e}_i$ sono i versori della base canonica e $F_i$ sono le componenti del campo vettoriale.
+
+\section{Definizione di Integrale di linea di $2^\circ$ specie}
+Dati:
+\begin{itemize}
+    \item Un campo vettoriale $\vec{F}: D \subset \mathbb{R}^n \rightarrow \mathbb{R}^n$.
+    \item Una \textbf{curva orientata} $\gamma$ (cioè una curva su cui abbiamo fissato un verso di percorrenza).
+    \item Il versore tangente $\vec{t}$ (con $\|\vec{t}\| = 1$), avente verso concorde all'orientamento scelto per la curva.
+\end{itemize}
+
+L'integrale di linea di $2^\circ$ specie del campo vettoriale $\vec{F}$ lungo la curva $\gamma$ è definito come l'integrale di prima specie della sua componente tangenziale:
+$$\int_{\gamma} \vec{F} \cdot \vec{t} \, ds$$
+
+\section{Come si calcola}
+Sia $\vec{r}(t)$ con $t \in [a,b]$ una parametrizzazione regolare di $\gamma$, concorde con l'orientamento della curva. 
+Sappiamo che il versore tangente è dato da:
+$$\vec{t} = \frac{\frac{d\vec{r}}{dt}}{\left\| \frac{d\vec{r}}{dt} \right\|}$$
+e l'elemento d'arco è:
+$$dl = \left\| \frac{d\vec{r}}{dt} \right\| dt$$
+
+Sostituendo nell'integrale otteniamo:
+$$\int_{\gamma} \vec{F} \cdot \vec{t} \, ds = \int_{a}^{b} \vec{F}(t) \cdot \frac{\frac{d\vec{r}}{dt}}{\left\| \frac{d\vec{r}}{dt} \right\|} \left\| \frac{d\vec{r}}{dt} \right\| dt = \int_{a}^{b} \vec{F}(t) \cdot \frac{d\vec{r}}{dt} \, dt$$
+
+Esplicitando il prodotto scalare in termini di componenti, l'integrale si calcola come:
+$$\int_{a}^{b} \left( F_1(x_1(t), \dots, x_n(t))\frac{dx_1}{dt} + \dots + F_n(x_1(t), \dots, x_n(t))\frac{dx_n}{dt} \right) dt$$
+
+Questa espressione viene spesso scritta in modo compatto utilizzando la notazione delle \textbf{forme differenziali}:
+$$\int_{\gamma} F_1 \, dx_1 + \dots + F_n \, dx_n \, dt$$
+

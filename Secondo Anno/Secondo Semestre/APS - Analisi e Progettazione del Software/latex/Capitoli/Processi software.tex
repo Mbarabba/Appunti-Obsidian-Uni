@@ -1,0 +1,177 @@
+\chapter{Modello a cascata}
+\section{Cosa è?}
+Il modello a cascata è un classico modello di processo per lo sviluppo del software che si base su un approccio rigorosamente guidato dal piano
+
+La sua caratteristica fondamentale è la suddivisione del progetto in fasi separate e distinte.
+
+La regola di base di questo modello impone che una fase debba essere completamente terminata prima di poter passare a quella successiva
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.75]{Immagini/Schermata_20260622_003055.png}
+\end{figure}
+
+\section{Fasi del modello a cascata}
+\begin{enumerate}
+    \item \textbf{Analisi e definizione dei requisiti}
+    \item \textbf{Progettazione del sistema e del software}
+    \item \textbf{Implementazione e test delle unità}
+    \item \textbf{Integrazione e test di sistema}
+    \item \textbf{Funzionamento e manutenzio}
+\end{enumerate}
+
+\section{Vantaggi}
+\begin{itemize}
+    \item \textbf{Coordinamento di grandi progetti}\\ La natura rigidamente pianificata di questo modello aiuta a coordinare il lavoro in modo efficiente nei progetti di ingegneria dei sistemi di grandissime dimensioni
+    \item \textbf{Sviluppo distribuito}\\ Si rivelo particolarmente utile quando il sistema deve essere sviluppato in diversi siti o sedi geografiche
+\end{itemize}
+
+\section{Svantaggi}
+\begin{itemize}
+    \item \textbf{Difficoltà nell'accogliere i cambiamenti}\\ Il principale svantaggio è l'incapacità di gestire modifiche ai requisiti una volta che il processo di sviluppo è stato avviato
+    \item \textbf{Eccessiva inflessibilità}\\ Il modello impone, in linea di principio, che una fase debba essere completamente terminata prima di passare a quella successiva.
+
+    Queste rigida suddivisione rende estremamente difficile rispondere alle mutevoli esigenze dei clienti in corso d'opera
+    
+    \item \textbf{Soggetto a frequenti fallimenti}\\ Affinchè il modello a cascata abbia successo, i requisiti devono essere perfettamente compresi fin dall'inizio e subire modifiche molto limitate.
+
+    Poiché pochi sistemi aziendali godono di requisiti realmente stabili, l'applicazione di questo processo porta frequentemente al fallimento del progetto.
+\end{itemize}
+
+\chapter{UP - Unified Process}
+\section{Cosa è?}
+L'UP è un processo iterativo molto diffuso, concepito specificamente per lo sviluppo di software orientato agli oggetti.
+
+È un framework estremamente flessibile e aperto, che incoraggia l'integrazione di pratiche proveniente da altri metodi agili
+
+\section{Caratteristiche fondamentali}
+\begin{itemize}
+    \item \textbf{Pilotato dai casi d'uso (e requisiti)}\\ Lo sviluppo è guidato dalle reali necessità degli utenti, coinvolgendoli continuamente per ottenere valutazioni e feedback
+    \item \textbf{Guidato dai fattori di rischio}\\ Affronta le problematiche a maggior rischio e a più alto valore aziendale fin dalle primimisse iterazioni
+    \item \textbf{Incentrato sull'architettura}\\ Le fasi iniziali mirarono a costruire, testare e stabilizzare un nucleo architettonico coeso prima di sviluppare il resto del sistema 
+\end{itemize}
+
+\section{Fasi del processo}
+Un progetto UP organizza il proprio ciclo di vita suddividendo il tempo in quattro macro-fasi sequenziali:
+\begin{enumerate}
+    \item \textbf{Ideazione (Inception)}\\ È l'avvio del progetto.\\ In questa fase si definisce una visione approssimativa, si valuta la portata e si abbozzano le prime stime di costi e tempi
+    \item \textbf{Elaborazione (Elaboration)}\\ Si realizza il nucleo dell'architettura in modo iterativo, si rivolvono i rischi maggiori, si identifica la maggior parte dei requisiti e si formulano stime molto più realistiche e precise
+    \item \textbf{Costruzione (Construction)}\\ Si sviluppano in modo iterativo gli elementi rimanenti del software, che solitamente sono più facili e a minor rischio, preparando il sistema per la capacità operative iniziali
+    \item \textbf{Transizione (Transition)}\\ È la fase di completamento, che include il beta testing e si conclude con la consegna del prodotto finale ai clienti
+\end{enumerate}
+
+\section{Ciclo di vita}
+Nello sviluppo UP, il lavoro procede in modo iterativo, incrementale ed evolutivo. Ogni iterazione è considerata come un "mini-progetto" che include una porzione di tutte le attività fondamentali: pianificazione, analisi, progettazione, costruzione, integrazione e test. Al termine di ogni iterazione viene prodotta una release, ovvero un sottoinsieme stabile ed eseguibile del prodotto finale, che costituisce un passo in avanti (incremento) verso il rilascio definitivo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{Immagini/Schermata_20260622_015533.png}
+\end{figure}
+
+\section{Vantaggi}
+\begin{itemize}
+    \item \textbf{Flessibilità e personalizzazione}\\ UP è un framework molto flessibile e aperto, che permette di applicare lo scenario "UP Agile" rendendo del tutto opzionali la gran parte dei documenti e modelli e incoraggiano l'integrazione di pratiche da altri metodi agili
+    \item \textbf{Riduzione precoce dei rischi}\\ Il processo affronta le problematiche a maggior rischio e a più alto valore fin dalle primissime iterazioni, costruendo rapidamente un nucleo architettonico coeso
+    \item \textbf{Qualità e feedback continui}\\ Il coinvolgimento costante dell'utente, i test frequenti e i feedback continui a una minore probabilità di fallimento del progetto, a una migliore produttività e a una riduzione dei difetti del software
+    \item \textbf{Progresso visibile}\\ A differenza dei metodi tradizionali, garantisce un progresso visibile fin dall'inizio e aiuta a gestire la complessità del sistema permettendogli di convergere gradualmente verso i requisiti corretti
+\end{itemize}
+
+\section{Svantaggi}
+\begin{itemize}
+    \item \textbf{Scarsa visibilità per il management}\\ Il processo risulta meno "visibile" dal punto di vista burocratico.\\ I manager spesso hanno bisogno di documenti regolari per misurare i progressi, ma sviluppano il software cosi' rapidamente non è conveniente produrre documenti formali per ogni versione
+    \item \textbf{Degrado della struttura del software}\\ Poichè il sistema cresce in modo incrementale con continue aggiunte, la sua struttura tende a degradarsi nel tempo.\\ Se non si dedica regolarmente tempo e denaro al refactoring per migliorare il codice, incorporare ulteriori modifiche diventerà sempre più difficile e costoso
+    \item \textbf{Rischi di cattiva interpretazione}\\ Pur essendo un processo agile, UP viene spesso frainteso.\\ Se il team cerca di pianificare tutto in anticipo, definire tutti i requisiti prima di programmare, o pretende di scrivere tonnellate di documenti, il progetto rischia di fallire perché viene invaso da un approccio rigido non adatto alla natura iterativa del framework.
+\end{itemize}
+
+\chapter{Agile}
+\section{Cosa è?}
+Lo sviluppo AGILE è una forma specifica di sviluppo iterativo ed evolutivo progettata per incoraggiare \textbf{l'agilità}, ovvero la \uline{capacità di rispondere in modo rapido e flessibile ai cambiamenti}
+
+A differenza dei processi tradizionali orientati al piano, nei processi agili la pianificazione è incrementale.
+
+\section{Caratteristiche}
+\begin{itemize}
+    \item \textbf{Iterazioni brevi e a tempo fisso (timeboxed)}\\ Il lavoro procede in cicli di sviluppo ristretti (spesso da 2 a 4 o 6 settimane) le cui scadenze non possono essere modificate
+    \item \textbf{Consegne incrementali}\\ L'obiettivo è rilasciare frequentemente del software funzionante che fornisca valore tangibile fin da subito
+    \item \textbf{Pratiche ingegneristiche disciplinate}\\ L'agilità è sostenuta da pratiche tecniche specifiche come il Test-Driven Development (TDD) e il continuo refactoring per mantenere il codice pulito, affiancate spesso dalla programmazione a coppie
+\end{itemize}
+
+\section{Manifesto}
+La filosofia agile è stata formalizzata nel 2001 da un gruppo di esperti che ha redatto il Manifesto per lo Sviluppo Agile di Software. Questo documento stabilisce quattro priorità di base:
+\begin{itemize}
+    \item \textbf{Gli individui e le interazioni} contano più che i processi e gli strumenti
+    \item \textbf{Il software funzionante} conta più che la documentazione esaustiva
+    \item \textbf{La collaborazione con il cliente} conta più che la negoziazione dei contratti
+    \item \textbf{Rispondere al cambiamento} conta più che seguire un piano
+\end{itemize}
+
+\section{Vantaggi}
+\begin{itemize}
+    \item \textbf{Risposta flessibile ai cambiamenti}
+    \item \textbf{Software funzionante e progressi visibili}
+    \item \textbf{Feedback continuo e collaborazione}
+    \item \textbf{Riduzione precoce dei rischi}
+\end{itemize}
+
+\section{Svantaggi}
+\begin{itemize}
+    \item \textbf{Scarsa visibilità per i manager}\\ Il manifesto AGILE preferisce il software funzionante rispetto alla documentazione esaustiva.\\ Sviluppando e modificando il sistema in modo così rapido, non è conveniente produrre lunghi documenti per ogni versione.\\ Questo rende il processo "meno visibile" dal punto di vista burocratico per i manager, che spesso dipendono da quei documenti per misurare l'avanzamento
+    \item \textbf{Degrado fisiologico della struttura del sistema}\\ Poichè il sistema non viene progettato interamente in anticipo ma cresce in modo incrementale con aggiunte continue, la sua struttura architettonica tende inesorabilmente a corrompersi nel tempo
+    \item \textbf{Dipendenza rigorosa dal refactoring}\\ Per contrastare il degrado dell'architettura e mantenere il software flessibile, i team agili sono obbligati a investire costantemente tempo e denaro in pratiche ingegneristiche disciplinate come il refactoring del codice. Se questa pratica viene trascurata, incorporare le future modifiche richiederà uno sforzo sempre più grande e costoso.
+\end{itemize}
+
+\chapter{SCRUM}
+\section{Cosa è?}
+Scrum è un metodo agile progettato per sviluppare e rilasciare prodotti software che offrano il più alto valore possibile per i clienti, nel minor tempo possibile.
+
+A differenza di altre metodologie focalizzate sugli aspetti puramente tecnici, Scrum si concentra in modo particolare sull'organizzazione del lavoro e sulla gestione dei progetti, motivo per cui può essere facilmente combinato con altri metodi.
+\section{Caratteristiche}
+\begin{itemize}
+    \item Approccio Agile
+    \item Focus gestionale
+    \item Ciclo di lavoro (Sprint)
+    \item Allineamento quotidiano
+    \item Suddivisone dei ruoli
+    \item Gestione dei requisiti (Backlog)
+    \item Monitoraggio
+\end{itemize}
+\subsection{Concetti Chiave}
+\begin{itemize}
+    \item \textbf{Incremento potenzialmente rilasciabile}\\ È il pezzo di software (incremento) fornito al termine di ogni singolo Sprint.\\ La regola di base impone che questo software sia in uno stato "finito" e teoricamente pronto per la consegna al cliente, senza bisogno di ulteriore lavoro o test per essere integrato nel prodotto finale (anche se, nella pratica, ciò non è sempre facilmente realizzabile).
+    \item \textbf{Velocity}\\ È una stima della quantità di lavoro che il team è in grado di completare all'interno di un singolo Sprint.\\ Comprendere la propria velocity aiuta la squadra a pianificare meglio le iterazioni future e fornisce un metro di misura per valutare il miglioramento delle prestazioni nel tempo.
+\end{itemize}
+\section{Ruoli principali}
+\begin{itemize}
+    \item \textbf{Scrum Master}\\ Il responsabile che si assicura che il processo Scrum venga seguito correttamente, guidando il team nel suo utilizzo efficace.\\ Fa da interfaccia con il resto dell'azienda e ha il compito fondamentale di proteggere il team di sviluppo da interferenze esterne.\\ Gli sviluppatori agili sottolineano che questa figura non deve essere considerata un project manager tradizionale.
+    \item \textbf{Product Owner}\\ È l'individuo (o un piccolo gruppo) incaricato di identificare i requisiti e le caratteristiche del prodotto.\\ Il suo compito è dettare le priorità di sviluppo e revisionare continuamente la lista delle cose da fare (Product Backlog) per garantire che il progetto soddisfi sempre le esigenze di business critiche.\\ Può essere un cliente, un product manager o un rappresentante degli stakeholder.
+    \item \textbf{Team di sviluppo}\\ È un gruppo auto-organizzato di sviluppatori software, che idealmente non dovrebbe superare le 7 persone. \\ Sono i responsabili materiali della creazione del software e della stesura dei documenti essenziali del progetto.
+\end{itemize}
+\section{Ciclo di lavoro}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.8]{Immagini/Schermata_20260622_035212.png}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Sprint}\\ È l'iterazione base dello sviluppo.
+    Il lavoro viene diviso in Sprint che hanno una durata fissa, solitamente compresa tra le 2 e le 4 settimane
+    \item \textbf{Scrum}\\ È un incontro giornaliero, idealmente faccia a faccia e molto breve, in cui l'intero team si riunisce per esaminare i progressi fatti e definire le proprità del lavoro da svolger in quella specifica giornata
+\end{itemize}
+\section{Artefatti}
+\begin{itemize}
+    \item \textbf{Product Backlog}\\ È l'elenco completo di tutti gli elementi "da fare" che il team dovrà affrontare nel corso del progetto. Può contenere requisiti, storie utente, caratteristiche del software o compiti tecnici (come definire l'architettura o scrivere la documentazione).
+    \item \textbf{Sprint Backlog}\\ È il sottoinsieme di compiti e funzionalità estratti dal Product Backlog che il team decide di affrontare e completare nello specifico Sprint in corso.
+\end{itemize}
+\section{Vantaggi}
+\begin{itemize}
+    \item \textbf{Valore rapido per il cliente}\\ L'intero metodo è strutturato per massimizzare il valore rilasciato al cliente nel più breve lasso di tempo possibile.
+    \item \textbf{Altamente compativile} \\ Grazie al suo focus organizzativo piuttosto che puramente tecnico, può essere facilmente affiancato e combinato con altri metodi ingegneristici o iterativi.
+    \item \textbf{Misurabilità delle performance}
+    \item \textbf{Progressi e feedback continui}
+\end{itemize}
+\section{Svantaggi}
+\begin{itemize}
+    \item \textbf{Ideale vs Pratica nel rilascio}\\ La regola teorica di Scrum prevede che al termine di ogni Sprint si produca un software in uno stato finito, senza bisogno di ulteriore lavoro o test per essere integrato (Incremento potenzialmente rilasciabile);\\ tuttavia, nella pratica, questo livello di completezza non è sempre facilmente realizzabile.
+    \item \textbf{Equivoci sui ruoli}\\ Per quanto gli esperti Scrum sottolineino che lo ScrumMaster non debba essere considerato un classico "project manager", per il resto dell'azienda può non essere sempre facile cogliere questa differenza, creando confusione a livello organizzativo.
+    \item \textbf{Scarsa visibilità burocratica (tipico dell'Agile)}\\ Come tutti i metodi iterativi veloci, non produce corposi documenti per ogni singola versione rilasciata.\\ Questo rende l'avanzamento "invisibile" per i manager tradizionali che fanno affidamento sulla documentazione cartacea.
+    \item \textbf{Degrado dell'architettura}\\ Poiché il sistema si sviluppa tramite continui incrementi e accoglie requisiti mutevoli, la sua struttura rischia di corrompersi se non si investono tempo e denaro nel refactoring del codice. \\Senza questa pratica, ogni modifica futura diventerà sempre più lenta e costosa.
+\end{itemize}

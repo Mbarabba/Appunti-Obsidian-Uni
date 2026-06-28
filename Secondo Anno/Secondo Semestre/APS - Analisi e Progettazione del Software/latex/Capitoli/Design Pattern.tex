@@ -1,0 +1,252 @@
+\chapter{Design Pattern GoF}
+\section{Cosa sono?}
+I design pattern GoF (Gang of Four) sono \uline{soluzioni progettuali comini a problemi di progettazione ricorrenti} nello sviluppo di software a oggetti.
+
+In termini pratici, rappresentano un \uline{insieme specifico di oggetti e classi a cui vengono date delle responsabilità e che collaborano tra loro per risolvere un determinato problema.}
+\section{Confronto con i pattern GRASP}
+I pattern GRASP e i pattern GoF sono due concetti complementari ma con un livello di astrazione diverso.
+\subsection{Principi contro Strutture}
+\begin{itemize}
+    \item I \textbf{pattern GRASP} sono principi di base che guidano il progettista nell'\uline{assegnare le responsabilità}.
+    \item I \textbf{pattern GoF} sono invece \uline{soluzioni strutturate specifiche a problemi ricorrenti}
+\end{itemize}
+
+\newpage
+\section{Adapter}
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Nome del pattern:} & \textbf{Adapter}\\ \midrule
+\textbf{Problema:}         &  Come gestire interfacce incompatibili, o fornire un'interfaccia stabile a componenti simili ma con interfacce diverse? \\ \midrule
+\textbf{Soluzione:}        &  Converti l'interfaccia originale di un componente in un'altra interfaccia, attraverso un oggetto adattatore intermedio \\ 
+\bottomrule
+\end{tabularx}
+\subsection{Problema}
+Si verifica quando un oggetto client deve fruire di servizi da un oggetto server, ma l'interfaccia offerta dal server è incompatibile con quella attesa dal client e non può essere modificata
+\subsection{Soluzione}
+Interporre un oggetto intermedio che traduce le richieste del client nel formato specifico richiesto dal componente esterno
+\subsection{Benefici}
+\begin{itemize}
+    \item Sostiene la Protected Variations rispetto ai cambiamenti o alle differenze delle interfacce esterne
+    \item Aggiugne un utile livello di indirezione alle API variabili
+\end{itemize}
+\subsection{Controindicazioni}
+\begin{itemize}
+    \item Non specificate nei documenti forniti
+\end{itemize}
+\subsection{Implementazione}
+\begin{enumerate}
+    \item Definire un'interfaccia generica (il Target) che il client si aspetta di utilizzare
+    \item Crea una classe specifica (Adapter) che implementi questa interfaccia Target
+    \item All'interno del metodo implementato dalla classe Adapter, richiamare la logica invocando il metodo specifico della classe esterna Adaptee incompatibile
+\end{enumerate}
+\subsection{Dettagli}
+In termini di pattern GRASP, l'Adapter è una specie di Pure Fabrication e Indirection che utilizza il Polymorphism
+
+\newpage
+\section{Factory}
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Nome del pattern:} & \textbf{Factory}\\ \midrule
+\textbf{Problema:}         &  Chi deve essere responsabile della creazione di oggetti quando ci sono delle considerazioni speciali, come una logica di creaione complessa, quando si desidera separare le responsabiltà per una coesione migliore? \\ \midrule
+\textbf{Soluzione:}        & Crea un oggetto Pure Fabrication chiamato Factory che gestisce la creazione \\ 
+\bottomrule
+\end{tabularx}
+\subsection{Problema}
+Assegnare la responsabilità di creare oggetti complessi (come gli adattatori verso l'esterno) direttamente agli oggetti di dominio diminuisce la coesione, mescola la logica applicativa pura con logiche di istanziazione e viola il principio della separazione degli interessi
+\subsection{Soluzione}
+Delegare la logica di creazione a un oggetto di supporto altamente coeso (Pure Fabrication) chiamato Factory
+\subsection{Benefici}
+\begin{itemize}
+    \item Separa le responsabilità delle creazioni complesse collocandole in oggetti di supporto coesi
+    \item Nasconde al resto del sistema logiche di creazione potenzialmente complesse
+    \item Consente l'introduzione di strategie avanzate per la gestione delle risorse, come il caching o il riciclaggio degli oggetti
+\end{itemize}
+\subsection{Implementazione}
+\begin{enumerate}
+    \item Creare una classe artificiale dedicata al ruolo di Factory
+    \item Dichiarare al suo interno i metodi per la creazione, facendo attenzione a restituire sempre oggetti tipizzati come interfacce anzichè come classi concrete, in modo che il client non conosca l'implementazione esatta
+    \item All'interno del metodo, implementare l'istanziazione.\\
+    Si può utilizzare un approccio basato sulla riflessione o "data-driven": leggere da un file di configurazione il nome esatto della classa da usare e istanziarla dinamicamente
+\end{enumerate}
+\subsection{Dettagli}
+L'approccio data-driven garantisce Protected Variations riguardo la scelta degli adattatori da usare. 
+
+Tipicamente, l'oggetto Factory viene reso accessibile tramite il pattern Singleton.
+
+\newpage
+\section{Singleton}
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Nome del pattern:} & \textbf{Singleton}\\ \midrule
+\textbf{Problema:}         &  È consentita (o richiesta) esattamente una sola istanza di una classe.
+
+Gli altri oggetti hanno bisogno di un punto di accesso globale e singolo a questo oggetto.
+\\  \midrule
+\textbf{Soluzione:}        &  Definisci un metodo statico (di classe) della classe che restituisce l'oggeto singleton \\ 
+\bottomrule
+\end{tabularx}
+\subsection{Problema}
+Sorge la necessità di determinare l'esistenza di una sola istanza di una determinata classe, e che tale istanza sia accessibile globalmente da più punti del codice 
+\subsection{Soluzione}
+Fornire alla classe un metodo statico responsabile di creare e restituire sempre l'unica istanza consentita
+\subsection{Benefici}
+\begin{itemize}
+    \item Definisce un punto di accesso globale unificato a un singolo oggetto
+    \item Consente l'inizializzazione "pigra" dell'oggetto solo al primo effettivo utilizzo
+    \item È una soluzione architetturalmente preferibile rispetto all'uso di mere variabili globali
+\end{itemize}
+\subsection{Controindicazioni}
+\begin{itemize}
+    \item Definendo oggetti con visibilità globale, un suo abuso come conseguenza un marcato aumento dell'accoppiamento complessivo del sistema
+    \item Può risultare inefficace in applicazioni distribuite, poichè ciascuna VM potrebbe istanziare una propriva diversa versione del Singleton
+\end{itemize}
+\subsection{Implementazione}
+\begin{enumerate}
+    \item All'interno della classe, dichiara un attributo statico privato deputato a contenere l'istanza
+    \item Creare un costruttore privare per impedire l'utilizzo di \texttt{new} da parti di classe esterne
+    \item Fornire un metodo pubblico e statico. \\
+    Tale metodo verificherà se l'istanza privata è nulla:
+    \begin{itemize}
+        \item In caso positivo la creerà
+        \item Altrimenti, si limitera a restituirla
+    \end{itemize}
+\end{enumerate}
+\subsection{Dettagli}
+ei diagrammi UML, il pattern Singleton può essere segnalato inserendo opzionalmente il numero 1 nell'angolo in alto a destra della classe
+
+\newpage
+\section{Strategy}
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Nome del pattern:} & \textbf{Strategy}\\ \midrule
+\textbf{Problema:}         & Come progettare per gestire un insieme di algoritmi o politiche variabili ma correlate?
+
+Come progettare per consentire di modificare questi algoritmi?\\ \midrule
+\textbf{Soluzione:}        & Definisci ciasun algoritmo/politica/strategia in una classe separata, con un'interfaccia comune \\ 
+\bottomrule
+\end{tabularx}
+\subsection{Problema}
+Si necessita di gestire logiche complesse soggette a costanti variazioni nel tempo
+\subsection{Soluzione}
+Raggruppare gli algoritmi correlati definendo ciascuno di essi all'interno della proprio classe separata e facendogli implementare un'interfaccia unificata
+\subsection{Benefici}
+\begin{itemize}
+    \item Permette di avere algoritmi "inseribili" senza modificare il client
+    \item Offre solidissime Protected Variations in merito al variare delle politiche di calcolo
+\end{itemize}
+\subsection{Implementazione}
+\begin{enumerate}
+    \item Definire un'interfaccia per la politica che dichiari il metodo di calcolo atteso
+    \item Sviluppare classi concrete autonome per singola politica dotate delle specifiche formule di calcolo all'interno del metodo
+    \item L'oggetto client "contesto" deve dichiarare un attributo in grado di mantenere il riferimento all'interfaccia stategica in uso
+    \item Il client delegherà l'operazione chiamando polimorficamente il metodo della strategia a cui passerà i dati necessari o se stesso
+\end{enumerate}
+\subsection{Dettagli}
+Si basa fondamentalmente sul Polymorphism. Frequentemente le strategie vengono generate ricorrendo all'utilizzo di oggetti Factory.
+
+\newpage
+\section{Composite}
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Nome del pattern:} & \textbf{Composite}\\ \midrule
+\textbf{Problema:}         & Come trattare un gruppo o una struttura composita di oggetti dello stesso tipo nello stesso modo di un oggetto non composto? \\ \midrule
+\textbf{Soluzione:}        & Definisci le classi per gli oggetti composti e atomici in modo che implementino la stessa interfaccia \\ 
+\bottomrule
+\end{tabularx}
+\subsection{Problema}
+Sorge quando occorre gestire situazioni che sono simultanee, multiple e conflittuali.
+
+Come fare affinchè il client chiami questi componenti compositi credendo di interfacciarsi con uno singolo?
+\subsection{Soluzione}
+Progettare le classi composte e le classi foglia atomiche cosicchè entrambe onorino la medesima interfaccia
+\subsection{Benefici}
+\begin{itemize}
+    \item Attraverso il Polymorphism, fornisce preziose Protected Variations lato client: il codice chiamante non subisce ripercussioni se sta trattando singole regole atomiche o ampi alberi compositi
+\end{itemize}
+\subsection{Implementazione}
+\begin{enumerate}
+    \item Avere un interfaccia comune che rappresenti l'operazione
+    \item Definire una superclasse composta astratta
+    \item Fornire alla classe composta una lista intera in cui immagazzinare i propri elementi "figli"
+    \item Aggiungere metodi per manipolare la lista
+    \item Nelle sottoclassi concrete del Composite, codificare il metodo operativo affinché utilizzi un ciclo iterativo (loop) per interrogare tutte le strategie registrate nella lista, delegare a esse il calcolo e alla fine sintetizzarne il risultato
+\end{enumerate}
+\subsection{Dettagli}
+È utilizzato comunemente in congiunzione con i pattern Strategy e Command
+
+\newpage
+\section{Facade}
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Nome del pattern:} & \textbf{Facade}\\ \midrule
+\textbf{Problema:}         & È richiesta un'interfaccia comune e unificata per un insieme disparato di implementazioni.
+
+Accedervi crea accoppiamento indesiderato o espone ai mutamenti del sottosistema\\ \midrule
+\textbf{Soluzione:}        & Definisci un punto di contatto singolo con il sottosistema, ovvero un oggetto facade che copre il sottosistema ed è responsabile della collaborazione \\ 
+\bottomrule
+\end{tabularx}
+\subsection{Problema}
+Interfacciarsi direttamente con un sottosistema popolato da moltissime classi disparate comporta un eccessivo e nocivo accoppiamento per l'oggetto chiamante, specialmente se l'implementazione di quel sottosistema è destinata a cambiare
+\subsection{Soluzione}
+Creare un oggetto "front end" che rappresenti l'unico e il solo punto di entrata unificato a copertura dall'intero sottosistema
+\subsection{Benefici}
+\begin{itemize}
+    \item Aiuta a sostenere il basso accoppiamento aggiungendo un fondamentale oggetto intermedio
+    \item Offre potenti Protected Variations isolando il resto del progetto dalle variazioni interne dell'implementazione del sottosistema
+\end{itemize}
+\subsection{Implementazione}
+\begin{enumerate}
+    \item Includere all'interno del package del dominio/sottosistema una classe pubblica che agisca da interfaccia d'accesso
+    \item Definire nella classe Facade i metodi per esaudire le richieste provenienti del client
+    \item Programmare il corpo dei metodi in modo tale che sia il Facade a instradare, segretamente, la logica verso le implementazioni interne delle altre classi del sottosistema
+\end{enumerate}
+\subsection{Dettagli}
+Il tipico facade controller del GRASP è esattamente un tipo di Facade.
+
+Normalmente il Facade è progettato per essere acceduto attraverso il pattern Singleton.
+
+\newpage
+\section{Observer (Publish-Subscribe)}
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Nome del pattern:} & \textbf{Observer (Publish-Subscribe)}\\ \midrule
+\textbf{Problema:}         & Diversi subscriber vogliono reagire in un loro modo proprio ai cambiamenti di un publisher.
+
+Il publisher vuole mantenere un accoppiamento basso\\ \midrule
+\textbf{Soluzione:}        & 1. Definisci un'interfaccia subscriber o listener.
+
+2. Gli oggetti la implementano.
+
+3. Il publisher li registra dinamicamente e li avvisa degli eventi\\ 
+\bottomrule
+\end{tabularx}
+\subsection{Problema}
+Oggetti eterogenei necessitano di aggiornarsi se muta lo stato in un oggetto sorgente.
+
+Tuttavia, per la qualità architetturale, il publisher non deve conoscere direttamente le classi specifiche di chi riceverà l'aggiornamento per evitare un rigido accoppiamento
+\subsection{Soluzione}
+Creare un meccanismo basato su una specifica interfaccia che i subscriber devono implementare.
+
+Il publisher mantiene solo una lista generica di iscritti da notificare in blocco quando un evento si manifesta
+\subsection{Benefici}
+\begin{itemize}
+    \item Assicura un mdoo per far comunicare gli oggetti con un accoppiamento estremamente debole
+    \item Basandosi sul polimorfismo, favorisce le Protected Variations tutelando l'editore dal dover sapere chi siano le implementazioni che ascoltano il suo evento.
+\end{itemize}
+\subsection{Implementazione}
+\begin{enumerate}
+    \item Progettare un'interfaccia d'ascolto per i subscriber che contenga il metodo dell'evento
+    \item Fare implementare questa interfaccia alle classi interessate a farsi notificare
+    \item Nel Publisher, creare un contenitore per raccogliere le iscrizioni, come una lista o un array di listener
+    \item Munire il Publisher dei metodi per gestire gli abbonamenti dinamicamente
+    \item Quando l'evento ha luogo nel Publisher, richiamare un metodo interno (publishPropertyEvent()) che itera (loop) su tutti i listener registrati, chiamando polimorficamente su ognuno il metodo della loro interfaccia e fornendogli i dati.
+\end{enumerate}
+\subsection{Dettagli}
+Oltre a essere il perno della comunicazione tra logica (Modello) e Interfaccia Utente (UI), è utilissimo per processi in background (come Beeper, Timer e WatchDog)

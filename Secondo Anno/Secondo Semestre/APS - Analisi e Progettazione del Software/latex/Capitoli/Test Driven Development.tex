@@ -1,0 +1,46 @@
+\chapter{TDD - Test Driven Development}
+\section{Definizione}
+È una pratica che \uline{prevede di scrivere il test unitario prima del codice di produzione}.
+
+Il programmatore scrive il test immaginando che \textbf{l'interfaccia esista già}, e solo successivamente scrive il codice per farlo passare.
+
+\section{Cosa è un test unitario?}
+Un test unitario è un test che si concentra sulla verifica di singole classi e metodi all'interno del codice.
+
+\subsection{Schema di test}
+\begin{enumerate}
+    \item \textbf{Preparazione:}\\ Si crea l'oggetto da verificare, chiamato anche fixture
+    \item \textbf{Esecuzione:}\\ Si eseguono specifiche azioni sulla fixture per attivare le operazioni che si desidera testare
+    \item \textbf{Verifica:}\\ Si controlla che i risultati ottenuti dal codice corrispondano ai risultati previsti
+    \item \textbf{Rilascio:}\\ Una fase opzionale in cui si ripuliscono o si rilasciono gli oggetti e le risorse che sono state utilizzate durante il test
+\end{enumerate}
+
+\subsection{Tipi di test}
+\begin{itemize}
+    \item Test di unità
+    \item Test di integrazione
+    \item Test di sistema
+    \item Test di accettazione
+\end{itemize}
+
+\section{Vantaggi}
+\begin{itemize}
+    \item \textbf{I test vengono effettivamente scritti:}\\ Obbligando a scrivere il test prima del codice, si ha la garanzia che i test non vengano tralasciati
+    \item \textbf{Maggiore coerenza:}\\ La soddisfazione del programmatore nel far passare i test porta a una scrittura dei test più coerente e disciplinata
+    \item \textbf{Chiarezza progettuale:}\\ Scrivere il test immaginando l'uso dell'oggetto aiuta a chiarire i dettagli dell'interfaccia e del comportamento atteso prima ancora di implementarli
+    \item \textbf{Verifica continua:}\\ Si ottiene un sistema di verifica automatica, che è costantemente ripetibile e dimostrabile in qualsiasi momento
+    \item \textbf{Fiducia nel cambiamento:}\\ La presenza di test automatici infonde fiduca nel programmatore quando è necessario modificare o fare refactoring del codice sapendo che eventuali errori verrano subito rilevati
+\end{itemize}
+
+\section{Svantaggi}
+\begin{itemize}
+    \item \textbf{Complessità di applicazione}
+    \item \textbf{Curva di apprendimento ripida}
+    \item \textbf{Maggiore tempo di sviluppo iniziale}
+    \item \textbf{Aumento del codice da mantenere}
+\end{itemize}
+
+\section{Progettazione degli input}
+Per testare in modo efficiente, gli input vanno raggruppati in "partizioni di equivalenza" (insiemi di dati trattati allo stesso modo dal codice). 
+
+È fondamentale testare sia input validi che input deliberatamente sbagliati, prestando particolare attenzione ai valori ai limiti (o di frontiera), forzando errori o testando valori critici come puntatori nulli e zeri.

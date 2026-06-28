@@ -1,0 +1,124 @@
+\chapter{Refactoring}
+\section{Definizione}
+È un \textbf{metodo strutturato} e disciplinato per \uline{riscrivere o ristrutturare del codice esistente senza modificarne il comportamente esterno.}
+
+Si tratta di un \textbf{processo iterativo} che procede applicando piccoli passi di trasformazione, costantemente supportati dalla ripetizione dei test dopo ciascuna modifica per assicurarsi di non aver "rotto" nulla.
+
+\section{Obiettivi e Vantaggi}
+L'utilità principale del refactoring è il \uline{miglioramento continuo del codice} e la preparazione del sistema a futuri cambiamenti.
+
+Tra le attività e gli scopi principali ci sono:
+\begin{itemize}
+    \item Rimuovere il codice duplicato
+    \item Migliorare la chiarezza e la leggibilità generale
+    \item Abbreviare metodi troppo lunghi
+\end{itemize}
+
+\section{Quando usarlo?}
+\begin{itemize}
+    \item Seguendo la "Regola del 3"
+    \begin{enumerate}
+        \item \textbf{La prima volta} che scrivi una porzione di codice, limitati a scriverla per far funzionare la logica
+        \item \textbf{La seconda volta} che hai bisogno di fare la stessa cosa, potresti semplicemente copiare e incollare il codice
+        \item \textbf{La terza volta} che ti trovi a duplicare o implementare di nuovo quello stesso pezzo di codice, scatta la regola: devi fermarti e applicare il refactoring
+    \end{enumerate}
+    \item Si aggiunge una nuova funzionalità
+    \item Si corregge un bug
+    \item Durante la revisione del codice
+\end{itemize}
+
+\section{Procedura}
+Il refactoring si esegue seguendo un ciclo preciso e ripetitivo:
+\begin{enumerate}
+    \item \textbf{Assicurarsi che i test passino}, prima di toccare il codice, tutto deve funzionare
+    \item \textbf{Trovare un code smell}
+    \item \textbf{Determinare come migliorare} questo codice
+    \item \textbf{Effettuare le migliorie}
+    \item \textbf{Eseguire nuovamente i test}
+    \item \textbf{Ripetere il ciclo}
+\end{enumerate}
+
+\section{Cosa è un Code Smell?}
+Un Code Smell è un sintomo o un indicatore presente nel codice sorgente che suggerisce la necessità di applicare una tecnica di refactoring per migliorarne la progettazione.
+
+Non si tratta di un bug o di un errore che impedisce l'esecuzione del programma, ma piuttosto di un difetto strutturale o di design che rende il software difficile da capire, da modificare e da riutilizzare nel tempo
+
+\section{Tabella Code Smell}
+{\small
+\begin{xltabular}{\textwidth}{p{2.5cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Nome} & \textbf{Sintomi} & \textbf{Problema} & \textbf{Soluzione} \\
+\midrule
+\endfirsthead
+
+% Intestazione ripetuta nelle pagine successive
+\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{}}} \\
+\toprule
+\textbf{Nome} & \textbf{Sintomi} & \textbf{Problema} & \textbf{Soluzione} \\
+\midrule
+\endhead
+
+% Piè di pagina alla fine di ogni pagina (tranne l'ultima)
+\midrule
+\multicolumn{4}{r}{{}} \\
+\endfoot
+
+% Piè di pagina per l'ultima pagina della tabella
+\bottomrule
+\endlastfoot
+
+\textbf{Long Method} & 
+Un metodo contiene troppe righe di codice (spesso più di dieci). & 
+I metodi lunghi sono molto difficili da capire, modificare, testare e riutilizzare. & 
+Applicare \emph{Extract Method}. Se ci sono troppe variabili locali, usare \emph{Replace Temp with Query} o \emph{Introduce Parameter Object}. Per i condizionali usare \emph{Decompose Conditional}. \\
+\midrule
+
+\textbf{Duplicated Code} & 
+Lo stesso frammento di codice (o molto simile) appare in più punti del programma. & 
+Se c'è un bug, va corretto in tutte le copie. Aumenta inutilmente la dimensione e la complessità del codice. & 
+Applicare \emph{Extract Method} per isolare il codice duplicato in un unico punto e sostituire i cloni con la chiamata a tale metodo. \\
+\midrule
+
+\textbf{Feature Envy} & 
+Un metodo accede continuamente ai dati di un'altra classe piuttosto che a quelli della propria. & 
+Errore di progettazione: il metodo si trova nella classe sbagliata e viola il principio di incapsulamento. & 
+Usare \emph{Move Method} per spostare l'intero metodo, oppure \emph{Extract Method} per isolare la parte "invidiosa" e spostarla nella classe che possiede i dati. \\
+\midrule
+
+\textbf{Large Class} & 
+Una classe contiene troppi campi, metodi o un numero eccessivo di linee di codice. & 
+Violazione della coesione: la classe sta chiaramente gestendo più di una singola responsabilità. & 
+Separare le responsabilità creando nuove classi mirate tramite \emph{Extract Class} o, se ha senso gerarchicamente, \emph{Extract Subclass}. \\
+\midrule
+
+\textbf{Switch Statement} & 
+Presenza di istruzioni \texttt{switch} o lunghe catene di \texttt{if-else} basate sul tipo di un oggetto. & 
+La stessa struttura condizionale tende a ripetersi nel codice. Se si aggiunge un nuovo tipo, bisogna modificare tutti gli switch. & 
+Sostituire la logica condizionale sfruttando il polimorfismo con \emph{Replace Conditional with Polymorphism}. \\
+\midrule
+
+\textbf{Data Class} & 
+Una classe contiene solo attributi e i rispettivi metodi getter/setter, senza logica. & 
+È un contenitore passivo che spinge le altre classi a soffrire di \emph{Feature Envy}, tipico di una programmazione procedurale e non a oggetti. & 
+Cercare chi utilizza questi dati e migrare quelle funzionalità dentro la Data Class usando \emph{Move Method} o \emph{Extract Method}. \\
+\midrule
+
+\textbf{Long Parameter List} & 
+Un metodo richiede il passaggio di un numero eccessivo di parametri. & 
+Firme dei metodi difficili da leggere e utilizzare, che tendono a cambiare spesso nel tempo. & 
+Raggruppare i parametri correlati in un oggetto tramite \emph{Introduce Parameter Object}, oppure passare l'intero oggetto con \emph{Preserve Whole Object}. \\
+\midrule
+
+\textbf{Shotgun Surgery} & 
+Per completare una singola modifica funzionale, si devono fare tanti piccoli interventi sparsi in molte classi diverse. & 
+Una singola responsabilità logica è stata frammentata e distribuita in modo errato su troppe classi. & 
+Riunire i comportamenti correlati in un'unica classe usando \emph{Move Method} e \emph{Move Field}. Se alcune classi si svuotano, usare \emph{Inline Class}. \\
+\midrule
+
+\textbf{Comment} & 
+Un blocco di codice o un metodo richiede un'enorme quantità di commenti per essere compreso. & 
+Il codice non è auto-esplicativo e risulta scritto male. I commenti servono a compensare la scarsa chiarezza. & 
+Estrarre le parti complesse con \emph{Extract Variable} o \emph{Extract Method}, assegnando nomi chiari (\emph{Rename Method}) che rendano inutile il commento. \\
+
+\end{xltabular}
+}

@@ -1,0 +1,63 @@
+\chapter{Formula di Gauss}
+
+\section{Definizione formula di Gauss (Teorema della Divergenza)}
+
+\[
+\iint_{S} \vec{F} \cdot \vec{n} \, dS = \iiint_{\Omega} \text{div}(\vec{F}) \, dx dy dz
+\]
+
+\begin{itemize}
+    \item $S$ è la frontiera di $\Omega$ orientata verso l'esterno.
+\end{itemize}
+
+\subsection{Domini considerabili}
+
+\begin{itemize}
+    \item \textbf{Regioni di tipo 1:}
+    \[
+    \Omega = \left\{ (x,y,z) \in \mathbb{R}^3 : (x,y) \in D \subset \mathbb{R}^2, \; z_1(x,y) \le z \le z_2(x,y) \right\}
+    \]
+    \item \textbf{Regioni di tipo 2:}
+    \[
+    \Omega = \left\{ (x,y,z) \in \mathbb{R}^3 : (x,z) \in D' \subset \mathbb{R}^2, \; y_1(x,z) \le y \le y_2(x,z) \right\}
+    \]
+    \item \textbf{Regioni di tipo 3:}
+    \[
+    \Omega = \left\{ (x,y,z) \in \mathbb{R}^3 : (y,z) \in D'' \subset \mathbb{R}^2, \; x_1(y,z) \le x \le x_2(y,z) \right\}
+    \] 
+\end{itemize}
+
+\subsection{Definizione dominio semplice}
+Si dice che un dominio è semplice se può essere scomposto in un numero finito di regioni di tipo 1, di tipo 2 e di tipo 3.
+
+\section{Dimostrazione formula di Gauss}
+
+Assumiamo che il dominio $\Omega$ sia simultaneamente di tipo 1, di tipo 2 e di tipo 3. 
+Esempio (sfera):
+\begin{align*}
+(x,y) \in D &: -\sqrt{R^2-x^2-y^2} \le z \le \sqrt{R^2-x^2-y^2} \\
+(x,z) \in D' &: -\sqrt{R^2-x^2-z^2} \le y \le \sqrt{R^2-x^2-z^2} \\
+(y,z) \in D'' &: -\sqrt{R^2-y^2-z^2} \le x \le \sqrt{R^2-y^2-z^2}
+\end{align*}
+
+\begin{gather}
+\intertext{Per dimostrare il teorema devo dimostrare che:}
+\iint_{S} \vec{F} \cdot \vec{n} \, dS = \iiint_{\Omega} \text{div}(\vec{F}) \, dV = \iiint_{\Omega} \text{div}(\vec{F}) \, dx dy dz \\
+\intertext{Possiamo dividere gli integrali nelle tre componenti:}
+\iint_{S} F_1 \vec{e}_1 \cdot \vec{n} \, dS + \iint_{S} F_2 \vec{e}_2 \cdot \vec{n} \, dS + \iint_{S} F_3 \vec{e}_3 \cdot \vec{n} \, dS \notag \\
+= \iiint_{\Omega} (F_1)_x \, dx dy dz + \iiint_{\Omega} (F_2)_y \, dx dy dz + \iiint_{\Omega} (F_3)_z \, dx dy dz \\
+\intertext{Poiché la dimostrazione è analoga per tutte e 3 le uguaglianze, dimostreremo solo la terza componente:}
+\iint_{S} F_3 \vec{e}_3 \cdot \vec{n} \, dS = \iiint_{\Omega} (F_3)_z \, dx dy dz \\
+\intertext{\textbf{Passaggio 1 (Integrale di volume):}}
+\iiint_{\Omega} (F_3)_z \, dx dy dz = \iint_{D} dx dy \int_{z_1(x,y)}^{z_2(x,y)} (F_3)_z \, dz \\
+\intertext{\textbf{Passaggio 2 (Teorema fondamentale del calcolo):}}
+\iint_{D} dx dy \int_{z_1(x,y)}^{z_2(x,y)} (F_3)_z \, dz = \iint_{D} \left[ F_3(x,y,z_2(x,y)) - F_3(x,y,z_1(x,y)) \right] dx dy \\
+\intertext{\textbf{Passaggio 3 (Integrale di superficie):} La superficie $S$ si divide in tre parti $S_1$ (fondo), $S_2$ (tetto) e $S_3$ (lati laterali).}
+\iint_{S} F_3 \vec{e}_3 \cdot \vec{n} \, dS = \iint_{S_1} \dots + \iint_{S_2} \dots + \iint_{S_3} \dots \\
+\intertext{Calcolando i vettori normali (superficie parametrizzata $\vec{\sigma}(x,y)$):}
+\vec{\sigma}_x = \begin{bmatrix} 1 \\ 0 \\ (z)_x \end{bmatrix}, \quad \vec{\sigma}_y = \begin{bmatrix} 0 \\ 1 \\ (z)_y \end{bmatrix} \\
+\vec{\sigma}_x \times \vec{\sigma}_y = \begin{bmatrix} -(z)_x \\ -(z)_y \\ 1 \end{bmatrix} \\
+\intertext{Sulla superficie laterale $S_3$, la normale $\vec{n}$ è ortogonale a $\vec{e}_3$, quindi $\vec{e}_3 \cdot \vec{n} = 0$, portando l'integrale a zero. Sugli altri due pezzi, tenendo conto dell'orientazione uscente:}
+\iint_{S} F_3 \vec{e}_3 \cdot \vec{n} \, dS = -\iint_{D} F_3(x,y,z_1(x,y)) \, dx dy + \iint_{D} F_3(x,y,z_2(x,y)) \, dx dy \\
+\intertext{Il che dimostra l'uguaglianza.}
+\end{gather}
