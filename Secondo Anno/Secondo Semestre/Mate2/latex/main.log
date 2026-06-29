@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.2)  28 JUN 2026 16:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.2)  29 JUN 2026 03:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -718,7 +718,7 @@ Package: ulem 2019/11/18
 ) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count370
-) (./main.aux (./chapters/Integrali di linea 1 specie.aux) (./chapters/Integrali di linea di 2 specie.aux) (./chapters/Campi vettoriali conservativi.aux) (./chapters/Integrali Multipli.aux) (./chapters/Cambio variabile.aux) (./chapters/Integrali di superficie di 1 specie.aux) (./chapters/Integrali di superficie di 2 specie.aux) (./chapters/Formula di Green.aux) (./chapters/Formula di Stokes.aux) (./chapters/Formula di Gauss.aux))
+) (./main.aux (./chapters/Funzioni di più variabili.aux) (./chapters/Integrali di linea 1 specie.aux) (./chapters/Integrali di linea di 2 specie.aux) (./chapters/Campi vettoriali conservativi.aux) (./chapters/Integrali Multipli.aux) (./chapters/Cambio variabile.aux) (./chapters/Integrali di superficie di 1 specie.aux) (./chapters/Integrali di superficie di 2 specie.aux) (./chapters/Formula di Green.aux) (./chapters/Formula di Stokes.aux) (./chapters/Formula di Gauss.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -808,24 +808,104 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2
 
-])
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+ [4]
+\openout2 = `"chapters/Funzioni di più variabili.aux"'.
+
+ (./chapters/Funzioni di più variabili.tex
+Capitolo 1.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 42.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 42.
+
+[5
+
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 55.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 55.
+
+[6] [7] [8]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cos' on input line 178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ln' on input line 196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 196.
+
+[9] [10] [11] [12]
+Overfull \hbox (0.22043pt too wide) in paragraph at lines 334--335
+\T1/cmr/m/n/12 Il pa-ra-me-tro rea-le $\OML/cmm/m/it/12 ^^U$ \T1/cmr/m/n/12 vie-ne chia-ma-to \T1/cmr/bx/n/12 mol-ti-pli-ca-to-re di La-gran-ge\T1/cmr/m/n/12 . Que-sta equa-zio-ne vet-to-ria-le espri- 
+ []
+
+
+Overfull \hbox (29.00305pt too wide) in paragraph at lines 342--343
+\T1/cmr/m/n/12 Nel ca-so di due va-ria-bi-li $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 , la con-di-zio-ne di an-nul-la-men-to del gra-dien-te del-la La-gran-gia-na $\OMS/cmsy/m/n/12 rL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; ^^U\OT1/cmr/m/n/12 ) = 
+ []
+
+[13]) [14]
 \openout2 = `"chapters/Integrali di linea 1 specie.aux"'.
 
  (./chapters/Integrali di linea 1 specie.tex
-Capitolo 1.
+Capitolo 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -858,14 +938,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 24.
 
-) [4
+[15
 
 
-]
+
+
+]) [16]
 \openout2 = `"chapters/Integrali di linea di 2 specie.aux"'.
 
  (./chapters/Integrali di linea di 2 specie.tex
-Capitolo 2.
+Capitolo 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -898,7 +980,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 12.
 
-) [5
+) [17
 
 
 
@@ -907,8 +989,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 \openout2 = `"chapters/Campi vettoriali conservativi.aux"'.
 
  (./chapters/Campi vettoriali conservativi.tex
-Capitolo 3.
-[6
+Capitolo 4.
+[18
 
 
 
@@ -918,7 +1000,7 @@ Overfull \hbox (19.7881pt too wide) in paragraph at lines 57--57
 |[]\T1/cmr/bx/n/17.28 Condizioni ne-ces-sa-rie af-fin-ch� un cam-po vet-to-ria-le sia con-ser-
  []
 
-[7]
+[19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 65.
@@ -935,11 +1017,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 71.
 
-) [8]
+) [20]
 \openout2 = `"chapters/Integrali Multipli.aux"'.
 
  (./chapters/Integrali Multipli.tex
-Capitolo 4.
+Capitolo 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 45.
@@ -972,21 +1054,21 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 56.
 
-[9
+[21
 
 
 
 
-] [10]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 140.
-
+] [22]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 140.
 
-[11]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 140.
+
+[23]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 192.
@@ -995,22 +1077,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 192.
 
-[12]) [13]
+[24]) [25]
 \openout2 = `"chapters/Cambio variabile.aux"'.
 
  (./chapters/Cambio variabile.tex
-Capitolo 5.
+Capitolo 6.
 
 Overfull \hbox (27.34048pt too wide) in paragraph at lines 1--1
 |[]\T1/cmr/bx/n/24.88 Cambiamento di va-ria-bi-li ne-gli in-te-gra-li dop-
  []
 
-[14
+[26
 
 
 
 
-] [15]) [16]
+] [27]) [28]
 \openout2 = `"chapters/Integrali di superficie di 1 specie.aux"'.
 
  (./chapters/Integrali di superficie di 1 specie.tex (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
@@ -1026,33 +1108,8 @@ File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary3d.code.tex
 File: tikzlibrary3d.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-Capitolo 6.
-[17
-
-
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.91 \newpage
-             ] [18
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.167 \newpage
-              ]) [19
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.25 ...s/Integrali di superficie di 1 specie.tex}
-                                                  ]
-\openout2 = `"chapters/Integrali di superficie di 2 specie.aux"'.
-
- (./chapters/Integrali di superficie di 2 specie.tex
 Capitolo 7.
-[20
+[29
 
 
 
@@ -1061,13 +1118,23 @@ Capitolo 7.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.83 \]
-       ] [21]) [22]
-\openout2 = `"chapters/Formula di Green.aux"'.
+l.91 \newpage
+             ] [30
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.167 \newpage
+              ]) [31
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.26 ...s/Integrali di superficie di 1 specie.tex}
+                                                  ]
+\openout2 = `"chapters/Integrali di superficie di 2 specie.aux"'.
 
- (./chapters/Formula di Green.tex
+ (./chapters/Integrali di superficie di 2 specie.tex
 Capitolo 8.
-[23
+[32
 
 
 
@@ -1076,23 +1143,38 @@ Capitolo 8.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.69 
-     
-pdfTeX warning (ext4): destination with the same identifier (name{figure.8.2}) has been already used, duplicate ignored
+l.83 \]
+       ] [33]) [34]
+\openout2 = `"chapters/Formula di Green.aux"'.
+
+ (./chapters/Formula di Green.tex
+Capitolo 9.
+[35
+
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.69 
-     ] [24]
+     
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.69 
+     ] [36]
 Overfull \hbox (4.67058pt too wide) in paragraph at lines 144--145
 \T1/cmr/m/n/12 Questo � il det-ta-glio to-po-lo-gi-co fon-da-men-ta-le che fa crol-la-re o reg-ge-re il teo-re-ma. La For-mu-la di Green 
  []
 
-[25]) [26]
+[37]) [38]
 \openout2 = `"chapters/Formula di Stokes.aux"'.
 
  (./chapters/Formula di Stokes.tex
-Capitolo 9.
-) [27
+Capitolo 10.
+) [39
 
 
 
@@ -1101,13 +1183,13 @@ Capitolo 9.
 \openout2 = `"chapters/Formula di Gauss.aux"'.
 
  (./chapters/Formula di Gauss.tex
-Capitolo 10.
-[28
+Capitolo 11.
+[40
 
 
 
 
-]) [29] (./main.aux (./chapters/Integrali di linea 1 specie.aux) (./chapters/Integrali di linea di 2 specie.aux) (./chapters/Campi vettoriali conservativi.aux) (./chapters/Integrali Multipli.aux) (./chapters/Cambio variabile.aux) (./chapters/Integrali di superficie di 1 specie.aux) (./chapters/Integrali di superficie di 2 specie.aux) (./chapters/Formula di Green.aux) (./chapters/Formula di Stokes.aux) (./chapters/Formula di Gauss.aux))
+]) [41] (./main.aux (./chapters/Funzioni di più variabili.aux) (./chapters/Integrali di linea 1 specie.aux) (./chapters/Integrali di linea di 2 specie.aux) (./chapters/Campi vettoriali conservativi.aux) (./chapters/Integrali Multipli.aux) (./chapters/Cambio variabile.aux) (./chapters/Integrali di superficie di 1 specie.aux) (./chapters/Integrali di superficie di 2 specie.aux) (./chapters/Formula di Green.aux) (./chapters/Formula di Stokes.aux) (./chapters/Formula di Gauss.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1215,6 +1297,7 @@ epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
     main.out
     umsa.fd    2013/01/14 v3.01 AMS symbols A
     umsb.fd    2013/01/14 v3.01 AMS symbols B
+chapters/Funzioni di più variabili.tex
 chapters/Integrali di linea 1 specie.tex
 chapters/Integrali di linea di 2 specie.tex
 chapters/Campi vettoriali conservativi.tex
@@ -1227,31 +1310,22 @@ chapters/Formula di Stokes.tex
 chapters/Formula di Gauss.tex
  ***********
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: C28AD028149BF8BE64744BFB0568BDC3;18242
-(rerunfilecheck)             After:  C947561620ECE363222B66D5C095CBB4;18402.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 9784DEF9D8553440F7D03AA0411B08EF;26183.
  ) 
 Here is how much of TeX's memory you used:
- 42197 strings out of 468824
- 986497 string characters out of 5452438
- 2796436 words of memory out of 5000000
- 70005 multiletter control sequences out of 15000+600000
+ 42330 strings out of 468824
+ 989222 string characters out of 5452438
+ 2798467 words of memory out of 5000000
+ 70063 multiletter control sequences out of 15000+600000
  655480 words of font info for 119 fonts, out of 8000000 for 9000
  395 hyphenation exceptions out of 8191
  121i,17n,124p,866b,2366s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (29 pages, 839446 bytes).
+Output written on main.pdf (41 pages, 897800 bytes).
 PDF statistics:
- 2441 PDF objects out of 2487 (max. 8388607)
- 1505 compressed objects within 16 object streams
- 167 named destinations out of 1000 (max. 500000)
- 6495 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2711 PDF objects out of 2984 (max. 8388607)
+ 1761 compressed objects within 18 object streams
+ 235 named destinations out of 1000 (max. 500000)
+ 6783 words of extra memory for PDF output out of 10000 (max. 10000000)
 

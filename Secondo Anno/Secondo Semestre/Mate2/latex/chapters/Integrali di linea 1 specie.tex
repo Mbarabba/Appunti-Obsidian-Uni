@@ -37,3 +37,40 @@ la formula per il calcolo diventa:
 \[
 \int_{\gamma} f \, dl = \int_a^b F(t) \, \frac{dl}{dt}dt = \int_a^b F(l(t)) \, ||\frac{d\vec{r}}{dt}dt|| = \int_a^b F(t) \, dt
 \]
+
+\section{Esercizio: Calcola l'integrale di linea di 1ª specie} 
+\[
+\int_{\gamma} (x+y) \, ds
+\]
+dove $\gamma$ è il segmento di retta che congiunge l'origine $(0,0)$ al punto $(1,1)$.
+
+\vspace{0.5cm}
+
+Parametrizziamo il segmento di retta per $t \in [0,1]$:
+\[
+\vec{r}(t) = 
+\begin{cases} 
+x(t) = 0 + t(1-0) = t \\ 
+y(t) = 0 + t(1-0) = t 
+\end{cases}
+\]
+
+Calcoliamo il vettore derivato:
+\[
+\frac{d\vec{r}}{dt} = \vec{r}'(t) = \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+\]
+
+Troviamo il differenziale d'arco $ds$:
+\[
+ds = \|\vec{r}'(t)\| \, dt = \sqrt{1^2 + 1^2} \, dt = \sqrt{2} \, dt
+\]
+
+Sostituiamo nell'integrale e risolviamo:
+\begin{align*}
+\int_{\gamma} (x+y) \, ds &= \int_{0}^{1} (t + t) \sqrt{2} \, dt \\[1ex]
+&= \int_{0}^{1} 2t\sqrt{2} \, dt \\[1ex]
+&= 2\sqrt{2} \int_{0}^{1} t \, dt \\[1ex]
+&= 2\sqrt{2} \left[ \frac{t^2}{2} \right]_{0}^{1} \\[1ex]
+&= 2\sqrt{2} \cdot \frac{1}{2} \\[1ex]
+&= \sqrt{2}
+\end{align*}
