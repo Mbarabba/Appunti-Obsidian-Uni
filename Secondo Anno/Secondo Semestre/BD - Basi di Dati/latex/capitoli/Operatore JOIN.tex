@@ -1,0 +1,64 @@
+\chapter{Operatore JOIN}
+\section{A cosa serve?}
+L'operatore JOIN rappresenta un'importante funzionalità in quanto permette di correlare dati in tabelle diverse.
+
+Matematicamente si tratta del prodotto cartesiano tra le 2 tabelle, che avrà un numero di righe pari al prodotto del numero di righe delle due tabelle.
+
+Ad un operatore JOIN sono applicati uno o più predicati join.
+
+\subsection{Cosa è un predicato join?}
+Un predicato di join esprime una condizione che deve essere verificata dalle tuple del risultato dell'interrogazione.
+
+Il predicato di join permette di estrarre dal DB un sottoinsieme opportuno del prodotto cartesiano.
+
+\section{Sintassi JOIN Legacy}
+Nella sintassi legacy, le tabelle da unire vengono elencate nella clausola FROM separate da una virgola, e la condizione di join viene specificata nella clausola WHERE
+
+\begin{lstlisting}[language=sql_generic]
+SELECT ListaAttributi
+FROM Tabella1, Tabella2
+WHERE Tabella1.Attributo = Tabella2.Attributo;
+\end{lstlisting}
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT Impiegato.Nome, Dip.Citta AS citta_lavoro
+FROM Impiegato, Dip
+WHERE Impiegato.Dipart = Dip.Nome;
+\end{lstlisting}
+
+\section{Sintassi JOIN SQL-2}
+Lo standard SQL-2 ha introdotto una sintassi dedicata che separa chiaramente la logica di unione (la JOIN) dalle condizioni di filtro (la WHERE), rendendo le interrogazioni più leggibili e riducendo il rischio di errori nel dimenticare le clausole di collegamento
+
+\begin{lstlisting}[language=sql_generic]
+SELECT ListaAttributi
+FROM Tabella1 [AS Alias1]
+JOIN Tabella2 [AS Alias2] ON Tabella1.Attributo = Tabella2.Attributo;
+\end{lstlisting}
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT I.Nome, D.Citta AS citta_lavoro
+FROM Impiegato AS I
+JOIN Dip AS D ON I.Dipart = D.Nome;
+\end{lstlisting}
+
+\section{OUTER JOING}
+\subsection{Cosa fa?}
+L'operatore OUTER JOIN è un'estensione della JOIN standard (Inner Join) utilizzata quando si desidera conservare nel risultato anche le tuple che non hanno corrispondenze nell'altra tabella.
+
+Mentre l'Inner Join restituisce solo le righe che soddisfano la condizione di unione (ovvero quelle con corrispondenza in entrambe le tabelle), l'Outer Join garantisce che almeno una delle due tabelle (o entrambe) sia rappresentata completamente.
+
+Esistono 3 tipologie di OUTER JOIN
+
+\subsection{LEFT OUTER JOIN (o LEFT JOIN)}
+Restituisce tutte le righe della tabella indicata a sinistra, per le righe della tabella che non hanno corrispondeza nella tabella di destra, vengono visualizzati valori NULL per tutti gli attributi proveniente dalla tabella di destra
+
+\subsubsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT colonne
+FROM TabellaA A
+LEFT JOIN TabellaB B ON A.chiave = B.chiave;
+\end{lstlisting}
+
+\subsub

@@ -1,0 +1,80 @@
+% --- param.tex ---
+
+% Codifica e Lingua
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+% Pacchetti base
+\usepackage{amsmath, amssymb} % Per simboli matematici
+% Modifica i valori (cm) a tuo piacimento per stringere o allargare i margini
+\usepackage{geometry}
+\geometry{a4paper, margin=1.75cm}
+\usepackage{titlesec}
+\setlength{\parindent}{0pt}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=cyan]{hyperref}
+\setlength{\parskip}{0.3\baselineskip} % Imposta lo spazio tra paragrafi pari a una riga intera
+
+% Rimuove la scritta "Capitolo X" e affianca il numero al titolo
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries}{\thechapter.}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+% --- Configurazione SQL ---
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinelanguage{sql_generic}{
+    morekeywords={
+        SELECT, FROM, WHERE, GROUP, BY, HAVING, JOIN, LEFT, RIGHT, FULL, 
+        INNER, OUTER, UNION, INTERSECT, EXCEPT, CREATE, TABLE, ALTER, 
+        DROP, INSERT, UPDATE, DELETE, PRIMARY, FOREIGN, KEY, REFERENCES, 
+        CONSTRAINT, ON, AND, OR, NOT, IN, EXISTS, DISTINCT, AS, 
+        AVG, COUNT, MIN, MAX, SUM, DECIMAL, CHAR, VARCHAR, INT, DATE,
+        DEFAULT, CHECK, CASCADE, RESTRICT, SCHEMA, VIEW
+    },
+    sensitive=false,
+    morecomment=[l]{--},
+    morestring=[b]',
+}
+
+\lstset{
+    language=sql_generic,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    frame=single,
+    breaklines=true,
+    captionpos=b
+}
+
+% --- Comandi Algebra Relazionale ---
+\newcommand{\sel}{\sigma}         % Selezione
+\newcommand{\proj}{\pi}           % Proiezione
+\newcommand{\ren}{\rho}           % Ridenominazione
+\newcommand{\join}{\bowtie}       % Join (Theta)
+\newcommand{\njoin}{\Join}        % Natural Join
+\newcommand{\aggr}{\gamma}        % Aggregazione
+\newcommand{\divs}{\div}          % Divisione
+\newcommand{\union}{\cup}         % Unione
+\newcommand{\inter}{\cap}         % Intersezione
+\newcommand{\diff}{-}             % Differenza
+
+% Gestione dei colori nelle tabelle
+\usepackage{colortbl}
+\usepackage{xcolor} % Spesso già presente, serve per definire i colori personalizzati
+
+% Allineamento e personalizzazione delle colonne
+\usepackage{array}
+
+% Disegno della struttura grafica e della freccia di collegamento
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+
+% Definizioni dei colori specifici utilizzati per le tabelle (Hex Code)
+\definecolor{headerblue}{HTML}{00CCFF}
+\definecolor{rowblue}{HTML}{E0FFFF}
+\definecolor{textdarkblue}{HTML}{000080}
+
+% Definizione di un nuovo tipo di colonna centrata a larghezza fissa (per facilitare la spaziatura)
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}

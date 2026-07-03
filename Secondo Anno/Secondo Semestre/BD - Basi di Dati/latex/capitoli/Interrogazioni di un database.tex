@@ -1,0 +1,196 @@
+\chapter{Operatore SELECT - Interrogazione di un database}
+\section{A cosa serve?}
+È la istruzione utilizzata per effettuare interrogazioni al database
+
+\section{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT ListaAttributi
+FROM ListaTabelle
+[WHERE Condizione]
+\end{lstlisting}
+
+\section{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT Nome, Cognome, Stipendio
+FROM Impiegato
+WHERE Mansione = 'Ingegnere'
+\end{lstlisting}
+
+\section{Istruzione AS}
+\subsection{A cosa serve?}
+Viene utilizzato per fare ridenominazioni su attributi e anche su relazioni
+
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT AttrEspr [ [ AS ] Alias ] {, AttrEspr [ [ AS ] Alias ] }
+FROM Tabella [ [ AS ] Alias ] {, Tabella [ [ AS ] Alias ] }
+[ WHERE Condizione ]
+\end{lstlisting}
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT I.Nome, D.Citta AS citta_lavoro
+FROM Impiegato AS I, Dip AS D
+WHERE I.Dipart = D.Nome;
+\end{lstlisting}
+
+\section{Clausola FROM}
+Specifica la/le tabelle/e su cui operare per determinare il risultato
+
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT ListaAttributi
+FROM Tabella1 [ [ AS ] Alias1 ] {, TabellaN [ [ AS ] AliasN ] }
+\end{lstlisting}
+
+\subsection{Notazione punto}
+La clausola \textbf{.} permette di specificare a che relazione appartiene un attributo (o anche una tabella a un database)
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT I.Nome, D.NomeDip
+FROM Impiegato AS I, Dip AS D
+WHERE I.Dipart = D.CodDip;
+\end{lstlisting}
+
+\section{Clausola WHERE}
+\subsection{A cosa serve?}
+È una espressione booleana che specifica una o più condindizioni di selezione
+
+\subsection{Operatori di confronto}
+\begin{itemize}
+    \item =
+    \item <>
+    \item <= =>
+    \item LIKE
+    \item BETWEEN
+    \item IS NULL
+    \item IS NOT NULL
+\end{itemize}
+
+\subsection{Operatore LIKE}
+L'operatore LIKE permette di esprimere dei "pattern" su stringhe di caratteri (regex) mediante le seguente notazione:
+\begin{itemize}
+    \item \_ indica un singolo carattere arbitrario
+    \item \% indica una strigna di caratteri arbitraria (anche lunga 0)
+\end{itemize}
+
+\subsection{Operatore BETWEEN}
+L'operatore BETWEEN permette di esprimere condizioni di appartenenza a un intervallo
+
+\subsection{Operatore IN}
+L'operatore IN permette di esprimere condizioni di appartenenza a un insieme
+
+\subsection{Predicati semplici}
+Sono espressioni di valutazione su attributi mediante operatori di confronto
+
+\subsection{Precedenza di valutazione tra operatori booleani}
+\begin{enumerate}
+    \item NOT
+    \item AND
+    \item OR
+\end{enumerate}
+
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+WHERE [NOT] PredicatoSemplice {< AND | OR > [NOT] PredicatoSemplice}
+\end{lstlisting}
+
+\subsection{Esempio generico}
+\begin{lstlisting}[language=sql_generic]
+SELECT Nome, Cognome, Mansione
+FROM Impiegato
+WHERE ufficio = '10';
+\end{lstlisting}
+
+\subsection{Esempio con LIKE}
+\begin{figure}[htpb]
+\begin{lstlisting}[language=sql_generic]
+SELECT Nome, Cognome 
+FROM Impiegato 
+WHERE Cognome LIKE '%i';
+\end{lstlisting}
+\caption{Restituira tutti i cognomi che finiscono con la lettera i}
+\end{figure}
+\begin{figure}[htpb]
+    \begin{lstlisting}[language=sql_generic]
+SELECT Nome, Cognome 
+FROM Impiegato 
+WHERE Cognome LIKE 'R_ssi';
+    \end{lstlisting}
+    \caption{Restituirà "Rossi" (dove \_ sostituisce la 'o'), ma non "Rossini" (perché \_ impone un solo carattere)}
+\end{figure}
+
+\subsection{Esempio con BETWEEN}
+\begin{lstlisting}[language=sql_generic]
+SELECT Nome, Stipendio 
+FROM Impiegato 
+WHERE Stipendio BETWEEN 38 AND 60;
+\end{lstlisting}
+
+\subsection{Esempio con IN}
+\begin{lstlisting}[language=sql_generic]
+SELECT Cognome, ufficio 
+FROM Impiegato 
+WHERE ufficio IN ('10', '20');
+\end{lstlisting}
+
+\section{Clausola DISTINCT}
+\subsection{A cosa serve?}
+In SQL, le tabelle prodotte dalle interrogazioni possono contenere più righe identiche tra loro.
+
+I duplicati possono essere rimossi usando la parola chiave DISTINCT
+
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT DISTINCT ListaAttributi
+FROM ListaTabelle
+[ WHERE Condizione ]
+\end{lstlisting}
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT DISTINCT Cognome, Citta 
+FROM Impiegato 
+WHERE Stipendio > 40;
+\end{lstlisting}
+
+\section{Espressioni}
+\subsection{A cosa servono?}
+Una espressione usata nella clausola SELECT dà luogo ad una nuova "colonna" che non corrisponde a nessuna colonna della tabella su cui si effettua la selezione.
+
+Questa nuova colonna è detta \underline{colonna virtuale}.
+
+Le colonne virtuali non sono fisicamente memorizzate, ma esistono solo come risultato delle interrogazioni.
+
+Anche alle colonne virtuali è possibile assengare un alias (con il costrutto AS)
+
+\subsection{Funzioni predefinite}
+SQL mette a disposizione alcune funzioni predefinite:
+\begin{itemize}
+    \item \textbf{Stringhe:} UPPER, UCASE, LENGTH, \dots
+    \item \textbf{Date / Intervalli:} +, -, DATE,DAYOFWEEK, \dots
+    \item \textbf{Matematiche:} * , + , - , / , TAN,SQRT, SIN, \dots
+    \item \textbf{Informazioni di sistema:} USER, CURRENT\_DATE, \dots
+\end{itemize}
+
+\subsection{Funzioni per stringhe}
+Gli operatori più comuni per le stringhe sono:
+\begin{itemize}
+    \item \textbf{||:} Operatore di concatenazione
+    \item \textbf{UPPER, UCASE:} Trasforma la stringa in caratteri maiuscoli
+    \item \textbf{LOWER, LCASE:} Trasforma la stringa in caratteri minuscoli
+\end{itemize}
+
+\subsection{Esempio di utilizzo di funzioni aritmetiche}
+\begin{lstlisting}[language=sql_generic]
+SELECT Nome, Stipendio, Premioprod, (Stipendio + Premioprod) AS stipendio_totale
+FROM Impiegato
+WHERE Mansione = 'Ingegnere';
+\end{lstlisting}
+\subsection{Esempio di utilizzo di funzioni per stringhe}
+\begin{lstlisting}[language=sql_generic]
+SELECT Nome, Cognome, citta, mansione
+FROM Impiegato
+WHERE UCASE(mansione) = 'INGEGNERE';
+\end{lstlisting}

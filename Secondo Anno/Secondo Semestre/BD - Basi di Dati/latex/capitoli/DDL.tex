@@ -1,0 +1,541 @@
+\chapter{DDL - Data Definition Language}
+\section{Notazione}
+\begin{itemize}
+    \item \textbf{TERMINI DEL LINGUAGGIO} in maiuscolo
+    \item \texttt{<x>} usato per isolare un termine x
+    \item \texttt{[x]} indicano che il termine x è opzionale
+    \item \texttt{\{x\}} indicano che il termine x può essere ripetuto da 0 a un numero arbitrario di volte
+    \item \texttt{|} separa opzioni alternative
+\end{itemize}
+
+\section{Schemi}
+\subsection{Cosa sono?}
+Uno schema di base di dati è una collezione di oggetti: domini, tabelle, asserzioni, viste, privilegi, ...
+
+\subsection{Sintassi di creazione}
+\begin{lstlisting}[language=sql_generic]
+CREATE SCHEMA
+    [NomeSchema] -- Se omesso e' il nome dell'utente che ha lanciato il comando
+    [[authorization] Autorizzazione] -- Termine del linguaggio
+    {DefinizioneElementoSchema} -- Termine variabile
+\end{lstlisting}
+
+Dopo il comando \textbf{CREATE SCHEMA} compaiono le definizioni dei vari elementi.
+
+Non è necessario che la definizione di tutti gli elementi avvenga contemporaneamente alla creazione dello schema, può avvenire in più fasi successive
+
+\subsection{Esempio: Creazione di uno schema vuoto}
+\begin{lstlisting}[language=sql_generic]
+    CREATE SCHEMA GestioneAzienda;
+\end{lstlisting}
+
+\subsection{Esempio: Creazione di uno schema utilizzando tutte le opzioni disponibili}
+\begin{lstlisting}[language=sql_generic]
+CREATE SCHEMA GestioneAzienda -- Nome dello schema
+AUTHORIZATION utente_admin -- Autorizzazione
+CREATE TABLE Impiegato ( -- Termine variabile
+    id_impiegato INT PRIMARY KEY,
+    nome VARCHAR(50),
+    cognome VARCHAR(50)
+)
+CREATE VIEW VistaImpiegati AS -- Altro termine variabile
+SELECT nome, cognome FROM Impiegato;
+\end{lstlisting}
+
+\section{Tabelle}
+\subsection{Cosa sono?}
+Una tabella è costituita da una collezione ordinata di attributi e da un insieme (eventualmente vuoto) di vincoli
+\subsection{Sintassi di creazione}
+\begin{lstlisting}[language=sql_generic]
+CREATE TABLE NomeTabella(
+    NomeAttributo DOMINIO [ValoreDiDefault][Vincoli]
+    {NomeAttributo DOMINIO [ValoreDiDefault][Vincoli]}
+    [AltriVincoli]
+)
+\end{lstlisting}
+
+\subsection{Esempio: Creazione di una tabella con elementi minimi}
+\begin{lstlisting}[language=sql_generic]
+CREATE TABLE Studente (
+    matricola INT PRIMARY KEY,
+    nome VARCHAR(30)
+);
+\end{lstlisting}
+\subsection{Esempio: Creazione di una tabella full optional}
+\begin{lstlisting}[language=sql_generic]
+CREATE TABLE Esame (
+    codice_esame INT,
+    nome_corso VARCHAR(50) NOT NULL,
+    data_esame DATE DEFAULT CURRENT_DATE,
+    voto INT CHECK (voto BETWEEN 18 AND 30),
+    matricola_studente INT,
+    
+    -- Definizione della chiave primaria composta
+    CONSTRAINT PK_Esame PRIMARY KEY (codice_esame, matricola_studente),
+    
+    -- Definizione della chiave esterna con vincolo di integrita referenziale
+    CONSTRAINT FK_Studente FOREIGN KEY (matricola_studente) 
+        REFERENCES Studente(matricola)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+\end{lstlisting}
+
+\section{Definizione dei Dati: I Domini}
+\subsection{Cosa sono?}
+I domini specificano i valori ammessi di ciascun attributo
+\subsection{Domini elementari}
+\begin{itemize}
+    \item \textbf{Testuali}
+    \begin{itemize}
+        \item \textbf{varchar(n):} Stringa di lunghezza variabile tra 0 e n caratteri
+        \item \textbf{char(n):} Stringa di lunghezza pari ad n
+    \end{itemize}
+    \item \textbf{Numerici}
+    \begin{itemize}
+        \item \textbf{Numerici Esatti}
+        \begin{itemize}
+            \item \textbf{integer / smallint :} rappresentano valori interi
+            \item \textbf{numeric / decimal :} rappresentano i valori decimali
+        \end{itemize}
+        \item \textbf{Numerici approssimati}
+        \begin{itemize}
+            \item \textbf{real / double precision :} rappresentano valori a singola / doppia precisione in virgola mobile
+            \item \textbf{float} permette di richiedere la precisione che si desidera
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{boolean:} un booleano
+    \item \textbf{blob, clob:} oggetti di grandi dimensioni
+    \begin{itemize}
+        \item costruiti da binari (blob)
+        \item costruiti da caratteri (clob)
+    \end{itemize}
+    vengono trattati e memorizzati diversamente dagli altri, vengono usati per informazioni non strutturate o multimediali
+\end{itemize}
+
+\section{Domini definiti dagli utenti}
+\subsection{Cosa sono?}
+Sono dei domini definiti dall'utente partendo dai domini elementari
+
+\subsection{Sintassi di creazione}
+\begin{lstlisting}[language=sql_generic]
+CREATE DOMAIN NomeDominio AS DominioElementare
+    [ValoreDefault]
+    [Constraints]    
+\end{lstlisting}
+
+\subsection{Esempio: Creazione di dominio semplice}
+\begin{lstlisting}[language=sql_generic]
+CREATE DOMAIN Voto AS INT;
+\end{lstlisting}
+\subsection{Esempio: Creazione di un dominio full optional}
+\begin{lstlisting}[language=sql_generic]
+CREATE DOMAIN Voto AS SMALLINT
+DEFAULT '0'
+CHECK (value >= 18 AND value <= 30);
+\end{lstlisting}
+
+\section{Vincoli intrarelazionale}
+Un vincolo intrarelazione è una regola che specifica delle condizioni all'interno di una relazione
+
+\subsection{Tipidi di vincoli intrarelazionali}
+Proprietà sempre valida all'interno di una relazione
+\begin{itemize}
+    \item \textbf{NOT NULL:} Il valore deve essere non nullo
+    \item \textbf{UNIQUE:} I valori devono essere non ripetuti
+    \item \textbf{PRIMARY KEY:} Chiave primaria (una sola per tabella)
+    \item \textbf{CHECK:} Definisce condizioni complesse (sia intra che inter relazionali)
+\end{itemize}
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+CREATE TABLE Dipendenti (
+    -- 1. VINCOLO DI CHIAVE PRIMARIA (e di dominio NOT NULL implicito)
+    ID_Dipendente INT PRIMARY KEY,
+    
+    -- 2. VINCOLI DI DOMINIO (Tipo dato, NOT NULL e lunghezza)
+    Nome VARCHAR(50) NOT NULL,
+    Cognome VARCHAR(50) NOT NULL,
+    
+    -- 3. VINCOLO DI CHIAVE UNICA (Unique)
+    -- L'email deve essere unica per ogni dipendente, ma potrebbe essere temporaneamente assente (NULL)
+    Email VARCHAR(100) UNIQUE,
+    
+    -- 4. VINCOLO DI DOMINIO con controllo sul range (CHECK)
+    -- Lo stipendio deve essere un numero positivo
+    Stipendio_Mensile DECIMAL(10, 2) CHECK (Stipendio_Mensile > 0),
+    
+    Data_Assunzione DATE NOT NULL,
+    Data_Fine_Contratto DATE,
+    
+    -- 5. VINCOLO DI TUPLA (CHECK che coinvolge piu colonne)
+    -- La data di fine contratto deve essere successiva alla data di assunzione
+    CONSTRAINT CHK_Date_Contratto CHECK (Data_Fine_Contratto > Data_Assunzione)
+);
+\end{lstlisting}
+
+\newpage
+\section{Vincoli interrelazionali: Integrità referenziale}
+\subsection{Cosa sono?}
+Esprimono un legame gerarchico (padre / figlio) fra tabelle.
+
+Alcuni attributi della tabella figlio sono definti \textbf{FOREIGN KEY} si devono riferire (\textbf{REFERENCES}) ad alcuni attributi della tabella padre che costituiscono una chiave.
+
+I valori contenuti nella \textbf{FOREIGN KEY} devono essere sempre presenti nella tabella padre.
+
+\subsection{Sintassi}
+\subsubsection{REFERENCES}
+Nella parte di definizione degli attributi con il costrutto sintattico \textbf{REFERENCES}
+\begin{lstlisting}[language=sql_generic]
+AttrFiglio CHAR(3) REFERENCES TabellaPadre(AttrPadre)
+\end{lstlisting}
+
+\subsubsection{FOREIGN KEY}
+Oppure dopo la definizione degli attributi con i costruttori \textbf{FOREGIN KEY} e \textbf{REFERENCES}
+\begin{lstlisting}[language=sql_generic]
+FOREIGN KEY(AttrFiglio)
+    REFERENCES TabellaPadre(AttrPadre)
+\end{lstlisting}
+
+Quando si hanno più attributi da riferire, si utilizza sempre \textbf{FOREIGN KEY}
+\begin{lstlisting}[language=sql_generic]
+FOREIGN KEY(AttrFiglio1{, AttrFiglio2})
+    REFERENCES TabellaPadre(AttrPadre1{, AttrPadre2})
+\end{lstlisting}
+
+Se si omettono gli attributi destinazione, vengono assunti quelli della chiave primaria
+\begin{lstlisting}[language=sql_generic]
+AttrFiglio CHAR(3) REFERENCES TabellaPadre
+\end{lstlisting}
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+CREATE TABLE Infrazioni (
+    Codice INTEGER PRIMARY KEY, -- Identificativo dell'infrazione (es. 34321)
+    Data DATE NOT NULL,
+    Vigile INTEGER NOT NULL,
+    Prov CHAR(2),
+    Numero CHAR(6),
+    
+    -- Vincolo interrelazionale singolo (in linea o a livello tabella)
+    FOREIGN KEY (Vigile) REFERENCES Vigili(Matricola),
+    
+    -- Vincolo interrelazionale composto (obbligatoriamente a fine tabella)
+    FOREIGN KEY (Prov, Numero) REFERENCES Auto(Prov, Numero)
+);
+\end{lstlisting}
+
+
+\section{Aggiornamento}
+\subsection{Il problema dell'aggiornamento}
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[remember picture, >=Stealth, thick]
+
+        % Tabella: Studente
+        \node (studente) [label={below:{\Large\sffamily Studente}}] {
+            \sffamily\color{textdarkblue}
+            \renewcommand{\arraystretch}{1.3}
+            \begin{tabular}{|C{1.2cm}|C{1.6cm}|C{1.2cm}|C{1.0cm}|}
+                \hline
+                \rowcolor{headerblue} \underline{\textbf{Matr}} & \textbf{Nome} & \textbf{Città} & \textbf{CDip} \\ \hline
+                \rowcolor{rowblue} 34321 & Luca & Mi & Inf \\ \hline
+                \rowcolor{rowblue} 53524 & Giovanni & To & Mat \\ \hline
+                \rowcolor{rowblue} 64521 & Emilio & Ge & Ing \\ \hline
+                \rowcolor{rowblue} 73321 & Francesca & Vr & Mat \\ \hline
+            \end{tabular}
+        };
+
+        % Tabella: Esame
+        \node (esame) [right=2cm of studente, label={above:{\Large\sffamily Esame}}] {
+            \sffamily\color{textdarkblue}
+            \renewcommand{\arraystretch}{1.3}
+            \begin{tabular}{|C{1.2cm}|C{1.8cm}|C{1.6cm}|C{1.0cm}|}
+                \hline
+                \rowcolor{headerblue} \underline{\textbf{Matr}} & \underline{\textbf{CodCorso}} & \textbf{Data} & \textbf{Voto} \\ \hline
+                \rowcolor{rowblue} 34321 & 1 & 25/02/01 & 28 \\ \hline
+                \rowcolor{rowblue} 34321 & 2 & 14/12/01 & 30 \\ \hline
+                \rowcolor{rowblue} 64521 & 1 & 12/03/02 & 24 \\ \hline
+                \rowcolor{rowblue} 73321 & 4 & 18/01/02 & 18 \\ \hline
+            \end{tabular}
+        };
+
+        % Freccia rossa per la Foreign Key
+        \draw[red, ->, line width=1.5pt] ([xshift=0.6cm, yshift=1.1cm]esame.west) -- ([xshift=-1.3cm, yshift=1.5cm]esame.west);
+
+    \end{tikzpicture}
+\end{figure}
+
+Se elimino da Studente la tupla con matricola 34321, cosa succede alla tabella esame?
+
+\subsection{Il problema delle violazioni}
+Se viene eseguita una operazione di aggiornamento che porta alla violazione di un vincolo di integrità referenziale la base di dati diventa non valida.
+
+Per evitare ciò, vengono definite un insieme di politiche per evitare che questo accada, permettendo di scegliere delle reazioni da adottare in caso di violazione.
+
+Queste politiche vanno dichiarate nella dichiarazione DDL dello schema.
+
+Per tutti gli altri tipoli di vicnoli invece a seguito di una violazione il comando di aggiornamento viene rifiutato segnalando l'errore.
+
+\vspace{\baselineskip}
+
+\begin{figure}[htbp]
+    \centering
+    \sffamily
+    
+    % Colonna di sinistra (43% della larghezza)
+    \begin{minipage}[c]{0.43\textwidth}
+        \textbf{Tipo di violazione}\\
+        Inserimento o modifica di tupla che viola il vincolo sulla \textcolor{red!80!black}{\textbf{tabella figlio}} (interna)
+    \end{minipage}%
+    %
+    % Spazio centrale con la freccia (10% della larghezza)
+    \begin{minipage}[c]{0.10\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \draw[-{Stealth}, red!80!black, line width=1.2pt] (0,0) -- (0.8,0);
+        \end{tikzpicture}
+    \end{minipage}%
+    %
+    % Colonna di destra (43% della larghezza)
+    \begin{minipage}[c]{0.43\textwidth}
+        \textbf{Politica di reazione}\\
+        In entrambi i casi il comando non viene eseguito
+    \end{minipage}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \sffamily
+    
+    % Colonna di sinistra (43% della larghezza)
+    \begin{minipage}[c]{0.43\textwidth}
+        Inserimento o modifica di tupla che viola il vincolo sulla tabella padre (esterna)
+    \end{minipage}%
+    %
+    % Spazio centrale con la freccia (10% della larghezza)
+    \begin{minipage}[c]{0.10\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \draw[-{Stealth}, red!80!black, line width=1.2pt] (0,0) -- (0.8,0);
+        \end{tikzpicture}
+    \end{minipage}%
+    %
+    % Colonna di destra (43% della larghezza)
+    \begin{minipage}[c]{0.43\textwidth}
+        Quattro politiche possibili
+    \end{minipage}
+\end{figure}
+
+\subsection{Reazioni a violazioni sulla tabelal padre}
+\begin{itemize}
+    \item \textbf{CASCADE:} L'operazione di modifica / cancellazione viene propagata alla tabella intera
+    \item \textbf{SET NULL:} NULL nella tabella figlio in entrambi i casi
+    \item \textbf{SET DEFAULT:} Default nella tabella figlio in entrambi i casi
+    \item \textbf{NO ACTION:} Rifiutata in entrambi i casi
+\end{itemize}
+
+\subsection{Vincoli con nomi}
+A fini diagnostici è spesso utilie sapere quale vincolo è stato violato a seguito di un'azione sul DB.
+
+A tale scopo è possibile associare dei nomi ai vincoli, ad esempio:
+\begin{lstlisting}[language=sql_generic]
+Stipendio INTEGER CONSTRAINT StipendioPositivo
+CHECK (Stipendio > 0)
+\end{lstlisting}
+\begin{lstlisting}[language=sql_generic]
+CONSTRAINT ForeignKeySedi
+FOREIGN KEY (Sede) REFERENCES Sedi
+\end{lstlisting}
+
+\section{Modifiche degli schemi: ALTER}
+\subsection{A cosa serve?}
+Modifica oggetti
+
+\subsection{Tipi di ALTER}
+\begin{itemize}
+    \item \textbf{ALTER DOMAIN:} Modifica domini
+    \item \textbf{ALTER TABLE:} Modifica tabelle
+\end{itemize}
+
+Quando si definisce un nuovo vincolo deve essere soddisfatto dalla istanza presente, altrimenti viene rifiutato
+
+\subsection{Sintassi ALTER DOMAIN}
+\begin{lstlisting}[language=sql_generic]
+ALTER DOMAIN NomeDominio <
+    SET      DEFAULT ValoreDefault |
+    DROP     DEFAULT |
+    ADD      CONSTRAINT DefVincolo |
+    DROP     CONSTRAINT NomeVincolo >
+\end{lstlisting}
+
+\subsection{Esempio di ALTER DOMAIN}
+\begin{lstlisting}[language=sql_generic]
+-- 1. Definiamo un valore di default standard per tutti i nuovi inserimenti
+ALTER DOMAIN VotoEsame 
+    SET DEFAULT 18;
+-- 2. Aggiungiamo un vincolo per gestire anche l'estensione del voto con la "Lode" (es. inserendo 31)
+ALTER DOMAIN VotoEsame 
+    ADD CONSTRAINT ControlloLode CHECK (VALUE >= 18 AND VALUE <= 31);
+-- 3. Rimuoviamo il valore di default inserito in precedenza se non e piu necessario
+ALTER DOMAIN VotoEsame 
+    DROP DEFAULT;
+-- 4. Rimuoviamo il vincolo sulla lode per tornare alle impostazioni base
+ALTER DOMAIN VotoEsame 
+    DROP CONSTRAINT ControlloLode;
+\end{lstlisting}
+
+\subsection{Sintassi ALTER TABLE}
+\begin{lstlisting}[language=sql_generic]
+ALTER TABLE NomeTabella <
+    ALTER COLUMN NomeAttributo <
+        SET DEFAULT NuovoDefault |
+        DROP DEFAULT > |
+    DROP COLUMN NomeAttributo |
+    ADD COLUMN DefAttributo |
+    DROP CONSTRAINT NomeVincolo |
+    ADD CONSTRAINT DefVincolo >
+\end{lstlisting}
+
+\subsection{Esempio di ALTER TABLE}
+\begin{lstlisting}[language=sql_generic]
+-- 1. Aggiungiamo una nuova colonna per memorizzare l'Email dello studente
+ALTER TABLE Studente 
+    ADD COLUMN Email VARCHAR(100);
+-- 2. Modifichiamo la colonna "Citta" esistente per impostare un valore di default predefinito
+ALTER TABLE Studente 
+    ALTER COLUMN Citta SET DEFAULT 'Mi';
+-- 3. Rimuoviamo la colonna "CDip" (Codice Dipartimento) se la tabella viene ristrutturata
+ALTER TABLE Studente 
+    DROP COLUMN CDip;
+-- 4. Aggiungiamo un vincolo di unicita (Unique) sulla colonna Email appena creata
+ALTER TABLE Studente 
+    ADD CONSTRAINT EmailUnica UNIQUE (Email);
+-- 5. Rimuoviamo un vecchio vincolo di controllo (se esistente) identificato dal suo nome
+ALTER TABLE Studente 
+    DROP CONSTRAINT VerificaMatricola;
+\end{lstlisting}
+
+\section{Vincolo interrelazionale: UPDATE}
+
+Quando si effettua una modifica (\texttt{UPDATE}) sui dati all'interno di una base di dati relazionale, è fondamentale garantire che i legami tra le tabelle rimangano consistenti. Il vincolo di integrità referenziale (Foreign Key) interviene in modo specifico per regolamentare cosa succede quando viene modificata una chiave.
+
+\subsection{A cosa serve}
+Il vincolo interrelazionale durante un'operazione di modifica ha lo scopo di impedire la creazione di ``tuple orfane''. Si considerano due scenari distinti:
+\begin{itemize}
+    \item \textbf{Modifica sulla tabella figlio (interna):} Se si modifica il valore della chiave esterna nella tabella figlio, il database controlla semplicemente che il nuovo valore esista nella chiave primaria della tabella padre. Se non esiste, l'operazione viene bloccata.
+    \item \textbf{Modifica sulla tabella padre (esterna):} Se si modifica il valore della chiave primaria nella tabella padre, tutti i record della tabella figlio che puntavano a quel vecchio valore rimarrebbero associati a una chiave non più esistente. Per evitare questa violazione, il DBMS applica delle specifiche \textit{politiche di reazione}.
+\end{itemize}
+
+\subsubsection{Sintassi dell'operazione}
+La definizione della politica di reazione per la modifica viene dichiarata in fase di creazione o alterazione della tabella figlio, subito dopo la specifica della chiave esterna (\texttt{FOREIGN KEY}).
+
+La sintassi generica all'interno del linguaggio SQL DDL è la seguente:
+\begin{lstlisting}[language=sql_generic]
+FOREIGN KEY (AttributoTabellaFiglio) REFERENCES TabellaPadre(AttributoTabellaPadre) ON UPDATE [ RESTRICT | CASCADE | SET NULL | SET DEFAULT ]
+\end{lstlisting}
+
+Il significato delle quattro politiche possibili è il seguente:
+\begin{enumerate}
+    \item \textbf{RESTRICT (o NO ACTION):} È il comportamento di default. La modifica sulla tabella padre viene rifiutata e solleva un errore se esistono tuple collegate nella tabella figlio.
+    \item \textbf{CASCADE:} La modifica viene propagata a cascata. Modificando il valore nella tabella padre, tutti i record corrispondenti nella tabella figlio verranno aggiornati automaticamente con il nuovo valore.
+    \item \textbf{SET NULL:} Il valore della chiave esterna nei record correlati della tabella figlio viene impostato a \texttt{NULL} (richiede che la colonna non abbia il vincolo \texttt{NOT NULL}).
+    \item \textbf{SET DEFAULT:} Il valore della chiave esterna nella tabella figlio viene reimpostato al valore di default precedentemente configurato per quella colonna.
+\end{enumerate}
+
+\subsection{Esempi pratici}
+
+Riprendiamo come riferimento le tabelle \textbf{Studente} (tabella padre, con chiave primaria \texttt{Matr}) ed \textbf{Esame} (tabella figlio, con chiave esterna \texttt{Matr} che fa riferimento a \texttt{Studente}).
+
+\subsubsection{Esempio 1: Politica CASCADE (Propagazione automatica)}
+Si supponga di voler modificare la matricola dello studente `Luca' da \texttt{34321} a \texttt{99999}. Configurando la tabella con la politica \texttt{CASCADE}:
+\begin{lstlisting}[language=sql_generic]
+ALTER TABLE Esame 
+    ADD CONSTRAINT fk_studente 
+    FOREIGN KEY (Matr) REFERENCES Studente(Matr)
+    ON UPDATE CASCADE;
+\end{lstlisting}
+Eseguendo l'istruzione \texttt{UPDATE Studente SET Matr = 99999 WHERE Matr = 34321;}, il database aggiornerà automaticamente anche tutte le righe all'interno della tabella \texttt{Esame} in cui la matricola era \texttt{34321}, sostituendola con \texttt{99999}.
+
+\medskip
+\subsubsection{Esempio 2: Politica RESTRICT (Blocco cautelativo)}
+Nel caso in cui le matricole debbano rimanere tassativamente immutabili per ragioni storiche e di sicurezza, si opta per \texttt{RESTRICT}:
+\begin{lstlisting}[language=sql_generic]
+ALTER TABLE Esame 
+    ADD CONSTRAINT fk_studente 
+    FOREIGN KEY (Matr) REFERENCES Studente(Matr)
+    ON UPDATE RESTRICT;
+\end{lstlisting}
+Se si provasse ad eseguire la modifica della matricola \texttt{34321} nella tabella \texttt{Studente}, il DBMS bloccherebbe l'operazione restituendo un errore del tipo: \textit{``Violazione del vincolo di chiave esterna: record correlati presenti nella tabella Esame''}.
+
+\subsubsection{Esempio 3: Politica SET NULL (Annullamento del legame)}
+Se l'esame sostenuto deve rimanere registrato nel sistema ma, in seguito alla modifica o riorganizzazione di una targa/codice identificativo padre, si decidesse temporaneamente di scollegarlo dallo studente:
+\begin{lstlisting}[language=sql_generic]
+ALTER TABLE Esame 
+    ADD CONSTRAINT fk_studente 
+    FOREIGN KEY (Matr) REFERENCES Studente(Matr)
+    ON UPDATE SET NULL;
+\end{lstlisting}
+Cambiando la matricola nella tabella padre, le righe corrispondenti nella tabella \texttt{Esame} vedranno il proprio campo \texttt{Matr} trasformarsi in \texttt{NULL}, indicando che l'esame è al momento ``orfano'' di uno studente identificato.
+
+\section{Vincolo interrelazionale: DROP}
+\subsection{Cosa fa?}
+Cancella oggetti dallo schema
+
+Ha 2 opzioni:
+\begin{itemize}
+    \item \textbf{RESTRICT:} Un oggetto non è rimosso se non è vuoto
+    \item \textbf{CASCADE:} Viene rimosso l'oggetto e tutto ciò che è coinvolto nella definizione dell'oggetto
+\end{itemize}
+
+\subsection{DROP DOMAIN}
+Cancellazione del dominio
+
+\subsubsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+DROP DOMAIN NomeDominio [ RESTRICT | CASCADE ];
+\end{lstlisting}
+
+\subsubsection{Esempio di utilizzo}
+\begin{lstlisting}[language=sql_generic]
+-- 1. Creazione del dominio
+CREATE DOMAIN CodiceDipartimento AS CHAR(3)
+    CHECK (VALUE IS NOT NULL);
+
+-- 2. Utilizzo del dominio nella tabella "Studente"
+CREATE TABLE Studente (
+    Matr INT PRIMARY KEY,
+    Nome VARCHAR(50),
+    CDip CodiceDipartimento -- La colonna CDip usa il dominio appena creato
+);
+
+DROP DOMAIN CodiceDipartimento RESTRICT;
+\end{lstlisting}
+
+\subsubsection{DROP TABLE}
+Cancellazione della tabella
+
+\subsubsection{Sintassi}
+\begin{lstlisting}
+DROP TABLE NomeTabella [ RESTRICT | CASCADE ];
+\end{lstlisting}
+
+\subsubsection{Esempi}
+\begin{lstlisting}[language=sql_generic]
+-- Creazione della tabella Padre
+CREATE TABLE Studente (
+    Matr INT PRIMARY KEY,
+    Nome VARCHAR(50)
+);
+
+-- Creazione della tabella Figlio con il vincolo di Foreign Key
+CREATE TABLE Esame (
+    CodCorso INT,
+    Matr INT,
+    Voto INT,
+    PRIMARY KEY (CodCorso, Matr),
+    CONSTRAINT fk_studente FOREIGN KEY (Matr) REFERENCES Studente(Matr)
+);
+
+DROP TABLE Studente RESTRICT;
+-- Nota: Scrivere "DROP TABLE Studente;" produce lo stesso effetto
+\end{lstlisting}

@@ -1,0 +1,398 @@
+\chapter{Funzioni di più variabili}
+\section{Definizione Grafico di una funzione}
+Data una funzione $f: D \subset \mathbb{R}^n \to \mathbb{R}$, si dice \textbf{grafico di $f$} il sottoinsieme di $\mathbb{R}^{n+1}$ definito dai punti nella forma:
+\begin{equation*}
+    (x_1, \dots, x_n, f(x_1, \dots, x_n)) \quad \text{con } (x_1, \dots, x_n) \in D
+\end{equation*}
+
+\subsection{Casi specifici}
+\textbf{Per $n=1$:}\\
+$f: [a,b] \subset \mathbb{R} \to \mathbb{R}$. Il grafico è l'insieme delle coppie $(x, f(x))$ con $x \in [a,b]$.
+
+\vspace{0.3cm}
+\noindent\textbf{Per $n=2$:}\\
+$f: D \subset \mathbb{R}^2 \to \mathbb{R}$. Il grafico è l'insieme delle terne $(x_1, x_2, f(x_1, x_2))$ con $(x_1, x_2) \in D$. Geometricamente, questo rappresenta una superficie nello spazio a tre dimensioni.
+
+\section{Intorno di un punto}
+Denotiamo con $B_\rho(\vec{x}^*)$ l'insieme dei punti di $\mathbb{R}^n$ che hanno distanza da $\vec{x}^*$ minore di $\rho$:
+\begin{equation*}
+    B_\rho(\vec{x}^*) = \{\vec{x} \in \mathbb{R}^n : \|\vec{x} - \vec{x}^*\| < \rho\}
+\end{equation*}
+
+\section{Limiti e Continuità}
+\subsection{Definizione di Limite}
+Si dice che il limite di $f$ per $\vec{x}$ tendente a $\vec{x}_0$ è $l$ se, per ogni $\varepsilon > 0$, esiste un $\delta > 0$ tale che per ogni $\vec{x} \in B_\delta(\vec{x}_0)$ (eccetto al più $\vec{x}_0$) vale la condizione:
+\begin{equation*}
+    |f(\vec{x}) - l| < \varepsilon
+\end{equation*}
+In notazione compatta:
+\begin{equation*}
+    \lim_{(x_1, \dots, x_n) \to (x_1^0, \dots, x_n^0)} f(x_1, \dots, x_n) = l
+\end{equation*}
+
+\subsection{Continuità}
+Si dice che $f$ è continua in $\vec{x}_0$ se:
+\begin{equation*}
+    \lim_{\vec{x} \to \vec{x}_0} f(\vec{x}) = f(\vec{x}_0)
+\end{equation*}
+
+\section{Derivate Parziali}
+\textbf{Notazione:} $\frac{\partial f}{\partial x} = \frac{df}{dx} = f_x$
+
+\subsection{Definizione tramite rapporto incrementale (per $n=2$)}
+\begin{align*}
+    \frac{\partial f}{\partial x}(x,y) &= \lim_{\Delta x \to 0} \frac{f(x + \Delta x, y) - f(x, y)}{\Delta x} \\
+    \frac{\partial f}{\partial y}(x,y) &= \lim_{\Delta y \to 0} \frac{f(x, y + \Delta y) - f(x, y)}{\Delta y}
+\end{align*}
+
+\section{Teorema di Schwarz}
+Supponiamo che $f$ ammetta derivate parziali fino all'ordine $N$ in un intorno di un punto $P$ e che le derivate parziali di ordine $N$ siano \textit{continue} in $P$. Allora, esse non dipendono dall'ordine in cui vengono effettuate.
+\begin{align*}
+    f_{xy} &= f_{yx} \\
+    f_{xxy} &= f_{yxx} = f_{xyx}
+\end{align*}
+
+\section{Differenziabilità (per $n=2$)}
+Una funzione $f(x, y)$ si dice \textbf{differenziabile} in un punto $(x_0, y_0)$ se sono soddisfatte due condizioni:
+\begin{enumerate}
+    \item Esistono le derivate parziali $f_x(x_0, y_0)$ e $f_y(x_0, y_0)$.
+    \item L'errore di approssimazione lineare tende a zero più velocemente della distanza dal punto, ovvero vale il seguente limite:
+\end{enumerate}
+\begin{equation*}
+    \lim_{(h,k) \to (0,0)} \frac{f(x_0+h, y_0+k) - f(x_0, y_0) - f_x(x_0, y_0)h - f_y(x_0, y_0)k}{\sqrt{h^2+k^2}} = 0
+\end{equation*}
+dove $h = \Delta x$ e $k = \Delta y$ rappresentano gli incrementi rispetto alle coordinate del punto iniziale.
+
+\subsection{Significato Geometrico}
+Se $f$ è differenziabile in $(x_0, y_0)$, il grafico della funzione ammette un \textbf{piano tangente} non verticale nel punto $(x_0, y_0, f(x_0, y_0))$, la cui equazione cartesiana è:
+\begin{equation*}
+    z = f(x_0, y_0) + f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)
+\end{equation*}
+
+\subsection{Proprietà e Teoremi Rilevanti}
+\begin{itemize}
+    \item \textbf{Differenziabilità $\implies$ Continuità:} Se $f$ è differenziabile in un punto, allora è necessariamente continua in quel punto (mentre la sola esistenza delle derivate parziali non basta a garantire la continuità).
+    \item \textbf{Teorema del Differenziale Totale (Condizione Sufficiente):} Se le derivate parziali $f_x$ e $f_y$ esistono in un intorno di $(x_0, y_0)$ e sono \textbf{continue} nel punto $(x_0, y_0)$, allora la funzione $f$ è differenziabile in quel punto ($f \in C^1$).
+\end{itemize}
+
+\section{Funzioni composte}
+Sia data una curva $\vec{x}(t) = \begin{bmatrix} x(t) \\ y(t) \end{bmatrix}$ definita su un intervallo $[a,b]$ a valori in un dominio $D \subset \mathbb{R}^2$, e una funzione scalare $f: D \subset \mathbb{R}^2 \to \mathbb{R}$.
+È possibile creare la funzione composta $F: [a,b] \to \mathbb{R}$ definita come:
+\[ F(t) = f(x(t), y(t)) \]
+Questa è una funzione di una sola variabile, dipendente esclusivamente dal parametro $t$.
+
+\section{Teorema di derivazione delle funzioni composte}
+Sia $f: D \subset \mathbb{R}^2 \to \mathbb{R}$ una funzione differenziabile e sia $(x(t), y(t))$ con $t \in [a,b]$ una curva regolare contenuta in $D$.
+Allora, data $F(t) = f(x(t), y(t))$, vale la formula:
+\[ F'(t_0) = f_x(x_0, y_0) \frac{dx}{dt}(t_0) + f_y(x_0, y_0) \frac{dy}{dt}(t_0) \]
+dove:
+\[
+\begin{cases}
+x_0 = x(t_0) \\
+y_0 = y(t_0)
+\end{cases}
+\]
+
+\subsection{Dimostrazione}
+Ipotizzando che la funzione sia differenziabile in $(x_0, y_0)$, dalla definizione di differenziabilità si ha:
+\[ f(x,y) = f(x_0, y_0) + f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0) + o(\rho) \]
+dove $\rho = \sqrt{\Delta x^2 + \Delta y^2}$.
+
+In particolare, valutando la funzione lungo la curva per un incremento $\Delta t = t - t_0$, avremo:
+\[ f(x(t), y(t)) = f(x_0, y_0) + f_x(x_0, y_0)(x(t) - x(t_0)) + f_y(x_0, y_0)(y(t) - y(t_0)) + o(\rho) \]
+
+Dividendo ambo i membri per $\Delta t$:
+\[ \frac{f(x(t), y(t)) - f(x(t_0), y(t_0))}{\Delta t} = f_x(x_0, y_0)\frac{x(t) - x(t_0)}{\Delta t} + f_y(x_0, y_0)\frac{y(t) - y(t_0)}{\Delta t} + \frac{o(\rho)}{\Delta t} \]
+
+Passando al limite per $\Delta t \to 0$:
+\[ \lim_{\Delta t \to 0} \frac{F(t) - F(t_0)}{\Delta t} = F'(t_0) \]
+Il termine d'errore tende a zero, poiché può essere riscritto come:
+\[ \lim_{\Delta t \to 0} \frac{o(\rho)}{\Delta t} = \lim_{\Delta t \to 0} \frac{o(\rho)}{\rho} \frac{\rho}{\Delta t} = 0 \cdot \|\vec{x}'(t_0)\| = 0 \]
+Da cui si ottiene direttamente la tesi del teorema:
+\[ F'(t_0) = f_x(x_0, y_0) x'(t_0) + f_y(x_0, y_0) y'(t_0) \]
+
+\subsection{Esercizio}
+Sia data la funzione $f(x,y) = x^2 y^3$ e la curva $\gamma$ espressa dalle equazioni parametriche:
+\[
+\begin{cases}
+x(t) = t + 1 \\
+y(t) = t^2
+\end{cases}
+\]
+Calcolare la derivata di $f$ ristretta a $\gamma$ nel punto $(2, 1)$.
+
+\subsubsection{Soluzione}
+Cerchiamo per quali valori del parametro $t$ la curva passa per il punto $(2,1)$:
+\[
+\begin{cases}
+x(t) = t + 1 = 2 \implies t = 1 \\
+y(t) = t^2 = 1 \implies t = \pm 1
+\end{cases}
+\]
+Il valore cercato è quindi $t_0 = 1$. Possiamo procedere in due modi.
+
+\textit{Metodo 1 (Sostituzione diretta):}
+Sostituendo $x(t)$ e $y(t)$ in $f$:
+\[ F(t) = f(x(t), y(t)) = (t+1)^2 (t^2)^3 = (t^2+2t+1)t^6 = t^8 + 2t^7 + t^6 \]
+Calcolando la derivata rispetto a $t$:
+\[ F'(t) = 8t^7 + 14t^6 + 6t^5 \]
+Valutando nel punto $t_0 = 1$:
+\[ F'(1) = 8(1)^7 + 14(1)^6 + 6(1)^5 = 8 + 14 + 6 = 28 \]
+
+\textit{Metodo 2 (Uso del Teorema di derivazione):}
+Calcoliamo le derivate parziali di $f$ e valutiamole nel punto $(2,1)$:
+\[ f_x = 2xy^3 \implies f_x(2,1) = 4 \]
+\[ f_y = 3x^2y^2 \implies f_y(2,1) = 12 \]
+Calcoliamo le derivate di $x(t)$ e $y(t)$ e valutiamole in $t_0 = 1$:
+\[ \frac{dx}{dt} = 1 \implies \frac{dx}{dt}(1) = 1 \]
+\[ \frac{dy}{dt} = 2t \implies \frac{dy}{dt}(1) = 2 \]
+Applicando la formula del teorema:
+\[ F'(1) = f_x(2,1) \frac{dx}{dt}(1) + f_y(2,1) \frac{dy}{dt}(1) = 4 \cdot 1 + 12 \cdot 2 = 4 + 24 = 28 \]
+Entrambi i metodi portano allo stesso risultato.
+
+\section{Gradiente}
+Data una funzione $f: \mathbb{R}^2 \to \mathbb{R}$, si definisce \textbf{gradiente} di $f$ nel punto $(x_0, y_0)$ il vettore composto dalle sue derivate parziali valutate in tale punto:
+\[ \vec{\nabla}f(x_0, y_0) = \begin{bmatrix} f_x(x_0, y_0) \\ f_y(x_0, y_0) \end{bmatrix} \]
+
+\section{Derivata Direzionale}
+Sia $f: \mathbb{R}^n \to \mathbb{R}$ e $\vec{v}$ un \textit{vettore direzione}, ovvero un versore di modulo unitario (tale per cui $\|\vec{v}\| = 1$). 
+
+Si definisce \textbf{derivata direzionale} di $f$ lungo la direzione del vettore $\vec{v}$ nel punto $\vec{x}_0$ la quantità scalare:
+\[ D_{\vec{v}}f(\vec{x}_0) = \vec{\nabla}f(\vec{x}_0) \cdot \vec{v} \]
+ossia il prodotto scalare tra il vettore gradiente di $f$ valutato nel punto $\vec{x}_0$ e il versore direzione $\vec{v}$.
+
+\section{Curve di Livello}
+Una curva $x(t)$ si dice \textbf{curva di livello} di una funzione $f$ se $f$ ristretta alla curva è costante, ovvero $f(x(t)) = c$. 
+Derivando $f$ lungo una curva di livello (usando la regola della catena), si ottiene:
+\[ \nabla f(\vec{x}_0) \cdot \frac{d\vec{x}}{dt}(t_0) = 0 \]
+Questo dimostra che \textbf{il gradiente valutato in un punto è sempre ortogonale a tutte le curve di livello passanti per quel punto}.
+
+\section{Sviluppo di Taylor per Funzioni a Due Variabili}
+
+% [cite: 74, 87, 93, 94]
+Per ricavare lo sviluppo di Taylor in un intorno di un punto $P=(\bar{x}, \bar{y})$, valutiamo la restrizione della funzione alla retta che congiunge $P$ e un punto generico $P'=(\bar{x}+\Delta x, \bar{y}+\Delta y)$.
+Lo sviluppo di Taylor al \textbf{secondo ordine} in $\mathbb{R}^2$ è:
+\[ f(x,y) = f(\bar{x}, \bar{y}) + f_x(\bar{x}, \bar{y})\Delta x + f_y(\bar{x}, \bar{y})\Delta y + \frac{1}{2}\left[ f_{xx}(\bar{x}, \bar{y})\Delta x^2 + 2f_{xy}(\bar{x}, \bar{y})\Delta x\Delta y + f_{yy}(\bar{x}, \bar{y})\Delta y^2 \right] + R \]
+dove $\Delta x = (x - \bar{x})$ e $\Delta y = (y - \bar{y})$.
+
+\subsection{Esempio A:  $f(x,y) = e^x \cos(y)$ in $(0,0)$}
+\begin{enumerate}
+    \item \textbf{Valutazione della funzione:} $f(0,0) = e^0 \cos(0) = 1$.
+    \item \textbf{Derivate prime:} 
+    \begin{itemize}
+        \item $f_x = e^x \cos(y) \implies f_x(0,0) = 1$
+        \item $f_y = -e^x \sin(y) \implies f_y(0,0) = 0$
+    \end{itemize}
+    \item \textbf{Derivate seconde:}
+    \begin{itemize}
+        \item $f_{xx} = e^x \cos(y) \implies f_{xx}(0,0) = 1$
+        \item $f_{xy} = -e^x \sin(y) \implies f_{xy}(0,0) = 0$
+        \item $f_{yy} = -e^x \cos(y) \implies f_{yy}(0,0) = -1$
+    \end{itemize}
+    \item \textbf{Assemblaggio formula di Taylor:}
+    \[ P_2(x,y) = 1 + 1(x) + 0(y) + \frac{1}{2}\left[1(x^2) + 2(0)(xy) - 1(y^2)\right] = 1 + x + \frac{1}{2}x^2 - \frac{1}{2}y^2 \]
+\end{enumerate}
+
+\subsection{Esempio B:  $f(x,y) = \ln(1 + x + 2y)$ in $(0,0)$}
+\begin{enumerate}
+    \item \textbf{Valutazione della funzione:} $f(0,0) = \ln(1) = 0$.
+    \item \textbf{Derivate prime:} 
+    \begin{itemize}
+        \item $f_x = \frac{1}{1+x+2y} \implies f_x(0,0) = 1$
+        \item $f_y = \frac{2}{1+x+2y} \implies f_y(0,0) = 2$
+    \end{itemize}
+    \item \textbf{Derivate seconde:}
+    \begin{itemize}
+        \item $f_{xx} = -\frac{1}{(1+x+2y)^2} \implies f_{xx}(0,0) = -1$
+        \item $f_{xy} = -\frac{2}{(1+x+2y)^2} \implies f_{xy}(0,0) = -2$
+        \item $f_{yy} = -\frac{4}{(1+x+2y)^2} \implies f_{yy}(0,0) = -4$
+    \end{itemize}
+    \item \textbf{Assemblaggio formula di Taylor:}
+    \[ P_2(x,y) = x + 2y + \frac{1}{2}\left[-x^2 - 4xy - 4y^2\right] = x + 2y - \frac{1}{2}x^2 - 2xy - 2y^2 \]
+\end{enumerate}
+
+% =========================================================================
+% SEZIONE 1: LA MATRICE HESSIANA E L'OTTIMIZZAZIONE LIBERA
+% =========================================================================
+\section{La Matrice Hessiana e l'Ottimizzazione Libera}
+
+L'ottimizzazione libera si occupa di determinare ed analizzare i punti di massimo e minimo di una funzione scalare definiti su un insieme aperto. Lo strumento fondamentale per l'analisi locale del second'ordine è la matrice Hessiana.
+
+\subsection{Definizione Analitica e il Teorema di Schwarz}
+Sia $f: A \subseteq \mathbb{R}^n \to \mathbb{R}$ una funzione definita su un insieme aperto $A$. Supponiamo che $f$ sia differenziabile due volte con continuità in $A$ (ovvero $f \in C^2(A)$). La \textbf{matrice Hessiana} di $f$ nel punto $\mathbf{x} = (x_1, x_2, \dots, x_n)$, denotata con $H_f(\mathbf{x})$ o $J^2 f(\mathbf{x})$, è la matrice quadrata $n \times n$ delle derivate parziali seconde:
+\[
+H_f(\mathbf{x}) = \begin{pmatrix}
+\frac{\partial^2 f}{\partial x_1^2} & \frac{\partial^2 f}{\partial x_1 \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_1 \partial x_n} \\[1.5ex]
+\frac{\partial^2 f}{\partial x_2 \partial x_1} & \frac{\partial^2 f}{\partial x_2^2} & \cdots & \frac{\partial^2 f}{\partial x_2 \partial x_n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{\partial^2 f}{\partial x_n \partial x_1} & \frac{\partial^2 f}{\partial x_n \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_n^2}
+\end{pmatrix}
+\]
+Grazie al \textbf{Teorema di Schwarz}, l'ipotesi $f \in C^2$ garantisce l'uguaglianza delle derivate parziali miste:
+\[ \frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{\partial^2 f}{\partial x_j \partial x_i} \quad \forall i,j \]
+Di conseguenza, la matrice Hessiana è sempre una **matrice simmetrica**. Questo fatto è di cruciale importanza poiché implica, per il teorema spettrale, che l'Hessiana possiede sempre autovalori reali ed è diagonalizzabile tramite una matrice ortogonale.
+
+\subsection{Giustificazione tramite la Formula di Taylor}
+La natura dei punti stazionari (punti in cui il gradiente si annulla, $\nabla f(\mathbf{x}_0) = \mathbf{0}$) viene dedotta dall'espansione in serie di Taylor della funzione centrata in un intorno di $\mathbf{x}_0$. Esprimendo lo sviluppo arrestato al secondo ordine si ottiene:
+\[ f(\mathbf{x}_0 + \mathbf{h}) = f(\mathbf{x}_0) + \nabla f(\mathbf{x}_0) \cdot \mathbf{h} + \frac{1}{2} \mathbf{h}^T H_f(\mathbf{x}_0) \mathbf{h} + o(\|\mathbf{h}\|^2) \]
+Laddove $\mathbf{h}$ rappresenta il vettore spostamento infinitesimo. Poiché $\mathbf{x}_0$ è un punto stazionario, il termine lineare $\nabla f(\mathbf{x}_0) \cdot \mathbf{h}$ si annulla identicamente. L'incremento locale della funzione $\Delta f = f(\mathbf{x}_0 + \mathbf{h}) - f(\mathbf{x}_0)$ è guidato dal termine quadratico:
+\[ f(\mathbf{x}_0 + \mathbf{h}) - f(\mathbf{x}_0) \approx \frac{1}{2} \mathbf{h}^T H_f(\mathbf{x}_0) \mathbf{h} \]
+L'espressione a destra definisce una **forma quadratica** associata alla matrice Hessiana. Il comportamento locale di $f$ (curvatura) dipende unicamente dal segno assunto da questa forma quadratica al variare di $\mathbf{h} \neq \mathbf{0}$.
+
+\subsection{Classificazione algebrica tramite Autovalori e Criterio di Sylvester}
+In base ai segni degli autovalori $\lambda_i$ di $H_f(\mathbf{x}_0)$, la forma quadratica e di riflesso il punto stazionario vengono così classificati:
+\begin{itemize}
+    \item \textbf{Definita Positiva ($\lambda_i > 0 \,\, \forall i$):} L'incremento $\Delta f$ è strettamente positivo in ogni direzione. Il grafico si flette verso l'alto; $\mathbf{x}_0$ è un punto di \textbf{minimo locale stretto}.
+    \item \textbf{Definita Negativa ($\lambda_i < 0 \,\, \forall i$):} L'incremento $\Delta f$ è strettamente negativo in ogni direzione. Il grafico si flette verso il basso; $\mathbf{x}_0$ è un punto di \textbf{massimo locale stretto}.
+    \item \textbf{Indefinita (autovalori di segno opposto):} L'incremento è positivo in alcune direzioni e negativo in altre. Il grafico assume la conformazione geometrica di una sella; $\mathbf{x}_0$ è un \textbf{punto di sella}.
+    \item \textbf{Semidefinita ($\lambda_i \ge 0$ o $\lambda_i \le 0$ con almeno un $\lambda_k = 0$):} Il termine del secondo ordine si annulla lungo specifiche direzioni. L'Hessiana non fornisce informazioni sufficienti; il test è \textbf{inconcludente} ed è necessario ricorrere a studi locali diretti o a derivate di ordine superiore.
+\end{itemize}
+
+\subsection{Metodologia Pratica}
+
+Nel caso bidimensionale con variabili $(x,y)$, lo studio algebrico degli autovalori può essere convenientemente sintetizzato calcolando il determinante dell'Hessiana $\det(H)$ e analizzando l'elemento sulla diagonale principale $f_{xx}$:
+\[ \det(H) = f_{xx}(x_0,y_0) \cdot f_{yy}(x_0,y_0) - \left[f_{xy}(x_0,y_0)\right]^2 \]
+L'algoritmo pratico prevede i seguenti passi sequenziali:
+\begin{enumerate}
+    \item Si calcola il gradiente $\nabla f(x,y)$ e si determinano i punti stazionari risolvendo il sistema algebrico $\nabla f(x,y) = (0,0)$.
+    \item Si calcolano le derivate parziali seconde per costruire la matrice Hessiana generica $H_f(x,y)$.
+    \item Si valuta la matrice Hessiana in ciascun punto stazionario isolato e si calcola $\det(H)$:
+    \begin{itemize}
+        \item Se $\det(H) > 0$ e $f_{xx} > 0$, il punto è di \textbf{minimo locale}.
+        \item Se $\det(H) > 0$ e $f_{xx} < 0$, il punto è di \textbf{massimo locale}.
+        \item Se $\det(H) < 0$, il punto è un \textbf{punto di sella}.
+        \item Se $\det(H) = 0$, il test fallisce (punto critico degenere).
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Esercizio Svolto Passo-Passo}
+
+\subsubsection{Testo ed Enunciato}
+Si determinino e si classifichino i punti stazionari della funzione $f: \mathbb{R}^2 \to \mathbb{R}$ definita da:
+\[ f(x,y) = x^3 - 12xy + 8y^3 \]
+
+\subsubsection{Risoluzione e Calcoli}
+\textbf{1. Ricerca dei punti stazionari:} Calcoliamo le derivate parziali prime di $f$ per determinare il gradiente:
+\[ f_x(x,y) = 3x^2 - 12y, \qquad f_y(x,y) = -12x + 24y^2 \]
+Uguagliando a zero le componenti del gradiente otteniamo il sistema non lineare:
+\[
+\begin{cases}
+3x^2 - 12y = 0 \implies y = \frac{1}{4}x^2 \\[1ex]
+-12x + 24y^2 = 0
+\end{cases}
+\]
+Sostituiamo l'espressione di $y$ ricavata dalla prima equazione all'interno della seconda equazione:
+\[ -12x + 24\left(\frac{1}{4}x^2\right)^2 = 0 \implies -12x + 24\left(\frac{1}{16}x^4\right) = 0 \implies -12x + \frac{3}{2}x^4 = 0 \]
+Moltiplicando per $2$ e raccogliendo a fattor comune il termine $3x$, l'equazione diventa:
+\[ 3x(x^3 - 8) = 0 \]
+Le soluzioni reali di questa equazione sono $x_1 = 0$ e $x_2 = 2$. Troviamo i rispettivi valori di $y$ sostituendo nella relazione $y = \frac{1}{4}x^2$:
+\begin{itemize}
+    \item Se $x_1 = 0 \implies y_1 = 0$. Otteniamo il primo punto stazionario: $P_1 = (0,0)$.
+    \item Se $x_2 = 2 \implies y_2 = \frac{1}{4}(4) = 1$. Otteniamo il secondo punto stazionario: $P_2 = (2,1)$.
+\end{itemize}
+
+\textbf{2. Costruzione della matrice Hessiana:} Calcoliamo le derivate parziali seconde partendo dalle derivate prime:
+\[ f_{xx} = \frac{\partial}{\partial x}(3x^2-12y) = 6x, \qquad f_{yy} = \frac{\partial}{\partial y}(-12x+24y^2) = 48y \]
+\[ f_{xy} = f_{yx} = \frac{\partial}{\partial y}(3x^2-12y) = -12 \]
+La matrice Hessiana generica assume la forma:
+\[ H_f(x,y) = \begin{pmatrix} 6x & -12 \\ -12 & 48y \end{pmatrix} \]
+
+\textbf{3. Valutazione e classificazione dei punti critici:}
+\begin{itemize}
+    \item \textbf{Analisi di $P_1(0,0)$:} Sostituendo le coordinate nell'Hessiana otteniamo:
+    \[ H_f(0,0) = \begin{pmatrix} 0 & -12 \\ -12 & 0 \end{pmatrix} \]
+    Calcoliamo il determinante: $\det(H) = (0 \cdot 0) - (-12)^2 = -144$. Poiché $\det(H) < 0$, la forma quadratica è indefinita. Di conseguenza, il punto $P_1 = (0,0)$ è un \textbf{punto di sella}.
+    
+    \item \textbf{Analisi di $P_2(2,1)$:} Sostituendo le coordinate nell'Hessiana otteniamo:
+    \[ H_f(2,1) = \begin{pmatrix} 6(2) & -12 \\ -12 & 48(1) \end{pmatrix} = \begin{pmatrix} 12 & -12 \\ -12 & 48 \end{pmatrix} \]
+    Calcoliamo il determinante: $\det(H) = (12 \cdot 48) - (-12)^2 = 576 - 144 = 432$. Essendo $\det(H) > 0$, esaminiamo il primo elemento diagonale: $f_{xx} = 12 > 0$. Poiché il determinante è positivo e la derivata seconda rispetto a $x$ è positiva, la matrice è definita positiva. Il punto $P_2 = (2,1)$ è un punto di \textbf{minimo locale}.
+\end{itemize}
+
+
+% =========================================================================
+% SEZIONE 2: IL METODO DEI MOLTIPLICATORI DI LAGRANGE
+% =========================================================================
+\section{Il Metodo dei Moltiplicatori di Lagrange}
+
+L'ottimizzazione vincolata si occupa di individuare gli estremi locali o assoluti di una funzione quando le variabili indipendenti sono obbligate a soddisfare una o più condizioni di uguaglianza geometrica.
+
+\subsection{Geometria del Vincolo e Condizione di Tangenza}
+Siano $f, g: A \subseteq \mathbb{R}^n \to \mathbb{R}$ due funzioni di classe $C^1$ su un aperto $A$. Il problema consiste nell'ottimizzare la funzione obiettivo $f(\mathbf{x})$ sotto la condizione che il punto appartenga all'insieme di livello (vincolo) definito da:
+\[ Z = \{ \mathbf{x} \in A \mid g(\mathbf{x}) = 0 \} \]
+Assumiamo che il vincolo sia regolare, il che significa che il gradiente della funzione vincolante non si annulla mai sui punti del vincolo ($\nabla g(\mathbf{x}) \neq \mathbf{0}$ per ogni $\mathbf{x} \in Z$). Da un punto di vista geometrico in $\mathbb{R}^2$, l'equazione $g(x,y)=0$ individua una curva di livello nel piano. 
+
+Se ci si sposta lungo la curva del vincolo $Z$, il valore di $f(x,y)$ varia continuamente. Nei punti in cui la curva del vincolo interseca in modo trasversale le curve di livello di $f$, la funzione obiettivo sta crescendo o decrescendo. Un punto di massimo o minimo vincolato può verificarsi solo laddove la curva del vincolo cessa di tagliare le curve di livello di $f$ e diventa ad esse perfettamente **tangente**. 
+Essendo le due curve tangenti nel punto di estremo vincolato $\mathbf{x}_0$, i loro vettori normali devono essere necessariamente paralleli e giacere sulla stessa retta d'azione. Poiché il gradiente di una funzione è sempre ortogonale alle proprie curve di livello, concludiamo che il gradiente della funzione obiettivo $\nabla f(\mathbf{x}_0)$ deve essere parallelo al gradiente del vincolo $\nabla g(\mathbf{x}_0)$.
+
+\subsection{Il Teorema dei Moltiplicatori di Lagrange}
+Il principio geometrico della tangenza è formalizzato rigorosamente dal seguente teorema:
+
+\begin{quote}
+\textbf{Teorema.} Sia $\mathbf{x}_0 \in A$ un punto di estremo locale per $f$ ristretta al vincolo $g(\mathbf{x}) = 0$. Se $f$ e $g$ sono funzioni di classe $C^1$ in un intorno di $\mathbf{x}_0$ e $\nabla g(\mathbf{x}_0) \neq \mathbf{0}$, allora esiste uno scalare $\lambda \in \mathbb{R}$ tale che:
+\[ \nabla f(\mathbf{x}_0) = \lambda \nabla g(\mathbf{x}_0) \]
+\end{quote}
+Il parametro reale $\lambda$ viene chiamato \textbf{moltiplicatore di Lagrange}. Questa equazione vettoriale esprime matematicamente la condizione di parallelismo dei gradienti discussa in precedenza.
+
+\subsection{La Funzione Lagrangiana}
+Per tradurre operativamente la condizione vettoriale di parallelismo unendola al rispetto del vincolo stesso, si definisce una nuova funzione scalare ausiliaria detta \textbf{Funzione Lagrangiana} $\mathcal{L}$, definita in uno spazio a $n+1$ dimensioni introducendo $\lambda$ come variabile aggiuntiva:
+\[ \mathcal{L}(\mathbf{x}, \lambda) = f(\mathbf{x}) - \lambda g(\mathbf{x}) \]
+Il grande vantaggio di questa formulazione risiede nel fatto che la ricerca dei punti di estremo vincolato per $f$ si riduce alla classica ricerca dei punti stazionari \textit{liberi} (non vincolati) per la funzione Lagrangiana $\mathcal{L}$. Infatti, calcolando il gradiente di $\mathcal{L}$ rispetto a tutte le sue variabili $(\mathbf{x}, \lambda)$ e ponendolo uguale a zero, si riottengono contemporaneamente le condizioni di parallelismo e l'equazione del vincolo.
+
+\subsection{Risoluzione del Sistema di Lagrange}
+Nel caso di due variabili $(x,y)$, la condizione di annullamento del gradiente della Lagrangiana $\nabla \mathcal{L}(x,y,\lambda) = \mathbf{0}$ si traduce in un sistema di tre equazioni (spesso non lineari) in tre incognite:
+\[
+\begin{cases}
+\frac{\partial \mathcal{L}}{\partial x} = \frac{\partial f}{\partial x}(x,y) - \lambda \frac{\partial g}{\partial x}(x,y) = 0 \\[1.5ex]
+\frac{\partial \mathcal{L}}{\partial y} = \frac{\partial f}{\partial y}(x,y) - \lambda \frac{\partial g}{\partial y}(x,y) = 0 \\[1.5ex]
+\frac{\partial \mathcal{L}}{\partial \lambda} = -g(x,y) = 0 \implies g(x,y) = 0
+\end{cases}
+\]
+L'algoritmo risolutivo prevede di ricavare le variabili spaziali in funzione di $\lambda$ dalle prime due equazioni e sostituirle all'interno della terza equazione per determinare i valori ammissibili del moltiplicatore. Una volta identificate le coordinate dei punti candidati $P_i = (x_i, y_i)$, per classificarli (qualora l'insieme del vincolo sia compatto, ossia chiuso e limitato come una circonferenza) si applica il **Teorema di Weierstrass**:
+\begin{enumerate}
+    \item Si valuta la funzione obiettivo originale $f(x,y)$ in ciascun punto trovato.
+    \item Il punto che restituisce il valore numerico più alto è il \textbf{massimo assoluto vincolato}.
+    \item Il punto che restituisce il valore numerico più basso è il \textbf{minimo assoluto vincolato}.
+\end{enumerate}
+
+\subsection{Esercizio Svolto Passo-Passo}
+
+\subsubsection{Testo ed Enunciato}
+Si determinino i punti di massimo e minimo della funzione obiettivo $f(x,y) = 2x + y$ vincolati sulla curva di livello definita dall'equazione $x^2 + y^2 = 5$.
+
+\subsubsection{Risoluzione e Calcoli}
+\textbf{1. Definizione del vincolo e della Lagrangiana:} Esprimiamo il vincolo in forma omogenea ponendolo uguale a zero: $g(x,y) = x^2 + y^2 - 5 = 0$. L'insieme descritto è una circonferenza centrata nell'origine di raggio $\sqrt{5}$, che costituisce un insieme compatto. Costruiamo la funzione Lagrangiana:
+\[ \mathcal{L}(x,y,\lambda) = (2x + y) - \lambda(x^2 + y^2 - 5) \]
+
+\textbf{2. Configurazione del sistema delle derivate parziali:} Calcoliamo le derivate di $\mathcal{L}$ rispetto a $x$, $y$ e $\lambda$ e poniamole uguali a zero:
+\[
+\begin{cases}
+\mathcal{L}_x = 2 - 2\lambda x = 0 \implies 2\lambda x = 2 \implies \lambda x = 1 \\[1ex]
+\mathcal{L}_y = 1 - 2\lambda y = 0 \implies 2\lambda y = 1 \\[1ex]
+\mathcal{L}_\lambda = -(x^2 + y^2 - 5) = 0 \implies x^2 + y^2 = 5
+\end{cases}
+\]
+
+\textbf{3. Risoluzione algebrica del sistema:} Osserviamo dalle prime due equazioni che $\lambda$ non può essere zero (se $\lambda = 0$, otterremmo $2=0$ e $1=0$, il che è impossibile). Possiamo quindi esplicitare $x$ e $y$ in funzione di $\lambda$:
+\[ x = \frac{1}{\lambda}, \qquad y = \frac{1}{2\lambda} \]
+Sostituiamo queste due espressioni all'interno della terza equazione (il vincolo geometrico):
+\[ \left(\frac{1}{\lambda}\right)^2 + \left(\frac{1}{2\lambda}\right)^2 = 5 \implies \frac{1}{\lambda^2} + \frac{1}{4\lambda^2} = 5 \]
+Troviamo il minimo comune denominatore a sinistra:
+\[ \frac{4 + 1}{4\lambda^2} = 5 \implies \frac{5}{4\lambda^2} = 5 \]
+Dividendo entrambi i membri per $5$ si ottiene:
+\[ \frac{1}{4\lambda^2} = 1 \implies 4\lambda^2 = 1 \implies \lambda^2 = \frac{1}{4} \implies \lambda = \pm \frac{1}{2} \]
+
+Abbiamo ottenuto due valori distinti per il moltiplicatore di Lagrange. Ricaviamo le coordinate dei punti corrispondenti:
+\begin{itemize}
+    \item \textbf{Caso 1: $\lambda = \frac{1}{2}$}.
+    \[ x = \frac{1}{1/2} = 2, \qquad y = \frac{1}{2(1/2)} = 1 \]
+    Identifichiamo il primo punto candidato: $A = (2,1)$.
+    
+    \item \textbf{Caso 2: $\lambda = -\frac{1}{2}$}.
+    \[ x = \frac{1}{-1/2} = -2, \qquad y = \frac{1}{2(-1/2)} = -1 \]
+    Identifichiamo il secondo punto candidato: $B = (-2,-1)$.
+\end{itemize}
+
+\textbf{4. Valutazione finale secondo Weierstrass:} Valutiamo la funzione obiettivo originale $f(x,y) = 2x + y$ nei punti estratti:
+\[ f(A) = f(2,1) = 2(2) + 1 = 5 \]
+\[ f(B) = f(-2,-1) = 2(-2) + (-1) = -5 \]
+Per il Teorema di Weierstrass, concludiamo che il punto $A = (2,1)$ è il \textbf{punto di massimo assoluto vincolato} (dove la funzione vale $5$), mentre il punto $B = (-2,-1)$ è il \textbf{punto di minimo assoluto vincolato} (dove la funzione assume valore $-5$).
