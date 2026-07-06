@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.2)  28 JUN 2026 16:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.2)  6 JUL 2026 20:44
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -934,7 +934,9 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count420
-) (./main.aux (./Capitoli/Processi software.aux) (./Capitoli/Analisi dei requisiti.aux) (./Capitoli/Pattern GRASP.aux) (./Capitoli/Design Pattern.aux) (./Capitoli/Visibilità.aux) (./Capitoli/Test Driven Development.aux) (./Capitoli/Refactoring.aux))
+) (./main.aux (./Capitoli/Processi software.aux) (./Capitoli/Pattern GRASP.aux) (./Capitoli/Pattern GRASP.aux) (./Capitoli/Design Pattern.aux) (./Capitoli/Test Driven Development.aux) (./Capitoli/Refactoring.aux)
+No file Capitoli/.aux.
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -1023,53 +1025,23 @@ Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 10.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] (./main.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4.
- (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
- (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
- (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
- (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 4.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 4.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 4.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.47 ...ine {6.2.1}Problema}{19}{subsection.6.2.1}
-                                                  % [1
-
-] [2] [3])
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [4]
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40 \clearpage
+                [1
+
+]
 \openout2 = `"Capitoli/Processi software.aux"'.
 
  (./Capitoli/Processi software.tex
 Capitolo 1.
-<Immagini/Schermata_20260622_003055.png, id=402, 389.20406pt x 225.84375pt>
+<Immagini/Schermata_20260622_003055.png, id=55, 389.20406pt x 225.84375pt>
 File: Immagini/Schermata_20260622_003055.png Graphic file (type png)
 <use Immagini/Schermata_20260622_003055.png>
 Package pdftex.def Info: Immagini/Schermata_20260622_003055.png  used on input line 11.
@@ -1077,102 +1049,145 @@ Package pdftex.def Info: Immagini/Schermata_20260622_003055.png  used on input l
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 25.
 (/usr/share/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [5
+) [2
 
 
 
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./Immagini/Schermata_20260622_003055.png>] [6]
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./Immagini/Schermata_20260622_003055.png>] [3]
 Capitolo 2.
-<Immagini/Schermata_20260622_015533.png, id=422, 756.57657pt x 402.75468pt>
+<Immagini/Schermata_20260622_015533.png, id=78, 756.57657pt x 402.75468pt>
 File: Immagini/Schermata_20260622_015533.png Graphic file (type png)
 <use Immagini/Schermata_20260622_015533.png>
 Package pdftex.def Info: Immagini/Schermata_20260622_015533.png  used on input line 68.
 (pdftex.def)             Requested size: 453.94945pt x 241.65466pt.
+[4
+
+] [5 <./Immagini/Schermata_20260622_015533.png>] [6]
+Capitolo 3.
 [7
 
-] [8 <./Immagini/Schermata_20260622_015533.png>] [9]
-Capitolo 3.
-[10
-
-] [11]
+] [8]
 Capitolo 4.
-[12
+[9
 
 ]
-<Immagini/Schermata_20260622_035212.png, id=454, 428.35031pt x 213.04594pt>
+<Immagini/Schermata_20260622_035212.png, id=128, 428.35031pt x 213.04594pt>
 File: Immagini/Schermata_20260622_035212.png Graphic file (type png)
 <use Immagini/Schermata_20260622_035212.png>
 Package pdftex.def Info: Immagini/Schermata_20260622_035212.png  used on input line 152.
 (pdftex.def)             Requested size: 342.68071pt x 170.43697pt.
- [13 <./Immagini/Schermata_20260622_035212.png>]) [14]
-\openout2 = `"Capitoli/Analisi dei requisiti.aux"'.
-
-
-No file Capitoli/Analisi dei requisiti.tex.
+ [10 <./Immagini/Schermata_20260622_035212.png>]) [11]
 \openout2 = `"Capitoli/Pattern GRASP.aux"'.
 
-(./Capitoli/Pattern GRASP.tex
+ (./Capitoli/Pattern GRASP.tex
 Capitolo 5.
-[15
-
-
-
+[12
 
 
 
 
 ]
-<Immagini/Schermata_20260618_120508.png, id=469, 435.87843pt x 501.37312pt>
+<Immagini/Schermata_20260618_120508.png, id=152, 435.87843pt x 501.37312pt>
 File: Immagini/Schermata_20260618_120508.png Graphic file (type png)
 <use Immagini/Schermata_20260618_120508.png>
 Package pdftex.def Info: Immagini/Schermata_20260618_120508.png  used on input line 32.
 (pdftex.def)             Requested size: 473.73518pt x 544.91754pt.
- [16 <./Immagini/Schermata_20260618_120508.png>]
+ (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd) (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd) (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd) (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd) (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd) [13 <./Immagini/Schermata_20260618_120508.png>]
 Capitolo 6.
-[17
+[14
 
 ]
-<Immagini/Schermata_20260618_152238.png, id=484, 504.38437pt x 338.76563pt>
+<Immagini/Schermata_20260618_152238.png, id=176, 504.38437pt x 338.76563pt>
 File: Immagini/Schermata_20260618_152238.png Graphic file (type png)
 <use Immagini/Schermata_20260618_152238.png>
 Package pdftex.def Info: Immagini/Schermata_20260618_152238.png  used on input line 108.
 (pdftex.def)             Requested size: 378.28734pt x 254.07358pt.
-<Immagini/Schermata_20260618_152341.png, id=485, 518.6878pt x 255.20343pt>
+<Immagini/Schermata_20260618_152341.png, id=177, 518.6878pt x 255.20343pt>
 File: Immagini/Schermata_20260618_152341.png Graphic file (type png)
 <use Immagini/Schermata_20260618_152341.png>
 Package pdftex.def Info: Immagini/Schermata_20260618_152341.png  used on input line 113.
 (pdftex.def)             Requested size: 389.0149pt x 191.4021pt.
-<Immagini/Schermata_20260618_152605.png, id=486, 464.4853pt x 177.66376pt>
+<Immagini/Schermata_20260618_152605.png, id=178, 464.4853pt x 177.66376pt>
 File: Immagini/Schermata_20260618_152605.png Graphic file (type png)
 <use Immagini/Schermata_20260618_152605.png>
 Package pdftex.def Info: Immagini/Schermata_20260618_152605.png  used on input line 119.
 (pdftex.def)             Requested size: 348.36313pt x 133.24748pt.
- [18 <./Immagini/Schermata_20260618_152238.png> <./Immagini/Schermata_20260618_152341.png>] [19 <./Immagini/Schermata_20260618_152605.png>]
-<Immagini/Schermata_20260618_153741.png, id=506, 441.90094pt x 155.07938pt>
+ [15 <./Immagini/Schermata_20260618_152238.png> <./Immagini/Schermata_20260618_152341.png>] [16 <./Immagini/Schermata_20260618_152605.png>]
+<Immagini/Schermata_20260618_153741.png, id=204, 441.90094pt x 155.07938pt>
 File: Immagini/Schermata_20260618_153741.png Graphic file (type png)
 <use Immagini/Schermata_20260618_153741.png>
 Package pdftex.def Info: Immagini/Schermata_20260618_153741.png  used on input line 176.
 (pdftex.def)             Requested size: 441.89986pt x 155.07898pt.
-<Immagini/Schermata_20260618_153833.png, id=507, 230.36063pt x 122.70844pt>
+<Immagini/Schermata_20260618_153833.png, id=205, 230.36063pt x 122.70844pt>
 File: Immagini/Schermata_20260618_153833.png Graphic file (type png)
 <use Immagini/Schermata_20260618_153833.png>
 Package pdftex.def Info: Immagini/Schermata_20260618_153833.png  used on input line 181.
 (pdftex.def)             Requested size: 230.36005pt x 122.70813pt.
- [20 <./Immagini/Schermata_20260618_153741.png> <./Immagini/Schermata_20260618_153833.png>] [21] [22] [23] [24]
+ [17 <./Immagini/Schermata_20260618_153741.png> <./Immagini/Schermata_20260618_153833.png>] [18] [19] [20] [21]
 Capitolo 7.
 
 Underfull \hbox (badness 1838) in paragraph at lines 346--346
 []|\T1/lmr/m/n/12 Come as-se-gna-re una re-spon-sa-bi-li-t� sen-za vio-la-re al-ta coe-sio-ne e bas-so
  []
 
-[25
+[22
 
-] [26] [27]) [28]
+] [23] [24]) [25]
+\openout2 = `"Capitoli/Pattern GRASP.aux"'.
+
+ (./Capitoli/Pattern GRASP.tex
+Capitolo 8.
+[26
+
+
+
+
+]
+File: Immagini/Schermata_20260618_120508.png Graphic file (type png)
+<use Immagini/Schermata_20260618_120508.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_120508.png  used on input line 32.
+(pdftex.def)             Requested size: 473.73518pt x 544.91754pt.
+ [27]
+Capitolo 9.
+[28
+
+]
+File: Immagini/Schermata_20260618_152238.png Graphic file (type png)
+<use Immagini/Schermata_20260618_152238.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_152238.png  used on input line 108.
+(pdftex.def)             Requested size: 378.28734pt x 254.07358pt.
+File: Immagini/Schermata_20260618_152341.png Graphic file (type png)
+<use Immagini/Schermata_20260618_152341.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_152341.png  used on input line 113.
+(pdftex.def)             Requested size: 389.0149pt x 191.4021pt.
+File: Immagini/Schermata_20260618_152605.png Graphic file (type png)
+<use Immagini/Schermata_20260618_152605.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_152605.png  used on input line 119.
+(pdftex.def)             Requested size: 348.36313pt x 133.24748pt.
+ [29] [30]
+File: Immagini/Schermata_20260618_153741.png Graphic file (type png)
+<use Immagini/Schermata_20260618_153741.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_153741.png  used on input line 176.
+(pdftex.def)             Requested size: 441.89986pt x 155.07898pt.
+File: Immagini/Schermata_20260618_153833.png Graphic file (type png)
+<use Immagini/Schermata_20260618_153833.png>
+Package pdftex.def Info: Immagini/Schermata_20260618_153833.png  used on input line 181.
+(pdftex.def)             Requested size: 230.36005pt x 122.70813pt.
+ [31] [32] [33] [34] [35]
+Capitolo 10.
+
+Underfull \hbox (badness 1838) in paragraph at lines 346--346
+[]|\T1/lmr/m/n/12 Come as-se-gna-re una re-spon-sa-bi-li-t� sen-za vio-la-re al-ta coe-sio-ne e bas-so
+ []
+
+[36
+
+] [37] [38]) [39]
 \openout2 = `"Capitoli/Design Pattern.aux"'.
 
  (./Capitoli/Design Pattern.tex
-Capitolo 8.
-[29
+Capitolo 11.
+[40
 
 
 
@@ -1187,56 +1202,36 @@ Underfull \hbox (badness 1275) in paragraph at lines 23--23
 []|\T1/lmr/m/n/12 Converti l'in-ter-fac-cia ori-gi-na-le di un com-po-nen-te in un'al-tra in-ter-fac-cia,
  []
 
-[30] [31]
+[41] [42]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 109.
  (/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [32]
+) [43]
 Underfull \hbox (badness 1867) in paragraph at lines 131--131
 []|\T1/lmr/m/n/12 Definisci cia-sun al-go-rit-mo/politica/strategia in una clas-se se-pa-ra-ta, con
  []
 
-[33] [34]
+[44] [45]
 Underfull \hbox (badness 2469) in paragraph at lines 193--193
 []\T1/lmr/m/n/12 Accedervi crea ac-cop-pia-men-to in-de-si-de-ra-to o espo-ne ai mu-ta-men-ti del
  []
 
-[35]) [36]
-\openout2 = `Capitoli/Visibilità.aux'.
-
- (./Capitoli/Visibilità.tex
-Capitolo 9.
-<Immagini/Schermata_20260621_223015.png, id=642, 578.91281pt x 240.9pt>
-File: Immagini/Schermata_20260621_223015.png Graphic file (type png)
-<use Immagini/Schermata_20260621_223015.png>
-Package pdftex.def Info: Immagini/Schermata_20260621_223015.png  used on input line 17.
-(pdftex.def)             Requested size: 347.35036pt x 144.5411pt.
-<Immagini/Schermata_20260621_223319.png, id=643, 547.2947pt x 228.10219pt>
-File: Immagini/Schermata_20260621_223319.png Graphic file (type png)
-<use Immagini/Schermata_20260621_223319.png>
-Package pdftex.def Info: Immagini/Schermata_20260621_223319.png  used on input line 27.
-(pdftex.def)             Requested size: 410.47pt x 171.0762pt.
-[37
-
-
-
-
- <./Immagini/Schermata_20260621_223015.png> <./Immagini/Schermata_20260621_223319.png>]) [38]
+[46]) [47]
 \openout2 = `"Capitoli/Test Driven Development.aux"'.
 
  (./Capitoli/Test Driven Development.tex
-Capitolo 10.
-[39
+Capitolo 12.
+[48
 
 
 
 
-]) [40]
+]) [49]
 \openout2 = `Capitoli/Refactoring.aux'.
 
  (./Capitoli/Refactoring.tex
-Capitolo 11.
-[41
+Capitolo 13.
+[50
 
 
 
@@ -1277,25 +1272,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--123
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [42]) [43] (./main.aux (./Capitoli/Processi software.aux) (./Capitoli/Analisi dei requisiti.aux) (./Capitoli/Pattern GRASP.aux) (./Capitoli/Design Pattern.aux) (./Capitoli/Visibilità.aux) (./Capitoli/Test Driven Development.aux) (./Capitoli/Refactoring.aux))
+ignored: Infinite glue shrinkage found in box being split [51]) [52]
+\openout2 = `Capitoli/Visibilità.aux'.
+
+ (./Capitoli/Visibilità.tex
+Capitolo 14.
+<Immagini/Schermata_20260621_223015.png, id=658, 578.91281pt x 240.9pt>
+File: Immagini/Schermata_20260621_223015.png Graphic file (type png)
+<use Immagini/Schermata_20260621_223015.png>
+Package pdftex.def Info: Immagini/Schermata_20260621_223015.png  used on input line 17.
+(pdftex.def)             Requested size: 347.35036pt x 144.5411pt.
+<Immagini/Schermata_20260621_223319.png, id=659, 547.2947pt x 228.10219pt>
+File: Immagini/Schermata_20260621_223319.png Graphic file (type png)
+<use Immagini/Schermata_20260621_223319.png>
+Package pdftex.def Info: Immagini/Schermata_20260621_223319.png  used on input line 27.
+(pdftex.def)             Requested size: 410.47pt x 171.0762pt.
+[53
+
+
+
+
+ <./Immagini/Schermata_20260621_223015.png> <./Immagini/Schermata_20260621_223319.png>]) [54] (./main.aux (./Capitoli/Processi software.aux) (./Capitoli/Pattern GRASP.aux) (./Capitoli/Pattern GRASP.aux) (./Capitoli/Design Pattern.aux) (./Capitoli/Test Driven Development.aux) (./Capitoli/Refactoring.aux) (./Capitoli/Visibilità.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 37051 strings out of 468824
- 761079 string characters out of 5452438
- 1303674 words of memory out of 5000000
- 64779 multiletter control sequences out of 15000+600000
+ 37223 strings out of 468824
+ 762260 string characters out of 5452438
+ 1300246 words of memory out of 5000000
+ 64831 multiletter control sequences out of 15000+600000
  684564 words of font info for 80 fonts, out of 8000000 for 9000
  395 hyphenation exceptions out of 8191
  91i,9n,107p,1575b,746s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (44 pages, 888523 bytes).
+Output written on main.pdf (55 pages, 910166 bytes).
 PDF statistics:
- 1304 PDF objects out of 1440 (max. 8388607)
- 1185 compressed objects within 12 object streams
- 309 named destinations out of 1000 (max. 500000)
- 1548 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1519 PDF objects out of 1728 (max. 8388607)
+ 1387 compressed objects within 14 object streams
+ 430 named destinations out of 1000 (max. 500000)
+ 2084 words of extra memory for PDF output out of 10000 (max. 10000000)
 

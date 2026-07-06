@@ -1,0 +1,101 @@
+\chapter{Interrogazioni di tipi insiemistico}
+\section{Operatori insiemistici}
+Permettono di costruire query concatenando due query SQL
+\begin{itemize}
+    \item UNION
+    \item INTERSECT
+    \item EXCEPT (Differenza)
+\end{itemize}
+
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SelctSQL{< UNION / INTERSECT / EXCEPT > [ALL] SelectSQL}
+\end{lstlisting}
+
+I duplicati vengono eliminati (a meno che si usi ALL)
+
+
+\section{UNION}
+\subsection{Cosa fa?}
+Esegue l'unione dei risultati delle 2 query.
+
+L'operatore UNION impone alcune restrizioni sulle interrogazioni su cui opera:
+\begin{itemize}
+    \item Le interrogazioni devono restituire lo stesso numero di colonne, e le colonne corrispondenti devono avere lo stesso dominio o domini compatibili
+    \item La corrispondenza si basa sulla posizione delle colonne indipendentemente dal loro nome
+    \item Se si usa la clausola di ORBER BY queste deve essere usata una sola volta alla fine dell'interrogazione e non alla fine di ogni select
+\end{itemize}
+
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SelctSQL{ UNION [ALL] SelectSQL}
+\end{lstlisting}
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT CodOrd 
+FROM Ordine 
+WHERE Importo > 500
+
+UNION 
+
+SELECT CodOrd 
+FROM Dettaglio 
+WHERE Qta > 1000;
+\end{lstlisting}
+
+\section{INTERSECT}
+\subsection{Cosa fa?}
+Esegue l'intersezione dei risultati delle 2 query.
+
+L'operatore INTERSECT impone alcune restrizioni sulle interrogazioni su cui opera:
+\begin{itemize}
+    \item Le interrogazioni devono restituire lo stesso numero di colonne, e le colonne corrispondenti devono avere lo stesso dominio o domini compatibili
+    \item La corrispondenza si basa sulla posizione delle colonne indipendentemente dal loro nome
+    \item Se si usa la clausola di ORBER BY queste deve essere usata una sola volta alla fine dell'interrogazione e non alla fine di ogni select
+\end{itemize}
+
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SelctSQL{ INTERSECT [ALL] SelectSQL}
+\end{lstlisting}
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT CodOrd 
+FROM Ordine 
+WHERE Importo > 500
+
+INTERSECT
+
+SELECT CodOrd 
+FROM Dettaglio 
+WHERE Qta > 1000;
+\end{lstlisting}
+
+\section{EXCEPT}
+\subsection{Cosa fa?}
+Esegue la differenza dei risultati delle 2 query.
+
+L'operatore EXCPET impone alcune restrizioni sulle interrogazioni su cui opera:
+\begin{itemize}
+    \item Le interrogazioni devono restituire lo stesso numero di colonne, e le colonne corrispondenti devono avere lo stesso dominio o domini compatibili
+    \item La corrispondenza si basa sulla posizione delle colonne indipendentemente dal loro nome
+    \item Se si usa la clausola di ORBER BY queste deve essere usata una sola volta alla fine dell'interrogazione e non alla fine di ogni select
+\end{itemize}
+
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SelectSQL { EXCEPT [ ALL ] SelectSQL }
+\end{lstlisting}
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT Nome 
+FROM Impiegato
+
+EXCEPT 
+
+SELECT Cognome AS Nome 
+FROM Impiegato;
+\end{lstlisting}

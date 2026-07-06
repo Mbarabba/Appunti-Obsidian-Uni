@@ -1,0 +1,186 @@
+\chapter{Ordinamento dei risulati}
+\section{ORDER BY}
+\subsection{Cosa è?}
+L'ORDER BY è una clausola opzionale che si inserisce al termina di una query SELECT per ordinare le righe del risultato in baso ai valori di una o più colonne
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT colonna1, colonna2, ...
+FROM NomeTabella
+[WHERE condizioni_di_filtro]
+ORDER BY colonnaA [ASC | DESC], colonnaB [ASC | DESC];
+\end{lstlisting}
+\subsubsection{Ordinamento}
+\begin{itemize}
+    \item \textbf{Ascendente (ASC)} è default e può essere omesso
+    \item \textbf{Discendente (DESC)}
+\end{itemize}
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT 
+    UCASE(I.Nome) AS Nome_Impiegato,
+    ((I.Stipendio + I.Premio) * 13) AS Guadagno_Annuo_Stimato,
+    D.Citta AS Sede_Dipartimento
+FROM Impiegato AS I
+JOIN Dip AS D 
+  ON I.Dipart = D.Nome
+WHERE UCASE(I.Mansione) = 'INGEGNERE'
+ORDER BY Guadagno_Annuo_Stimato DESC, Nome_Impiegato ASC;
+\end{lstlisting}
+
+\section{Operatori di aggregazione}
+\subsection{Quali sono?}
+\begin{itemize}
+    \item \textbf{COUNT:} conta numero di tuple di tabella
+    \item \textbf{SUM:} somma i valori o espressioni di attributi
+    \item \textbf{MAX:} valore massimo di un attributo di tabella
+    \item \textbf{MIN:} valore minimo di un attributo di tabella
+    \item \textbf{AVG:} valore medio di un attributo di tabella
+    \item \textbf{GROUP BY:} raggruppamento delle tuple in sottogrupi gestiti come estensione delle normali interrogazioni
+\end{itemize}
+\subsection{Come vengono applicati?}
+\begin{enumerate}
+    \item Si esegue l'interrogazione sulla base di clausole FROM e WHERE
+    \item Si applica l'operatore aggregato alla tabella risultato dell'interrogazione
+\end{enumerate}
+
+\section{COUNT}
+\subsection{Cosa fa?}
+Restituisce il numero di valori degli attributi in ListaAttr
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+COUNT (< * | [DISTINCT | ALL] ListaAttr >)
+\end{lstlisting}
+\begin{itemize}
+    \item \textbf{DISTINCT:} numero di valori distinti diversi da NULL di ListaAttr
+    \item \textbf{ALL:} numero di valori diversi da NULL di ListaAttr
+    \item \textbf{COUNT (*):} conta numero di righe di una tabella
+\end{itemize}
+Se non è specificato nulla, ALL è l'opzione di default
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT 
+    D.Nome AS Nome_Dipartimento,
+    D.Citta AS Sede,
+    COUNT(I.Matricola) AS Numero_Impiegati
+FROM Dip AS D
+JOIN Impiegato AS I 
+  ON D.Nome = I.Dipart
+WHERE I.Stipendio > 1500
+GROUP BY D.Nome, D.Citta
+HAVING COUNT(I.Matricola) > 2
+ORDER BY Numero_Impiegati DESC;
+\end{lstlisting}
+
+\section{SUM}
+\subsection{Cosa fa?}
+Restituisce la somma dei valori di AttrExpr relativamente alle tuple di tabella specificate nella query, opera su attributi numerici
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT SUM(nome_colonna) AS nome_alias
+FROM NomeTabella
+[WHERE condizioni_di_filtro];
+\end{lstlisting}
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT SUM(Stipendio) AS Spesa_Totale_Stipendi
+FROM Impiegato;
+\end{lstlisting}
+
+\section{MIN/MAX}
+\subsection{Cosa fa?}
+Restituisce il massimo/minimo dei valori di AttrExpr relativamente alle tuple di tabella specificate nella query, opera su attributi  ordinabili
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT 
+    MIN(nome_colonna) AS minimo_alias,
+    MAX(nome_colonna) AS massimo_alias
+FROM NomeTabella
+[WHERE condizioni_di_filtro];
+\end{lstlisting}
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT 
+    MIN(Stipendio) AS Stipendio_Minimo,
+    MAX(Stipendio) AS Stipendio_Massimo
+FROM Impiegato;
+\end{lstlisting}
+
+\section{AVG}
+\subsection{Cosa fa?}
+Restituisce la media dei valori di AttrExpr relativamente alle tuple di tabella specificate nella query, opera su valori numerici
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT AVG(nome_colonna) AS nome_alias
+FROM NomeTabella
+[WHERE condizioni_di_filtro];
+\end{lstlisting}
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT AVG(Stipendio) AS Stipendio_Medio_Aziendale
+FROM Impiegato;
+\end{lstlisting}
+
+\section{Target List}
+SQL impedisce di includere in una stessa target list funzioni aggregate e espressioni al livello di riga
+
+\begin{lstlisting}[language=sql_generic]
+SELECT Cognome, MAX(Stipendio) -- Questa cosa non si puo fare
+FROM Impiegato
+WHERE Dipart = "Amministrazione"
+\end{lstlisting}
+
+È necessario ricorrere alle subquery, che si vedranno più avanti
+
+\section{Operatore di aggregamento GROUP BY}
+\subsection{Cosa è?}
+La GROUP BY è una clausola dell'istruzione SELECT utilizzata per raggruppare le righe di una tabella che condividono gli stessi valori in una o più colonne specificate.
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT colonna_di_raggruppamento, FUNZIONE_AGGREGATA(altra_colonna)
+FROM NomeTabella
+[WHERE filtri_sulle_singole_righe]
+GROUP BY colonna_di_raggruppamento
+[HAVING filtri_sui_gruppi_creati]
+[ORDER BY criterio_di_ordinamento];
+\end{lstlisting}
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT Dipart, AVG(Stipendio) AS Stipendio_Medio
+FROM Impiegato
+GROUP BY Dipart;
+\end{lstlisting}
+
+\section{Condizioni WHERE e HAVING}
+Specificano entrambi condizioni di selezione:
+\begin{itemize}
+    \item \textbf{WHERE:} Predicati che operano su tuple individuabili (seleziona di tuple prima di GROUP BY)
+    \item \textbf{HAVING:} Predicati che operano su gruppi di tuple creati da GROUP BY (selezioni raggruppamenti)
+\end{itemize}
+
+\subsection{Sintassi WHERE}
+\begin{lstlisting}[language=sql_generic]
+WHERE attributo OPERATORE valore_o_costante
+  [ AND | OR | NOT altra_condizione ];
+\end{lstlisting}
+
+\subsection{Esempio di uso di WHERE}
+\begin{lstlisting}[language=sql_generic]
+SELECT Cognome, Stipendio
+FROM Impiegato
+WHERE Dipart = 'Amministrazione' AND Stipendio > 1500;
+\end{lstlisting}
+
+\subsection{Sintassi HAVING}
+\begin{lstlisting}[language=sql_generic]
+GROUP BY colonna_raggruppata
+HAVING FUNZIONE_AGGREGATA(colonna) OPERATORE valore;
+\end{lstlisting}
+
+\subsection{Esempio di uso di HAVING}
+\begin{lstlisting}[language=sql_generic]
+SELECT Dipart, AVG(Stipendio) AS AvgStipendio
+FROM Impiegato
+GROUP BY Dipart
+HAVING COUNT(*) >= 2; -- Mantiene solo i dipartimenti con almeno 2 impiegati
+\end{lstlisting}

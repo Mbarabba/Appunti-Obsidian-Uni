@@ -1,0 +1,93 @@
+\chapter{Interrogazioni Nidificate}
+\section{Cosa sono?}
+Una delle ragioni che rendono SQL un linguaggio potente è la possibilità di esprimere Interrogazioni più complesse in termini di interrogazioni più semplici, tramite il meccanismo delle subqueries
+
+\section{Come funzionano?}
+La clauso WHERE di una query può contenere un'altra query.
+
+La subquery viene usata per determinare uno o più valori da usare come valori di confronto in un predicato della query esterna
+
+\section{Sintassi Subquery}
+\begin{lstlisting}[language=sql_generic]
+SELECT <lista_attributi>
+FROM <tabella>
+WHERE <valore_scalare> <operatore_confronto> [ANY | ALL] 
+    (   SELECT <colonna> 
+        FROM <tabella_sottoquery> 
+        [WHERE <condizioni>] 
+    );
+\end{lstlisting}
+
+\section{Predicati ANY e ALL}
+Nella clausola WHERE possno comparire predicati che confrontano un attributo (o un'espressione sugli attributi) con il risultato di una query SQL
+
+\begin{itemize}
+    \item \textbf{ANY:} Il predicato è vero se almeno una riga restituita dalla query SelectSQL soddisfa il controllo
+    \item \textbf{ALL:} Il predicato è vero se tutte le righe restituite dalla query SelectSQL soddisfano il confonto
+\end{itemize}
+
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+ScalarValue Operator <ANY | ALL> SelectSQL
+\end{lstlisting}
+
+L'Operato può essere uno tra : =, <>, <, <=, >, >=
+
+\subsection{Esempio}
+\subsubsection{ANY}
+\begin{lstlisting}[language=sql_generic]
+SELECT Cognome  
+FROM Impiegato 
+WHERE Dipart = ANY (SELECT Nome
+                    FROM Dip            
+                    WHERE Citta = 'Milano');
+\end{lstlisting}
+
+\subsubsection{ALL}
+\begin{lstlisting}[language=sql_generic]
+SELECT Nome, Cognome 
+FROM Impiegato 
+WHERE Stipendio >= ALL (SELECT Stipendio 
+                        FROM Impiegato);
+\end{lstlisting}
+
+\section{Quantificatori esistenziali}
+EXISTS e NOT EXISTS ammettono come parametro le query nidificate.
+
+\subsection{EXISTS}
+L'operatore logico EXISTS restituisce il valore booleano true se la subquery restituisce almeno una tupla, false altrimenti
+
+\subsubsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+EXISTS SelectStar
+\end{lstlisting}
+
+\subsubsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT A.Citta, A.Nazione
+FROM AEROPORTO AS A
+WHERE EXISTS (SELECT * FROM VOLO AS V 
+              WHERE V.CittaPart = A.Citta);
+\end{lstlisting}
+
+\subsection{NOT EXISTS}
+L'operatore NOT EXISTS restituisce il valore booleano true se la subquery non restituisce alcuna tupla, false altrimenti
+
+\subsubsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+NOT EXISTS SelectStar
+\end{lstlisting}
+
+\subsubsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT O.CodOrd
+FROM Ordine AS O
+WHERE NOT EXISTS (
+    SELECT * FROM Prodotto AS P
+    WHERE NOT EXISTS (
+        SELECT * FROM Dettaglio AS D
+        WHERE D.CodOrd = O.CodOrd 
+          AND D.CodProd = P.CodProd
+    )
+);
+\end{lstlisting}

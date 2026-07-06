@@ -1,0 +1,38 @@
+\chapter{Viste}
+\section{Cosa sono?}
+Una vista è una relazione virtuale attraverso è possibile vedere i dati memorizzati nella relazioni reali, chiamate relazioni di base.
+
+\section{Proprietà fondamentali}
+\begin{itemize}
+    \item \textbf{Natura virtuale:} Una vista non contiene tuple fisiche al suo interno.\\
+    I suoi dati vengono materializzati dinamicamente eseguendo l'interrogazione (query) che la definisce
+    \item \textbf{Utilizzo:} Può essere utilizzata (quasi) nello stesso modo in cui si usa una normale relazione di base
+    \item \textbf{Definizione:} Viene definita mediamente un'integraione su una o più relazioni di base, oppure basandosi su altre viste preesistenti.\\
+    Si crea associando un nome univoco e una lista di attributi al risultato di tale integrazione
+\end{itemize}
+
+\section{A cosa servono?}
+Il meccanismo delle viste è particolarmente utile per due scopi principali:
+\begin{itemize}
+    \item \textbf{Semplificare l'accesso ai dati:} Permette di salvare query complesse sotto un unico nome, rendendo le successive interrogazioni molto più semplici.
+    \item \textbf{Garantire la privatezza dei dati:} Consente di mostrare a determinati utenti solo una parte specifica dei dati (un sottoinsieme di righe o colonne), nascondendo il resto della relazione di base
+\end{itemize}
+
+\section{Sintassi}
+\begin{lstlisting}
+CREATE VIEW NomeVista [(ListaAttributi)] AS query
+\end{lstlisting}
+\begin{itemize}
+    \item \textbf{NomeVista:} È il nome della vista che viene create, tale nome deve essere unico rispetto a tutti i nomi di relazioni e di viste definite dallo stesso utente che la definisce
+    \item \textbf{query:} È l'interrogazione di definizione della vista.\\
+    Una vista ha lo stesso numero di colonne pari alle colonne (di base o virtuali) specificate nella clausola di proiezione di query
+    \item \textbf{ListaAttributi:} È una lista di nomi da assegnare alle colonne della vista, tale specifica non è obbligatoria, tranne nel caso in cui l'interrogazione contenga nella clausola di proiezioni funzioni di gruppo e/o espressioni
+\end{itemize}
+
+\section{Esempio creazione vista}
+\begin{lstlisting}[language=sql_generic]
+CREATE VIEW Personale AS 
+SELECT Nome, Mansione, Pnome 
+FROM Impiegati, Progetti 
+WHERE Impiegati.ProgNo = Progetti.ProgNo;
+\end{lstlisting}

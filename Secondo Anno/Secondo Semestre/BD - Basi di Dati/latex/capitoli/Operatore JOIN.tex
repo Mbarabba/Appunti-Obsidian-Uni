@@ -43,7 +43,7 @@ FROM Impiegato AS I
 JOIN Dip AS D ON I.Dipart = D.Nome;
 \end{lstlisting}
 
-\section{OUTER JOING}
+\section{OUTER JOIN}
 \subsection{Cosa fa?}
 L'operatore OUTER JOIN è un'estensione della JOIN standard (Inner Join) utilizzata quando si desidera conservare nel risultato anche le tuple che non hanno corrispondenze nell'altra tabella.
 
@@ -52,7 +52,8 @@ Mentre l'Inner Join restituisce solo le righe che soddisfano la condizione di un
 Esistono 3 tipologie di OUTER JOIN
 
 \subsection{LEFT OUTER JOIN (o LEFT JOIN)}
-Restituisce tutte le righe della tabella indicata a sinistra, per le righe della tabella che non hanno corrispondeza nella tabella di destra, vengono visualizzati valori NULL per tutti gli attributi proveniente dalla tabella di destra
+\subsubsection{Definizione}
+Restituisce tutte le righe della tabella indicata a sinistra, per le righe della tabellea che non hanno corrispondeza nella tabella di destra, vengono visualizzati valori NULL per tutti gli attributi proveniente dalla tabella di destra
 
 \subsubsection{Sintassi}
 \begin{lstlisting}[language=sql_generic]
@@ -61,4 +62,95 @@ FROM TabellaA A
 LEFT JOIN TabellaB B ON A.chiave = B.chiave;
 \end{lstlisting}
 
-\subsub
+\subsubsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT I.Nome, D.Citta
+FROM Impiegato I
+LEFT JOIN Dip D ON I.Dipart = D.Nome;
+\end{lstlisting}
+
+\subsection{RIGHT JOIN}
+\subsubsection{Definizione}
+Restituisce tutte le righe della tabella indicata a destra, per le righe della tabella che non hanno corrispondeza nella tabella di sinistra, vengono visualizzati valori NULL per tutti gli attributi proveniente dalla tabella di destra
+
+\subsubsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT I.Nome, D.NomeDipartimento
+FROM Impiegato I
+RIGHT JOIN Dip D ON I.Dipart = D.ID_Dipartimento;
+\end{lstlisting}
+
+\subsubsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT I.Nome, D.NomeDipartimento
+FROM Impiegato I
+RIGHT JOIN Dip D ON I.Dipart = D.NomeDipartimento;
+\end{lstlisting}
+
+\subsubsection{FULL JOIN}
+\subsubsection{Definizione}
+La FULL JOIN restituisce tutte le righe provenienti da entrambe le tabelle coinvolte nell'operazione. Quando non esiste una corrispondenza tra una riga di una tabella e l'altra, il risultato includerà comunque la riga, popolando con valori NULL tutti gli attributi provenienti dalla tabella in cui manca il riscontro.
+
+\subsubsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT colonne
+FROM TabellaA A
+FULL JOIN TabellaB B ON A.chiave = B.chiave;
+\end{lstlisting}
+
+\subsubsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT I.Impiegato, D.Dip
+FROM Impiegato I
+FULL JOIN Dip D ON I.Dipart = D.Dip;
+\end{lstlisting}
+
+\section{Self Join}
+\subsection{Cosa è?}
+La Self Join (o auto-congiunzione) è un caso speciale di JOIN in cui una tabella viene congiunta con se stessa.
+
+Non esiste un comando SQL chiamato SELF JOIN: si utilizza la sintassi classica della INNER JOIN o della LEFT JOIN, ma riferendosi alla stessa tabella sia a destra che a sinistra dell'operatore.
+
+\subsection{A cosa serve?}
+Serve quando i dati memorizzati in una riga hanno una relazione con i dati memorizzati in un'altra riga della stessa tabella.
+
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT <colonne>
+FROM <nome_tabella> AS <alias1>
+[INNER | LEFT] JOIN <nome_tabella> AS <alias2>
+    ON <alias1>.<colonna_connessione> = <alias2>.<colonna_chiave>;
+\end{lstlisting}
+
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT 
+    E.Nome AS Impiegato, 
+    M.Nome AS Manager
+FROM Impiegato AS E
+LEFT JOIN Impiegato AS M 
+    ON E.ID_Manager = M.ID;
+\end{lstlisting}
+
+\section{Join Esplicito}
+\subsection{Cosa è?}
+Il join esplicito è un approccio che definisce l'unione tra tabelle usando un'apposita sintassi dedicata.
+\subsection{A cosa serve?}
+A livello logico, serve a separare nettamente la struttura di collegamento tra le tabelle dai filtri di selezione sui dati.
+
+La clausola specifica direttamente quali tabelle unire e isola la condizione di join. Questo riduce drasticamente il rischio di errori distruttivi e aumenta la leggibilità del codice. Inoltre, garantisce la flessibilità necessaria a implementare facilmente vari tipi di unione esterna (come LEFT, RIGHT o FULL JOIN).
+\subsection{Sintassi}
+\begin{lstlisting}[language=sql_generic]
+SELECT colonna1, colonna2, ...
+FROM TabellaA [AliasA]
+JOIN TabellaB [AliasB] 
+  ON AliasA.chiave_esterna = AliasB.chiave_primaria
+[WHERE altre_condizioni_di_filtro];
+\end{lstlisting}
+\subsection{Esempio}
+\begin{lstlisting}[language=sql_generic]
+SELECT I.Nome, D.Citta
+FROM Impiegato AS I
+JOIN Dip AS D 
+  ON I.Dipart = D.Nome;
+\end{lstlisting}

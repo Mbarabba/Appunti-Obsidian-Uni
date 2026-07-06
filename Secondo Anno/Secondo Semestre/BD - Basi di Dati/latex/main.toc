@@ -1,104 +1,239 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}DDL - Data Definition Language}{4}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Notazione}{4}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Schemi}{4}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Cosa sono?}{4}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Sintassi di creazione}{4}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Esempio: Creazione di uno schema vuoto}{4}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Esempio: Creazione di uno schema utilizzando tutte le opzioni disponibili}{4}{subsection.1.2.4}%
-\contentsline {section}{\numberline {1.3}Tabelle}{5}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Cosa sono?}{5}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Sintassi di creazione}{5}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Esempio: Creazione di una tabella con elementi minimi}{5}{subsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.3.4}Esempio: Creazione di una tabella full optional}{5}{subsection.1.3.4}%
-\contentsline {section}{\numberline {1.4}Definizione dei Dati: I Domini}{6}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Cosa sono?}{6}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Domini elementari}{6}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Domini definiti dagli utenti}{6}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Cosa sono?}{6}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Sintassi di creazione}{6}{subsection.1.5.2}%
-\contentsline {subsection}{\numberline {1.5.3}Esempio: Creazione di dominio semplice}{6}{subsection.1.5.3}%
-\contentsline {subsection}{\numberline {1.5.4}Esempio: Creazione di un dominio full optional}{7}{subsection.1.5.4}%
-\contentsline {section}{\numberline {1.6}Vincoli intrarelazionale}{7}{section.1.6}%
-\contentsline {subsection}{\numberline {1.6.1}Tipidi di vincoli intrarelazionali}{7}{subsection.1.6.1}%
-\contentsline {subsection}{\numberline {1.6.2}Esempio}{7}{subsection.1.6.2}%
-\contentsline {section}{\numberline {1.7}Vincoli interrelazionali: Integrità referenziale}{8}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}Cosa sono?}{8}{subsection.1.7.1}%
-\contentsline {subsection}{\numberline {1.7.2}Sintassi}{8}{subsection.1.7.2}%
-\contentsline {subsubsection}{REFERENCES}{8}{subsubsection*.2}%
-\contentsline {subsubsection}{FOREIGN KEY}{8}{subsubsection*.3}%
-\contentsline {subsection}{\numberline {1.7.3}Esempio}{8}{subsection.1.7.3}%
-\contentsline {section}{\numberline {1.8}Aggiornamento}{9}{section.1.8}%
-\contentsline {subsection}{\numberline {1.8.1}Il problema dell'aggiornamento}{9}{subsection.1.8.1}%
-\contentsline {subsection}{\numberline {1.8.2}Il problema delle violazioni}{9}{subsection.1.8.2}%
-\contentsline {subsection}{\numberline {1.8.3}Reazioni a violazioni sulla tabelal padre}{9}{subsection.1.8.3}%
-\contentsline {subsection}{\numberline {1.8.4}Vincoli con nomi}{10}{subsection.1.8.4}%
-\contentsline {section}{\numberline {1.9}Modifiche degli schemi: ALTER}{10}{section.1.9}%
-\contentsline {subsection}{\numberline {1.9.1}A cosa serve?}{10}{subsection.1.9.1}%
-\contentsline {subsection}{\numberline {1.9.2}Tipi di ALTER}{10}{subsection.1.9.2}%
-\contentsline {subsection}{\numberline {1.9.3}Sintassi ALTER DOMAIN}{10}{subsection.1.9.3}%
-\contentsline {subsection}{\numberline {1.9.4}Esempio di ALTER DOMAIN}{10}{subsection.1.9.4}%
-\contentsline {subsection}{\numberline {1.9.5}Sintassi ALTER TABLE}{11}{subsection.1.9.5}%
-\contentsline {subsection}{\numberline {1.9.6}Esempio di ALTER TABLE}{11}{subsection.1.9.6}%
-\contentsline {section}{\numberline {1.10}Vincolo interrelazionale: UPDATE}{11}{section.1.10}%
-\contentsline {subsection}{\numberline {1.10.1}A cosa serve}{11}{subsection.1.10.1}%
-\contentsline {subsubsection}{Sintassi dell'operazione}{12}{subsubsection*.4}%
-\contentsline {subsection}{\numberline {1.10.2}Esempi pratici}{12}{subsection.1.10.2}%
-\contentsline {subsubsection}{Esempio 1: Politica CASCADE (Propagazione automatica)}{12}{subsubsection*.5}%
-\contentsline {subsubsection}{Esempio 2: Politica RESTRICT (Blocco cautelativo)}{13}{subsubsection*.6}%
-\contentsline {subsubsection}{Esempio 3: Politica SET NULL (Annullamento del legame)}{13}{subsubsection*.7}%
-\contentsline {section}{\numberline {1.11}Vincolo interrelazionale: DROP}{13}{section.1.11}%
-\contentsline {subsection}{\numberline {1.11.1}Cosa fa?}{13}{subsection.1.11.1}%
-\contentsline {subsection}{\numberline {1.11.2}DROP DOMAIN}{13}{subsection.1.11.2}%
-\contentsline {subsubsection}{Sintassi}{13}{subsubsection*.8}%
-\contentsline {subsubsection}{Esempio di utilizzo}{14}{subsubsection*.9}%
-\contentsline {subsubsection}{DROP TABLE}{14}{subsubsection*.10}%
-\contentsline {subsubsection}{Sintassi}{14}{subsubsection*.11}%
-\contentsline {subsubsection}{Esempi}{14}{subsubsection*.12}%
-\contentsline {chapter}{\numberline {2}Operatore SELECT - Interrogazione di un database}{15}{chapter.2}%
-\contentsline {section}{\numberline {2.1}A cosa serve?}{15}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Sintassi}{15}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Esempio}{15}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Istruzione AS}{15}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}A cosa serve?}{15}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Sintassi}{15}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Esempio}{15}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Clausola FROM}{16}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Sintassi}{16}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Notazione punto}{16}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Esempio}{16}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}Clausola WHERE}{16}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}A cosa serve?}{16}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Operatori di confronto}{16}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Operatore LIKE}{16}{subsection.2.6.3}%
-\contentsline {subsection}{\numberline {2.6.4}Operatore BETWEEN}{17}{subsection.2.6.4}%
-\contentsline {subsection}{\numberline {2.6.5}Operatore IN}{17}{subsection.2.6.5}%
-\contentsline {subsection}{\numberline {2.6.6}Predicati semplici}{17}{subsection.2.6.6}%
-\contentsline {subsection}{\numberline {2.6.7}Precedenza di valutazione tra operatori booleani}{17}{subsection.2.6.7}%
-\contentsline {subsection}{\numberline {2.6.8}Sintassi}{17}{subsection.2.6.8}%
-\contentsline {subsection}{\numberline {2.6.9}Esempio generico}{17}{subsection.2.6.9}%
-\contentsline {subsection}{\numberline {2.6.10}Esempio con LIKE}{17}{subsection.2.6.10}%
-\contentsline {subsection}{\numberline {2.6.11}Esempio con BETWEEN}{18}{subsection.2.6.11}%
-\contentsline {subsection}{\numberline {2.6.12}Esempio con IN}{18}{subsection.2.6.12}%
-\contentsline {section}{\numberline {2.7}Clausola DISTINCT}{18}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}A cosa serve?}{18}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Sintassi}{18}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Esempio}{18}{subsection.2.7.3}%
-\contentsline {section}{\numberline {2.8}Espressioni}{18}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}A cosa servono?}{18}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Funzioni predefinite}{19}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Funzioni per stringhe}{19}{subsection.2.8.3}%
-\contentsline {subsection}{\numberline {2.8.4}Esempio di utilizzo di funzioni aritmetiche}{19}{subsection.2.8.4}%
-\contentsline {subsection}{\numberline {2.8.5}Esempio di utilizzo di funzioni per stringhe}{19}{subsection.2.8.5}%
-\contentsline {chapter}{\numberline {3}Operatore JOIN}{20}{chapter.3}%
-\contentsline {section}{\numberline {3.1}A cosa serve?}{20}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Cosa è un predicato join?}{20}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}Sintassi JOIN Legacy}{20}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Esempio}{20}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Sintassi JOIN SQL-2}{20}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Esempio}{21}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}OUTER JOING}{21}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Cosa fa?}{21}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}LEFT OUTER JOIN (o LEFT JOIN)}{21}{subsection.3.4.2}%
-\contentsline {subsubsection}{Sintassi}{21}{subsubsection*.13}%
+\contentsline {chapter}{\numberline {1}Algebra Relazionale}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Cosa è?}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Struttura base di una relazione}{7}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Chiavi e Vincoli}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Categorie di operatori}{8}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Precedenza e parentesizzazione}{8}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.5}Unione $\cap $}{9}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Definizione}{9}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Esempio}{9}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Intersezione $\cap $}{9}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Definizione}{9}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Esempio}{9}{subsection.1.6.2}%
+\contentsline {section}{\numberline {1.7}Differenze $\-$}{9}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Definizione}{9}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}Esempio}{10}{subsection.1.7.2}%
+\contentsline {section}{\numberline {1.8}Ridenominazione $\rho $}{10}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Definizione}{10}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Esempio}{10}{subsection.1.8.2}%
+\contentsline {section}{\numberline {1.9}Selezione $\sigma $}{10}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}Definizione}{10}{subsection.1.9.1}%
+\contentsline {subsection}{\numberline {1.9.2}Semantica}{11}{subsection.1.9.2}%
+\contentsline {subsection}{\numberline {1.9.3}Esempio}{11}{subsection.1.9.3}%
+\contentsline {section}{\numberline {1.10}Proiezione $\pi $}{11}{section.1.10}%
+\contentsline {subsection}{\numberline {1.10.1}Definizione}{11}{subsection.1.10.1}%
+\contentsline {subsection}{\numberline {1.10.2}Esempio}{11}{subsection.1.10.2}%
+\contentsline {section}{\numberline {1.11}Prodotto cartesiano $\times $}{12}{section.1.11}%
+\contentsline {subsection}{\numberline {1.11.1}Definizione}{12}{subsection.1.11.1}%
+\contentsline {subsection}{\numberline {1.11.2}Esempio}{12}{subsection.1.11.2}%
+\contentsline {section}{\numberline {1.12}Theta-join $\bowtie _\theta $}{12}{section.1.12}%
+\contentsline {subsection}{\numberline {1.12.1}Definizione}{12}{subsection.1.12.1}%
+\contentsline {subsection}{\numberline {1.12.2}Esempio}{12}{subsection.1.12.2}%
+\contentsline {section}{\numberline {1.13}Natural-join $\bowtie $}{13}{section.1.13}%
+\contentsline {subsection}{\numberline {1.13.1}Definizione}{13}{subsection.1.13.1}%
+\contentsline {subsection}{\numberline {1.13.2}Esempio}{13}{subsection.1.13.2}%
+\contentsline {section}{\numberline {1.14}Alberi di esecuzione}{14}{section.1.14}%
+\contentsline {subsection}{\numberline {1.14.1}Definizione}{14}{subsection.1.14.1}%
+\contentsline {subsection}{\numberline {1.14.2}Esempio}{14}{subsection.1.14.2}%
+\contentsline {section}{\numberline {1.15}Divisione $\div $}{14}{section.1.15}%
+\contentsline {subsection}{\numberline {1.15.1}Definizione}{14}{subsection.1.15.1}%
+\contentsline {subsection}{\numberline {1.15.2}Esempio}{14}{subsection.1.15.2}%
+\contentsline {section}{\numberline {1.16}Aggregazione (Y)}{15}{section.1.16}%
+\contentsline {subsection}{\numberline {1.16.1}Definizione}{15}{subsection.1.16.1}%
+\contentsline {subsection}{\numberline {1.16.2}Esempio}{15}{subsection.1.16.2}%
+\contentsline {chapter}{\numberline {2}DDL - Data Definition Language}{16}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Notazione}{16}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Schemi}{16}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Cosa sono?}{16}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Sintassi di creazione}{16}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Esempio: Creazione di uno schema vuoto}{16}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Esempio: Creazione di uno schema utilizzando tutte le opzioni disponibili}{16}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Tabelle}{17}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Cosa sono?}{17}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Sintassi di creazione}{17}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Esempio: Creazione di una tabella con elementi minimi}{17}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Esempio: Creazione di una tabella full optional}{17}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Definizione dei Dati: I Domini}{18}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Cosa sono?}{18}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Domini elementari}{18}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Domini definiti dagli utenti}{18}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Cosa sono?}{18}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Sintassi di creazione}{18}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Esempio: Creazione di dominio semplice}{18}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Esempio: Creazione di un dominio full optional}{19}{subsection.2.5.4}%
+\contentsline {section}{\numberline {2.6}Vincoli intrarelazionale}{19}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Tipidi di vincoli intrarelazionali}{19}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Esempio}{19}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Vincoli interrelazionali: Integrità referenziale}{20}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Cosa sono?}{20}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Sintassi}{20}{subsection.2.7.2}%
+\contentsline {subsubsection}{REFERENCES}{20}{subsubsection*.2}%
+\contentsline {subsubsection}{FOREIGN KEY}{20}{subsubsection*.3}%
+\contentsline {subsection}{\numberline {2.7.3}Esempio}{20}{subsection.2.7.3}%
+\contentsline {section}{\numberline {2.8}Aggiornamento}{21}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Il problema dell'aggiornamento}{21}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Il problema delle violazioni}{21}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Reazioni a violazioni sulla tabelal padre}{21}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}Vincoli con nomi}{22}{subsection.2.8.4}%
+\contentsline {section}{\numberline {2.9}Modifiche degli schemi: ALTER}{22}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}A cosa serve?}{22}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}Tipi di ALTER}{22}{subsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.3}Sintassi ALTER DOMAIN}{22}{subsection.2.9.3}%
+\contentsline {subsection}{\numberline {2.9.4}Esempio di ALTER DOMAIN}{22}{subsection.2.9.4}%
+\contentsline {subsection}{\numberline {2.9.5}Sintassi ALTER TABLE}{23}{subsection.2.9.5}%
+\contentsline {subsection}{\numberline {2.9.6}Esempio di ALTER TABLE}{23}{subsection.2.9.6}%
+\contentsline {section}{\numberline {2.10}Vincolo interrelazionale: UPDATE}{23}{section.2.10}%
+\contentsline {subsection}{\numberline {2.10.1}A cosa serve}{23}{subsection.2.10.1}%
+\contentsline {subsubsection}{Sintassi dell'operazione}{24}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {2.10.2}Esempi pratici}{24}{subsection.2.10.2}%
+\contentsline {subsubsection}{Esempio 1: Politica CASCADE (Propagazione automatica)}{24}{subsubsection*.5}%
+\contentsline {subsubsection}{Esempio 2: Politica RESTRICT (Blocco cautelativo)}{25}{subsubsection*.6}%
+\contentsline {subsubsection}{Esempio 3: Politica SET NULL (Annullamento del legame)}{25}{subsubsection*.7}%
+\contentsline {section}{\numberline {2.11}Vincolo interrelazionale: DROP}{25}{section.2.11}%
+\contentsline {subsection}{\numberline {2.11.1}Cosa fa?}{25}{subsection.2.11.1}%
+\contentsline {subsection}{\numberline {2.11.2}DROP DOMAIN}{25}{subsection.2.11.2}%
+\contentsline {subsubsection}{Sintassi}{25}{subsubsection*.8}%
+\contentsline {subsubsection}{Esempio di utilizzo}{26}{subsubsection*.9}%
+\contentsline {subsubsection}{DROP TABLE}{26}{subsubsection*.10}%
+\contentsline {subsubsection}{Sintassi}{26}{subsubsection*.11}%
+\contentsline {subsubsection}{Esempi}{26}{subsubsection*.12}%
+\contentsline {chapter}{\numberline {3}Operatore SELECT - Interrogazione di un database}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}A cosa serve?}{27}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Sintassi}{27}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Esempio}{27}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Istruzione AS}{27}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}A cosa serve?}{27}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Sintassi}{27}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Esempio}{27}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Clausola FROM}{28}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Sintassi}{28}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Notazione punto}{28}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Esempio}{28}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Clausola WHERE}{28}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}A cosa serve?}{28}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Operatori di confronto}{28}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Operatore LIKE}{28}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Operatore BETWEEN}{29}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Operatore IN}{29}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}Predicati semplici}{29}{subsection.3.6.6}%
+\contentsline {subsection}{\numberline {3.6.7}Precedenza di valutazione tra operatori booleani}{29}{subsection.3.6.7}%
+\contentsline {subsection}{\numberline {3.6.8}Sintassi}{29}{subsection.3.6.8}%
+\contentsline {subsection}{\numberline {3.6.9}Esempio generico}{29}{subsection.3.6.9}%
+\contentsline {subsection}{\numberline {3.6.10}Esempio con LIKE}{29}{subsection.3.6.10}%
+\contentsline {subsection}{\numberline {3.6.11}Esempio con BETWEEN}{30}{subsection.3.6.11}%
+\contentsline {subsection}{\numberline {3.6.12}Esempio con IN}{30}{subsection.3.6.12}%
+\contentsline {section}{\numberline {3.7}Clausola DISTINCT}{30}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}A cosa serve?}{30}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Sintassi}{30}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Esempio}{30}{subsection.3.7.3}%
+\contentsline {section}{\numberline {3.8}Espressioni}{30}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}A cosa servono?}{30}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Funzioni predefinite}{31}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}Funzioni per stringhe}{31}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.4}Esempio di utilizzo di funzioni aritmetiche}{31}{subsection.3.8.4}%
+\contentsline {subsection}{\numberline {3.8.5}Esempio di utilizzo di funzioni per stringhe}{31}{subsection.3.8.5}%
+\contentsline {chapter}{\numberline {4}Operatore JOIN}{32}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A cosa serve?}{32}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Cosa è un predicato join?}{32}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Sintassi JOIN Legacy}{32}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Esempio}{32}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Sintassi JOIN SQL-2}{32}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Esempio}{33}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}OUTER JOIN}{33}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Cosa fa?}{33}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}LEFT OUTER JOIN (o LEFT JOIN)}{33}{subsection.4.4.2}%
+\contentsline {subsubsection}{Definizione}{33}{subsubsection*.13}%
+\contentsline {subsubsection}{Sintassi}{33}{subsubsection*.14}%
+\contentsline {subsubsection}{Esempio}{33}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {4.4.3}RIGHT JOIN}{33}{subsection.4.4.3}%
+\contentsline {subsubsection}{Definizione}{33}{subsubsection*.16}%
+\contentsline {subsubsection}{Sintassi}{34}{subsubsection*.17}%
+\contentsline {subsubsection}{Esempio}{34}{subsubsection*.18}%
+\contentsline {subsubsection}{FULL JOIN}{34}{subsubsection*.19}%
+\contentsline {subsubsection}{Definizione}{34}{subsubsection*.20}%
+\contentsline {subsubsection}{Sintassi}{34}{subsubsection*.21}%
+\contentsline {subsubsection}{Esempio}{34}{subsubsection*.22}%
+\contentsline {section}{\numberline {4.5}Self Join}{34}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Cosa è?}{34}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}A cosa serve?}{34}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Sintassi}{35}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Esempio}{35}{subsection.4.5.4}%
+\contentsline {section}{\numberline {4.6}Join Esplicito}{35}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Cosa è?}{35}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}A cosa serve?}{35}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Sintassi}{35}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Esempio}{35}{subsection.4.6.4}%
+\contentsline {chapter}{\numberline {5}Ordinamento dei risulati}{36}{chapter.5}%
+\contentsline {section}{\numberline {5.1}ORDER BY}{36}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Cosa è?}{36}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Sintassi}{36}{subsection.5.1.2}%
+\contentsline {subsubsection}{Ordinamento}{36}{subsubsection*.23}%
+\contentsline {subsection}{\numberline {5.1.3}Esempio}{36}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Operatori di aggregazione}{36}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Quali sono?}{36}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Come vengono applicati?}{37}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}COUNT}{37}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Cosa fa?}{37}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Sintassi}{37}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Esempio}{37}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}SUM}{37}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Cosa fa?}{37}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Sintassi}{38}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Esempio}{38}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}MIN/MAX}{38}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Cosa fa?}{38}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Sintassi}{38}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Esempio}{38}{subsection.5.5.3}%
+\contentsline {section}{\numberline {5.6}AVG}{38}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Cosa fa?}{38}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Sintassi}{38}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Esempio}{39}{subsection.5.6.3}%
+\contentsline {section}{\numberline {5.7}Target List}{39}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Operatore di aggregamento GROUP BY}{39}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Cosa è?}{39}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Sintassi}{39}{subsection.5.8.2}%
+\contentsline {subsection}{\numberline {5.8.3}Esempio}{39}{subsection.5.8.3}%
+\contentsline {section}{\numberline {5.9}Condizioni WHERE e HAVING}{39}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Sintassi WHERE}{40}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Esempio di uso di WHERE}{40}{subsection.5.9.2}%
+\contentsline {subsection}{\numberline {5.9.3}Sintassi HAVING}{40}{subsection.5.9.3}%
+\contentsline {subsection}{\numberline {5.9.4}Esempio di uso di HAVING}{40}{subsection.5.9.4}%
+\contentsline {chapter}{\numberline {6}Interrogazioni di tipi insiemistico}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Operatori insiemistici}{41}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Sintassi}{41}{subsection.6.1.1}%
+\contentsline {section}{\numberline {6.2}UNION}{41}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Cosa fa?}{41}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Sintassi}{41}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Esempio}{41}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}INTERSECT}{42}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Cosa fa?}{42}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Sintassi}{42}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Esempio}{42}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}EXCEPT}{42}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Cosa fa?}{42}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Sintassi}{43}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Esempio}{43}{subsection.6.4.3}%
+\contentsline {chapter}{\numberline {7}Interrogazioni Nidificate}{44}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Cosa sono?}{44}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Come funzionano?}{44}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Sintassi Subquery}{44}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Predicati ANY e ALL}{44}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Sintassi}{44}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Esempio}{45}{subsection.7.4.2}%
+\contentsline {subsubsection}{ANY}{45}{subsubsection*.24}%
+\contentsline {subsubsection}{ALL}{45}{subsubsection*.25}%
+\contentsline {section}{\numberline {7.5}Quantificatori esistenziali}{45}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}EXISTS}{45}{subsection.7.5.1}%
+\contentsline {subsubsection}{Sintassi}{45}{subsubsection*.26}%
+\contentsline {subsubsection}{Esempio}{45}{subsubsection*.27}%
+\contentsline {subsection}{\numberline {7.5.2}NOT EXISTS}{45}{subsection.7.5.2}%
+\contentsline {subsubsection}{Sintassi}{45}{subsubsection*.28}%
+\contentsline {subsubsection}{Esempio}{46}{subsubsection*.29}%
+\contentsline {chapter}{\numberline {8}Viste}{47}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Cosa sono?}{47}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Proprietà fondamentali}{47}{section.8.2}%
+\contentsline {section}{\numberline {8.3}A cosa servono?}{47}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Sintassi}{47}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Esempio creazione vista}{48}{section.8.5}%

@@ -1,0 +1,615 @@
+\chapter{Algebra Relazionale}
+\section{Cosa è?}
+L'algbra relazionale è un linguaggio procedurale basato su concetti di tipo algebrico, le operazioni sono definite su relazioni e producono a loro volta altre relazioni.
+
+Si compone di vari operatori fondamentali, che permettono di comporre operazioni in espressioni e alberi di esecuzione per integrazioni anche molto complesse
+
+\section{Struttura base di una relazione}
+Una relazione è un'astrazione matematica che definisce un insieme di tuple, ciascuna definita su uno schema comune
+
+\begin{itemize}
+    \item \textbf{Schema di relazioni $R(X)$}
+    \begin{itemize}
+        \item $R=$ Nome della relazione
+        \item $X=$ Insiemi di attributi ($A_1,A_2,\dots,A_n$) ciascuno associato a un dominio di valori
+    \end{itemize}
+    \item \textbf{Tupla:} Istanza di R, ossia un vettore ordinato di valori ($v_1,v_2,\dots,v_n$) in $R(X)$
+    \item \textbf{Dominio:} Insieme di valori leciti per ciascun attributo
+    \item \textbf{Cardinalità $|R|$:} Numero di tuple in R
+    \item \textbf{Grado $|X|$:} Numero di attributi di R
+    \item \textbf{Tabella:} Rappresentazione "intuitiva" di R, dove le righe sono le tuple e le colonne sono gli attributi
+\end{itemize}
+
+\section{Chiavi e Vincoli}
+\begin{itemize}
+    \item \textbf{Superchiave:} Insieme di attributi $K \subseteq X$ tale che non esistono 2 tuple distinte $t_1,t_2$ con $t_1[K]=t_2[K]$
+    \item \textbf{Chiave:} Superchiave minimale (nessun sottoinsieme proprio di $K$ è superchiave)
+    \item \textbf{Chiavi candidate:} Tutte le chiavi possibili, una di queste diventa primaria
+    \item \textbf{Vincoli di integrità referenziale:}
+    \begin{itemize}
+        \item Si dichiara FOREIGN KEY($A_1,\dots,A_n$) REFERENCES($B_1,\dots,B_n$)
+        \item Impone che ogni valore non-NULL di (($A_1,\dots,A_n$)) in R appaia in S su ($B_1,\dots,B_n$)
+    \end{itemize}
+    \item \textbf{Vincoli di tupla:} Espressioni booleane su attributi
+    \item \textbf{Vincoli di dominio:} es $0 \leq \text{Voto} \leq 30$
+\end{itemize}
+
+\section{Categorie di operatori}
+\begin{itemize}
+    \item \textbf{Operatori Insiemistici}(richiedono schemi identici)
+    \begin{itemize}
+        \item $\cap$ Unione
+        \item $\cup$ Intersezione
+        \item $-$ Differenza
+    \end{itemize}
+    \item \textbf{Operatori unari}(agiscono su una sola relazione)
+    \begin{itemize}
+        \item $\sigma$ Selezione: Filtra le tuple che soddisfano una condizione (taglio orizzontale)
+        \item $\pi$ Proiezione: Estrae un sottoinsieme di attributi, eliminando duplicati (taglio verticale)
+        \item $\rho$ Ridenominazione: Rinomina relazione e/o attributi per armonizzare schemi
+    \end{itemize}
+    \item \textbf{Operatori Binari}(combina due relazioni)
+    \begin{itemize}
+        \item $\times$ Prodotto cartesiano: Accoppia ogni tupla di R con ogni tupla di S
+        \item $\bowtie_{\theta}$ Theta-Join: Join con condizione generica
+        \item $\bowtie$ Natural-Join: Join automatico su attributo omonimi
+    \end{itemize}
+    \item \textbf{Operatori Derivati}(costruiti via quelli fondamentali)
+    \begin{itemize}
+        \item $\div$ Divisione: Usata per query universali
+    \end{itemize}
+\end{itemize}
+\subsection{Precedenza e parentesizzazione}
+Convenzioni di precedenza (senza parentesi)
+    \begin{enumerate}
+        \item $\sigma, \pi, \rho \text{ (unari)}$
+        \item $\bowtie, \times \text{ (binari "forti")}$
+        \item $\cap, \cup \text{ (insiemistici)}$
+    \end{enumerate}
+
+\newpage
+\section{Unione $\cap$}
+\subsection{Definizione}
+$$
+R \cup S = \{t | t \in R \text{ AND } t\in S\}
+$$
+\begin{itemize}
+    \item È un operazione insiemistica: elimina i duplicati
+    \item Richiede schemi identici (stessi attributi e domini)
+    \item In SQL corrisponde a UNION
+\end{itemize}
+
+\subsection{Esempio}
+\begin{gather}
+    R:(\text{ID},\text{Nome}) = \{(1,\text{Alice},(2,\text{Bob}))\} \\
+    S:(\text{ID},\text{Nome}) = \{(2,\text{Bob},(3,\text{Claudia}))\} \\
+    R \cup S = \{(1,\text{Alice},(2,\text{Bob}), (3,\text{Claudia}))\}
+\end{gather}
+
+\section{Intersezione $\cap$}
+\subsection{Definizione}
+$$
+R \cup S = \{t | t \in R \text{ OR } t\in S\}
+$$
+\begin{itemize}
+    \item Trova tutte le tuple comuni
+    \item Richiede ancora schemi identici
+    \item In SQL corrisponde a INTERSECT
+\end{itemize}
+
+\subsection{Esempio}
+\begin{gather}
+    R:(\text{ID},\text{Nome}) = \{(1,\text{Alice},(2,\text{Bob}))\} \\
+    S:(\text{ID},\text{Nome}) = \{(2,\text{Bob}),(3,\text{Claudia})\} \\
+    R \cap S = \{(2,\text{Bob})\}
+\end{gather}
+
+\section{Differenze $\-$}
+\subsection{Definizione}
+$$
+R - S = \{t|t\in R \text{ AND } t \not\in S\}
+$$
+\begin{itemize}
+    \item Non commutativa: $R-S \not= S-R$
+    \item Consente di rimuovere tuple indesiderate
+    \item In SQL corrisponde a EXCEPT (o MINUS)
+\end{itemize}
+
+\subsection{Esempio}
+\begin{gather}
+    R:(\text{ID},\text{Nome}) = \{(1,\text{Alice}),(2,\text{Bob})\} \\
+    S:(\text{ID},\text{Nome}) = \{(2,\text{Bob}),(3,\text{Claudia})\} \\
+    R - S = \{(2,\text{Bob})\}
+\end{gather}
+
+\section{Ridenominazione $\rho$}
+\subsection{Definizione}
+\begin{itemize}
+    \item $\rho_{B_1,\dots,B_n \leftarrow A_1,\dots,A_n}(R)$ cambia solo i nomi degli attributi $Ai \to Bi$, lasciando inalterati i valori
+    \item Utili per:
+    \begin{itemize}
+        \item Preparare operazioni insiemistiche (schemi compatibili)
+        \item Disambiguare auto-join
+    \end{itemize}
+    \item Se volessimo cambiare anche il nome della relazioni in $R'$, allora $R' \leftarrow \rho(R)$ oppure $\rho(R) \to R'$
+\end{itemize}
+
+\subsection{Esempio}
+\begin{center}
+
+    % Tabella PATERNITÀ
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Padre} & \textbf{Figlio} \\ \hline
+        Adamo & Caino \\ \hline
+        Adamo & Abele \\ \hline
+        Abramo & Isacco \\ \hline
+        Abramo & Ismaele \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        \small PATERNITÀ
+    \end{minipage}
+    \hfill
+    % Tabella MATERNITÀ
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Madre} & \textbf{Figlio} \\ \hline
+        Eva & Caino \\ \hline
+        Eva & Set \\ \hline
+        Sara & Isacco \\ \hline
+        Agar & Ismaele \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        \small MATERNITÀ
+    \end{minipage}
+
+    \vspace{1cm}
+
+    % Tabella RISULTATO DELL'UNIONE
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Genitore} & \textbf{Figlio} \\ \hline
+    Adamo & Caino \\ \hline
+    Adamo & Abele \\ \hline
+    Abramo & Isacco \\ \hline
+    Abramo & Ismaele \\ \hline
+    Eva & Caino \\ \hline
+    Eva & Set \\ \hline
+    Sara & Isacco \\ \hline
+    Agar & Ismaele \\ \hline
+    \end{tabular}
+    
+    \vspace{3mm}
+    % Formula di algebra relazionale
+    $\rho_{\text{Genitore} \leftarrow \text{Padre}}(\text{PATERNITÀ}) \cup \rho_{\text{Genitore} \leftarrow \text{Madre}}(\text{MATERNITÀ})$
+
+\end{center}
+
+\section{Selezione $\sigma$}
+\subsection{Definizione}
+$$
+\sigma_F(R)
+$$
+\begin{itemize}
+    \item Filtra tuple in base ad una condizione F
+    \item Predicati:
+    \begin{itemize}
+        \item A $\theta$ B oppure A  $\theta$ c, con $\theta \in \{=, \not=, >, >, \geq, \leq\}$ è un operatore di confronto, A e B sono attribuiti di su cui il confronto $\theta$ abbia un senso, e c'è una costante compatibile con il dominio di A
+        \item combinati $\land \text{ (AND)}, \lor \text{ (OR)}, \neg \text{ (NOT)}$
+    \end{itemize}
+\end{itemize}
+
+\subsection{Semantica}
+\begin{itemize}
+    \item Mantiene stesso schema di R
+    \item Risultato: sottoinsieme delle tuple(o righe) di R
+    \item Riduce la cardinalità, dunque abbiamo un'ottimizzazione se la spingiamo in anticipo (cioè, abbiamo meno tuple su cui applicare la sotto-operazione)
+\end{itemize}
+
+\subsection{Esempio}
+\begin{center}
+
+    % Blocco di sinistra: Tabella Originale (R)
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{ID} & \textbf{Età} & \textbf{Reparto} \\ \hline
+        1 & 28 & IT \\ \hline
+        2 & 35 & HR \\ \hline
+        3 & 42 & IT \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        R
+    \end{minipage}%
+    \hfill
+    % Blocco di destra: Tabelle filtrate
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        
+        % Risultato della prima selezione
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{ID} & \textbf{Età} & \textbf{Reparto} \\ \hline
+        2 & 35 & HR \\ \hline
+        3 & 42 & IT \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        $\sigma_{\text{Età} > 30}(\text{R})$
+        
+        \vspace{1cm} % Spazio verticale tra le due tabelle di destra
+        
+        % Risultato della seconda selezione (con AND)
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{ID} & \textbf{Età} & \textbf{Reparto} \\ \hline
+        3 & 42 & IT \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        $\sigma_{\text{Età} > 30 \land \text{Reparto} = \text{'IT'}}(\text{R})$
+        
+    \end{minipage}
+
+\end{center}
+
+\section{Proiezione $\pi$}
+\subsection{Definizione}
+$$
+\pi_{A_1,\dots,A_n}(R)
+$$
+\begin{itemize}
+    \item Seleziona un sottoinsieme di attributi (colonne)
+    \item Elimina i duplicati(semantica insiemistica)
+\end{itemize}
+
+\subsection{Esempio}
+\begin{center}
+
+    % Tabella di sinistra: Relazione originale (R)
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{ID} & \textbf{Età} & \textbf{Reparto} \\ \hline
+        1 & 28 & IT \\ \hline
+        2 & 35 & HR \\ \hline
+        3 & 42 & IT \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        R
+    \end{minipage}%
+    \hfill
+    % Tabella di destra: Risultato della proiezione
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \begin{tabular}{|l|}
+        \hline
+        \textbf{Reparto} \\ \hline
+        IT \\ \hline
+        HR \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        $\pi_{\text{Reparto}}(\text{R})$
+    \end{minipage}
+
+\end{center}
+
+\section{Prodotto cartesiano $\times$}
+\subsection{Definizione}
+$$
+R \times S = \{(t,u)|t \in R \land u\in S\} \quad \text{(concatena tuple)}
+$$
+\begin{itemize}
+    \item Schema: attributi di R unito agli attributi di S
+    \item Cardinalità: $|R|\cdot|S|$ 
+\end{itemize}
+
+\subsection{Esempio}
+\begin{center}
+
+    % Blocco di sinistra: Tabelle R e S
+    \begin{minipage}{0.35\textwidth}
+        \centering
+        
+        % Tabella R
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{ID} & \textbf{Cliente} \\ \hline
+        1 & Andrea \\ \hline
+        2 & Barbara \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        R
+        
+        \vspace{1cm} % Spazio verticale tra la tabella R e la tabella S
+        
+        % Tabella S
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Codice} & \textbf{Prodotto} & \textbf{Quantità} \\ \hline
+        A & Scarpe & 100 \\ \hline
+        B & Magliette & 200 \\ \hline
+        C & Occhiali & 300 \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        S
+        
+    \end{minipage}%
+    \hfill
+    % Blocco di destra: Tabella risultato del prodotto cartesiano
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        
+        \begin{tabular}{|l|l|l|l|l|}
+        \hline
+        \textbf{ID} & \textbf{Cliente} & \textbf{Codice} & \textbf{Prodotto} & \textbf{Quantità} \\ \hline
+        1 & Andrea & A & Scarpe & 100 \\ \hline
+        1 & Andrea & B & Magliette & 200 \\ \hline
+        1 & Andrea & C & Occhiali & 300 \\ \hline
+        2 & Barbara & A & Scarpe & 100 \\ \hline
+        2 & Barbara & B & Magliette & 200 \\ \hline
+        2 & Barbara & C & Occhiali & 300 \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        $\text{R} \times \text{S}$
+        
+    \end{minipage}
+
+\end{center}
+
+\section{Theta-join $\bowtie_\theta$}
+\subsection{Definizione}
+$$
+R \bowtie_\theta = \sigma_theta(R \times S) 
+$$
+\begin{itemize}
+    \item $\theta$ è una qualsiasi condizione su attributi di $R \cup S$
+    \item Quando la condizione $\theta$ è una congiunzione di atomi di uguaglianza, il theta-join viene chiamato equi-join
+    \item Il self-join si ha quando facciamo la join tra una relazione con se stessa
+\end{itemize}
+
+\subsection{Esempio}
+\begin{center}
+
+    % Blocco di sinistra: Tabelle IMPIEGATI e PROGETTI
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        
+        % Tabella IMPIEGATI
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Impiegato} & \textbf{Progetto} \\ \hline
+        Rossi & A \\ \hline
+        Neri & A \\ \hline
+        Neri & B \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        \small IMPIEGATI
+        
+        \vspace{1cm} % Spazio verticale tra le due tabelle
+        
+        % Tabella PROGETTI
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Codice} & \textbf{Nome} \\ \hline
+        A & Venere \\ \hline
+        B & Marte \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        \small PROGETTI
+        
+    \end{minipage}%
+    \hfill
+    % Blocco di destra: Tabella risultato del JOIN
+    \begin{minipage}{0.65\textwidth}
+        \centering
+        
+        % Tabella Risultato
+        \begin{tabular}{|l|l|l|l|}
+        \hline
+        \textbf{Impiegato} & \textbf{Progetto} & \textbf{Codice} & \textbf{Nome} \\ \hline
+        Rossi & A & A & Venere \\ \hline
+        Neri & A & A & Venere \\ \hline
+        Neri & B & B & Marte \\ \hline
+        \end{tabular}
+        
+        \vspace{3mm}
+        
+        % Formula del Join
+        \footnotesize % Riduce la dimensione del font per far stare la formula su una riga
+        $\text{IMPIEGATI} \bowtie_{\text{Progetto}=\text{Codice}} \text{PROGETTI} = \sigma_{\text{Progetto}=\text{Codice}}(\text{IMPIEGATI} \times \text{PROGETTI})$
+        
+    \end{minipage}
+
+\end{center}
+
+\newpage
+\section{Natural-join $\bowtie$}
+\subsection{Definizione}
+\[
+R(A,B,C) \text{ e } S(B,C,D) \Rightarrow R \bowtie S = \pi_{A,B,C,D} \left( R \bowtie_{B=B' \land C=C'} (\rho_{B',C' \leftarrow B,C}(S)) \right)
+\]
+\begin{itemize}
+    \item Join su tutti gli attributi con lo stesso nome
+    \item Elimina automaticamente le colonne duplicate
+\end{itemize}
+
+\subsection{Esempio}
+\begin{center}
+
+    % Blocco di sinistra: Tabelle R e S
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        
+        % Tabella R
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Impiegato} & \textbf{Reparto} \\ \hline
+        Rossi & Vendite \\ \hline
+        Neri & Produzione \\ \hline
+        Verdi & Produzione \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        \small R
+        
+        \vspace{1cm} % Spazio verticale tra le due tabelle
+        
+        % Tabella S
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Reparto} & \textbf{Capo} \\ \hline
+        Produzione & Mori \\ \hline
+        Vendite & Bruni \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        \small S
+        
+    \end{minipage}%
+    \hfill
+    % Blocco di destra: Tabella risultato del Natural Join
+    \begin{minipage}{0.55\textwidth}
+        \centering
+        
+        % Tabella Risultato
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Impiegato} & \textbf{Reparto} & \textbf{Capo} \\ \hline
+        Rossi & Vendite & Bruni \\ \hline
+        Neri & Produzione & Mori \\ \hline
+        Verdi & Produzione & Mori \\ \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+        
+        % Simbolo del Natural Join
+        $\text{R} \bowtie \text{S}$
+        
+    \end{minipage}
+
+\end{center}
+
+\newpage
+\section{Alberi di esecuzione}
+\subsection{Definizione}
+Un'espressione si rappresenta come un albero
+\begin{itemize}
+    \item Le \textbf{foglie} sono relazioni di base 
+    \item I \textbf{nodi interni} sono operatori di base
+\end{itemize}
+
+\subsection{Esempio}
+L'espressione $\pi_{\text{Nome, Dip}}(\sigma_{\text{Età}>30}(\text{IMPIEGATI}) \bowtie_{\text{IMPIEGATI.Dip}=\text{DIP.Cod}} \text{DIP})$ ha il seguente albero di esecuzione:\\[1em]
+
+\begin{center}
+    \begin{tikzpicture}[
+        level distance=1.5cm, % Distanza verticale tra i livelli dell'albero
+        level 2/.style={sibling distance=4.5cm} % Distanza orizzontale tra i rami del join
+    ]
+    
+    % Struttura dell'albero
+    \node {$\pi_{\text{Nome, Dip}}$}
+        child { node {$\bowtie_{\text{IMPIEGATI.Dip}=\text{DIP.Cod}}$}
+            child { node {$\sigma_{\text{Età}>30}$}
+                child { node {IMPIEGATI} }
+            }
+            child { node {DIP} }
+        };
+        
+    \end{tikzpicture}
+\end{center}
+
+\section{Divisione $\div$}
+\subsection{Definizione}
+$$
+    R \div S = (t[X] | t \in R \text{ e } \forall s \in S (t[X],s[Y])\in R)
+$$
+
+\begin{itemize}
+    \item \textbf{Schema ricorrente:} R(X,Y) e S(Y) $\implies$ risultato sui soli attributi di X
+    \item La divisione si può derivare da altri operatori.\\
+    In effetti, siano R(X,Y) e S(Y) due relazioni allora:\\
+    $$
+        R \div S = \pi_X((\pi_X(R) \times S)-R)
+    $$
+    È un operatore non primitivo, ma utile in scrittura
+\end{itemize}
+
+\subsection{Esempio}
+$$
+    \pi_{\text{CodImp}}(\text{IMPIEGATO} \div \text{PROG\_OBBLIGATORIO})
+$$
+Risultato: Gli impiegati che compaiono con ogni CodProg in PROG\_OBBLIGATORIO
+
+\section{Aggregazione (Y)}
+\subsection{Definizione}
+$$
+    Y_{G;f1(A1) \to F1,\dots}(R)
+$$
+\begin{itemize}
+    \item G sono gli attributi di raggruppamento
+    \item Le funzioni f sono funzioni di aggregazione (COUNT,SUM,MAX,MIN,AVG)
+    \item $f1(A1) \to F1$ vuol dire la funzione f1 applica all'attributo A1 e rinominato il risultato come F1
+\end{itemize}
+
+\subsection{Esempio}
+\begin{minipage}[t]{0.55\textwidth}
+    \vspace{0pt} % Allinea in alto
+    \begin{itemize}
+        \item \textbf{Schema:}\\[0.3cm]
+        IMPIEGATO(\underline{CodImp}, Dip, Stip)
+        
+        \vspace{0.3cm}
+        \item \textbf{Richiesta:} trovare gli stipendi medi per ogni dipartimento
+        \item \textbf{Espressione:} $\gamma_{\text{Dip;AVG(Stip)}\rightarrow\text{Stip\_medio}}(\text{IMPIEGATO})$
+        \item \textbf{Risultato:} una tupla per Dip con colonna Stip\_medio
+    \end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}
+    \vspace{0pt} % Allinea in alto
+    \centering
+    \renewcommand{\arraystretch}{1.5} % Aumenta l'altezza delle righe
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{CodImp} & \textbf{Dip} & \textbf{Stip} \\ \hline
+        1 & 1 & 10000 \\ \hline
+        2 & 1 & 20000 \\ \hline
+        3 & 2 & 5000  \\ \hline
+        4 & 2 & 3000  \\ \hline
+        5 & 2 & 7000  \\ \hline
+    \end{tabular}\\[0.2cm]
+    \small \textcolor{gray}{IMPIEGATO}
+\end{minipage}
+
+\vspace{1.5cm}
+
+% Seconda tabella posizionata in basso
+\begin{minipage}{0.55\textwidth}
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Dip} & \textbf{Stip\_medio} \\ \hline
+        1 & 15000 \\ \hline
+        2 & 5000  \\ \hline
+    \end{tabular}\\[0.3cm]
+    \small \textcolor{gray}{$\gamma_{\text{Dip;AVG(Stip)}\rightarrow\text{Stip\_medio}}(\text{IMPIEGATO})$}
+\end{minipage}
