@@ -29,7 +29,6 @@ Più che schemi di codice preconfezionati, i GRASP deniscono un approccio metodo
 \subsection{Relazione tra gli elaborati}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Immagini/Schermata_20260618_120508.png}
 \end{figure}
 
 \section{Rappresentazione di un Pattern GRASP}
@@ -43,424 +42,280 @@ Più che schemi di codice preconfezionati, i GRASP deniscono un approccio metodo
 
 \chapter{Pattern GRASP di base}
 \section{Creator}
-\begin{tabularx}{\textwidth}{@{} l X @{}}
-    \toprule
-    Nome: & \textbf{Creator} (Creatore) \\
-    \midrule
-    Problema: & Chi crea un oggetto A? \\
-    \midrule
-    Soluzione & Assegna alla classe B la responsabilità di creare un'istanza della classe A se una delle seguenti condizioni è vera (più sono vere, meglio è): \\
-    \cmidrule(r){2-2}
-    (può essere & 
-    \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt, parsep=0pt]
-        \item B ``contiene'' o aggrega con una composizione oggetti di tipo A.
-        \item B registra A.
-        \item B utilizza strettamente A.
-        \item B possiede i dati per l'inizializzazione di A.
-    \end{itemize} \\
-    vista come & \\
-    un consiglio): & \\
-    \bottomrule
-\end{tabularx}
+\subsection{Definizione}
+\begin{table}[htbp]
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabularx}{\textwidth}{@{} p{2.8cm} X @{}}
+        \hline
+        Nome: & \textbf{Creator} \\
+        \hline
+        Problema: &  Chi crea un oggetto A?\\
+        \hline
+        Soluzione : &
+        Assegna alla classe B la responsabilità di creare un'istanza della classe A se una delle seguenti condizioni è vera:
+        \begin{itemize}
+            \item B "contiene" o aggrega una composizione oggetti di tipo A
+            \item B registra A
+            \item B utilizza strettamente A
+            \item B possiede i dati per l'inizializzazione di A
+        \end{itemize} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
-\subsection{Problema}
-In un softwaread oggetti, la creazione di nuovi oggetti è un'operazione pervasiva. 
-
-Tuttavia,\uline{ se una classe crea direttamente un'altra classe,diventa fortemente accoppiata a quest'ultima}.
-Se la classe creata \textbf{cambia o viene sostituita}, anche la classe che la crea potrebbe subire modifiche. 
-
-\textbf{Il problema è quindi:} \uline{Come assegnare la responsabilità di creazione} in modo da non aumentare l'accoppiamento complessivo al sistema?
-
-\subsection{Soluzione}
-Il pattern Creator stabilisce che una classe B dovrebbe ricevere la responsabilità di creare un'istanza della classe A se si verifica almeno una (e preferibilmente più di una) delle seguenti condizioni:
-\begin{enumerate}
-    \item \textbf{Aggregazione/Composizione:} B contiene, aggrega o racchiude gli oggetti di tipo A
-    \item \textbf{Registrazione:} B registra o tiene traccia delle istanze di A
-    \item \textbf{Uso Stretto:} B utilizza strettamente ed estesamente gli oggetti di tipo A
-    \item \textbf{inizializzazione:} B possiede i dati di inizializzazione che devono essere passati ad A al momento della sua creazione
-\end{enumerate}
-
-\subsection{Benefici}
-\begin{itemize}
-    \item Basso Accoppiamento
-    \item Incapsulamento
-\end{itemize}
-\subsection{Controindicazioni}
-Non sempre il pattern Creator è la scelta migliore.
-
-Esistono situazioni in cui l'applicazione rigida di questo principio crea problemi:
-\begin{itemize}
-    \item \textbf{Logica di creazione complessa:}\\
-    Se la creazione richiede passaggi condizionali intricati, la scelta dinamica di sottoclassi o l'interfacciamento con librerie esterne, assegnare la creazione alla classe aggregatrice potrebbe distruggere la coesione
-    
-    \item \textbf{Riuso del processo di creazione:} Se lo stesso identico processo di creazione serve a molte classi diverse
-\end{itemize}
-
-\subsection{Flusso di lavoro logico}
-\begin{enumerate}
-    \item Leggi il contratto dell'operazione di sistema (che ti dice cosa deve essere creato)
-    \item Nel diagramma di sequenza si delinea chi crea cosa
-    \item Si riporta la funzione e la freccia di dipendenza nel diagramma delle classi
-\end{enumerate}
-\subsection{Modello di dominio}
+\subsection{Esempio diagramma delle classi}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.75]{Immagini/Schermata_20260618_152238.png}
+    \includegraphics{Immagini/Schermata_20260712_123204.png}
 \end{figure}
-\subsection{Modello di sequenza}
+\subsection{Esempio diagramma di sequenza di stato}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.75]{Immagini/Schermata_20260618_152341.png}
+    \includegraphics{Immagini/Schermata_20260712_123238.png}
 \end{figure}
 
-\subsection{Diagrammi delle classi di progetto}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.75]{Immagini/Schermata_20260618_152605.png}
-\end{figure}
-
+\newpage
 \section{Information Expert}
-\noindent
-\begin{tabularx}{\textwidth}{@{} l X @{}}
-\toprule
-\textbf{Nome del pattern:} & \textbf{Information Expert} (Esperto dell'Informazione) \\ \midrule
-\textbf{Problema:}         & Qual è un principio di base fondamentale con cui assegnare le responsabilità agli oggetti? \\ \midrule
-\textbf{Soluzione:}        & Assegna una responsabilità alla classe che possiede le informazioni necessarie per soddisfarla. \\ 
-\bottomrule
-\end{tabularx}
+\subsection{Definizione}
+\begin{table}[htbp]
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabularx}{\textwidth}{@{} p{2.8cm} X @{}}
+        \hline
+        Nome: & \textbf{Information Expert} \\
+        \hline
+        Problema: &  Qual'è un principio di base per assegnare responsabilità agli oggetti\\
+        \hline
+        Soluzione : &
+        Assegna una responsabilità alla classe che possiede le informazione necessarie per soddisfarla
+        \\
+        \hline
+    \end{tabularx}
+\end{table}
 
-\subsection{Problema}
-Nello sviluppo software, quando si riscrive un nuovo caso d'uso, ci si trova davanti a decine di frammenti di logica di business.
-
-Se queste responsabilità vengono assegnate a caso, si rischia di scivolare nell'approccio procedurale, dove le \uline{classi di dominio diventano dei semplici contenitori anemidici di dati, mentre tutta la logica operatica viene accentrata in un unico enorme blocco.}
-Questo porta a un codice di bassa qualità
-
-Information Expert risolve questo caso fornendo un criterio oggettivo: esamina i dati e metti l'azione dove risiedono i dati necessari a compierla
-
-\subsection{Soluzione}
-La direttiva è semplice: guarda quale classe possiede le informazioni richieste per completare il compito e assegna il metodo a quella classe.
-
-Le "informazioni" necessarie possono essere:
-\begin{itemize}
-    \item Attributi privati della classe stessa
-    \item Oggetti strettamente correlati ad essa
-    \item Informazioni che la classe può calcolare o derivare interrogando i suoi componenti
-\end{itemize}
-
-Se le informazioni sono distribuite su più classi, l'information Expert diventa un concetto incrementale: si crea una catena di deleghe in cui ogni classe fa la sua parte basandosi su ciò che conosce direttamente.
-
-\subsection{Benefici}
-\begin{itemize}
-    \item \textbf{Mantenimento dell'incapsulamento}
-    \item \textbf{Alta Coesione}
-    \item \textbf{Basso Accoppiamento}
-    \item \textbf{Facilità di manutenzione}
-\end{itemize}
-\subsection{Controindizioni}
-\begin{itemize}
-    \item \textbf{Problemi di persistenza}
-    \item \textbf{Logiche di visualizzazione (UI):}\\Chi conosce i dati dell'utente? La classe User. Ma non dobbiamo permettere a User di stampare se stessa in HTML o di aprire una finestra pop-up grafica. La responsabilità grafica va separata nettamente.
-\end{itemize}
-\subsection{Flusso di lavoro}
-\begin{enumerate}
-    \item \textbf{Identifica il requisito:} Leggi i contratti delle operazioni o i casi d'uso
-    \item \textbf{Cerca le informazioni:} \\Guarda il modello di dominio e individua quali classi possiedono gli attributi necessari a quel calcolo
-    \item \textbf{Inizia dall'alto:} Trova la classe che fa da aggregatore principale e assegnale il metodo di alto livello
-    \item \textbf{Applica la delega:} \\Se la classe principale non ha tutti i dettagli, scendi di un livelllo nell'albero delle associazioni e assegna sotto-responsabilità alle classi componenti
-    \item \textbf{Disegna l'interazione:}\\ Convalida questa scelta tracciando i messaggi nel diagramma di sequenza.\\
-    Se le frecce fluiscono in modo lineare seguendo la struttura dei dati, l'applicazione dell'information Expert è corretta
-\end{enumerate}
-\subsection{Diagramma di sequenza}
+\subsection{Esempio diagramma delle classi}
 \begin{figure}[H]
     \centering
-    \includegraphics{Immagini/Schermata_20260618_153741.png}
+    \includegraphics{Immagini/Schermata_20260712_123639.png}
 \end{figure}
-\subsection{Diagramma delle classi}
+\subsection{Esempio diagramma di sequenza di stato}
 \begin{figure}[H]
     \centering
-    \includegraphics{Immagini/Schermata_20260618_153833.png}
+    \includegraphics{Immagini/Schermata_20260712_123716.png}
 \end{figure}
 
+\newpage
 \section{Low Coupling}
-\noindent
-\begin{tabularx}{\textwidth}{@{} l X @{}}
-\toprule
-\textbf{Nome del pattern:} & \textbf{Low Coupling} (Accoppiamento Basso) \\ \midrule
-\textbf{Problema:}         & Come ridurre l'impatto dei cambiamenti, supportare un alto riuso e facilitare la manutenzione? \\ \midrule
-\textbf{Soluzione:}        & Assegna le responsabilità in modo tale che l'accoppiamento (le dipendenze tra le classi) rimanga il più basso possibile. \\ 
-\bottomrule
-\end{tabularx}
+\subsection{Definizione}
+\begin{table}[htbp]
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabularx}{\textwidth}{@{} p{2.8cm} X @{}}
+        \hline
+        Nome: & \textbf{Low Coupling} \\
+        \hline
+        Problema: &  Come ridurre l'impatto dei cambiamenti?\\
+        \hline
+        Soluzione : &
+        Assegna le responsabilità in modo tale che l'accoppiamento (non necessario) rimanga basso. 
 
-\subsection{Problema}
-L'accoppiamento è la misura di quanto fortemente un elemento è connesso a, conosce o dipende da altri elementi.
-
-Se un sistema ha un alto accoppiamento, le classi sono strettamente interconnesse tra loro in una rete ingarbugliata.
-
-Questo approccio comporta 3 gravi problemi:
+        Usa questo principio per valutare le alternative
+        \\
+        \hline
+    \end{tabularx}
+\end{table}
+\subsection{Effetto di Information Expert}
+Information Expert guida verso una scelta che sostiene Low Coupling
 \begin{itemize}
-    \item \textbf{Effetto Dominio:} Una modifica apparentemente innocua in una classe rompe il funzionamento di altre 10 classi sparse nel codice
-    \item \textbf{Impossibilità di riuso}
-    \item \textbf{Difficoltà di comprensione}
+    \item Expert chiede di trovare l'oggetto che possiede la maggior parte delle informazioni richieste per la responsabilità
+    \item Se ingoriamo i consigli di Informatio Expert, l'accoppiamento complessivo è meggiore
+    \begin{itemize}
+        \item Ci sono più oggetti o informazioni che devono essere condivisi
+    \end{itemize}
 \end{itemize}
 
-\subsection{Soluzione}
-Il pattern suggerisce di valutare costantemente le alternative di progettazione e di scegliere sempre la soluzione che minimizza i legami di dipendenza.
+\subsection{Esempio di alto accoppiamento}
+\begin{figure}[H]
+    \centering
+    \includegraphics{Immagini/Schermata_20260712_183838.png}
+\end{figure}
 
-In un linguaggio orientato agli oggetti, la classe A è accoppiata alla classe B se:
-\begin{itemize}
-    \item A ha un attributo che fa riferimento a un istanda di B
-    \item A invoca i metodi di un oggetto B
-    \item A ha un metodo che riceve come argomento o restituisce un oggetto B
-    \item A è una ottoclasse di B
-\end{itemize}
-
-\subsection{Benefici}
-\begin{itemize}
-    \item \textbf{Isolamento delle modifiche}
-    \item \textbf{Elevato riuso}
-    \item \textbf{Testabilità semplificata}
-\end{itemize}
-
-\subsection{Controindicazioni}
-\begin{itemize}
-    \item \textbf{Metodi ad-hoc gonfiati}
-    \item \textbf{Infrastrutture e standard stabili}
-\end{itemize}
-
-\subsection{Flusso di lavoro}
-\begin{enumerate}
-    \item \textbf{Abbozza le alternative:}\\ Quando devi implementare un messaggio di sistema pensa ad almeno due modi diversi in cui gli oggetti potrebbero cooperare per raggiungere il risultato
-    \item \textbf{Conta le linee di dipendenza:}\\ Guarda le frecce del tuo diagrama di interazione.\\ Quanti oggetti diversi deve conoscere la classe di partenza per portare a termine il compito?
-    \item \textbf{Valuta la stabilità:} Se un accoppiamento è inevitabile, cerca di indirizzarlo verso l'oggetto più stabile
-    \item \textbf{Trova il compromesso con la coersione:}\\ Assicurati che l'alternativa scelta per ridurre l'accoppiamento non distrugga l'alta coesione della classe ricevente
-\end{enumerate}
-
-\section{High Cohesion}
-\noindent
-\begin{tabularx}{\textwidth}{@{} l X @{}}
-\toprule
-\textbf{Nome del pattern:} & \textbf{High Cohesion} (Coesione Alta) \\ \midrule
-\textbf{Problema:}         & Come mantenere gli oggetti focalizzati, comprensibili e gestibili, supportando al contempo un basso accoppiamento? \\ \midrule
-\textbf{Soluzione:}        & Assegna le responsabilità in modo che le operazioni interne di una classe siano strettamente correlate dal punto di vista funzionale. \\ 
-\bottomrule
-\end{tabularx}
-
-\subsection{Problema}
-Nello sviluppo di sistemi complessi, c'è la forte tentazione di inserire nuove funzioni all'interno delle poche classi già esistenti e note, creando involontariamente delle "classi mostro".
-
-Se una classe ha una \textbf{bassa coesione}, \uline{significa che sta svolgendo troppi compiti eterogenei che non c'entrano nulla l'uno con l'altro}.
-
-Questo scenario comporta gravi problemi:
-\begin{itemize}
-    \item \textbf{Fragilità e difficoltà di lettura}
-    \item \textbf{Scarsa riusabilità}
-    \item \textbf{Saturazione da cambiamento:} La classe sarà costretta a cambiare ogni volta che cambia uno qualsiasi dei cinque requisiti di business differenti di cui si fa carico
-\end{itemize}
-
-\subsection{Soluzione}
-Il pattern suggerisce di \textbf{delegare} i compiti specialistici e mantenere ogni classe \textbf{specializzata} in un unico blocco logico di funzionalità.
-\uline{Una classe ad alta coesione fa "una sola cosa fatta bene"}.
-
-\subsection{Benefici}
-\begin{itemize}
-    \item \textbf{Facilità di comprensione}
-    \item \textbf{Manutenzione localizzata}
-    \item \textbf{Sviluppo in parallelo}
-\end{itemize}
-\subsection{Controindicazioni}
-L'eccesso opposto della bassa coesione è la frammentazione esasperata, se si applica il principio in modo paranoico, si rischia di creare centinaia di microscopiche classi formate da un solo metodo e tre righe di codice ciascuna.
-
-Questo approccio non fa altro che nascondere la complessità del sistema dentro un labirinto di collegamenti e chiamate, peggiorando drasticamente l'accoppiamento del software e rendendo il debugging un incubo. 
-
-\uline{Una coesione moderatamente alta è il target ideale}.
-
-\subsection{Flusso di lavoro}
-Per garantire un'alta coesione durante le sessioni di progettazione nei diagrammi di sequenza e delle classi:
-\begin{enumerate}
-    \item \textbf{Definisci l'identità della classe}
-    \item \textbf{Monitora i metodi aggiunti}
-    \item \textbf{Ispezione le variabili di istanza}
-    \item \textbf{Applica la delega attiva}
-\end{enumerate}
-
+\newpage
 \section{Controller}
-\noindent
-\begin{tabularx}{\textwidth}{@{} l X @{}}
-\toprule
-\textbf{Nome del pattern:} & \textbf{Controller} (Controllore) \\ \midrule
-\textbf{Problema:}         & Qual è il primo oggetto oltre lo strato della UI che riceve e coordina l'esecuzione di un'operazione di sistema? \\ \midrule
-\textbf{Soluzione:}        & Assegna questa responsabilità a un oggetto che rappresenti l'intero sistema, un dispositivo logico, o lo scenario del caso d'uso corrente. \\ 
-\bottomrule
-\end{tabularx}
+\subsection{Definizione}
+\begin{table}[htbp]
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabularx}{\textwidth}{@{} p{2.8cm} X @{}}
+        \hline
+        Nome: & \textbf{Controller} \\
+        \hline
+        Problema: &  Qual'è il primo oggetto oltre lo strato UI a ricevere e coordinare un'operazione di sistema\\
+        \hline
+        Soluzione : &
+        Assegna la responsabilità a un oggetto che rappresenta una delle seguenti scelte:
+        \begin{itemize}
+            \item Rappresentare il "sistema" complessivo, un "oggetto radice", un dispositivo all'interno del quale viene eseguito il software, un punto d'accesso al software o un sottosistema principale (sono tutte varianti di un facade controller)
+            \item Rappresenta uno scenario di un caso d'udo all'interno del quale si verifica l'operazione di sistema (un controller di caso d'uso o controller di session)
+        \end{itemize}
+        \\
+        \hline
+    \end{tabularx}
+\end{table}
 
-\subsection{Problema}
-Quando un utente interagisce con un'interfaccia grafica, l'interfaccia cattura un evento software.
+\subsection{Possibili approcci}
+\begin{figure}[H]
+    \centering
+    \includegraphics{Immagini/Schermata_20260712_184505.png}
+\end{figure}
 
-Se il codice che esegue l'operazione di business viene scritto direttamente dentro il codice del pulsante grafico, si commette un grave errore di progettazione.
+\subsection{Esempio MonopoluGame}
+\begin{figure}[H]
+    \centering
+    \includegraphics{Immagini/Schermata_20260712_184418.png}
+\end{figure}
 
-Questo approccio genera 2 problemi principali:
+\newpage
+\section{High Cohesion}
+\subsection{Definizione}
+\begin{table}[htbp]
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabularx}{\textwidth}{@{} p{2.8cm} X @{}}
+        \hline
+        Nome: & \textbf{High Cohesion} \\
+        \hline
+        Problema: &  Come mantenere gli oggetti focalizzati, comprensibili e gestibili e, come effetto collaterale, sostenere Low Coupling?\\
+        \hline
+        Soluzione : &
+        Assegna le responsabilità in modo tale che la coesione rimanga alta.
+
+        Usa questo principio per valutare le alternative
+        \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\chapter{Patter GRASP Avanzati}
+\section{Pure Fabricator}
+\subsection{Definizione}
+\begin{table}[htbp]
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabularx}{\textwidth}{@{} p{2.8cm} X @{}}
+        \hline
+        Nome: & \textbf{Pure Fabricator} \\
+        \hline
+        Problema: &  Quale oggetto deve avere la responsabilità quando non si vogliono violare High Cohesion e Low Coupling, o altri obiettivi, ma le soluzioni suggerite da Expert non sono appropriate?\\
+        \hline
+        Soluzione : &
+        Assegnare un insieme di responsabilità altamente coeso a una classe artificiale o di convenienza, che non rappresenta un concetto del dominio del problema, ma piuttosto è una classe inventata per sostenere coesione alta, accoppiamento basso e riuso
+        \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsection{Esempio POS NextGen}
+Vogliamo salvare l'oggetto di tipo Sale in una base di dati razionale.
+
+Solitamente questa responsabilità è assegnata alla classe stessa, ma Sale perderebbe di prestazioni:
 \begin{itemize}
-    \item \textbf{Dipendenza dalla tecnologia visiva}
-    \item \textbf{Perdita di controllo e coesione}
+    \item Meno coesione perchè introduciamo le operazioni orientate ai db
+    \item Aumento dell'accoppiamento all'interfaccia del db
+    \item Diminuirebbe il riuso futuro della classe stessa
+    \item Possibile codice duplicato con altre classi
 \end{itemize}
 
-Il controller risolve questo problema fungendo da intermediario e coordinatore
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Immagini/Schermata_20260712_185607.png}
+\end{figure}
 
-\subsection{Soluzione}
-Il pattern stabilisce che la UI deve limitarsi a catturare il clic dell'utente e delegarlo direttamente a un oggetto specifica che sta ne background, chiamato appunto controller.
-
-Il GRASP suggerisce due modi principali per scegliere o creare un oggetto controller:
-
-\begin{itemize}
-    \item \textbf{Facade Controller}\\ Si assegna la responsabilità a un oggetto che rappresenta il sistema complessivo, il software nel suo insieme o il dispositivo fisico in uso
-    \item \textbf{Use-Case Controller}\\ Si crea un oggetto che rappresenta l'intero scenario o la sequenza di azioni di un singolo caso d'uso
-\end{itemize}
-
-\subsection{Benefici}
-\begin{itemize}
-    \item \textbf{Disaccoppiamento della UI}
-    \item \textbf{Riuso dei canali di input}
-    \item \textbf{Facilità di test}
-\end{itemize}
-\subsection{Controindicazioni}
-Il rischio più comune quando si implementa questo pattern è la creazione di un Controllore Gonfio.
-
-\subsection{Flusso di lavoro}
-\begin{enumerate}
-    \item \textbf{Analizza i diagrammi di sequenza di sistema:} Identifica quali sono messaggi che l'attore invia al sistema
-    \item \textbf{Scegli il tipo di controller}
-    \item \textbf{Piazza il blocco nel diagramma di interazione:} Nei diagrammi di sequenza dettagliati, inserisci la linea di vita della UI alla sinistra e, come secondo oggetto subito a destra, inserisci l'oggetto Controller
-    \item \textbf{Disegna la delega:} Fai partire la freccia dalla UI al Controller. Subito dopo, fai partire le frecce dal Controller verso le vere classi del Modello di Dominio applicando l'Information Expert.
-\end{enumerate}
-
-\chapter{Pattern GRASP avanzati}
-
-\section{Pure Fabrication}
-\noindent
-\begin{tabularx}{\textwidth}{@{} l X @{}}
-\toprule
-\textbf{Nome del pattern:} & \textbf{Pure Fabrication}\\ \midrule
-\textbf{Problema:}         &  Come assegnare una responsabilità senza violare alta coesione e basso accoppiamento quando pattern come l'Information Expert falliscono?\\ \midrule
-\textbf{Soluzione:}        &  Creare una classe artificiale (che non esiste nel dominio) e assegnarle un set di responsabilità fortemente coeso\\ 
-\bottomrule
-\end{tabularx}
-
-\subsection{Problema}
-Sorge quando si cerca di assegnare una responsabilità utilizzando i pattern standard, ma facendolo si violerebbero obiettivi cruciali come mantenere un'alta coesione e un basso accoppiamento
-\subsection{Soluzione}
-Consiste nell'assegnare la responsabilità a una classe "artificiale" o di convenienza.
-
-Questa classe non rappresenta un concetto reale nel dominio del problema, ma viene inventata appositamente dal progettista per sostenere alta coesione, accoppiamento basso e riuso
-\subsection{Benefici}
-\begin{itemize}
-    \item Sostiene l'alta coesione
-    \item Aumenta significativame la potenzialità di riuso del codice
-\end{itemize}
-\subsection{Controindicazioni}
-\begin{itemize}
-    \item Un utilizzo eccessivo può portare a una "decomposizione del codice"
-    \item Rischio di creare un eccesso di oggetti puramente comportamentali che non possiedono le informazioni richieste per soddisfare i propri compiti
-\end{itemize}
-\subsection{Flusso di lavoro}
-\begin{enumerate}
-    \item Identificare che l'assegnazione di una responsabilità violerebbe l'alta coesione o il basso accoppiamento di una classe esistente
-    \item Inventare una classe "artificiale" che non fa parte del domionio del problema
-    \item Assegnare a questa nuova classe l'insieme di responsabilità altamente coese
-    \item Progettare un'opportuna interazione coordinata dalla Pure Favrication assicurandosi di passarle le infromazioni necessarie per operare
-\end{enumerate}
-
-
+\newpage
 \section{Polymorphism}
-\noindent
-\begin{tabularx}{\textwidth}{@{} l X @{}}
-\toprule
-\textbf{Nome del pattern:} & \textbf{Polymorphism}\\ \midrule
-\textbf{Problema:}         &  Come gestire alternative basate sul tipo e creare componenti inseribili?\\ \midrule
-\textbf{Soluzione:}        & Assegnare la responsabilità del comportamento ai tipi per i quali varia, usando operazioni polimorfe \\ 
-\bottomrule
-\end{tabularx}
-\subsection{Problema}
-Come gestire alternative e comportamenti correlati che sono basate sul tipo? 
-Come creare? comportamente software "inseribili"?
-\subsection{Soluzione}
-Quando le alternative variano con il tipo, si assenga la responsabilità del comportamente direttamente ai tipi per i quali il comportamente varia, utilizzando operazioni polimorfe
-\subsection{Benefici}
-\begin{itemize}
-    \item Le estensioni richieste per gestire nuove variazioni sono facili da aggiungere
-    \item Si possono introdurre nuove implementazioni senza influire minimamente sui client che le utilizzano
-\end{itemize}
-\subsection{Controindicazioni}
-\begin{itemize}
-    \item Progettare interfacce e polimorfismi per una "adattabilità" speculativa porta spesso ala progettazione di variazioni imporbabili che, nella realtà, non si verificheranno mai
-\end{itemize}
-\subsection{Flusso di lavoro}
-\begin{enumerate}
-    \item Rilevare la presenza di un comportamente che necessita di alternative differenti basate sul tipo
-    \item Definire un'astrazione comune con un'operazione polimorfa
-    \item Assegnare la responsabilità di implementare lo specifico comportamento alle varie sottoclassi o tipi concreti
-\end{enumerate}
+\subsection{Definizione}
+\begin{table}[htbp]
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabularx}{\textwidth}{@{} p{2.8cm} X @{}}
+        \hline
+        Nome: & \textbf{Polymorphism} \\
+        \hline
+        Problema: &  Come gestire alternative basate sul tipo?
+        
+        Come creare componenti software inseribili?
+        \\
+        \hline
+        Soluzione : &
+        Quando le alternative e comportamenti correlati variano con il tipo, allora assegna la responsabilità del comportamento ai tipi per i quali il comportamente varia, utilizzando operazione polimorfe
+        \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsection{Esempio POS NextGen}
+Vogliamo gestire i diversi sistemi di contabilità di terze parti.
+
+Dobbiamo far sì che il sistema di contabilità di POS NextGen possa comunicare con loro.
+
+Così facendo abbiamo più implementazioni simili ma che si adattano a differenti richieste
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{Immagini/Schermata_20260712_185958.png}
+\end{figure}
+
+\subsection{Esempio Monopoly}
+Nel gioco del Monopolu le caselle possono avere un comportamento differente in base al loro tipo, anche se condividono delle caratteristiche comuni
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{Immagini/Schermata_20260712_190147.png}
+\end{figure}
 
 \newpage
 \section{Indirection}
-\noindent
-\begin{tabularx}{\textwidth}{@{} l X @{}}
-\toprule
-\textbf{Nome del pattern:} & \textbf{Indirection}\\ \midrule
-\textbf{Problema:}         &  Come disaccoppiare gli oggetti ed evitare l'accoppiamento diretto tra elementi? \\ \midrule
-\textbf{Soluzione:}        &  Assegnare la responsabilità a un oggetto intermediario che faccia da mediatore tra i componenti \\ 
-\bottomrule
-\end{tabularx}
-\subsection{Problema}
-Dove assegnare una responsabilità per evitare l'accoppiamento diretto tra più elementi?
+\subsection{Definizione}
+\begin{table}[htbp]
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabularx}{\textwidth}{@{} p{2.8cm} X @{}}
+        \hline
+        Nome: & \textbf{Indirection} \\
+        \hline
+        Problema: &  Dove assengare una responsabilità, per evitare l'accoppiamento diretto tra più elementi?
 
-Come disaccoppiare gli oggetti in modo da sostenere un alto riuso e un accoppiamento basso?
-\subsection{Soluzione}
-Si assegna la responsabilità a un oggetto intermediario che ha il suo compito di mediare tra altri componenti o servizi, evitando cosi' che vi sia un accoppiamento diretto tra di essi
-\subsection{Benefici}
+        Come disaccoppiare gli oggetti in modo da sostenere un alto riuso e un accoppiamento basso?
+        \\
+        \hline
+        Soluzione : &
+        Si assegna la responsabilità ad un oggetto intermediario che media tra altri componenti o servizi, in modo che non ci sia un accoppiamento diretto tra di essi
+        \begin{itemize}
+            \item L'intermediario crea una indirezione tra le componenti
+            \item Accoppiamento più basso tra componenti
+        \end{itemize}
+        \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsection{Esempio POS NextGen}
 \begin{itemize}
-    \item Crea una utilie indirezione tra le diversi componenti
-    \item Garantisce un accoppiamento notevolmente più bassp tra i componenti del sistema
+    \item Gli oggetti lAccountingAdapter fungono da intermediari tra gli oggetti dello strato di dominio e i servizi esterni
+    \item Aggiungendo un livello di indicazione e il polimorfismo gli oggetti adattatori proteggono il progetto interno da variazione nelle interfacce esterne
 \end{itemize}
-\subsection{Controindicazioni}
-\begin{itemize}
-    \item L'aggiunta di intermediari aumenta fisiologicamente il numero di classi e la complessità strutturale del codice
-\end{itemize}
-\subsection{Flusso di lavoro}
-\begin{enumerate}
-    \item Individuare due o più componenti o servizi che rischiano di essere accoppiati direttamente in modo rigido
-    \item Creare un nuovo oggetto con la funzione di intermediario (come un Adapter)
-    \item Instradare le chiamate del client verso l'intermediario, in modo che sia quest'ultimo a comunicare con il servizio di destinazione disaccoppiando le due parti
-\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.8]{Immagini/Schermata_20260712_190717.png}
+\end{figure}
 
 \newpage
 \section{Protected Variations}
-\noindent
-\begin{tabularx}{\textwidth}{@{} l X @{}}
-\toprule
-\textbf{Nome del pattern:} & \textbf{Protected Variations}\\ \midrule
-\textbf{Problema:}         & Come evitare che variazioni o instabilità si riversino su altri elementi del sistema? \\ \midrule
-\textbf{Soluzione:}        & Identificare i punti di variazione e assegnare le responsabilità per creare un'interfacciastabile attorno ad essi \\ 
-\bottomrule
-\end{tabularx}
-\subsection{Problema}
-Come progettare oggetti, sottoinsieme e sistemi in modo tale che le variazioni o l'instabilità di questi elementi non si riversino in modo distruttivo su altri elementi
-\subsection{Soluzione}
-Si identificano i punti in cui sono previste delle variazioni, poi si assegnano le responsabilità in modo da creare una "interfaccia" stabile e inossidabile attorno a questi punti critici
-\subsection{Benefici}
-\begin{itemize}
-    \item Le estensioni richieste per gestire nuove variazioni sono facili da aggiungere
-    \item È possibile introdurre nuove implementazioni senza influire sui client
-    \item Favorisce un basso accoppiamento
-    \item È possibile ridurre drasticamente l'impatto o il costo dei cambiamenti futuri
-\end{itemize}
-\subsection{Controindicazioni}
-\begin{itemize}
-    \item È un'operazione inutile e costosa utilizzare questo pattern per proteggersi da variazioni che non si verificheranno main
-    \item In alcune circostanze, risulta più conveniente e meno complesso riprogettare il software solo quando la variazione si presenta, piuttosto che tentare di realizzare preventivamente scudi contro ogni potenziale variazione immaginabile
-\end{itemize}
-\subsection{Flusso di lavoro}
-\begin{enumerate}
-    \item Analizzare il sistema per identificare con precisione i punti di instabilità o le aree in cui si prevedono variazioni future
-    \item Assegnare le responsabilità in modo da isolare quegli specifici punti dal resto del sistema 
-    \item "Avvolgere" l'elemento instabile fornendo una stabile interfaccia di comunicazione, bloccando cosi' la propagazione a cascata dei futuri cambiamenti
-\end{enumerate}
+\subsection{Definizione}
+\begin{table}[htbp]
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabularx}{\textwidth}{@{} p{2.8cm} X @{}}
+        \hline
+        Nome: & \textbf{Protected Variations} \\
+        \hline
+        Problema: &  Come progettare oggetti, sottosistemi e sistemi in modo tale che le variazioni o l'instabilità di questi elementi non si riversino su altri elementi?\\
+        \hline
+        Soluzione : &
+        Si identificano i punti in cui sono previste delle variazioni, poi si assegnano le responsabilità per creare una "interfaccia" stabile attorno a questi punti
+        \\
+        \hline
+    \end{tabularx}
+\end{table}

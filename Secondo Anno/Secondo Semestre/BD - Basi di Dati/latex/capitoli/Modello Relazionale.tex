@@ -1,0 +1,149 @@
+\chapter{Il Modello Relazionale in Pratica}
+\label{ch:modello_relazionale}
+
+Il modello relazionale è il pilastro su cui si basano i moderni Data Base Management System (DBMS). A differenza del modello Entità-Relazione (utilizzato per la progettazione concettuale), il modello relazionale ci porta a un livello più vicino alla macchina: la \textbf{progettazione logica}. In questo capitolo vedremo come i dati vengano strutturati rigorosamente in tabelle matematiche, dette appunto \textit{relazioni}.
+
+\section{Concetti Base: Tabelle, Tuple e Attributi}
+Nel modello relazionale, l'informazione è organizzata in \textbf{tabelle} a doppia entrata.
+\begin{itemize}
+    \item \textbf{Relazione (Tabella)}: Rappresenta un'entità o un'associazione del mondo reale.
+    \item \textbf{Attributo (Colonna)}: Rappresenta una proprietà della relazione. Ogni attributo ha un nome e un \textit{dominio} (il tipo di dati ammessi, ad es. interi, stringhe, date).
+    \item \textbf{Tupla (Riga)}: Rappresenta un singolo record o istanza della relazione. L'insieme delle tuple forma il contenuto effettivo della tabella in un certo istante.
+    \item \textbf{Grado}: Il numero di attributi (colonne) di una relazione.
+    \item \textbf{Cardinalità}: Il numero di tuple (righe) presenti in quel momento.
+\end{itemize}
+
+\subsection*{Esempio Pratico: La tabella Studenti}
+Immaginiamo di voler memorizzare le informazioni degli studenti universitari:
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Matricola} & \textbf{Nome} & \textbf{Cognome} & \textbf{DataNascita} \\
+\hline
+1001 & Mario & Rossi & 15/05/2000 \\
+1002 & Luca & Bianchi & 22/11/1999 \\
+1003 & Giulia & Verdi & 10/01/2001 \\
+\hline
+\end{tabular}
+\end{center}
+In questo esempio:
+\begin{itemize}
+    \item Il \textbf{grado} è 4 (Matricola, Nome, Cognome, DataNascita).
+    \item La \textbf{cardinalità} è 3 (ci sono 3 studenti).
+\end{itemize}
+
+\section{Schema e Istanza}
+È fondamentale distinguere tra la struttura del database e i dati che esso contiene nel tempo.
+
+\begin{itemize}
+    \item \textbf{Schema (Intensione)}: È la struttura logica della tabella, definita dal progettista. Rappresenta la componente \textit{invariante nel tempo}. Si indica generalmente con il nome della tabella seguito dai suoi attributi tra parentesi.
+    \\[0.1cm] \textit{Esempio}: \texttt{STUDENTE(Matricola, Nome, Cognome, DataNascita)}
+    
+    \item \textbf{Istanza (Estensione)}: È l'insieme effettivo delle righe (valori) in un preciso momento. Rappresenta la componente \textit{variabile nel tempo} (aggiornata da inserimenti, modifiche, cancellazioni).
+\end{itemize}
+
+\section{I Valori NULL}
+Cosa succede se non conosciamo un'informazione o se questa non si applica al contesto? Nel modello relazionale si utilizza un marcatore speciale chiamato \textbf{NULL}.
+Non rappresenta né il numero zero né una stringa vuota, ma indica esplicitamente "Valore Sconosciuto" oppure "Valore Inapplicabile".
+\\[0.2cm]
+\textbf{Esempio}: Se un lavoratore non ha un numero di telefono aziendale assegnato, il suo attributo \texttt{Telefono} assumerà il valore \texttt{NULL}. 
+\\[0.1cm]
+\textit{Regola d'oro}: Nessun attributo che fa parte di una \textbf{Chiave Primaria} può assumere valore NULL (questo è noto come \textit{Vincolo di Integrità dell'Entità}).
+
+\section{Vincoli di Integrità: Mantenere i dati coerenti}
+Un database non è solo un contenitore, ma un "guardiano" della validità delle informazioni. A questo scopo si usano i \textbf{vincoli}.
+
+\subsection{Vincoli Intra-relazionali (su singola tabella)}
+\begin{enumerate}
+    \item \textbf{Vincoli di Dominio}: Specificano il range o l'insieme di valori permessi per una singola cella. 
+    \\[0.1cm] \textit{Esempio}: L'attributo \texttt{Voto} di un esame deve per forza essere compreso tra 18 e 30 (più l'eventuale lode).
+    \item \textbf{Vincoli di Tupla (o di ennupla)}: Esprimono condizioni matematiche o logiche sui valori di una stessa riga, coinvolgendo spesso più colonne.
+    \\[0.1cm] \textit{Esempio}: In una tabella \texttt{CONTRATTO(ID, DataInizio, DataFine)}, deve sempre valere il vincolo \texttt{DataFine} $\geq$ \texttt{DataInizio}.
+\end{enumerate}
+
+\subsection{Chiavi: Candidata e Primaria}
+Per garantire che non vi siano righe identiche all'interno di una tabella (poiché, matematicamente, una relazione è un insieme di elementi distinti), si usa il concetto di chiave.
+\begin{itemize}
+    \item \textbf{Superchiave}: Un insieme di uno o più attributi che identifica in modo univoco una riga.
+    \item \textbf{Chiave Candidata}: Una superchiave \textit{minimale}. Non ha attributi in più rispetto allo stretto necessario. Ad esempio, per uno studente, sia la \texttt{Matricola} che il \texttt{CodiceFiscale} potrebbero fungere da chiavi candidate.
+    \item \textbf{Chiave Primaria (Primary Key - PK)}: Tra tutte le chiavi candidate, è quella scelta dal progettista come identificatore ufficiale e principale della tabella. Per convenzione, si \underline{sottolinea}.
+\end{itemize}
+\textit{Esempio di Schema relazionale con Chiave Primaria}: 
+\\[0.1cm]
+\texttt{IMPIEGATO(\underline{CodiceFiscale}, Nome, Cognome, DataAssunzione)}
+
+\section{L'anima del Database Relazionale: Le Chiavi Esterne}
+Come colleghiamo due tabelle separate? Attraverso le \textbf{Chiavi Esterne} (Foreign Key - FK). 
+Una chiave esterna è un attributo all'interno di una tabella il cui valore deve necessariamente esistere come chiave primaria di un'altra tabella collegata (o, in alternativa, essere \texttt{NULL}). 
+
+\subsection*{Esempio Pratico: Impiegati e Dipartimenti}
+Vogliamo modellare il fatto che gli impiegati lavorano presso specifici dipartimenti.
+\\[0.2cm]
+\textbf{Schema Logico (l'asterisco indica la chiave esterna):}
+\begin{itemize}
+    \item \texttt{DIPARTIMENTO(\underline{CodDipartimento}, NomeDip, Sede)}
+    \item \texttt{IMPIEGATO(\underline{Matricola}, Nome, Cognome, CodDip*)} 
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{Istanza della tabella DIPARTIMENTO:}
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{CodDipartimento} & \textbf{NomeDip} & \textbf{Sede} \\
+\hline
+D1 & Amministrazione & Roma \\
+D2 & IT & Milano \\
+D3 & Vendite & Napoli \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Istanza della tabella IMPIEGATO:}
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Matricola} & \textbf{Nome} & \textbf{Cognome} & \textbf{CodDip*} \\
+\hline
+100 & Alice & Neri & D2 \\
+101 & Bob & Marroni & D1 \\
+102 & Carlo & Gialli & D2 \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Vincolo di Integrità Referenziale}: La regola vitale qui è che non posso inserire un nuovo impiegato assegnandogli un dipartimento inesistente (es. \texttt{CodDip = 'D9'}). Il DBMS bloccherà l'inserimento generando un errore di integrità referenziale.
+
+\section{Dalla Teoria alla Pratica: Esempi di Traduzione ER}
+Vediamo come le cardinalità dei diagrammi Entità-Relazione (ER) influenzano la scrittura del modello relazionale.
+
+\subsection{Esempio 1: Associazione Molti-a-Molti (N:N)}
+\textbf{Scenario:} Gli studenti possono seguire molti corsi, e ogni corso è frequentato da molti studenti.
+\\[0.1cm]
+\textbf{Traduzione Logica:} Viene generata una \textit{nuova tabella associativa} (ponte).
+\begin{itemize}
+    \item \texttt{STUDENTE(\underline{Matricola}, Nome, Cognome)}
+    \item \texttt{CORSO(\underline{CodiceCorso}, NomeCorso, Crediti)}
+    \item \texttt{ESAME(\underline{Matricola*}, \underline{CodiceCorso*}, DataEsame, Voto)}
+\end{itemize}
+\textit{Nota}: Nella tabella \texttt{ESAME}, la chiave primaria è formata dalla combinazione dei due identificatori (Matricola + CodiceCorso), garantendo che uno studente non possa avere due record per lo stesso esame. Entrambi gli attributi fungono anche da chiavi esterne verso le rispettive tabelle di origine.
+
+\subsection{Esempio 2: Associazione Uno-a-Molti (1:N)}
+\textbf{Scenario:} Una libreria possiede molti dipendenti, ma ogni dipendente lavora in una sola libreria (ispirato a un esercizio d'esame tipico).
+\\[0.1cm]
+\textbf{Traduzione Logica:} Non si crea una nuova tabella per l'associazione. La chiave dell'entità lato "1" (Libreria) "migra" come chiave esterna nell'entità lato "N" (Personale).
+\begin{itemize}
+    \item \texttt{LIBRERIA(\underline{idLibreria}, indirizzo, citta)}
+    \item \texttt{PERSONALE(\underline{idPersona}, cognome, nome, reparto, idLibreria*)}
+\end{itemize}
+
+\subsection{Esempio 3: Lo Storico e le Generalizzazioni}
+Come visto nelle lezioni teoriche, il modello relazionale \textbf{non supporta direttamente} l'ereditarietà (il legame padre/figlio). Se hai una generalizzazione nello schema ER (ad esempio, una entità Utente divisa in Docente e Studente), devi risolverla durante la fase di ristrutturazione (prima della traduzione), tipicamente in uno di questi due modi:
+\begin{itemize}
+    \item Collassando tutto verso l'alto in un'unica grande tabella \texttt{UTENTE} con un attributo \texttt{Tipo}.
+    \item Collassando tutto verso il basso generando tabelle distinte \texttt{DOCENTE} e \texttt{STUDENTE}.
+\end{itemize}
+In entrambi i casi, alla fine la struttura deve consistere in semplici relazioni (tabelle) piatte, governate da rigidi legami di chiave primaria ed esterna.

@@ -67,12 +67,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Secondo Semestre/Mate2/Preparazione 1° parziale/Esercizio 2.md",
+                "file": "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/DFA - Automi deterministici a stati finiti.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Esercizio 2"
+              "title": "DFA - Automi deterministici a stati finiti"
             }
           },
           {
@@ -84,9 +84,51 @@
               "icon": "lucide-file",
               "title": "Nuova scheda"
             }
+          },
+          {
+            "id": "966c9831a7d3bab3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Primo Semestre/LC/MDT/Linguaggi prefix-free.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Linguaggi prefix-free"
+            }
+          },
+          {
+            "id": "f4fedbbf9886f936",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Primo Semestre/LC/MDT/Linguaggi Ricorsivamente enumerabili e Ricorsivi.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Linguaggi Ricorsivamente enumerabili e Ricorsivi"
+            }
+          },
+          {
+            "id": "63b7ef2be0b805d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Pumping Lemma.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Pumping Lemma"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -143,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 301.5
   },
   "right": {
     "id": "0ee3d13955aacfdf",
@@ -249,8 +291,27 @@
       "xournalpp:Create new Xournal++ note": false
     }
   },
-  "active": "163ec8d49412ae9a",
+  "active": "63b7ef2be0b805d6",
   "lastOpenFiles": [
+    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/latex/main.synctex(busy)",
+    "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Grammatica.md",
+    "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Ɛ-NFA - Automa a stati finiti non deterministico con le Ɛ mosse.md",
+    "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Espressioni Regolari.md",
+    "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/DFA - Automi deterministici a stati finiti.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/Teorema di Rice.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/Pumping Lemma per CFL.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/Proprietà non banale.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/NTM - Macchina di Turing non deterministica.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/NFA - Automi non deterministici a stati finiti.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/MDTU - Macchina di Turing Universale.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/MDT - Macchina di Turing.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/Linguaggio Universale.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/Linguaggio Diagonale.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/Linguaggi Ricorsivamente enumerabili e Ricorsivi.md",
+    "Secondo Anno/Primo Semestre/LC/MDT/Linguaggi prefix-free.md",
+    "Secondo Anno/Primo Semestre/LC/Linguaggi Regolari/Pumping Lemma.md",
+    "Secondo Anno/Primo Semestre/LC/Appunti prof LC/02.pdf",
+    "Secondo Anno/Primo Semestre/LC/Appunti prof LC/01.pdf",
     "Secondo Anno/Secondo Semestre/Mate2/Preparazione 1° parziale/Esercizio 3.md",
     "Secondo Anno/Secondo Semestre/Mate2/Preparazione 1° parziale/Esercizio 2.md",
     "Secondo Anno/Secondo Semestre/Mate2/Preparazione 1° parziale/Esercizio 1.md",
@@ -263,35 +324,16 @@
     "Primo Anno/GAL/Miei Appunti/Matrici.md",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Argomento 4",
     "Primo Anno/GAL/Libro.pdf",
-    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Socket Java/ServerSocket.md",
-    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Socket Java/Socket (Client).md",
-    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Socket Berkley/temp.md",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Socket Berkley",
-    "Secondo Anno/Secondo Semestre/Mate 2/Preparazione 1° parziale/Esercizio 2.md",
     "Pasted image 20260327174634.png",
     "Pasted image 20260324154108.png",
     "Pasted image 20260327174614.png",
     "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Socket Java",
-    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Senza nome.md",
-    "Secondo Anno/Secondo Semestre/Mate 2/Preparazione 1° parziale/Esercizio 1.md",
-    "Secondo Anno/Secondo Semestre/Mate 2/Preparazione 1° parziale/Esercizio 3.md",
     "Pasted image 20260324154355.png",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Esercizi",
-    "Secondo Anno/Secondo Semestre/SD - Sistemi Distribuiti/Appunti/Multithreading/Sincronizzazione.md",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Relazioni.md",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Entità.md",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Modello ER.md",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Modello Relazionale.md",
-    "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Progettazione Concettuale/Generalizzazioni.md",
     "Secondo Anno/Secondo Semestre/Mate 2/Simulazioni Primo Parziale/27-4-2018.xopp~",
     "Secondo Anno/Secondo Semestre/Mate 2/Appunti Lezione/2026-03-30-Nota-10-43.xopp~",
     "Secondo Anno/Secondo Semestre/BD - Basi di Dati/Appunti/Senza nome",
-    "Secondo Anno/Secondo Semestre/Mate 2/Simulazioni Primo Parziale/27-04-2022.xopp~",
-    "Secondo Anno/Secondo Semestre/Mate 2/Simulazioni Primo Parziale/27-04-2022.xopp",
-    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Modelli Iterativi/Modello UP/Modello UP.md",
-    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Modelli Iterativi/Modello UP/Fase di Ideazione.md",
-    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Domande Orale.md",
-    "Secondo Anno/Secondo Semestre/APS - Analisi e Progettazione del Software/Appunti/Analisi e progettazione orientata agli oggetti.md",
     "IMG/desmos-graph.png",
     "IMG/Pasted image 20260312094747.png",
     "IMG/Pasted image 20260307180336.png",

@@ -8,6 +8,8 @@
 \usepackage[italian]{babel} % Traduce "Chapter" in "Capitolo", ecc.
 \usepackage{lmodern}        % Font vettoriale di alta qualità
 \usepackage{ulem}
+\usepackage{multirow}
+\usepackage{makecell}
 
 % --- 2. GEOMETRIA E IMPAGINAZIONE ---
 \usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
@@ -36,8 +38,7 @@
 
 % --- 5. TIKZ E UML ---
 \usepackage{tikz}
-% NOTA: Il file tikz-uml.sty deve essere nella stessa cartella del progetto
-\usepackage{tikz-uml} 
+\usetikzlibrary{decorations.pathreplacing, positioning, calc}
 
 % --- 6. LISTE E TABELLE ---
 \usepackage{enumitem}       % Controllo avanzato di itemize e enumerate

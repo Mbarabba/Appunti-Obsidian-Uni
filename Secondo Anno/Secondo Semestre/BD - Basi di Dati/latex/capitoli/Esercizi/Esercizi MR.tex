@@ -1,0 +1,81 @@
+\chapter{Esercizi MR}
+\section{Totale Giugno 2026}
+Si desidera progettare una base di dati per gestire le attività di una società di spedizioni internazionali che ha diverse filiali nel mondo. Il sistema deve riflettere le seguenti specifiche: Ogni Filiale della società è identificata da un codice univoco, ha un nome (es. "Sede Milano"), un indirizzo completo (via, civico, città) e un responsabile della filiale che è unico per ogni sede. Ogni filiale gestisce diversi Magazzini; ogni magazzino è identificato da un numero progressivo all'interno della singola filiale, ha una metratura e una tipologia (es. "Refrigerato", "Merci Pericolose"). I Pacchi da spedire sono identificati da un codice di tracciamento (tracking) unico, hanno un peso, un volume, una descrizione del contenuto e l'anno di produzione dell'imballaggio. Ogni pacco è attualmente stoccato in uno specifico magazzino di una filiale e si vuole tenere traccia di questa posizione. Per ogni Modalità di Spedizione (es. "Aerea", "Navale", "Su Gomma"), si definisce un costo base di gestione in una specifica data di aggiornamento del listino logistico. Si registrano le singole Spedizioni effettuate. Ogni spedizione avviene presso una specifica filiale, in una certa data e ora, indicando la modalità di spedizione utilizzata e il corriere (dipendente) che ha preso in carico il carico, se già assegnato.
+Sia i corrieri che i responsabili sono Dipendenti della società. Per ogni dipendente, identificato dal codice fiscale, si vuole memorizzare: nome, cognome, data di nascita, data di assunzione, Email e Telefono.
+
+
+\begin{itemize}
+    \item \texttt{FILIALE(Codice, Nome, Via, Civico, Citta, Responsabile)}
+    \item \texttt{MAGAZZINO(CodiceFiliale, NumeroMagazzino, Metratura, Tipologia)}
+    \item \texttt{PACCO(CodiceTracking, Peso, Volume, Contenuto, AnnoImballaggio, CodiceFiliale, NumeroMagazzino)}
+    \item \texttt{LISTINO\_LOGISTICO(CodiceFiliale, ModalitaSpedizione, CostoBase)}
+    \item \texttt{SPEDIZIONE(IdSpedizione, CodiceFiliale, ModalitaSpedizione, Data, Ora, Corriere)}
+    \item \texttt{DIPENDENTE(CF, Nome, Cognome, DataNascita, DataAssunzione, Email, Telefono)}
+\end{itemize}
+
+\subsection{Chiavi primarie e vincoli di integrità referenziale}
+    \begin{itemize}
+        \item Chiavi primare :
+            \begin{itemize}
+                \item \texttt{FILIALE}(\underline{Codice}, Nome, Via, Civico, Citta, Responsabile)
+                
+                \item \texttt{MAGAZZINO}(\underline{CodiceFiliale, NumeroMagazzino}, Metratura, Tipologia)
+                
+                \item \texttt{PACCO}(\underline{CodiceTracking}, Peso, Volume, Contenuto, AnnoImballaggio, CodiceFiliale, NumeroMagazzino)
+                
+                \item \texttt{LISTINO\_LOGISTICO}(\underline{CodiceFiliale, ModalitaSpedizione}, CostoBase)
+                
+                \item \texttt{SPEDIZIONE}(\underline{IdSpedizione}, CodiceFiliale, ModalitaSpedizione, Data, Ora, Corriere)
+                
+                \item \texttt{DIPENDENTE}(\underline{CF}, Nome, Cognome, DataNascita, DataAssunzione, Email, Telefono)
+            \end{itemize}
+            \item Vincoli di integrità referenziale:
+            \begin{itemize}
+            \item \textbf{FILIALE}
+            \begin{itemize}
+                \item \texttt{Responsabile} $\to$ \texttt{DIPENDENTE(CF)}
+            \end{itemize}
+
+            \item \textbf{MAGAZZINO}
+            \begin{itemize}
+                \item \texttt{CodiceFiliale} $\to$ \texttt{FILIALE(Codice)}
+            \end{itemize}
+
+            \item \textbf{PACCO}
+            \begin{itemize}
+                \item \texttt{(CodiceFiliale, NumeroMagazzino)} $\to$ \texttt{MAGAZZINO(CodiceFiliale, NumeroMagazzino)}
+            \end{itemize}
+
+            \item \textbf{LISTINO\_LOGISTICO}
+            \begin{itemize}
+                \item \texttt{CodiceFiliale} $\to$ \texttt{FILIALE(Codice)}
+            \end{itemize}
+
+            \item \textbf{SPEDIZIONE}
+            \begin{itemize}
+                \item \texttt{CodiceFiliale} $\to$ \texttt{FILIALE(Codice)}
+                \item \texttt{(CodiceFiliale, ModalitaSpedizione)} $\to$ \texttt{LISTINO\_LOGISTICO(CodiceFiliale, ModalitaSpedizione)}
+                \item \texttt{Corriere} $\to$ \texttt{DIPENDENTE(CF)}
+            \end{itemize}
+    \end{itemize}
+    \end{itemize}
+
+\subsection{Due vincoli intrarelazionali di dominio, uno di tupla.}
+\subsubsection{Vincoli intrarelazionali}
+\begin{enumerate}
+    \item CF CHAR(16)
+    \item Peso INT > 0
+\end{enumerate}
+\subsubsection{Vincolo di tupla}
+\begin{itemize}
+    \item DataNascita < DataAssunzione
+\end{itemize}
+
+\subsection{Chiave alternativa per la relazione FILIALE e DIPENDENTE}
+\begin{itemize}
+    \item \texttt{DIPENDENTE}(CF, Nome, Cognome, DataNascita, DataAssunzione, \underline{Email}, Telefono)
+    \item \texttt{FILIALE}(Codice, Nome, \underline{Via}, \underline{Civico}, \underline{Citta}, Responsabile)
+\end{itemize}
+
+\subsection{Superchiave per la relazione PACCO}
+(CodiceTracking, Peso, Volume, Contenuto, AnnoImballaggio, CodiceFiliale, NumeroMagazzino)

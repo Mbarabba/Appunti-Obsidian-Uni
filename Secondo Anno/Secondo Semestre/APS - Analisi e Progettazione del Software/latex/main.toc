@@ -1,214 +1,183 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Modello a cascata}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Cosa è?}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Fasi del modello a cascata}{2}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Vantaggi}{2}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Svantaggi}{2}{section.1.4}%
-\contentsline {chapter}{\numberline {2}UP - Unified Process}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Cosa è?}{4}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Caratteristiche fondamentali}{4}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Fasi del processo}{4}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Ciclo di vita}{4}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Vantaggi}{5}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Svantaggi}{5}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Agile}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Cosa è?}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Caratteristiche}{7}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Manifesto}{7}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Vantaggi}{7}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Svantaggi}{7}{section.3.5}%
-\contentsline {chapter}{\numberline {4}SCRUM}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Cosa è?}{9}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Caratteristiche}{9}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Concetti Chiave}{9}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}Ruoli principali}{9}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Ciclo di lavoro}{10}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Artefatti}{10}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Vantaggi}{10}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Svantaggi}{11}{section.4.7}%
-\contentsline {chapter}{\numberline {8}Pattern GRASP}{26}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Definizione}{26}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Approccio RDD}{26}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Principi fondamentali}{26}{subsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.1.3}Relazione tra gli elaborati}{27}{subsection.8.1.3}%
-\contentsline {section}{\numberline {8.2}Rappresentazione di un Pattern GRASP}{27}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Pattern GRASP di base}{28}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Creator}{28}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Problema}{28}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}Soluzione}{28}{subsection.9.1.2}%
-\contentsline {subsection}{\numberline {9.1.3}Benefici}{28}{subsection.9.1.3}%
-\contentsline {subsection}{\numberline {9.1.4}Controindicazioni}{28}{subsection.9.1.4}%
-\contentsline {subsection}{\numberline {9.1.5}Flusso di lavoro logico}{29}{subsection.9.1.5}%
-\contentsline {subsection}{\numberline {9.1.6}Modello di dominio}{29}{subsection.9.1.6}%
-\contentsline {subsection}{\numberline {9.1.7}Modello di sequenza}{29}{subsection.9.1.7}%
-\contentsline {subsection}{\numberline {9.1.8}Diagrammi delle classi di progetto}{30}{subsection.9.1.8}%
-\contentsline {section}{\numberline {9.2}Information Expert}{30}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Problema}{30}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Soluzione}{30}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Benefici}{30}{subsection.9.2.3}%
-\contentsline {subsection}{\numberline {9.2.4}Controindizioni}{31}{subsection.9.2.4}%
-\contentsline {subsection}{\numberline {9.2.5}Flusso di lavoro}{31}{subsection.9.2.5}%
-\contentsline {subsection}{\numberline {9.2.6}Diagramma di sequenza}{31}{subsection.9.2.6}%
-\contentsline {subsection}{\numberline {9.2.7}Diagramma delle classi}{31}{subsection.9.2.7}%
-\contentsline {section}{\numberline {9.3}Low Coupling}{32}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Problema}{32}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Soluzione}{32}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Benefici}{32}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Controindicazioni}{32}{subsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.3.5}Flusso di lavoro}{32}{subsection.9.3.5}%
-\contentsline {section}{\numberline {9.4}High Cohesion}{33}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Problema}{33}{subsection.9.4.1}%
-\contentsline {subsection}{\numberline {9.4.2}Soluzione}{33}{subsection.9.4.2}%
-\contentsline {subsection}{\numberline {9.4.3}Benefici}{33}{subsection.9.4.3}%
-\contentsline {subsection}{\numberline {9.4.4}Controindicazioni}{33}{subsection.9.4.4}%
-\contentsline {subsection}{\numberline {9.4.5}Flusso di lavoro}{34}{subsection.9.4.5}%
-\contentsline {section}{\numberline {9.5}Controller}{34}{section.9.5}%
-\contentsline {subsection}{\numberline {9.5.1}Problema}{34}{subsection.9.5.1}%
-\contentsline {subsection}{\numberline {9.5.2}Soluzione}{34}{subsection.9.5.2}%
-\contentsline {subsection}{\numberline {9.5.3}Benefici}{35}{subsection.9.5.3}%
-\contentsline {subsection}{\numberline {9.5.4}Controindicazioni}{35}{subsection.9.5.4}%
-\contentsline {subsection}{\numberline {9.5.5}Flusso di lavoro}{35}{subsection.9.5.5}%
-\contentsline {chapter}{\numberline {10}Pattern GRASP avanzati}{36}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Pure Fabrication}{36}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}Problema}{36}{subsection.10.1.1}%
-\contentsline {subsection}{\numberline {10.1.2}Soluzione}{36}{subsection.10.1.2}%
-\contentsline {subsection}{\numberline {10.1.3}Benefici}{36}{subsection.10.1.3}%
-\contentsline {subsection}{\numberline {10.1.4}Controindicazioni}{36}{subsection.10.1.4}%
-\contentsline {subsection}{\numberline {10.1.5}Flusso di lavoro}{36}{subsection.10.1.5}%
+\contentsline {chapter}{\numberline {1}Modello a cascata}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Cosa è?}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Le fasi del modello}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Analisi dei Requisiti}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Progettazione}{5}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}implementazione}{5}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Collaudo}{6}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Rilascio e Manutenzione}{6}{subsection.1.2.5}%
+\contentsline {section}{\numberline {1.3}Caratteristiche chiave}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Plan-driven}{6}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Specializzazione}{6}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Rigidità}{6}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Vantaggi}{6}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Semplicità e chiarezza}{6}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Ideale per requisiti stabili}{6}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Svantaggi}{6}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Incapacità di gestire i cambiamenti}{6}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Feedback tardivo}{7}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Debito di integrazione}{7}{subsection.1.5.3}%
+\contentsline {chapter}{\numberline {2}UP - Unified Process}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Cosa è?}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Le 3 caratteristiche fondamentali dell'UP}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Pilotato dai casi d'uso}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Guidato dai fattori di rischio}{8}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Incentrato sull'architettura}{8}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Le 4 fasi del cilcio di vita}{8}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Ideazione}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Elaborazione}{9}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Costruzione}{9}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Transizione}{9}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Dinamica di Sviluppo: Iterazioni, Discipline e incrementi}{9}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Iterazioni}{9}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Variazione dell'impegno}{9}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Release e incremento}{9}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Vantaggi}{10}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Svantaggi}{10}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Agile}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Cosa è?}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Valori e Principi}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Flusso di valoro: Sprint e Artefatti}{11}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Product Backlog}{11}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Spint (iterazione)}{11}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Daily Scrum}{12}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Incremento Potenzialmente Rilasciabile}{12}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Velocity}{12}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Vantaggi}{12}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Svantaggi}{12}{section.3.5}%
+\contentsline {chapter}{\numberline {4}SCRUM}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Cosa è?}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Ruoli in Scrum}{13}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Product Owner}{13}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Team di Sviluppo}{13}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}ScrumMaster}{13}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Elaborati}{13}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Product Backlog}{13}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Sprint Backlog}{14}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Incremento Potenzialmente Rilasciabile}{14}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Ciclo di vita}{14}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Sprint}{14}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Velocity}{14}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Eventi chiave}{14}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Vantaggi}{14}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}flessibilità e Adattabilità}{14}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Motivazione e Visibilità}{14}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Svantaggi}{15}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Il mito dell'incremento "Shippable"}{15}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Problemi di scalabilità}{15}{subsection.4.6.2}%
+\contentsline {chapter}{\numberline {5}Architettura Logica}{16}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Cosa è l'Architettura Logica?}{16}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Architettura a Strati}{16}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Cosa è uno stato?}{16}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Architettura a strati stretta}{16}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Architettura a strati rilassata}{16}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Cosa è un architettura software?}{17}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Diagramma dei Package}{18}{chapter.6}%
+\contentsline {section}{\numberline {6.1}A cosa serve?}{18}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Definizioni: Livelli, Strati e Partizioni}{18}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Progettazione degli strati}{19}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Gerarchia degli stati}{19}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Scelta comune per gli strati}{19}{subsection.6.3.2}%
+\contentsline {subsubsection}{UI}{19}{subsubsection*.6}%
+\contentsline {subsubsection}{Application}{19}{subsubsection*.8}%
+\contentsline {subsubsection}{Domain}{19}{subsubsection*.10}%
+\contentsline {subsubsection}{Business Infrastructure}{20}{subsubsection*.12}%
+\contentsline {subsubsection}{Technical Service}{20}{subsubsection*.14}%
+\contentsline {subsubsection}{Foundation}{20}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {6.3.3}Principio di separazione Modello-Vista}{20}{subsection.6.3.3}%
+\contentsline {chapter}{\numberline {7}Diagramma della Macchina a Stati}{21}{chapter.7}%
+\contentsline {section}{\numberline {7.1}A cosa servono?}{21}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Sintassi base}{21}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Stati}{21}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Definizione}{21}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Sintassi}{21}{subsection.7.3.2}%
+\contentsline {section}{\numberline {7.4}Eventi}{22}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Definizione}{22}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Tipologie di eventi}{22}{subsection.7.4.2}%
+\contentsline {subsubsection}{Eventi di Chiamata}{22}{subsubsection*.19}%
+\contentsline {subsubsection}{Eventi di Segnale}{22}{subsubsection*.21}%
+\contentsline {subsubsection}{Eventi di Variazione}{23}{subsubsection*.24}%
+\contentsline {subsubsection}{Eventi Temporali}{23}{subsubsection*.26}%
+\contentsline {section}{\numberline {7.5}Stati Composti}{24}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Definizione}{24}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Stati Composti Semplici (Non-Ortogonali)}{24}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}Stati Composti Ortogonali}{24}{subsection.7.5.3}%
+\contentsline {section}{\numberline {7.6}Sottomacchine}{25}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Cosa sono?}{25}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Stati della Sotto Macchina}{25}{subsection.7.6.2}%
+\contentsline {subsection}{\numberline {7.6.3}Sintassi degli stati della Sotto-Macchine}{25}{subsection.7.6.3}%
+\contentsline {subsection}{\numberline {7.6.4}Comunicazione tra sotto-macchine}{26}{subsection.7.6.4}%
+\contentsline {subsection}{\numberline {7.6.5}Comunicazione tramite stato di sync}{26}{subsection.7.6.5}%
+\contentsline {subsection}{\numberline {7.6.6}Stati con memoria semplice}{27}{subsection.7.6.6}%
+\contentsline {subsection}{\numberline {7.6.7}Sottostato con memoria multilivello}{27}{subsection.7.6.7}%
+\contentsline {section}{\numberline {7.7}Esempio: Elabora vendita}{28}{section.7.7}%
+\contentsline {chapter}{\numberline {8}Pattern GRASP}{29}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Definizione}{29}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Approccio RDD}{29}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Principi fondamentali}{29}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}Relazione tra gli elaborati}{30}{subsection.8.1.3}%
+\contentsline {section}{\numberline {8.2}Rappresentazione di un Pattern GRASP}{30}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Pattern GRASP di base}{31}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Creator}{31}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Definizione}{31}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Esempio diagramma delle classi}{31}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Esempio diagramma di sequenza di stato}{31}{subsection.9.1.3}%
+\contentsline {section}{\numberline {9.2}Information Expert}{32}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Definizione}{32}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Esempio diagramma delle classi}{32}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Esempio diagramma di sequenza di stato}{32}{subsection.9.2.3}%
+\contentsline {section}{\numberline {9.3}Low Coupling}{33}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Definizione}{33}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Effetto di Information Expert}{33}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Esempio di alto accoppiamento}{33}{subsection.9.3.3}%
+\contentsline {section}{\numberline {9.4}Controller}{34}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Definizione}{34}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Possibili approcci}{34}{subsection.9.4.2}%
+\contentsline {subsection}{\numberline {9.4.3}Esempio MonopoluGame}{34}{subsection.9.4.3}%
+\contentsline {section}{\numberline {9.5}High Cohesion}{35}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Definizione}{35}{subsection.9.5.1}%
+\contentsline {chapter}{\numberline {10}Patter GRASP Avanzati}{36}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Pure Fabricator}{36}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Definizione}{36}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}Esempio POS NextGen}{36}{subsection.10.1.2}%
 \contentsline {section}{\numberline {10.2}Polymorphism}{37}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Problema}{37}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Soluzione}{37}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}Benefici}{37}{subsection.10.2.3}%
-\contentsline {subsection}{\numberline {10.2.4}Controindicazioni}{37}{subsection.10.2.4}%
-\contentsline {subsection}{\numberline {10.2.5}Flusso di lavoro}{37}{subsection.10.2.5}%
+\contentsline {subsection}{\numberline {10.2.1}Definizione}{37}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Esempio POS NextGen}{37}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}Esempio Monopoly}{37}{subsection.10.2.3}%
 \contentsline {section}{\numberline {10.3}Indirection}{38}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Problema}{38}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {10.3.2}Soluzione}{38}{subsection.10.3.2}%
-\contentsline {subsection}{\numberline {10.3.3}Benefici}{38}{subsection.10.3.3}%
-\contentsline {subsection}{\numberline {10.3.4}Controindicazioni}{38}{subsection.10.3.4}%
-\contentsline {subsection}{\numberline {10.3.5}Flusso di lavoro}{38}{subsection.10.3.5}%
+\contentsline {subsection}{\numberline {10.3.1}Definizione}{38}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}Esempio POS NextGen}{38}{subsection.10.3.2}%
 \contentsline {section}{\numberline {10.4}Protected Variations}{39}{section.10.4}%
-\contentsline {subsection}{\numberline {10.4.1}Problema}{39}{subsection.10.4.1}%
-\contentsline {subsection}{\numberline {10.4.2}Soluzione}{39}{subsection.10.4.2}%
-\contentsline {subsection}{\numberline {10.4.3}Benefici}{39}{subsection.10.4.3}%
-\contentsline {subsection}{\numberline {10.4.4}Controindicazioni}{39}{subsection.10.4.4}%
-\contentsline {subsection}{\numberline {10.4.5}Flusso di lavoro}{39}{subsection.10.4.5}%
-\contentsline {chapter}{\numberline {8}Pattern GRASP}{26}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Definizione}{26}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Approccio RDD}{26}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Principi fondamentali}{26}{subsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.1.3}Relazione tra gli elaborati}{27}{subsection.8.1.3}%
-\contentsline {section}{\numberline {8.2}Rappresentazione di un Pattern GRASP}{27}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Pattern GRASP di base}{28}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Creator}{28}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Problema}{28}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}Soluzione}{28}{subsection.9.1.2}%
-\contentsline {subsection}{\numberline {9.1.3}Benefici}{28}{subsection.9.1.3}%
-\contentsline {subsection}{\numberline {9.1.4}Controindicazioni}{28}{subsection.9.1.4}%
-\contentsline {subsection}{\numberline {9.1.5}Flusso di lavoro logico}{29}{subsection.9.1.5}%
-\contentsline {subsection}{\numberline {9.1.6}Modello di dominio}{29}{subsection.9.1.6}%
-\contentsline {subsection}{\numberline {9.1.7}Modello di sequenza}{29}{subsection.9.1.7}%
-\contentsline {subsection}{\numberline {9.1.8}Diagrammi delle classi di progetto}{30}{subsection.9.1.8}%
-\contentsline {section}{\numberline {9.2}Information Expert}{30}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Problema}{30}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Soluzione}{30}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Benefici}{30}{subsection.9.2.3}%
-\contentsline {subsection}{\numberline {9.2.4}Controindizioni}{31}{subsection.9.2.4}%
-\contentsline {subsection}{\numberline {9.2.5}Flusso di lavoro}{31}{subsection.9.2.5}%
-\contentsline {subsection}{\numberline {9.2.6}Diagramma di sequenza}{31}{subsection.9.2.6}%
-\contentsline {subsection}{\numberline {9.2.7}Diagramma delle classi}{31}{subsection.9.2.7}%
-\contentsline {section}{\numberline {9.3}Low Coupling}{32}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Problema}{32}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Soluzione}{32}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Benefici}{32}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Controindicazioni}{32}{subsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.3.5}Flusso di lavoro}{32}{subsection.9.3.5}%
-\contentsline {section}{\numberline {9.4}High Cohesion}{33}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Problema}{33}{subsection.9.4.1}%
-\contentsline {subsection}{\numberline {9.4.2}Soluzione}{33}{subsection.9.4.2}%
-\contentsline {subsection}{\numberline {9.4.3}Benefici}{33}{subsection.9.4.3}%
-\contentsline {subsection}{\numberline {9.4.4}Controindicazioni}{33}{subsection.9.4.4}%
-\contentsline {subsection}{\numberline {9.4.5}Flusso di lavoro}{34}{subsection.9.4.5}%
-\contentsline {section}{\numberline {9.5}Controller}{34}{section.9.5}%
-\contentsline {subsection}{\numberline {9.5.1}Problema}{34}{subsection.9.5.1}%
-\contentsline {subsection}{\numberline {9.5.2}Soluzione}{34}{subsection.9.5.2}%
-\contentsline {subsection}{\numberline {9.5.3}Benefici}{35}{subsection.9.5.3}%
-\contentsline {subsection}{\numberline {9.5.4}Controindicazioni}{35}{subsection.9.5.4}%
-\contentsline {subsection}{\numberline {9.5.5}Flusso di lavoro}{35}{subsection.9.5.5}%
-\contentsline {chapter}{\numberline {10}Pattern GRASP avanzati}{36}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Pure Fabrication}{36}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}Problema}{36}{subsection.10.1.1}%
-\contentsline {subsection}{\numberline {10.1.2}Soluzione}{36}{subsection.10.1.2}%
-\contentsline {subsection}{\numberline {10.1.3}Benefici}{36}{subsection.10.1.3}%
-\contentsline {subsection}{\numberline {10.1.4}Controindicazioni}{36}{subsection.10.1.4}%
-\contentsline {subsection}{\numberline {10.1.5}Flusso di lavoro}{36}{subsection.10.1.5}%
-\contentsline {section}{\numberline {10.2}Polymorphism}{37}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Problema}{37}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Soluzione}{37}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}Benefici}{37}{subsection.10.2.3}%
-\contentsline {subsection}{\numberline {10.2.4}Controindicazioni}{37}{subsection.10.2.4}%
-\contentsline {subsection}{\numberline {10.2.5}Flusso di lavoro}{37}{subsection.10.2.5}%
-\contentsline {section}{\numberline {10.3}Indirection}{38}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Problema}{38}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {10.3.2}Soluzione}{38}{subsection.10.3.2}%
-\contentsline {subsection}{\numberline {10.3.3}Benefici}{38}{subsection.10.3.3}%
-\contentsline {subsection}{\numberline {10.3.4}Controindicazioni}{38}{subsection.10.3.4}%
-\contentsline {subsection}{\numberline {10.3.5}Flusso di lavoro}{38}{subsection.10.3.5}%
-\contentsline {section}{\numberline {10.4}Protected Variations}{39}{section.10.4}%
-\contentsline {subsection}{\numberline {10.4.1}Problema}{39}{subsection.10.4.1}%
-\contentsline {subsection}{\numberline {10.4.2}Soluzione}{39}{subsection.10.4.2}%
-\contentsline {subsection}{\numberline {10.4.3}Benefici}{39}{subsection.10.4.3}%
-\contentsline {subsection}{\numberline {10.4.4}Controindicazioni}{39}{subsection.10.4.4}%
-\contentsline {subsection}{\numberline {10.4.5}Flusso di lavoro}{39}{subsection.10.4.5}%
+\contentsline {subsection}{\numberline {10.4.1}Definizione}{39}{subsection.10.4.1}%
 \contentsline {chapter}{\numberline {11}Design Pattern GoF}{40}{chapter.11}%
 \contentsline {section}{\numberline {11.1}Cosa sono?}{40}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Confronto con i pattern GRASP}{40}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}Principi contro Strutture}{40}{subsection.11.2.1}%
+\contentsline {section}{\numberline {11.2}Tabella}{40}{section.11.2}%
 \contentsline {section}{\numberline {11.3}Adapter}{41}{section.11.3}%
-\contentsline {subsection}{\numberline {11.3.1}Problema}{41}{subsection.11.3.1}%
-\contentsline {subsection}{\numberline {11.3.2}Soluzione}{41}{subsection.11.3.2}%
-\contentsline {subsection}{\numberline {11.3.3}Benefici}{41}{subsection.11.3.3}%
-\contentsline {subsection}{\numberline {11.3.4}Controindicazioni}{41}{subsection.11.3.4}%
-\contentsline {subsection}{\numberline {11.3.5}Implementazione}{41}{subsection.11.3.5}%
-\contentsline {subsection}{\numberline {11.3.6}Dettagli}{41}{subsection.11.3.6}%
+\contentsline {subsection}{\numberline {11.3.1}Definizione}{41}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Esempio POS NextGen}{41}{subsection.11.3.2}%
+\contentsline {subsubsection}{Diagramma delle classi}{41}{subsubsection*.60}%
+\contentsline {subsubsection}{Diagramma di sequenza }{41}{subsubsection*.62}%
 \contentsline {section}{\numberline {11.4}Factory}{42}{section.11.4}%
-\contentsline {subsection}{\numberline {11.4.1}Problema}{42}{subsection.11.4.1}%
-\contentsline {subsection}{\numberline {11.4.2}Soluzione}{42}{subsection.11.4.2}%
-\contentsline {subsection}{\numberline {11.4.3}Benefici}{42}{subsection.11.4.3}%
-\contentsline {subsection}{\numberline {11.4.4}Implementazione}{42}{subsection.11.4.4}%
-\contentsline {subsection}{\numberline {11.4.5}Dettagli}{42}{subsection.11.4.5}%
+\contentsline {subsection}{\numberline {11.4.1}Definizione}{42}{subsection.11.4.1}%
 \contentsline {section}{\numberline {11.5}Singleton}{43}{section.11.5}%
-\contentsline {subsection}{\numberline {11.5.1}Problema}{43}{subsection.11.5.1}%
-\contentsline {subsection}{\numberline {11.5.2}Soluzione}{43}{subsection.11.5.2}%
-\contentsline {subsection}{\numberline {11.5.3}Benefici}{43}{subsection.11.5.3}%
-\contentsline {subsection}{\numberline {11.5.4}Controindicazioni}{43}{subsection.11.5.4}%
-\contentsline {subsection}{\numberline {11.5.5}Implementazione}{43}{subsection.11.5.5}%
-\contentsline {subsection}{\numberline {11.5.6}Dettagli}{43}{subsection.11.5.6}%
+\contentsline {subsection}{\numberline {11.5.1}Definizione}{43}{subsection.11.5.1}%
 \contentsline {section}{\numberline {11.6}Strategy}{44}{section.11.6}%
-\contentsline {subsection}{\numberline {11.6.1}Problema}{44}{subsection.11.6.1}%
-\contentsline {subsection}{\numberline {11.6.2}Soluzione}{44}{subsection.11.6.2}%
-\contentsline {subsection}{\numberline {11.6.3}Benefici}{44}{subsection.11.6.3}%
-\contentsline {subsection}{\numberline {11.6.4}Implementazione}{44}{subsection.11.6.4}%
-\contentsline {subsection}{\numberline {11.6.5}Dettagli}{44}{subsection.11.6.5}%
+\contentsline {subsection}{\numberline {11.6.1}Definizione}{44}{subsection.11.6.1}%
+\contentsline {subsection}{\numberline {11.6.2}Esempio diagramma delle classi}{44}{subsection.11.6.2}%
+\contentsline {subsection}{\numberline {11.6.3}Esempio diagramma di sequenza}{44}{subsection.11.6.3}%
 \contentsline {section}{\numberline {11.7}Composite}{45}{section.11.7}%
-\contentsline {subsection}{\numberline {11.7.1}Problema}{45}{subsection.11.7.1}%
-\contentsline {subsection}{\numberline {11.7.2}Soluzione}{45}{subsection.11.7.2}%
-\contentsline {subsection}{\numberline {11.7.3}Benefici}{45}{subsection.11.7.3}%
-\contentsline {subsection}{\numberline {11.7.4}Implementazione}{45}{subsection.11.7.4}%
-\contentsline {subsection}{\numberline {11.7.5}Dettagli}{45}{subsection.11.7.5}%
+\contentsline {subsection}{\numberline {11.7.1}Definizione}{45}{subsection.11.7.1}%
+\contentsline {subsection}{\numberline {11.7.2}Diagramma delle classi}{45}{subsection.11.7.2}%
 \contentsline {section}{\numberline {11.8}Facade}{46}{section.11.8}%
-\contentsline {subsection}{\numberline {11.8.1}Problema}{46}{subsection.11.8.1}%
-\contentsline {subsection}{\numberline {11.8.2}Soluzione}{46}{subsection.11.8.2}%
-\contentsline {subsection}{\numberline {11.8.3}Benefici}{46}{subsection.11.8.3}%
-\contentsline {subsection}{\numberline {11.8.4}Implementazione}{46}{subsection.11.8.4}%
-\contentsline {subsection}{\numberline {11.8.5}Dettagli}{46}{subsection.11.8.5}%
-\contentsline {section}{\numberline {11.9}Observer (Publish-Subscribe)}{47}{section.11.9}%
-\contentsline {subsection}{\numberline {11.9.1}Problema}{47}{subsection.11.9.1}%
-\contentsline {subsection}{\numberline {11.9.2}Soluzione}{47}{subsection.11.9.2}%
-\contentsline {subsection}{\numberline {11.9.3}Benefici}{47}{subsection.11.9.3}%
-\contentsline {subsection}{\numberline {11.9.4}Implementazione}{47}{subsection.11.9.4}%
-\contentsline {subsection}{\numberline {11.9.5}Dettagli}{47}{subsection.11.9.5}%
+\contentsline {subsection}{\numberline {11.8.1}Definizione}{46}{subsection.11.8.1}%
+\contentsline {subsection}{\numberline {11.8.2}Diagramma delle classi}{46}{subsection.11.8.2}%
+\contentsline {subsection}{\numberline {11.8.3}Diagramma dei Package}{46}{subsection.11.8.3}%
+\contentsline {section}{\numberline {11.9}Observer}{47}{section.11.9}%
+\contentsline {subsection}{\numberline {11.9.1}Definizione}{47}{subsection.11.9.1}%
+\contentsline {subsection}{\numberline {11.9.2}Diagramma delle Classi}{47}{subsection.11.9.2}%
+\contentsline {subsection}{\numberline {11.9.3}Diagramma di Sequenza}{47}{subsection.11.9.3}%
 \contentsline {chapter}{\numberline {12}TDD - Test Driven Development}{48}{chapter.12}%
 \contentsline {section}{\numberline {12.1}Definizione}{48}{section.12.1}%
 \contentsline {section}{\numberline {12.2}Cosa è un test unitario?}{48}{section.12.2}%
@@ -229,8 +198,8 @@
 \contentsline {section}{\numberline {14.2}Tipi di visibilià}{53}{section.14.2}%
 \contentsline {subsection}{\numberline {14.2.1}Visibilità per attributo}{53}{subsection.14.2.1}%
 \contentsline {subsection}{\numberline {14.2.2}Visibilità per parametro}{53}{subsection.14.2.2}%
-\contentsline {subsection}{\numberline {14.2.3}Visibilità locale}{54}{subsection.14.2.3}%
-\contentsline {subsection}{\numberline {14.2.4}Visibilità globale}{54}{subsection.14.2.4}%
+\contentsline {subsection}{\numberline {14.2.3}Visibilità locale}{53}{subsection.14.2.3}%
+\contentsline {subsection}{\numberline {14.2.4}Visibilità globale}{53}{subsection.14.2.4}%
 \contentsline {section}{\numberline {14.3}Trasformazione della visibilità}{54}{section.14.3}%
 \contentsline {subsection}{\numberline {14.3.1}Da visibilità locale a visibilità per parametro}{54}{subsection.14.3.1}%
 \contentsline {subsection}{\numberline {14.3.2}Da visibilità per parametro a visibilità per attributo}{54}{subsection.14.3.2}%

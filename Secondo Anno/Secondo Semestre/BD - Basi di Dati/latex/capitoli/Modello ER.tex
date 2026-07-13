@@ -1,0 +1,153 @@
+\chapter{Modello Entità-Relazione}
+
+\section{Introduzione alla Progettazione Concettuale}
+La progettazione di una base di dati si articola in tre fasi fondamentali: la progettazione concettuale, la progettazione logica e la progettazione fisica. Il \textbf{Modello Entità-Relazione (E-R)} è lo standard de facto utilizzato nella fase di \textbf{progettazione concettuale}.
+
+L'obiettivo principale di questa fase è descrivere la struttura dei dati in modo formale e indipendente dalle scelte tecnologiche (ovvero dal DBMS specifico che verrà adottato). Esso funge da ponte di comunicazione tra i committenti (gli utenti finali) e i progettisti del software.
+
+\section{I Costrutti Fondamentali nel Dettaglio}
+
+\subsection{Le Entità}
+Le \textbf{entità} rappresentano classi di oggetti del mondo reale (oggetti fisici, persone, concetti astratti o eventi) che possiedono proprietà comuni e un'esistenza autonoma.
+\begin{itemize}
+    \item \textbf{Regola Pratica:} Nel testo dei requisiti si individuano partendo dai \textit{sostantivi}.
+    \item \textbf{Istanze:} Un'entità descrive una classe (es. \texttt{Studente}), mentre un'istanza è uno specifico oggetto di quella classe (es. \textit{"Mario Rossi, matricola 123456"}).
+\end{itemize}
+
+\subsection{Le Relazioni (o Associazioni)}
+Le \textbf{relazioni} rappresentano legami logici stabili tra due o più entità.
+\begin{itemize}
+    \item \textbf{Regola Pratica:} Si individuano partendo dai \textit{verbi} che collegano i sostantivi.
+    \item \textbf{Attributi sulle relazioni:} Una relazione può avere essa stessa degli attributi. Questo accade tipicamente nelle relazioni molti-a-molti ($N:M$), dove l'informazione non appartiene a nessuna delle due entità singolarmente, bensì alla loro unione logica.
+\end{itemize}
+
+\subsection{Gli Attributi e Identificatori}
+Gli \textbf{attributi} descrivono le proprietà elementari delle entità o delle relazioni. Ogni entità deve possedere almeno un \textbf{identificatore univoco} (chiamato anche chiave concettuale), composto da uno o più attributi, che permette di distinguere univocamente ogni istanza dell'entità.
+\begin{itemize}
+    \item \textbf{Attributo Composto:} Un attributo che può essere suddiviso in sotto-componenti (es. \texttt{Indirizzo} composto da \textit{Via}, \textit{Civico}, \textit{CAP}).
+    \item \textbf{Identificazione Esterna (Entità Deboli):} Un'entità si dice debole se le sue istanze non possono essere identificate solo tramite i propri attributi interni, ma richiedono il supporto di un'entità forte a cui sono legate (es. un \texttt{Modulo} d'esame identificato da un numero progressivo interno e dal \texttt{Corso} di afferenza).
+\end{itemize}
+
+\section{Le Cardinalità: Guida alla Lettura}
+Le cardinalità indicano quante volte una singola istanza di un'entità può partecipare a una determinata relazione. Viene espressa tramite una coppia di valori \textbf{(minimo, massimo)} posizionata sul ramo che collega l'entità al rombo della relazione.
+
+\subsection{Cardinalità Minima}
+\begin{itemize}
+    \item \textbf{0 (Partecipazione Opzionale):} L'istanza può esistere nel database anche senza prendere parte alla relazione.
+    \item \textbf{1 (Partecipazione Obbligatoria):} Ogni istanza dell'entità deve necessariamente essere legata ad almeno un'istanza dell'altra entità.
+\end{itemize}
+
+\subsection{Cardinalità Massima}
+\begin{itemize}
+    \item \textbf{1:} L'istanza può essere legata al massimo a una sola istanza dell'altra entità.
+    \item \textbf{N:} L'istanza può essere legata a un numero arbitrario (molteplici) di istanze dell'altra entità.
+\end{itemize}
+
+\subsection{Esempio di Analisi Logica}
+Prendiamo la relazione classica tra \texttt{Impiegato} e \texttt{Dipartimento} attraverso l'associazione \texttt{Afferenza}:
+\begin{enumerate}
+    \item Dal punto di vista dell'\texttt{Impiegato}: \textit{"Ogni impiegato deve lavorare in uno e un solo dipartimento"}. La cardinalità è \textbf{(1,1)}.
+    \item Dal punto di vista del \texttt{Dipartimento}: \textit{"In un dipartimento lavorano da un minimo di 1 impiegato a un massimo di N impiegati"}. La cardinalità è \textbf{(1,N)}.
+\end{enumerate}
+
+\section{Esempi Pratici e Diagrammi TikZ}
+
+In questa sezione vediamo come implementare i diagrammi graficamente all'interno del documento compilato utilizzando la libreria nativa \texttt{tikz}.
+
+\subsection{Esempio 1: Modello Base Studente-Corso (Relazione Moli-a-Molti)}
+Un'applicazione universitaria deve tracciare gli studenti che sostengono gli esami dei rispettivi corsi. Il voto appartiene all'esame sostenuto.
+
+\begin{center}
+\begin{tikzpicture}[node distance=2cm, auto]
+    % Nodi principali
+    \node[entity] (studente) {STUDENTE};
+    \node[relationship] (sostiene) [right=of studente] {Sostiene};
+    \node[entity] (corso) [right=of sostiene] {CORSO};
+    
+    % Attributi Studente
+    \node[id_attribute] (matr) [above left=of studente] {Matricola};
+    \node[attribute] (nome) [above=of studente] {Nome};
+    \node[attribute] (cognome) [below=of studente] {Cognome};
+    
+    % Attributi Relazione
+    \node[attribute] (voto) [above=of sostiene] {Voto};
+    \node[attribute] (data) [below=of sostiene] {Data};
+    
+    % Attributi Corso
+    \node[id_attribute] (codice) [above right=of corso] {Codice};
+    \node[attribute] (titolo) [above=of corso] {Titolo};
+
+    % Collegamenti
+    \path[link] (studente) edge node[above] {(0,N)} (sostiene);
+    \path[link] (corso) edge node[above] {(0,N)} (sostiene);
+    
+    \path[link] (studente) -- (matr);
+    \path[link] (studente) -- (nome);
+    \path[link] (studente) -- (cognome);
+    
+    \path[link] (sostiene) -- (voto);
+    \path[link] (sostiene) -- (data);
+    
+    \path[link] (corso) -- (codice);
+    \path[link] (corso) -- (titolo);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Esempio 2: Identificazione Esterna (Entità Debole)}
+Un \texttt{Corso} universitario è composto da molteplici \texttt{Moduli}. Il singolo modulo è identificato da un \texttt{NumeroProgressivo} valido solo all'interno di quel corso specifico.
+
+\begin{center}
+\begin{tikzpicture}[node distance=2.2cm, auto]
+    \node[entity] (corso) {CORSO};
+    \node[ident_relationship] (composto) [right=of corso] {Composto};
+    \node[weak_entity] (modulo) [right=of composto] {MODULO};
+    
+    \node[id_attribute] (codcorso) [above=of corso] {Codice};
+    \node[id_attribute] (numprog) [above=of modulo] {NumProg};
+    \node[attribute] (nomemod) [below=of modulo] {Nome};
+
+    \path[link] (corso) edge node[above] {(1,N)} (composto);
+    \path[link] (modulo) edge node[above] {(1,1)} (composto);
+    
+    \path[link] (corso) -- (codcorso);
+    \path[link] (modulo) -- (numprog);
+    \path[link] (modulo) -- (nomemod);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Esempio 3: Gerarchia di Generalizzazione (ISA)}
+L'entità generica \texttt{Persona} viene specializzata nelle sotto-entità \texttt{Studente} e \texttt{Docente}. Gli attributi comuni rimangono nel padre.
+
+\begin{center}
+\begin{tikzpicture}[node distance=1.5cm, auto]
+    \node[entity] (persona) {PERSONA};
+    \node[id_attribute] (cf) [above=of persona] {CF};
+    \path[link] (persona) -- (cf);
+    
+    % Nodo triangolo ISA
+    \node[isa] (isa) [below=2cm of persona] {ISA};
+    \draw[link] (persona) -- (isa);
+    
+    % Figli
+    \node[entity] (studente) [below left=2cm of isa] {STUDENTE};
+    \node[entity] (docente) [below right=2cm of isa] {DOCENTE};
+    
+    \node[attribute] (matr) [below=of studente] {Matricola};
+    \node[attribute] (stipendio) [below=of docente] {Stipendio};
+    
+    \draw[link] (isa) -- (studente);
+    \draw[link] (isa) -- (docente);
+    \path[link] (studente) -- (matr);
+    \path[link] (docente) -- (stipendio);
+\end{tikzpicture}
+\end{center}
+
+\section{Metodologia Pratica di Progettazione}
+Per evitare gli errori più comuni durante gli esami o i progetti aziendali, si consiglia di seguire questi step ordinati:
+\begin{enumerate}
+    \item \textbf{Costruzione del Glossario dei Termini:} Chiarire i sinonimi e i significati dei vocaboli usati nelle specifiche.
+    \item \textbf{Analisi dei Sostantivi (Entità):} Creare i rettangoli per i concetti dotati di attributi significativi ed esistenza autonoma.
+    \item \textbf{Analisi dei Verbi (Relazioni):} Connettere le entità evitando accuratamente di simulare i collegamenti logici inserendo attributi-puntatore.
+    \item \textbf{Assegnazione delle Cardinalità:} Effettuare un controllo bidirezionale ponendosi sempre le domande al minimo e al massimo per ciascun lato.
+    \item \textbf{Verifica dei Vincoli e delle Ridondanze:} Eliminare attributi derivabili matematicamente o concettualmente tramite cicli nello schema, a meno che non siano esplicitamente giustificati da requisiti di performance.
+\end{enumerate}

@@ -1,47 +1,41 @@
-% ==========================================
-% MAIN.TEX - File Principale
-% ==========================================
+\documentclass[a4paper,12pt]{report}
 
-\documentclass[12pt,a4paper]{report}
-
-% Carica tutte le configurazioni, i pacchetti e i box personalizzati
 \input{paraem.tex}
-
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{graphicx} % Per inserire il logo
 \begin{document}
 
-% --- FRONTESPIZIO ---
+% --- Frontespizio ---
 \begin{titlepage}
     \centering
-    \vspace*{2cm}
     
-    {\scshape\LARGE Università degli studi Milano-Bicocca \par}
+    % Logo Bicocca
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.4\textwidth]{Immagini/Logo Bicocca.png} % Assicurati che il file sia presente
+    \end{figure}
+    
+    \vspace{2cm}
+    
+    {\Huge \textbf{Appunti di Analisi e Progettazione del Software}}
+    
     \vspace{1.5cm}
     
-    {\scshape\Large Appunti del Corso di\par}
-    \vspace{0.5cm}
+    {\Large Nicholas Scorrano} % Inserisci qui il tuo nome
     
-    {\huge\bfseries Analisi e Progettazione del Software \par}
     \vspace{1.5cm}
     
-    
-    \vfill
-    
-    Scritto da:\par
-    {\Large \textbf{Nicholas Scorrano}\par}
-    
-    \vspace{1cm}
-    
-    {\large Anno Accademico 2025/2026 \par}
+    {\large Anno Accademico 2025/2026}
 \end{titlepage}
 
-% --- INDICE ---
-\hypersetup{linkcolor=black}
 \tableofcontents
-\clearpage
 
 % --- CAPITOLI ---
 \include{Capitoli/Processi software.tex}
-\include{Capitoli/Pattern GRASP.tex}
+\include{Capitoli/Diagrammi/Architettura a Strati e Diagrammi dei Package.tex}
+\include{Capitoli/Diagrammi/Diagramma della Macchina a Stati.tex}
+
 \include{Capitoli/Pattern GRASP.tex}
 \include{Capitoli/Design Pattern.tex}
 \include{Capitoli/Test Driven Development.tex}

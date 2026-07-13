@@ -1,0 +1,69 @@
+\chapter{La Progettazione Logica in Pratica}
+
+L'obiettivo principale della progettazione logica è "tradurre" lo schema concettuale (il diagramma Entità-Relazione) in uno schema logico relazionale (fatto di tabelle) che rappresenti gli stessi dati in maniera corretta ed efficiente. L'ingresso di questa fase è costituito dallo schema concettuale e dalle informazioni sul carico applicativo, mentre l'uscita è lo schema logico con la relativa documentazione. Non si tratta però di una pura e semplice traduzione diretta, perché alcuni aspetti dello schema ER (come le generalizzazioni) non sono direttamente rappresentabili nel modello relazionale.
+
+La progettazione si divide in due grandi fasi sequenziali: la ristrutturazione dello schema e la traduzione vera e propria.
+
+\section{Ristrutturazione dello Schema E-R}
+Prima di tradurre, devi "pulire" e preparare il tuo diagramma E-R eliminando i costrutti non supportati dal modello logico di destinazione. Le prestazioni ottimali non sono valutabili con precisione solo guardando lo schema concettuale, ma dipendono dal volume dei dati e dalle caratteristiche delle operazioni.
+
+\subsection{Analisi delle Ridondanze}
+\begin{itemize}
+    \item Una ridondanza è un'informazione derivabile da altri dati presenti nel database.
+    \item In questa prima fase devi analizzare le ridondanze e decidere se eliminarle o mantenerle.
+    \item Mantenerle ha il vantaggio di semplificare e velocizzare alcune interrogazioni, ma penalizza le prestazioni occupando più spazio in memoria e appesantendo le operazioni di aggiornamento.
+    \item Come regola generale, gli accessi ai dati si riducono separando gli attributi di un concetto che vengono acceduti separatamente e, viceversa, raggruppando gli attributi di concetti diversi che vengono acceduti insieme.
+\end{itemize}
+
+\subsection{Eliminazione degli Attributi Multivalore}
+\begin{itemize}
+    \item Il modello relazionale non ammette che un singolo campo possieda più valori contemporaneamente.
+    \item Tali attributi multivalore vanno obbligatoriamente eliminati e trasformati (generalmente in nuove entità collegate).
+\end{itemize}
+
+\subsection{Eliminazione delle Gerarchie (Generalizzazioni)}
+\begin{itemize}
+    \item Il modello relazionale non può rappresentare direttamente l'ereditarietà tra un'entità "padre" e le sue entità "figlie".
+    \item Per risolvere il problema, si eliminano le gerarchie sostituendole con entità e relazioni standard.
+    \item Esistono tre tecniche fondamentali per questa operazione:
+    \begin{enumerate}
+        \item \textbf{Accorpamento delle figlie nel genitore:} Si unisce tutto nell'entità padre, tecnica considerata sempre applicabile. Si aggiunge un attributo (es. \textit{Tipo}) per distinguere le istanze, accettando però che i campi specifici delle figlie assumano valori nulli quando non pertinenti. Questa scelta conviene se gli accessi al padre e alle figlie sono contestuali. È invece sconsigliata se le figlie portano in dote un elevato numero di relazioni e/o attributi.
+        \item \textbf{Accorpamento del genitore nelle figlie:} Si elimina l'entità padre e si spostano tutti i suoi attributi in ciascuna tabella figlia. Conviene se gli accessi alle figlie sono del tutto distinti e \textbf{solo se} la generalizzazione è totale. È una tecnica fortemente sconsigliata in presenza di coperture parziali o sovrapposte.
+        \item \textbf{Sostituzione con relazioni:} Si mantengono sia il padre che le figlie separate, collegandole con relazioni uno-a-uno. È una soluzione molto generale e conviene quando gli accessi alle figlie sono separati dagli accessi al padre e quando la generalizzazione non è totale (evitando così di introdurre valori nulli). Ha il "contro" di incrementare il numero degli accessi necessari per ricostruire l'informazione di partenza e gestire i vincoli.
+    \end{enumerate}
+\end{itemize}
+
+\section{Traduzione verso il Modello Relazionale}
+Una volta che il tuo schema è ristrutturato ed è stato "appiattito", puoi applicare le regole di derivazione logica per generare le tabelle finali. L'idea di base è che le entità diventano relazioni sugli stessi attributi, mentre le associazioni si traducono usando gli identificatori (le chiavi) delle entità coinvolte.
+
+\subsection{Traduzione delle Entità}
+\begin{itemize}
+    \item Il nome dell'entità diventa direttamente il nome della tua tabella.
+    \item Tra parentesi, elenca tutti gli attributi dell'entità.
+    \item L'identificatore primario dell'entità diviene la Chiave Primaria (Primary Key) della tabella e va sottolineato (\verb|\underline{Chiave}|).
+    \item Nel caso di entità con identificatore esterno (dipendenza da un'altra entità), la chiave della tabella includerà a cascata anche la chiave dell'entità identificante.
+\end{itemize}
+
+\subsection{Traduzione delle Relazioni Molti-a-Molti (N:N)}
+\begin{itemize}
+    \item Ogni associazione N:N si trasforma sempre in una nuova tabella a sé stante.
+    \item Questa tabella conterrà come chiavi esterne gli identificatori delle due entità che sta collegando.
+    \item Insieme, questi identificatori formeranno la superchiave (Chiave Primaria) della nuova tabella.
+    \item Eventuali attributi propri dell'associazione (ad esempio una data di inizio) devono essere inseriti all'interno di questa nuova tabella.
+    \item È possibile scegliere nomi più espressivi per gli attributi che compongono la chiave per aumentarne la chiarezza.
+\end{itemize}
+
+\subsection{Traduzione delle Relazioni Uno-a-Molti (1:N)}
+\begin{itemize}
+    \item Per le associazioni 1:N non si crea quasi mai una nuova tabella dedicata.
+    \item La regola impone di prendere la chiave primaria dell'entità che si trova dal lato "molti" (quella con cardinalità massima N) e inserirla come chiave esterna (Foreign Key) dentro la tabella dell'entità che si trova dal lato "uno" (quella con cardinalità massima 1).
+    \item Eventuali attributi propri dell'associazione vanno anch'essi spostati sempre nella tabella dell'entità dal lato "uno".
+\end{itemize}
+
+\subsection{Traduzione delle Relazioni Uno-a-Uno (1:1)}
+\begin{itemize}
+    \item Similmente al caso precedente, non si creano nuove tabelle.
+    \item Si inserisce la chiave primaria di un'entità come chiave esterna all'interno della tabella dell'altra entità collegata.
+    \item Come prassi logica, si preferisce inserire la chiave esterna nell'entità che ha una partecipazione obbligatoria all'associazione (ovvero cardinalità minima pari a 1) per evitare di generare e gestire campi vuoti (NULL) nel database.
+    \item Se entrambe le entità hanno partecipazione obbligatoria, hai la libertà di scegliere in quale delle due inserire la chiave esterna. Se entrambe hanno partecipazione opzionale, si può tollerare un attributo nullo oppure introdurre una tabella aggiuntiva dedicata all'associazione per mantenere uno schema più pulito.
+\end{itemize}

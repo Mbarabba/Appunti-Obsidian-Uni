@@ -1,0 +1,714 @@
+\chapter{Esercizi SQL}
+\section{Totale Giugno 2026}
+Si consideri il seguente schema relazionale:
+
+
+\texttt{DIPENDENTE}(\underline{ID\_impiegato}, CF, cognome, nome, data\_assunzione)
+
+
+\texttt{MANSIONE}(\underline{codice}, titolo, stipendio\_base)
+
+
+\texttt{PREMIO\_PRODUZIONE}(\underline{dipendente}, mansione, data\_assegnazione, importo\_premio)
+
+\subsection{Query 1}
+Il titolo e lo stipendio base delle mansioni ordinate prima in ordine decrescente per stipendio base e poi per ordine alfabetico.
+
+\begin{lstlisting}
+CREATE VIEW AS info
+SELECT titolo, stipendio_base
+FROM MANSIONE;
+
+(
+    SELECT * FROM info
+    ORDER BY stipendi_base DESC
+)
+UNION ALL
+(
+    SELECT * FROM info
+    ORDER BY titolo ASC
+)
+\end{lstlisting}
+
+\subsection{Query 2}
+Il codice e il titolo delle mansioni che valgono il maggior stipendio base inserito a sistema.
+
+\begin{lstlisting}
+SELECT M.codice, M.titolo
+FROM MANSIONE AS M
+WHERE M.stipendio_base = (
+    SELECT MAX(stipendio_base)
+    FROM MANSIONE
+);
+\end{lstlisting}
+
+\subsection{Query 3}
+Il codice, il titolo della mansione e la media dell'importo del premio per ciascuna mansione presente nella tabella dei premi
+
+\begin{lstlisting}
+SELECT M.codice, M.titolo, AVG(P.importo_premio) AS media_premio
+FROM MANSIONE AS M 
+JOIN PREMIO_PRODUZIONE AS P ON M.codice = P.mansione
+GROUP BY M.codice, M.titolo;
+\end{lstlisting}
+
+\subsection{Query 4}
+L'ID impiegato, il nome e il cognome del dipendente che ha ricevuto il premio di produzione più basso in assoluto all'interno della mansione avente codice 'MAN01'.
+
+\begin{lstlisting}
+SELECT D.ID_impiegato, D.nome, D.cognome
+FROM DIPENDENTE AS D JOIN PREMIO_PRODUZIONE AS P ON D.Id_impiegato = P.dipendente
+WHERE P.importo_premio = (
+    SELECT MIN(importo_premio) 
+    FROM PREMIO_PRODUZIONE 
+    WHERE mansione = 'MAN01'
+)
+\end{lstlisting}
+
+\newpage
+\section{Totale Giugno 2015}
+Sia dato il seguente schema che descrive il database di un negozio di elettronica di comsumo
+
+\begin{itemize}
+    \item prodotto(\underline{codice}, nome, marca, prezzo)
+    \item scontrino (\underline{progressivo}, data, ora, articolo, tesseraCliente)
+    \item cliente (\underline{Tessera}, nome, cognome, cittaResidenza, puntiFedelta)
+\end{itemize}
+\subsection{Query 1}
+Trovare il nome del prodotto più venduto tra le 11 e le 12 di qualunque giorno
+\begin{lstlisting}
+SELECT P.nome 
+FROM Prodotto AS P
+JOIN SCONTRINO AS S ON S.articolo = P.codice
+GROUP BY P.codice, P.nome
+HAVING COUNT(*) >= ALL (
+    SELECT COUNT
+    FROM SCONTRINO AS S2
+    JOIN SCONTRINO AS S2 ON S.articolo = P.codice
+    WHERE S2.ora BETWEEN '11:00' AND '12:00'
+    GROUP BY S2.articolo
+);
+\end{lstlisting}
+
+
+\subsection{Query 2}
+Trovare il nome e il cognome dei clienti che pur avendo comprato un prodotto della "Apple" non hanno mai comprato un prodotto della "Samsung"
+
+\begin{lstlisting}
+SELECT C.nome, C.cognome
+FROM CLIENTE AS C
+WHERE EXISTS (
+    SELECT P.marca
+    FROM PRODOTTO AS P JOIN SCONTRINO AS S ON P.codice = S.articolo
+    WHERE P.marca = "Apple" AND S.tesseraCliente = Cliente.tesseraCliente
+)
+AND
+NOT EXISTS (
+    SELECT P.marca
+    FROM PRODOTTO AS P JOIN SCONTRINO AS S ON P.codice = S.articolo
+    WHERE P.marca = "Samsung" AND S.tesseraCliente = Cliente.tesseraCliente
+)
+\end{lstlisting}
+
+\newpage
+\subsection{Query 3}
+Trovare il nome e cognome dei clienti di Milano che hanno comprato contemporaneamente un prodotto "Philips" e un prodotto "Dell"
+
+\begin{lstlisting}
+SELECT C.nome, C.cognome
+FROM CLIENTI AS C JOIN SCONTRINO AS S ON C.Tessera = S.tesseraCliente
+WHERE C.cittaResidenza = 'Milano' AND EXISTS (
+    SELECT P.marca
+    FROM PRODOTTO AS P JOIN SCONTRINO AS S1 ON P.codice = S1.articolo
+    WHERE P.marca = 'Philips' AND S1.tesseraCliente = C.Tessera
+)
+AND EXISTS (
+    SELECT P.marca
+    FROM PRODOTTO AS P JOIN SCONTRINO AS S1 ON P.codice = S1.articolo
+    WHERE P.marca = 'Dell' AND S1.tesseraCliente = C.Tessera
+)
+\end{lstlisting}
+
+\newpage
+\section{2° Parziale 2016}
+\begin{itemize}
+    \item STUDENTE (\underline{matr}, nome, cognome, LuogoNascita) 
+    \item ESAME (\underline{matr}, \underline{codCorso}, voto, data) 
+    \item CORSO(\underline{codCorso}, nomeCorso, docente)
+\end{itemize}
+
+\subsection{Query 1}
+Trovare la città in cui sono nati gli studenti che complessivamente hanno superato più esami rispetto agli studenti nati in altre città
+
+\begin{lstlisting}
+SELECT S.LuogoNascita
+FROM STUDENTE AS S JOIN ESAME AS E ON S.matr = E.matr
+GROUP BY S.LuogoNascita HAVING COUNT(*) >= ALL (
+    SELECT COUNT(*)
+    FROM STUDENTE AS S1 JOIN ESAME AS E1 ON S1.matr = E1.matr
+    WHERE E1.voto >= 18
+    GROUP BY S1.LuogoNascita
+)
+\end{lstlisting}
+
+\subsection{Query 2}
+Trovare nome cognome e matricola, degli studenti che hanno superato l'esame di analisi con voto superiore al voto ottenuto per l'esame di fisica
+
+\begin{lstlisting}
+SELECT S.nome, S.cognome, S.matr
+FROM STUDENTE AS S JOIN ESAME AS E1 ON S.matr = E1.matr
+JOIN CORSO AS C1 ON E1.codCorso = C1.codCorso
+JOIN ESAME AS E2 ON S.matri = E2.matr
+JOIN CORSO AS C2 ON E2.codCorso = C2.codCorso
+WHERE C1.nomeCorso = 'Analisi' AND C2.nomeCorso 0 'Fisica'
+AND E1.voto > E2.voto
+\end{lstlisting}
+
+\subsection{Query 3}
+Trovare il nome dei corsi di cui studenti omonimi hanno superato l'esame
+\begin{lstlisting}
+SELECT C.nomeCorso 
+FROM CORSO AS C 
+JOIN ESAME AS E1 ON C.codCorso = E1.codCorso
+JOIN ESAME AS E2 ON C.codCorso = E2.codCorso
+JOIN STUDENTE AS S1 ON E,matr = S1.matr
+JOIN STUDENTE AS S2 ON E.matr = S2.matr
+WHERE S1.matr <> S2.matr 
+AND  S1.nome = S2.nome AND S1.cognome = S2.cognome 
+AND E1.codCorso = E2.codCorso
+AND E1.voto >= 18 AND E2.voto >= 18
+\end{lstlisting}
+
+\newpage
+\section{Totale Gennaio 2017}
+La seguente base di dati descrive l'attività di una società di noleggio di autovetture che ha diverse sedi in alcune città italiane.
+
+\begin{itemize}
+    \item \textbf{SEDE}(\underline{NomeSede}, indirizzo, città, telefono, direttore)
+    \item \textbf{AUTOVETTURA}(\underline{targa}, modello, AnnoImmatricolazione, numeroposti, colore)
+    \item \textbf{CLIENTE}(\underline{CF}, nome, cognome, telefono, città)
+    \item \textbf{CONTRATTO}(\underline{auto}, \underline{cliente}, \underline{DataNoleggio}, SedeNoleggio, DataConsegna, SedeConsegna)
+\end{itemize}
+
+\subsection{Query 1}
+Trovare il numero di autovetture noleggiate in ogni città, da clienti con residenza in una città diversa dalla città in cui avviene il noleggio.
+\begin{lstlisting}
+SELECT S.citta ,COUNT(*) AS numero_noleggi
+FROM CONTRATTO AS C
+JOIN CLIENTE AS CE ON C.cliente = C.CF
+JOIN SEDE AS S ON S.NomeSede = C.SedeNoleggio
+WHERE S.citta <> CE.citta
+GROUP BY S.citta
+\end{lstlisting}
+
+\subsection{Query 2}
+Trovare i clienti (indicando CF, nome e cognome) che hanno noleggiato almeno due macchine diverse nella stessa sede di noleggio.
+
+\begin{lstlisting}
+SELECT C.CF, C.nome, C.cognome
+FROM CLIENTE AS C
+JOIN CONTRATTO AS CO1 ON C.CF = C01.cliente
+JOIN CONTRATTO AS C02 ON C.CF = C02.cliente
+WHERE C01.auto <> C02.auto
+AND C01.SedeNoleggio = C02.SedeNoleggio
+\end{lstlisting}
+
+\subsection{Query 3}
+Trovare la sede di noleggio, indicandone anche la città, che ha realizzato il maggior numero di contratti della durata di un giorno (cioè in cui la macchina sia stata riconsegnata lo stesso giorno in cui è stata noleggiata).
+
+\begin{lstlisting}
+SELECT S.NomeSede, S.citta
+FROM SEDE AS S
+JOIN CONTRATTO AS C ON S.NomeSede = C.SedeNoleggio
+GROUP BY S.Nome, S.citta
+HAVING COUNT(*) >= ALL (
+    SELECT COUNT(*)p
+    FROM CONTRATTO
+    WHERE DataConsegna = SedeConsegna
+    GROUP BY SedeNoleggio
+)
+\end{lstlisting}
+
+\newpage
+\section{Totale Luglio 2017}
+La seguente base di dati descrive l'archivio di una società di charter che organizza e vende vacanze in barca. La società dispone di una flotta di barche ed organizza viaggi con diverse destinazioni.
+
+\begin{itemize}
+    \item \textbf{VIAGGIO} (\underline{idCliente}, \underline{dataPartenza}, \underline{nomeBarca}, Skipper, portoPartenza, portoArrivo, costo)
+    \item \textbf{CLIENTE} (\underline{idCliente}, nome, cognome, nazione)
+    \item \textbf{FLOTTA} (\underline{NomeBarca}, modello, lunghezza, posti, annoImmatricolazione)
+    \item \textbf{PORTO} (\underline{Nome}, nazione, posti, telefono, canaleRadio)
+\end{itemize}
+
+\subsection{Query 1}
+Trovare la nazione che è stata coinvolta nella maggior parte dei viaggi (come porto di arrivo o come porto di partenza).
+
+\begin{lstlisting}
+SELECT P.nazione
+FROM PORTO AS P
+JOIN VIAGGIO AS V ON V.portoPartenza = P.Nome OR V.portoArrivo = P.Nome
+GROUP BY P.nazione
+HAVING COUNT(*) >= ALL (
+    SELECT COUNT(*)
+    FROM PORTO AS P2
+    JOIN VIAGGIO AS V2 ON V2.portoPartenza = p2.Nome OR V2.portoArrivo = p2.Nome
+    GROUP BY P2.nazione
+)
+\end{lstlisting}
+
+\subsection{Query 2}
+Trovare il nome delle barche che non sono mai state affittate.
+\begin{lstlisting}
+SELECT F.NomeBarca
+FROM FLOTTA AS F
+WHERE F.NomeBarca NOT IN (
+    SELECT V.nomeBarca
+    FROM VIAGGIO
+)
+\end{lstlisting}
+\subsection{Query 3}
+Trovare per ogni porto il costo medio dei viaggi da lì partiti che non abbiano imbarcato clienti della nazionalità del porto stesso.
+
+\begin{lstlisting}
+SELECT P.nome, AVG(V.costo)
+FROM PORTO AS P, VIAGGIO AS V
+JOIN CLIENTE AS C ON V.idCliente = C.idCliente
+WHERE C.nazione <> P.nazione
+GRUOUP BY P.Nome
+\end{lstlisting}
+
+\section{Esercizio 1}
+Data la seguente base di dati:
+\begin{itemize}
+    \item \textbf{STUDENTE}(\underline{matricola}, CF, cognome, nome, data\_nascita)
+    \item \textbf{INSEGNAMENTO}(\underline{codice}, nome, crediti)
+    \item \textbf{ESAME}(\underline{studente}, \underline{insegnamento}, data, voto, lode)
+\end{itemize}
+
+\subsection{Query 1}
+Il codice e il nome degli insegnamenti che valgono il maggior numero di crediti
+\begin{lstlisting}
+SELECT I.codice, I.nome
+FROM INSEGNAMENTO AS I
+WHERE I.crediti = ALL (
+    SELECT I2.crediti
+    FROM INSEGNAMENTO AS I2
+)
+\end{lstlisting}
+
+\subsection{Query 2}
+Matricola e media voto degli studenti nati nel 2002
+\begin{lstlisting}
+SELECT S.matricola, AVG(E.voto)
+FROM STUDENTE AS S, ESAME AS E
+JOIN S ON E.studente = S.matricola
+WHERE S.data_nascita = '2002'
+GROUP BY S.matricola
+\end{lstlisting}
+
+\subsection{Query 3}
+La matricola, il nome, il cognome dello studente che ha preso il massimo voto nell'esame dell'insegnamento di codice 'BDD01'
+\begin{lstlisting}
+SELECT S.matricola, S.nome, S.cognome
+FROM STUDENTE AS S
+JOIN ESAME AS E ON S.matricola = E.studente
+JOIN INSEGNAMENTO AS I ON I.codice = E.insegnamento
+WHERE E.insegnamento = 'BDD01' AND E.voto = (
+    SELECT MAX(VOTO)
+    FROM ESAME 
+    WHERE E.insegnamento = 'BDD01'
+)
+\end{lstlisting}
+
+\newpage
+\section{Esercizio 2}
+Data la seguente base di dati
+
+\begin{itemize}
+    \item \textbf{Aeroporto}(\underline{Città}, Nazione, NumPiste)
+    \item \textbf{Volo}(\underline{IdVolo}, GiornoSett, CittàPart, OraPart, CittàArr, OraArr, Aereo) 
+    \item \textbf{Aereo}(\underline{TipoAereo}, NumPasseggeri, QtaMerci)
+\end{itemize}
+
+\subsection{Query 1}
+Selezionare tutti gli ID dei voli che utilizzano l'AIRBUS 400
+
+\begin{lstlisting}
+SELECT V.IdVolo
+FROM VOLO AS V
+WHERE V.Aereo = 'AIRBUS 400'
+\end{lstlisting}
+
+\subsection{Query 2}
+Selezionare gli aereoporti che hanno il magior numero di piste
+\begin{lstlisting}
+SELECT Citta
+FROM Aereoporto AS A
+WHERE A.NumPiste = (
+    SELECT MAX(A1.NumPiste)
+    FROM Aeroporto AS A1
+)
+\end{lstlisting}
+
+\subsection{Query 3}
+Selezionare le tipologie di aerei che hanno viaggiato in italia
+
+\begin{lstlisting}
+SELECT DISTINCT V.Aereo
+FROM Volo AS V
+JOIN Aereoporto AS AR1 ON V.CittaPart = AR1.Citta 
+JOIN Aereoporto AS AR2 ON V.CittaArr = AR2.Citta
+Where AR1.Nazione = 'Italia' OR AR2.Nazione = 'Italia'
+\end{lstlisting}
+
+\subsection{Query 4}
+Selezionare le tipologie di aerei che hanno viaggiato maggiormente
+\begin{lstlisting}
+    
+\end{lstlisting}
+
+\subsection{Query 5}
+Selezionare le tipologie di aerei che hanno effettuato più di 100 voli
+
+\begin{lstlisting}
+SELECT V.Aereo
+FROM VOLO AS V
+GROUO BY V.Aereo
+HAVING COUNT(*) > 100
+\end{lstlisting}
+
+\newpage
+\section{Esercizio 3}
+Data la seguente base di dati che descrive un campionato invernale di sci maschile
+
+\begin{itemize}
+    \item \textbf{LUOGOGARA}(nome, altitudine, nazione) 
+    \item \textbf{GARA} (specialità, luogo, dataGara, lunghezza, dislivello, premiovincitore) 
+    \item \textbf{POSIZIONEGARA} (idatleta, dataGara, numeroPettorina, specialità, luogo, posizionearrivo) 
+    \item \textbf{ATLETA} (idatleta, nome, cognome, nazione, datadinascita)
+\end{itemize}
+
+\subsection{Query 1}
+Trovare per ogni nazione l'atleta che ha vinto il maggior numero di gare
+
+\begin{lstlisting}
+SELECT A.idatleta
+FROM ATLETA AS A
+JOIN POSIZIONEGARA AS P ON P.idatleta = A.idatleta
+WHERE P.posizionearrivo = 1
+GROUP BY A.nazione, A.idatleta
+HAVING COUNT(*) >= ALL (
+    SELECT COUNT(*)
+    FROM ATLETA AS A2 JOIN POSIZIONEGARA AS P2 ON A2.idatleta = P2.idatleta
+    WHERE posizionearrivo = 1 AND A.nazione = A2.nazione
+    GROUP BY A2.idatleta
+)
+\end{lstlisting}
+
+\subsection{Query 2}
+Trovare le nazioni che hanno almeno un'atleta che ha vinto almeno una gara in patria
+
+\begin{lstlisting}
+SELECT DISTINCT A.nazione
+FROM ATLETA AS A
+JOIN POSIZIONEGARA AS P ON A.idatleta = P.idatleta
+JOIN LUOGOGARA AS L ON L.nome = P.luogo
+WHERE P.posizionearrivo = 1 AND L.nazione = A.nazione
+\end{lstlisting}
+
+\newpage
+\section{Esercizio 4}
+\begin{itemize}
+    \item \textbf{CLIENTE}(\underline{CodiceFiscale}, Nome, Cognome, Nazionalità, Telefono, e-mail) 
+    \item \textbf{STANZA}(\underline{CodiceStanza}, \underline{Albergo}, Tipo, MetriQuadri, Locali, Piano) 
+    \item \textbf{SOGGIORNO}(\underline{CodiceStanza}, \underline{Albergo}, \underline{DataInizio}, DataFine, Agente, CFCliente, CostoGiornaliero) 
+    \item \textbf{ALBERGO}(\underline{CodiceAlbergo}, NumeroDiStelle, Indirizzo, Città, Stato) 
+    \item \textbf{AGENTE}(\underline{CodiceAgente}, Nome, Cognome, DataDiNascita)
+\end{itemize}
+
+\subsection{Query 1}
+Trovare, specificando nome, cognome e codice fiscale, i clienti omonimi che abbiano soggiornato in una qualunque stanza di albergo nella medesima città
+
+\begin{lstlisting}
+SELECT C1.Nome, C1.Cognome, C1.CodiceFiscale
+FROM CLIENTE AS C1
+JOIN SOGGIORNO AS S1 ON C1.CodiceFiscale = S1.CFCLIENTE
+JOIN ALBERGO AS AL1 ON S1.Albergo = AL1.CodiceAlbero
+WHERE EXISTS (
+    SELECT * 
+    FROM CLIENTE AS C2
+    JOIN SOGGIORNO AS S2 ON C2.CodiceFiscale = S2.CFCliente
+    JOIN ALBERGO A2 ON S2.Albergo = A2.CodiceAlbergo
+    WHERE C1.Nome = C2.nome AND C2.Cognome = C1.Cognome AND C1.CodiceFiscale <> C2.CodiceFiscale AND A1.Citta = A2.Citta
+)
+\end{lstlisting}
+
+\subsection{Query 2}
+Trovare l'agente (codice, nome, cognome) che ha stipulato più soggiorni per l'anno 2009 in alberghi con più di 3 stelle
+
+\begin{lstlisting}
+SELECT AG.CodiceAgente, AG.Nome, AG.Cognome
+FROM AGENTE AS AG
+JOIN SOGGIORNO AS S ON S.Agente = AG.CodiceAgente
+JOIN ALBERO AS AL ON AG.Albergo = AL.CodiceALbergo
+WHERE S.DataInizio >= 1-1-2009 AND S.DataInizio < 1-1-2010 AND AL.NumeroDiStelle > 3
+GROUP BY AG.CodiceAgente, AG.Nome, AG.Cognome
+HAVING COUNT(*) >= ALL
+\end{lstlisting}
+
+\newpage
+\section{Esercizio 5}
+\begin{itemize}
+    \item \textsc{Palazzetto}(\underline{Nome}, Città, Capienza)
+    \item \textsc{Incontro}(\underline{NomePalazzetto, Data, Ora}, Squadra1, Squadra2)
+    \item \textsc{Nazionale}(\underline{Nazione}, Continente, Livello).
+\end{itemize}
+
+\subsection{Query 1}
+Determinare i nomi dei palazzetti in cui non gioca nessuna nazionale asiatica
+\begin{lstlisting}
+SELECT P.Nome
+FROM PALAZZETTO AS P
+WHERE P.Nome NOT IN (
+    SELECT I.NomePalazzetto
+    FROM INCONTRO AS I
+    JOIN NAZIONALE AS N1 ON I.Squadra1 = N1.Nazione
+    JOIN NAZIONALE AS N2 ON I.Squadra2 = N2.Nazione
+    WHERE N1.Continente = 'Asia' OR N2.Continente = 'Asia'
+)
+\end{lstlisting}
+
+
+\subsection{Query 2}
+Determinare la capienza complessiva dei palazzetti in cui si giocano partite di nazionali africane (ai fini della valutazione della capienza complessiva, si sommino le capienza associate a ciascuna gara, anche se più gare si svolgono nello stesso palazzetto)
+
+\begin{lstlisting}
+-- Subquery = Selezionare i palazzetti dove giocano le nazionali afrincane
+-- OuterQuery = Sommora le capienze
+SELECT SUM(P.Capienza)
+FROM PALAZZETTO AS P
+JOIN INCONTRO AS I ON P.Nome = I.NomePalazzetto
+JOIN NAZIONALE AS N1 ON I.Squadra1 = N1.Nazione
+JOIN NAZIONALE AS N2 ON I.Squadra2 = N2.Nazione
+WHERE N1.Continente = 'Africa' OR N2.Continente = 'Africa'
+\end{lstlisting}
+
+\subsection{Query 3}
+Individuare la città (le città se più di una soddisfa le condizioni dell'interrogazione) in cui si trova il palazzetto in cui la squadra olandese gioca il maggior numero di partite
+\begin{lstlisting}
+--SubQuery trova il palazzetto dove l'olanda gioca piu partite
+--OuterQuery Trova il nome della citta di quel palazzetto
+SELECT P.citta
+FROM PALAZZETTO AS P
+WHERE COUNT(P.Nome) >= ALL (
+    SELECT P1.Nome
+    FROM PALAZZETTO AS P1
+    JOIN INCONTRO AS I ON I.NomePalazzetto = P1.Nome
+    JOIN NAZIONE AS N1 ON I.Squadra1 = N1.Nazione
+    JOIN NAZIONE AS N2 ON I.Squadra2 = N2.Nazione
+    WHERE N1.Nazione = 'Olanda' OR N2.Nazione = 'Olanda'
+)
+\end{lstlisting}
+
+
+\subsection{Query 4}
+Determinare le squadre che incontrano solo squadre dello stesso livello
+\begin{lstlisting}
+SELECT N.Nazione
+FROM NAZIONALE AS N
+WHERE NOT EXISTS (
+    SELECT *
+    FROM INCONTRO AS I, NAZIONALE AS N2
+    JOIN I ON I.Squadra1 = N.Nazione
+    JOIN I ON I.Squadra = N2.Nazione
+    WHERE N.Livello <> N2.Livello
+)
+AND
+NOT EXISTS (
+    SELECT *
+    FROM INCONTRO AS I, NAZIONALE AS N2
+    JOIN I ON I.Squadra1 = N2.Nazione
+    JOIN I ON I.Squadra = N.Nazione
+    WHERE N2.Livello <> N.Livello
+)
+\end{lstlisting}
+
+\newpage
+\section{Esercizio 6}
+Si consideri la seguente Base di Dati:
+
+\begin{itemize}
+    \item DISCO(\underline{Nroserie}, TitoloAlbum, Anno, Prezzo)
+    \item CONTIENE(\underline{NroSerieDisco, CodiceReg}, NroProgr)
+    \item ESECUZIONE(\underline{CodiceReg}, TitoloCanz, Anno)
+    \item AUTORE(\underline{Nome, TitoloCanzone})
+    \item CANTANTE(\underline{NomeCantante, CodiceReg})
+\end{itemize}
+
+\subsection{Query 1}
+La canzone che è stata eseguita almeno due volte
+\begin{lstlisting}
+SELECT E.TitoloCanz, COUNT(*) AS NumeroEsecuzioni
+FROM ESECUZIONE AS E
+GROUP BY E.TitoloCanz
+HAVING COUNT (*) >= 2
+\end{lstlisting}
+
+\subsection{Query 2}
+Gli autori di canzoni eseguite tra il 2000 e il 2010
+\begin{lstlisting}
+SELECT A.Nome
+FROM AUTORE AS A
+JOIN ESECUZIONE AS E ON A.TitoloCanzone = E.TitoloCanz
+WHERE E.anno >= 2000 AND E.anno <= 2010
+\end{lstlisting}
+
+\subsection{Query 3}
+Gli autori delle canzoni più eseguite
+\begin{lstlisting}
+SELECT A.Nome ,A.TitoloCanzone, COUNT(*)
+FROM AUTORE AS A 
+JOIN ESECUZIONE AS E ON E.TitoloCanz = A.TitoloCanzone
+GROUP BY A.Nome, A.TitoloCanzone
+HAVING COUNT(*) >= ALL (
+    SELECT COUNT(*)
+    FROM ESECUZIONE
+    GROUP BY TitoloCanz
+)
+\end{lstlisting}
+
+\newpage
+\section{Esercizio 7}
+\noindent
+Data la seguente base di dati
+
+\begin{itemize}
+    \item Concorso(\underline{Codice}, NumeroProve, Bando)
+    \item Bando(\underline{Codice}, DataPubblicazione, DataScadenza)
+    \item Candidato(\underline{CF}, Cognome, Nome, Indirizzo, Telefono)
+    \item Commissario(\underline{CF}, Cognome, Nome, NumeroTelefono)
+    \item Prova(\underline{Concorso, Data}, PunteggioMassimo)
+    \item Svolgimento(\underline{DataProva, ConcorsoProva, Candidato}, Punteggio)
+    \item Partecipazione(\underline{Concorso, Candidato}, PunteggioTotale, PosizioneInGraduatoria)
+    \item Risposta(\underline{Bando, Candidato})
+    \item Commissione(\underline{Concorso, Commissario}, Ruolo)
+\end{itemize}
+
+\subsection{Query 1}
+Selezionare tutti i concorsi del 2018
+\begin{lstlisting}
+SELECT C.*
+FROM Concorso AS C
+JOIN Bando AS B ON C.Bando = B.Codice
+WHERE (B.DataPubblicazione = '2018-12-1') OR (B.DataScadenza = '2018-12-31')
+\end{lstlisting}
+
+\subsection{Query 2}
+Selezionare tutti i candidati che hanno fatto concorsi con bando scaduto nel 2018
+\begin{lstlisting}
+SELECT C.*
+FROM CANDIDATO AS C
+JOIN Partecipazione AS P ON C.CF = P.Candidato
+JOIN CONCORSO AS CON ON P.Concorso = CON.Codice
+JOIN BANDO AS B ON CON.Bando = B.Codice
+WHERE YEAR(B.DataScadenza) = 2018
+\end{lstlisting}
+
+\subsection{Query 3}
+Trovare i commissari dei concorsi con numero di prove pari a 2
+\begin{lstlisting}
+SELECT CO.*
+FROM COMMISSARIO AS CO
+JOIN Commissione AS COM ON CO.CF = COM.Commissario
+JOIN CONCORSO AS CON ON COM.Concorso = CON.Codice
+WHERE CON.NumeroProve = 2
+\end{lstlisting}
+
+\newpage
+\section{Esercizio 8}
+\noindent
+Data la seguente base di dati
+
+\begin{itemize}
+    \item Lavoratore(\underline{CF}, Nome, Cognome, Età)
+    \item Città(\underline{Nome}, NumeroAbitanti)
+    \item HaAbitato(\underline{CFPersona, Città}, DaAnno, AAnno)
+    \item HaLavorato(\underline{CFPersona, PIVADitta, Città}, DaAnno, AAnno)
+    \item Ditta(\underline{PIVA}, Nome, NumeroImpiegati, CapitaleSociale)
+    \item HaAvutoSedeIn(\underline{PIVADitta, NomeCittà}, DaAnno, AAnno)
+\end{itemize}
+
+\subsection{Query 1}
+Trovare i lavoratori delle aziende milanesi
+\begin{lstlisting}
+SELECT L.*
+FROM LAVORATORE AS L
+JOIN HaLavorato AS HL ON HL.CFPersona = L.CF
+WHERE HL.Citta = 'Milano'
+\end{lstlisting}
+
+\subsection{Query 2}
+Trovare le partite IVA delle ditte che hanno (o hanno avuto) sedi in tutte le città;
+\begin{lstlisting}
+-- Inserisci qui la query 2
+\end{lstlisting}
+
+\subsection{Query 3}
+Per ogni ditta trovare il numero degli impiegati che vi hanno lavorato, risiedendo nella stessa città dove aveva sede la ditta
+\begin{lstlisting}
+\end{lstlisting}
+
+\subsection{Query 4}
+Trovare le città che hanno o hanno avuto il maggior numero di ditte
+\begin{lstlisting}
+-- Inserisci qui la query 4
+\end{lstlisting}
+
+\subsection{Query 5}
+Trovare le città che hanno avuto il maggior numero di ditte con sede nel 2019
+\begin{lstlisting}
+-- Inserisci qui la query 5
+\end{lstlisting}
+
+\newpage
+\section{Esercizio 9}
+\begin{itemize}
+    \item CINEMA(\underline{codice}, nome, indirizzo, codice\_comune)
+    \item COMUNE(\underline{codice}, nome, provincia, regione, numero\_abitanti)
+    \item FILM(\underline{codice}, titolo, anno, nazionalita, tecnica\_animazione)
+    \item PROIETTATO\_IN(\underline{codice\_film, codice\_sala, data\_ora}, lingua)
+    \item SALA(\underline{codice}, nome, capienza, abilitata\_3d, codice\_cinema)
+\end{itemize}
+
+\subsection{Query 1}
+Selezionare tutti i film di tecnica animazione «computer graphics» proiettati nel 2016
+\begin{lstlisting}
+SELECT DISTINCT F.*
+FROM FILM AS F
+JOIN PROIETTATO_IN AS P ON F.codice = P.codice_film
+WHERE F.tecninca_animazione = 'computer graphics' AND YEAR(P.data_ora) = 2016
+\end{lstlisting}
+
+\subsection{Query 2}
+Selezionare la capienza media delle sale dei cinema che hanno più di una sala
+\begin{lstlisting}
+SELECT S.codice_cinema ,AVG(S.capienza)
+FROM SALA AS S 
+GROUP BY S.codice_cinema
+HAVING COUNT(*) >= 2
+\end{lstlisting}
+
+\subsection{Query 3}
+Selezionare i cinema e nome della città che hanno il maggior numero di posti a vedere.
+\begin{lstlisting}
+SELECT C.codice, CO.nome, SUM(S.capienza)
+FROM CINEMA AS C
+JOIN C ON C.codice_comune = CO.codice
+JOIN S ON S.codice_cinema = C.codice
+GROUP BY C.codice, CO.nome
+HAVING SUM(S.capienza) >= ALL (
+    SELECT SUM(S2.capienza)
+    FROM SALA AS S2
+    GROUP BY S2.codice_cinema
+)
+\end{lstlisting}

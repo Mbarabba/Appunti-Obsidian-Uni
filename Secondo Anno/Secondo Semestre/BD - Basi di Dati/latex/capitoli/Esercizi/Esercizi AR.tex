@@ -1,0 +1,174 @@
+\chapter{Esercizi AR}
+\section{Totale Giugno 26}
+
+\subsection{Esercizio 1}
+Trovare i nick e le nazioni dei giocatori che hanno partecipato ad almeno un torneo disputato a Milano con montepremi di almeno 50.
+
+\[
+\pi_{Nick, Nazione} \left( GIOCATORE \bowtie \left( \sigma_{Citt\text{à} = \text{'Milano'} \land Montepremi \ge 50} (TORNEO) \right) \bowtie PARTECIPAZIONE \right)
+\]
+
+\subsection{Esercizio 2}
+Trovare i nick dei giocatori italiani che non hanno mai partecipato a un torneo nel 2026.
+
+\[
+\left( \pi_{Nick} \left( \sigma_{Nazione = \text{'Italia'}} (GIOCATORE) \right) \right) - \left( \pi_{Nick} \left( PARTECIPAZIONE \bowtie \left( \sigma_{Anno = 2026} (TORNEO) \right) \right) \right)
+\]
+
+\newpage
+\section{Totale Giugno 2017}
+
+Date le relazioni:
+
+\begin{center}
+    \begin{itemize}
+        \item \textbf{NEGOZIO}(\underline{codiceN}, nomeN, catena) \\
+        \item \textbf{PRODOTTO}(\underline{codiceP}, nomeP, TipoP, Prezzo, codiceN)
+    \end{itemize}
+\end{center}
+
+\subsection{Es 1}
+Trovare il nome dei negozi che hanno almeno un prodotto di tipo "alimentare"
+$$\pi_{\text{nomeN}} ( \sigma_{\text{TipoP} = \text{Alimentare}} ( \text{Prodotto} \bowtie \text{Negozio} ) )$$
+
+\subsection{Es 2}
+Trovare il codice dei negozi che non hanno prodotti di tipo "alimentare"
+$$\displaystyle \pi_{\text{codiceN}}(\text{NEGOZIO}) \setminus \pi_{\text{codiceN}}(\sigma_{\text{TipoP} = \text{'alimentare'}}(\text{PRODOTTO}))$$
+
+\subsection{Es 3}
+Trovare il nome dei negozi che hanno almeno sia prodotti di tipo "alimentare" che "casa".
+$$\displaystyle \pi_{\text{nomeN}} ( \sigma_{\text{TipoP} = \text{'alimentare'}} ( \text{NEGOZIO} \bowtie \text{PRODOTTO} ) ) \cap \pi_{\text{nomeN}} ( \sigma_{\text{TipoP} = \text{'casa'}} ( \text{NEGOZIO} \bowtie \text{PRODOTTO} ) )$$
+
+\newpage
+\section{Totale Settembre 2015}
+
+Date le relazioni,
+
+\begin{center}
+    \begin{itemize}
+        \item \textbf{STUDENTE} (\underline{matr}, nome, cognome) \\
+        \item \textbf{ESAME} (\underline{matr}, \underline{cod-corso}, voto) \\
+        \item \textbf{CORSO}(\underline{cod-corso}, nome-corso, docente)
+    \end{itemize}
+\end{center}
+
+\subsection{Es 1}
+Trovare nome, cognome e matricola degli studenti che hanno registrato il voto dell'esame di "basi di dati"
+$$\displaystyle \pi_{\text{nome, cognome, matr}} \left( \text{Studente} \bowtie \text{Esame} \bowtie \sigma_{\text{nome-corso} = \text{'Basi di Dati'}} \left( \text{Corso} \right) \right)$$
+
+\subsection{Es 2}
+Trovare nome, cognome e matricola degli studenti che non hanno superato alcun esame (nota: solo gli esami con voto positivo vengono registrati nella relazione esame)
+$$ \displaystyle \pi_{\text{nome, cognome, matr}}(\text{STUDENTE}) \setminus \pi_{\text{nome, cognome, matr}}(\text{STUDENTE} \bowtie \text{ESAME}) $$
+
+\subsection{Es 3}
+Trovare nome e cognome degli studenti omonimi
+$$ \displaystyle \pi_{\text{S1.nome, S1.cognome}} \left( \sigma_{\text{S1.nome} = \text{S2.nome} \, \land \, \text{S1.cognome} = \text{S2.cognome} \, \land \, \text{S1.matr} \neq \text{S2.matr}} \left( \rho_{\text{S1}}(\text{STUDENTE}) \times \rho_{\text{S2}}(\text{STUDENTE}) \right) \right) $$
+
+\newpage
+\section{Slide AR1}
+\subsection{Es 1}
+\begin{itemize}
+    \item IMPIEGATO(\underline{CodImp}, Cognome, Et\`a, Stipendio, CodDip)
+    \item DIPARTIMENTO(\underline{CodDip}, NomeDip, Telefono, Direttore)
+\end{itemize}
+Elencare Cognome degli impiegati con Stipendio $>$ 3000€ insieme al NomeDip del loro dipartimento.
+
+\[
+\Pi_{\text{Cognome Imp, Nome Dip}} \left( \sigma_{\text{Stipendio} > 3000} (\text{Impiegato}) \bowtie \text{Dipartimento} \right)
+\]
+
+\subsection{Es 2}
+\begin{itemize}
+    \item IMPIEGATO(\underline{CodImp}, Cognome, CodDip)
+    \item PARTECIPAZIONE(\underline{CodImp}, \underline{CodProg})
+    \item PROGETTO(\underline{CodProg}, NomeProg, Budget)
+\end{itemize}
+Elencare Cognome e NomeProg per tutti gli impiegati che partecipano a progetti con budget $>$ 150000€
+
+\[
+\Pi_{\text{Cognome}, \text{NomeProg}} \left( \text{IMPIEGATO} \bowtie \text{PARTECIPAZIONE} \bowtie \sigma_{\text{Budget} > 150000} (\text{PROGETTO}) \right)
+\]
+
+\subsection{Es 3}
+\begin{itemize}
+    \item IMPIEGATO(\underline{CodImp}, Cognome, Et\`a, CodDip)
+\end{itemize}
+Trovare le coppie Senior (et\`a $>$ 50) e Junior (et\`a $<$ 30) di impiegati dello stesso dipartimento
+$$ \sigma_{\text{I1.Et`a} > 50 \land \text{I2.Et`a} < 30 \land \text{I1.CodDip} = \text{I2.CodDip}} (\rho_{\text{I1}}(\text{IMPIEGATO}) \times \rho_{\text{I2}}(\text{IMPIEGATO})) $$
+
+\subsection{Es 4}
+\begin{itemize}
+    \item IMPIEGATO(\underline{CodImp}, Cognome, Et\`a, CodDip)
+\end{itemize}
+Trovare gli impiegati Junior (et\`a $<$ 30) e quelli Senior (et\`a $>$ 50). Costruire tre insiemi di CodImp:
+\begin{enumerate}
+    \item[a.] Tutti gli impiegati che non hanno et\`a tra 30 e 50 compresi.
+    \item[b.] Gli impiegati solo Junior (cio\`e, quelli con et\`a $<$ 30)
+    \item[c.] Impiegati sia Junior che Senior (cio\`e, sia quelli con et\`a $<$ 30 sia quelli con et\`a $>$ 50)
+\end{enumerate}
+
+\subsubsection{A}
+$$ \Pi_{\text{CodImp}} (\sigma_{\text{Et`a} < 30 \lor \text{Et`a} > 50}(\text{IMPIEGATO})) $$
+
+\subsubsection{B}
+$$ \Pi_{\text{CodImp}} (\sigma_{\text{Et`a} < 30}(\text{IMPIEGATO})) $$
+
+\subsubsection{C}
+$$ \Pi_{\text{CodImp}} (\sigma_{\text{Et`a} < 30}(\text{IMPIEGATO})) \cup \Pi_{\text{CodImp}} (\sigma_{\text{Et`a} > 50}(\text{IMPIEGATO})) $$
+
+\subsection{Es 5}
+\begin{itemize}
+    \item IMPIEGATO(\underline{CodImp}, CodDip, Stipendio)
+    \item DIPARTIMENTO(\underline{CodDip}, NomeDip, Telefono)
+\end{itemize}
+Dato il piano $\pi_{\text{NomeDip}}(\pi_{\text{CodImp,CodDip,NomeDip}}(\text{IMPIEGATO} \bowtie \text{DIPARTIMENTO}))$, si vuole un piano ottimizzato
+
+\newpage
+\section{Slide AR2}
+\subsection{Es 1}
+\begin{itemize}
+    \item ESAME(Matricola, CodCorso, Voto)
+    \item CORSO\_OBBLIG(CodCorso) \quad -- corsi obbligatori
+\end{itemize}
+Elencare le matricole degli studenti che hanno superato (Voto $\geq$ 18) \textbf{tutti} i corsi obbligatori
+
+\[
+\Pi_{\text{Matricola, CodCorso}} (\sigma_{\text{Voto} \geq 18}(\text{ESAME})) \div \text{CORSO\_OBBLIG}
+\]
+
+\subsection{Es 2}
+\begin{itemize}
+    \item PRODOTTO(\underline{PID}, Categoria)
+    \item VENDITA(\underline{NumOrd}, \underline{PID}, Quantit\`a, PrezzoUnit)
+\end{itemize}
+Trovare il \textbf{fatturato totale} (Quantit\`a * PrezzoUnit) per categoria
+\[
+\gamma_{\text{Categoria}, \text{SUM}(\text{Quantit\`a} \times \text{PrezzoUnit})} (\text{PRODOTTO} \bowtie \text{VENDITA})
+\]
+
+\subsection{Es 3}
+\begin{itemize}
+    \item CORSO(\underline{CodCorso}, Titolo)
+    \item VALUTAZIONE(\underline{ID}, CodCorso, Stelle) \quad -- le stelle vanno da 1 a 5
+\end{itemize}
+Mostrare tutti i corsi con la \textbf{media delle stelle}; se nessuna valutazione, la media rimane NULL
+\[
+\gamma_{\text{CodCorso:} \text{AVG}(\text{Stelle})} (\text{CORSO} \bowtie_{\text{LEFT } \text{CORSO.CodCorso} = \text{VALUTAZIONE.CodCorso}} \text{VALUTAZIONE})
+\]
+
+\subsection{Es 4}
+\begin{itemize}
+    \item RICERCATORE(\underline{RID}, Nome)
+    \item PROGETTO(\underline{PID}, Titolo, RID) \quad -- responsabile opzionale
+\end{itemize}
+Elencare Titolo progetto e Nome responsabile, mostrando NULL se il responsabile non \`e registrato
+\[
+\Pi_{\text{Titolo}, \text{Nome}} (\text{RICERCATORE} \bowtie_{\text{RIGHT } \text{RICERCATORE.RID} = \text{PROGETTO.RID}} \text{PROGETTO})
+\]
+
+\subsection{Es 5}
+\begin{itemize}
+    \item ARTISTA(\underline{AID}, Nome)
+    \item ALBUM(\underline{AID}, Titolo)
+\end{itemize}
+Produrre elenco combinato di Artista--Titolo, includendo artisti senza album e album senza artista registrato
