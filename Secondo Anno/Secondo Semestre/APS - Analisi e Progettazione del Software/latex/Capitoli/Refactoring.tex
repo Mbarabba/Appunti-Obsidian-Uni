@@ -1,124 +1,279 @@
 \chapter{Refactoring}
-\section{Definizione}
-È un \textbf{metodo strutturato} e disciplinato per \uline{riscrivere o ristrutturare del codice esistente senza modificarne il comportamente esterno.}
+\section{Cosa è?}
+Il Refactoring è un metodo strutturato e disciplinato che consiste nel riscrivere o ristrutturare del codice sorgente esistente senza modificarne il comportamento esterno.
 
-Si tratta di un \textbf{processo iterativo} che procede applicando piccoli passi di trasformazione, costantemente supportati dalla ripetizione dei test dopo ciascuna modifica per assicurarsi di non aver "rotto" nulla.
+Viene eseguito applicando una serie di piccoli passi di trasformazione logica, strettamente combinati con la ripetizione dei test dopo ciascun passo per assicurarsi di non aver "rotto" alcuna funzionalità
 
-\section{Obiettivi e Vantaggi}
-L'utilità principale del refactoring è il \uline{miglioramento continuo del codice} e la preparazione del sistema a futuri cambiamenti.
-
-Tra le attività e gli scopi principali ci sono:
+\section{Quando applicarlo?}
+Di norma, il refactoring andrebbe applicato:
 \begin{itemize}
-    \item Rimuovere il codice duplicato
-    \item Migliorare la chiarezza e la leggibilità generale
-    \item Abbreviare metodi troppo lunghi
+    \item Seguendo la "regola del 3", se una cosa si ripete 3 volte, è il momento di estrarla o rifattorizzarla
+    \item Quando si aggiunge una nuova funzionalità al sistema
+    \item Quando si corregge un bug
+    \item Durante le sessioni di revisione del codice
 \end{itemize}
 
-\section{Quando usarlo?}
+\section{Obiettivi}
+L'utilità principale del refactoring è il miglioramento continua della vase di codice e la preparazione al cambiamento futuro.
+
+Gli obiettivi di una buona programmazione prevedono:
 \begin{itemize}
-    \item Seguendo la "Regola del 3"
-    \begin{enumerate}
-        \item \textbf{La prima volta} che scrivi una porzione di codice, limitati a scriverla per far funzionare la logica
-        \item \textbf{La seconda volta} che hai bisogno di fare la stessa cosa, potresti semplicemente copiare e incollare il codice
-        \item \textbf{La terza volta} che ti trovi a duplicare o implementare di nuovo quello stesso pezzo di codice, scatta la regola: devi fermarti e applicare il refactoring
-    \end{enumerate}
-    \item Si aggiunge una nuova funzionalità
-    \item Si corregge un bug
-    \item Durante la revisione del codice
+    \item La rimozione del codice duplicato
+    \item L'abbreviazione di metodi troppo lunghi
+    \item Miglioramento generale della chiarezza del sistema
 \end{itemize}
 
-\section{Procedura}
-Il refactoring si esegue seguendo un ciclo preciso e ripetitivo:
+\section{Procedura per applicare il refactoring}
+Il ciclo di lavoro tipico del refactoring si articola in questi passaggi:
 \begin{enumerate}
-    \item \textbf{Assicurarsi che i test passino}, prima di toccare il codice, tutto deve funzionare
-    \item \textbf{Trovare un code smell}
-    \item \textbf{Determinare come migliorare} questo codice
-    \item \textbf{Effettuare le migliorie}
-    \item \textbf{Eseguire nuovamente i test}
-    \item \textbf{Ripetere il ciclo}
+    \item \textbf{Assicurarsi che i test passino}\\
+    Prima di toccare il codice, bisogna avera una suite di test funzionante
+    \item \textbf{Individuare un "Code Smell"}\\
+    Identificare un sintomo visivo o strutturale che indica la presenza di un problema di progettazione
+    \item \textbf{Determinare la miglioria}\\
+    Seguire la tecnica di refactoring appropriata
+    \item \textbf{Effettuare le migliorie}\\
+    Modificare il codice sorgente
+    \item \textbf{Eseguire i test}\\
+    Verificare che il sistema si comporti ancora in modo corretto
+    \item \textbf{Ripetere}
 \end{enumerate}
 
-\section{Cosa è un Code Smell?}
-Un Code Smell è un sintomo o un indicatore presente nel codice sorgente che suggerisce la necessità di applicare una tecnica di refactoring per migliorarne la progettazione.
+\section{Tipi di test}
+\begin{itemize}
+    \item \textbf{Test di unità}\\
+    Si concentrano sulle singole unità di codice, ovvero le singole classi e i metodi
+    \item \textbf{Test di integrazione}\\
+    Verificano che i vari moduli, classi o componenti comunichino e funzionino correttamente quando vengono combinati
+    \item \textbf{Test di sistema}\\
+    Valutano il prodotto software nella sua interezza per verificare che rispeddi le specifiche architettoniche e globali
+    \item \textbf{Test di accettazione}\\
+    Dimostra che il sistema soddisfa effettivamente i requisiti e i bisogni dell'utente finale o del committente
+\end{itemize}
 
-Non si tratta di un bug o di un errore che impedisce l'esecuzione del programma, ma piuttosto di un difetto strutturale o di design che rende il software difficile da capire, da modificare e da riutilizzare nel tempo
 
-\section{Tabella Code Smell}
-{\small
-\begin{xltabular}{\textwidth}{p{2.5cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
-\toprule
-\textbf{Nome} & \textbf{Sintomi} & \textbf{Problema} & \textbf{Soluzione} \\
-\midrule
-\endfirsthead
+\chapter{Code Smell}
+\section{Cosa sono?}
+I Code Smell sono indicatori di problemi strutturali profondi.
 
-% Intestazione ripetuta nelle pagine successive
-\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{}}} \\
-\toprule
-\textbf{Nome} & \textbf{Sintomi} & \textbf{Problema} & \textbf{Soluzione} \\
-\midrule
-\endhead
+\section{Long Method}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % Migliora l'altezza delle righe
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{Nome} & Long Method \\
+        \midrule
+        \textbf{Problema} & Un metodo svolge troppe azioni e supera le 10 righe di codice, diventando difficile da capire e riutilizzare. \\
+        \midrule
+        \textbf{Soluzione} & 
+        \begin{itemize}
+            \item \textbf{Extract Method:} Si isolano i blocchi logici e si creano dei nuovi metodi che li contengono.
+            \item \textbf{Replace Temp with query:} Si sposta l'espressione in un metodo separato che ne restituisce il risultato.
+            \item \textbf{Introduce Parameter Object:} Si raggruppano i parametri ripetuti in un oggetto dedicato.
+        \end{itemize}
+        \\ % Questo backslash è FONDAMENTALE per chiudere la riga della tabella
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
-% Piè di pagina alla fine di ogni pagina (tranne l'ultima)
-\midrule
-\multicolumn{4}{r}{{}} \\
-\endfoot
+\section{Large Class}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % Migliora l'altezza delle righe
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{Nome} & Large Class 
+        \\
+        \midrule
+        \textbf{Problema} &
+        Una classe contiene molti campi/metodi/linee di codice
+        \\
+        \midrule
+        \textbf{Soluzione} & 
+        \begin{itemize}
+            \item \textbf{Extract Class:} Prende un sottoinsieme delle variabili di istanza e dei metodi e crea una nuova classe con essi.
+            
+            Questo rende la classe iniziale più breve
+            \item \textbf{Move Method:} Sposta uno o più metodi in altre classi
+            \item \textbf{Extract Subclass:} Crea una sottoclasse per una parte del comportamento della classe, se questo è usato solo in casi
+        \end{itemize}
+        \\ % Questo backslash è FONDAMENTALE per chiudere la riga della tabella
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
-% Piè di pagina per l'ultima pagina della tabella
-\bottomrule
-\endlastfoot
+\section{Duplicated Code}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % Migliora l'altezza delle righe
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{Nome} & Duplicated Code \\
+        \midrule
+        \textbf{Problema} & Lo stesso codice o molto simile appare in più istanze \\
+        \midrule
+        \textbf{Soluzione} & 
+        Se lo stesso codice si trova in 2 o più metodi della stessa classe usare Extract Method e posizionare le chiamate per il nuovo metodo in entrami i posti
+        \\ % Questo backslash è FONDAMENTALE per chiudere la riga della tabella
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
-\textbf{Long Method} & 
-Un metodo contiene troppe righe di codice (spesso più di dieci). & 
-I metodi lunghi sono molto difficili da capire, modificare, testare e riutilizzare. & 
-Applicare \emph{Extract Method}. Se ci sono troppe variabili locali, usare \emph{Replace Temp with Query} o \emph{Introduce Parameter Object}. Per i condizionali usare \emph{Decompose Conditional}. \\
-\midrule
+\newpage
+\section{Feature Envy}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % Migliora l'altezza delle righe
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{Nome} & Feature Envy \\
+        \midrule
+        \textbf{Problema} & Un metodo accede ai dati di un altro oggetto più che ai propri \\
+        \midrule
+        \textbf{Soluzione} & 
+        \begin{itemize}
+            \item Se un metodo deve essere chiaramente spostato in un altro luogo, utilizzare Move Method
+            \item Se solo una parte di un metodo accede ai dati di un altro oggetto, usare Extract Method
+            \item Se un metodo utilizza funzioni di diverse altri classi, determinare innanzitutto quale classe contiene la maggior parte dei dati utilizzaati.
 
-\textbf{Duplicated Code} & 
-Lo stesso frammento di codice (o molto simile) appare in più punti del programma. & 
-Se c'è un bug, va corretto in tutte le copie. Aumenta inutilmente la dimensione e la complessità del codice. & 
-Applicare \emph{Extract Method} per isolare il codice duplicato in un unico punto e sostituire i cloni con la chiamata a tale metodo. \\
-\midrule
+            Poi collocare il metodo in questa classe insieme agli altri dati.
+            \item Usare Extract MEthod per dividere il metodo in diverse parti che possono essere collocate in diversi posti in diverse classi
+        \end{itemize}
+        \\ % Questo backslash è FONDAMENTALE per chiudere la riga della tabella
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
-\textbf{Feature Envy} & 
-Un metodo accede continuamente ai dati di un'altra classe piuttosto che a quelli della propria. & 
-Errore di progettazione: il metodo si trova nella classe sbagliata e viola il principio di incapsulamento. & 
-Usare \emph{Move Method} per spostare l'intero metodo, oppure \emph{Extract Method} per isolare la parte "invidiosa" e spostarla nella classe che possiede i dati. \\
-\midrule
+\section{Switch Statement}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % Migliora l'altezza delle righe
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{Nome} & Switch Statement \\
+        \midrule
+        \textbf{Problema} & Si ha un complesso operatore di Switch o di una sequenza di istruzioni if \\
+        \midrule
+        \textbf{Soluzione} & 
+        \begin{itemize}[leftmargin=*, nosep, after=\vspace{0.5em}]
+           \item \textbf{Replace Conditional with Polymorphism:} Creare sottoclassi corrispondenti ai rami della condizione.
 
-\textbf{Large Class} & 
-Una classe contiene troppi campi, metodi o un numero eccessivo di linee di codice. & 
-Violazione della coesione: la classe sta chiaramente gestendo più di una singola responsabilità. & 
-Separare le responsabilità creando nuove classi mirate tramite \emph{Extract Class} o, se ha senso gerarchicamente, \emph{Extract Subclass}. \\
-\midrule
+           In esse, creare un metodo condiviso e spostare il codice dal ramo corrispondente della condizione di esso.
 
-\textbf{Switch Statement} & 
-Presenza di istruzioni \texttt{switch} o lunghe catene di \texttt{if-else} basate sul tipo di un oggetto. & 
-La stessa struttura condizionale tende a ripetersi nel codice. Se si aggiunge un nuovo tipo, bisogna modificare tutti gli switch. & 
-Sostituire la logica condizionale sfruttando il polimorfismo con \emph{Replace Conditional with Polymorphism}. \\
-\midrule
+           Quindi sostituire il condizionale con la chiamata al metodo corrispondente.
 
-\textbf{Data Class} & 
-Una classe contiene solo attributi e i rispettivi metodi getter/setter, senza logica. & 
-È un contenitore passivo che spinge le altre classi a soffrire di \emph{Feature Envy}, tipico di una programmazione procedurale e non a oggetti. & 
-Cercare chi utilizza questi dati e migrare quelle funzionalità dentro la Data Class usando \emph{Move Method} o \emph{Extract Method}. \\
-\midrule
+           Il risultato è che l'implementazione corretta sarà ottenuta tramite il polimorfismo, a seconda della classe dell'oggetto
+           \item Per isolare lo "switch" e metterlo nella sottoclasse giusta, potrebbe essere necessario Extract Method e poi Move Method
+        \end{itemize}
+        \\ % Questo backslash è FONDAMENTALE per chiudere la riga della tabella
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
-\textbf{Long Parameter List} & 
-Un metodo richiede il passaggio di un numero eccessivo di parametri. & 
-Firme dei metodi difficili da leggere e utilizzare, che tendono a cambiare spesso nel tempo. & 
-Raggruppare i parametri correlati in un oggetto tramite \emph{Introduce Parameter Object}, oppure passare l'intero oggetto con \emph{Preserve Whole Object}. \\
-\midrule
+\section{Data Class}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % Migliora l'altezza delle righe
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{Nome} & Data Class \\
+        \midrule
+        \textbf{Problema} &
+        Una classe che ha solo variabili di classe, metodi/proprietà, getter/setter e nient'altro.
+        
+        Sta solo agendo come contenitore di dati
+        \\
+        \midrule
+        \textbf{Soluzione} & 
+        Esaminare i metodi che utilizzano i dati nella data class e usare Move Method o Extract Method per migrare questa funzionalità nella data class
+        \\ % Questo backslash è FONDAMENTALE per chiudere la riga della tabella
+        \bottomrule
+    \end{tabularx}
+\end{table}
+ \newpage
+\section{Long Parameter List}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % Migliora l'altezza delle righe
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{Nome} & Long Parameter List \\
+        \midrule
+        \textbf{Problema} & Molti parametri passati in un metodo \\
+        \midrule
+        \textbf{Soluzione} & 
+        \begin{itemize}[leftmargin=*, nosep, after=\vspace{0.5em}]
+           \item Se alcuni degli argomenti sono solo risultati di chiamate di metodo di un altro oggetto usare Replace Parameter with Method Call
+           \item Invece di passare un gruppo di dati ricevuti da un altro oggetto come parametri, passare l'oggetto stesso al metodo, utilizzando Preserve Whole Object
+           \item Se ci sono più elementi dati non correlati tra loro, a volte è possibile unirli in un unico oggetto parametro tramite Introduce Parameter Object
+        \end{itemize}
+        \\ % Questo backslash è FONDAMENTALE per chiudere la riga della tabella
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
-\textbf{Shotgun Surgery} & 
-Per completare una singola modifica funzionale, si devono fare tanti piccoli interventi sparsi in molte classi diverse. & 
-Una singola responsabilità logica è stata frammentata e distribuita in modo errato su troppe classi. & 
-Riunire i comportamenti correlati in un'unica classe usando \emph{Move Method} e \emph{Move Field}. Se alcune classi si svuotano, usare \emph{Inline Class}. \\
-\midrule
+\section{Shotgun Surgery}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % Migliora l'altezza delle righe
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{Nome} & Shotgun Surgery \\
+        \midrule
+        \textbf{Problema} & Per apportare eventuali modifiche è necessario apportare molte piccole modifiche a molte classi diverse \\
+        \midrule
+        \textbf{Soluzione} & 
+        \begin{itemize}[leftmargin=*, nosep, after=\vspace{0.5em}]
+            \item Usare il metodo Move Method e Move Field per spostare i comportamenti di classe esistenti in una singola classe.
 
-\textbf{Comment} & 
-Un blocco di codice o un metodo richiede un'enorme quantità di commenti per essere compreso. & 
-Il codice non è auto-esplicativo e risulta scritto male. I commenti servono a compensare la scarsa chiarezza. & 
-Estrarre le parti complesse con \emph{Extract Variable} o \emph{Extract Method}, assegnando nomi chiari (\emph{Rename Method}) che rendano inutile il commento. \\
+            Se non c'è classe appropriata per questo, crearne una nuova
+            \item Se lo spostamento del codice nella stessa clases lascia le classi originali quasi vuote, provare a sbarazzarsi di queste classi ormai ridondati tramite Inline Class
+        \end{itemize}
+        \\ % Questo backslash è FONDAMENTALE per chiudere la riga della tabella
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
-\end{xltabular}
-}
+\section{Comment}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % Migliora l'altezza delle righe
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{Nome} & Commentthod \\
+        \midrule
+        \textbf{Problema} & Un metodo è ricco di commenti esplicativi\\
+        \midrule
+        \textbf{Soluzione} & 
+        \begin{itemize}[leftmargin=*, nosep, after=\vspace{0.5em}]
+            \item Se un commento è inteso a spiegare un'interrogaione complessa, l'espressione deve essere suddivisa in sottoespressioni comprensibili utilizzando Extract Variable
+            \item Se un commento spiega una sezione di codice, questa sezione può essere trasformata in un medoto separato tramite Extract MEthod
+            \item Se un metodo è già stato estratto, ma sono ancora necessari commenti per spiegare cosa fa il metodo, date al metodo un nome autoesplicativo con Rename Method
+            \item Se avete bisgono di affermare delle regole su uno stato è necessario per il funzionamento del sistemare, usate Introduce Assertion
+        \end{itemize}
+        \\ % Questo backslash è FONDAMENTALE per chiudere la riga della tabella
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\newpage
+\section{Refused Bequest}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % Migliora l'altezza delle righe
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{Nome} & Refused Bequest \\
+        \midrule
+        \textbf{Problema} & Una sottoclasse utilizza solo alcuni dei metodi e delle proprietà ereditati dai suoi genitori, la gerarchia non è corretta \\
+        \midrule
+        \textbf{Soluzione} & 
+        \begin{itemize}[leftmargin=*, nosep, after=\vspace{0.5em}]
+            \item \textbf{Replace Integration with Delegation:} Creare un campo e inserire un oggetto della superclasse, delegare i metodi all'oggetto della superclasse e rimuore l'ereditarietà
+            \item \textbf{Extract Superclass:} Creare una superclasse condivisa e trasferirvi tutti i campi e metodi comuni
+        \end{itemize}
+        \\ % Questo backslash è FONDAMENTALE per chiudere la riga della tabella
+        \bottomrule
+    \end{tabularx}
+\end{table}
