@@ -1,0 +1,208 @@
+\chapter{Sistema binario: Operazioni aritmetiche}
+\section{Somma}
+\subsection{Definizione}
+Si esegue la somma tra i bit di pari ordine
+
+\begin{gather*}
+    0 + 0 = 0 \\ 
+    0 + 1 = 1 \\
+    1 + 0 = 1 \\
+    1 + 1 = 0 \quad \text{con riporto 1 sul bit di ordine superiore} \\
+    1 + 1 + 1 = 1 \quad \text{con riporto 1 sul bit di ordine superiore}
+\end{gather*}
+
+La somma è definita su 3 elementi:
+\begin{itemize}
+    \item 2 addendi
+    \item Il riporto (carry)
+\end{itemize}
+
+La somma di 2 unità (valore 1) di un dato ordine, creano 1 unità dell'ordine immediatamente superiore (carry)
+
+\subsection{Esempio}
+Si esegua la \textbf{\color{red}somma} tra $010011$ e $010001$ (che indicano, rispettivamente, i numeri decimali 19 e 17)
+
+\vspace{0.5cm}
+
+\begin{center}
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+    \hline
+    \textbf{RIPORTO} & 1 & 0 & 0 & 1 & 1 & \\ \hline
+    \begin{tabular}[c]{@{}l@{}}\textbf{PRIMO}\\\textbf{ADDENDO}\end{tabular} & 0 & 1 & 0 & 0 & 1 & 1 \\ \hline
+    \begin{tabular}[c]{@{}l@{}}\textbf{SECONDO}\\\textbf{ADDENDO}\end{tabular} & 0 & 1 & 0 & 0 & 0 & 1 \\ \hline
+    \textbf{SOMMA} & 1 & 0 & 0 & 1 & 0 & 0 \\ \hline
+    \multicolumn{1}{c}{} & \multicolumn{6}{c}{$\underbrace{\hspace{7.5cm}}_{\text{36 in decimale}}$}
+    \end{tabular}
+\end{center}
+
+\newpage
+\subsection{Esempio con Overflow}
+
+Supponendo di avere a disposizione 6 bit, si calcoli la somma e la sottrazione in binario dei seguenti numeri:
+\[
+    010101 \quad \text{e} \quad 110100
+\]
+Effettuando la \textbf{\color{red}somma}:
+
+\vspace{0.3cm}
+
+\begin{center}
+\small
+% 1. Tabella delle operazioni
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\textbf{RIPORTO} & \tikzmark{r1}1 & & 1 & & & \\ \hline
+\begin{tabular}[c]{@{}l@{}}\textbf{PRIMO}\\\textbf{ADDENDO}\end{tabular} & 0 & 1 & 0 & 1 & 0 & 1 \\ \hline
+\begin{tabular}[c]{@{}l@{}}\textbf{SECONDO}\\\textbf{ADDENDO}\end{tabular} & 1 & 1 & 0 & 1 & 0 & 0 \\ \hline
+\textbf{SOMMA} & \tikzmark{s1}0 & 0 & 1 & 0 & 0 & 1 \\ \hline
+\end{tabular}
+
+% 2. Rettangolo rosso tratteggiato e freccia
+\begin{tikzpicture}[overlay, remember picture]
+    \draw[red, dashed, thick] ({pic cs:r1}) +(-0.2, 0.35) rectangle ({pic cs:s1}) +(0.3, -0.15);
+    \draw[red, thick, ->] ({pic cs:s1}) +(-0.1, -0.2) -- +(-0.6, -0.6);
+\end{tikzpicture}
+
+\vspace{0.4cm}
+
+% 3. Box del messaggio (compatto per non andare a pagina nuova)
+\begin{tcolorbox}[
+    colframe=red, 
+    colback=red!5!white, 
+    borderline={1pt}{0pt}{red, dashed}, 
+    width=0.85\textwidth, 
+    halign=center,
+    top=4pt, bottom=4pt
+]
+    \color{red}\textbf{\small il numero ottenuto non è rappresentabile in quanto il risultato è su 7 bit!}
+\end{tcolorbox}
+\end{center}
+
+\newpage
+\section{Sottrazione}
+\subsection{Definizione}
+Si esegue la differenza tra i bit di pari ordine
+\begin{gather*}
+    0 - 0 = 0 \\
+    1 - 0 = 1 \\ 
+    1 - 1 = 0 \\
+    0 - 1 = 1  \quad \text{con prestito dal bit di ordine immediatamente superiore}
+\end{gather*}
+
+La sottrazione opera su 3 gruppi di bit:
+\begin{itemize}
+    \item Minuendo e Sottraendo
+    \item Prestito proveniente dalla cifra di ordine immediatamente superiore
+\end{itemize}
+
+Ogni volta che si deve sottrarre dalla cifra 0 la cifra 1, occorre chiedere in prestito una unità alla cifra di oridne immediatamente superiore che vale due unità della cifra di ordine inferiore
+
+\subsection{Esempio}
+Si esegua la \textbf{sottrazione} tra $11101$ e $01110$ (che indicano, rispettivamente, i numeri decimali 29 e 14)
+
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{PRESTITO} & & 2 & 2 & 2 & \\ \hline
+\textbf{MINUENDO} & 1 & 1 & 1 & 0 & 1 \\ \hline
+\begin{tabular}[c]{@{}l@{}}\textbf{SOTTRAEND}\\\textbf{O}\end{tabular} & 0 & 1 & 1 & 1 & 0 \\ \hline
+\textbf{DIFFERENZA} & 0 & 1 & 1 & 1 & 1 \\ \hline
+\multicolumn{1}{c}{} & \multicolumn{5}{c}{$\underbrace{\hspace{6.5cm}}_{\text{15 in decimale}}$}
+\end{tabular}
+\end{center}
+
+\subsection{Esempio di Sottrazione Impossibile (Underflow)}
+
+Supponendo di avere a disposizione 6 bit, si calcoli la differenza in binario tra $010101$ e $110100$:
+
+\vspace{0.3cm}
+
+\begin{center}
+\small
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\textbf{PRESTITO} & & & & & & \\ \hline
+\textbf{MINUENDO} & 0 & 1 & 0 & 1 & 0 & 1 \\ \hline
+\begin{tabular}[c]{@{}l@{}}\textbf{SOTTRAEND}\\\textbf{O}\end{tabular} & 1 & 1 & 0 & 1 & 0 & 0 \\ \hline
+\textbf{DIFFERENZA} & \textbf{\color{red}???} & 0 & 0 & 0 & 0 & 1 \\ \hline
+\end{tabular}
+
+\vspace{0.4cm}
+
+\begin{tcolorbox}[
+    colframe=red, 
+    colback=red!5!white, 
+    borderline={1pt}{0pt}{red, dashed}, 
+    width=0.85\textwidth, 
+    halign=center,
+    top=4pt, bottom=4pt
+]
+    \color{red}\textbf{\small Non è possibile eseguire l'operazione}
+\end{tcolorbox}
+\end{center}
+
+\vspace{0.3cm}
+
+\subsubsection{Perché non è possibile effettuare l'operazione?}
+\begin{enumerate}
+    \item Per eseguire l'ultimo prestito a sinistra occorrerebbe un bit di ordine superiore: servirebbero \textbf{7 bit} anziché 6.
+    \item Il calcolo equivale a $(010101 - 110100)_2 = (21 - 52)_{10} = -31_{10}$. I numeri \textbf{negativi non sono rappresentabili} nel sistema binario puro (senza segno).
+\end{enumerate}
+
+\section{Shift}
+\subsection{Definizione}
+Consiste nello spostare verso destra / sinistra la posizione delle cifre di un numero, espresso in una base qualsiasi, inserendo uno zero nello posizioni lasciate libere
+ 
+\subsection{Left Shift}
+Equivale a \textbf{moltiplicare} il numero per la base\\
+    \begin{figure}[h!]
+    \centering
+        \begin{tikzpicture}[>=Latex, font=\small]
+
+            % Disegno delle 7 celle del registro
+            \foreach \x in {0,...,6} {
+                \draw[thick] (\x*0.8, 0) rectangle ++(0.8, 0.8);
+            }
+
+            % 1. Freccia a ciclo a sinistra ("replico il segno")
+            \draw[thick] (0, 0.4) -- (-0.5, 0.4) -- (-0.5, 1.4) -- (0.4, 1.4) -> (0.4, 0.8);
+            \node[align=center, left] at (-0.6, 0.4) {replico\\il segno};
+
+            % 2. Freccia in ingresso da destra ("0")
+            \draw[thick, <-] (5.6, 0.4) -- (6.6, 0.4) node[right=2pt] {0};
+
+            % 3. Freccia verso il basso per lo scarico bit ("scarico un bit / se il bit = 1 -> overflow")
+            \draw[thick, ->] (1.2, 0) -- (1.2, -1.0);
+            \node[align=center, right] at (1.4, -0.8) {scarico un bit\\se il bit = 1 $\rightarrow$ overflow};
+
+        \end{tikzpicture}
+    \end{figure}
+
+
+\subsection{Right Shift}
+Equivale a \textbf{dividere} il numero per la base\\
+    \begin{figure}[h!]
+    \centering
+        \begin{tikzpicture}[>=Latex, font=\small]
+
+            % Disegno delle 7 celle del registro
+            \foreach \x in {0,...,6} {
+                \draw[thick] (\x*0.8, 0) rectangle ++(0.8, 0.8);
+            }
+
+            % 1. Freccia a ciclo a sinistra ("replico il segno")
+            \draw[thick] (0, 0.4) -- (-0.5, 0.4) -- (-0.5, 1.4) -- (0.4, 1.4) -> (0.4, 0.8);
+            \node[align=center, left] at (-0.6, 0.4) {replico\\il segno};
+
+            % 2. Freccia in ingresso da sotto ("0")
+            \draw[thick, ->] (1.2, -1.0) node[below] {0} -- (1.2, 0);
+
+            % 3. Freccia in uscita a destra ("scarico un bit")
+            \draw[thick, ->] (5.7, 0.4) -- (6.7, 0.4);
+            \node[align=center, below] at (6.3, 0.1) {scarico un bit};
+
+        \end{tikzpicture}
+    \end{figure}

@@ -1,19 +1,130 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Sistemi Numerici}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introduzione}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Bit}{2}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Definizione}{2}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Unità di misura}{2}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Numero di configurazione possibili}{2}{subsection.1.2.3}%
-\contentsline {section}{\numberline {1.3}Rappresentazione di un sistema numerico posizionale}{3}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Cosa è un sistema numerico posizionale?}{3}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Formula}{3}{subsection.1.3.2}%
-\contentsline {subsubsection}{Esempio d'uso formula}{3}{subsubsection*.3}%
-\contentsline {section}{\numberline {1.4}Sistema Binario}{3}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Definizione}{3}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Esempio}{3}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Byte}{3}{subsection.1.4.3}%
-\contentsline {section}{\numberline {1.5}Sistema Ottale}{4}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Definizione}{4}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Esempio}{4}{subsection.1.5.2}%
+\contentsline {chapter}{\numberline {1}Sistemi Numerici}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduzione}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Bit}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Definizione}{4}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Unità di misura}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Numero di configurazione possibili}{4}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Rappresentazione di un sistema numerico posizionale}{5}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Cosa è un sistema numerico posizionale?}{5}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Formula}{5}{subsection.1.3.2}%
+\contentsline {subsubsection}{Esempio d'uso formula}{5}{subsubsection*.3}%
+\contentsline {section}{\numberline {1.4}Sistema Binario}{5}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Definizione}{5}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Esempio}{5}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Byte}{5}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Sistema Ottale}{6}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Definizione}{6}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Esempio}{6}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Sistema Esadecimale}{6}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Definizione}{6}{subsection.1.6.1}%
+\contentsline {subsubsection}{Notazione}{6}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {1.6.2}Significato delle lettere}{6}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Compattezza}{6}{subsection.1.6.3}%
+\contentsline {section}{\numberline {1.7}Conversione tra sistemi numerici}{7}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Da base $r \rightarrow $ a base $10$ }{7}{subsection.1.7.1}%
+\contentsline {subsubsection}{Esempio}{7}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {1.7.2}Da base $10 \rightarrow $ a base $r$}{7}{subsection.1.7.2}%
+\contentsline {subsubsection}{Esempi}{7}{subsubsection*.6}%
+\contentsline {subsection}{\numberline {1.7.3}Da base $r \rightarrow $ a base $r'$}{8}{subsection.1.7.3}%
+\contentsline {subsubsection}{Esempi}{8}{subsubsection*.7}%
+\contentsline {section}{\numberline {1.8}Rappresentazioni dei valori}{10}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Limite di cifre}{10}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Tabella numeri rappresentabili}{10}{subsection.1.8.2}%
+\contentsline {subsection}{\numberline {1.8.3}Prefissi}{10}{subsection.1.8.3}%
+\contentsline {chapter}{\numberline {2}Sistema binario: Operazioni aritmetiche}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Somma}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Definizione}{11}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Esempio}{11}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Esempio con Overflow}{12}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Sottrazione}{13}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Definizione}{13}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Esempio}{13}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Esempio di Sottrazione Impossibile (Underflow)}{13}{subsection.2.2.3}%
+\contentsline {subsubsection}{Perché non è possibile effettuare l'operazione?}{13}{subsubsection*.9}%
+\contentsline {section}{\numberline {2.3}Shift}{14}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Definizione}{14}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Left Shift}{14}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Right Shift}{14}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {3}Rappresentazione dei numeri negativi}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Perchè ne abbiamo bisogno?}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}MS - Modulo e Segno}{15}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Procedura}{15}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Range di rappresentabilità}{15}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Difetti del sistema}{15}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Esempio di conversione}{15}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Somma}{16}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Sottrazione}{16}{subsection.3.2.6}%
+\contentsline {section}{\numberline {3.3}CA1 - Complemento a 1}{18}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Complemento}{18}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Procedura}{18}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Range di numeri rappresentabili}{18}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Difetti}{18}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Esempi di conversione}{18}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}CA2 - Complemento a 2}{19}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Procedura}{19}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Conversione a decimale}{19}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Range di numeri rappresentabili}{19}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Esempi di conversione}{19}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Somma}{19}{subsection.3.4.5}%
+\contentsline {subsubsection}{Esempio 1}{20}{subsubsection*.13}%
+\contentsline {subsubsection}{Esempio 2}{20}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {3.4.6}Sottrazione}{20}{subsection.3.4.6}%
+\contentsline {section}{\numberline {3.5}Rappresentazione eccesso $2^{n-1}$}{21}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Procedure}{21}{subsection.3.5.1}%
+\contentsline {subsubsection}{Regola pratica}{21}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {3.5.2}Range numeri rappresentabili}{21}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Esempio di conversione}{21}{subsection.3.5.3}%
+\contentsline {subsubsection}{Metodo 1: Applicazione della formula $X + 2^{n-1}$}{21}{subsubsection*.16}%
+\contentsline {subsubsection}{Metodo 2: Tramite la Regola Pratica (da CA2)}{21}{subsubsection*.17}%
+\contentsline {section}{\numberline {3.6}Rappresentazione Eccesso 128}{22}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Procedura}{22}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Esempi}{22}{subsection.3.6.2}%
+\contentsline {paragraph}{Passando da CA2:}{22}{paragraph*.18}%
+\contentsline {subsection}{\numberline {3.6.3}Osservazioni}{22}{subsection.3.6.3}%
+\contentsline {chapter}{\numberline {4}Rappresentazione numeri frazionari con la virgola fissa}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Idea}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}UNSIGNED fixed point}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Cosa è?}{23}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Struttura del formato}{23}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Range di valori rappresentabili}{23}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Peso delle posizioni}{24}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Da Decimale a Virgola Fissa Unsigned}{24}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Da Virgola Fissa Unsigned a Decimale}{25}{subsection.4.2.6}%
+\contentsline {section}{\numberline {4.3}SIGNED fixed point}{26}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Struttura del formato}{26}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Peso delle posizioni}{26}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Da numero decimale positivo a Signed Fixed-Point}{26}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Da numero decimale negativo a Signed Fixed-Point}{27}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {5}Rappresentazionu numeri frazionari con la virgola mobile}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Cosa è?}{28}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Struttura}{28}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}32 bit}{28}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}64 bit}{28}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Formule}{28}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Formula della rappresentazione in virgola mobile}{28}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Normalizzazione e "1 implicito"}{29}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Conversione da Decimale a Virgola Mobile}{29}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Conversione da Virgola Mobile a Decimale}{30}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Errore assoluto $E_a$}{30}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Cosa è?}{30}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Formula}{30}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Esempio di calcolo}{30}{subsection.5.6.3}%
+\contentsline {subsubsection}{Dati di partenza}{30}{subsubsection*.19}%
+\contentsline {subsubsection}{Calcolo}{30}{subsubsection*.20}%
+\contentsline {section}{\numberline {5.7}Errore Relativo $E_r$}{31}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Cos'è?}{31}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Formula}{31}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Esempio di calcolo}{31}{subsection.5.7.3}%
+\contentsline {chapter}{\numberline {6}Rappresentazione caratteri}{32}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Idea}{32}{section.6.1}%
+\contentsline {section}{\numberline {6.2}ASCII Standard}{32}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Caratteristiche}{32}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Tabella}{33}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}ASCII Esteso}{34}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Caratteristiche}{34}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Tabella }{34}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}UNICODE}{35}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Caratteristiche}{35}{subsection.6.4.1}%
+\contentsline {chapter}{\numberline {7}Instruction Set Architecture}{36}{chapter.7}%
