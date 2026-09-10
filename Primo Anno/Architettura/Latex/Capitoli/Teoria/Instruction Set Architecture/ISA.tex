@@ -187,6 +187,7 @@ Utilizzato per operazioni aritmetico logiche immediate e operazioni di scrittura
     \item \textbf{valore immediato (16 bit)}: Il valore immediato con cui operare
 \end{itemize}
 
+\newpage
 \section{Istruzione load word}
 \subsection{Struttura stringa a 32 bit}
 \begin{center}
@@ -225,3 +226,193 @@ Utilizzato per operazioni aritmetico logiche immediate e operazioni di scrittura
 \end{center}
 
 \subsection{Spiegazione dei campi}
+\begin{itemize}
+    \item \textbf{opcode(6 bit)}: Per questa operazione è pari a $35_{(10)}$  
+    \item \textbf{rs (5 bit)}: Registro base
+    \item \textbf{rt (5 bit)}: Registro destinazione
+    \item \textbf{offset (16 bit)}: È l'offset usato per calcolare l'indirizzo a cui accedere
+\end{itemize}
+
+\subsection{Svolgimento dell'operazione}
+\begin{enumerate}
+    \item \textbf{Funzione generale dell'istruzione} \\
+    L'istruzione \texttt{lw} serve a copiare il contenuto di una parola di memoria trasferendolo direttamente all'interno di un registro del processore
+
+    \item \textbf{Uso del registro base}\\
+    Il campo \texttt{rs} contiene l'indirizzo di memoria base a partire dal quale calcolare l'accesso. \\
+    Il valore memorizzato in questo registro non viene modificato dall'esecuzione dell'istruzione
+
+    \item \textbf{Calcolo dell'indirizzo effettivo}\\
+    L'indirizzo esatto della parola da leggere in memoria viene calcolato sommando il contenuto del registro base con l'offset a 16 bit, secondo la formula: $\text{Indirizzo} = \text{base} + \text{offset}$
+
+    \item \textbf{Uso del registro destinazione}\\
+    A differenza del formato R-Type in cui \texttt{rt} fa da sorgente, nella \texttt{lw} il campo \texttt{rt} funge da registro di destinazione.\\
+    I 32 bit letti a partire dall'indirizzo di memoria calcolato vengono scritti e salvati all'interno di \texttt{rt}
+
+    \item \textbf{Sintassi  Assembly di riferimento}\\
+    La sintassi standard è \texttt{lw \$rt, offset(\$rs)}, carica in \$10 il valore contenuto nella cella di memoria all'indirizzo ottenuto sommando \$8 e l'offset immediato 4
+\end{enumerate}
+
+\newpage
+\section{Istruzione store word}
+\subsection{Struttura stringa a 32 bit}
+\begin{center}
+    \begin{tikzpicture}[font=\sffamily]
+    
+        % Stile globale per le linee del registro
+        \tikzset{every path/.style={ultra thick}}
+
+        % Perimetro del registro (lunghezza totale proporzionata: 12.8)
+        \draw (0,0) rectangle (12.8, 1.5);
+
+        % Linee verticali divisorie (6-bit, 5-bit, 5-bit, 16-bit)
+        \draw (2.4,0) -- (2.4, 1.5);
+        \draw (4.4,0) -- (4.4, 1.5);
+        \draw (6.4,0) -- (6.4, 1.5);
+
+        % Valori binari interni
+        \node at (1.2, 0.75) {\Large \textbf{101011}};
+        \node at (3.4, 0.75) {\Large \textbf{01000}};
+        \node at (5.4, 0.75) {\Large \textbf{01010}};
+        \node at (9.6, 0.75) {\large \textbf{0000000000000100}};
+
+        % Nomi dei campi in alto
+        \node[font=\large\bfseries] at (1.2, 2) {op};
+        \node[font=\large\bfseries] at (3.4, 2) {rs};
+        \node[font=\large\bfseries] at (5.4, 2) {rt};
+        \node[font=\large\bfseries] at (9.6, 2) {offset};
+
+        % Dimensione in bit in basso
+        \node[font=\normalsize] at (1.2, -0.4) {6 bits};
+        \node[font=\normalsize] at (3.4, -0.4) {5 bits};
+        \node[font=\normalsize] at (5.4, -0.4) {5 bits};
+        \node[font=\normalsize] at (9.6, -0.4) {16 bits};
+
+    \end{tikzpicture}
+\end{center}
+
+\subsection{Spiegazione dei campi}
+\begin{itemize}
+    \item \textbf{opcode (6 bit)}: Per questa operazione è pari a $43_{(10)}$
+    \item \textbf{rs (5 bit)}: Registro base
+    \item \textbf{rt (5 bit)}: Registro sorgente
+    \item \textbf{offset (16 bit)}: È l'offset usato per calcolare l'indirizzo a cui accedere
+\end{itemize}
+
+\subsection{Svolgimento dell'operazione}
+\begin{enumerate}
+    \item \textbf{Funzione generale dell'istruzione}\\
+    L'istruzione \texttt{sw} effettua l'operazione inversa rispetto alla \texttt{lw}: copia il contenuto di un registrodel processore e lo memorizza all'interno di una parola della memoria
+
+    \item \textbf{Uso del registro sorgente}\\
+    Il campo \texttt{rt} opera come registro sorgente.\\
+    I 32 bit contenuti in \texttt{rt} costituiscono il dato da trasferire e scrivere in memoria
+
+    \item \textbf{Uso del registro base}\\
+    Il campo \texttt{rs} serve da registro base e custodisce l'indirizzo di memoria di partenza.\\
+    Il valore contenuto in questo registro non viene modificato dall'istruzione
+
+    \item \textbf{Calcolo dell'indirizzo di memoria effettivo}\\
+    La posizione esatta di memoria in cui scrivere la parola viene calcolata sommando il contenuto del registro base al valore immediato di spiazzamento a 16 bit: $\text{Indirizzo} = \text{base} + \text{offset}$.\\
+    Poichè si memorizza una word completa, l'indirizzo ottentuo deve essere allineato ai multipli di 4
+
+    \item \textbf{Sintassi Assembly di riferimento}\\
+    La sintassi è \texttt{sw \$rt, offset(\$rs)}, ad esempio, \texttt{sw \$10, 4(\$8)} prende il dato memorizzato nel registro \$10 e lo scrive nella locazione di memoria situata all'indirizzo dato dalla somma di \$8 e dell'offset 4
+\end{enumerate}
+
+\newpage
+\section{Istruzioni di branch}
+\subsection{Struttura stringa a 32 bit}
+\begin{center}
+    \begin{tikzpicture}[font=\sffamily]
+        
+        % Stile globale per le linee del registro
+        \tikzset{every path/.style={ultra thick}}
+
+        % Perimetro del registro (lunghezza proporzionata totale 12.8)
+        \draw (0,0) rectangle (12.8, 1.5);
+
+        % Linee verticali divisorie (6-bit, 5-bit, 5-bit, 16-bit)
+        \draw (2.4,0) -- (2.4, 1.5);
+        \draw (4.4,0) -- (4.4, 1.5);
+        \draw (6.4,0) -- (6.4, 1.5);
+
+        % Valori binari interni
+        \node at (1.2, 0.75) {\Large \textbf{000101}};
+        \node at (3.4, 0.75) {\Large \textbf{10000}};
+        \node at (5.4, 0.75) {\Large \textbf{10001}};
+        \node at (9.6, 0.75) {\Large \textbf{??????}};
+
+        % Nomi dei campi in alto (sostituiscono i fumetti gialli)
+        \node[font=\large\bfseries] at (1.2, 2) {op};
+        \node[font=\large\bfseries] at (3.4, 2) {rs};
+        \node[font=\large\bfseries] at (5.4, 2) {rt};
+        \node[font=\large\bfseries] at (9.6, 2) {Branch Address};
+
+        % Dimensione in bit in basso
+        \node[font=\normalsize] at (1.2, -0.4) {6 bits};
+        \node[font=\normalsize] at (3.4, -0.4) {5 bits};
+        \node[font=\normalsize] at (5.4, -0.4) {5 bits};
+        \node[font=\normalsize] at (9.6, -0.4) {16 bits};
+
+    \end{tikzpicture}
+\end{center}
+\subsection{Spiegazione dei campi}
+\begin{itemize}
+    \item \textbf{opcode (6 bit)}
+    \item \textbf{rs (5 bit)}
+    \item \textbf{rt (5 bit)}
+    \item \textbf{Branch address (16 bit)}
+\end{itemize}
+\subsection{Spiegazione dell'operazione}
+\begin{enumerate}
+    \item \textbf{Decisione dell'operazione di confronto}\\
+    La ALU calcola la differenza tra il contenuto di rs e rt per testare la condizione stabilita dall'opcode.
+
+    \item \textbf{Eventuale salto}\\
+    Se la condizione è verificata, l'indirizzo della prossima istruzione diventa $\text{PC} + 4 + (\text{Offset} \times 4)$; in caso contrario, il programma prosegue sequenzialmente all'istruzione successiva ($\text{PC} + 4$). 
+\end{enumerate}
+
+\chapter{ISA J-Type}
+
+\section{Cosa sono?}
+Sono le istruzioni di salto incondizionato , che modificano il normale flusso sequenziale del programma caricando direttamente nel Program Counter un nuovo indirizzo di memoria verso cui proseguire l'esecuzione, senza verificare alcuna condizione.
+
+\section{Struttura}
+\subsection{Struttura della stringa a 32 bit}
+\begin{center}
+    \begin{tikzpicture}[font=\sffamily]
+    
+        % Stile globale per le linee del registro
+        \tikzset{every path/.style={ultra thick}}
+
+        % Perimetro del registro (lunghezza totale proporzionata: 12.8)
+        \draw (0,0) rectangle (12.8, 1.5);
+
+        % Linea divisoria tra opcode (6 bit) e jump target (26 bit): 6/32 * 12.8 = 2.4
+        \draw (2.4,0) -- (2.4, 1.5);
+
+        % Valori binari interni
+        \node at (1.2, 0.75) {\Large \textbf{000010}};
+        \node at (7.6, 0.75) {\large \textbf{0000 0000 0000 0001 0000 1110 10}};
+
+        % Nomi dei campi in alto
+        \node[font=\large\bfseries] at (1.2, 2) {op};
+        \node[font=\large\bfseries] at (7.6, 2) {jump target address};
+
+        % Dimensione in bit in basso
+        \node[font=\normalsize] at (1.2, -0.4) {6 bits};
+        \node[font=\normalsize] at (7.6, -0.4) {26 bits};
+
+    \end{tikzpicture}
+\end{center}
+
+\subsection{Spiegazione dei campi}
+\begin{itemize}
+    \item \textbf{opcode (6 bit)}: In questo caso è pari a $2_{(10)}$
+    \item \textbf{jump target address (26 bit)}: Indirizzo di parola a cui saltare. 
+        
+    Poiché ogni istruzione è allineata a 4 byte (termina con 00), i 26 bit specificano l'indirizzo diviso per 4. 
+
+    All'esecuzione, l'indirizzo a 32 bit del PC viene formato affiancando i 4 bit superiori del Program Counter corrente, i 26 bit del target e due zeri finali.
+\end{itemize}
