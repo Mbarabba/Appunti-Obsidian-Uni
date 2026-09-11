@@ -4,6 +4,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{graphicx} % Per inserire il logo
+
+\renewcommand{\thepart}{\arabic{part}}
+
 \begin{document}
 
 % --- Frontespizio ---
@@ -41,9 +44,20 @@
 \include{Capitoli/Teoria/Rappresentazione binaria/Rappresentazione numeri con la virgola.tex}
 \include{Capitoli/Teoria/Rappresentazione binaria/Rappresentazione dei caratteri.tex}
 \include{Capitoli/Teoria/Instruction Set Architecture/ISA.tex}
+\include{Capitoli/Teoria/Assembly/Assembly.tex}
+
+% --- ESERCITAZIONI SVOLTE
+\part{Esercitazioni svolte} \setcounter{chapter}{0}
 
 
-% --- ESERCIZI
-\part{Esercizi}
+% --- Laboratori Svolti
+\part{Laboratori svolti} \setcounter{chapter}{0}
+
+% --- QUIZ MEGA SVOLTI
+\part{Quiz Mega svolti} \setcounter{chapter}{0}
+
+% --- Domande Aperte Mega Svolte
+\part{Domande aperte Mega svolte} \setcounter{chapter}{0}
+
 
 \end{document}

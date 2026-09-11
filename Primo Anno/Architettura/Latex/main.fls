@@ -353,6 +353,9 @@ INPUT Capitoli/Teoria/Rappresentazione binaria/Rappresentazione dei caratteri.au
 INPUT ./Capitoli/Teoria/Instruction Set Architecture/ISA.aux
 INPUT ./Capitoli/Teoria/Instruction Set Architecture/ISA.aux
 INPUT Capitoli/Teoria/Instruction Set Architecture/ISA.aux
+INPUT ./Capitoli/Teoria/Assembly/Assembly.aux
+INPUT ./Capitoli/Teoria/Assembly/Assembly.aux
+INPUT Capitoli/Teoria/Assembly/Assembly.aux
 OUTPUT main.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -517,6 +520,20 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmss17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmssbx10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmss12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmssbx10.tfm
+INPUT ./Capitoli/Teoria/Assembly/Assembly.tex
+OUTPUT Capitoli/Teoria/Assembly/Assembly.aux
+INPUT ./Capitoli/Teoria/Assembly/Assembly.tex
+INPUT ./Capitoli/Teoria/Assembly/Assembly.tex
+INPUT Capitoli/Teoria/Assembly/Assembly.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmtk10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT ./Immagini/Flusso di controllo.png
+INPUT ./Immagini/Flusso di controllo.png
+INPUT ./Immagini/Flusso di controllo.png
+INPUT ./Immagini/Flusso di controllo.png
+INPUT ./Immagini/Flusso di controllo.png
 INPUT main.aux
 INPUT ./Capitoli/Teoria/Rappresentazione binaria/Sistemi numerici.aux
 INPUT ./Capitoli/Teoria/Rappresentazione binaria/Sistemi numerici.aux
@@ -536,6 +553,9 @@ INPUT Capitoli/Teoria/Rappresentazione binaria/Rappresentazione dei caratteri.au
 INPUT ./Capitoli/Teoria/Instruction Set Architecture/ISA.aux
 INPUT ./Capitoli/Teoria/Instruction Set Architecture/ISA.aux
 INPUT Capitoli/Teoria/Instruction Set Architecture/ISA.aux
+INPUT ./Capitoli/Teoria/Assembly/Assembly.aux
+INPUT ./Capitoli/Teoria/Assembly/Assembly.aux
+INPUT Capitoli/Teoria/Assembly/Assembly.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb
@@ -546,9 +566,13 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtk10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb
