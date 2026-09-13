@@ -1,0 +1,156 @@
+\chapter[Teoremi di convergenza]{Teoremi di convergenza}
+
+\section{Introduzione}
+In questo capitolo presentiamo due problemi fondamentali nella statistica inferenziale:
+\begin{itemize}
+	\item \textbf{Legge dei grandi numeri}
+	\item \textbf{Teorema limite centrale}
+\end{itemize}
+Questi due teoremi richiedono la nozione di convergenza di variabili aleatorie e pertanto il capitolo si apre proprio con la \textbf{definizione formale di convergenza delle distribuzioni di probabilità di due variabili aleatorie}.
+
+\section{Convergenza in distribuzione}
+Consideriamo una successione \(\{X_n, n \in \mathbb{N} \}\) di variabili aleatorie, e sia $F_n$ la funzione di ripartizione della generica variabile $X_n$ della successione.\\
+Diremo che la \textbf{successione converge in distribuzione alla variabile $X$ avente funzione di ripartizione $F$ }se vale
+\begin{equation}
+	\lim_{n \to \infty} F_n(t) = F(t)
+\end{equation}
+per ogni $t \in \mathbb{R}$ che sia punto di continuità per la $F$.\\
+Verranno utilizzate le notazioni
+\[
+X_n  \xrightarrow{d} X \hspace{10mm} F_n \xrightarrow{d} F 
+\]
+
+\section{Legge dei grandi numeri}
+\subsection{Introduzione}
+Consideriamo una successione \(\{X_i, i \in \mathbb{N}_+ \}\) di variabili aleatorie \textbf{indipendenti ed identicamente distribuite (\textit{IID})}. \\
+Consideriamo poi la variabile aleatoria definita come
+\[
+\bar{X}_n = \frac{X_1 + X_2 + ... + X_n}{n} 
+\]
+detta \textbf{media aritmetica n-esima della successione}.\\
+Le variabili $X_i$ hanno valore atteso e varianza esistenti e finiti:
+\begin{equation}
+	E[X_i] = \mu, \hspace{10mm} V[X_i] = \sigma^2
+\end{equation}
+allora vale
+\[
+\bar{X}_n \xrightarrow{d} M
+\]
+dove $M$ è una variabile aleatoria che assume valore $\mu$ con probabilità 1.\\
+La proprietà appena introdotta costituisce una \textbf{forma debole} del risultato noto sotto il nome di \textbf{legge dei grandi numeri}.
+
+\subsection{Definizione}
+La legge dei grandi numeri asserisce quanto segue.\\
+Se consideriamo una successione di variabili aleatorie \textit{IID} 
+\[
+X_i, i \in \mathbb{N}_+
+\]
+per cui esistono valore atteso e varianza (\textbf{finiti}) allora possiamo affermare che la successione
+\[
+\bar{X}_n, n \in \mathbb{N}_+
+\]
+delle corrispondenti medie aritmetiche tende, al crescere di \textit{n} , ad una variabile che
+assume certamente il valore
+\begin{equation}
+	E[X_i] = \mu
+\end{equation}
+
+\subsection{Osservazione}
+In realtà le ipotesi della Legge dei Grandi Numeri possono essere indebolite
+rispetto a quelle riportate in precedenza. \\
+Infatti, esistono versioni alternative di questa proprietà in cui non è richiesta
+l’ipotesi che le variabili $X_i$ siano identicamente distribuite.
+
+
+\section{Teorema limite centrale}
+\subsection{Introduzione}
+La legge dei grandi numeri assicura la convergenza
+\[
+\bar{X}_n \xrightarrow{d} M
+\]
+ma non specifica nulla circa la rapidità con cui questa avviene.\\
+Non sappiamo dire per quale valore di \textit{n} sarà lecito pensare che una realizzazione \[ \bar{x}_n\]
+assuma valore $\mu$ o un valore molto prossimo ad esso.\\
+È intuitivo pensare che la convergenza sia tanto più rapida quanto più la varianza sarà piccola.
+
+\subsection{Definizione}
+Quanto appena asserito viene formalizzato nel \textbf{teorema del limite centrale}, il quale specifica quale sia la distribuzione della variabile aleatoria $\bar{X}_n$ per \textit{n} sufficientemente grande e quali siano il valore atteso e la varianza della stessa.\\
+Abbiamo quindi un'informazione più precisa sul \textit{quanto} una variabile aleatoria converga in distribuzione ad un'altra nota.\\
+Sia 
+\[
+\{X_i, i \in \mathbb{N}_+\} 
+\]
+una successione di variabili aleatorie che soddisfa le ipotesi della Legge dei Grandi Numeri, ovvero siano le $X_i$ \textit{I.I.D.} ed aventi valore atteso
+\[
+E[X_i] = \mu 
+\]
+e varianza
+\[
+V[X_i] = \sigma^2
+\]
+entrambi esistenti e finiti.\\
+Considerata la variabile aleatoria $S_n$ definita come segue
+\[
+S_n = X_1 + ... + X_n
+\]
+vale
+\begin{equation}
+	S_n \xrightarrow{d} X \textapprox N(n \cdot \mu, \sqrt{n} \cdot \sigma) = N(n \cdot \mu, n \cdot \sigma^2)
+\end{equation}
+ovvero $S_n$ converge in distribuzione ad una variabile distribuita come una Normale
+di media $n \cdot \mu$ e deviazione standard $\sqrt{n} \cdot \sigma$.\\
+Tale proprietà è una forma debole di un noto risultato che prende il nome di \textbf{teorema limite centrale}.\\
+
+\subsection{Valore atteso}
+Osservato che vale
+\[
+\bar{X}_n = \frac{S_n}{n}
+\]
+dalle seguenti relazioni
+\begin{equation*}
+S_n \xrightarrow{d} X \textapprox N(n \cdot \mu, \sqrt{n} \cdot \sigma) = N(n \cdot \mu, n \cdot \sigma^2)
+\end{equation*}
+\begin{equation*}
+	E[a \cdot X + b] = a \cdot E[X] + b \, \, \, \, \text{per ogni variabile X e per ogni } a, b \in \mathbb{R}
+\end{equation*}
+si ricava
+\begin{equation}
+	E[\bar{X}_n] = E[\frac{S_n}{n}] = \frac{1}{n} E[S_n] = \frac{1}{n}E[X_1 + ... + X_n] = \frac{1}{n} (n \cdot \mu) = \mu
+\end{equation}
+
+
+\subsection{Varianza}
+Osservato che vale
+\[
+\bar{X}_n = \frac{S_n}{n}
+\]
+dalle seguenti relazioni
+\begin{equation*}
+S_n \xrightarrow{d} X \textapprox N(n \cdot \mu, \sqrt{n} \cdot \sigma) = N(n \cdot \mu, n \cdot \sigma^2)
+\end{equation*}
+\begin{equation*}
+V[a \cdot X + b] = a^2 \cdot V[X] \, \, \, \, \text{per ogni variabile X e per ogni } a, b \in \mathbb{R}
+\end{equation*}
+si ricava
+\begin{equation}
+V[\bar{X}_n] = V[\frac{S_n}{n}] = \frac{1}{n^2} V[S_n] = \frac{1}{n^2}V[X_1 + ... + X_n] = \frac{1}{n^2} (n \cdot \sigma^2) = \frac{\sigma^2}{n}
+\end{equation}
+
+\subsection{Conclusioni}
+Osservato che vale:
+\[
+E[\bar{X}_n] = \mu  \; \; \; V[\bar{X}_n] =  \frac{\sigma^2}{n}
+\]
+dalla relazione 
+\begin{equation*}
+S_n \xrightarrow{d} X \textapprox N(n \cdot \mu, \sqrt{n} \cdot \sigma) = N(n \cdot \mu, n \cdot \sigma^2)
+\end{equation*}
+si conclude che 
+\begin{equation}
+	\bar{X}_n \xrightarrow{d} X \textapprox N(\mu, \frac{\sigma}{\sqrt{n}}) = N(\mu, \frac{\sigma^2}{n}) 
+\end{equation}
+
+\subsection{Ricapitolando}
+Praticamente, il teorema centrale del limite asserisce che per \textit{n} sufficientemente grande possiamo approssimare le variabili $S_n$ e $\bar{X}_n$ con delle variabili aventi distribuzione normale, i cui parametri dipendono da quelli delle variabili $X_i$. \\
+Relativamente all'espressione “per \textit{n} sufficientemente grande” possiamo dire che in
+genere si utilizza questa approssimazione tutte le volte che $n > 30$.

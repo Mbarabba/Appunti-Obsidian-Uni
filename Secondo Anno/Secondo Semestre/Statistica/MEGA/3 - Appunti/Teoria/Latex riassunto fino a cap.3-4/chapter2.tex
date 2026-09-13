@@ -1,0 +1,683 @@
+\chapter[Calcolo delle probabilità]{Calcolo delle probabilità}
+\section{Introduzione}
+\subsection{Definizione}
+Disciplina di carattere matematico che permette di affrontare l’analisi delle situazioni che hanno un esito imprevedibile a priori e pertanto con conseguenze incerte. \\
+\textit{Trattiamo l'ignoranza per giungere a determinate conclusioni}.
+\subsection{Differenza tra calcolo delle probabilità e statistica}
+\textbf{Calcolo delle probabilità}: "matematica dell'incertezza". Teoria (assiomatica o frequentista o soggettiva) che riguarda il calcolo della probabilità del verificarsi di certi eventi composti di eventi elementari (noi vediamo la teoria assiomatica). È lo strumento di base per la statistica. \\ \\
+\textbf{Statistica}: non sviluppabile senza calcolo delle probabilità. Trae conclusioni su una popolazione, utilizzando i dati osservati su una collezione di individui (campione) appartenenti alla popolazione: estraendo un conveniente campione e analizzandolo, si spera di poter trarre conclusioni circa l’intera popolazione \\
+\begin{center}
+	Popolazione $\implies$ Campione $\implies$ Inferenze su popolazione
+\end{center}
+
+\subsection{Scuole di pensiero}
+Tutt'oggi non esiste una definizione universalmente accettata di probabilità in quanto tutte quelle fornite sono soggette a critiche di diversa natura. \\
+Per l’interesse che alcune di queste rivestono ci limiteremo a ricordarne solo 4:
+\begin{itemize}
+	\item Classica: più "ortodossa"
+	\item Frequentista: più "ortodossa"
+	\item Soggettivista: elaborata da Finetti. Le probabilità sono assegnate in modo soggettivo dagli individui
+	\item Assiomatica: costruisce la teoria a partire da 3 assiomi basilari.
+\end{itemize}
+
+\subsection{Concetti di \textit{evento} e \textbf{probabilità}}
+Al fine di presentare l’\textbf{impostazione assiomatica} supponiamo di voler studiare una situazione (\textbf{esperimento}) avente un \textbf{insieme $\Omega$} di diversi possibili \textbf{esiti}, ben distinti tra loro. \\
+OGNI sottoinsieme $A$ di $\Omega$ viene detto \textbf{evento}.
+Ad ogni evento A è associabile una quantità numerica detta \textbf{probabilità}
+e denotata tramite $P(A)$ il cui significato varia a seconda dell’impostazione. \\
+L'assegnamento del valore di probabilità dipende dalle considerazioni che facciamo sui possibili eventi!
+
+
+\subsection{Definizione assiomatica di probabilità e proprietà elementari}
+Un passo fondamentale nel superare le polemiche sull'interpretazione del concetto di probabilità fu compiuto da \textbf{Kolmogorov} nel 1933.
+
+Egli abbandonò il tentativo di fondare la teoria della probabilità su una interpretazione sperimentale del concetto e \textbf{costruì una teoria secondo una impostazione assiomatica}. L'idea principale è di \textbf{trascendere l'effettivo significato di probabilità, rinviandone l’interpretazione al momento delle applicazioni}, ai singoli problemi concreti. \\
+Prima di lui, per esempio, la scuola frequentista dava semplicemente la probabilità come esiti favorevoli diviso numero di ripetizioni. Ma a volte io devo poter rispondere senza poter effettuare ripetizioni, prima che l'evento si verifichi!
+
+
+\subsection{Spazio campione ed eventi}
+Supponiamo di voler studiare una situazione (esperimento) avente un insieme $\Omega$ di possibili esiti (insieme dei possibili esiti dell'esperimento). \\
+L'insieme $\Omega$ -che può contenere un \textbf{numero finito o infinito di elementi}- viene detto \textbf{spazio campione} \\
+Ogni \textbf{\textit{sottoinsieme}} $A$ di $\Omega$ viene detto \textbf{evento}. \\
+Un evento è:
+\begin{itemize}
+	\item \textbf{Elementare} se è costituito da un singolo elemento di $\Omega$
+	\item \textbf{Composto} in caso contrario
+\end{itemize}
+
+\subsection{Eventi incompatibili}
+Due eventi $A$ e $B$ vengono detti \textbf{incompatibili} se sono \textbf{sottoinsiemi disgiunti}.  \\
+Si definisce \textbf{insieme delle parti} di $\Omega$ \textbf{l'insieme di tutti i suoi sottoinsiemi} e lo si denota come $\wp (\Omega)$. \\
+La probabilità deve essere definita per \textbf{tutti} gli elementi di $\wp (\Omega)$ con particolari proprietà (es. algebre di Boole o $\sigma$-algebre). \\
+\textbf{N.B.:} C'è una grossa differenza tra incompatibili e indipendenti! \\
+Incompatibili: se succede A, \textbf{non può succedere} B!
+
+\subsection{Definizione di probabilità secondo Kolmogorov}
+Viene detta \textbf{misura di probabilità} ogni applicazione 
+\[
+P: \wp(\Omega) \rightarrow \mathbb{R}_0^+
+\]
+che associa un valore reale ad ogni sottoinsieme di $\Omega$ e per cui valgono le seguenti proprietà:
+\begin{itemize}
+	\item $\forall A \subseteq \Omega$  $\exists!$ $P(A) \geq 0$
+	\item $P(\Omega) = 1$
+	\item Data la \textbf{famiglia} $A_i, i \in I \subseteq \mathbb{N}$ di \textbf{eventi incompatibili} vale:
+	\begin{align}
+		P(\bigcup_{i \in I} A_i) = \sum_{i \in I} P(A_i)
+	\end{align}
+\end{itemize}
+\textbf{Questi 3 punti sono fondamentali per dimostrare che dei valori rappresentino effettivamente una misura di probabilità!} \\
+Prima si scrive la misura di probabilità, poi si verifica tramite gli assiomi che tutto sia vero e che la proposta sia effettivamente una misura di probabilità.
+\\
+Analizziamo i punti singolarmente:
+\begin{itemize}
+	\item Interpretando $P(A)$ come \textbf{frequenza relativa} dell'evento A, essa è
+compresa tra 0 e 1.
+	\item La probabilità che qualsiasi evento si realizzi sia in $\Omega$ è 1 (è certo
+che si verificherà uno tra tutti gli eventi possibili). 
+	\item 
+La probabilità che si verifichi uno qualsiasi degli eventi appartenenti ad un insieme di eventi incompatibili è data dalla somma delle probabilità del verificarsi di ogni evento appartenente all'insieme di eventi incompatibili considerato. Diretta conseguenza: all'insieme vuoto corrisponde una probabilità nulla
+\end{itemize}
+
+\subsection{Misura di probabilità}
+Ogni \textbf{misura di probabilità} è una \textbf{funzione che assegna valori numerici} a \textbf{sottoinsiemi} di $\Omega$ e \textit{non a suoi elementi}.\\
+La definizione appena introdotta specifica quali funzioni possono essere dette misure di probabilità ma non fornisce indicazioni sui valori numerici che debbono essere assegnati da esse ai singoli eventi. \\
+Infatti, tali valori vengono assegnati in sede di esame del particolare problema.
+
+\subsection{Spazio campione infinito}
+Se lo spazio campione è infinito e siamo nel continuo, un evento elementare è un singolo numero reale $\{c\} \in [a,b]$. \\
+Consideriamo il caso $\Omega = [a, b] \subseteq \mathbb{R}$. \\
+Ponendo $P({s}) = 0$ per ogni $s \in [a, b]$, ovvero assumendo che \textbf{ogni evento elementare abbia probabilità nulla}, si possono facilmente calcolare le probabilità di eventi con estremi inclusi. Questo si fa perché altrimenti l'integrale diverge. \\
+\textbf{N.B.:} Un evento con probabilità nulla NON è necessariamente un evento impossibile! L'affermazione "questo elemento ha probabilità nulla quindi non lo considero" è un'idiozia. Diventerebbe impossibile anche un singolo intervallo! \\
+
+\subsection{Proprietà aggiuntive}
+Dalle tre proprietà che definiscono le \textit{misure di probabilità} derivano direttamente altre proprietà aggiuntive. \\
+Definiamo $P$ una misura di probabilità definita su $\wp (\Omega)$ di uno spazio campione $\Omega$.\\
+Definiamo inoltre $\bar{A}$ l'evento complementare di $A$, ovvero un evento tale che 
+\[ P(A) + P(\bar{A}) = 1\]
+Allora:
+\begin{itemize}
+	 \item per ogni $A \subseteq \Omega, P(\bar{A}) = 1 - P(A)$
+	 \item per ogni $A \subseteq \Omega, P(A) \leq 1$
+	 \item per ogni $A, B \subseteq \Omega$, se $A \subseteq B$ allora $P(A) \leq P(B)$
+	 \item per ogni $A, B \subseteq \Omega$ \textbf{anche non incompatibili} vale:
+	 	\[ 	P(A \cup B) = P(A) + P(B) - P(A \cap B) \] 
+	 	\[	P(A \cup B) = P(A \cap \bar{B}) + P(A \cap B) + P(\bar{A} \cap B)
+	 	\]
+\end{itemize}
+ 
+\textbf{Osservazione}: in base alle precedenti proprietà (in particolare, la terza) si può ricavare la formula (2.1), caso particolare in cui gli eventi sono incompatibili. Si nota facilmente, infatti, che in questo caso $P(A \cap B) = 0$, dal momento che i due eventi si escludono a vicenda.
+
+\subsection{Probabilità di eventi elementari}
+Dall'assioma $P(\bigcup_{i \in I} A_i) = \sum_{i \in I} P(A_i)$ si ha che 
+\begin{align}
+	P(E) = \frac{\text{numero di eventi elementari dell'evento E}}{N}
+\end{align}
+Cioè: se tutti gli eventi elementari sono equiprobabili, la probabilità di un evento E è la proporzione dei punti (elementi o eventi elementari) dello spazio campione $\Omega$ che appartengono ad $E$. \\
+Allora per calcolare le probabilità è necessario saper contare i differenti modi in cui si può verificare un evento.
+
+\subsection{Permutazioni}
+L'ordine conta. \\
+Generalmente si calcolano come $n!$.
+
+\subsection{Combinazioni}
+L'ordine non conta. \\
+Generalmente si calcolano come $\binom{n}{r}$. Questo numero si legge \textit{n binomiale r} e rappresenta il numero di $n$ oggetti presi a gruppi di $r$.
+
+\section{Probabilità condizionata e indipendenza stocastica}
+\subsection{Probabilità condizionata: introduzione}
+In molti casi, quando si desideri studiare un fenomeno con comportamenti aleatori o si voglia effettuare un esperimento dagli esiti imprevedibili a priori, si hanno a disposizione alcune informazioni complementari che restringono il campo dei possibili risultati.\\
+Per poter trattare matematicamente queste situazioni viene introdotto il concetto di
+\textbf{probabilità condizionata}.
+
+\subsection{Probabilità condizionata: definizione}
+Siano dati uno spazio campione $\Omega$ ed una misura di probabilità \textit{P} definita sul suo insieme delle parti $\wp (\Omega)$. \\
+Secondo l'impostazione assiomatica di probabilità, considerati \textbf{due eventi} \textit{A} e \textit{B}, con $P(B) >0$, è detta \textbf{probabilità dell'evento \textit{A} condizionata dall'evento \textit{B}} la quantità 
+\begin{align}
+	P(A | B) = \frac{P(A \cap B)}{P(B)}
+\end{align}
+La probabilità condizionata (i.e. \textit{di A dato B}) si ottiene come 
+\[
+^\text{probabilità congiunta}/_\text{probabilità dell'evento condizionante}\]
+\textbf{Osservazione}: la definizione di probabilità condizionata può essere fornita anche facendo riferimento ad impostazioni diverse da quella assiomatica. Secondo l’approccio frequentista viene definita come la probabilità dell’evento A limitandosi a considerare solo i casi appartenenti a B come totale dei casi possibili.
+\begin{align}
+	P(B|C) + P(\bar{B}|C) = 1
+\end{align}
+La probabilità condizionata è il "motore" della formula.
+
+\subsection{Conseguenze del condizionamento}
+In certi casi il condizionamento può aumentare la probabilità di un evento di verificarsi, in altri può diminuirla. \\
+In altri casi ancora può accadere che il condizionamento rispetto ad un evento non influisca in alcun modo sulla probabilità da associare ad un’altro evento. In questo caso esiste una relazione molto forte tra i due eventi detta \textbf{indipendenza stocastica}
+
+\subsection{Eventi stocasticamente indipendenti}
+Due eventi $A, B \in \wp (\Omega)$ si dicono \textbf{stocasticamente indipendenti} se vale la seguente condizione:
+\begin{align}
+	P(A) = P(A | B)
+\end{align}
+ovvero se vale 
+\begin{align}
+P(B) = P(B | A)
+\end{align}
+O ancora se 
+\begin{align}
+	P(A \cap B) = P(A)P(B)
+\end{align}
+\textbf{Osservazione }: osserviamo che l’indipendenza è influenzata non solo dagli eventi considerati ma anche dalla particolare misura di probabilità $P$ adottata. \\
+\textbf{N.B.:} Questo vale per \textbf{eventi}. Con le variabili aleatorie il discorso sarà diverso. \\
+\textbf{L'indipendenza stocastica è una proprietà simmetrica!}
+
+\subsection{Formula del prodotto [chain rule]}
+La formula introdotta precedentemente 
+\[
+P(A \cap B) = P(A|B) P(B)
+\]
+può essere generalizzata nel caso dell'intersezione di più eventi. In questo caso prende il nome di \textbf{formula del prodotto} e diventa:
+\begin{align}
+	P(A_1 \cap A_2 \cap ... \cap A_n ) = P(A_1)P(A_2 | A_1) ... P(A_n)P(A_n | A_1 \cap A_2 \cap ... \cap A_{n-1})
+\end{align}
+Ed è valida comunque sia scelto $n \in \mathbb{N}_{+}$ e la famiglia $\{A_i, i = 1, 2, ..., n\}$ di sottoinsiemi di $\Omega$. \\
+Questa operazione si chiama \textit{fattorizzazione} o \textit{produttoria}.
+
+\subsection{Altre formule utili per il calcolo delle probabilità}
+Consideriamo una \textbf{partizione} $\{A_i, i = 1, ..., n; A_i \subseteq \Omega \}$ dello spazio campione $\Omega$, ovvero una famiglia di eventi mutualmente incompatibili e tali che la loro unione sia $\Omega$ stesso.
+\subsubsection{Formula delle probabilità totali}
+\begin{align}
+	P(B) = \sum_{i = 1}^{n} P(B | A_i) P(A_i)
+\end{align}
+Richiedo che sia una partizione perché non sia lasciato fuori un pezzo di probabilità! \\
+Questa formula pesa le probabilità condizionate che accada B per la probabilità che un tale evento condizionante si verifichi.\\
+Caso particolare:
+\[ A = (A \cap B) \cup (A \cap \bar{B}) \]
+$(A \cap B)$ e $(A \cap \bar{B})$ sono esclusivi, quindi
+\begin{align}
+\begin{split}
+	P(A) &= P(A \cap B) + P(A \cap \bar{B}) \\ &= P(A|B) P(B) + P(A|\bar{B}) P(\bar{B}) \\ &= P(A|B) P(B) + P(A|\bar{B}) [1 - P(B)]
+\end{split}
+\end{align}
+Questa formula permette di calcolare la probabilità di un evento condizionato dal fatto che un secondo evento si sia o meno verificato.
+
+\subsubsection{Formula (teorema) di Bayes}
+\begin{equation}
+	P(A_i | B) = \frac{P(B|A_i) P(A_i)}{\sum_{j = 1}^{n} P(B|A_j) P(A_j)}
+\end{equation}
+Ed è valida per ogni $i = 1, ..., n$.
+
+\section{Variabili aleatorie unidimensionali}
+\subsection{A cosa servono le variabili aleatorie (o casuali)?}
+Le variabili causali permettono di unificare la teoria della probabilità e studiare quindi un unico ambiente indipendentemente dalla natura dell'esperimento. \\
+Se vogliamo studiare una teoria generale dobbiamo unire le varie configurazioni descritte in un unico modo. Introduciamo quindi il concetto di \textbf{variabile aleatoria}. Nel caso più semplice è \textit{unidimensionale}.
+\\
+In base a quanto visto fino ad ora, per affrontare problemi di calcolo delle probabilità occorre di volta in volta \textbf{definire in maniera appropriata lo spazio campione e la misura di probabilità}. \\
+Questo fatto comporta delle difficoltà se ci si pone come \textbf{obiettivo} la \textbf{formulazione di una teoria generale della probabilità}, in quanto spazio campione e misura di probabilità sono diversi ogni volta. \\
+Inoltre, \textbf{in quasi tutti i problemi concreti si ha a che fare con situazioni il cui esito, imprevedibile a priori, è di tipo numerico}. È questo il caso, ad esempio del lancio di un dado, o più realisticamente della spesa complessiva per la costruzione di un immobile o del ricavato della sua vendita. \\
+Queste osservazioni hanno portato i matematici ad introdurre delle opportune \textbf{trasformazioni}, chiamate \textbf{variabili aleatorie}, che consentono di ricondursi sempre ad $\mathbb{R}$ come spazio campione ed a considerare quali suoi sottoinsiemi tutti gli intervalli del tipo $(a,b)$ o $[a,b]$ con $-\infty \leq a < b \leq +\infty$ tutte le possibili unioni ed intersezioni (finite o infinite), e tutti i loro complementi. \\
+
+\subsection{Definizione di variabile aleatoria}
+Dato uno spazio campione $\Omega$, è detta variabile aleatoria (o casuale) un'applicazione [funzione] \[X: \Omega \rightarrow \mathbb{R}\] che associa un numero reale ad ogni elemento di $\Omega$. \\
+In base a questa definizione è possibile assegnare delle probabilità ad eventi del tipo 
+\[
+X \in B \subseteq \mathbb{R}
+\]
+essendo
+\[
+P({X \in B}) = P(\{\omega \in \Omega: X(\omega) \in B\})
+\]
+dove $P$ rappresenta una misura di probabilità definita su $\wp(\Omega)$. \\
+Per comodità denoteremo da qui in avanti con $P(X \in B)$ tali probabilità, ma si ricordi sempre che $X \in B$ va pensato come evento di $\Omega$.
+
+\subsection{Chiarimento}
+Per gli scopi del corso sarà necessario pensare alle \textbf{variabili aleatorie} come ad \textbf{esiti esprimibili numericamente di esperimenti ancora da effettuare}, dove per \textbf{esperimento} intenderemo un \textbf{qualsiasi fenomeno o situazione con sviluppi imprevedibili a priori}. \\
+Sottolineiamo il fatto che si parla di variabili aleatorie quando l’\textbf{esperimento non sia ancora stato condotto }e quindi che le variabili aleatorie non sono veri e propri valori numerici ma \textbf{incognite }il cui effettivo valore (\textbf{realizzazione}) risulta noto solo al termine dell’esperimento. \\
+Come \textbf{notazione }adotteremo quella solitamente utilizzata in campo statistico, indicando con \textbf{lettere maiuscole} le \textbf{variabili aleatorie} e con \textbf{lettere minuscole }le rispettive \textbf{possibili realizzazioni}.
+
+\subsection{Funzione di ripartizione}
+Sintetizzo la mia ignoranza rispetto al fenomeno con una funzione. \\
+Rappresenta la probabilità che la variabile aleatoria considerata sia minore o uguale di un certo $t$. Facendo variare $t$ specifico la mia ignoranza. \\
+Essendo \textbf{imprevedibile }a priori il valore assunto da una variabile aleatoria, tutto ciò che si può fare relativamente ad essa è \textbf{esprimere delle valutazioni }di tipo probabilistico \textbf{sui valori che essa assumerà}.
+Per tale ragione ad ogni variabile aleatoria $X$ è associata una funzione che esprime in modo chiaro tali valutazioni. \\
+Essa è la \textbf{funzione di ripartizione}
+\begin{align}
+	F_X : \mathbb{R} \rightarrow [0, 1] \subseteq \mathbb{R}
+\end{align}
+Definita come 
+\begin{align}
+	F_X(t) = P(X \leq t)
+\end{align}
+per ogni $t \in \mathbb{R}$. \\
+Una volta nota la funzione di ripartizione di una variabile aleatoria, è possibile determinare la probabilità che essa assuma valori in intervalli dell’asse reale di nostro interesse osservando che vale
+\begin{equation}
+	P(X \in (a, b]) = F_X(b) - F_X(a), \forall a, b \in \mathbb{R} \wedge  a < b 
+\end{equation}
+La dimostrazione di questa uguaglianza segue dal fatto che
+\begin{itemize}
+	\item per ogni $a < b$, gli eventi $X \in (-\infty, a]$ e $(a, b]$ sono incompatibili 
+	\item dalla proprietà
+	\textit{data la famiglia} $\{ A_i, i \in I \subseteq \mathbb{N} \}$ \textit{di eventi incompatibili vale}
+	\[
+	P(\bigcup_{i \in I} A_i) = \sum_{i \in I} P(A_i)
+	\]
+\end{itemize}
+risulta
+\begin{align}
+	P(\{  X \in (-\infty, a]   \} \cup \{ X \in (a, b]  \}) = P(  X \in (-\infty, a]   ) + P (X \in (a, b]  )
+\end{align}
+Vale allora anche la seguente relazione
+\begin{align}
+\begin{split}
+	F_X(b) &= P(X \leq b) = P(\{X \in (-\infty, a]\} \cup \{X \in (a, b]\}) \\
+	&= P(X \in (-\infty, a]) + P(X \in (a, b]) = F_X(a) + P(X \in (a, b])
+\end{split}
+\end{align}
+da cui si ricava appunto
+\begin{align}
+	P(X \in (a, b]) = F_X(b) - F_X(a), \forall a, b \in \mathbb{R} \wedge a < b
+\end{align}
+
+\subsection{Limiti della funzione di ripartizione}
+Spesso la funzione di ripartizione di una variabile aleatoria non è nota; un \textbf{obiettivo della statistica} è quello di \textbf{determinarla} o di determinare grandezze ad essa associate, mentre nella \textbf{probabilità} e nelle sue applicazioni si assume che \textbf{essa sia nota}. \\
+Domanda: \textit{tutte le funzioni definite su R possono essere funzioni di ripartizione?} \textbf{NO!}
+
+\subsection{Condizioni necessarie e sufficienti per la funzione di ripartizione}
+È possibile dimostrare che sono delle funzioni di ripartizione tutte le funzioni $f$ che godono delle seguenti proprietà:
+\begin{itemize}
+	\item $f: R \rightarrow [0, 1]$
+	\item $f$ è monotona non decrescente
+	\item $\lim_{t \to +\infty} F(t) = 1$
+	\item $\lim_{t \to -\infty} F(t) = 0$
+	\item $\lim_{t \to t_0^{+}} F(t) = F(t_0)$ per ogni $t_0 \in \mathbb{R}$. Ovvero, la funzione è continua da destra in ogni punto 
+\end{itemize}
+
+Fra due funzioni di ripartizione valide vi può essere una significativa differenza: \textbf{continua} o \textbf{discontinua}.
+
+\subsection{Variabili aleatorie discrete}
+In effetti, le variabili aleatorie si distinguono in due categorie in base alla proprietà di continuità delle corrispondenti funzioni di ripartizione.
+\\
+Una variabile aleatoria è detta \textbf{variabile aleatoria discreta} nel caso in cui l'insieme dei valori $S$ che essa può assumere (\textit{supporto}) è finito (ovvero costituito da un numero finito di elementi) o costituito da una infinità di valori discreti.
+
+\subsection{Distribuzione discreta di probabilità}
+Ad ogni variabile aleatoria discreta è associabile, oltre alla funzione di ripartizione, una seconda funzione che fornisce delle valutazioni sulla probabilità che essa assuma specifici valori.
+Sia $S$ il supporto della variabile aleatoria discreta X.
+Viene detta \textbf{distribuzione discreta di probabilità} la funzione
+\begin{equation}
+	p_x : \mathbb{R} \rightarrow [0, 1]
+\end{equation}
+definita come segue
+\begin{align}
+	p_x(t) = 
+	\begin{cases}
+		P(X = t) & \text{per ogni $t \in S$} \\
+		0  & \text{altrimenti}
+	\end{cases}
+\end{align}
+N.B.: la densità di probabilità è per distribuzioni continue, la distribuzione discreta di probabilità per distribuzioni discrete!
+
+\subsection{Proprietà delle distribuzioni discrete di probabilità}
+Come per le funzioni di ripartizione, esistono alcune proprietà che identificano le distribuzioni discrete di probabilità. \\
+Infatti, una funzione $p_x$ definita su un insieme finito $S$ è una distribuzione di probabilità se e solo se sono soddisfatte simultaneamente le seguenti proprietà:
+\[
+	p_x(t) \geq 0, t \in \mathbb{R}
+\]
+\[
+	\sum_{s \in S} p_x(s) = 1
+\]
+
+Si osservi che la seconda delle due proprietà è conseguenza diretta delle due seguenti proprietà precedentemente introdotte:
+\[
+P(\Omega) = 1
+\]
+\[
+	P(\bigcup_{i \in I} A_i) = \sum_{i \in I} P(A_i)
+\]
+
+Tra le funzioni di ripartizione delle variabili discrete e le distribuzioni discrete di probabilità esiste una corrispondenza biunivoca, nel senso che le une identificano univocamente le altre.
+\\
+Valgono infatti le seguenti relazioni:
+\begin{align*}
+	F_X (t) = \sum_{s \in S; s \leq t} p_X (s) & \, \text{per ogni } t \in \mathbb{R}
+\end{align*}
+\begin{align*}
+	p_X (s) = F_X(s) - \lim_{t \to s^-} F_X(t) & \, \text{per ogni } s \in S
+\end{align*}
+
+Dalla prima di tali relazioni se ne deduce che le funzioni di ripartizione delle variabili aleatorie discrete presentano dei \textit{salti} in corrispondenza dei valori $s$ mentre sono costanti per gli altri valori: per tale ragione vengono dette \textbf{funzioni a gradino}.
+
+\section{Variabile aleatoria continua}
+Una variabile aleatoria è detta continua nel caso in cui la corrispondente funzione di ripartizione $F_X$ sia continua.
+
+\subsection{Variabile aleatoria assolutamente continua}
+In particolare, è detta \textbf{assolutamente continua} se esiste una funzione
+\begin{equation}
+f_X : \mathbb{R} \rightarrow \mathbb{R}^+
+\end{equation}
+tale che 
+\begin{equation}
+	F_X(t) = \int_{-\infty}^{t} f_X(u) du
+\end{equation}
+per ogni $t \in \mathbb{R}$.
+Una tale funzione -quando esista- viene detta \textbf{densità di probabilità} di $X$. \\
+Quindi la funzione di ripartizione \textbf{deve essere derivabile}!
+
+
+\subsection{Supporto}
+È detto \textbf{supporto} della variabile $X$ l'insieme $S = \{t \in \mathbb{R}:f_X(t) \neq 0 \}$. \\
+La densità di probabilità deve quindi essere \textbf{maggiore} di 0.
+Si osservi che \textbf{se la densità di probabilità di una variabile casuale esiste allora la
+funzione di ripartizione è una sua primitiva}. \\
+Per semplicità supporremo nel seguito che le \textbf{variabili aleatorie assolutamente continue} abbiano \textbf{funzione di ripartizione derivabile }e che la \textbf{funzione di densità di probabilità sia la derivata della funzione di ripartizione}.
+Come per le distribuzioni discrete di probabilità anche le \textbf{funzioni di densità di probabilità per essere tali devono soddisfare le seguenti due proprietà}:
+\begin{align*}
+f_X(t) \geq 0 & \text{ per ogni } t \in \mathbb{R}
+\end{align*}
+\[
+\int_{-\infty}^{+\infty} f_X(t)dt = 1
+\]
+\textbf{Osservazione}: La probabilità che una variabile aleatoria continua (o assolutamente continua) assuma un ben determinato valore è sempre nulla. Infatti, se $X$ è una variabile aleatoria continua, allora per ogni $t_0 \in \mathbb{R}$ vale:
+\begin{equation}
+	\begin{split}
+	P(X = t_0) = P(X \leq t_0) - \lim_{t \to t_0^-} P(X \leq t) = F_X (t_0) - \lim_{t \to t_0^-}  F_X(t) = \\ = F_X(t_0) - F_X(t_0) = 0
+	\end{split}
+\end{equation}
+Pertanto, quando si pensa a variabili aleatorie continue \textbf{non ha mai senso domandarsi quale sia la probabilità che esse assumano valori esatti}. \\
+\textbf{Al contrario ha senso domandarsi quale sia la probabilità che tali variabili assumano valori in specifici intervalli dell’asse reale}.
+
+\subsection{Probabilità che una variabile continua assuma un valore in un intervallo}
+Per calcolare la probabilità che una variabile casuale continua \textit{X} assuma un valore in un intervallo $(a, b] \subseteq \mathbb{R}$ è possibile fare ricorso alla seguente formula:
+\begin{align*}
+	P(X \in (a, b]) = F_X(b) - F_X(a) & \, \text{ per ogni } a, b \in \mathbb{R} \text{ con } a < b
+\end{align*}
+oppure alla seguente formula
+\begin{align*}
+	P(X \in (a, b]) = \int_{a}^{b} f_X(u)du & \, \text{ per ogni } a, b \in \mathbb{R} \text{ con } a < b
+\end{align*}
+la quale è ricavabile dalla precedente combinata con la seguente
+\begin{align*}
+F_X(t) = \int_{-\infty}^{t}f_X(u)du & \ \forall t \in \mathbb{R}
+\end{align*}
+In pratica la probabilità che sia soddisfatto l'evento $X \in (a, b]$ corrisponde all'area sottesa alla densità $f_X$ nell'intervallo $(a,b]$.
+\begin{align*}
+P(X \in (a, b]) = \int_{a}^{b}f_X(u)du & \, \text{ per ogni } a, b \in \mathbb{R} \text{ con } a < b
+\end{align*}
+Infine, è possibile notare che, essendo $P(X = a) = 0$, risulta sempre
+\begin{align}
+	P(X \in [a, b]) = P(X \in (a, b]) & \, \text{ per ogni } a, b \in \mathbb{R} \text{ con } a < b
+\end{align}
+
+\subsection{Relazioni tra funzione di ripartizione e funzione di densità di probabilità per variabili aleatorie assolutamente continue}
+
+Abbiamo visto che per definizione
+\begin{equation}
+F_X(t) = \int_{-\infty}^{t} f_X(u) du \, \forall t \in \mathbb{R}
+\end{equation}
+Ovvero che la funzione di ripartizione è la funzione integrale della funzione di densità di probabilità.
+Quindi, data la funzione di ripartizione, si ottiene la funzione di densità di probabilità tramite derivazione
+\begin{equation}
+	\frac{\partial}{\partial t}F_X(t) = f_X(t)
+\end{equation}
+
+\section{Variabili aleatorie multidimensionali}
+In molti casi è lecito considerare situazioni (esperimenti) il cui esito è rappresentato, anziché da un valore numerico, da una coppia o da una n-upla di valori; si pensi ad esempio alla coppia \textit{costi-ricavi }in un investimento immobiliare. Si parla allora di \textbf{variabili aleatorie multidimensionali}.\\
+In modo analogo a quanto visto per le variabili unidimensionali, le variabili di tal tipo sono definite come \textbf{applicazioni da uno spazio campione $\Omega$ allo spazio $R^n$} dove \textit{n} è la dimensione della variabile.\\
+Come per le variabili aleatorie unidimensionali, conviene pensare a queste variabili aleatorie come a \textbf{risultati di esperimenti esprimibili tramite n-uple di valori numerici}. \\
+Anche in questo caso è consuetudine considerare funzioni che esprimano le valutazioni probabilistiche sui valori assumibili dalle variabili. \\
+\textbf{N.B.:} le coppie sono ordinate!
+
+\subsection{Variabili aleatorie bidimensionali assolutamente continue e funzione di ripartizione congiunta}
+Per il momento ci limiteremo a considerare variabili aleatorie bidimensionali assolutamente continue, anche se quanto scritto in seguito può essere facilmente esteso al caso di più dimensioni e non necessariamente continuo. \\
+Sia quindi $(X, Y): \Omega \rightarrow \mathbb{R}^2$ una variabile aleatoria bidimensionale dove $\Omega$ è lo spazio campione al quale è associata una probabilità $P$ definita sui sottoinsiemi di $\Omega$. \\
+È detta \textbf{funzione di ripartizione congiunta} la funzione bidimensionale
+\begin{equation}
+F_{X, Y}(t, s): \mathbb{R}^2 \rightarrow [0, 1] \subseteq \mathbb{R}
+\end{equation}
+definita come
+\begin{equation}
+	F_{X, Y}(t, s) = P(\{X \leq t\} \cap \{Y \leq s\}) \, \forall (t, s) \in \mathbb{R}^2
+\end{equation}
+La funzione di ripartizione congiunta ci dà la massima informazione ottenibile su due [o più] fenomeni.
+
+\subsection{Funzione di densità congiunta}
+Se, come abbiamo assunto, la variabile $(X, Y)$ è assolutamente continua, allora esiste la \textbf{funzione di densità congiunta}
+\begin{equation}
+f_{X, Y}: \mathbb{R}^2 \rightarrow \mathbb{R}_+
+\end{equation}
+tale che 
+\begin{align}
+	F_{X, Y}(t,s) = \int_{-\infty}^{t} \int_{-\infty}^{s} f_{X,Y}(u, v) du \, dv \, \, \forall (t,s) \in \mathbb{R}^2
+\end{align}
+Conoscendo la funzione di ripartizione congiunta o quella di densità congiunta è possibile determinare la probabilità che la coppia  $(X ;Y)$   assuma valori in un qualsiasi sottoinsieme rettangolare
+\[
+(a_1, b_1] \times (a_2, b_2] \in \mathbb{R}^2
+\]
+Infatti, valgono queste formule
+\begin{multline}
+	P((X,Y) \in (a_1, b_1] \times (a_2, b_2]) = \\
+	= F_{X,Y}(b_1, b_2) - F_{X,Y}(a_1, b_2) - F_{X,Y}(b_1, a_2) + F_{X,Y}(a_1, a_2)
+\end{multline}
+
+\begin{equation}
+	P((X,Y) \in (a_1, b_1] \times (a_2, b_2]) = \int_{a_1}^{b_1} \int_{a_2}^{b_2} f_{X,Y} (u,v)du \, dv
+\end{equation}
+
+per ogni $(a_1, b_1] \times (a_2, b_2] \in \mathbb{R}^2$
+
+\subsection{Funzioni marginali}
+In molti casi, benché ci si trovi di fronte a situazioni i cui esisti sono di tipo multidimensionale, capita di essere interessati ai valori che possono essere assunti solamente da una delle variabili (si è interessati a valutare probabilità associate a solo uno dei valori numerici che descrivono l'esito dell'esperimento).\\
+Per questo motivo sono state introdotte le \textbf{funzioni marginali}. Anche per la loro descrizione ci limitiamo al caso bidimensionale.\\
+
+\subsection{Definizione di funzione marginale}
+Data una variabile aleatoria bidimensionale $(X; Y)$ assolutamente continua, avente funzione di ripartizione congiunta $F_{X, Y}$ e funzione di densità congiunta $f_{X, Y}$ sono dette \textbf{funzione di ripartizione marginale di $X$} e \textbf{funzione di densità marginale di $X$}
+\begin{gather}
+	F_X(t) = P(X \leq t) = P(\{X \leq t\} \cap \{Y \leq + \infty\}) = F_{X, Y} (t, +\infty) \\
+	f_X(t) = \int_{-\infty}^{+\infty} f_{X, Y} (t, s) ds
+\end{gather}
+
+\subsection{Indipendenza tra variabili aleatorie}
+Data una variabile aleatoria bidimensionale $(X; Y)$ diciamo che due variabili \textit{X} e \textit{Y} considerate singolarmente sono \textbf{stocasticamente indipendenti} se e solo se vale
+\begin{equation}
+	F_{X, Y} (t, s) = F_X(t) F_Y(s)
+\end{equation}
+per ogni $(t, s) \in \mathbb{R}^2$.\\
+È possibile verificare che tale condizione è equivalente alla seguente:
+\begin{equation}
+	P(\{X \in A\} \cap \{Y \in B\}) = P(X \in A) P(Y \in B), \forall A,B \subseteq \mathbb{R}
+\end{equation}
+che è a sua volta equivalente alla seguente
+\begin{equation}
+	f_{X,Y}(t,s) = f_X(t) f_Y(s)
+\end{equation}
+per ogni coppia $(t,s) \in \mathbb{R}^2$, quando la coppia di variabili $(X, Y)$ sia assolutamente continua.
+
+\section{Indici di tendenza centrale e variabilità}
+Sono grandezze numeriche associate alle variabili aleatorie in grado di \textbf{sintetizzare},
+\textbf{con un solo valore}, le \textbf{principali caratteristiche delle loro distribuzioni}. Risultano
+strettamente legati agli indici introdotti nella prima parte in relazione alla statistica
+descrittiva.
+\subsection{Valore atteso}
+Il più importante degli indici di tendenza centrale è il \textbf{valore atteso}, corrispondente alla \textbf{media matematica dei dati statistici}.\\
+Data una variabile aleatoria unidimensionale $X$ avente come supporto $S \subseteq \mathbb{R}$ è detto \textbf{valore atteso di $X$} la quantità
+\begin{equation}
+E[X] = 
+	\begin{dcases*}
+			\sum_{s \in S} s \cdot p_X(s) & \text{se X è discreta} \\
+			\int_{-\infty}^{+\infty} u \cdot f_X(u) du & \text{se X è assolutamente continua}
+	\end{dcases*}
+\end{equation}
+Si osservi l'analogia tra questa formula e 
+\begin{equation*}
+\bar{x} = \sum_{j=1}^N s_j p_j  = s_1 p_1 + s_2 p_2 + ... + s_N p_N
+\end{equation*}
+con cui si definisce il valore medio di una serie di dati statistici. \\
+In effetti il valore atteso, così come la media di una serie di dati, va pensato come una \textbf{media pesata}  dei valori assumibili dalla variabile, e fornisce un’indicazione di massima del posizionamento della variabile lungo l’asse dei numeri reali. \\
+Il valore atteso gode delle seguenti tre proprietà:
+\begin{itemize}
+	\item per ogni $a \in \mathbb{R}$, se $X = a$ \textbf{con probabilità = 1} allora E[X] = a
+	\item $E[a \cdot X + b] = a \cdot E[X] + b$ per ogni variabile \textit{X} e per ogni $a, b \in \mathbb{R}$
+	\item data una funzione $y = g(X)$ della variabile aleatoria \textit{X}, il suo valore atteso è 
+			\[
+			E[g(X)] = \int_{-\infty}^{+\infty} g(u) f_X(u) du
+			\]
+\end{itemize}
+Occorre osservare che \textbf{il valore atteso di una variabile potrebbe anche non esistere}, essendo definito come \textit{integrale improprio}.\\
+Questa situazione può verificarsi nel caso in cui l'integrale o la sommatoria
+\begin{equation}
+E[X] = 
+\begin{dcases*}
+\sum_{s \in S} s \cdot p_X(s) & \text{se X è discreta} \\
+\int_{-\infty}^{+\infty} u \cdot f_X(u) du & \text{se X è assolutamente continua}
+\end{dcases*}
+\end{equation}
+non convergano.
+
+\subsection{Momento centrale}
+Il valore atteso è in realtà un caso particolare di \textbf{momento centrale}.\\
+Per ogni $r = 1, 2, ...$ è detto \textbf{momento centrale di \textit{X} di ordine \textit{r}} la quantità
+\begin{equation}
+E[X^r] = 
+	\begin{dcases*}
+		\sum_{s \in S} s^r \cdot p_X(s) & \text{se X è discreta} \\
+		\int_{-\infty}^{+\infty} u^r \cdot f_X(u) du & \text{se X è assolutamente continua}
+	\end{dcases*}
+\end{equation}
+
+\subsection{Moda}
+Un secondo indice di tendenza centrale che occorre descrivere è la \textbf{moda}. Data una variabile aleatoria \textit{X} è detta \textbf{moda} la quantità $\tilde{X} \in \mathbb{R}$ corrispondente al \textbf{valore per cui è massima la distribuzione discreta di probabilità (se X è discreta) oppure la funzione di densità (se X è assolutamente continua).} \\
+Non è detto che un tale valore sia unico, se lo è diremo che la distribuzione di \textit{X} è
+\textbf{unimodale}, in caso contrario si parlerà di distribuzione \textbf{multimodale}.\\
+Può capitare in alcuni casi che la distribuzione discreta di probabilità o la funzione
+di densità presentino \textbf{diversi punti di massimo locale}. \\
+Sebbene ciò non sarebbe formalmente corretto, tutti questi punti di massimo
+locale vengono solitamente considerati come \textbf{punti modali} e pertanto anche in
+questo caso si parla di distribuzione \textbf{multimodale}.
+
+\subsection{Mediana}
+Un terzo indice di tendenza centrale è la \textbf{mediana}. Data una variabile aleatoria \textit{X} diciamo \textbf{mediana} una quantità $\hat{X} \in \mathbb{R}$ che soddisfa la diseguaglianza 
+\begin{align*}
+\lim_{t \to \hat{X}^-} F_X(t) \le \frac{1}{2} \le F_X(\hat{X})
+\end{align*}
+Nel caso in cui la \textbf{funzione di ripartizione} sia \textbf{continua ed invertibile} allora \[
+\hat{X} = F_X^{-1} (0.5)
+\]
+Nel caso di \textbf{variabili discrete} invece la mediana è il valore dell’\textbf{ascissa} in cui la
+\textbf{funzione di ripartizione passa da un valore minore di 0.5 ad uno superiore}.
+Più semplicemente è possibile pensare alla \textbf{mediana }come a quel \textbf{valore per cui sia
+la probabilità che X assuma valori più piccoli che la probabilità che X assuma valori
+più grandi sono pari a 0.5}.\\
+La\textbf{ mediana può non essere unica} nel caso in cui esistano più valori di \textit{t} tali per cui \(F_X(t) = {}^1/_2\)
+
+\subsection{Quantili}
+Unitamente alla mediana è possibile considerare altri indici definiti in maniera
+simile e che dividono la retta dei reali in due intervalli di probabilità assegnata e
+che sono detti \textbf{quantili}.\\
+Dato un valore 
+\[
+p \in [0, 1] \subseteq \mathbb{R}
+\]
+è detto \textbf{quantile p-esimo della variabile aleatoria \textit{X}} il valore 
+\[
+x_p \in \mathbb{R}: \lim_{t \to x_p^-} F_X(t) \le p \le F_X(x_p)
+\]
+Nel caso in cui la funzione di ripartizione sia continua ed invertibile allora
+\[
+x_p = F_X^{-1} (p)
+\]
+Pertanto è possibile pensare ad \(x_p\) come a quel valore per cui risulta
+\[
+P(X \le x_p) = p \, \text{ e } \, P(X > x_p) = 1 - p
+\]
+
+\subsection{Indici di variabilità}
+Come visto in precedenza (Capitolo 1) oltre agli indici di tendenza centrale è
+conveniente anche considerare indici che forniscano un’idea del grado di dispersione
+dei valori assumibili da una variabile aleatoria.\\
+Questi vengono detti \textbf{indici di variabilità}.
+
+\subsection{Varianza}
+Tra questi quello che risulta in assoluto il più importante è senza dubbio la \textbf{varianza}.
+Formalmente, data una variabile aleatoria \textit{X} è detta \textit{varianza di X} la quantità
+\begin{equation}
+V[X] = 
+\begin{dcases*}
+\sum_{s \in S}  (s - E[x])^2 p_x(s) & \text{se \textit{X} è discreta}  \\
+\int_{-\infty}^{+\infty} (u - E[X])^2  f_X(u)du & \text{se \textit{X} è assolutamente continua}
+\end{dcases*}
+\end{equation}
+Così come il valore atteso anche la varianza talvolta può non esistere, quando la sommatoria o l’integrale divergono.\\
+Così come il \textbf{valore atteso} di una variabile aleatoria $X$ viene spesso indicato con $\mu_X$, la \textbf{varianza} viene sovente indicata con $\sigma_X^2$.\\
+Essa viene indicata con il quadrato in quanto la sua radice e un altro indice molto importante chiamato \textbf{deviazione standard}
+\[
+\sigma_X = \sqrt{\sigma_X^2}
+\]
+La \textbf{deviazione standard} ha il vantaggio rispetto alla varianza di avere la \textbf{stessa unità di misura del valore atteso}.\\
+Anche la varianza gode di alcune proprietà che è meglio ricordare:
+\begin{itemize}
+	\item per ogni $a \in \mathbb{R}$, se $X = a$ con probabilità uguale ad 1 allora $V[X] = 0$
+	\item $V[a \cdot X + b] = a^2 \cdot V[X]$ per ogni variabile $X$ e per ogni $a, b \in \mathbb{R}$
+	\item $V[X] = E[X^2] - (E[X])^2$ per ogni variabile aleatoria $X$
+\end{itemize}
+
+\subsection{Marginali}
+Gli indici visti fino ad ora sono relativi a variabili unidimensionali.\\
+Anche per le variabili multidimensionali ed in particolare per quelle bidimensionali esistono indici di tendenza centrale e variabilità.\\
+Sia $(X,Y)$ una variabile aleatoria bidimensionale discreta o continua. Sono detti \textbf{valori attesi marginali} e \textbf{varianze marginali} le quantità:
+\[ E[X] \;\; E[Y] \;\; V[X] \;\; V[Y] \]
+ottenute considerando le distribuzioni marginali di \textit{X} ed \textit{Y} ed integrando (o sommando) in accordo alle seguenti:
+\begin{align*}
+E[X] &= 
+\begin{dcases*}
+\sum_{s \in S} s \cdot p_X(s) & \text{se X è discreta} \\
+\int_{-\infty}^{+\infty} u \cdot f_X(u) du & \text{se X è assolutamente continua}
+\end{dcases*} \\
+V[X] &= 
+\begin{dcases*}
+\sum_{s \in S}  (s - E[x])^2 p_x(s) & \text{se \textit{X} è discreta}  \\
+\int_{-\infty}^{+\infty} (u - E[X])^2  f_X(u)du & \text{se \textit{X} è assolutamente continua}
+\end{dcases*}
+\end{align*}
+Si noti che la varianza è il valore atteso di $g(X) = (X - E[X])^2$.\\
+Ricordiamo inoltre che valgono le seguenti relazioni:
+\begin{itemize}
+	\item $E[a \cdot X + b \cdot Y] = a \cdot E[X] + b \cdot E[Y]$ per ogni coppia $X, Y$ e per ogni $a, b \in \mathbb{R}$
+	\item $E[X \cdot Y] = E[X] \cdot E[Y]$ per ogni coppia $X, Y$ di variabili aleatorie stocasticamente indipendenti
+	\item $V[X + Y] = V[X] + V[Y]$ per ogni coppia $X, Y$ di variabili aleatorie stocasticamente indipendenti
+\end{itemize}
+
+\subsection{Covarianza}
+Oltre ai valori attesi ed alle varianze marginali, un altro indice è estremamente importante, si tratta della \textbf{covarianza} definita come:
+\begin{align}
+	\begin{split}
+		Cov[X, Y] &= E[(X - E[X]) \cdot (Y - E[Y])] \\
+		&= \int \int_{\mathbb{R}^2} (t - E[X]) \cdot (s - E[Y]) \cdot f_{X, Y} (t,s) dt \, ds
+	\end{split}
+\end{align}
+o equivalentemente
+\begin{align}
+\begin{split}
+Cov[X, Y] &= E[X \cdot Y] - E[X] \cdot E[Y]  \\
+&= \int \int_{\mathbb{R}^2} t \cdot s \cdot  f_{X, Y} (t,s) dt \, ds - \int_{\mathbb{R}} t \cdot f_X(t) dt \cdot \int_{\mathbb{R}} s \cdot f_Y(t) ds
+\end{split}
+\end{align}
+
+La \textbf{covarianza} è un indice della correlazione che sussiste tra due variabili, ovvero del loro \textbf{grado di dipendenza reciproca}.\\
+\textbf{Tanto più essa è grande tanto più forte è il legame di dipendenza tra le variabili}.\\
+Si noti ad esempio che se le variabili $X$ ed $Y$ sono stocasticamente indipendenti, allora in base alla seguente proprietà
+\begin{center}
+	$E[X \cdot Y] = E[X] \cdot E[Y]$ per ogni coppia $X, Y$ di variabili aleatorie stocasticamente indipendenti
+\end{center}
+si ottiene che
+\[
+Cov[X, Y] = E[X \cdot Y] - E[X] \cdot E[Y] = E[X] \cdot E[Y] - E[X] \cdot E[Y] = 0
+\]
+Due variabili aleatorie aventi covarianza nulla vengono dette \textbf{incorrelate}. \\
+Occorre però sottolineare che \textbf{la nozione di incorrelazione è più debole di quella di indipendenza}.
+Infatti, è possibile mostrare che \textbf{seppur esistano coppie di variabili incorrelate esse non sono indipendenti}.
+
+\subsection{Coefficiente di correlazione lineare di Pearson}
+Un ultimo indice da ricordare, strettamente legato alla covarianza ed utilizzato per esprimere più chiaramente il grado di dipendenza tra due variabili, è il \textbf{coefficiente di correlazione lineare di Pearson}
+\begin{equation}
+	\rho_{XY} = \frac{Cov[X,Y]}{\sqrt{V[X] \cdot V[Y]}} = \frac{Cov[X,Y]}{\sigma_X \cdot \sigma_Y}
+\end{equation}
+Tale indice rispetto alla covarianza ha il vantaggio di godere delle seguenti proprietà:
+\begin{itemize}
+	\item $\rho_{XY} = 0 $ se \textit{X} ed \textit{Y} sono incorrelate
+	\item $|\rho_{XY}| = 1$ se vale la relazione $Y = a \cdot X + b$ per ogni $a, b \in \mathbb{R}$
+\end{itemize}
+Più precisamente, se vale +1 allora $a>0$, e se vale -1 allora $a<0$.

@@ -1,0 +1,416 @@
+\chapter[Statistica descrittiva]{Statistica descrittiva}
+\section{Introduzione}
+\subsection{Definizione informale di statistica descrittiva}
+Raccolta di \textbf{metodi} e \textbf{strumenti matematici} atti ad \textbf{organizzare }una o più serie di \textbf{dati }in modo tale da evidenziarne in forma sintetica eventuali simmetrie, periodicità o leggi di altro genere.
+Ovvero, \textbf{la statistica descrittiva descrive in maniera immediatamente comprensibile le informazioni implicitamente contenute nei dati stessi.}
+
+\subsection{Definizione di popolazione}
+Solitamente la serie di dati di cui si dispone è costituita da un \textbf{numero limitato di osservazioni che devono essere rappresentative di un'ampia popolazione}.
+Con \textbf{popolazione }si intende \textbf{l'insieme degli elementi cui si riferisce l'indagine statistica.}
+\newline
+Estraggo un insieme di osservazione e faccio un'inferenza su tutta la popolazione basandomi su dei dati che ho acquisito da un gruppo ridotto. \newline
+\textbf{Le osservazioni provengono dalla popolazione!}
+\newline
+Ci possono essere \textbf{vari modi per estrarre elementi} da un insieme e creare una popolazione.
+
+\subsection{Caratteri}
+Le tecniche di organizzazione dei dati variano in funzione dei modi di presentarsi delle \textbf{caratteristiche (caratteri)} degli elementi su cui è svolta l'indagine.
+Le caratteristiche sono le proprietà sulle quali ci interessa fare valutazioni.
+\begin{itemize}
+	\item \textbf{Caratteri qualitativi}: qualità o dati non numerici [es. colore]
+	\item \textbf{Caratteri quantitativi}: grandezze misurabili
+	\begin{itemize}
+		\item \textbf{Discreti}: possono assumere un numero limitato di valori (es. lancio dado)
+		\item \textbf	 {Continui}: assumono valori reali (es. temperatura)
+ 	\end{itemize}
+\end{itemize}
+
+\subsection{Rappresentazioni numeriche di dati statistici}
+N.B.: parleremo sempre di caratteri quantitativi, discreti o continui. \newline
+Insieme dei dati = $E$ \newline
+Numerosità = $n$ \newline
+Quando il \textbf{carattere è discreto}, è comodo raggruppare i dati considerando l'insieme di tutti i valori assumibili (\textbf{modalità del carattere}) ed associare ad ognuno di tali valori il numero di volte che esso compare in E. \newline
+Numero totale di modalità = $N$ \newline
+Insieme delle modalità = $S$. In altre parole, sono tutti i modi in cui si può presentare il carattere discreto considerato.
+
+\section{Concetto di frequenza}
+\subsection{Frequenza assoluta}
+Si dice \textbf{frequenza assoluta della modalità $s_j$, $j = 1, ..., N$}, la quantità $fj$ data dal numero di elementi $E = {x_1, x_2, ..., x_n}$ che hanno valore $s_j$, ovvero \textbf{$f_j$ è il numero di elementi di $E$ aventi valore $s_j$}.
+
+\subsection{Distribuzione di frequenza assoluta dei dati}
+\textbf{Funzione} che associa ad ogni modalità la corrispondente frequenza assoluta. \newline
+$f: S \rightarrow \mathbb{N}$ 
+
+\subsection{Frequenza cumulata assoluta}
+Per la modalità $s_j$, è la somma delle frequenze assolute di tutte le modalità $s_k \in S$ tali che $s_k \leq s_j$.
+\begin{align}
+	F_j = \sum_{k: s_k \leq s_j} f_k
+\end{align}
+
+
+\subsection{Frequenza relativa}
+\begin{align}
+p_j = \frac{f_j}{n}
+\end{align}
+\newline
+È la frequenza assoluta divisa per la numerosità
+
+\subsection{Frequenza cumulata relativa}
+\begin{align}
+P_j = \sum_{k: s_k \leq s_j} p_k
+\end{align}
+
+\subsection{Altre definizioni}
+Si dicono distribuzione di frequenza cumulata assoluta, relativa e cumulata relativa dei dati osservati le funzioni $F$, $p$ e $P$ che associano ad ogni modalità $s_j$ le relative frequenze $F_j$, $p_j$ e $P_j$. \newline
+N.B.: Non si va più in $\mathbb{N}$! \newline
+$n$ è il numero delle osservazioni \newline
+
+\section{Classi e partizioni}
+\subsection{Caratteri continui}
+Quando si ha a che fare con \textbf{caratteri continui} (o \textbf{discreti con un numero elevato di modalità}) è conveniente ridursi a raggruppamenti come quelli appena visti.
+\begin{itemize}
+	\item Si suddivide l'insieme $S$ delle modalità in \textbf{classi}. Ogni classe è un sottoinsieme \textit{qualsiasi} di $S$.
+	\item Si introduce il concetto di \textbf{partizione}. Una partizione è una \textbf{famiglia di classi } tra loro \textbf{disgiunte} la cui unione dà $S$.
+\end{itemize}
+La scelta delle classi è \textbf{arbitraria}, anche se è \textbf{necessario} che esse \textbf{formino una partizione di $S$}. Le \textbf{partizioni} devono essere \textbf{significative} per il caso in esame e \textbf{sufficientemente} \textbf{numerose}.
+
+\subsection{Caratteristiche delle classi}
+Ad ogni classe sono associate diverse grandezze che la caratterizzano.
+Alcune molto importanti:
+\begin{itemize}
+	\item \textbf{Confine inferiore/superiore}: valori estremi della classe
+	\item \textbf{Ampiezza}: differenza tra confine inferiore e superiore
+	\item \textbf{Valore centrale}: semi-somma tra i due confini
+\end{itemize}
+\textbf{N.B.}: bisogna sempre specificare se le classi sono chiuse/aperte a destra e sinistra, ovvero se gli estremi destro e/o sinistro siano inclusi o meno e, quindi, se i dati che coincidano con quei valori vadano o meno raggruppati all'interno della classe stessa oppure no. Così lo stesso valore NON viene contato più volte! \newline
+Uno degli approcci consiste nel cercare di fare classi che contengano lo stesso numero di elementi. \\
+N.B.: nella discretizzazione si usano estremi leggermente più ampi dei valori minimi/massimi trovati con le rilevazioni per tenere conto di eventuali valori-limite non campionati.
+
+
+\section{Indici di tendenza centrale}
+Bisogna determinare un solo valore che rappresenti in qualche modo l'intera serie.
+Gli \textbf{indici di tendenza centrale}, anche noti come \textbf{indici di posizione}, sono quantità in grado di sintetizzare con un solo valore numerico i valori assunti dai dati.
+\newline
+Il valore certamente più utile di ogni altro nello studio di una serie di dati è la \textbf{media}, definita come la \textit{media aritmetica tra tutti i valori dei dati osservati}.
+
+\subsection{Media}
+Abbiamo $n$ osservazioni, indicate con $x_1, x_2, ..., x_n$. La media è definita come:
+\begin{align}
+\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i = \frac{x_1 + x_2 + ... + x_n}{n}
+\end{align}
+Nel caso particolare in cui i dati siano \textbf{quantitativi discreti} avremo
+\begin{align}
+\bar{x} = \frac{1}{n} \sum_{j=1}^N s_j f_j  = \frac{s_1 f_1 + s_2 f_2 + ... + s_N f_N}{n}
+\end{align}
+con $f_k$ la frequenza assoluta dalla modalità $s_k$.
+Ovvero
+\begin{align}
+\bar{x} = \sum_{j=1}^N s_j p_j  = s_1 p_1 + s_2 p_2 + ... + s_N p_N
+\end{align}
+con $p_k$ la frequenza relativa della modalità $s_k$.
+
+\subsection{Momento $k$-esimo rispetto ad un valore di riferimento $y$}
+\begin{align}
+M_{k,y} = \frac{1}{n} \sum_{i = 1}^{n} (x_i - y)^k
+\end{align}
+Allora la media è \textbf{momento primo rispetto all'origine}, ovvero al valore zero.
+\begin{align}
+\bar{x} = \frac{1}{n} \sum_{i = 1}^{n} (x_i - 0)^1
+\end{align}
+
+\subsection{Mediana}
+Un secondo indice di tendenza centrale è rappresentato dalla mediana, $\hat{x}$, ovvero da \textit{"quel numero reale che precede tanti elementi della serie di dati quanti ne segue"}.
+Se ordiniamo la serie di dati $x_1, x_2, ..., x_n$ in modo crescente ottenendo la serie $x_{(1)}, x_{(2)}, ..., x_{(n)}$, la mediana è:
+\begin{itemize}
+	\item dall'elemento di posto $ \frac{n+1}{2} $ se $n$ è dispari
+	\item dalla media aritmetica tra gli elementi di posto $\frac{n}{2}$ e $ \frac{n}{2} + 1$ se $n$ è pari
+\end{itemize}
+
+\subsection{Moda}
+Un ultimo indice di tendenza centrale è rappresentato dalla moda, $\tilde{x}$, definita come \textit{"quel valore o classe cui corrisponde la massima frequenza assoluta"}. La media viene spesso usata con dati qualitativi, per i quali è impossibile definire media e mediana. \newline
+\textbf{Non} è garantita l'unicità della moda. Si parla di \textit{distribuzione unimodale} o \textit{distribuzione multimodale} a seconda che la moda sia una sola o più di una.
+
+\section{Indici di variabilità (omogeneità, dispersione, ...)}
+Gli indici di tendenza centrale \textbf{non} sono utili per fornire informazioni circa l'omogeneità e la disomogeneità dei dati. Vengono quindi introdotti indici che misurano il grado di \textbf{omogeneità} o \textbf{dispersione} dei dati. Vediamone alcuni.
+
+\subsection{Varianza}
+\begin{align}
+\sigma^2 = s^2 = \frac{1}{n} \sum_{i = 1}^{n} (x_i - \bar{x})^2
+\end{align}
+Ricordando la definizione di \textit{momento} notiamo che la varianza è il \textbf{momento secondo rispetto alla media}.
+Viene introdotto il quadrato perché se lo togliessimo avremmo
+\begin{align}
+\frac{1}{n} \sum_{i = 1}^{n} (x_i - \bar{x}) = 0
+\end{align}
+per definizione.
+La varianza è tanto più grande quanto più i singoli dati si discostano dalla media, ovvero tanto più essi sono \textbf{disomogenei}. Rappresenta quindi il grado di [dis]omogeneità. \newline
+Nel caso di \textit{caratteri quantitativi discreti}, di cui sia nota la distribuzione di frequenza, la \textbf{varianza} può essere calcolata con le seguenti formule.
+\begin{align}
+s^2 = \frac{1}{n} \sum_{j = 1}^{N} (s_j - \bar{x})^2 f_j
+\end{align}
+\begin{align}
+s^2 =  \sum_{j = 1}^{N} (s_j - \bar{x})^2 p_j
+\end{align}
+\begin{align}
+s^2 = \frac{1}{n} \sum_{i = 1}^{n} x_i^2 - \bar{x}^2
+\end{align}
+Sempre per caratteri quantitativi discreti vale anche la seguente relazione
+\begin{align}
+s^2 =  \sum_{j = 1}^{N} s_j^2 p_j - \bar{x}^2
+\end{align}
+Poiché la dimensione della varianza è il quadrato di quella dei dati, in molti casi si preferisce una misura diversa detta \textbf{scarto quadratico medio}.
+
+\subsection{Scarto quadratico medio (o deviazione standard)}
+\begin{align}
+s = \sqrt{s^2} = \sqrt{\frac{1}{n} \sum_{i = 1}^{n} x_i^2 - \bar{x}^2} =  \sqrt{\frac{1}{n} \sum_{i = 1}^{n} (x_i - \bar{x})^2}
+\end{align}
+
+\section{Rappresentazioni per caratteri bidimensionali}
+Spesso si studiano fenomeni che coinvolgono più caratteri della popolazione tali da non potersi considerare separatamente. \newline
+Consideriamo il caso di due caratteri contemporanei. L'insieme $E$ dei dati statistici sarà costituito da coppie di valori del tipo \[ E = \{(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)\}\]
+\textbf{N.B.}: 
+\begin{itemize}
+	\item ci limitiamo a considerare il caso di due caratteri contemporanei
+	\item i caratteri quantitativi continui vengono trattati analogamente, previo raggruppamento in classi
+\end{itemize}	
+La modalità ora è \textbf{congiunta}, ovvero abbiamo coppie formate dal prodotto cartesiano!\newline
+
+
+\section{Frequenze}
+\subsection{Frequenza assoluta}
+Sia
+\[	S = \{(s_j, u_k), j = 1, ..., N; k = 1, ..., M \} \]
+l'insieme delle coppie di valori assumibili dalla coppia di caratteri analizzati.
+Viene detta \textbf{frequenza assoluta} di $(s_j, u_k)$ la quantità $f_{jk}$ definita come \newline $f_{jk}$ = numero di elementi di $E$ aventi valore $(s_j, u_k)$. \newline
+Definiremo \textbf{distribuzione di frequenza assoluta doppia} la funzione $f$ che associa ad ogni coppia di valori $(s_j, u_k)$ la corrispondente frequenza $f_{jk}$.
+
+\subsection{Frequenza cumulata assoluta}
+\begin{align}
+F_{jk} = \sum_{r: s_r \leq s_j; l: u_l \leq u_k} f_{rl}
+\end{align}
+
+\subsection{Frequenza relativa}
+\begin{align}
+p_{jk} = \frac{f_{jk}}{n}
+\end{align}
+
+\subsection{Frequenza cumulata relativa}
+\begin{align}
+P_{jk} = \sum_{r: s_r \leq s_j; l: u_l \leq u_k} p_{rl}
+\end{align}
+
+\subsection{Distribuzione di frequenza doppia}
+Con \textbf{distribuzione di frequenza doppia} si intende una qualsiasi delle funzioni $f, F, p, P$ che associ ad ogni coppia $(s_j, u_k)$ la corrispondente frequenza. \newline
+
+
+\section{Distribuzioni marginali}
+In aggiunta alle distribuzioni citate, analoghe quelle del caso unidimensionale, esistono altre distribuzioni di frequenza spesso prese in considerazione.
+Si definiscono \textbf{distribuzioni marginali} le distribuzioni dei singoli caratteri presi indipendentemente dagli altri.
+
+\subsection{Definizioni}
+Nel caso ci si riferisca al primo carattere, per ogni valore assumibile da esso, sia $s_j$, è detta \textbf{frequenza assoluta marginale} la quantità $f_{xj}$ data dal numero di elementi di $E$ il cui primo carattere ha valore $s_j$, vale a dire
+\begin{center}
+	\( f_{xj} = \) numero di elementi di $E$ aventi valore \((s_j, \bullet) \)
+\end{center}
+con $\bullet$ = qualsiasi valore. \newline 
+Così facendo trascuro uno dei due caratteri: è la \textbf{marginalizzazione}.\newline
+Analogamente avremo:
+\begin{itemize}
+	\item \textbf{Frequenza cumulata assoluta marginale $F_{xj}$} = somma delle frequenze assolute marginali di tutti i valori $s_k$ tali che \(s_k \leq s_j \)
+	\item \textbf{Frequenza relativa marginale $p_{xj}$} = rapporto tra frequenza assoluta marginale $f_{xj}$ e numerosità $n$ delle osservazioni
+	\item \textbf{Frequenza cumulata relativa marginale $F_{xj}$} = somma delle frequenze relative marginali di tutti i valori $s_k$ tali che \(s_k \leq s_j \)
+\end{itemize}
+In una tabella i marginali sono come dire \textit{somma per righe} e \textit{somma per colonne}.
+La somma dei marginali per riga/per colonna è uguale a:
+\begin{itemize}
+	\item 1, se stiamo considerando frequenze relative doppie
+	\item $n$, se stiamo considerando frequenze assolute doppie
+\end{itemize}
+
+\subsection{Un ragionamento}
+Consideriamo due serie $\{x_i\} \{y_i\}$, $i = 1, ..., n$ \newline
+e poniamo a confronto le variazioni delle coppie di dati rispetto ai corrispondenti valori medi considerando le \textbf{coppie di scarti} 
+\[x_i - \bar{x} \hspace{10mm} y_i - \bar{y} \]
+Risulta abbastanza naturale pensare che esista una relazione di dipendenza tra i due caratteri se a valori positivi (negativi) dello scarto $x_i - \bar{x}$ corrispondono sistematicamente o quasi sempre valori positivi o negativi dello scarto $y_i - \bar{y}$.
+
+\section{Covarianza}
+Si definisce covarianza $c_{xy}$ (dei dati o campionaria) delle due serie di dati $ \{x_i\} \{y_i\} $
+\begin{align}
+	c_{xy} = \frac{1}{n} \sum_{i = 1}^{n}(x_i - \bar{x}) (y_i - \bar{y})
+\end{align}
+La covarianza di un carattere rispetto a se stesso è uguale alla varianza
+\[ s^2 = \frac{1}{n} \sum_{i = 1}^{n} (x_i - \bar{x})^2 \]
+La covarianza assume un valore positivo (negativo) che diviene grande in valore assoluto nel caso in cui i termini prodotto \[(x_i - \bar{x}) (y_i - \bar{y}) \]
+abbiano segni concordi. \newline
+In questo caso si parla di \textbf{dati delle serie fortemente correlati}. \newline
+Nel caso opposto, ovvero nel caso in cui i \textbf{dati} siano \textbf{incorrelati}, avremo che i prodotti \[(x_i - \bar{x}) (y_i - \bar{y}) \] avranno segni discordi e la covarianza risulterà vicina a 0 in valore assoluto. \newline
+La convarianza può essere calcolata anche tramite la seguente formula:
+\begin{align}
+c_{xy} = \frac{1}{n} \sum_{i = 1}^{n}x_i y_i - \bar{x} \bar{y}
+\end{align}
+Infatti
+\[
+s^2 = \frac{1}{n} \sum_{i = 1}^{n} x_i^2 - \bar{x}^2
+\]
+Nel caso in cui i dati si riferiscano a caratteri quantitativi discreti, di cui è nota la distribuzione di frequenza doppia, è possibile utilizzare le seguenti formule per il calcolo della covarianza:
+\begin{align}
+c_{xy} = \sum_{j = 1}^{N} \sum_{k = 1}^{M} (s_j - \bar{x}) (u_k - \bar{y})p_{jk}
+\end{align}
+\begin{align}
+c_{xy} = \sum_{j = 1}^{N} \sum_{k = 1}^{M} s_j u_k p_{jk} - \bar{x} \bar{y}
+\end{align}
+Con:
+\begin{itemize}
+	\item $N$: numero di modalità del primo carattere
+	\item $M$: numero di modalità del secondo carattere
+	\item $s$ e $u$: modalità di primo e secondo carattere
+	\item $\bar{x}$ e $\bar{y}$: medie del primo e del secondo carattere
+\end{itemize}
+
+\subsection{Serie statisticamente incorrelate}
+Due serie di dati $\{x_i\} \{y_i\}$ si dicono \textbf{statisticamente incorrelate} se 
+\begin{align}
+	\sum_{i = 1}^{n} (x_i - \bar{x}) (y_i - \bar{y}) = 0
+\end{align}
+E dal momento che 
+\[
+c_{xy} = \frac{1}{n} \sum_{i = 1}^{n}(x_i - \bar{x}) (y_i - \bar{y})
+\]
+Questo equivale a dire che \textbf{due serie sono statisticamente incorrelate se la loro covarianza è nulla}.
+
+\subsection{Serie statisticamente indipendenti}
+Due serie di dati $\{x_i\} \{y_i\}$ si dicono \textbf{statisticamente indipendenti} se vale la seguente condizione:
+\begin{align}
+	\forall j = 1, ..., N \land \forall k = 1, ..., M \hspace{10mm} p_{jk} = p_j p_k
+\end{align} 
+Ovvero la frequenza relativa della coppia di modalità $j$ e $k$ è uguale al prodotto delle frequenze relative delle due probabilità: $j$-esima e $k$-esima.
+È importante ricordare che:
+\[
+p_{jk} = \frac{f_{jk}}{n} \hspace{10mm} p_j = \frac{f_j}{n} \hspace{10mm} p_k = \frac{f_k}{n}
+\]
+\textbf{N.B.:} 
+\begin{center}
+	Statisticamente indipendenti $\implies$ statisticamente incorrelate
+	Statisticamente incorrelate $\centernot\implies$ statisticamente  indipendenti
+\end{center}
+Infatti: \newline
+Se 
+\begin{align}
+	\sum_{i = 1}^{n} (x_i - \bar{x}) (y_i - \bar{y}) = 0
+\end{align}
+le due serie sono statisticamente incorrelate. Ma attenzione: questo \textbf{non} ci autorizza a dire che anche 
+\begin{align}
+	\sum_{i = 1}^{n} (x_i - \bar{x}) \sum_{i = 1}^{n} (y_i - \bar{y}) = 0
+\end{align}
+Questa uguaglianza vale \textbf{solo} sotto l'ipotesi che le due serie sisano statisticamente indipendenti!
+È chiaro che se vale quest'ultima uguaglianza, entrambe le sommatorie valgono 0 e $0*0$ fa 0.
+Riassumendo:
+\begin{itemize}
+	\item Se due serie sono statisticamente incorrelate: posso scrivere che la $(1.25) = 0$. Non posso dire nulla sulla $(1.26)$.
+	\item Se due serie sono statisticamente indipendenti: posso scrivere che la $(1.26)$ è uguale alla $(1.25)$, $=0$ 
+\end{itemize}
+Nel caso \textbf{bidimensionale}, ovvero con due variabili \textit{x} e \textit{y}, la covarianza si può rappresentare attraverso una matrice 2x2.
+\begin{equation}
+	C =
+	\begin{vmatrix}
+		c_{xx} & c_{xy} \\
+		c_{xy} & c_{yy}
+	\end{vmatrix}
+	=
+	\begin{vmatrix}
+		var(x) & cov(x, y) \\
+		cov(x, y) & var(y)
+	\end{vmatrix}
+\end{equation}
+La covarianza è simmetrica: $c(x, y)$ è uguale a $c(y, x)$.
+La matrice è dipendente dalla grandezza delle varianze.
+Per una misura indipendente dalla variabilità delle grandezze si usa la \textbf{matrice di correlazione}:
+\begin{equation}
+Corr =
+\begin{vmatrix}
+\frac{c_{xx}}{\sigma_x^2} & \frac{c_{xy}}{\sigma_x \sigma_y}  \\
+\frac{c_{xy}}{\sigma_x \sigma_y} & \frac{c_{yy}}{\sigma_y^2}
+\end{vmatrix}
+=
+\begin{vmatrix}
+1 & corr(x, y) \\
+corr(x, y) & 1
+\end{vmatrix}
+\end{equation}
+Nel caso di \textit{m} variabili:
+\begin{equation}
+	Corr =
+	\begin{vmatrix}
+		1 & \frac{c_{x_1x_2}}{\sigma_{x_1} \sigma_{x_2}} & . & .  & \frac{c_{x_1x_m}}{\sigma_{x_1} \sigma_{x_m}}  \\
+		\frac{c_{x_1x_2}}{\sigma_{x_1} \sigma_{x_2}}  & 1 & . & . & . \\
+		. & . & . & . & . \\ 
+		. & . & . & 1 & . \\		
+		 \frac{c_{x_1 x_m}}{\sigma_{x_1} \sigma_{x_m}} & . & . & . & 1
+	\end{vmatrix}
+\end{equation}
+
+
+\section{Regressione lineare per serie di dati}
+Consideriamo un campione costituito da un insieme \textit{E} di coppie di dati, relativi a due caratteri \textit{x} e \textit{y}.
+\[E = \{(x_1, y_1), (x_2, y_2), ..., (x_n, y_n) \}\]
+
+
+\subsection{Analisi di regressione}
+Si vuole capire se tra i caratteri \textit{x} e \textit{y} esista un legame di tipo funzionale o una relazione di tipo funzionale che ne descriva in modo soddisfacentemente corretto il legame realmente esistente. \newline
+Si pensa ad uno dei due caratteri come ad una \textbf{variabile indipendente} (per esempio \textbf{x}). Si cerca di stabilire quale funzione $f$ , all'interno di una ben determinata classe, consenta di scrivere la seguente relazione:
+\[ y = f(x)\]
+che lega la \textbf{variabile indipendente $x$ }alla \textbf{variabile dipendente $y$}. \newline
+
+\subsection{La funzione $f$}
+È logico chiedersi cosa si intenda per "\textit{funzione che meglio descrive il legame tra i due caratteri}". \newline
+Si intende una funzione $f$ tale che minimizzi le distanze tra i valori del carattere $y$ effettivamente osservati e quelli che si otterrebbero per il carattere $y$ se la relazione che lega il carattere $y$ ad $x$ fosse proprio quella descritta da $f$. \newline
+Più formalmente, si intende una funzione che minimizzi la seguente quantità:
+\begin{align}	
+	g(f) = \sum_{i = 1}^{n} [f(x_i) - y_i]^2
+\end{align}
+dove l'elevamento a quadrato serve affinché le distanze vengano tutte considerate con segno positivo.
+Nel caso in cui $f$ sia vincolata ad essere una funzione lineare parleremo di \textbf{regressione lineare}.
+
+\subsection{Regressione lineare}
+L'equazione generica di una retta è $ y = mx + q$, quindi il problema si riduce a trovare il coefficiente angolare \textit{m} e il termine noto \textit{q} della retta. \newline
+Deve quindi risultare minima la quantità
+\begin{align}
+	g(m,q) = \sum_{i = 1}^{n} [mx_i + q - y_i]^2
+\end{align}
+I valori $mx_i$ e $q$ sono proprio i valori $f(x_i)$ che rappresentano l'approssimazione alle $y_i$ tramite la funzione $f$. \\
+Risolvendo il sistema algebrico ottenuto e ricordando le definizioni di varianza e covarianza si ottiene in definitiva:
+\begin{align}
+	m = \frac{c_{xy}}{s_x^2}
+\end{align}
+\begin{align}
+	q = \bar{y} - \frac{c_{xy}}{s_x^2} \bar{x}
+\end{align}
+
+\subsection{Coefficiente di correlazione lineare}
+Questo metodo consente di determinare la retta che meglio descrive la relazione tra i due caratteri, ma non dice nulla sul grado di approssimazione che questa retta è in grado di offrire. \\
+Viene quindi introdotto il \textbf{coefficiente di correlazione lineare}
+\begin{align}
+	r_{xy} = \frac{c_{xy}}{s_x s_y}
+\end{align}
+\textit{s} rappresenta lo scarto quadratico medio. \\
+Questo coefficiente assume sempre valori nell'intervallo $[-1; 1]$. Inoltre:
+\begin{itemize}
+	\item è \textbf{nullo} nel caso in cui le serie di dati siano \textbf{statisticamente incorrelate}
+	\item è 1 (in valore assoluto) quando le coppie di dati sono perfettamente allineate alla retta $y = mx + q$
+\end{itemize}
+
+\section{Regressione non lineare per serie di dati}
+Come già accennato, non sempre si è vincolati alla scelta di una retta tra le funzioni che possono descrivere la relazione tra le due serie di dati. La scelta di un altro tipo di funzione può essere data da impressioni sui dati raccolti o da altre preconoscenze sul fenomeno. Si ha un \textbf{modello non lineare di regressione}. \\
+Si noti che molte relazioni funzionali non lineari possono essere ricondotte a lineari tramite opportune trasformazioni delle variabili. \\
+Per esempio $ y = a e^{bx} $ può essere riscritta come $\tilde{y} = \beta \tilde{x} + \alpha$, dove:
+\begin{center}
+	$\tilde{y} = \log(y)$ \hspace{10mm} $\tilde{x} = x$ \hspace{10mm} $\alpha = \log(a)$ \hspace{10mm} $\beta = b$ 
+\end{center}
+La determinazione dei coefficienti \textit{a} e \textit{b} che meglio consentono di approssimare una serie di punti $\{x_i, y_i \}$ può essere effettuata riconducendosi ad una regressione lineare, ovvero determinando i coefficienti $\alpha$ e $\beta$ che meglio approssimano, linearmente,  $\{\tilde{x}_i, \tilde{y}_i \}$. Una volta determinati tali coefficienti, il calcolo di $a$ e $b$ risulta immediato: basta effettuare l'operazione inversa.
+
+\subsection{Alcune funzioni riconducibili a lineari}
+\[
+y = a\log(x) + b \hspace{10mm} y = ax^b \hspace{10mm} y = \frac{1}{a + be^{-x}}
+\]
+
+ 

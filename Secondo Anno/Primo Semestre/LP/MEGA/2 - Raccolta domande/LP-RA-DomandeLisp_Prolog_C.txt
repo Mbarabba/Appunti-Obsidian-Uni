@@ -1,0 +1,34 @@
+Prolog: 
+
+1)albero di ricorsione right-most
+2)dato un programma con diversi input dire cosa ne usciva (tutte le possibili combinazioni di backtrack)
+3)Un esercizio sulla logica proposizionale, dati fatti e regole fare le tue osservazioni su cosa potevi dedurre 
+4)Scrivere un programma in prolog che dato un insieme di vettori trovasse il massimo tra i massimi contenuti 
+nei singoli vettori.
+es: ([1, 15, 3], [7, 2, 10], [4,9,6 ]) restituisce 15.
+
+Lisp:
+
+1)activation frame (cos'è, dove sta, com'è fatto)
+2)definizione di lambda expression
+3)codice da scrivere: data una lista e un numero n, ritornare la lista senza quell'elemento
+4)Cosa sono le espressioni autovalutanti?
+5)trasformare una let in una lambda
+6)Un funzione fondamentale in (Common) Lisp, con varianti equivalenti in moltissimi altri linguaggi
+funzionali, logici e non è la CONS.
+1. Quale funzionalità deve fornire l’ambiente LISP a corredo di quest’operazione fondamentale?
+2. Ovvero, senza questa funzionalità, che potrebbe accadere durante l’esecuzione di questo
+programma?
+(DEFUN CORRI-CORRI (N l1 l2)
+( WHEN (PLUSP N)
+(APPEND l1 l2)
+(CORRI-CORRI (1-N) l1 l2)))
+(CORRI-CORRI (*42 GOZZOLION) ‘(123) ‘(456))
+7)Quali sono le tre fasi che permettono di applicare il paradigma funzionale?
+
+
+C:
+
+1)Quale è la differenza tra extern e static in C
+2)Costante di tipo puntatore a carattere
+3)Dichiarare un puntatore a una funzione che riceve come parametro un intero e una stringa!

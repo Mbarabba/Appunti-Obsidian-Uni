@@ -1,0 +1,137 @@
+*********************************************************************************************************************************************************************************************************************************
+La lista l'ho fatta utilizzando gli esami degli anni scorsi trovati su mega, più alcuni pdf in cui c'era una raccolta di domande.
+Alcune di queste potrebbero non essere più nel database delle domande ecc. (la X indica la frequenza con cui ho incontrato la domanda negli esami che ho controllato, ovvero tutti quelli che sono sul mega)
+
+*********************************************************************************************************************************************************************************************************************************
+LEGGIMI:
+Alcune domande qui sono solo accennate, basta fare una ctrl f nei documenti su mega che raccolgono le domande. (se non ci sono lì, allora vi tocca cercare fra gli esami degli anni passati, trovate cmq tutto su mega)
+*********************************************************************************************************************************************************************************************************************************
+
+Domande pratiche LP, 15-02-2022
+
+1. Lisp, definire funzione F che faccia... X X X X X
+	a. Funzione nopred che ha per argomenti... (opposto di filtra)
+	b. Funzione filtra... (opposto di nopred)
+	c. Funzione reduce...  (chiama anche foldl)
+	d. Funzione che ha per argomento un albero (ovvero una lista) e lo restituisce... ( aggiungi-42 )
+	e. Una funzione controlla...
+	f. Dati in input una lista e un numero...
+	g. Aggiungil, che ha per argomento una lista...
+	h. Funzione per-due
+	i. Varianza ( variance )
+	J. Definisci una funzione Lisp che dato per argomento il nome di un'altra funzione la applica al successore di un numero.
+	K. Funzione compose, che ritorna una funzione che è la composizione di due funzioni passatele come argomenti (tutte le funzioni prendono un solo argomento)
+	L. Funzione hornp
+	M. Average, che presa una lista in ingresso e un parametro &key (nn si legge bene la roba in grassetto, secondo compitino 2016 2017), chiamato per l'appunto key, restituisce la media dei valori presenti in ogli elemento  (estratti con la funzione associata a key)
+	a. Transpose, prende in input due liste e le traspone
+	
+2. Lisp, data la funzione F X X X X
+	a. Descrivere cosa fa
+	b. Identificare errore nel codice
+	c. Dire cosa restituite F con i parametri A e B
+		i. (defun what (e n list)...
+		ii. (defun mistery (f list)
+		iii. (defun mistery (e n list)
+		iv. (defun what (functions value)
+		v. (defun multiplex (functions value)
+		vi. (defun foo (l)) e (defun foo-aux (l)) 
+		vii. (defun multichan)
+		viii. (defun os (nomefunz list))
+		ix. (defun what (l1 l2)
+		x. (defun splice-in-at (e n list)
+3. Prolog, scrivere un predicato P che faccia... X X X
+	a. Data una lista IN e due elementi VECCHIo e NUOVO...
+	b. Scrivete un predicato Prolog project/3...
+4. Prolog, albero rightmost X X
+5. Prolog, DFA, cosa riconosce X X
+6. Prolog, dimostrazioni e definizione di x e y regole inferenza X X
+7. Prolog, dato programma X
+	a. P appendi, soluzioni alle queries qui sotto (4 queries)
+8. Lisp, dato il seguente programma, scriverne uno equivalente che usi una lambda expressione X
+	a. (defun f (x y))
+9. Lisp, data la seguente espressione aritmetica, riscrivila in forma s-expression e poi scrivere una funzione F che faccia ... X
+10. C, scrivere la funzione F che faccia...
+	a. Definizione di un albero n-ario con chiave una stringa... X
+	b. Struttura per la rappresentazione di matrici NxN di numeri a virgola mobile a doppia precisione...
+	c. Definizione di uno heap (priority queue) di N elementi 
+	d. Scrivete la definizione in C per una matrice, la definizione deve essere una struct che contiene ... X
+	e. Scrivere in C la definizione di una struttura che rappresenti i nodi interni di un 2-3 Tree (sono nodi con due chiavi, assumiamo intere, e tre figli)
+	f. Supponete di aver un header file ... X
+		i. My_stuff.h X
+		ii. API.h
+		iii. Main.c
+11. Lisp, dare una rappresentazione grafica in termini di cons-cell della seguente espressione simbolica...
+12. Lisp, data funzione F, definire la sua complessità spaziale e temporale X (very old 2012)
+
+Domande teoriche LP, 15-02-2022
+
+1. Activation frame X X
+2. Implementare Lisp o Prolog senza garbage colletor, Operazione che alloca memoria in Lisp X
+3. Passaggio di parametri ad una funzione per valore nei linguaggi funzionali puri X
+4. Lisp, concetto di Closure X
+5. Lisp, funzione Cons, X
+	a. Definirla
+	b. Quale funzionalità...
+	c. Ovvero, senza questa funzionalità
+6. Definizione di lambda expression, quando è fondamentale usarla
+7. Procendimento generale per transformare una let in una lambda
+8. Complessità spaziale e temporale, data la funzione F in Lisp X
+9. Definizione clausole di Horn
+10. Costante di tipo puntatore a carattere (trovata solo sul txt)
+Scrivere un programma in prolog che dato un insieme di vettori trovasse il massimo tra i massimi contenuti 
+nei singoli vettori.
+es: ([1, 15, 3], [7, 2, 10], [4,9,6 ]) restituisce 15. 
+11. Cosa si intende per ricorsione in coda e quali tipi di programmi essa denota?
+Fornire un esempio di codice con ricorsione in coda e un esempio di funzione che non può essere definita mediante una ricorsione in coda.
+12. Perché i linguaggi funzionali puri ammettono il passaggio dei parametri ad una funzione solo per valore e non, ad esempio, per riferimento?
+13. Cosa sono le espressioni autovalutanti in (Common) Lisp?
+	a. Cosa significa che si auto-valutano?
+14. Cosa fa interpete Lisp
+	a. Su che paradigma è basato lisp
+	b. Quanti momenti ha lisp
+	c. Cosa significa che un linguaggo è puro
+15. Differenza tra simbolo e atomo in Lisp
+	a. Quale tipologia di simboli abbiamo visto?
+	b. Che tipo di variabili possiamo usare in Lisp?
+16. Cosa mi aspetto di trovare dopo una parentesi tonda?
+	A. Se trovassi un simbolo di variabile dopo la
+	parentesi tonda, cosa produce l'interprete?
+	Esempio: (defparameter a 'product) dove
+	product è un nome di una funzione che ho
+	definito con defparameter.
+	B. Posso scrivere a con gli argomenti (per
+	esempio 2 e 4)? (a 2 4)
+	C. Quindi cosa deve trovare l'interprete dopo
+	una parentesi tonda?
+17. Che cos'è una funzione di ordine superiore?
+18. Supponiamo di dovere definire una funzione che realizzi la composizione di due funzioni che vengono date come argomento. Se io voglio di applicare all'interno della funzione un di quelle due, cosa devo fare? Es. (defun compose (f g))
+	A. Applico la funzione compose in questo modo: (compose 'succ 'succ) perchè devo mettere i quote?
+19. Qual è la differenza fra extern e static in C?
+20. Parla del concetto di trasparenza referenziale
+21. Quali sono le tre fasi che permettono di applicare il paradigma funzionale?
+22. Che cos'è un puntatore?
+23. Domande varie sulla definizione di puntatori (trovi la risposta nel pdf con le domande e risposte su C)
+24. Che cosa serve una funcall nell'ambito della
+definizione di una funzione?
+25. Definisci la deferenziazione di una certa variabile in C.
+26. Se scrivo nel prompt: (lambda ([argomenti]) [corpo]). Cosa produce la valutazione? Se invece scrivessi un doppio livello di parentesi con lambda come la interpreta? ((lambda ([argomenti]) [...])
+27. Definisci una funzione che restituisca una funzione (per esempio la compose), cosa mi aspetto certamente di trovare nel corpo? Per esempio la compose.
+28. Per valutare una lambda expression, cosa
+devo fare?
+	A. Che cos'è una chiusura? In che cosa si differenzia con la defun?
+29. Che cos'è e a che cosa serve defparameter?
+30. Che cos'è la ricorsione semplice, doppia e in
+coda?
+31. Quali sono alcuni predicati/funzioni utili da
+sapere per l'esame?
+32. Che cos'è un effetto collaterale?
+33. Che cos'è una funzione matematica?
+34. Che cos'è un programma in Lisp?
+35. Che cos'è una lambda
+	A. Che cos’è una lambda expression, che differenza c’è con defun?
+	B. Qual è un caso in cui è utile la lambda expression?
+36. Come sono denotate le liste in Lisp?
+	A. Cosa si usa per separare gli elementi delle liste in Lisp?
+37. Quali sono le funzioni definite costruttori in Lisp per costruire liste?
+38. Che cos'è (list 1 2 3)
+39. A che cosa serve il quote

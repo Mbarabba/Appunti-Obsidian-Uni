@@ -1,0 +1,197 @@
+\chapter[Distribuzioni notevoli]{Distribuzioni notevoli}
+
+\section{Introduzione}
+
+\subsection{Concetto di distribuzione}
+Nel capitolo 2 abbiamo visto che esiste una corrispondenza univoca tra la \textbf{funzione di ripartizione} e la:
+\begin{itemize}
+	\item \textbf{densità di probabilità} \hspace{19mm}variabili assolutamente continue
+	\item \textbf{distribuzione di probabilità} \hspace{6mm} variabili discrete
+\end{itemize}
+Per tale ragione si usa parlare di \textit{distribuzione} di una variabile intendendo indifferentemente la sua ripartizione o la sua densità (o distribuzione di probabilità).\\
+Nel seguito presenteremo dapprima le distribuzioni discrete e successivamente le distribuzioni assolutamente continue.\\
+La notazione $X \textapprox F$ va letta come "\textbf{la variabile $X$ è distribuita secondo $F$}"
+
+\subsection{Distribuzione di Bernoulli}
+\subsubsection{Definizione}
+Una variabile aleatoria \textit{X} è detta \textbf{distribuita secondo una \textit{Bernoulliana} di parametro \textit{p}}, $p \in [0,1]$ 
+\begin{equation}
+	X \textapprox B(p)
+\end{equation}
+se essa può assumere solo i valori 1 e 0 rispettivamente con probabilità $p$ e $1 - p$.
+
+\subsubsection{Distribuzione discreta di probabilità e funzione di ripartizione}
+\begin{equation}
+p_X(t) = 
+	\begin{dcases}
+		1 - p & se \; t = 0 \\
+		p & se \; t = 1\\
+		0 & altrimenti
+	\end{dcases}
+\end{equation}
+
+\begin{equation}
+F_X(t) = 
+\begin{dcases}
+0 & se \; t < 0 \\
+1-p & se \; 0 \leq t < 1\\
+1 & se \; t \geq 1
+\end{dcases}
+\end{equation}
+L’importanza di questa semplice distribuzione è ovvia, sono variabili di Bernoulli tutte quelle che individuano il verificarsi di uno specifico evento e che valgono 1 se questo si verifica e 0 altrimenti.
+
+\subsubsection{Valore atteso (media) e varianza}
+Immediate sono le determinazioni della \textbf{media} e della \textbf{varianza} di una \textbf{bernoulliana}, che risultano essere:
+\begin{equation}
+	E[X] = 0 \cdot (1-p) + 1 * p = p
+\end{equation}
+\begin{equation}
+V[X] = [0^2 \cdot (1 - p) + 1^2 \cdot p] - p^2 = (1 - p) p
+\end{equation}
+
+\subsection{Distribuzione binomiale}
+\subsubsection{Definizione}
+Siano $X_1, X_2, ... X_n$, \textit{n} variabili Bernoulliane di identico parametro $p$ e stocasticamente indipendenti tra loro.\\
+Sia poi $X$ una variabile aleatoria definita come somma delle $X_i$ ovvero sia:
+\[
+X = X_1 + X_2 + ... + X_n
+\]
+Una tale \textbf{variabile} è detta \textbf{distribuita secondo una Binomiale con parametri n e p}
+\begin{equation}
+	X \textapprox Bin(n, p)
+\end{equation}
+con $n$ numero di variabili e $p$ probabilità dell'evento 1. \\
+Una tale variabile può assumere qualsiasi valore intero $k$ compreso tra $0$ ed $n$ in accordo alla seguente probabilità:
+\begin{equation}
+	P(X = k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}
+\end{equation}
+La motivazione della precedente formula è la seguente
+\[
+p^k \cdot (1 - p)^{n - k}
+\]
+fornisce la probabilità che $k$ delle $n$ variabili $X_i$ assumano il valore 1 e che le restanti $(n-k)$ assumano valore 0.
+\[
+\binom{n}{k} = \frac{n!}{k! (n - k)!}
+\]
+esprime il numero di combinazioni possibili per cui $k$ variabili valgono 1 e $(n-k)$ valgono 0.\\
+
+\subsubsection{Distribuzione di probabilità e funzione di ripartizione}
+In definitiva la \textbf{distribuzione di probabilità} e la \textbf{funzione di ripartizione} risultano essere:
+\begin{equation}
+p_X(t) = 
+	\begin{dcases}
+		\binom{n}{t} p^t (1 - p)^{n - t} & se \; t \in \{0, 1, ..., n\} \\
+		0 & altrimenti
+	\end{dcases}
+\end{equation}
+
+\begin{equation}
+	F_X(t) = \sum_{0 \leq k \leq n: k \leq t} \binom{n}{k}p^k(1-p)^{n-k} \; \text{per ogni } t \in \mathbb{R}
+\end{equation}
+
+\subsubsection{Valore atteso e varianza}
+L’indipendenza tra le variabili $X_i$ consente di determinare facilmente il \textbf{valore atteso} e la \textbf{varianza} della variabile $X$.
+\begin{equation}
+	E[X] = E[X_1 + X_2 + ... + X_n] = E[X_1] + E[X_2] + ... + E[X_n] = n \cdot p
+\end{equation}
+\begin{equation}
+	V[X] = V[X_1 + X_2 + ... + X_n] = V[X_1] + V[X_2] + ... + V[X_n] = n \cdot (1-p) \cdot p
+\end{equation}
+La principale applicazione della distribuzione binomiale consiste nella definizione di variabili che “contano” le realizzazioni di eventi quando questi siano da considerarsi indipendenti e con identica probabilità di verificarsi.
+
+\subsection{Distribuzione di Poisson}
+\subsubsection{Definizione}
+La distribuzione di Poisson può essere vista come un caso particolare della distribuzione Binomiale che si ottiene quando il numero di variabili $X_i$ che compaiono in 
+\[
+X = X_1 + X_2 + ... + X_n
+\]
+tende ad infinito mentre il valore del parametro $p$ tende a 0, in modo tale che il prodotto $n \cdot p$ rimanga costante.\\
+In questo caso, assumento $\lambda = n \cdot p$ diremo che la variabile \[X = X_1 + X_2 + ... + X_n\] è \textbf{distribuita secondo una Poisson di parametro $\lambda$}, $\lambda \in \mathbb{R}_+$.
+\[
+X \textapprox Poi(\lambda)
+\]
+Osserviamo che la variabile così definita può assumere un qualsiasi valore intero $k$. Le probabilità associate ai valori assumibili da $X$ si ricavano dalla seguente relazione
+\begin{equation*}
+P(X = k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}
+\end{equation*}
+con un passaggio al limite per $n \to +\infty$ (sotto il vincolo $\lambda = n \cdot p$ costante) e risultano
+\begin{equation}
+	P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda} \; \; \forall k \in \mathbb{N}
+\end{equation}
+
+\subsubsection{Distribuzione di probabilità e funzione di ripartizione}
+In definitiva la distribuzione di probabilità e la funzione di ripartizione risultano essere:
+\begin{equation}
+	p_X(t) = 
+	\begin{dcases}
+		\frac{\lambda^t}{t!}\cdot e^{-\lambda} & se \; t \in \mathbb{N} \\
+		0 & altrimenti
+	\end{dcases}
+\end{equation}
+\begin{equation}
+	F_X(t) = \sum_{k \in \mathbb{N}: k \le t} \frac{\lambda^k}{k!} \cdot e^{-\lambda} \; \forall t \in \mathbb{R}
+\end{equation}
+
+\subsubsection{Valore atteso e varianza}
+Il valore atteso e la varianza di una tale variabile Poissoniana si ricavano facilmente da quelli delle Bernoulliane, ricordando che $\lambda = n \cdot p$\\
+Il valore atteso risulta essere 
+\begin{equation}
+	E[X] = n \cdot p = \lambda
+\end{equation}
+Per calcolare la varianza è necessario osservare che 
+\begin{equation}
+V[X] = n \cdot (1 - p) \cdot p = n \cdot p - n \cdot p^2 = \lambda - \frac{\lambda^2}{n} 
+\end{equation}
+Quando $n \to +\infty$ notiamo che 
+\begin{equation}
+V[X] = \lambda
+\end{equation}
+Abbiamo quindi uguali valore atteso e varianza, uguali a loro volta al parametro della distribuzione di Poisson medesima.
+\subsubsection{Considerazione}
+La distribuzione di Poisson viene utilizzata quando si considerino grandi popolazioni di individui in cui ogni individuo ha una probabilità $p$ molto piccola di essere soggetto ad uno specifico evento in esame. \\
+Per tale ragione la distribuzione di Poisson viene anche detta \textit{degli eventi rari}.
+
+\subsection{Distribuzione geometrica}
+\subsubsection{Definizione}
+Una variabile aleatoria $X$ è detta \textbf{distribuita secondo una Geometrica di parametro $p$}, $p \in [0,1]$
+\[
+X \textapprox Geo(p)
+\]
+se può assumere qualsiasi valore intero non negativo $k$ con probabilità 
+\[
+P(X = k) = p \cdot (1-p)^k
+\]
+ovvero se ha distribuzione di probabilità e funzione di ripartizione definite come segue
+
+\subsubsection{Distribuzione di probabilità e funzione di ripartizione}
+\begin{equation}
+	p_X(t) = 
+	\begin{dcases}
+		p \cdot (1-p)^t & se \; t \in \mathbb{N} \\
+		0 & altrimenti 
+	\end{dcases}
+\end{equation}
+\begin{equation}
+F_X(t) = \sum_{k \in \mathbb{N}: k \le t} p \cdot (1 - p)^k \; \forall t \in \mathbb{R}
+\end{equation}
+
+\subsubsection{Valore atteso e varianza}
+\begin{equation}
+	E[X] = \frac{1-p}{p}	
+\end{equation}
+\begin{equation}
+	V[X] = \frac{1-p}{p^2}
+\end{equation}
+
+\subsubsection{Esperimento}
+Si consideri un esperimento, ripetuto a istanti rappresentati da numeri interi, di verifica di funzionamento di una macchina: \\
+Se interpretiamo $p$ come la probabilità che a un certo istante la macchina si guasti, la distribuzione geometrica dà la distribuzione di probabilità del \textbf{primo} guasto, cioè $p_X(t)$ è la probabilità che il guasto si verifichi al tempo $(t + 1)$-mo (nei primi \textit{t} istanti funziona).
+
+\subsubsection{Proprietà di assenza di memoria}
+L'importanza di questa distribuzione sta nella \textbf{proprietà di assenza di memoria}.
+\begin{equation}
+P(X = k + m | X \ge m) = P(X = k)
+\end{equation}
+Per comprenderne il significato, supponiamo che $X$ sia il tempo di vita di una macchina soggetta a guasti (possono avvenire solo in corrispondenza di intervalli di tempo unitari), e supponiamo di aver rilevato che per $m$ unità di tempo essa non si sia guastata. \\
+La \textit{proprietà di assenza di memoria} asserisce che la probabilità che la macchina si guasti all’istante $(k+m)$-esimo, condizionata dall’evento $X \ge m$, è uguale alla probabilità iniziale che essa si guasti all’istante $k$-esimo. \\
+In definitiva, la \textbf{proprietà di assenza di memoria} asserisce che il \textbf{tempo trascorso da quando abbiamo iniziato ad esaminare il funzionamento della macchina non influisce sulla distribuzione del tempo restante al verificarsi del guasto}.

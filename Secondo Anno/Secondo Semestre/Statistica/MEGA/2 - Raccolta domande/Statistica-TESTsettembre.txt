@@ -1,0 +1,42 @@
+1) mostra l'inizio di un set di dati (state.division) predefinito in R
+2) inserisce l'intero set di dati in una tabella
+3) crea e visualizza un istogramma della tabella appena creata
+4) assegna ad f la frequenza relativa (A/sum(A))
+5) mostra il range di variazione di A (valore minimo e massimo)
+6) mostra l'inizio di un set di dati (iris) predefinito in R
+7) assegna a B i coefficienti di regressione lineare mediante chiamata di funzione sul set di dati iris
+8) assegna a C SOLO i coefficienti di regressione tralasciando gli altri dati
+9) plotta il set di dati iris
+10) aggiungi a ciò che hai appena plottato una retta di parametri settati in C (dalla regressione lineare), di colore rosso e di spessore 5pt
+
+_____________________________________________________________________
+lower <- -0.5
+upper <- 1.5
+n <- 30
+dati <- vector()
+i <- 1
+while (i <= n) {
+	temp = rnorm(1)
+	if ((temp >= lower) and (temp <= upper)) {
+		dati[i] <- temp
+		i <- i+1 }
+	}
+
+# ora in dati ho il mio campione distribuito secondo una normale che rispetta i limiti richiesti
+
+#INIZIO TEST A
+mu <- 0
+
+varianzaA <- 1
+alfaA <- 0.05
+mediaA <- mean(dati)
+intervallo_mediaA <- c(mediaA - qnorm(1-alfaA/2) * sqrt (varianzaA/n), mediaA + qnorm(1-alfaA/2) * sqrt (varianzaA/n))
+
+#Se mu = 0 appartiene all'intervallo restituito, allora accetteremo l'ipotesi nulla mu = 0, altrimenti la rifiuteremo (o meglio non la accetteremo)
+
+#INIZIO TEST B
+varianzaB <- var(dati) #è già quella corretta
+alfaB <- 0.1
+mediaB <- mean(dati) #ed è uguale a mediaA
+intervallo_mediaB <- c(mediaB - qnorm(1-alfaB/2) * sqrt (varianzaB/n), mediaB + qnorm(1-alfaB/2) * sqrt (varianzaB/n))
+#Se mu =/= 0 fornita ricade all'interno della regione accetteremo come media la mu fornita, altrimenti rifiuteremo.

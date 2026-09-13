@@ -1,0 +1,279 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {italian}
+\defcounter {refsection}{0}\relax 
+\select@language {italian}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Statistica descrittiva}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Introduzione}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.1}Definizione informale di statistica descrittiva}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.2}Definizione di popolazione}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.3}Caratteri}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.4}Rappresentazioni numeriche di dati statistici}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Concetto di frequenza}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}Frequenza assoluta}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.2}Distribuzione di frequenza assoluta dei dati}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.3}Frequenza cumulata assoluta}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.4}Frequenza relativa}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.5}Frequenza cumulata relativa}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.6}Altre definizioni}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Classi e partizioni}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.1}Caratteri continui}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.2}Caratteristiche delle classi}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Indici di tendenza centrale}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.1}Media}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.2}Momento $k$-esimo rispetto ad un valore di riferimento $y$}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.3}Mediana}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.4}Moda}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.5}Indici di variabilit\IeC {\`a} (omogeneit\IeC {\`a}, dispersione, ...)}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5.1}Varianza}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5.2}Scarto quadratico medio (o deviazione standard)}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.6}Rappresentazioni per caratteri bidimensionali}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.7}Frequenze}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.7.1}Frequenza assoluta}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.7.2}Frequenza cumulata assoluta}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.7.3}Frequenza relativa}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.7.4}Frequenza cumulata relativa}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.7.5}Distribuzione di frequenza doppia}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.8}Distribuzioni marginali}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.8.1}Definizioni}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.8.2}Un ragionamento}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.9}Covarianza}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.9.1}Serie statisticamente incorrelate}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.9.2}Serie statisticamente indipendenti}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.10}Regressione lineare per serie di dati}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.10.1}Analisi di regressione}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.10.2}La funzione $f$}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.10.3}Regressione lineare}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.10.4}Coefficiente di correlazione lineare}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.11}Regressione non lineare per serie di dati}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.11.1}Alcune funzioni riconducibili a lineari}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Calcolo delle probabilit\IeC {\`a}}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Introduzione}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Definizione}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Differenza tra calcolo delle probabilit\IeC {\`a} e statistica}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.3}Scuole di pensiero}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.4}Concetti di \textit {evento} e \textbf {probabilit\IeC {\`a}}}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.5}Definizione assiomatica di probabilit\IeC {\`a} e propriet\IeC {\`a} elementari}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.6}Spazio campione ed eventi}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.7}Eventi incompatibili}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.8}Definizione di probabilit\IeC {\`a} secondo Kolmogorov}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.9}Misura di probabilit\IeC {\`a}}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.10}Spazio campione infinito}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.11}Propriet\IeC {\`a} aggiuntive}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.12}Probabilit\IeC {\`a} di eventi elementari}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.13}Permutazioni}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.14}Combinazioni}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Probabilit\IeC {\`a} condizionata e indipendenza stocastica}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Probabilit\IeC {\`a} condizionata: introduzione}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Probabilit\IeC {\`a} condizionata: definizione}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Conseguenze del condizionamento}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.4}Eventi stocasticamente indipendenti}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.5}Formula del prodotto [chain rule]}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.6}Altre formule utili per il calcolo delle probabilit\IeC {\`a}}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Formula delle probabilit\IeC {\`a} totali}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Formula (teorema) di Bayes}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Variabili aleatorie unidimensionali}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}A cosa servono le variabili aleatorie (o casuali)?}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.2}Definizione di variabile aleatoria}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.3}Chiarimento}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.4}Funzione di ripartizione}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.5}Limiti della funzione di ripartizione}{29}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.6}Condizioni necessarie e sufficienti per la funzione di ripartizione}{29}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.7}Variabili aleatorie discrete}{30}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.8}Distribuzione discreta di probabilit\IeC {\`a}}{30}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.9}Propriet\IeC {\`a} delle distribuzioni discrete di probabilit\IeC {\`a}}{30}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Variabile aleatoria continua}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Variabile aleatoria assolutamente continua}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}Supporto}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.3}Probabilit\IeC {\`a} che una variabile continua assuma un valore in un intervallo}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.4}Relazioni tra funzione di ripartizione e funzione di densit\IeC {\`a} di probabilit\IeC {\`a} per variabili aleatorie assolutamente continue}{33}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Variabili aleatorie multidimensionali}{33}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}Variabili aleatorie bidimensionali assolutamente continue e funzione di ripartizione congiunta}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.2}Funzione di densit\IeC {\`a} congiunta}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.3}Funzioni marginali}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.4}Definizione di funzione marginale}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.5}Indipendenza tra variabili aleatorie}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Indici di tendenza centrale e variabilit\IeC {\`a}}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.1}Valore atteso}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.2}Momento centrale}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.3}Moda}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.4}Mediana}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.5}Quantili}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.6}Indici di variabilit\IeC {\`a}}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.7}Varianza}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.8}Marginali}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.9}Covarianza}{40}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.10}Coefficiente di correlazione lineare di Pearson}{41}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Distribuzioni notevoli}{42}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Introduzione}{42}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Concetto di distribuzione}{42}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}Distribuzione di Bernoulli}{42}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Definizione}{42}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Distribuzione discreta di probabilit\IeC {\`a} e funzione di ripartizione}{43}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Valore atteso (media) e varianza}{43}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.3}Distribuzione binomiale}{43}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Definizione}{43}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Distribuzione di probabilit\IeC {\`a} e funzione di ripartizione}{44}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Valore atteso e varianza}{44}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.4}Distribuzione di Poisson}{45}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Definizione}{45}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Distribuzione di probabilit\IeC {\`a} e funzione di ripartizione}{45}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Valore atteso e varianza}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Considerazione}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.5}Distribuzione geometrica}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Definizione}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Distribuzione di probabilit\IeC {\`a} e funzione di ripartizione}{47}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Valore atteso e varianza}{47}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Esperimento}{47}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Propriet\IeC {\`a} di assenza di memoria}{47}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Teoremi di convergenza}{48}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Introduzione}{48}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Convergenza in distribuzione}{48}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Legge dei grandi numeri}{49}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Introduzione}{49}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Definizione}{49}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.3}Osservazione}{49}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Teorema limite centrale}{50}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}Introduzione}{50}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.2}Definizione}{50}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.3}Valore atteso}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.4}Varianza}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.5}Conclusioni}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.6}Ricapitolando}{52}
