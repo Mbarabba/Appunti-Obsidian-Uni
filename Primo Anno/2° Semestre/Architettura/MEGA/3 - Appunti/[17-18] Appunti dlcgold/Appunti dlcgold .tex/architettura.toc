@@ -1,0 +1,51 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}Rappresentazione dell'informazione}{4}{chapter.2}% 
+\contentsline {subsubsection}{Modulo e segno}{5}{section*.2}% 
+\contentsline {subsubsection}{Rappresentazione Esadecimale}{6}{section*.3}% 
+\contentsline {subsubsection}{Errori e Precisione}{7}{section*.4}% 
+\contentsline {subsection}{\numberline {2.0.1}Tipi di Dati}{10}{subsection.2.0.1}% 
+\contentsline {subsubsection}{Forma Denormalizzata}{11}{section*.5}% 
+\contentsline {subsection}{\numberline {2.0.2}Varie Rappresentazioni}{11}{subsection.2.0.2}% 
+\contentsline {subsubsection}{Rappresentazione di Caratteri}{11}{section*.6}% 
+\contentsline {subsubsection}{Rappresentazioni di Audio e Immagini}{11}{section*.7}% 
+\contentsline {section}{\numberline {2.1}Esercizi}{12}{section.2.1}% 
+\contentsline {chapter}{\numberline {3}Il computer}{16}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}MIPS32}{17}{section.3.1}% 
+\contentsline {subsubsection}{R-Type}{18}{section*.8}% 
+\contentsline {subsubsection}{I-type}{22}{section*.9}% 
+\contentsline {subsubsection}{J-Type}{23}{section*.10}% 
+\contentsline {chapter}{\numberline {4}Reti Sequenziali e Combinatorie}{24}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}ALU}{43}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}ALU a 1bit}{43}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}ALU a 32bit}{45}{subsection.4.1.2}% 
+\contentsline {section}{\numberline {4.2}Esercizi}{48}{section.4.2}% 
+\contentsline {chapter}{\numberline {5}Assembly}{54}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}Datapath}{72}{chapter.6}% 
+\contentsline {subsection}{\numberline {6.0.1}Unit\IeC {\`a} di elaborazione}{75}{subsection.6.0.1}% 
+\contentsline {subsection}{\numberline {6.0.2}Performance singolo ciclo}{89}{subsection.6.0.2}% 
+\contentsline {subsection}{\numberline {6.0.3}Implementazione Multiciclo}{91}{subsection.6.0.3}% 
+\contentsline {subsubsection}{Macchina a stato finito}{98}{section*.11}% 
+\contentsline {subsection}{\numberline {6.0.4}CPI}{103}{subsection.6.0.4}% 
+\contentsline {chapter}{\numberline {7}Eccezioni}{105}{chapter.7}% 
+\contentsline {chapter}{\numberline {8}Gestione I/O}{109}{chapter.8}% 
+\contentsline {chapter}{\numberline {9}Cache}{126}{chapter.9}% 
+\contentsline {section}{\numberline {9.1}Cache}{127}{section.9.1}% 
+\contentsline {chapter}{\numberline {10}Tip \& Tricks}{130}{chapter.10}% 
+\contentsline {chapter}{\numberline {11}Approfondimento}{132}{chapter.11}% 
+\contentsline {section}{\numberline {11.1}IEEE 754}{132}{section.11.1}% 
+\contentsline {subsection}{\numberline {11.1.1}Operazioni in virgola mobile}{134}{subsection.11.1.1}% 
+\contentsline {subsubsection}{Somma}{134}{section*.12}% 
+\contentsline {subsubsection}{Moltiplicazione e Divisione}{138}{section*.13}% 
+\contentsline {subsection}{\numberline {11.1.2}Virgola Mobile in MIPS}{140}{subsection.11.1.2}% 
+\contentsline {section}{\numberline {11.2}Pipeline}{141}{section.11.2}% 
+\contentsline {subsection}{\numberline {11.2.1}Pipelined Datapath}{148}{subsection.11.2.1}% 
+\contentsline {subsection}{\numberline {11.2.2}Rappresentazione Grafica delle Pipeline}{156}{subsection.11.2.2}% 
+\contentsline {subsection}{\numberline {11.2.3}Control Unit con Pipeline}{161}{subsection.11.2.3}% 
+\contentsline {subsection}{\numberline {11.2.4}Esercizi}{166}{subsection.11.2.4}% 
+\contentsline {section}{\numberline {11.3}Gestione delle Priorit\IeC {\`a} nelle Interruzioni}{168}{section.11.3}% 
+\contentsline {subsection}{\numberline {11.3.1}Gestione Priorit\IeC {\`a} Software: RMI}{173}{subsection.11.3.1}% 
+\contentsline {subsection}{\numberline {11.3.2}Gestione Priorit\IeC {\`a} Hardware}{173}{subsection.11.3.2}% 
+\contentsline {subsection}{\numberline {11.3.3}Gestione Priorit\IeC {\`a} mista}{174}{subsection.11.3.3}% 
+\contentsline {section}{\numberline {11.4}Approfondimento Cache}{174}{section.11.4}% 

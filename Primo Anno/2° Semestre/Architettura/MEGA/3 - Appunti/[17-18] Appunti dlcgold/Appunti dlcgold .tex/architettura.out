@@ -1,0 +1,37 @@
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Rappresentazione dell'informazione}{}% 2
+\BOOKMARK [1][-]{subsection.2.0.1}{Tipi di Dati}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.0.2}{Varie Rappresentazioni}{subsection.2.0.1}% 4
+\BOOKMARK [1][-]{section.2.1}{Esercizi}{chapter.2}% 5
+\BOOKMARK [0][-]{chapter.3}{Il computer}{}% 6
+\BOOKMARK [1][-]{section.3.1}{MIPS32}{chapter.3}% 7
+\BOOKMARK [0][-]{chapter.4}{Reti Sequenziali e Combinatorie}{}% 8
+\BOOKMARK [1][-]{section.4.1}{ALU}{chapter.4}% 9
+\BOOKMARK [2][-]{subsection.4.1.1}{ALU a 1bit}{section.4.1}% 10
+\BOOKMARK [2][-]{subsection.4.1.2}{ALU a 32bit}{section.4.1}% 11
+\BOOKMARK [1][-]{section.4.2}{Esercizi}{chapter.4}% 12
+\BOOKMARK [0][-]{chapter.5}{Assembly}{}% 13
+\BOOKMARK [0][-]{chapter.6}{Datapath}{}% 14
+\BOOKMARK [1][-]{subsection.6.0.1}{Unit\340 di elaborazione}{chapter.6}% 15
+\BOOKMARK [2][-]{subsection.6.0.2}{Performance singolo ciclo}{subsection.6.0.1}% 16
+\BOOKMARK [2][-]{subsection.6.0.3}{Implementazione Multiciclo}{subsection.6.0.1}% 17
+\BOOKMARK [2][-]{subsection.6.0.4}{CPI}{subsection.6.0.1}% 18
+\BOOKMARK [0][-]{chapter.7}{Eccezioni}{}% 19
+\BOOKMARK [0][-]{chapter.8}{Gestione I/O}{}% 20
+\BOOKMARK [0][-]{chapter.9}{Cache}{}% 21
+\BOOKMARK [1][-]{section.9.1}{Cache}{chapter.9}% 22
+\BOOKMARK [0][-]{chapter.10}{Tip \046 Tricks}{}% 23
+\BOOKMARK [0][-]{chapter.11}{Approfondimento}{}% 24
+\BOOKMARK [1][-]{section.11.1}{IEEE 754}{chapter.11}% 25
+\BOOKMARK [2][-]{subsection.11.1.1}{Operazioni in virgola mobile}{section.11.1}% 26
+\BOOKMARK [2][-]{subsection.11.1.2}{Virgola Mobile in MIPS}{section.11.1}% 27
+\BOOKMARK [1][-]{section.11.2}{Pipeline}{chapter.11}% 28
+\BOOKMARK [2][-]{subsection.11.2.1}{Pipelined Datapath}{section.11.2}% 29
+\BOOKMARK [2][-]{subsection.11.2.2}{Rappresentazione Grafica delle Pipeline}{section.11.2}% 30
+\BOOKMARK [2][-]{subsection.11.2.3}{Control Unit con Pipeline}{section.11.2}% 31
+\BOOKMARK [2][-]{subsection.11.2.4}{Esercizi}{section.11.2}% 32
+\BOOKMARK [1][-]{section.11.3}{Gestione delle Priorit\340 nelle Interruzioni}{chapter.11}% 33
+\BOOKMARK [2][-]{subsection.11.3.1}{Gestione Priorit\340 Software: RMI}{section.11.3}% 34
+\BOOKMARK [2][-]{subsection.11.3.2}{Gestione Priorit\340 Hardware}{section.11.3}% 35
+\BOOKMARK [2][-]{subsection.11.3.3}{Gestione Priorit\340 mista}{section.11.3}% 36
+\BOOKMARK [1][-]{section.11.4}{Approfondimento Cache}{chapter.11}% 37
