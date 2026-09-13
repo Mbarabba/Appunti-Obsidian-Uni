@@ -1,0 +1,21 @@
+/*VARIABLES
+  edges to be covered :
+     x_{ij}
+*/
+
+/* OBJECTIVE: MINIMIZE EDGES */
+min: AB+AC+AG+AF+BH+CD+DF+DE+GI+IH+IJ;
+
+/* COVERING RESTRICTIONS */
+A: AB + AC + AG + AF >= 1;
+B: AB + BH   	     >= 1;
+C: AC + CD     	     >= 1;
+D: CD + DF + DE      >= 1;
+E: DE 		     >= 1;
+F: AF + DF 	     >= 1;
+G: AG + GI 	     >= 1;
+H: BH + IH 	     >= 1;
+I: GI + IH + IJ	     >= 1;
+J: IJ		     >= 1;
+
+bin AB,AC,AG,AF,BH,CD,DF,DE,GI,IH,IJ;

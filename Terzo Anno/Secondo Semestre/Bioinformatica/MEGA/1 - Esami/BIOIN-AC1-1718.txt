@@ -1,0 +1,8 @@
+Rispondere a 3 delle seguenti 4 domande. 
+Le domande sono in ordine di difficoltà [e punteggio] decrescente.
+Tempo per l'esame: 1h (quindi 20 minuti a domanda)
+
+1) Descrivere il pattern matching su suffix array (con array LCP)
+2) Descrivere l'allineamento con gap generico 
+3) Descrivere bit-parallel per il pattern matching
+4) Descrivere UPGMA
