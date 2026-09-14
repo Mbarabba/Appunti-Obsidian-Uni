@@ -1,8 +1,8 @@
-PWD /home/mbarabba/Desktop/Appunti-Obsidian-Uni/Primo Anno/Architettura/Latex
+PWD /home/mbarabba/Desktop/Appunti-Uni/Primo Anno/2° Semestre/Architettura/Latex
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/mbarabba/Desktop/Appunti-Obsidian-Uni/Primo Anno/Architettura/Latex/main.tex
+INPUT /home/mbarabba/Desktop/Appunti-Uni/Primo Anno/2° Semestre/Architettura/Latex/main.tex
 OUTPUT main.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -356,6 +356,12 @@ INPUT Capitoli/Teoria/Instruction Set Architecture/ISA.aux
 INPUT ./Capitoli/Teoria/Assembly/Assembly.aux
 INPUT ./Capitoli/Teoria/Assembly/Assembly.aux
 INPUT Capitoli/Teoria/Assembly/Assembly.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
+INPUT Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
+INPUT Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
 OUTPUT main.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -529,11 +535,24 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmtk10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmtk10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmtk10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT ./Immagini/Flusso di controllo.png
 INPUT ./Immagini/Flusso di controllo.png
 INPUT ./Immagini/Flusso di controllo.png
 INPUT ./Immagini/Flusso di controllo.png
 INPUT ./Immagini/Flusso di controllo.png
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.tex
+OUTPUT Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.tex
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.tex
+INPUT Capitoli/Teoria/Circuiti Logici/Reti combinatorie.tex
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.tex
+OUTPUT Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.tex
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.tex
+INPUT Capitoli/Teoria/Circuiti Logici/Reti sequenziali.tex
 INPUT main.aux
 INPUT ./Capitoli/Teoria/Rappresentazione binaria/Sistemi numerici.aux
 INPUT ./Capitoli/Teoria/Rappresentazione binaria/Sistemi numerici.aux
@@ -556,6 +575,12 @@ INPUT Capitoli/Teoria/Instruction Set Architecture/ISA.aux
 INPUT ./Capitoli/Teoria/Assembly/Assembly.aux
 INPUT ./Capitoli/Teoria/Assembly/Assembly.aux
 INPUT Capitoli/Teoria/Assembly/Assembly.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
+INPUT Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
+INPUT Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb
@@ -570,6 +595,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss17.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb

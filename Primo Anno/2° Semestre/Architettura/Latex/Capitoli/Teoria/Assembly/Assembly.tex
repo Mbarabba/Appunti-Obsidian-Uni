@@ -281,6 +281,7 @@ Nelle etichette presenti nelle istruzioni di salto, l'assemblatore deve generare
 \newpage
 \section{Convenzioni nomi ed uso dei registri}
 
+\subsection{Tabella}
 \begin{center}
     \begin{tabular}{ |c|c|c| }
         \hline
@@ -318,6 +319,23 @@ Nelle etichette presenti nelle istruzioni di salto, l'assemblatore deve generare
     \end{itemize}
 \end{center}
 
+\subsection{Registri temporanei "salvati" e "non salvati"}
+Se una procedura usa registri, cosa succede del contenuto lasciato nei registri dal chiamante?
+
+\subsubsection{Registri \$t (temporary)}
+\begin{itemize}
+    \item Il chiamante non si può aspettare di trovare immutati i contenuti dei registri \$t dopo una chiamata a procedura
+    \item I contenuti dei registri \$ devono essere salvati dal chiamante prima della chiamata a procedura
+\end{itemize}
+
+\subsubsection{Registri \$s (saved)}
+\begin{itemize}
+    \item Il chiamante ha il diritto di aspettarsi che i contenuti dei registri \$s siano immutati dopo una chiamata a procedura
+    \item Se la procedura usa i registri \$s deve salvarne il contenuto all'inizio a ripristinarlo prima del ritorno
+    \item Il contenuto dei registri \$s viene salvato nello stack
+\end{itemize}
+
+\newpage
 \section{Direttive all'assemblatore}
 \subsection{Cosa sono?}
 Sono indicazioni date all'assembler per consentirgli di:
@@ -351,7 +369,6 @@ Sono indicazioni date all'assembler per consentirgli di:
     \end{itemize}
 \end{itemize}
 
-\newpage
 \subsection{Esempio d'uso}
 \begin{lstlisting}
 item:
@@ -366,6 +383,7 @@ main:
                     #all'indirizzo di memoria 0 piu' il valore che sta nel registro $t0
 \end{lstlisting}
 
+\newpage
 \section{Pseudoistruzioni}
 \subsection{Cosa sono?}
 Sono istruzioni assembly che non hanno una corrispondete istruzione macchina, per far si che il programma funzioni vengono tradotte dall'assembler in una sequenza di istruzioni
@@ -390,11 +408,274 @@ Sono istruzioni assembly che non hanno una corrispondete istruzione macchina, pe
     \end{itemize}
 \end{itemize}
 
+\newpage
+\section{Procedure}
+\subsection{Cosa sono?}
+Le procedure sono dei meccanismi che organizzano in modo comprensibile e riutilizzabile il codice e che aiutano i programmatori a concentrarsi su una parte del problema alla volta
+
+\subsection{Passaggi di una procedura}
+\begin{enumerate}
+    \item Setting dei parametri in un luogo accessibile alla procedura
+    \item Trasferire il controllo alla procedura
+    \item Acquisire risorse per l'esecuzione della procedura
+    \item Eseguire il compito richiesto
+    \item Mettere il risultato in un luogo accessibile al chiamante
+    \item Restituire il controllo al punto di partenza
+\end{enumerate}
+
+\subsection{Passaggio parametri}
+\begin{itemize}
+    \item \texttt{\$a0-\$a3}: Registri argomento per il passaggio dei parametri
+    \item \texttt{\$v0-\$v1}: Registri valore per la restituzione dei risultati
+\end{itemize}
+
+Dal punto di vista hardware sono registri come tutti gli altri, ma il loro utilizzo per il passaggio di parametri e risultati è convenzione programmativa che essere rispettata per consentire di scrivere procedure che:
+\begin{itemize}
+    \item Possono essere scritte senza bisogno di sapere come è fatto il programma che le chiama
+    \item Possono essere chiamate senza bisogno di sapere come sono fatte
+\end{itemize}
+
+\subsection{Procedure innestate}
+\subsubsection{Procedure "foglia" e "non foglia"}
+\begin{itemize}
+    \item Una procedura foglia NON chiama altre procedure
+    \item Una procedura non foglia  chiama altre procedure
+\end{itemize}
+
+\subsubsection{Cosa succede se una procedura ne chiama un'altra?}
+\begin{enumerate}
+    \item Si perde il contenuto di \$ra della prima chiamata?
+    \item Procedure recursive?
+    \item Bisogna che una procedura "non foglia" salvi il contenuto di \$ra e lo ripristini prima del ritorno
+\end{enumerate}
+
+\newpage
+\subsection{Esempio}
+\begin{lstlisting}
+.text
+# ==========================================
+# Esempio di Procedura in MIPS
+# ==========================================
+
+main:
+    # (Codice del main che prepara i argomenti e chiama la procedura)
+    li $a0, 5                # Primo argomento
+    li $a1, 10               # Secondo argomento
+    jal mia_procedura        # Salta alla procedura e salva l'indirizzo di ritorno in $ra
+    # ... continuazione del main ...
+    j fine
+
+mia_procedura:
+    # ----------------------------------------------------
+    # PASSAGGIO 1: Salvare i parametri (se necessario)
+    # ----------------------------------------------------
+    # I parametri in ingresso arrivano nei registri $a0-$a3. 
+    # Se la procedura li modifica e ne avra' ancora bisogno, 
+    # oppure se chiama altre funzioni, li salva sullo stack.
+    
+    # ----------------------------------------------------
+    # PASSAGGIO 2: Assegnare lo spazio sullo stack per la procedura
+    # ----------------------------------------------------
+    addi $sp, $sp, -12       # Decrementa lo stack pointer per fare spazio (es. 3 word)
+
+    # ----------------------------------------------------
+    # PASSAGGIO 3: Salvare i registri che la procedura altera
+    # ----------------------------------------------------
+    # Salva $ra (poiche' e' una procedura non foglia o per sicurezza)
+    sw $ra, 8($sp)          
+    # Salva i registri $s0-$s7 che la procedura intende utilizzare
+    sw $s0, 4($sp)          
+
+    # ----------------------------------------------------
+    # PASSAGGIO 4: Eseguire il corpo della procedura (il compito)
+    # ----------------------------------------------------
+    add $s0, $a0, $a1        # Esegue un'operazione utile (es. somma $a0 + $a1)
+    
+    # ----------------------------------------------------
+    # PASSAGGIO 5: Mettere il valore di ritorno nei registri appositi
+    # ----------------------------------------------------
+    move $v0, $s0            # Il risultato viene posizionato in $v0 (o $v0-$v1)
+
+    # ----------------------------------------------------
+    # PASSAGGIO 6: Ripristinare lo stack e tornare al chiamante
+    # ----------------------------------------------------
+    lw $s0, 4($sp)           # Ripristina il registro salvato $s0
+    lw $ra, 8($sp)           # Ripristina l'indirizzo di ritorno $ra
+    addi $sp, $sp, 12        # Ripristina lo stack pointer originale
+    jr $ra                   # Salta all'indirizzo contenuto in $ra per tornare al chiamante
+
+fine:
+    # Fine del programma principale
+\end{lstlisting}
+
+\newpage
+\subsection{Schema uso generale dello stack}
+\begin{center}
+    \begin{tikzpicture}[font=\sffamily, >=Latex, scale=1.2]
+
+        % Definizione colori
+        \definecolor{stackblue}{RGB}{217, 242, 253}
+        \definecolor{borderblue}{RGB}{40, 50, 70}
+        \definecolor{regcolor}{RGB}{45, 95, 140}
+
+        % ========================================================
+        % 1. STRUTTURA DELLO STACK (Rettangoli verticali)
+        % Larghezza: 3.2 cm, asse orizzontale: x da 0 a 3.2
+        % ========================================================
+        
+        % Sezione 1: "..." (in alto)
+        \draw[fill=stackblue, draw=borderblue, thick] (0, 7.5) rectangle (3.2, 8.3);
+        \node[font=\bfseries\Large] at (1.6, 7.9) {\dots};
+
+        % Sezione 2: Argument 6
+        \draw[fill=stackblue, draw=borderblue, thick] (0, 6.8) rectangle (3.2, 7.5);
+        \node[font=\bfseries] at (1.6, 7.15) {Argument 6};
+
+        % Sezione 3: Argument 5
+        \draw[fill=stackblue, draw=borderblue, thick] (0, 6.1) rectangle (3.2, 6.8);
+        \node[font=\bfseries] at (1.6, 6.45) {Argument 5};
+
+        % Sezione 4: Saved registers
+        \draw[fill=stackblue, draw=borderblue, thick] (0, 3.3) rectangle (3.2, 6.1);
+        \node[font=\bfseries\large] at (1.6, 4.7) {Saved registers};
+
+        % Sezione 5: Local variables (in basso)
+        \draw[fill=stackblue, draw=borderblue, thick] (0, 0.0) rectangle (3.2, 3.3);
+        \node[font=\bfseries\large] at (1.6, 1.65) {Local variables};
+
+        % Contorno esterno rinforzato
+        \draw[draw=borderblue, line width=1.5pt] (0, 0) rectangle (3.2, 8.3);
+
+        % ========================================================
+        % 2. TESTI E FRECCE SULL'ASSE DI DESTRA
+        % ========================================================
+        
+        % Higher memory addresses
+        \node[anchor=west, font=\bfseries\large, text=borderblue] at (3.35, 8.4) {Higher memory addresses};
+
+        % Stack grows (con freccia verso il basso)
+        \node[align=left, font=\bfseries\large, text=borderblue] at (3.9, 2.7) {Stack\\grows};
+        \draw[->, line width=1.2pt] (3.9, 2.1) -- (3.9, 1.0);
+
+        % Lower memory addresses
+        \node[anchor=west, font=\bfseries\large, text=borderblue] at (3.35, -0.1) {Lower memory addresses};
+
+        % ========================================================
+        % 3. PUNTATORI AI REGISTRI ($fp e $sp)
+        % ========================================================
+        
+        % Frame Pointer ($fp) alla base degli argomenti / inizio saved registers
+        \node[font=\ttfamily\bfseries\Large, text=regcolor] at (-1.5, 6.1) {\$fp};
+        \draw[->, line width=1.4pt] (-0.9, 6.1) -- (-0.05, 6.1);
+
+        % Stack Pointer ($sp) alla base dello stack frame
+        \node[font=\ttfamily\bfseries\Large, text=regcolor] at (-1.5, 0.0) {\$sp};
+        \draw[->, line width=1.4pt] (-0.9, 0.0) -- (-0.05, 0.0);
+
+        % ========================================================
+        % 4. FUMETTI ESPLICATIVI (Callouts)
+        % ========================================================
+
+        % --- Fumetto Superiore Sinistro (Parametri oltre i primi 4) ---
+        \filldraw[fill=white, draw=black, thick] 
+            (0.1, 6.9) -- (-1.6, 7.3) -- (-1.5, 6.7) -- cycle;
+        \filldraw[fill=white, draw=black, thick] 
+            (-3.7, 7.1) ellipse (2.1cm and 0.95cm);
+        \node[align=center, font=\bfseries\footnotesize] at (-3.7, 7.1) {
+            Parametri oltre i\\
+            primi 4 (che sono\\
+            passati nei registri)
+        };
+
+        % --- Fumetto Inferiore Sinistro ($sp modificato...) ---
+        \filldraw[fill=white, draw=black, thick] 
+            (-1.4, 0.6) -- (-1.2, 1.8) -- (-1.8, 1.2) -- cycle;
+        \filldraw[fill=white, draw=black, thick] 
+            (-3.8, 2.9) ellipse (2.35cm and 1.6cm);
+        \node[align=center, font=\bfseries\footnotesize] at (-3.8, 2.9) {
+            \$sp viene modificato\\
+            all'inizio della\\
+            procedura e\\
+            ripristinato alla fine.\\
+            Viene usato come\\
+            registro base per\\
+            accedere ai dati locali
+        };
+
+        % --- Fumetto Destro (Spazio allocato nello stack...) ---
+        \filldraw[fill=white, draw=black, thick] 
+            (4.9, 2.8) -- (5.8, 3.9) -- (5.0, 3.4) -- cycle;
+        \filldraw[fill=white, draw=black, thick] 
+            (7.4, 5.2) ellipse (2.55cm and 1.85cm);
+        \node[align=center, font=\bfseries\footnotesize] at (7.4, 5.2) {
+            Nello stack viene allocato\\
+            spazio per tutti i dati\\
+            ``locali''\\
+            il cui ``lifetime'' \`e limitato\\
+            all'esecuzione della\\
+            procedura
+        };
+
+    \end{tikzpicture}
+\end{center}
+
+\subsection{Salvataggio dei registri all'interno dello stack}
+Cosa fa la procedura?
+
+"Alloca" spazio nello stack:
+\begin{itemize}
+    \item Decementra \$sp per lasciare in stack lo spazio necessario al salvataggio (1 word per ciascun registro da salvare)
+    \item Salva \$ra
+    \item Salva eventuali altri registri usando \$sp
+    \item Ripristina i registri
+    \item Incrementa \$sp per riportarlo alla situazione iniziale
+    \item Jump register a \$ra (ritorno dalla procedura) 
+\end{itemize}
+
+\subsection{Osservazioni registri \$sp e \$fp}
+\subsubsection{Frame di stack}
+Un frame di stack (oppure di chiamata a procedure) è un blocco di memoria associato alla procedura.
+
+La sua dimensione è un multiplo della parola doppia (8 Byte / 64 bit)
+
+\subsubsection{\$sp - Stack pointer}
+Punta alla prima parola del frame
+
+\subsubsection{\$fp - Frame pointer}
+Punta all'ultima parola del frame
+
+\newpage
 \section{Flusso di controllo}
 \subsection{Problema}
 \begin{center}
     \includegraphics[scale=0.46]{Immagini/Flusso di controllo.png}
 \end{center}
+
+\subsection{Ruolo della procedura chiamante}
+Questi sono i passaggi che deve eseguire prima di chiamare una procedura:
+\begin{enumerate}
+    \item Impostare gli argomenti da passare alla procedure in \texttt{\$a0-\$a3}
+    \item Salvare eventualmente i registri \texttt{\$a0-\$a3} e \texttt{\$t0-\$t9} in quando la procedura chiamata può usare liberamente questi registri
+    \item Chiamare la procedura tramite l'istruzione \texttt{jal nome\_procedura}
+\end{enumerate}
+
+\subsection{Ruolo della procedura chiamata}
+\subsubsection{Appena chiamata}
+\begin{enumerate}
+    \item Allocare il suo stack frame (\$sp = \$sp $-$ dimensione frame procedura)
+    \item Salvare i valori disponibili nei registri \texttt{\$s0-\$s7, \$fp, \$ra} se intende usare tali registri per la sua esecuzione.\\ 
+    Se per esempio la procedura non chiama un'altra procedura non è necessario salvare il registro \$ra
+    \item Settare il frame pointer (che indica l'indirizzo dell'ultima parola del frame) a \texttt{\$fp = \$sp}$-$ dimensione frame procedura$+4$ 
+\end{enumerate}
+
+\subsubsection{Fine esecuzione}
+\begin{enumerate}
+    \item Mettere il valore di ritorno nei registri \texttt{\$v0, \$v1}
+    \item Ripristinare i valori dei registri salvati sullo stack (\texttt{\$s0-\$s7, \$fp, \$ra})
+    \item Liberare lo spazio sullo stack \texttt{$sp = $sp} $+$ dimensione frame procedura
+    \item Eseguire l'istruzione \texttt{jr \$ra}
+\end{enumerate}
+
 
 \subsection{Istruzione jal - Jump And Link}
 \subsubsection{Cosa fa?}
@@ -431,6 +712,7 @@ raddoppia:
     jr   $ra                   # Ritorno al chiamante: salta all'indirizzo contenuto in $ra
 \end{lstlisting}
 
+\newpage
 \subsection{Istruzione jr - Jump Register}
 \subsubsection{Cosa fa?}
 \begin{itemize}
@@ -481,6 +763,8 @@ fine:
     jr   $ra                   # <--- Ritorna al chiamante saltando all'indirizzo in $ra
 \end{lstlisting}
 
+
+\newpage
 \section{Syscall}
 \subsection{Cosa sono?}
 Sono delle operazioni analoghe a delle chiamate di procedura che permettono di emulare alcune funzionalità base del sistema operativo.
@@ -629,3 +913,4 @@ fine:
     move $v0, $t2
     jr   $ra
 \end{lstlisting}
+
