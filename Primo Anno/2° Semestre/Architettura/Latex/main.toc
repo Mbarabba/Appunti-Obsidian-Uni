@@ -278,11 +278,22 @@
 \contentsline {subsubsection}{Schema dettagliato}{68}{subsubsection*.65}%
 \contentsline {subsubsection}{Tabella}{68}{subsubsection*.66}%
 \contentsline {subsubsection}{}{68}{subsubsection*.67}%
-\contentsline {section}{\numberline {12.8}Logiche a 2 livelli e PLA}{69}{section.12.8}%
-\contentsline {section}{\numberline {12.9}Array di elementi logici}{69}{section.12.9}%
-\contentsline {chapter}{\numberline {13}Reti sequenziali}{70}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Cosa è un circuito (o rete) sequenziale?}{70}{section.13.1}%
-\contentsline {part}{2\hspace {1em}Esercitazioni svolte}{71}{part.2}%
-\contentsline {part}{3\hspace {1em}Laboratori svolti}{72}{part.3}%
-\contentsline {part}{4\hspace {1em}Quiz Mega svolti}{73}{part.4}%
-\contentsline {part}{5\hspace {1em}Domande aperte Mega svolte}{74}{part.5}%
+\contentsline {section}{\numberline {12.8}PLA - Programmable Logic Array}{69}{section.12.8}%
+\contentsline {subsection}{\numberline {12.8.1}Cosa è?}{69}{subsection.12.8.1}%
+\contentsline {subsection}{\numberline {12.8.2}Da cosa è compasta?}{69}{subsection.12.8.2}%
+\contentsline {subsection}{\numberline {12.8.3}Esempio}{69}{subsection.12.8.3}%
+\contentsline {subsubsection}{Schema semplificato}{69}{subsubsection*.68}%
+\contentsline {subsubsection}{Tabella}{69}{subsubsection*.69}%
+\contentsline {subsubsection}{Schema dettagliato}{70}{subsubsection*.70}%
+\contentsline {subsubsection}{Formula dell'esempio}{70}{subsubsection*.71}%
+\contentsline {section}{\numberline {12.9}Array di elementi logici}{71}{section.12.9}%
+\contentsline {subsection}{\numberline {12.9.1}Cosa sono?}{71}{subsection.12.9.1}%
+\contentsline {subsection}{\numberline {12.9.2}Esempio con Multiplexer a 32 bit}{71}{subsection.12.9.2}%
+\contentsline {subsubsection}{Schema semplificato}{71}{subsubsection*.72}%
+\contentsline {subsubsection}{Schema dettagliato}{71}{subsubsection*.73}%
+\contentsline {chapter}{\numberline {13}Reti sequenziali}{72}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Cosa è un circuito (o rete) sequenziale?}{72}{section.13.1}%
+\contentsline {part}{2\hspace {1em}Esercitazioni svolte}{73}{part.2}%
+\contentsline {part}{3\hspace {1em}Laboratori svolti}{74}{part.3}%
+\contentsline {part}{4\hspace {1em}Quiz Mega svolti}{75}{part.4}%
+\contentsline {part}{5\hspace {1em}Domande aperte Mega svolte}{76}{part.5}%

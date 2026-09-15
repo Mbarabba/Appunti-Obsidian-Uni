@@ -548,6 +548,11 @@ OUTPUT Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.tex
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.tex
 INPUT Capitoli/Teoria/Circuiti Logici/Reti combinatorie.tex
+INPUT ./Immagini/Schema PLA.png
+INPUT ./Immagini/Schema PLA.png
+INPUT ./Immagini/Schema PLA.png
+INPUT ./Immagini/Schema PLA.png
+INPUT ./Immagini/Schema PLA.png
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.tex
 OUTPUT Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.tex

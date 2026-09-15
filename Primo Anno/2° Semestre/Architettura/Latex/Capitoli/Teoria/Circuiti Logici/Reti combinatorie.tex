@@ -571,5 +571,263 @@ Se un multiplexer riceve in input $n$ segnali, esso necessità di $\log_2(n)$ se
     \end{equation*}}
 \end{minipage}
 
-\section{Logiche a 2 livelli e PLA}
+\section{PLA - Programmable Logic Array}
+\subsection{Cosa è?}
+La somma di prodotti corrisponde ad una implementazione comunemente nota come Programmable Logic Array (PLA)
+
+\subsection{Da cosa è compasta?}
+\begin{itemize}
+    \item Un insieme di input
+    \item I corrispondenti input complementanti (mediante inverter) per poter gestire più uscite
+    \item Una logica a 2 stage:
+    \begin{enumerate}
+        \item Un array di prote logiche AND
+        \item Un array di porte logiche OR
+    \end{enumerate}
+\end{itemize}
+
+\subsection{Esempio}
+
+\begin{minipage}[t]{0.45\textwidth}
+    \subsubsection{Schema semplificato}
+    \begin{tikzpicture}[font=\sffamily, thick]
+
+        % ==========================================
+        % 1. Blocchi Principali (AND e OR gates)
+        % ==========================================
+        \draw (0, 0) rectangle (3.6, 3.5);
+        \node at (1.8, 1.75) {AND gates};
+
+        \draw (0, -1.5) rectangle (3.6, -5.0);
+        \node at (1.8, -3.25) {OR gates};
+
+        % ==========================================
+        % 2. Ingressi (Sinistra)
+        % ==========================================
+        % 6 linee orizzontali di ingresso
+        \foreach \y in {0.5, 1.0, 1.5, 2.0, 2.5, 3.0} {
+            \draw (-1.2, \y) -- (0, \y);
+        }
+        % Parentesi graffa e testo "Inputs"
+        \draw [decorate, decoration={brace, amplitude=6pt}] 
+            (-1.4, 0.5) -- (-1.4, 3.0) node [midway, left=8pt] {Inputs};
+
+        % ==========================================
+        % 3. Product terms (Connessioni centrali)
+        % ==========================================
+        % 8 linee verticali tra il blocco AND e il blocco OR
+        \foreach \x in {0.4, 0.8, 1.2, 1.6, 2.0, 2.4, 2.8, 3.2} {
+            \draw (\x, 0) -- (\x, -1.5);
+        }
+        % Etichetta laterale per i Product terms
+        \node[anchor=east] at (0.2, -0.75) {Product terms};
+
+        % ==========================================
+        % 4. Uscite (Destra)
+        % ==========================================
+        % 6 linee orizzontali di uscita
+        \foreach \y in {-2.0, -2.5, -3.0, -3.5, -4.0, -4.5} {
+            \draw (3.6, \y) -- (4.8, \y);
+        }
+        % Parentesi graffa e testo "Outputs"
+        \draw [decorate, decoration={brace, amplitude=6pt}] 
+            (5.0, -2.0) -- (5.0, -4.5) node [midway, right=8pt] {Outputs};
+
+    \end{tikzpicture}
+\end{minipage}
+\hfil
+\begin{minipage}[t]{0.45\textwidth}
+    \subsubsection{Tabella}
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|c|}
+                \hline
+                \multicolumn{3}{|c|}{\textbf{Inputs}} & \multicolumn{3}{c|}{\textbf{Outputs}} \\
+                \hline
+                \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} & \textbf{F} \\
+                \hline
+                0 & 0 & 0 & 0 & 0 & 0 \\
+                \hline
+                0 & 0 & 1 & 1 & 0 & 0 \\
+                \hline
+                0 & 1 & 0 & 1 & 0 & 0 \\
+                \hline
+                0 & 1 & 1 & 1 & 1 & 0 \\
+                \hline
+                1 & 0 & 0 & 1 & 0 & 0 \\
+                \hline
+                1 & 0 & 1 & 1 & 1 & 0 \\
+                \hline
+                1 & 1 & 0 & 1 & 1 & 0 \\
+                \hline
+                1 & 1 & 1 & 1 & 0 & 1 \\
+                \hline
+            \end{tabular}
+    \end{center}
+\end{minipage}
+
+\subsubsection{Schema dettagliato}
+\begin{center}
+    \includegraphics[scale=0.65]{Immagini/Schema PLA.png}
+\end{center}
+\subsubsection{Formula dell'esempio}
+
+{
+    \Large
+    \begin{gather*}
+        D = \overline{AB}C + \overline{A}B\overline{C} + \overline{A}BC + A\overline{BC} + A\overline{B}C + AB\overline{C} + ABC \\
+        E = \overline{A}BC + A\overline{B}C + AB\overline{C} \\
+        F = ABC
+    \end{gather*}
+}
+
+
+\newpage
 \section{Array di elementi logici}
+\subsection{Cosa sono?}
+La maggior parte delle operazioni vengono svolte su 32 bit, mettendo in luce la necessità di creare array di elementi logici, ossia un bus, una collezione di linee di input che verranno trattate come un singolo segnale
+
+\subsection{Esempio con Multiplexer a 32 bit}
+    \begin{minipage}[t]{0.45\textwidth}
+    \subsubsection{Schema semplificato}
+        \begin{center}
+            \begin{tikzpicture}[
+                font=\sffamily,
+                thick,
+                >=latex,
+                % Stile per il corpo del Multiplexer
+                mux/.style={
+                    draw,
+                    rounded corners=15pt,
+                    minimum width=1.4cm,
+                    minimum height=3.5cm,
+                    align=center,
+                    inner sep=0pt
+                }
+            ]
+
+                % --- Corpo centrale (Mux) ---
+                \node[mux] (M) at (0,0) {M\\u\\x};
+
+                % --- Ingresso A (Superiore) ---
+                \draw[->] (-2.0, 0.8) node[left] {A} -- (M.west |- 0,0.8);
+                % Taglio bus e "32"
+                \draw[line width=1.2pt] (-1.2, 0.5) -- (-1.0, 1.1);
+                \node[above left, inner sep=2pt] at (-1.0, 0.8) {32};
+
+                % Evidenziatore rosso tratteggiato (bus)
+                \draw[red, dashed] (-1.1, 0.7) ellipse (0.25cm and 0.8cm);
+                \node[red, font=\bfseries\large] at (-1.7, 1.8) {bus};
+
+                % --- Ingresso B (Inferiore) ---
+                \draw[->] (-2.0, -0.8) node[left] {B} -- (M.west |- 0,-0.8);
+                % Taglio bus e "32"
+                \draw[line width=1.2pt] (-1.2, -1.1) -- (-1.0, -0.5);
+                \node[above left, inner sep=2pt] at (-1.0, -0.8) {32};
+
+                % --- Segnale di Selezione (Select) ---
+                \draw[->] (0, 2.2) node[above] {Select} -- (M.north);
+
+                % --- Uscita C ---
+                \draw[->] (M.east) -- (2.0, 0) node[right] {C};
+                % Taglio bus e "32"
+                \draw[line width=1.2pt] (1.3, -0.3) -- (1.5, 0.3);
+                \node[above left, inner sep=2pt] at (1.5, 0) {32};
+
+            \end{tikzpicture}
+        \end{center}
+    \end{minipage}
+    \hfil
+    \begin{minipage}[t]{0.45\textwidth}
+        \subsubsection{Schema dettagliato}
+        \begin{center}
+            \begin{tikzpicture}[
+                font=\sffamily,
+                thick,
+                >=latex,
+                % Stile per i Multiplexer (forma ovale allungata)
+                mux/.style={
+                    draw,
+                    rounded corners=15pt,
+                    minimum width=1.4cm,
+                    minimum height=3.5cm,
+                    align=center
+                }
+            ]
+
+                % ========================================================
+                % 1. Nodo di selezione globale (in alto)
+                % ========================================================
+                \node (select_top) at (0, 7.5) {Select};
+                
+                % Nodo (pallino) di derivazione
+                \fill (0, 7.0) circle (2pt);
+                
+                % Freccia verso il primo Mux
+                \draw[->] (select_top) -- (0, 7.0) -- (0, 6.55);
+                
+                % Linea orizzontale che va verso destra per scendere lungo la cascata
+                \draw (0, 7.0) -- (1.5, 7.0); 
+
+                % ========================================================
+                % 2. MUX Superiore (Bit 31)
+                % ========================================================
+                \node[mux] (mux31) at (0, 4.8) {M\\u\\x};
+                
+                % Ingressi A31 e B31
+                \draw[->] (-1.8, 5.8) node[left] {A31} -- (mux31.west |- 0, 5.8);
+                \draw[->] (-1.8, 3.8) node[left] {B31} -- (mux31.west |- 0, 3.8);
+                
+                % Uscita C31
+                \draw[->] (mux31.east) -- (2.0, 4.8) node[right] {C31};
+
+                % Linea della cascata Select che scende fino al livello del secondo MUX
+                \draw (1.5, 7.0) -- (1.5, 2.5);
+
+
+                % ========================================================
+                % 3. MUX Centrale (Bit 30)
+                % ========================================================
+                \node[mux] (mux30) at (0, 0.5) {M\\u\\x};
+                
+                % Ingressi A30 e B30
+                \draw[->] (-1.8, 1.5) node[left] {A30} -- (mux30.west |- 0, 1.5);
+                \draw[->] (-1.8, -0.5) node[left] {B30} -- (mux30.west |- 0, -0.5);
+                
+                % Uscita C30
+                \draw[->] (mux30.east) -- (2.0, 0.5) node[right] {C30};
+
+                % Select ingresso per MUX 30 (curva da destra verso il centro in alto)
+                \draw[->] (1.5, 2.5) -- (0, 2.5) -- (mux30.north);
+
+
+                % ========================================================
+                % 4. Puntini di Sospensione
+                % ========================================================
+                % Puntini verticali tra Mux 30 e Mux 0
+                \node[font=\Large] at (0, -1.5) {$\vdots$};
+                
+                % Puntini per la linea del Select
+                \node[font=\Large] at (1.5, 0) {$\vdots$}; 
+
+                % Continuazione linea select verso il basso
+                \draw (1.5, -1.0) -- (1.5, -2.5);
+
+
+                % ========================================================
+                % 5. MUX Inferiore (Bit 0)
+                % ========================================================
+                \node[mux] (mux0) at (0, -4.5) {M\\u\\x};
+                
+                % Ingressi A0 e B0
+                \draw[->] (-1.8, -3.5) node[left] {A0} -- (mux0.west |- 0, -3.5);
+                \draw[->] (-1.8, -5.5) node[left] {B0} -- (mux0.west |- 0, -5.5);
+                
+                % Uscita C0
+                \draw[->] (mux0.east) -- (2.0, -4.5) node[right] {C0};
+
+                % Select ingresso per MUX 0
+                \draw[->] (1.5, -2.5) -- (0, -2.5) -- (mux0.north);
+
+            \end{tikzpicture}
+        \end{center}
+    \end{minipage}
